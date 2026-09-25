@@ -2792,3 +2792,105 @@ mark.todo {
   color: #ffd58a;
   font-weight: 600;
 }
+
+/* Questions fréquentes */
+.faq h2 {
+  margin: 64px 0 8px;
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+}
+
+.faq h2:first-child {
+  margin-top: 0;
+}
+
+.faq-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--c-line);
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+
+.faq-item h3 {
+  margin-bottom: 10px;
+  font-size: var(--fs-h4);
+  font-stretch: 105%;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--c-text-2);
+}
+
+.faq-answer p + p {
+  margin-top: 0.8em;
+}
+
+/* Lexique */
+.glossary {
+  margin: 0;
+}
+
+.glossary__item {
+  display: grid;
+  grid-template-columns: minmax(0, 0.36fr) minmax(0, 1fr);
+  gap: 6px 32px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--c-line);
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+
+.glossary dt {
+  font-weight: 750;
+  font-stretch: 108%;
+  color: #fff;
+}
+
+.glossary dd {
+  margin: 0;
+  color: var(--c-text-2);
+}
+
+.glossary__item:target {
+  background: rgba(195, 0, 0, 0.08);
+  box-shadow: inset 3px 0 0 var(--c-brand);
+  padding-left: 16px;
+}
+
+@media (max-width: 640px) {
+  .glossary__item { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Encadré « À retenir » et bloc « En bref » */
+.takeaways {
+  margin: 0 0 40px;
+  padding: 22px 24px;
+  border: 1px solid rgba(255, 74, 61, 0.3);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(195, 0, 0, 0.14), transparent 60%),
+    var(--c-surface);
+}
+
+.takeaways .check-list {
+  margin: 0;
+}
+
+.takeaways .check-list li:last-child {
+  margin-bottom: 0;
+}
+
+.brief {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+}
+
+.brief p {
+  margin: 0;
+  font-size: var(--fs-lg);
+  color: #e2e2e6;
+}
+
+@media (max-width: 860px) {
+  .brief { grid-template-columns: minmax(0, 1fr); }
+}

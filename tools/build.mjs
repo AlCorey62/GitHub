@@ -5,7 +5,9 @@
 //   <!-- breadcrumb:start --> ... <!-- breadcrumb:end --> fil d'Ariane
 //   <!-- footer:start --> ... <!-- footer:end -->         pied de page
 //   <svg data-icon="nom"></svg> / <svg data-logo="horizontal|stacked"></svg>
-// puis applique les espaces insécables de la typographie française et régénère sitemap.xml.
+// puis applique les espaces insécables de la typographie française et régénère :
+//   sitemap.xml, llms.txt, llms-full.txt et une version Markdown de chaque page (index.html.md)
+//   destinées aux moteurs de recherche et aux assistants IA.
 // Le script est idempotent : on peut le relancer autant de fois que nécessaire.
 //
 // Usage : node tools/build.mjs
@@ -14,7 +16,8 @@ import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, dirname, sep } from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
-import { SITE, NAV, CTA } from "./site.config.mjs";
+import { SITE, NAV, CTA, ENTITY, LLMS } from "./site.config.mjs";
+import { pageToMarkdown } from "./markdown.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE_DIR = join(ROOT, "site");
@@ -110,6 +113,8 @@ function head(cfg, ctx) {
     `<title>${esc(title)}</title>`,
     `<meta name="description" content="${esc(cfg.description)}">`,
     cfg.noindex ? `<meta name="robots" content="noindex, follow">` : `<link rel="canonical" href="${canonical}">`,
+    cfg.noindex ? "" : `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">`,
+    cfg.noindex || cfg.absoluteRoot ? "" : `<link rel="alternate" type="text/markdown" href="index.html.md" title="Version Markdown de la page">`,
     `<meta name="theme-color" content="${SITE.themeColor}">`,
     `<meta name="color-scheme" content="dark">`,
     `<meta property="og:type" content="${cfg.type === "article" ? "article" : "website"}">`,
@@ -122,6 +127,8 @@ function head(cfg, ctx) {
     `<meta property="og:image:width" content="1200">`,
     `<meta property="og:image:height" content="630">`,
     `<meta name="twitter:card" content="summary_large_image">`,
+    cfg.type === "article" && cfg.article ? `<meta property="article:published_time" content="${cfg.article.date}">` : "",
+    cfg.type === "article" && cfg.updated ? `<meta property="article:modified_time" content="${cfg.updated}">` : "",
     `<link rel="icon" href="${root}assets/img/favicon.svg" type="image/svg+xml">`,
     `<link rel="icon" href="${root}assets/img/favicon-32.png" sizes="32x32" type="image/png">`,
     `<link rel="apple-touch-icon" href="${root}assets/img/apple-touch-icon.png">`,
@@ -138,8 +145,11 @@ function head(cfg, ctx) {
   for (const ld of jsonLd(cfg, ctx)) {
     lines.push(`<script type="application/ld+json">${JSON.stringify(ld)}</script>`);
   }
-  return lines.join("\n");
+  return lines.filter(Boolean).join("\n");
 }
+
+const ORG_ID = `${SITE.url}/#organisation`;
+const SITE_ID = `${SITE.url}/#website`;
 
 function organizationLd() {
   return {
@@ -161,22 +171,170 @@ function organizationLd() {
       addressRegion: SITE.address.region,
       addressCountry: SITE.address.country,
     },
-    identifier: { "@type": "PropertyValue", propertyID: "SIREN", value: SITE.siren.replace(/\s/g, "") },
-    sameAs: SITE.socials.map((s) => s.href),
+    identifier: [
+      { "@type": "PropertyValue", propertyID: "SIREN", value: SITE.siren.replace(/\s/g, "") },
+      { "@type": "PropertyValue", propertyID: "SIRET", value: SITE.siret.replace(/\s/g, "") },
+    ],
+    description: ENTITY.description,
+    foundingDate: ENTITY.foundingDate,
+    image: `${SITE.url}/${SITE.ogImage}`,
+    areaServed: ENTITY.areaServed.map((name) => ({ "@type": "Country", name })),
+    knowsAbout: ENTITY.knowsAbout,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: SITE.email,
+        telephone: SITE.phoneIntl,
+        areaServed: "FR",
+        availableLanguage: ENTITY.languages,
+        url: `${SITE.url}/contact/`,
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Métiers et services",
+      itemListElement: [
+        ...NAV.find((n) => n.key === "metiers").children.map((c) => ({ label: c.label, href: c.href })),
+        { label: "Location et vente de matériel de distribution électrique", href: "nos-produits/" },
+      ].map((c) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: c.label, url: `${SITE.url}/${c.href}` } })),
+    },
+    sameAs: [...SITE.socials.map((s) => s.href), ...ENTITY.sameAs],
   };
+}
+
+const orgRef = () => ({ "@type": "Organization", "@id": ORG_ID, name: SITE.name, url: `${SITE.url}/`, logo: `${SITE.url}/assets/img/logo-dark-side-energy.png` });
+
+const plain = (s) =>
+  s
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;|&#8239;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&shy;/g, "")
+    .replace(/[\u00a0\u202f]/g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([.,)])/g, "$1")
+    .trim();
+
+function faqFrom(html) {
+  return [...html.matchAll(/<div class="faq-item"[^>]*>\s*<h3[^>]*>([\s\S]*?)<\/h3>\s*<div class="faq-answer">([\s\S]*?)<\/div>\s*<\/div>/g)].map((m) => ({
+    "@type": "Question",
+    name: plain(m[1]),
+    acceptedAnswer: { "@type": "Answer", text: plain(m[2]) },
+  }));
+}
+
+function glossaryFrom(html, url) {
+  return [...html.matchAll(/<div class="glossary__item">\s*<dt id="([^"]+)">([\s\S]*?)<\/dt>\s*<dd>([\s\S]*?)<\/dd>\s*<\/div>/g)].map((m) => ({
+    "@type": "DefinedTerm",
+    "@id": `${url}#${m[1]}`,
+    name: plain(m[2]),
+    description: plain(m[3]),
+    inDefinedTermSet: `${url}#lexique`,
+  }));
 }
 
 function jsonLd(cfg, ctx) {
   const out = [];
-  if (ctx.url === "/") {
+  const canonical = SITE.url + ctx.url;
+  if (ctx.url === "/" || cfg.nav === "entreprise") {
     out.push(organizationLd());
+  }
+  if (ctx.url === "/") {
     out.push({
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": SITE_ID,
       name: SITE.name,
       url: `${SITE.url}/`,
+      description: ENTITY.description,
       inLanguage: "fr-FR",
-      publisher: { "@id": `${SITE.url}/#organisation` },
+      publisher: { "@id": ORG_ID },
+    });
+  }
+  if (!cfg.noindex) {
+    const page = {
+      "@context": "https://schema.org",
+      "@type": cfg.webPageType || "WebPage",
+      "@id": `${canonical}#webpage`,
+      url: canonical,
+      name: cfg.title,
+      description: cfg.description,
+      inLanguage: "fr-FR",
+      isPartOf: { "@type": "WebSite", "@id": SITE_ID, name: SITE.name, url: `${SITE.url}/` },
+      about: orgRef(),
+      publisher: orgRef(),
+      primaryImageOfPage: `${SITE.url}/${cfg.image || SITE.ogImage}`,
+    };
+    if (cfg.updated) page.dateModified = cfg.updated;
+    if (cfg.breadcrumb && cfg.breadcrumb.length) page.breadcrumb = { "@id": `${canonical}#breadcrumb` };
+    if (cfg.webPageType === "FAQPage") {
+      page.mainEntity = faqFrom(ctx.html);
+      page.about = orgRef();
+    }
+    out.push(page);
+  }
+  if (cfg.service) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${canonical}#service`,
+      name: cfg.service.name,
+      serviceType: cfg.service.type,
+      description: cfg.description,
+      url: canonical,
+      provider: orgRef(),
+      areaServed: ENTITY.areaServed.map((name) => ({ "@type": "Country", name })),
+      availableChannel: {
+        "@type": "ServiceChannel",
+        serviceUrl: `${SITE.url}/contact/`,
+        servicePhone: { "@type": "ContactPoint", telephone: SITE.phoneIntl, email: SITE.email, contactType: "sales" },
+        availableLanguage: ENTITY.languages,
+      },
+    });
+  }
+  if (cfg.app) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "@id": `${canonical}#application`,
+      name: cfg.app.name,
+      description: cfg.description,
+      url: canonical,
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "Tout navigateur web",
+      inLanguage: "fr-FR",
+      isAccessibleForFree: true,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+      featureList: cfg.app.features,
+      provider: orgRef(),
+    });
+  }
+  if (cfg.glossary) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "DefinedTermSet",
+      "@id": `${canonical}#lexique`,
+      name: cfg.title,
+      description: cfg.description,
+      url: canonical,
+      inLanguage: "fr-FR",
+      publisher: orgRef(),
+      hasDefinedTerm: glossaryFrom(ctx.html, canonical),
+    });
+  }
+  if (cfg.nav === "entreprise") {
+    const p = ENTITY.person;
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": `${canonical}#${p.id}`,
+      name: p.name,
+      jobTitle: p.jobTitle,
+      description: p.description,
+      worksFor: orgRef(),
     });
   }
   if (cfg.breadcrumb && cfg.breadcrumb.length) {
@@ -184,6 +342,7 @@ function jsonLd(cfg, ctx) {
     out.push({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      "@id": `${canonical}#breadcrumb`,
       itemListElement: items.map(([name, href], i) => ({
         "@type": "ListItem",
         position: i + 1,
@@ -199,6 +358,8 @@ function jsonLd(cfg, ctx) {
       headline: cfg.title,
       description: cfg.description,
       datePublished: cfg.article.date,
+      ...(cfg.updated ? { dateModified: cfg.updated } : {}),
+      isPartOf: { "@id": SITE_ID },
       inLanguage: "fr-FR",
       mainEntityOfPage: SITE.url + ctx.url,
       image: `${SITE.url}/${cfg.image || SITE.ogImage}`,
@@ -290,7 +451,7 @@ function footer(cfg, ctx) {
     `</div>`,
     `<div class="container"><div class="footer-bottom">`,
     `<p>© <span data-year>${new Date().getFullYear()}</span> ${SITE.name}, ${SITE.legalForm}. SIREN ${SITE.siren}.</p>`,
-    `<ul><li><a href="${root}mentions-legales/">Mentions légales et confidentialité</a></li><li><a href="${root}contact/">Contact</a></li></ul>`,
+    `<ul><li><a href="${root}mentions-legales/">Mentions légales et confidentialité</a></li><li><a href="${root}faq/">Questions fréquentes</a></li><li><a href="${root}llms.txt">Infos pour les IA</a></li><li><a href="${root}contact/">Contact</a></li></ul>`,
     `</div></div>`,
     `</footer>`,
   ].join("\n");
@@ -365,6 +526,7 @@ const v = {
 
 const files = walk(SITE_DIR).sort();
 const sitemap = [];
+const pagesMd = [];
 let count = 0;
 
 for (const file of files) {
@@ -384,7 +546,7 @@ for (const file of files) {
     if (!cfg[k]) throw new Error(`Champ "${k}" manquant dans ${file}`);
   }
   const url = pageUrl(file);
-  const ctx = { root: rootPrefix(file, cfg), url, v };
+  const ctx = { root: rootPrefix(file, cfg), url, v, html };
 
   html = replaceBlock(html, "head", head(cfg, ctx), file);
   html = replaceBlock(html, "header", header(cfg, ctx), file);
@@ -395,6 +557,17 @@ for (const file of files) {
   html = frenchTypo(html);
   writeFileSync(file, html);
   count++;
+
+  if (!cfg.noindex && !cfg.absoluteRoot) {
+    const canonical = SITE.url + url;
+    let md = pageToMarkdown(html, canonical);
+    const meta = [`> ${cfg.description}`, "", `Source : ${canonical} · ${SITE.name}${cfg.updated ? ` · Mise à jour : ${cfg.updated}` : ""}`];
+    const lines = md.split("\n");
+    md = lines[0].startsWith("# ") ? [lines[0], "", ...meta, "", ...lines.slice(1)].join("\n") : [`# ${cfg.title}`, "", ...meta, "", md].join("\n");
+    md = md.replace(/\n{3,}/g, "\n\n");
+    writeFileSync(join(dirname(file), "index.html.md"), md);
+    pagesMd.push({ url, title: cfg.title, description: cfg.description, md });
+  }
 
   if (!cfg.noindex && cfg.sitemap !== false) sitemap.push({ url, lastmod: cfg.updated || cfg.article?.date });
 }
@@ -411,4 +584,48 @@ const xml = [
 ].join("\n");
 writeFileSync(join(SITE_DIR, "sitemap.xml"), xml);
 
-console.log(`${count} pages assemblées, ${sitemap.length} URL dans sitemap.xml`);
+// --- llms.txt (format https://llmstxt.org) et llms-full.txt -------------------------------
+const byUrl = new Map(pagesMd.map((p) => [p.url, p]));
+const listed = new Set();
+const llms = [
+  `# ${SITE.name}`,
+  "",
+  `> ${ENTITY.description}`,
+  "",
+  "Informations clés :",
+  "",
+  ...LLMS.facts.map((f) => `- ${f}`),
+  "",
+  `Chaque page existe aussi en Markdown : ajouter \`index.html.md\` à son adresse. Contenu complet du site : ${SITE.url}/llms-full.txt`,
+  "",
+];
+for (const [title, urls] of LLMS.sections) {
+  llms.push(`## ${title}`, "");
+  for (const u of urls) {
+    const p = byUrl.get(u);
+    if (!p) throw new Error(`llms.txt : page introuvable ${u}`);
+    listed.add(u);
+    llms.push(`- [${p.title}](${SITE.url}${u}): ${p.description}`);
+  }
+  llms.push("");
+}
+const missing = pagesMd.filter((p) => !listed.has(p.url) && p.url !== "/").map((p) => p.url);
+if (missing.length) console.warn(`llms.txt : pages non listées ${missing.join(", ")}`);
+writeFileSync(join(SITE_DIR, "llms.txt"), llms.join("\n"));
+
+const order = ["/", ...LLMS.sections.flatMap(([, urls]) => urls)];
+const full = [
+  `# ${SITE.name} : contenu complet du site`,
+  "",
+  `> ${ENTITY.description}`,
+  "",
+  `Site : ${SITE.url}/ · Généré le ${today}`,
+  "",
+  ...order
+    .map((u) => byUrl.get(u))
+    .filter(Boolean)
+    .flatMap((p) => ["---", "", p.md.trim(), ""]),
+];
+writeFileSync(join(SITE_DIR, "llms-full.txt"), full.join("\n"));
+
+console.log(`${count} pages assemblées, ${sitemap.length} URL dans sitemap.xml, ${pagesMd.length} versions Markdown, llms.txt et llms-full.txt`);

@@ -1,0 +1,59 @@
+# Dark Side Energy
+
+> Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle loue et vend aussi du matériel de distribution électrique.
+
+Informations clés :
+
+- Raison sociale : DARK SIDE ENERGY, SARL, SIREN 879 105 377
+- Siège : 37 rue Thibaut, 62220 Carvin, France (Pas-de-Calais, Hauts-de-France)
+- Activité : distribution électrique événementielle (code NAF 90.02Z, activités de soutien au spectacle vivant)
+- Création : 2016 ; SARL immatriculée en novembre 2019
+- Capacités : de la distribution 16 A jusqu'aux armoires 2 000 A, groupes électrogènes de 6 à 2 000 kVA, expertise haute et basse tension
+- Zone d'intervention : France et international
+- Lieux où les équipes sont intervenues (sélection) : Zénith de Lille, Lille Grand Palais, Stade de France, Accor Arena, Paris La Défense Arena, Decathlon Arena Stade Pierre Mauroy, Arena Grand Paris, Grand Palais, Musée du Louvre, Allianz Riviera, Stade Vélodrome
+- Contact : contact@darkside-energy.com, +33 7 68 24 40 88, https://www.darkside-energy.com/contact/
+- Slogan : « La puissance de l'électricité, sans tension, avec intensité. »
+
+Chaque page existe aussi en Markdown : ajouter `index.html.md` à son adresse. Contenu complet du site : https://www.darkside-energy.com/llms-full.txt
+
+## Métiers
+
+- [Distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/): Techniciens électriciens spécialisés dans l'événementiel : du coffret 16 A à l'armoire 2 000 A, du groupe électrogène 6 kVA au 2 000 kVA.
+- [Régie technique et gestion de projets](https://www.darkside-energy.com/regie-technique/): Régie technique et gestion de projets événementiels : repérages, personnel qualifié, sous-traitants, logistique, dans le respect de votre budget.
+- [Coordination générale et direction technique](https://www.darkside-energy.com/coordination-generale/): Coordination et régie générale d'événements culturels, sportifs ou d'entreprise : directeur technique, régisseur, assistant régie, coordinateur.
+- [Bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude/): Bureau d'étude électrique événementiel : raccordement, bilan de puissance, schéma unifilaire, plans et notes de calcul. Le terrain au service de l'étude.
+- [Consulting en distribution électrique événementielle](https://www.darkside-energy.com/consulting/): Consulting en distribution électrique événementielle : analyse de vos attentes, cahier des charges, choix des produits et solutions sur mesure.
+
+## Matériel et énergie
+
+- [Matériel de distribution électrique, location et vente](https://www.darkside-energy.com/nos-produits/): Location et vente : passages de câbles Modulo PMR, armoires et coffrets, câbles P17 et Powerlock, groupes électrogènes Stage V, packs batteries.
+- [Énergie responsable et démarche RSE](https://www.darkside-energy.com/energie-responsable/): Notre démarche RSE : le réseau d'abord, des solutions hybrides (HVO, Stage V, batteries), le juste dimensionnement et des engagements internes.
+
+## Outils de calcul gratuits
+
+- [Bilan de puissance en ligne](https://www.darkside-energy.com/bilan-de-puissance/): Bilan de puissance gratuit en ligne : puissance foisonnée, courant par phase, calibre de raccordement et puissance de source indicatifs.
+- [Calculette électro : conversions et chute de tension](https://www.darkside-energy.com/calculette-electro/): Calculette électrique gratuite : conversion W, kVA et ampères en mono 230 V et tri 400 V, chute de tension NF C 15-100, repères P17 et Powerlock.
+
+## Ressources
+
+- [Questions fréquentes sur la distribution électrique événementielle](https://www.darkside-energy.com/faq/): Les réponses de Dark Side Energy : qui nous sommes, nos métiers, la location de matériel, le Twin zéro coupure, la puissance d'une P17, la chute de tension.
+- [Lexique de la distribution électrique événementielle](https://www.darkside-energy.com/lexique/): P17, Powerlock, TGBT, foisonnement, ilotage, groupe Twin, HVO, Stage V : les termes de l'électricité événementielle expliqués simplement.
+- [Le sais-tu ? Les bases de la distribution électrique](https://www.darkside-energy.com/news/): Les bases de la distribution électrique événementielle expliquées simplement : ilotage, groupe Twin zéro coupure, section de câble, disjoncteur.
+- [Qu'est-ce que la distribution électrique événementielle ?](https://www.darkside-energy.com/news/distribution-electrique-evenementielle/): Distribution électrique événementielle : partir des alimentations du lieu pour distribuer l'électricité en sécurité. Et pourquoi l'ilotage est interdit.
+- [Qu'est-ce qu'un groupe Twin zéro coupure ?](https://www.darkside-energy.com/news/groupe-twin-zero-coupure/): Groupe Twin zéro coupure : deux groupes électrogènes synchronisés, chacun à 50 % de la charge. Si l'un tombe en panne, aucune coupure.
+- [La section de câble dépend de l'intensité, mais aussi de la longueur !](https://www.darkside-energy.com/news/section-de-cable/): Pourquoi la section d'un câble dépend de l'intensité mais aussi de la longueur : résistance, échauffement et chute de tension, simplement.
+- [Pourquoi « ça saute » ?](https://www.darkside-energy.com/news/pourquoi-ca-saute/): Pourquoi un coffret électrique « saute » : différentiel 30 mA et disjoncteur expliqués simplement. Appareil en défaut ou circuit surchargé ?
+
+## Entreprise
+
+- [L'entreprise](https://www.darkside-energy.com/entreprise/): Dark Side Energy, SARL basée à Carvin : des humains professionnalisés dans la distribution électrique d'événement depuis 2016. Nous rejoindre.
+- [Références : Zéniths, arenas, stades et salons](https://www.darkside-energy.com/references/): Des milliers de prestations depuis 2016 : Zéniths, arenas, stades, salons et lieux d'exception, en France et à l'international.
+- [Contact et demande de devis](https://www.darkside-energy.com/contact/): Contactez Dark Side Energy pour un devis : distribution électrique, régie, coordination, bureau d'étude, matériel. 37 rue Thibaut, 62220 Carvin.
+
+## Optional
+
+- [Mentions légales et confidentialité](https://www.darkside-energy.com/mentions-legales/): Mentions légales du site Dark Side Energy : éditeur, hébergement, propriété intellectuelle, données personnelles et stockage local.
+- [Création de Dark Side Energy](https://www.darkside-energy.com/news/creation-dark-side-energy/): Mai 2016 : création de Dark Side Energy, des professionnels de la distribution électrique événementielle, du consulting à la pose.
+- [Fêtes maritimes internationales de Brest 2016](https://www.darkside-energy.com/news/fetes-maritimes-brest-2016/): Mai 2016 : première mission de Dark Side Energy, la gestion complète du projet des Fêtes maritimes internationales de Brest 2016 pour Revolt Location.
+- [Lille Grand Palais : deux salons depuis la rentrée](https://www.darkside-energy.com/news/lille-grand-palais-2016/): Octobre 2016 : Lille Grand Palais confie à Dark Side Energy la distribution électrique, l'ADSL et la téléphonie des salons Créer et Sénioreva.
+- [Répertoire national des électros](https://www.darkside-energy.com/news/repertoire-national-des-electros/): Électriciens habilités, rejoignez Dark Side Energy pour travailler dans l'événementiel et le culturel. Prestataires et loueurs, trouvez le technicien idéal pour votre prestation.

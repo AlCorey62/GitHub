@@ -1,4 +1,38 @@
+# Dark Side Energy : tous les robots sont les bienvenus, y compris les moteurs de recherche
+# et les assistants d'intelligence artificielle, pour que nos contenus puissent être cités.
+# Résumé du site pour les IA : https://www.darkside-energy.com/llms.txt
+# Contenu complet en Markdown : https://www.darkside-energy.com/llms-full.txt
+
 User-agent: *
+Allow: /
+
+# Moteurs de recherche (Google et Bing alimentent aussi Gemini, AI Overviews, Copilot et ChatGPT)
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+Allow: /
+
+# Assistants IA : recherche en temps réel et consultation à la demande des utilisateurs
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: MistralAI-User
+User-agent: DuckAssistBot
+User-agent: meta-externalfetcher
+Allow: /
+
+# Assistants IA : collecte pour l'entraînement des modèles (connaissance générale de l'entreprise)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: meta-externalagent
+User-agent: Amazonbot
 Allow: /
 
 Sitemap: https://www.darkside-energy.com/sitemap.xml

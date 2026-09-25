@@ -15,18 +15,25 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   references/              Lieux et historique
   entreprise/              L'entreprise, nous rejoindre
   news/                    Le sais-tu ? et actualités (8 articles)
+  faq/                     Questions fréquentes (17 questions, balisage FAQPage)
+  lexique/                 Lexique de 27 termes (balisage DefinedTermSet)
   bilan-de-puissance/      Outil de bilan de puissance
   calculette-electro/      Conversions, chute de tension, repères par connecteur
   contact/                 Formulaire (Netlify Forms) et page de confirmation
   mentions-legales/        Mentions légales et confidentialité
   404.html, robots.txt, sitemap.xml, site.webmanifest, favicon.ico
+  llms.txt, llms-full.txt  Résumé et contenu complet du site pour les assistants IA (générés)
+  **/index.html.md         Version Markdown de chaque page (générée)
   assets/css/main.css      Charte graphique complète
   assets/js/               main.js (menu, animations, formulaire), elec.js (formules), bilan.js, calculette.js
   assets/fonts/            Police Archivo auto-hébergée (licence OFL)
   assets/img/              Logos vectorisés, photos optimisées, icônes, image de partage
 tools/
   site.config.mjs          Coordonnées, réseaux sociaux, menu : À MODIFIER ICI
-  build.mjs                Assemble en-tête, pied de page, SEO, icônes et sitemap dans chaque page
+  build.mjs                Assemble en-tête, pied de page, SEO, données structurées, icônes, sitemap,
+                           versions Markdown, llms.txt et llms-full.txt
+  markdown.mjs             Conversion des pages en Markdown pour les IA
+  indexnow.mjs             Signale les pages à Bing et aux moteurs IndexNow après une mise en ligne
   check.mjs                Contrôle qualité (liens, ancres, titres, images, mentions à compléter)
   serve.mjs                Serveur local de prévisualisation
   og-image.html            Modèle de l'image de partage réseaux sociaux
@@ -77,6 +84,31 @@ Autre hébergeur : le dossier `site/` peut être publié tel quel sur n'importe 
 4. **Durées de conservation des données** proposées dans la politique de confidentialité (3 ans prospects, 2 ans candidatures).
 5. **Réseaux sociaux** : liens Facebook et X repris de l'ancien site, à confirmer ou compléter (LinkedIn par exemple) dans `tools/site.config.mjs`.
 6. **Images des passages de câbles** : reprises de l'ancien site, vérifier les droits si elles proviennent d'un fournisseur.
+
+## Référencement par les moteurs et les assistants IA (GEO)
+
+Les assistants IA trouvent l'information de deux façons : ce qu'ils ont appris pendant leur entraînement (contenus collectés sur le web) et ce qu'ils vont chercher en direct (ChatGPT et Copilot s'appuient sur l'index de Bing, Gemini et les AI Overviews sur celui de Google, Perplexity sur son propre robot). Pour être cité, il faut donc être lisible, indexé, clair et cohérent partout.
+
+**Déjà intégré au site**
+
+- Contenu en HTML statique, lisible sans JavaScript par tous les robots (l'ancien site Wix affichait très peu de texte sans JavaScript).
+- `robots.txt` qui autorise explicitement les robots des moteurs et des IA (OpenAI, Anthropic, Perplexity, Google, Apple, Mistral, Meta, Amazon, Common Crawl).
+- `llms.txt` (résumé structuré du site, format llmstxt.org), `llms-full.txt` (tout le contenu en Markdown) et une version Markdown de chaque page (`index.html.md`), signalée dans l'en-tête HTML.
+- Données structurées Schema.org sur chaque page : organisation (identité, SIREN, adresse, contact, domaines d'expertise, services), page web, services, outils de calcul, questions fréquentes, lexique, articles, personne (directeur technique), fil d'Ariane. Vérifiées contre le vocabulaire officiel Schema.org.
+- Balise `robots` autorisant les extraits longs (`max-snippet:-1`), utilisés par les réponses générées.
+- Contenus faciles à citer : bloc « En bref » en page d'accueil, FAQ, lexique, encadrés « À retenir », méthodes de calcul explicites, dates de mise à jour.
+- Nom, adresse et téléphone identiques partout (pages, balisage, llms.txt).
+
+**À faire après la mise en ligne**
+
+1. Google Search Console : ajouter le site et déclarer `sitemap.xml`.
+2. Bing Webmaster Tools : importer le site depuis Search Console et déclarer `sitemap.xml`. Puis, après chaque mise en ligne : `node tools/indexnow.mjs`.
+3. Créer ou reprendre la fiche Google Business Profile avec exactement le même nom, la même adresse et le même téléphone ; ajouter son adresse dans `ENTITY.sameAs` (`tools/site.config.mjs`).
+4. Créer la page entreprise LinkedIn et l'ajouter dans `SITE.socials`.
+5. Harmoniser la fiche de l'entreprise sur les annuaires professionnels et les sites des labels (Label du Spectacle, Prestadd).
+6. Obtenir des mentions et des liens depuis les sites des partenaires, des lieux et de la presse spécialisée : les IA accordent beaucoup de poids aux sources tierces.
+7. Faire vivre le contenu : nouvelles questions dans la FAQ à partir des vraies demandes clients, nouveaux articles « Le sais-tu ? », dates `updated` à jour.
+8. Suivre le résultat en posant régulièrement des questions types à ChatGPT, Perplexity, Gemini et Claude, par exemple « distribution électrique événementielle Lille » ou « location passage de câbles PMR Hauts-de-France ».
 
 ## Images
 

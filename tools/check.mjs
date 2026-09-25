@@ -4,6 +4,7 @@
 //  - un seul <h1>, <title> et meta description présents, attribut alt sur chaque image
 //  - pas de tiret cadratin ni d'abréviation du nom de l'entreprise
 //  - liste des mentions « à compléter » restantes (avertissement)
+//  - données structurées JSON-LD valides, version Markdown présente, liens de llms.txt valides
 
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, dirname, relative, sep } from "node:path";
@@ -56,6 +57,17 @@ for (const file of pages) {
   }
   if (body.includes("\u2014")) errors.push(`${rel} : tiret cadratin présent`);
   if (/\bDSE\b/.test(body)) errors.push(`${rel} : abréviation « DSE » présente`);
+  for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    try {
+      const data = JSON.parse(m[1]);
+      if (!data["@context"] || !data["@type"]) errors.push(`${rel} : JSON-LD sans @context ou @type`);
+    } catch (e) {
+      errors.push(`${rel} : JSON-LD invalide (${e.message})`);
+    }
+  }
+  if (/<link rel="canonical"/.test(html) && !existsSync(join(dirname(file), "index.html.md"))) {
+    errors.push(`${rel} : version Markdown index.html.md absente`);
+  }
   const todo = (body.match(/à compléter/g) || []).length;
   if (todo) warnings.push(`${rel} : ${todo} mention(s) « à compléter »`);
 
@@ -73,6 +85,16 @@ for (const file of pages) {
         errors.push(`${rel} : ancre introuvable ${url}`);
       }
     }
+  }
+}
+
+// Liens du fichier llms.txt
+const llmsPath = join(ROOT, "llms.txt");
+if (!existsSync(llmsPath)) errors.push("llms.txt absent");
+else {
+  for (const m of readFileSync(llmsPath, "utf8").matchAll(/\]\((https:\/\/www\.darkside-energy\.com)(\/[^)]*)\)/g)) {
+    const target = resolveTarget(join(ROOT, "index.html"), m[2]);
+    if (!existsSync(target)) errors.push(`llms.txt : lien cassé ${m[2]}`);
   }
 }
 
