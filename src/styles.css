@@ -349,6 +349,9 @@ kbd {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.titre-court {
+  display: none;
+}
 .entete-etat {
   display: flex;
   align-items: center;
@@ -2813,6 +2816,12 @@ select.cellule-saisie:disabled {
   }
   .marque-app {
     font-size: 14px;
+  }
+  .titre-long {
+    display: none;
+  }
+  .titre-court {
+    display: inline;
   }
   .entete-etat,
   #btn-annuler,

@@ -365,6 +365,9 @@ kbd {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.titre-court {
+  display: none;
+}
 .entete-etat {
   display: flex;
   align-items: center;
@@ -2830,6 +2833,12 @@ select.cellule-saisie:disabled {
   .marque-app {
     font-size: 14px;
   }
+  .titre-long {
+    display: none;
+  }
+  .titre-court {
+    display: inline;
+  }
   .entete-etat,
   #btn-annuler,
   #btn-retablir,
@@ -3159,7 +3168,7 @@ select.cellule-saisie:disabled {
         </span>
         <span class="marque-textes">
           <span class="marque-nom">Dark Side Energy</span>
-          <span class="marque-app">Calculateur d'Énergie Stand</span>
+          <span class="marque-app"><span class="titre-long">Calculateur d'Énergie Stand</span><span class="titre-court">Énergie Stand</span></span>
         </span>
       </a>
       <div class="entete-etat" id="etat-sauvegarde" role="status" aria-live="polite"></div>
@@ -5576,7 +5585,7 @@ select.cellule-saisie:disabled {
   /** Valeur éditable : sans séparateur de milliers, virgule décimale. */
   function fmtSaisie(n) {
     if (n == null || !Number.isFinite(n)) return '';
-    return String(Math.round(n * 1000) / 1000).replace('.', ',');
+    return String(Number(n.toFixed(6))).replace('.', ',');
   }
   const formatDateCourte = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
   const formatDateLongue = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -5880,7 +5889,11 @@ select.cellule-saisie:disabled {
     const el = $('#etat-sauvegarde');
     el.className = 'entete-etat ' + statut;
     vider(el);
-    if (statut === 'ok') el.append(icone('valide'), h('span', { class: 'lib', text: 'Enregistré' }));
+    el.removeAttribute('title');
+    if (statut === 'ok') {
+      el.append(icone('valide'), h('span', { class: 'lib', text: 'Enregistré' }));
+      el.title = 'Enregistré dans ce navigateur à ' + new Date().toLocaleTimeString('fr-FR');
+    }
     else if (statut === 'erreur') el.append(icone('alerte'), h('span', { class: 'lib', text: 'Non enregistré' }));
     else if (statut === 'indisponible') el.append(icone('alerte'), h('span', { class: 'lib', text: 'Enregistrement local indisponible' }));
   }

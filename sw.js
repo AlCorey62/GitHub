@@ -4,7 +4,7 @@
  */
 'use strict';
 
-const CACHE = 'calculateur-energie-stand-2.0.0-408471e8e091';
+const CACHE = 'calculateur-energie-stand-2.0.0-966b0c0e0b6d';
 const FICHIERS = ['./', './index.html', './app.html', './manifest.webmanifest', './icone.svg', './icone-180.png', './icone-192.png', './icone-512.png'];
 
 self.addEventListener('install', (evenement) => {

@@ -133,7 +133,7 @@
   /** Valeur éditable : sans séparateur de milliers, virgule décimale. */
   function fmtSaisie(n) {
     if (n == null || !Number.isFinite(n)) return '';
-    return String(Math.round(n * 1000) / 1000).replace('.', ',');
+    return String(Number(n.toFixed(6))).replace('.', ',');
   }
   const formatDateCourte = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
   const formatDateLongue = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -437,7 +437,11 @@
     const el = $('#etat-sauvegarde');
     el.className = 'entete-etat ' + statut;
     vider(el);
-    if (statut === 'ok') el.append(icone('valide'), h('span', { class: 'lib', text: 'Enregistré' }));
+    el.removeAttribute('title');
+    if (statut === 'ok') {
+      el.append(icone('valide'), h('span', { class: 'lib', text: 'Enregistré' }));
+      el.title = 'Enregistré dans ce navigateur à ' + new Date().toLocaleTimeString('fr-FR');
+    }
     else if (statut === 'erreur') el.append(icone('alerte'), h('span', { class: 'lib', text: 'Non enregistré' }));
     else if (statut === 'indisponible') el.append(icone('alerte'), h('span', { class: 'lib', text: 'Enregistrement local indisponible' }));
   }

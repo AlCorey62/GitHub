@@ -4,6 +4,8 @@ Bilan de puissance d'un stand ou d'un petit espace événementiel : puissance fo
 
 L'outil tient dans un seul fichier, `app.html`, sans dépendance externe : il fonctionne hors ligne, depuis un poste, un téléphone ou un site web.
 
+![Calculateur d'Énergie Stand : exemple d'un bar de festival](docs/apercu.png)
+
 ## Ouvrir l'outil
 
 - **Sur un poste** : télécharger `app.html` et l'ouvrir dans un navigateur récent (Chrome, Edge, Firefox, Safari).
