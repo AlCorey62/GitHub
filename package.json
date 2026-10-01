@@ -1,0 +1,21 @@
+{
+  "name": "calculateur-energie-stand",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Calculateur d'Énergie Stand de Dark Side Energy : bilan de puissance, raccordement et énergie d'un stand.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "check": "node scripts/build.js --check",
+    "test": "node --test \"tests/*.test.js\"",
+    "test:e2e": "node --test --test-concurrency=1 tests/navigateur.e2e.js",
+    "verifier": "npm run check && npm test && npm run test:e2e",
+    "icones": "node scripts/icones.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

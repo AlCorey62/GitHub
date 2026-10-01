@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="sombre">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calculateur d'Énergie Stand · Dark Side Energy</title>
+<meta name="description" content="Bilan de puissance d'un stand : puissance foisonnée, courant par phase, raccordement recommandé, énergie consommée et rapport imprimable.">
+<meta name="theme-color" content="#08090c">
+<meta name="application-name" content="Énergie Stand">
+<meta name="apple-mobile-web-app-title" content="Énergie Stand">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233987e5'/%3E%3Cstop offset='1' stop-color='%237c5cf0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='15' fill='%2308090c'/%3E%3Crect x='3' y='3' width='58' height='58' rx='13' fill='url(%23g)'/%3E%3Cpath d='M35.5 9 16 36h13l-3.5 19L46 27H33z' fill='%23fff'/%3E%3C/svg%3E">
+<script>try{var p=JSON.parse(localStorage.getItem('calculateur-energie-stand/preferences')||'{}');if(p&&p.theme==='clair')document.documentElement.setAttribute('data-theme','clair');}catch(e){}</script>
+<!--@styles-->
+</head>
+<body>
+<a class="lien-evitement" href="#saisie">Aller à la saisie des équipements</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="degrade-marque" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3987e5"/><stop offset="1" stop-color="#7c5cf0"/></linearGradient>
+  </defs>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chevron-bas" viewBox="0 0 24 24"><path d="M6.5 9.5l5.5 5.5 5.5-5.5"/></symbol>
+  <symbol id="i-chevron-droite" viewBox="0 0 24 24"><path d="M9.5 6.5l5.5 5.5-5.5 5.5"/></symbol>
+  <symbol id="i-recherche" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+  <symbol id="i-corbeille" viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l1 12.5a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1L17.5 7M10.25 11v5.5M13.75 11v5.5"/></symbol>
+  <symbol id="i-copie" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/></symbol>
+  <symbol id="i-annuler" viewBox="0 0 24 24"><path d="M9 14L4.5 9.5 9 5"/><path d="M4.5 9.5h10a5 5 0 0 1 0 10H11"/></symbol>
+  <symbol id="i-retablir" viewBox="0 0 24 24"><path d="M15 14l4.5-4.5L15 5"/><path d="M19.5 9.5h-10a5 5 0 0 0 0 10H13"/></symbol>
+  <symbol id="i-reglages" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 12h3M11 12h9M4 17h11M19 17h1"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="17" r="2"/></symbol>
+  <symbol id="i-dossier" viewBox="0 0 24 24"><path d="M3.5 7.5a2 2 0 0 1 2-2h4l2 2.5h7a2 2 0 0 1 2 2v7.5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-partage" viewBox="0 0 24 24"><circle cx="17.5" cy="5.5" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><circle cx="17.5" cy="18.5" r="2.5"/><path d="M8.7 10.7l6.6-3.9M8.7 13.3l6.6 3.9"/></symbol>
+  <symbol id="i-rapport" viewBox="0 0 24 24"><path d="M14 3.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5z"/><path d="M14 3.5v5h5M9 13h6M9 16.5h6"/></symbol>
+  <symbol id="i-imprimante" viewBox="0 0 24 24"><path d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><path d="M7 14h10v6.5H7z"/></symbol>
+  <symbol id="i-telecharger" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19.5h14"/></symbol>
+  <symbol id="i-importer" viewBox="0 0 24 24"><path d="M12 15.5v-11M7.5 9L12 4.5 16.5 9M5 19.5h14"/></symbol>
+  <symbol id="i-plus-options" viewBox="0 0 24 24"><circle cx="5.5" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="18.5" cy="12" r="1.5" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-soleil" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+  <symbol id="i-lune" viewBox="0 0 24 24"><path d="M19.5 14.5A7.5 7.5 0 1 1 9.5 4.5a6 6 0 0 0 10 10z"/></symbol>
+  <symbol id="i-aide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.6M12 16.9v.1"/></symbol>
+  <symbol id="i-eclair" viewBox="0 0 24 24"><path d="M13.5 2.5L5 13.5h6.5l-1 8L19 10.5h-6.5z"/></symbol>
+  <symbol id="i-prise" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4"/></symbol>
+  <symbol id="i-alerte" viewBox="0 0 24 24"><path d="M12 4L2.8 19.5h18.4z"/><path d="M12 10v4.5M12 17.2v.1"/></symbol>
+  <symbol id="i-erreur" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5.5M12 16.4v.1"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+  <symbol id="i-valide" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></symbol>
+  <symbol id="i-tableau" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15"/></symbol>
+  <symbol id="i-livre" viewBox="0 0 24 24"><path d="M5 5.5a2 2 0 0 1 2-2h11v14H7a2 2 0 0 0-2 2z"/><path d="M5 19.5a2 2 0 0 0 2 2h11v-4"/></symbol>
+  <symbol id="i-lien" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.5 5.4 3.5 8.5s-1 5.9-3.5 8.5M12 3.5C9.5 6.1 8.5 8.9 8.5 12s1 5.9 3.5 8.5"/></symbol>
+  <symbol id="i-batterie" viewBox="0 0 24 24"><rect x="3" y="7" width="15.5" height="10" rx="2"/><path d="M21 10.5v3M7 10.5v3M10.5 10.5v3"/></symbol>
+  <symbol id="i-calendrier" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-crayon" viewBox="0 0 24 24"><path d="M4.5 19.5h4l10-10-4-4-10 10z"/><path d="M13 7l4 4"/></symbol>
+  <symbol id="i-externe" viewBox="0 0 24 24"><path d="M14 4.5h5.5V10M19.5 4.5l-8.5 8.5M17.5 13.5v4a2 2 0 0 1-2 2h-9a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h4"/></symbol>
+  <symbol id="i-courbe" viewBox="0 0 24 24"><path d="M4 19.5h16"/><path d="M5 16l4-5 3.5 3 6.5-8"/></symbol>
+  <symbol id="i-courrier" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></symbol>
+  <symbol id="i-plein-ecran" viewBox="0 0 24 24"><path d="M4.5 9V4.5H9M15 4.5h4.5V9M19.5 15v4.5H15M9 19.5H4.5V15"/></symbol>
+</svg>
+
+<div class="app" id="app">
+  <header class="entete" role="banner">
+    <div class="entete-interieur">
+      <a class="marque" href="#" id="marque" aria-label="Calculateur d'Énergie Stand, Dark Side Energy">
+        <span class="marque-logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect x="0" y="0" width="64" height="64" rx="15" fill="url(#degrade-marque)"/><path d="M35.5 9 16 36h13l-3.5 19L46 27H33z" fill="#fff"/></svg>
+        </span>
+        <span class="marque-textes">
+          <span class="marque-nom">Dark Side Energy</span>
+          <span class="marque-app">Calculateur d'Énergie Stand</span>
+        </span>
+      </a>
+      <div class="entete-etat" id="etat-sauvegarde" role="status" aria-live="polite"></div>
+      <nav class="entete-actions" aria-label="Actions">
+        <button class="btn-icone" id="btn-annuler" type="button" aria-label="Annuler (Ctrl+Z)" title="Annuler (Ctrl+Z)" disabled><svg class="ic"><use href="#i-annuler"/></svg></button>
+        <button class="btn-icone" id="btn-retablir" type="button" aria-label="Rétablir (Ctrl+Maj+Z)" title="Rétablir (Ctrl+Maj+Z)" disabled><svg class="ic"><use href="#i-retablir"/></svg></button>
+        <span class="separateur" aria-hidden="true"></span>
+        <button class="btn btn-fantome" id="btn-hypotheses" type="button" title="Hypothèses de calcul du bilan"><svg class="ic"><use href="#i-reglages"/></svg><span class="lib">Hypothèses</span></button>
+        <button class="btn btn-fantome" id="btn-bilans" type="button" title="Mes bilans"><svg class="ic"><use href="#i-dossier"/></svg><span class="lib">Bilans</span></button>
+        <button class="btn btn-fantome" id="btn-partager" type="button" title="Partager le bilan par un lien"><svg class="ic"><use href="#i-partage"/></svg><span class="lib">Partager</span></button>
+        <button class="btn btn-primaire" id="btn-rapport" type="button" title="Rapport imprimable (PDF)"><svg class="ic"><use href="#i-rapport"/></svg><span class="lib">Rapport</span></button>
+        <div class="menu-conteneur">
+          <button class="btn-icone" id="btn-menu" type="button" aria-label="Plus d'actions" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-principal" title="Plus d'actions"><svg class="ic"><use href="#i-plus-options"/></svg></button>
+          <div class="menu" id="menu-principal" role="menu" hidden>
+            <button role="menuitem" type="button" data-action="nouveau"><svg class="ic"><use href="#i-plus"/></svg>Nouveau bilan</button>
+            <button role="menuitem" type="button" data-action="dupliquer-bilan"><svg class="ic"><use href="#i-copie"/></svg>Dupliquer ce bilan</button>
+            <div class="menu-sep" role="separator"></div>
+            <button role="menuitem" type="button" data-action="export-csv"><svg class="ic"><use href="#i-tableau"/></svg>Exporter le tableau (Excel)</button>
+            <button role="menuitem" type="button" data-action="export-json"><svg class="ic"><use href="#i-telecharger"/></svg>Enregistrer le fichier du bilan</button>
+            <button role="menuitem" type="button" data-action="importer"><svg class="ic"><use href="#i-importer"/></svg>Ouvrir un fichier…</button>
+            <button role="menuitem" type="button" data-action="coller"><svg class="ic"><use href="#i-tableau"/></svg>Coller depuis Excel…</button>
+            <div class="menu-sep" role="separator"></div>
+            <button role="menuitem" type="button" data-action="exemple-stand-salon"><svg class="ic"><use href="#i-livre"/></svg>Exemple : stand de salon</button>
+            <button role="menuitem" type="button" data-action="exemple-bar-festival"><svg class="ic"><use href="#i-livre"/></svg>Exemple : bar de festival</button>
+            <div class="menu-sep" role="separator"></div>
+            <button role="menuitem" type="button" data-action="theme"><svg class="ic"><use href="#i-lune"/></svg><span id="lib-theme">Thème clair</span></button>
+            <button role="menuitem" type="button" data-action="aide"><svg class="ic"><use href="#i-aide"/></svg>Aide et méthode de calcul</button>
+            <button role="menuitem" type="button" data-action="plein-ecran" id="menu-plein-ecran" hidden><svg class="ic"><use href="#i-externe"/></svg>Ouvrir dans un nouvel onglet</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="bandeau" id="bandeau-stockage" role="alert" hidden>
+    <svg class="ic"><use href="#i-alerte"/></svg>
+    <span>Ce navigateur bloque l'enregistrement local : le bilan sera perdu à la fermeture. Pensez à <button type="button" class="lien" data-action="export-json">enregistrer le fichier du bilan</button>.</span>
+  </div>
+
+  <main class="disposition" id="contenu">
+    <section class="colonne-principale" aria-label="Bilan">
+      <div class="carte carte-projet">
+        <div class="projet-titre-ligne">
+          <label class="visuellement-cache" for="projet-nom">Nom du stand ou du projet</label>
+          <input class="projet-nom" id="projet-nom" type="text" maxlength="300" placeholder="Nom du stand ou du projet" autocomplete="off" spellcheck="false">
+        </div>
+        <details class="projet-details" id="projet-details">
+          <summary>
+            <span class="projet-resume" id="projet-resume"></span>
+            <span class="projet-bascule"><svg class="ic"><use href="#i-crayon"/></svg><span>Informations</span></span>
+          </summary>
+          <div class="grille-champs">
+            <label class="champ"><span>Exposant ou client</span><input type="text" data-info="exposant" maxlength="300" autocomplete="organization"></label>
+            <label class="champ"><span>Événement</span><input type="text" data-info="evenement" maxlength="300"></label>
+            <label class="champ"><span>Lieu</span><input type="text" data-info="lieu" maxlength="300"></label>
+            <label class="champ"><span>Numéro de stand</span><input type="text" data-info="stand" maxlength="300"></label>
+            <label class="champ"><span>Premier jour d'exploitation</span><input type="date" data-info="dateDebut"></label>
+            <label class="champ"><span>Dernier jour d'exploitation</span><input type="date" data-info="dateFin"></label>
+            <label class="champ champ-large"><span>Contact</span><input type="text" data-info="contact" maxlength="300" placeholder="Nom, téléphone, e-mail"></label>
+            <label class="champ champ-large"><span>Notes</span><textarea data-info="notes" rows="2" maxlength="5000"></textarea></label>
+          </div>
+        </details>
+      </div>
+
+      <div class="carte carte-saisie">
+        <div class="combo" id="combo">
+          <svg class="ic combo-ic"><use href="#i-plus"/></svg>
+          <input id="saisie" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" aria-label="Ajouter un équipement" placeholder="Ajouter un équipement : « 12 spots LED », « écran 55 », « 2 frigos 150 W »…" autocomplete="off" spellcheck="false" enterkeyhint="done">
+          <kbd class="combo-touche" aria-hidden="true">/</kbd>
+          <div class="suggestions" id="suggestions" role="listbox" aria-label="Suggestions" hidden></div>
+        </div>
+        <div class="saisie-aide">
+          <span>Quantité et puissance comprises dans la saisie. Valeurs de la bibliothèque : indicatives, à confirmer.</span>
+          <button type="button" class="lien" data-action="coller"><svg class="ic"><use href="#i-tableau"/></svg>Coller depuis Excel</button>
+        </div>
+      </div>
+
+      <div class="carte carte-lignes">
+        <div class="lignes-entete">
+          <h2>Équipements <span class="compteur" id="compteur-lignes"></span></h2>
+          <div class="lignes-total" id="lignes-total"></div>
+        </div>
+        <div class="table-defilement">
+          <table class="table-lignes" id="table-lignes">
+            <colgroup>
+              <col class="col-nom"><col class="col-puissance"><col class="col-qte"><col class="col-ks"><col class="col-alim"><col class="col-phase"><col class="col-pfois"><col class="col-i"><col class="col-actions">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">Équipement</th>
+                <th scope="col" class="num" title="Puissance unitaire, en W (« 1,5 kW » accepté)">Puissance unit.</th>
+                <th scope="col" class="num" title="Quantité (nombre, mètres ou m² selon l'équipement)">Qté</th>
+                <th scope="col" class="num" title="Foisonnement : part de la puissance appelée en même temps, entre 0 et 1">Fois.</th>
+                <th scope="col" title="Alimentation monophasée 230 V ou triphasée 400 V">Alim.</th>
+                <th scope="col" title="Phase : automatique (équilibrage) ou imposée">Phase</th>
+                <th scope="col" class="num" title="Puissance foisonnée = puissance × quantité × foisonnement">P. foisonnée</th>
+                <th scope="col" class="num" title="Courant de la ligne">Courant</th>
+                <th scope="col"><span class="visuellement-cache">Actions</span></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="vide" id="etat-vide" hidden>
+          <div class="vide-illustration" aria-hidden="true">
+            <svg viewBox="0 0 120 120"><defs><linearGradient id="degrade-vide" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3987e5"/><stop offset="1" stop-color="#7c5cf0"/></linearGradient></defs><circle cx="60" cy="60" r="52" fill="none" stroke="url(#degrade-vide)" stroke-width="2" stroke-dasharray="4 7" stroke-linecap="round"/><circle cx="60" cy="60" r="36" fill="url(#degrade-vide)" opacity=".14"/><path d="M64 33 45 63h13l-3 24 21-33H62z" fill="url(#degrade-vide)"/></svg>
+          </div>
+          <h3>Listez les équipements du stand</h3>
+          <p>Tapez un appareil dans la barre ci-dessus, avec sa quantité si besoin : « 12 spots LED », « 2 écrans 55 », « plancha 3 kW ».</p>
+          <div class="puces" id="puces-populaires"></div>
+          <div class="vide-actions">
+            <button type="button" class="btn" data-action="coller"><svg class="ic"><use href="#i-tableau"/></svg>Coller depuis Excel</button>
+            <button type="button" class="btn" data-action="exemple-stand-salon"><svg class="ic"><use href="#i-livre"/></svg>Voir un exemple</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="colonne-resultats" id="resultats" aria-label="Résultats">
+      <section class="carte carte-hero" aria-labelledby="titre-hero">
+        <div class="hero-entete">
+          <h2 id="titre-hero" class="sur-titre">Puissance appelée</h2>
+          <button type="button" class="pastille-hypotheses" id="resume-hypotheses" title="Modifier les hypothèses"></button>
+        </div>
+        <div class="hero-valeur"><span id="r-pfois">0</span><span class="hero-unite" id="r-pfois-unite">kW</span></div>
+        <p class="hero-sous" id="r-hero-sous"></p>
+        <div class="kpis">
+          <div class="kpi"><div class="kpi-lib">Apparente</div><div class="kpi-val" id="r-s"></div></div>
+          <div class="kpi"><div class="kpi-lib">Courant max</div><div class="kpi-val" id="r-imax"></div><div class="kpi-note" id="r-imax-note"></div></div>
+          <div class="kpi"><div class="kpi-lib">Énergie / jour</div><div class="kpi-val" id="r-ejour"></div><div class="kpi-note" id="r-ejour-note"></div></div>
+        </div>
+      </section>
+
+      <section class="carte carte-raccordement" aria-labelledby="titre-raccordement">
+        <div class="carte-entete">
+          <h2 id="titre-raccordement" class="sur-titre">Raccordement</h2>
+          <label class="visuellement-cache" for="choix-raccordement">Raccordement à évaluer</label>
+          <select id="choix-raccordement" class="select-compact"></select>
+        </div>
+        <div class="racc-principal">
+          <div class="racc-prise" id="racc-prise" aria-hidden="true"></div>
+          <div class="racc-textes">
+            <div class="racc-titre-ligne"><span class="racc-titre" id="racc-titre-texte"></span><span class="statut" id="racc-statut"></span></div>
+          </div>
+        </div>
+        <p class="racc-sous" id="racc-sous"></p>
+        <div class="jauge-bloc" id="racc-jauge-bloc">
+          <div class="jauge-lib"><span>Charge du raccordement</span><strong id="racc-taux"></strong></div>
+          <div class="jauge" id="racc-jauge"><div class="jauge-remplissage"></div><div class="jauge-seuil"></div></div>
+        </div>
+        <div class="phases" id="phases" aria-label="Courant par phase"></div>
+        <p class="note-phases" id="note-phases"></p>
+        <details class="comparatif" id="comparatif">
+          <summary><svg class="ic"><use href="#i-chevron-droite"/></svg>Comparer les raccordements</summary>
+          <div class="table-defilement"><table class="table-compacte" id="table-comparatif"></table></div>
+          <p class="note-comparatif" id="note-comparatif"></p>
+        </details>
+      </section>
+
+      <section class="carte carte-vigilance" aria-labelledby="titre-vigilance">
+        <div class="carte-entete">
+          <h2 id="titre-vigilance" class="sur-titre">Points de vigilance</h2>
+          <span class="compteur" id="compteur-alertes"></span>
+        </div>
+        <ul class="alertes" id="alertes"></ul>
+      </section>
+
+      <section class="carte carte-energie" aria-labelledby="titre-energie">
+        <div class="carte-entete"><h2 id="titre-energie" class="sur-titre">Énergie et source autonome</h2></div>
+        <dl class="liste-valeurs" id="energie"></dl>
+      </section>
+
+      <section class="carte carte-repartition" aria-labelledby="titre-repartition">
+        <div class="carte-entete"><h2 id="titre-repartition" class="sur-titre">Répartition par catégorie</h2></div>
+        <div class="barres" id="repartition"></div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="pied">
+    <span>Calculateur d'Énergie Stand {{VERSION}} · Dark Side Energy</span>
+    <span>Estimation indicative, à valider par une étude de distribution. Données enregistrées dans ce navigateur uniquement.</span>
+  </footer>
+</div>
+
+<div class="barre-mobile" id="barre-mobile">
+  <div class="barre-mobile-valeurs">
+    <strong id="bm-p"></strong>
+    <span id="bm-racc"></span>
+  </div>
+  <a class="btn btn-primaire" href="#resultats">Résultats</a>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+<div class="annonce visuellement-cache" id="annonce" aria-live="polite"></div>
+<div class="infobulle" id="infobulle" role="tooltip" hidden></div>
+
+<!-- Mes bilans -->
+<dialog class="dialogue dialogue-large" id="dlg-bilans" aria-labelledby="titre-bilans">
+  <div class="dialogue-entete">
+    <h2 id="titre-bilans">Mes bilans</h2>
+    <button class="btn-icone" type="button" data-fermer aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="dialogue-outils">
+    <div class="recherche-champ">
+      <svg class="ic"><use href="#i-recherche"/></svg>
+      <input type="search" id="filtre-bilans" placeholder="Rechercher un bilan, un exposant, un événement" aria-label="Rechercher un bilan">
+    </div>
+    <button class="btn btn-primaire" type="button" data-action="nouveau"><svg class="ic"><use href="#i-plus"/></svg>Nouveau bilan</button>
+  </div>
+  <div class="dialogue-corps">
+    <ul class="liste-bilans" id="liste-bilans"></ul>
+  </div>
+  <div class="dialogue-pied">
+    <span class="pied-info" id="info-bilans"></span>
+    <div class="pied-actions">
+      <button class="btn" type="button" data-action="importer"><svg class="ic"><use href="#i-importer"/></svg>Ouvrir un fichier</button>
+      <button class="btn" type="button" data-action="recap-csv"><svg class="ic"><use href="#i-tableau"/></svg>Récapitulatif Excel</button>
+      <button class="btn" type="button" data-action="sauvegarde-json"><svg class="ic"><use href="#i-telecharger"/></svg>Sauvegarde complète</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- Hypothèses -->
+<dialog class="dialogue" id="dlg-hypotheses" aria-labelledby="titre-hypotheses">
+  <div class="dialogue-entete">
+    <h2 id="titre-hypotheses">Hypothèses du bilan</h2>
+    <button class="btn-icone" type="button" data-fermer aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="dialogue-corps">
+    <p class="intro">Ces hypothèses s'appliquent à tout le bilan et figurent dans le rapport. Les modifications sont prises en compte immédiatement.</p>
+    <form class="form-hypotheses" id="form-hypotheses" novalidate>
+      <fieldset>
+        <legend>Réseau</legend>
+        <label class="champ"><span>Tension simple (monophasé)</span><span class="saisie-unite"><input data-hyp="tensionMonoV" inputmode="decimal"><em>V</em></span></label>
+        <label class="champ"><span>Tension composée (triphasé)</span><span class="saisie-unite"><input data-hyp="tensionTriV" inputmode="decimal"><em>V</em></span></label>
+        <label class="champ"><span>cos φ par défaut</span><span class="saisie-unite"><input data-hyp="cosPhi" inputmode="decimal"><em></em></span><small>Appliqué aux équipements sans cos φ propre.</small></label>
+      </fieldset>
+      <fieldset>
+        <legend>Objectifs de dimensionnement</legend>
+        <label class="champ"><span>Taux de charge maximal visé</span><span class="saisie-unite"><input data-hyp="tauxChargeMax" data-pourcent inputmode="decimal"><em>%</em></span><small>Le raccordement recommandé reste sous ce taux.</small></label>
+        <label class="champ"><span>Déséquilibre maximal toléré</span><span class="saisie-unite"><input data-hyp="desequilibreMax" data-pourcent inputmode="decimal"><em>%</em></span><small>(I max − I moyen) / I moyen.</small></label>
+      </fieldset>
+      <fieldset>
+        <legend>Exploitation</legend>
+        <label class="champ"><span>Durée d'utilisation par jour</span><span class="saisie-unite"><input data-hyp="heuresParJour" inputmode="decimal" placeholder="à renseigner"><em>h</em></span><small>Un équipement peut avoir sa propre durée (détails de la ligne).</small></label>
+        <label class="champ"><span>Nombre de jours d'exploitation</span><span class="saisie-unite"><input data-hyp="jours" inputmode="numeric" id="hyp-jours"><em>j</em></span><small id="aide-jours">Vide : calculé depuis les dates du projet.</small></label>
+      </fieldset>
+      <fieldset>
+        <legend>Raccordements proposés</legend>
+        <p class="aide-fieldset">La recommandation retient le plus petit raccordement coché dont la charge reste sous l'objectif.</p>
+        <div class="cases" id="cases-offres"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Raccordement imposé</legend>
+        <p class="aide-fieldset">Si le raccordement est déjà fixé (commande, borne disponible), le bilan est vérifié sur celui-ci.</p>
+        <div class="ligne-champs">
+          <label class="champ"><span>Type</span>
+            <select id="impose-phases"><option value="">Aucun : recommandation automatique</option><option value="1">Monophasé 230 V</option><option value="3">Triphasé 400 V</option></select>
+          </label>
+          <label class="champ"><span>Calibre</span><span class="saisie-unite"><input id="impose-calibre" inputmode="decimal" placeholder="ex. 32"><em>A</em></span></label>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="dialogue-pied">
+    <button class="btn" type="button" id="btn-hyp-defaut">Rétablir les valeurs par défaut</button>
+    <button class="btn btn-primaire" type="button" data-fermer>Terminé</button>
+  </div>
+</dialog>
+
+<!-- Import (copier-coller Excel, CSV) -->
+<dialog class="dialogue dialogue-large" id="dlg-import" aria-labelledby="titre-import">
+  <div class="dialogue-entete">
+    <h2 id="titre-import">Coller une liste d'équipements</h2>
+    <button class="btn-icone" type="button" data-fermer aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="dialogue-corps">
+    <p class="intro">Copiez des lignes depuis Excel (ou un CSV) et collez-les ci-dessous. Une liste simple fonctionne aussi : « 12 spots LED », « 2 frigos 150 W »… Vérifiez les colonnes avant d'importer.</p>
+    <textarea id="import-texte" class="import-texte" rows="6" placeholder="Désignation&#9;Puissance (W)&#9;Quantité&#10;Spot LED&#9;30&#9;12&#10;Écran 55 pouces&#9;150&#9;2" spellcheck="false"></textarea>
+    <div class="import-apercu" id="import-apercu"></div>
+  </div>
+  <div class="dialogue-pied">
+    <label class="case"><input type="checkbox" id="import-remplacer"><span>Remplacer les équipements actuels</span></label>
+    <div class="pied-actions">
+      <button class="btn" type="button" data-fermer>Annuler</button>
+      <button class="btn btn-primaire" type="button" id="btn-importer" disabled>Importer</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- Partage -->
+<dialog class="dialogue" id="dlg-partage" aria-labelledby="titre-partage">
+  <div class="dialogue-entete">
+    <h2 id="titre-partage">Partager le bilan</h2>
+    <button class="btn-icone" type="button" data-fermer aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="dialogue-corps">
+    <p class="intro">Le bilan complet est contenu dans le lien : rien n'est envoyé sur un serveur. La personne qui l'ouvre obtient sa propre copie.</p>
+    <div class="partage-lien">
+      <input type="text" id="partage-url" readonly aria-label="Lien de partage">
+      <button class="btn btn-primaire" type="button" id="btn-copier-lien"><svg class="ic"><use href="#i-copie"/></svg>Copier</button>
+    </div>
+    <p class="note" id="partage-note"></p>
+  </div>
+  <div class="dialogue-pied">
+    <a class="btn" id="partage-courriel" href="#"><svg class="ic"><use href="#i-courrier"/></svg>Envoyer par e-mail</a>
+    <button class="btn" type="button" data-action="export-json"><svg class="ic"><use href="#i-telecharger"/></svg>Fichier du bilan</button>
+  </div>
+</dialog>
+
+<!-- Aide -->
+<dialog class="dialogue dialogue-large" id="dlg-aide" aria-labelledby="titre-aide">
+  <div class="dialogue-entete">
+    <h2 id="titre-aide">Aide et méthode de calcul</h2>
+    <button class="btn-icone" type="button" data-fermer aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="dialogue-corps texte-aide">
+    <section>
+      <h3>Démarrer</h3>
+      <ol>
+        <li>Nommez le bilan et renseignez, si possible, les dates d'exploitation.</li>
+        <li>Ajoutez les équipements dans la barre de saisie : « 12 spots LED », « écran 55 », « plancha 3 kW ». La quantité (en tête ou « x12 ») et la puissance (« 150 W », « 1,5 kW ») sont reconnues.</li>
+        <li>Remplacez les valeurs types de la bibliothèque par celles des plaques signalétiques, ou confirmez-les.</li>
+        <li>Lisez le raccordement recommandé, les points de vigilance, puis éditez le rapport.</li>
+      </ol>
+    </section>
+    <section>
+      <h3>Raccourcis clavier</h3>
+      <dl class="raccourcis">
+        <dt><kbd>/</kbd> ou <kbd>Ctrl</kbd> <kbd>K</kbd></dt><dd>Ajouter un équipement</dd>
+        <dt><kbd>Ctrl</kbd> <kbd>Z</kbd></dt><dd>Annuler</dd>
+        <dt><kbd>Ctrl</kbd> <kbd>Maj</kbd> <kbd>Z</kbd></dt><dd>Rétablir</dd>
+        <dt><kbd>Ctrl</kbd> <kbd>P</kbd></dt><dd>Imprimer le rapport</dd>
+        <dt><kbd>?</kbd></dt><dd>Cette aide</dd>
+      </dl>
+    </section>
+    <section>
+      <h3>Méthode de calcul</h3>
+      <ul class="formules">
+        <li><strong>Puissance foisonnée</strong> : P = puissance unitaire × quantité × foisonnement.</li>
+        <li><strong>Puissance apparente</strong> : S = P / cos φ (cos φ de l'équipement, sinon celui du projet).</li>
+        <li><strong>Courant</strong> : I = S / V en monophasé ; I = S / (√3 × U) par phase en triphasé.</li>
+        <li><strong>Phases</strong> : les équipements monophasés en « Auto » sont placés appareil par appareil, du plus puissant au moins puissant, sur la phase la moins chargée.</li>
+        <li><strong>Déséquilibre</strong> : (I max − I moyen) / I moyen.</li>
+        <li><strong>Taux de charge</strong> : courant de la phase la plus chargée / calibre du raccordement.</li>
+        <li><strong>Raccordement recommandé</strong> : le plus petit raccordement proposé dont le taux de charge reste sous l'objectif (80 % par défaut). Prises P17 (CEI 60309) : bleues 230 V, rouges 400 V.</li>
+        <li><strong>Source autonome</strong> (groupe, batterie) : puissance apparente minimale = √3 × U × I max / taux visé en triphasé, V × I / taux visé en monophasé. Hors appels de courant au démarrage.</li>
+        <li><strong>Énergie</strong> : P foisonnée × heures par jour, puis × nombre de jours.</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Limites</h3>
+      <p>L'outil estime un besoin à partir des données saisies. Il ne calcule ni les sections de câbles, ni les protections, ni la sélectivité, ni les courants harmoniques dans le neutre : ces points relèvent d'une étude de distribution Dark Side Energy. Les puissances de la bibliothèque sont des valeurs types, à confirmer.</p>
+    </section>
+    <section>
+      <h3>Données</h3>
+      <p>Les bilans sont enregistrés dans ce navigateur, sur cet appareil. Pour les conserver ailleurs : « Sauvegarde complète » dans Mes bilans, ou « Enregistrer le fichier du bilan ». La recherche en ligne, si elle est active, envoie le texte recherché à darkside-energy.com.</p>
+      <p class="note">Version {{VERSION}}.</p>
+    </section>
+  </div>
+</dialog>
+
+<!-- Confirmation générique -->
+<dialog class="dialogue dialogue-petit" id="dlg-confirmer" aria-labelledby="titre-confirmer">
+  <div class="dialogue-entete"><h2 id="titre-confirmer"></h2></div>
+  <div class="dialogue-corps"><p id="texte-confirmer"></p></div>
+  <div class="dialogue-pied">
+    <button class="btn" type="button" id="btn-confirmer-non">Annuler</button>
+    <button class="btn btn-primaire" type="button" id="btn-confirmer-oui">Confirmer</button>
+  </div>
+</dialog>
+
+<!-- Aperçu du rapport -->
+<dialog class="dialogue dialogue-rapport" id="dlg-rapport" aria-labelledby="titre-dlg-rapport">
+  <div class="dialogue-entete">
+    <h2 id="titre-dlg-rapport">Rapport</h2>
+    <div class="pied-actions">
+      <button class="btn btn-primaire" type="button" id="btn-imprimer"><svg class="ic"><use href="#i-imprimante"/></svg>Imprimer ou enregistrer en PDF</button>
+      <button class="btn-icone" type="button" data-fermer aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+  <div class="dialogue-corps apercu-rapport" id="apercu-rapport"></div>
+</dialog>
+
+<input type="file" id="fichier" accept=".json,.csv,.tsv,.txt,application/json,text/csv,text/plain" hidden>
+<div class="zone-depot" id="zone-depot" hidden><div><svg class="ic"><use href="#i-importer"/></svg><p>Déposez un fichier de bilan (.json) ou un tableau (.csv)</p></div></div>
+<div id="zone-impression" class="zone-impression"></div>
+
+<!--@moteur-->
+<!--@catalogue-->
+<!--@interface-->
+</body>
+</html>
