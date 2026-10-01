@@ -663,3 +663,155 @@ test('validation des hypothèses saisies', () => {
   assert.equal(M.valeurHypotheseValide('jours', 3), true);
   assert.equal(M.valeurHypotheseValide('inconnue', 1), false);
 });
+
+test.describe('corrections issues de la relecture', () => {
+  // Référence : placement appareil par appareil (méthode d'origine), pour vérifier la version par blocs.
+  function repartitionReference(projet) {
+    const h = M.hypothesesEffectives(projet.hypotheses);
+    const calc = projet.lignes.map((l) => M.calculerLigne(l, h)).filter((c) => c.incluse);
+    const courant = { L1: 0, L2: 0, L3: 0 };
+    const min = () => ['L1', 'L2', 'L3'].reduce((m, ph) => (courant[ph] < courant[m] - 1e-9 ? ph : m), 'L1');
+    for (const c of calc) if (c.alimentation === 'tri') for (const ph of ['L1', 'L2', 'L3']) courant[ph] += c.iA;
+    for (const c of calc) if (c.alimentation === 'mono' && c.phase !== 'auto') courant[c.phase] += c.iA;
+    const resultat = {};
+    const autos = calc
+      .filter((c) => c.alimentation === 'mono' && c.phase === 'auto')
+      .map((c, rang) => ({ c, rang, s: c.sVA / c.quantite }))
+      .sort((a, b) => b.s - a.s || a.rang - b.rang);
+    for (const { c } of autos) {
+      const rep = { L1: 0, L2: 0, L3: 0 };
+      let reste = c.quantite;
+      while (reste > 1e-9) {
+        const part = Math.min(1, reste);
+        const ph = min();
+        courant[ph] += (c.iA / c.quantite) * part;
+        rep[ph] += part;
+        reste -= part;
+      }
+      resultat[c.id] = rep;
+    }
+    return { resultat, courant };
+  }
+
+  test('répartition par blocs identique à la répartition appareil par appareil', () => {
+    let graine = 2026;
+    const alea = () => ((graine = (graine * 1103515245 + 12345) % 2147483648) / 2147483648);
+    for (let essai = 0; essai < 400; essai++) {
+      const lignes = [];
+      const n = 1 + Math.floor(alea() * 10);
+      for (let i = 0; i < n; i++) {
+        const tri = alea() < 0.15;
+        const decimal = alea() < 0.15;
+        lignes.push({
+          nom: 'L' + i,
+          puissanceW: [10, 30, 150, 400, 1000, 2000, 3500][Math.floor(alea() * 7)] * (alea() < 0.3 ? 1.37 : 1),
+          quantite: decimal ? Math.round(alea() * 400) / 10 : 1 + Math.floor(alea() * 40),
+          cosPhi: alea() < 0.5 ? null : 1,
+          alimentation: tri ? 'tri' : 'mono',
+          phase: tri ? 'auto' : ['auto', 'auto', 'auto', 'L1', 'L2', 'L3'][Math.floor(alea() * 6)],
+        });
+      }
+      const projet = projetAvec(lignes);
+      const r = M.calculer(projet);
+      const ref = repartitionReference(projet);
+      for (const c of r.lignes) {
+        if (!ref.resultat[c.id]) continue;
+        for (const ph of ['L1', 'L2', 'L3']) proche(c.repartition[ph], ref.resultat[c.id][ph], 1e-6, 'essai ' + essai + ' ' + c.nom + ' ' + ph);
+      }
+      for (const p of r.scenarioTri.phases) proche(p.iA, ref.courant[p.phase], 1e-6, 'courant ' + p.phase);
+    }
+  });
+
+  test('quantités extrêmes : calcul immédiat (2 000 lignes de 100 000 appareils)', () => {
+    const lignes = [];
+    for (let i = 0; i < 2000; i++) lignes.push({ nom: 'L' + i, puissanceW: 10 + (i % 50), quantite: 100000 });
+    const p = projetAvec(lignes);
+    const t0 = Date.now();
+    const r = M.calculer(p);
+    const duree = Date.now() - t0;
+    assert.ok(duree < 1500, duree + ' ms');
+    assert.ok(r.scenarioTri.desequilibre < 1e-6);
+  });
+
+  test('pourcentages des hypothèses : au moins 1 %', () => {
+    assert.equal(M.valeurHypotheseValide('tauxChargeMax', 0.008), false);
+    assert.equal(M.valeurHypotheseValide('tauxChargeMax', 0.01), true);
+    assert.equal(M.valeurHypotheseValide('desequilibreMax', 0.005), false);
+  });
+
+  test('raccordement imposé normalisé : prise et identifiant retrouvés', () => {
+    const r = M.calculer(projetAvec([{ nom: 'A', puissanceW: 1000 }], { raccordementImpose: { phases: 3, calibreA: 32 } }));
+    assert.equal(r.retenu.id, 'tri32');
+    assert.equal(r.retenu.prise, 'P17 3P+N+T 32 A');
+    const perso = M.calculer(projetAvec([{ nom: 'A', puissanceW: 1000 }], { raccordementImpose: { phases: 3, calibreA: 40 } }));
+    assert.equal(perso.retenu.id, null);
+    assert.equal(perso.retenu.prise, null);
+  });
+
+  test('CSV : formules neutralisées, phase « Unique » en monophasé', () => {
+    const p = projetAvec([
+      { nom: '=1+1', puissanceW: 100, note: '@SOMME(A1:A2)' },
+      { nom: '-moins', puissanceW: 100 },
+      { nom: '+plus', puissanceW: 100 },
+    ]);
+    const csv = M.exporterCSV(p);
+    const lignes = csv.slice(1).trim().split('\r\n');
+    assert.ok(lignes[1].startsWith("'=1+1;"), lignes[1]);
+    assert.ok(lignes[1].endsWith(";'@SOMME(A1:A2)"), lignes[1]);
+    assert.ok(lignes[2].startsWith("'-moins;"));
+    assert.ok(lignes[3].startsWith("'+plus;"));
+    assert.ok(lignes[1].includes(';Monophasé;Unique;'), lignes[1]);
+  });
+
+  test('pourcentages comparés à un seuil : jamais « 80 % au-delà de 80 % »', () => {
+    assert.equal(M.pourcentCompare(0.804, 0.8), '80,4 %');
+    assert.equal(M.pourcentCompare(0.8004, 0.8), '80,04 %');
+    assert.equal(M.pourcentCompare(0.85, 0.8), '85 %');
+    assert.equal(M.pourcentCompare(0.8, 0.8), '80 %');
+    const r = M.calculer(projetAvec([{ nom: 'Charge', puissanceW: 0.804 * 32 * 230, quantite: 3, cosPhi: 1 }], { raccordementImpose: { phases: 3, calibreA: 32 } }));
+    const a = r.alertes.find((x) => x.code === 'CHARGE_ELEVEE');
+    assert.ok(a.message.includes('80,4'), a.message);
+  });
+
+  test('saisie rapide : « x » collé à un nom', () => {
+    assert.deepEqual(M.analyserSaisieRapide('2 xbox'), { quantite: 2, puissanceW: null, requete: 'xbox' });
+    assert.deepEqual(M.analyserSaisieRapide('3 xenon'), { quantite: 3, puissanceW: null, requete: 'xenon' });
+    assert.deepEqual(M.analyserSaisieRapide('3x écran'), { quantite: 3, puissanceW: null, requete: 'écran' });
+    assert.deepEqual(M.analyserSaisieRapide('3 x écran'), { quantite: 3, puissanceW: null, requete: 'écran' });
+    assert.deepEqual(M.analyserSaisieRapide('3×écran'), { quantite: 3, puissanceW: null, requete: 'écran' });
+    assert.deepEqual(M.analyserSaisieRapide('projecteur 1.500 W'), { quantite: null, puissanceW: 1500, requete: 'projecteur' });
+  });
+
+  test('0 W : puissance connue, sans effet ni alerte', () => {
+    const r = M.calculer(projetAvec([{ nom: 'Table', puissanceW: 0 }, { nom: 'Spot', puissanceW: 30 }]));
+    const codes = r.alertes.map((a) => a.code);
+    assert.ok(!codes.includes('PUISSANCE_A_COMPLETER'));
+    assert.ok(!codes.includes('VRAISEMBLANCE_BASSE'));
+    assert.equal(r.totaux.nbLignesIncluses, 1);
+  });
+
+  test('« 1.500 W » : point des milliers', () => {
+    assert.equal(M.analyserPuissance('1.500'), 1500);
+    assert.equal(M.analyserPuissance('1.500 W'), 1500);
+    assert.equal(M.analyserPuissance('1.5'), 1.5);
+    assert.equal(M.analyserPuissance('1.500 kW'), 1500);
+  });
+
+  test('alertes : prise > 16 A ignorée pour une ligne non comptée ; dates incohérentes signalées', () => {
+    const r = M.calculer(projetAvec([{ nom: 'Borne', puissanceW: 7400, quantite: 0, cosPhi: 1 }, { nom: 'Spot', puissanceW: 30 }]));
+    assert.ok(!r.alertes.some((a) => a.code === 'PRISE_SUP_16A'));
+    const d = M.calculer(projetAvec([{ nom: 'Spot', puissanceW: 30 }], { heuresParJour: 8 }, { dateDebut: '2026-06-19', dateFin: '2026-06-17' }));
+    const codes = d.alertes.map((a) => a.code);
+    assert.ok(codes.includes('DATES_INCOHERENTES'));
+    assert.ok(!codes.includes('JOURS_A_COMPLETER'));
+  });
+
+  test('lien de partage démesuré : refusé sans saturer la mémoire', async () => {
+    const json = JSON.stringify({ f: M.FORMAT_ID, v: 1, p: { info: { nom: 'A' }, lignes: [] }, x: 'a'.repeat(6 * 1024 * 1024) });
+    const flux = new Blob([new TextEncoder().encode(json)]).stream().pipeThrough(new CompressionStream('deflate-raw'));
+    const octets = new Uint8Array(await new Response(flux).arrayBuffer());
+    const code = 'z' + Buffer.from(octets).toString('base64url');
+    assert.ok(code.length < 20000, 'lien court : ' + code.length);
+    await assert.rejects(M.decoderPartage(code), /trop volumineux/);
+  });
+});

@@ -58,10 +58,11 @@ L'outil tient dans un seul fichier, `app.html`, sans dépendance externe : il fo
 - Les puissances de la bibliothèque sont des **valeurs types** : elles sont marquées « Type » et signalées à confirmer jusqu'à ce que l'utilisateur les modifie ou les confirme.
 - L'outil ne calcule ni les sections de câbles, ni les protections, ni la sélectivité, ni les courants harmoniques dans le neutre : ces points relèvent de l'étude de distribution (Darkside Power Plan 2).
 - Au-delà de 125 A, l'outil indique le calibre minimal et renvoie vers une étude spécifique.
+- Les exports CSV neutralisent les textes qui commencent comme une formule Excel (`=`, `+`, `-`, `@`) en les préfixant d'une apostrophe.
 
 ## Données
 
-Les bilans sont enregistrés dans le navigateur (stockage local), sur l'appareil utilisé. Rien n'est envoyé sur un serveur, à une exception près : la recherche en ligne, si elle est active, envoie le texte recherché à darkside-energy.com. Pour conserver ou transmettre un bilan : « Enregistrer le fichier du bilan », « Sauvegarde complète » ou « Partager ».
+Les bilans sont enregistrés dans le navigateur (stockage local), sur l'appareil utilisé. Si le navigateur bloque ce stockage (navigation privée stricte, iframe), les bilans restent disponibles pendant la session et un bandeau invite à enregistrer leurs fichiers. Rien n'est envoyé sur un serveur, à une exception près : la recherche en ligne, si elle est active, envoie le texte recherché à darkside-energy.com. Pour conserver ou transmettre un bilan : « Enregistrer le fichier du bilan », « Sauvegarde complète » ou « Partager ».
 
 Le lien de partage contient le bilan complet, compressé dans l'adresse : la personne qui l'ouvre obtient sa propre copie.
 

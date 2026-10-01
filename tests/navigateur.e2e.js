@@ -647,6 +647,133 @@ describe('robustesse et accessibilité', () => {
   });
 });
 
+describe('corrections issues de la relecture', () => {
+  test('« Annuler » des hypothèses par défaut sans effet sur un autre bilan', async () => {
+    const { contexte, page } = await ouvrir();
+    await ajouter(page, 'frigo');
+    await page.click('#btn-hypotheses');
+    await page.fill('[data-hyp="cosPhi"]', '0,7');
+    await page.click('#btn-hyp-defaut');
+    await page.keyboard.press('Escape');
+    await actionMenu(page, 'nouveau');
+    await page.click('.toast:has-text("Hypothèses par défaut") .toast-action').catch(() => {});
+    const p = await etatProjet(page);
+    assert.equal(p.hypotheses.cosPhi, 0.85, 'le nouveau bilan garde ses hypothèses');
+    await contexte.close();
+  });
+
+  test('stockage bloqué : changer de bilan ne perd rien pendant la session', async () => {
+    const { contexte, page } = await ouvrir({
+      init: () => {
+        Object.defineProperty(window, 'localStorage', {
+          get() {
+            throw new Error('stockage bloqué');
+          },
+        });
+      },
+    });
+    await ajouter(page, '12 spots led');
+    await page.fill('#projet-nom', 'Bilan A');
+    await actionMenu(page, 'exemple-stand-salon');
+    await page.click('#btn-bilans');
+    assert.equal(await page.locator('#liste-bilans .bilan').count(), 2);
+    assert.match(await page.textContent('#info-bilans'), /session/);
+    await page.click('#liste-bilans .bilan-ouvrir:has-text("Bilan A")');
+    const p = await etatProjet(page);
+    assert.equal(p.info.nom, 'Bilan A');
+    assert.equal(p.lignes[0].quantite, 12);
+    await contexte.close();
+  });
+
+  test('tableau à jour après changement de raccordement', async () => {
+    const { contexte, page } = await ouvrir();
+    await ajouter(page, '6 plancha');
+    assert.equal(await page.locator('tr.ligne [data-champ="phase"]').first().isDisabled(), false);
+    await page.selectOption('#choix-raccordement', 'mono63');
+    assert.equal(await page.locator('tr.ligne [data-champ="phase"]').first().isDisabled(), true, 'phases désactivées en monophasé');
+    assert.equal(await page.textContent('tr.ligne [data-calc="repartition"]'), '');
+    await ajouter(page, 'four mixte');
+    const four = page.locator('tr.ligne', { has: page.locator('[data-champ="alimentation"] option[value="tri"]:checked') });
+    assert.equal(await four.locator('[data-calc="alerte"]').isHidden(), false, 'marque d’alerte sur le four triphasé');
+    assert.equal(await page.locator('#alertes .alerte.erreur').count(), 1);
+    await contexte.close();
+  });
+
+  test('sélecteur de raccordement : prise retrouvée, clavier, « Autre calibre »', async () => {
+    const { contexte, page } = await ouvrir();
+    await ajouter(page, 'bouilloire');
+    await page.selectOption('#choix-raccordement', 'tri32');
+    assert.match(await page.textContent('#racc-sous'), /P17 3P\+N\+T 32 A/);
+    await page.click('#comparatif summary');
+    const libelles = await page.locator('#table-comparatif tbody td:first-child').allTextContents();
+    assert.equal(libelles.filter((t) => t.startsWith('32\u00a0A tri')).length, 1, 'pas de doublon : ' + libelles.join(' | '));
+    await page.selectOption('#choix-raccordement', 'autre');
+    await page.waitForSelector('#dlg-hypotheses[open]');
+    await page.keyboard.press('Escape');
+    assert.equal(await page.inputValue('#choix-raccordement'), 'tri32');
+    await page.selectOption('#choix-raccordement', 'auto');
+    await page.focus('#choix-raccordement');
+    await page.keyboard.press('ArrowDown');
+    assert.equal(await page.evaluate(() => document.activeElement.id), 'choix-raccordement', 'focus conservé');
+    await contexte.close();
+  });
+
+  test('résultat en ligne tardif : l’option choisie au clavier est conservée', async () => {
+    let liberer;
+    const attente = new Promise((r) => (liberer = r));
+    const enLigne = async (route) => {
+      const entetes = { 'access-control-allow-origin': '*', 'access-control-allow-headers': 'content-type' };
+      if (route.request().method() === 'OPTIONS') return route.fulfill({ status: 204, headers: entetes });
+      await attente;
+      return route.fulfill({ status: 200, headers: entetes, contentType: 'application/json', body: JSON.stringify({ devices: [{ name: 'Projecteur base', power: 300, diversity: 1 }] }) });
+    };
+    const { contexte, page } = await ouvrir({ enLigne });
+    await page.fill('#saisie', 'projecteur');
+    await page.waitForSelector('#suggestions [role="option"]');
+    await page.press('#saisie', 'ArrowUp');
+    const choisie = await page.textContent('#suggestions [aria-selected="true"]');
+    assert.match(choisie, /Ajouter « Projecteur »/);
+    await page.waitForTimeout(500);
+    liberer();
+    await page.waitForSelector('#suggestions .sugg-groupe:has-text("Base Dark Side Energy en ligne")');
+    assert.match(await page.textContent('#suggestions [aria-selected="true"]'), /Ajouter « Projecteur »/);
+    await page.press('#saisie', 'Enter');
+    const [l] = (await etatProjet(page)).lignes;
+    assert.equal(l.nom, 'Projecteur');
+    await contexte.close();
+  });
+
+  test('tension modifiée reprise dans le texte de la source autonome', async () => {
+    const { contexte, page } = await ouvrir();
+    await ajouter(page, '3 bouilloire');
+    await page.click('#btn-hypotheses');
+    await page.fill('[data-hyp="tensionTriV"]', '380');
+    await page.keyboard.press('Escape');
+    assert.match(await page.textContent('#energie'), /triphasé 380/);
+    await contexte.close();
+  });
+
+  test('suppression au clavier : le focus passe à la ligne suivante', async () => {
+    const { contexte, page } = await ouvrir();
+    await ajouter(page, 'frigo');
+    await ajouter(page, 'congélateur');
+    await page.focus('tr.ligne >> nth=0 >> [data-action="supprimer"]');
+    await page.keyboard.press('Enter');
+    assert.equal((await etatProjet(page)).lignes.length, 1);
+    assert.equal(await page.evaluate(() => document.activeElement.dataset.action), 'supprimer');
+    await contexte.close();
+  });
+
+  test('flèche haut : ouvre la liste des suggestions', async () => {
+    const { contexte, page } = await ouvrir();
+    await page.focus('#saisie');
+    await page.keyboard.press('Escape');
+    await page.keyboard.press('ArrowUp');
+    assert.equal(await page.isVisible('#suggestions'), true);
+    await contexte.close();
+  });
+});
+
 describe('application installable (servie en HTTP)', () => {
   let serveur;
   let base;

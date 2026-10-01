@@ -220,16 +220,39 @@
   /* ================================================================== */
 
   const PREFIXE = 'calculateur-energie-stand/';
+
+  // Repli quand le stockage local est bloqué : les bilans restent disponibles pendant la session.
+  const memoireSession = new Map();
+  const zoneMemoire = {
+    getItem: (k) => (memoireSession.has(k) ? memoireSession.get(k) : null),
+    setItem: (k, v) => memoireSession.set(k, String(v)),
+    removeItem: (k) => memoireSession.delete(k),
+    cles: () => Array.from(memoireSession.keys()),
+  };
+  const zoneLocale = {
+    getItem: (k) => window.localStorage.getItem(k),
+    setItem: (k, v) => window.localStorage.setItem(k, v),
+    removeItem: (k) => window.localStorage.removeItem(k),
+    cles: () => {
+      const cles = [];
+      for (let i = 0; i < window.localStorage.length; i++) cles.push(window.localStorage.key(i));
+      return cles;
+    },
+  };
+
   const Stockage = {
     ok: false,
+    zone: zoneMemoire,
     init() {
       try {
         const cle = PREFIXE + 'essai';
         window.localStorage.setItem(cle, '1');
         window.localStorage.removeItem(cle);
         this.ok = true;
+        this.zone = zoneLocale;
       } catch (e) {
         this.ok = false;
+        this.zone = zoneMemoire;
       }
       return this.ok;
     },
@@ -239,20 +262,16 @@
     lireTous() {
       const projets = [];
       let illisibles = 0;
-      if (!this.ok) return { projets, illisibles };
-      const cles = [];
+      let cles;
       try {
-        for (let i = 0; i < localStorage.length; i++) {
-          const k = localStorage.key(i);
-          if (k && k.startsWith(PREFIXE + 'bilan/')) cles.push(k);
-        }
+        cles = this.zone.cles().filter((k) => k && k.startsWith(PREFIXE + 'bilan/'));
       } catch (e) {
         return { projets, illisibles };
       }
       for (const k of cles) {
         let brut = null;
         try {
-          brut = localStorage.getItem(k);
+          brut = this.zone.getItem(k);
           const { projet } = M.normaliserProjet(JSON.parse(brut));
           projet.id = k.slice((PREFIXE + 'bilan/').length) || projet.id;
           projets.push(projet);
@@ -260,8 +279,8 @@
           // Bilan illisible : mis de côté (jamais effacé), pour ne pas bloquer l'outil.
           illisibles += 1;
           try {
-            localStorage.setItem(PREFIXE + 'illisible/' + Date.now() + '-' + k.slice(-14), brut == null ? '' : brut);
-            localStorage.removeItem(k);
+            this.zone.setItem(PREFIXE + 'illisible/' + Date.now() + '-' + k.slice(-14), brut == null ? '' : brut);
+            this.zone.removeItem(k);
           } catch (e2) {
             /* stockage plein : on laisse en place */
           }
@@ -271,9 +290,8 @@
       return { projets, illisibles };
     },
     lire(id) {
-      if (!this.ok) return null;
       try {
-        const brut = localStorage.getItem(this.cle(id));
+        const brut = this.zone.getItem(this.cle(id));
         return brut ? M.normaliserProjet(JSON.parse(brut)).projet : null;
       } catch (e) {
         return null;
@@ -281,41 +299,37 @@
     },
     existe(id) {
       try {
-        return this.ok && localStorage.getItem(this.cle(id)) != null;
+        return this.zone.getItem(this.cle(id)) != null;
       } catch (e) {
         return false;
       }
     },
     ecrire(projet) {
-      if (!this.ok) return false;
       try {
-        localStorage.setItem(this.cle(projet.id), JSON.stringify(projet));
+        this.zone.setItem(this.cle(projet.id), JSON.stringify(projet));
         return true;
       } catch (e) {
         return false;
       }
     },
     supprimer(id) {
-      if (!this.ok) return;
       try {
-        localStorage.removeItem(this.cle(id));
+        this.zone.removeItem(this.cle(id));
       } catch (e) {
         /* rien */
       }
     },
     lirePrefs() {
-      if (!this.ok) return {};
       try {
-        const p = JSON.parse(localStorage.getItem(PREFIXE + 'preferences') || '{}');
+        const p = JSON.parse(this.zone.getItem(PREFIXE + 'preferences') || '{}');
         return p && typeof p === 'object' ? p : {};
       } catch (e) {
         return {};
       }
     },
     ecrirePrefs(p) {
-      if (!this.ok) return;
       try {
-        localStorage.setItem(PREFIXE + 'preferences', JSON.stringify(p));
+        this.zone.setItem(PREFIXE + 'preferences', JSON.stringify(p));
       } catch (e) {
         /* rien */
       }
@@ -372,7 +386,9 @@
       rendreProjet();
       rendreLignes();
     } else if (niveau === 'lignes') rendreLignes();
-    else if (niveau === 'calculs') majCalculsLignes();
+    // Les cellules calculées dépendent aussi du raccordement et des hypothèses :
+    // mises à jour à chaque rendu (seules les lignes modifiées touchent au DOM).
+    else majCalculsLignes();
     rendreResultats();
     majBoutonsHistorique();
   }
@@ -409,10 +425,6 @@
 
   let minuteurSauvegarde = 0;
   function planifierSauvegarde() {
-    if (!Stockage.ok) {
-      majEtatSauvegarde('indisponible');
-      return;
-    }
     clearTimeout(minuteurSauvegarde);
     minuteurSauvegarde = setTimeout(sauvegarderMaintenant, 350);
   }
@@ -420,9 +432,9 @@
   function sauvegarderMaintenant() {
     clearTimeout(minuteurSauvegarde);
     minuteurSauvegarde = 0;
-    if (!etat.projet || !Stockage.ok) return;
+    if (!etat.projet) return;
     const ok = Stockage.ecrire(etat.projet);
-    majEtatSauvegarde(ok ? 'ok' : 'erreur');
+    majEtatSauvegarde(!Stockage.ok ? 'indisponible' : ok ? 'ok' : 'erreur');
     if (!ok && !etat.erreurEnregistrementSignalee) {
       etat.erreurEnregistrementSignalee = true;
       toast('Enregistrement impossible : le stockage du navigateur est plein ou bloqué. Enregistrez le fichier du bilan pour le conserver.', {
@@ -443,11 +455,14 @@
       el.title = 'Enregistré dans ce navigateur à ' + new Date().toLocaleTimeString('fr-FR');
     }
     else if (statut === 'erreur') el.append(icone('alerte'), h('span', { class: 'lib', text: 'Non enregistré' }));
-    else if (statut === 'indisponible') el.append(icone('alerte'), h('span', { class: 'lib', text: 'Enregistrement local indisponible' }));
+    else if (statut === 'indisponible') {
+      el.append(icone('alerte'), h('span', { class: 'lib', text: 'Enregistrement local indisponible' }));
+      el.title = 'Les bilans sont gardés pendant cette session seulement : enregistrez leurs fichiers pour les conserver.';
+    }
   }
 
   function ouvrirProjet(projet) {
-    if (etat.projet && minuteurSauvegarde) sauvegarderMaintenant();
+    if (etat.projet && (minuteurSauvegarde || (!Stockage.ok && !projetVierge(etat.projet)))) sauvegarderMaintenant();
     etat.projet = projet;
     etat.ligneOuverte = null;
     historique.passe = [];
@@ -1024,7 +1039,11 @@
     vider(zone);
     const item = (lib, val) => h('span', null, lib + ' ', h('strong', { text: val }));
     if (!c.incluse) {
-      zone.append(h('span', { text: c.puissanceConnue ? 'Quantité nulle : ligne non comptée.' : 'Puissance à compléter : ligne non comptée.' }));
+      zone.append(
+        h('span', {
+          text: !c.puissanceConnue ? 'Puissance à compléter : ligne non comptée.' : c.puissanceW === 0 ? 'Puissance nulle : ligne sans effet sur le bilan.' : 'Quantité nulle : ligne non comptée.',
+        })
+      );
       return;
     }
     zone.append(
@@ -1218,10 +1237,21 @@
   function supprimerLigne(id) {
     const index = etat.projet.lignes.findIndex((l) => l.id === id);
     if (index < 0) return;
+    const focusDansLigne = !!(document.activeElement && document.activeElement.closest && document.activeElement.closest('[data-id="' + echapperCSS(id) + '"]'));
+    let voisine = null;
+    if (focusDansLigne) {
+      const visibles = $$('#table-lignes tr.ligne');
+      const i = visibles.findIndex((tr) => tr.dataset.id === id);
+      voisine = (visibles[i + 1] || visibles[i - 1] || null) && (visibles[i + 1] || visibles[i - 1]).dataset.id;
+    }
     const ligne = JSON.parse(JSON.stringify(etat.projet.lignes[index]));
     const projetId = etat.projet.id;
     if (etat.ligneOuverte === id) etat.ligneOuverte = null;
     modifier((p) => p.lignes.splice(index, 1), { rendu: 'lignes' });
+    if (focusDansLigne) {
+      const cible = voisine ? $('tr.ligne[data-id="' + echapperCSS(voisine) + '"] [data-action="supprimer"]') : $('#saisie');
+      if (cible) cible.focus({ preventScroll: true });
+    }
     toast('« ' + (ligne.nom || 'Sans nom') + ' » supprimé.', {
       cle: 'suppression',
       action: {
@@ -1511,25 +1541,29 @@
     }
   }
 
+  function valeurChoixRaccordement(hyp) {
+    const impose = hyp.raccordementImpose;
+    if (!impose) return 'auto';
+    const o = M.OFFRES.find((x) => x.phases === impose.phases && x.calibreA === impose.calibreA);
+    return o ? o.id : 'perso';
+  }
+
   function rendreChoixRaccordement(r) {
     const choix = $('#choix-raccordement');
-    if (document.activeElement === choix) return;
-    vider(choix);
     const impose = r.hypotheses.raccordementImpose;
-    choix.append(h('option', { value: 'auto', text: 'Automatique' }));
-    const groupe = h('optgroup', { label: 'Raccordement imposé' });
-    let valeur = 'auto';
-    for (const o of M.OFFRES) {
-      groupe.append(h('option', { value: o.id, text: M.libelleRaccordement(o).replace(NBSP, ' ') }));
-      if (impose && impose.phases === o.phases && impose.calibreA === o.calibreA) valeur = o.id;
+    const valeur = valeurChoixRaccordement(r.hypotheses);
+    const perso = valeur === 'perso' ? M.libelleRaccordement(impose).replace(NBSP, ' ') : '';
+    if (choix.dataset.perso !== perso || !choix.options.length) {
+      vider(choix);
+      choix.append(h('option', { value: 'auto', text: 'Automatique' }));
+      const groupe = h('optgroup', { label: 'Raccordement imposé' });
+      for (const o of M.OFFRES) groupe.append(h('option', { value: o.id, text: M.libelleRaccordement(o).replace(NBSP, ' ') }));
+      if (perso) groupe.append(h('option', { value: 'perso', text: perso }));
+      groupe.append(h('option', { value: 'autre', text: 'Autre calibre…' }));
+      choix.append(groupe);
+      choix.dataset.perso = perso;
     }
-    if (impose && valeur === 'auto') {
-      groupe.append(h('option', { value: 'perso', text: M.libelleRaccordement(impose).replace(NBSP, ' ') }));
-      valeur = 'perso';
-    }
-    groupe.append(h('option', { value: 'autre', text: 'Autre calibre…' }));
-    choix.append(groupe);
-    choix.value = valeur;
+    if (choix.value !== valeur) choix.value = valeur;
   }
 
   function rendreRaccordement(r) {
@@ -1586,7 +1620,8 @@
     statut.append(icone(cls === 'ok' ? 'valide' : cls === 'attention' ? 'alerte' : 'erreur'), libelleStatut(ret.statut));
     blocJauge.hidden = !ret.possible;
     if (ret.possible) {
-      $('#racc-taux').textContent = pourcent(ret.taux) + ' · ' + fmtCourant(ret.ibA) + ' / ' + fmt(ret.calibreA, 1) + NBSP + 'A';
+      const seuilProche = Math.abs(ret.taux - 1) < Math.abs(ret.taux - hyp.tauxChargeMax) ? 1 : hyp.tauxChargeMax;
+      $('#racc-taux').textContent = M.pourcentCompare(ret.taux, seuilProche) + ' · ' + fmtCourant(ret.ibA) + ' / ' + fmt(ret.calibreA, 1) + NBSP + 'A';
       majJauge($('#racc-jauge'), ret.taux, hyp.tauxChargeMax, ret.statut);
       $('#racc-jauge').setAttribute('role', 'meter');
       $('#racc-jauge').setAttribute('aria-label', 'Charge du raccordement');
@@ -1639,7 +1674,7 @@
       const depasse = d > hyp.desequilibreMax + 1e-9;
       const ic = icone(depasse ? 'alerte' : 'valide');
       ic.style.color = depasse ? 'var(--attention-icone)' : 'var(--ok-texte)';
-      note.append(ic, ' Déséquilibre ', h('strong', { text: pourcent(d) }), ' (seuil ' + pourcent(hyp.desequilibreMax) + ')');
+      note.append(ic, ' Déséquilibre ', h('strong', { text: M.pourcentCompare(d, hyp.desequilibreMax) }), ' (seuil ' + pourcent(hyp.desequilibreMax) + ')');
       if (vue.ecartA > 0.05) note.append(' · écart ' + fmtCourant(vue.ecartA));
     }
   }
@@ -1659,8 +1694,8 @@
       const libelleResultat = { ok: 'Conforme', attention: '> ' + pourcent(r.hypotheses.tauxChargeMax), surcharge: 'Surcharge', impossible: 'Tri requis' }[e.statut];
       const tr = h(
         'tr',
-        { class: (e.id && e.id === recoId ? 'recommande' : '') + (e.id && !proposees.has(e.id) ? ' non-propose' : '') },
-        h('td', null, e.libelle, e.id === recoId ? [' ', h('span', { class: 'etiquette accent', text: 'Recommandé' })] : null, !e.id ? ' (imposé)' : null, h('small', { text: fmtApparente(e.capaciteVA) + ' disponibles' })),
+        { class: (recoId && e.id === recoId ? 'recommande' : '') + (e.id && !proposees.has(e.id) ? ' non-propose' : '') },
+        h('td', null, e.libelle, recoId && e.id === recoId ? [' ', h('span', { class: 'etiquette accent', text: 'Recommandé' })] : null, !e.id ? ' (imposé)' : null, h('small', { text: fmtApparente(e.capaciteVA) + ' disponibles' })),
         h('td', { class: 'num', text: e.possible && r.totaux.nbLignesIncluses ? pourcent(e.taux) : '–' }),
         h('td', null, r.totaux.nbLignesIncluses ? h('span', { class: 'etiquette ' + cls }, icone(cls === 'ok' ? 'valide' : cls === 'attention' ? 'alerte' : 'erreur'), libelleResultat) : '–')
       );
@@ -1749,7 +1784,12 @@
     dl.append(
       h('p', {
         class: 'detail',
-        text: 'Groupe ou batterie ' + (s.phases === 3 ? 'triphasé 400 V' : 'monophasé 230 V') + ', charge ≤ ' + pourcent(s.tauxChargeMax) + ' sur la phase la plus chargée, hors appels de courant au démarrage.',
+        text:
+          'Groupe ou batterie ' +
+          (s.phases === 3 ? 'triphasé ' + fmt(r.hypotheses.tensionTriV, 0) + NBSP + 'V' : 'monophasé ' + fmt(r.hypotheses.tensionMonoV, 0) + NBSP + 'V') +
+          ', charge ≤ ' +
+          pourcent(s.tauxChargeMax) +
+          ' sur la phase la plus chargée, hors appels de courant au démarrage.',
       })
     );
     ligne('Puissance active à fournir', fmtPuissance(t.pFoisW));
@@ -1932,7 +1972,7 @@
     majSuggestions(conserverActif) {
       const texte = this.input.value;
       const a = M.analyserSaisieRapide(texte);
-      const actifPrecedent = this.actif;
+      const clePrecedente = this.actif >= 0 && this.options[this.actif] ? this.cleOption(this.options[this.actif]) : null;
       this.options = [];
       vider(this.liste);
       const ajouterOption = (opt) => {
@@ -1984,7 +2024,8 @@
       }
       this.liste.append(this.pied());
       this.analyse = a;
-      if (conserverActif && actifPrecedent >= 0 && actifPrecedent < this.options.length) this.activer(actifPrecedent);
+      const retrouve = conserverActif && clePrecedente ? this.options.findIndex((o) => this.cleOption(o) === clePrecedente) : -1;
+      if (retrouve >= 0) this.activer(retrouve);
       else if (texte.trim() && this.options.length) this.activer(0);
       else this.actif = -1;
       if (document.activeElement === this.input) this.ouvrir();
@@ -2024,6 +2065,10 @@
       this.input.focus();
     },
 
+    cleOption(opt) {
+      return opt.type + ':' + (opt.item ? opt.item.id + ':' + opt.item.nom : '');
+    },
+
     activer(i) {
       const opts = $$('[role="option"]', this.liste);
       opts.forEach((o) => o.setAttribute('aria-selected', 'false'));
@@ -2044,6 +2089,10 @@
         if (n) this.activer((this.actif + 1 + n) % n);
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
+        if (this.liste.hidden) {
+          this.majSuggestions();
+          return;
+        }
         if (n) this.activer((this.actif - 1 + n) % n);
       } else if (e.key === 'Enter') {
         e.preventDefault();
@@ -2213,7 +2262,9 @@
         )
       );
     }
-    $('#info-bilans').textContent = Stockage.ok ? pluriel(projets.length, 'bilan enregistré', 'bilans enregistrés') + ' dans ce navigateur' : pluriel(projets.length, 'bilan', 'bilans') + ' (enregistrement local indisponible)';
+    $('#info-bilans').textContent = Stockage.ok
+      ? pluriel(projets.length, 'bilan enregistré', 'bilans enregistrés') + ' dans ce navigateur'
+      : pluriel(projets.length, 'bilan gardé', 'bilans gardés') + ' pendant cette session seulement';
   }
 
   function bilanParId(id) {
@@ -2236,14 +2287,9 @@
       }
     } else if (action === 'dupliquer-bilan-id') {
       const copie = M.dupliquerProjet(p);
-      if (Stockage.ok) {
-        Stockage.ecrire(copie);
-        rendreListeBilans();
-        toast('Copie créée : « ' + copie.info.nom + ' ».', { type: 'ok' });
-      } else {
-        fermerDialogues();
-        ouvrirProjet(copie);
-      }
+      Stockage.ecrire(copie);
+      rendreListeBilans();
+      toast('Copie créée : « ' + copie.info.nom + ' ».', { type: 'ok' });
     } else if (action === 'exporter-bilan-id') {
       telecharger(nomFichier(p.info.nom, '.bilan-stand.json'), M.serialiserProjet(p), 'application/json');
     } else if (action === 'supprimer-bilan-id') {
@@ -2425,6 +2471,7 @@
     });
     $('#btn-hyp-defaut').addEventListener('click', () => {
       const avant = JSON.stringify(etat.projet.hypotheses);
+      const projetId = etat.projet.id;
       modifier((p) => (p.hypotheses = M.hypothesesParDefaut()), { rendu: 'tout' });
       rendreFormHypotheses(true);
       toast('Hypothèses par défaut rétablies.', {
@@ -2432,6 +2479,7 @@
         action: {
           libelle: 'Annuler',
           fn: () => {
+            if (etat.projet.id !== projetId) return;
             modifier((p) => (p.hypotheses = JSON.parse(avant)), { rendu: 'tout' });
             if ($('#dlg-hypotheses').open) rendreFormHypotheses(true);
           },
@@ -2446,15 +2494,13 @@
   function surChoixRaccordement(select) {
     const v = select.value;
     if (v === 'autre') {
-      rendreChoixRaccordement(etat.resultat);
-      select.blur();
+      select.value = valeurChoixRaccordement(etat.projet.hypotheses);
       ouvrirHypotheses('impose-phases');
       return;
     }
     if (v === 'perso') return;
     const o = M.OFFRES_PAR_ID[v];
     modifier((p) => (p.hypotheses.raccordementImpose = o ? { phases: o.phases, calibreA: o.calibreA } : null), { rendu: 'resultats' });
-    select.blur();
   }
 
   /* Import de tableaux et de fichiers */
@@ -3039,7 +3085,7 @@
                 h('td', { class: 'num', text: fmtApparente(e.capaciteVA) }),
                 h('td', { class: 'num', text: e.possible ? fmtCourant(e.ibA) : '–' }),
                 h('td', { class: 'num', text: e.possible ? pourcent(e.taux) : '–' }),
-                h('td', null, e.id === recoId ? h('span', { class: 'tag ok', text: 'Recommandé' }) : e.statut === 'impossible' ? 'Tri requis' : e.statut === 'surcharge' ? 'Surcharge' : e.statut === 'attention' ? '> objectif' : '')
+                h('td', null, recoId && e.id === recoId ? h('span', { class: 'tag ok', text: 'Recommandé' }) : e.statut === 'impossible' ? 'Tri requis' : e.statut === 'surcharge' ? 'Surcharge' : e.statut === 'attention' ? '> objectif' : '')
               )
             )
           )
@@ -3440,6 +3486,7 @@
         etat.projet = projet;
         historique.passe = [];
         historique.futur = [];
+        historique.fusion = null;
         recalculer();
         rendre('tout');
         toast('Bilan mis à jour depuis un autre onglet.', { type: 'info', cle: 'synchro' });

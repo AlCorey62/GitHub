@@ -88,8 +88,8 @@
     tensionMonoV: { min: 100, max: 300 },
     tensionTriV: { min: 100, max: 1000 },
     cosPhi: { min: 0, minExclu: true, max: 1 },
-    tauxChargeMax: { min: 0, minExclu: true, max: 1 },
-    desequilibreMax: { min: 0, minExclu: true, max: 1 },
+    tauxChargeMax: { min: 0.01, max: 1 },
+    desequilibreMax: { min: 0.01, max: 1 },
     heuresParJour: { min: 0, max: 24, optionnel: true },
     jours: { min: 1, max: 366, entier: true, optionnel: true },
   });
@@ -162,6 +162,14 @@
 
   function pourcent(taux, decimales = 0) {
     return estNombre(taux) ? fmt(taux * 100, decimales) + '\u00a0%' : '';
+  }
+
+  /** « 80,4 % » plutôt que « 80 % » quand la valeur est comparée à un seuil de 80 %. */
+  function pourcentCompare(valeur, seuil) {
+    if (!estNombre(valeur)) return '';
+    if (!estNombre(seuil) || Math.abs(valeur - seuil) <= EPS) return pourcent(valeur);
+    for (let d = 0; d <= 3; d++) if (fmt(valeur * 100, d) !== fmt(seuil * 100, d)) return pourcent(valeur, d);
+    return pourcent(valeur, 3);
   }
 
   function texteSimple(v, max) {
@@ -240,6 +248,8 @@
     } else if (/w$/.test(s)) {
       s = s.slice(0, -1);
     }
+    // « 1.500 W » : le point sépare les milliers (une puissance de 1,5 W s'écrit 1,5).
+    if (facteur === 1 && /^\s*\d{1,3}\.\d{3}\s*$/.test(s)) s = s.replace('.', '');
     const n = analyserNombre(s);
     return Number.isFinite(n) ? arrondir(n * facteur, 3) : NaN;
   }
@@ -527,8 +537,8 @@
     const cosPropre = valeurLigneValide('cosPhi', l.cosPhi);
     const cos = cosPropre ? l.cosPhi : h.cosPhi;
     const tri = l.alimentation === 'tri';
-    const puissanceConnue = P != null && P > 0;
-    const incluse = puissanceConnue && q > 0;
+    const puissanceConnue = P != null;
+    const incluse = puissanceConnue && P > 0 && q > 0;
     const pInstW = incluse ? P * q : 0;
     const pFoisW = pInstW * ks;
     const sVA = pFoisW / cos;
@@ -560,6 +570,11 @@
       eJourKWh: incluse && heures != null ? (pFoisW * heures) / 1000 : null,
       repartition: null,
     };
+  }
+
+  /** Phases de la moins chargée à la plus chargée (égalité : L1, puis L2, puis L3). */
+  function phasesParCharge(courant) {
+    return PHASES.slice().sort((x, y) => (Math.abs(courant[x] - courant[y]) <= EPS ? 0 : courant[x] - courant[y]) || PHASES.indexOf(x) - PHASES.indexOf(y));
   }
 
   function phaseLaMoinsChargee(courant) {
@@ -603,13 +618,36 @@
       const iU = c.iA / c.quantite;
       const pU = c.pFoisW / c.quantite;
       const sU = c.sVA / c.quantite;
+      const placer = (ph, n) => {
+        ajouter(ph, iU * n, pU * n, sU * n);
+        rep[ph] += n;
+      };
+      // Même résultat que placer les appareils un par un sur la phase la moins chargée,
+      // mais par blocs : le temps de calcul ne dépend pas de la quantité.
       let reste = c.quantite;
       while (reste > EPS) {
-        const part = Math.min(1, reste);
-        const ph = phaseLaMoinsChargee(courant);
-        ajouter(ph, iU * part, pU * part, sU * part);
-        rep[ph] += part;
-        reste -= part;
+        if (reste < 1) {
+          placer(phaseLaMoinsChargee(courant), reste);
+          break;
+        }
+        const [a, b, d] = phasesParCharge(courant);
+        if (courant[b] - courant[a] >= iU - EPS) {
+          const n = Math.min(Math.floor(reste), Math.max(1, Math.floor((courant[b] - courant[a]) / iU + EPS)));
+          placer(a, n);
+          reste -= n;
+        } else if (courant[d] - courant[b] >= iU - EPS && reste >= 2) {
+          const tours = Math.min(Math.floor(reste / 2), Math.max(1, Math.floor((courant[d] - courant[b]) / iU + EPS)));
+          placer(a, tours);
+          placer(b, tours);
+          reste -= 2 * tours;
+        } else if (courant[d] - courant[a] < iU - EPS && reste >= 3) {
+          const tours = Math.floor(reste / 3);
+          for (const ph of PHASES) placer(ph, tours);
+          reste -= 3 * tours;
+        } else {
+          placer(phaseLaMoinsChargee(courant), 1);
+          reste -= 1;
+        }
       }
       c.repartition = { mode: 'auto', L1: arrondir(rep.L1, 3), L2: arrondir(rep.L2, 3), L3: arrondir(rep.L3, 3) };
     }
@@ -781,10 +819,21 @@
   const ORDRE_NIVEAUX = { erreur: 0, attention: 1, info: 2 };
 
   function controler(ctx) {
-    const { calc, h, totaux, recommandation, retenu, vuePhases, energie, lignes } = ctx;
+    const { calc, h, totaux, recommandation, retenu, vuePhases, energie, lignes, info } = ctx;
     const alertes = [];
     const ajouter = (niveau, code, message, ids) => alertes.push({ niveau, code, message, lignes: ids || [] });
     const noms = (liste) => listeNoms(liste.map((c) => c.nom));
+
+    const datesIncoherentes = !!(info && estDateISO(info.dateDebut) && estDateISO(info.dateFin) && joursEntre(info.dateDebut, info.dateFin) == null);
+    if (datesIncoherentes) {
+      ajouter(
+        'attention',
+        'DATES_INCOHERENTES',
+        info.dateFin < info.dateDebut
+          ? 'La date de fin d\u2019exploitation précède la date de début : jours non calculés.'
+          : 'Période d\u2019exploitation de plus de 366 jours : jours non calculés.'
+      );
+    }
 
     if (!lignes.length) {
       ajouter('info', 'VIDE', 'Aucun équipement : ajoutez les appareils du stand pour lancer le calcul.');
@@ -810,7 +859,7 @@
         tropHaut.map((c) => c.id)
       );
     }
-    const tropBas = calc.filter((c) => c.puissanceConnue && c.puissanceW < LIMITES.vraisemblanceBasseW);
+    const tropBas = calc.filter((c) => c.puissanceConnue && c.puissanceW > 0 && c.puissanceW < LIMITES.vraisemblanceBasseW);
     if (tropBas.length) {
       ajouter(
         'attention',
@@ -832,13 +881,13 @@
       ajouter(
         'erreur',
         'SURCHARGE',
-        'Raccordement ' + retenu.libelle + ' en surcharge : ' + fmt(retenu.ibA) + '\u00a0A appelés pour ' + fmt(retenu.calibreA) + '\u00a0A (' + pourcent(retenu.taux) + ').'
+        'Raccordement ' + retenu.libelle + ' en surcharge : ' + fmt(retenu.ibA) + '\u00a0A appelés pour ' + fmt(retenu.calibreA) + '\u00a0A (' + pourcentCompare(retenu.taux, 1) + ').'
       );
     } else if (retenu && retenu.statut === 'attention') {
       ajouter(
         'attention',
         'CHARGE_ELEVEE',
-        'Raccordement ' + retenu.libelle + ' chargé à ' + pourcent(retenu.taux) + ', au-delà de l’objectif de ' + pourcent(h.tauxChargeMax) + '.'
+        'Raccordement ' + retenu.libelle + ' chargé à ' + pourcentCompare(retenu.taux, h.tauxChargeMax) + ', au-delà de l’objectif de ' + pourcent(h.tauxChargeMax) + '.'
       );
     }
     if (retenu && retenu.possible && retenu.phases === 1 && retenu.ibA > LIMITES.monoMaxA + EPS) {
@@ -876,12 +925,12 @@
       ajouter(
         'attention',
         'DESEQUILIBRE',
-        'Déséquilibre entre phases de ' + pourcent(vuePhases.desequilibre) + ' (seuil ' + pourcent(h.desequilibreMax) + ') : ' + fmt(vuePhases.ecartA) + '\u00a0A d’écart entre la phase la plus chargée et la moins chargée. ' + conseil,
+        'Déséquilibre entre phases de ' + pourcentCompare(vuePhases.desequilibre, h.desequilibreMax) + ' (seuil ' + pourcent(h.desequilibreMax) + ') : ' + fmt(vuePhases.ecartA) + '\u00a0A d’écart entre la phase la plus chargée et la moins chargée. ' + conseil,
         concernees
       );
     }
 
-    const grosAppareils = calc.filter((c) => c.puissanceConnue && c.alimentation === 'mono' && c.iUnitaireA > LIMITES.priseStandardA + EPS);
+    const grosAppareils = calc.filter((c) => c.incluse && c.alimentation === 'mono' && c.iUnitaireA > LIMITES.priseStandardA + EPS);
     if (grosAppareils.length) {
       ajouter(
         'info',
@@ -915,7 +964,7 @@
           : 'Durée d’utilisation à renseigner pour ' + ordinal(energie.lignesSansHeures.length, 'équipement', 'équipements') + ' : énergie partielle.',
         energie.lignesSansHeures
       );
-    } else if (totaux.nbLignesIncluses > 0 && energie.jours == null) {
+    } else if (totaux.nbLignesIncluses > 0 && energie.jours == null && !datesIncoherentes) {
       ajouter('info', 'JOURS_A_COMPLETER', 'Dates ou nombre de jours d’exploitation à renseigner pour l’énergie totale.');
     }
 
@@ -946,7 +995,11 @@
     const evaluations = OFFRES.map((o) => evaluerRaccordement(o, mono, tri, h));
     const recommandation = recommander(mono, tri, h, totaux);
     let retenu = null;
-    if (h.raccordementImpose) retenu = Object.assign({ source: 'impose' }, evaluerRaccordement(h.raccordementImpose, mono, tri, h));
+    if (h.raccordementImpose) {
+      const r = h.raccordementImpose;
+      const normalise = OFFRES.find((o) => o.phases === r.phases && o.calibreA === r.calibreA);
+      retenu = Object.assign({ source: 'impose' }, evaluerRaccordement(normalise || r, mono, tri, h));
+    }
     else if (recommandation.evaluation) retenu = Object.assign({ source: 'recommande' }, recommandation.evaluation);
     // Suggestion quand le raccordement imposé ne suffit pas.
     const alternative = retenu && retenu.source === 'impose' && retenu.statut !== 'ok' && recommandation.evaluation ? recommandation.evaluation : null;
@@ -955,7 +1008,7 @@
     const energie = calculerEnergie(calc, h, info);
     const sourceAutonome = dimensionnerSource(retenu, mono, tri, h);
     const parCategorie = repartirParCategorie(calc, totaux.pFoisW);
-    const alertes = controler({ calc, h, totaux, recommandation, retenu, vuePhases, energie, lignes });
+    const alertes = controler({ calc, h, totaux, recommandation, retenu, vuePhases, energie, lignes, info });
 
     return {
       version: VERSION_APP,
@@ -994,7 +1047,7 @@
     const rePuissance = /(^|\s)(\d{1,3}(?:[ \u00a0\u202f]\d{3})+|\d+(?:[.,]\d+)?)\s*(kw|w)(?=\s|$|[),;])/i;
     const mp = reste.match(rePuissance);
     if (mp) {
-      const valeur = analyserNombre(mp[2]) * (mp[3].toLowerCase() === 'kw' ? 1000 : 1);
+      const valeur = analyserPuissance(mp[2] + (mp[3].toLowerCase() === 'kw' ? ' kW' : ' W'));
       if (Number.isFinite(valeur) && valeur > 0 && valeur <= LIMITES.puissanceMaxW) {
         puissanceW = arrondir(valeur, 3);
         reste = (reste.slice(0, mp.index) + ' ' + reste.slice(mp.index + mp[0].length)).replace(/\s+/g, ' ').trim();
@@ -1005,7 +1058,7 @@
       const n = analyserNombre(texte);
       return Number.isFinite(n) && n > 0 && n <= LIMITES.quantiteMax ? n : null;
     };
-    let m = reste.match(/^(\d+(?:[.,]\d+)?)\s*(?:x|×|\*)\s*(\S.*)$/i) || reste.match(/^(\d+(?:[.,]\d+)?)\s+(\S.*)$/);
+    let m = reste.match(/^(\d+(?:[.,]\d+)?)\s*(?:x\s+|[×*]\s*)(\S.*)$/i) || reste.match(/^(\d+(?:[.,]\d+)?)\s+(\S.*)$/);
     if (m && lireQuantite(m[1]) != null) {
       quantite = lireQuantite(m[1]);
       reste = m[2].trim();
@@ -1323,7 +1376,9 @@
   /* ------------------------------------------------------------------ */
 
   function celluleCSV(v) {
-    const s = v == null ? '' : String(v);
+    let s = v == null ? '' : String(v);
+    // Texte commençant comme une formule (=, +, -, @) : neutralisé pour Excel.
+    if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
     return /[";\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
   }
 
@@ -1342,10 +1397,12 @@
     ];
     const provenance = { saisie: 'Saisie', type: 'Valeur type (bibliothèque)', en_ligne: 'Valeur type (base en ligne)' };
     const lignes = [entetes.map(celluleCSV).join(';')];
+    const monophase = r.vuePhases.type === 'mono';
     for (const l of projet.lignes) {
       const c = r.parId[l.id];
       let phase = '';
       if (l.alimentation === 'tri') phase = 'L1-L2-L3';
+      else if (monophase) phase = 'Unique';
       else if (c.repartition && c.repartition.mode !== 'tri') {
         phase = PHASES.filter((ph) => c.repartition[ph] > 0).map((ph) => ph + (l.phase === 'auto' ? ' x' + fmt(c.repartition[ph], 3).replace(/\u202f/g, '') : '')).join(' ');
       } else phase = l.phase === 'auto' ? 'Auto' : l.phase;
@@ -1506,9 +1563,33 @@
     return octets;
   }
 
-  async function transformerFlux(octets, flux) {
-    const reponse = new Response(new Blob([octets]).stream().pipeThrough(flux));
-    return new Uint8Array(await reponse.arrayBuffer());
+  const TAILLE_MAX_LIEN = 5 * 1024 * 1024;
+
+  async function transformerFlux(octets, flux, limite) {
+    const lecteur = new Blob([octets]).stream().pipeThrough(flux).getReader();
+    const morceaux = [];
+    let total = 0;
+    for (;;) {
+      const { done, value } = await lecteur.read();
+      if (done) break;
+      total += value.length;
+      if (limite && total > limite) {
+        try {
+          await lecteur.cancel();
+        } catch (e) {
+          /* rien */
+        }
+        throw new Error('volumineux');
+      }
+      morceaux.push(value);
+    }
+    const sortie = new Uint8Array(total);
+    let position = 0;
+    for (const m of morceaux) {
+      sortie.set(m, position);
+      position += m.length;
+    }
+    return sortie;
   }
 
   let compressionTestee = null;
@@ -1556,12 +1637,13 @@
     try {
       if (texte[0] === 'z') {
         if (!compressionDisponible()) throw new Error('navigateur');
-        octets = await transformerFlux(depuisBase64Url(texte.slice(1)), new DecompressionStream('deflate-raw'));
+        octets = await transformerFlux(depuisBase64Url(texte.slice(1)), new DecompressionStream('deflate-raw'), TAILLE_MAX_LIEN);
       } else if (texte[0] === 'j') {
         octets = depuisBase64Url(texte.slice(1));
       } else throw new Error('format');
     } catch (e) {
       if (e && e.message === 'navigateur') throw new Error('Ce navigateur ne sait pas lire les liens compressés : mettez-le à jour.');
+      if (e && e.message === 'volumineux') throw new Error('Lien de partage trop volumineux : ouverture refusée.');
       throw new Error('Lien de partage incomplet ou endommagé.');
     }
     let obj;
@@ -1637,6 +1719,7 @@
     // Formatage
     fmt,
     pourcent,
+    pourcentCompare,
     listeNoms,
   });
 });
