@@ -10,6 +10,7 @@ L'outil tient dans un seul fichier, `app.html`, sans dépendance externe : il fo
 
 - **Sur un poste** : télécharger `app.html` et l'ouvrir dans un navigateur récent (Chrome, Edge, Firefox, Safari).
 - **En ligne** : publier le dépôt avec GitHub Pages (voir « Héberger »), puis ouvrir l'adresse obtenue. L'outil s'installe alors comme une application (écran d'accueil du téléphone, mode hors ligne).
+- **Dans Claude (essai)** : la variante produite par `node scripts/build.js --apercu-claude <fichier>` se publie comme artefact Claude. Ce cadre bloque l'impression, les téléchargements, le lien de partage et la base en ligne : un bandeau le signale et ces boutons expliquent pourquoi ils sont sans effet.
 
 ## Ce que fait l'outil
 
@@ -101,6 +102,7 @@ npm run build        # assemble app.html et sw.js
 npm test             # tests unitaires du moteur et de la bibliothèque
 npm run test:e2e     # tests de bout en bout dans Chromium
 npm run verifier     # tout : fichiers générés à jour, tests unitaires, tests navigateur
+node scripts/build.js --apercu-claude apercu.html   # variante pour l'aperçu des artefacts Claude
 ```
 
 L'intégration continue (`.github/workflows/verifications.yml`) refuse un `app.html` qui ne correspondrait pas aux sources et relance tous les tests à chaque envoi.

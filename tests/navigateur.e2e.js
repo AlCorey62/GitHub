@@ -816,3 +816,98 @@ describe('application installable (servie en HTTP)', () => {
     await contexte.close();
   });
 });
+
+describe('aperçu dans Claude (variante pour artefact)', () => {
+  // Reproduction du visualiseur d'après ses règles publiées : la page est insérée dans un squelette
+  // <body>, servie dans un cadre sandbox sans impression, téléchargement ni fenêtre, avec une CSP qui
+  // n'autorise que les scripts et styles en ligne et aucune requête vers un autre site.
+  const CSP = "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'self'";
+
+  async function ouvrirApercu(contexteOptions) {
+    const { versionApercuClaude } = require('../scripts/build.js');
+    const apercu = versionApercuClaude(fs.readFileSync(path.join(RACINE, 'app.html'), 'utf8'));
+    const squelette =
+      '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">' +
+      '<style>:root{color-scheme:light}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style></head><body>' +
+      apercu +
+      '</body></html>';
+    const contexte = await navigateur.newContext(Object.assign({ viewport: { width: 1280, height: 900 }, acceptDownloads: true, locale: 'fr-FR' }, contexteOptions));
+    const compteurs = { base: 0, telechargements: 0 };
+    await contexte.route(BASE_EN_LIGNE, (route) => {
+      compteurs.base++;
+      return route.abort();
+    });
+    await contexte.route('https://hote.test/**', (route) =>
+      route.fulfill({
+        contentType: 'text/html; charset=utf-8',
+        body: '<!doctype html><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hôte</title><style>body{margin:0}iframe{display:block;width:100vw;height:100vh;border:0}</style><iframe sandbox="allow-scripts allow-same-origin allow-forms" src="https://cadre.test/"></iframe>',
+      })
+    );
+    await contexte.route('https://cadre.test/**', (route) =>
+      route.fulfill({ contentType: 'text/html; charset=utf-8', headers: { 'content-security-policy': CSP }, body: squelette })
+    );
+    const page = await contexte.newPage();
+    const erreurs = suivreErreurs(page);
+    page.on('download', () => compteurs.telechargements++);
+    await page.goto('https://hote.test/');
+    const f = page.frame({ url: /^https:\/\/cadre\.test\// });
+    await f.waitForFunction(() => document.documentElement.classList.contains('pret'));
+    return { apercu, contexte, page, f, erreurs, compteurs };
+  }
+
+  test('variante assemblée : démarre sans erreur, fonctions bloquées expliquées, aucune requête externe', async () => {
+    const { apercu, contexte, f, erreurs, compteurs } = await ouvrirApercu();
+    assert.match(apercu, /^<title>Calculateur d’Énergie Stand<\/title>\n/);
+    for (const balise of [/<!DOCTYPE/i, /<html[\s>]/, /<\/?head>/, /<\/?body[\s>]/]) assert.doesNotMatch(apercu, balise);
+    assert.equal(await f.evaluate(() => document.documentElement.lang), 'fr');
+    assert.equal(await f.isVisible('#bandeau-apercu'), true);
+    assert.equal(await f.evaluate(() => document.querySelector('#menu-plein-ecran').hidden), true);
+
+    await f.click('#btn-menu');
+    await f.click('#menu-principal [data-action="exemple-bar-festival"]');
+    await f.waitForSelector('#table-lignes tr.ligne');
+    assert.ok((await f.evaluate(() => window.CalculateurStand.etat().lignes.length)) > 5);
+
+    await f.click('#btn-menu');
+    await f.click('#menu-principal [data-action="export-csv"]');
+    await f.waitForSelector('.toast.attention:has-text("Téléchargement bloqué")');
+    assert.equal(await f.locator('.toast:has-text("Tableau exporté")').count(), 0, 'aucun message de réussite');
+
+    await f.evaluate(() => {
+      window.impressions = 0;
+      window.print = () => window.impressions++;
+    });
+    await f.click('#btn-rapport');
+    await f.waitForSelector('#apercu-rapport .rapport h2');
+    await f.click('#btn-imprimer');
+    await f.waitForSelector('.toast.attention:has-text("Impression bloquée")');
+    assert.equal(await f.evaluate(() => window.impressions), 0);
+    await f.press('body', 'Escape');
+    await f.waitForFunction(() => !document.querySelector('dialog[open]'));
+
+    await f.click('#btn-partager');
+    await f.waitForSelector('.toast.attention:has-text("Lien de partage indisponible")');
+    assert.equal(await f.evaluate(() => document.querySelector('#dlg-partage').open), false);
+
+    await f.fill('#saisie', 'groupe froid industriel');
+    await f.waitForSelector('.sugg-pied:has-text("indisponible dans l’aperçu Claude")');
+    await f.waitForTimeout(800);
+    assert.equal(compteurs.base, 0, 'aucune requête vers la base en ligne');
+    assert.equal(compteurs.telechargements, 0);
+    await f.waitForFunction(() => Object.keys(localStorage).some((k) => k.startsWith('calculateur-energie-stand/')));
+    assert.deepEqual(erreurs, []);
+    await contexte.close();
+  });
+
+  test('téléphone : pas de défilement horizontal dans le cadre', async () => {
+    const { contexte, f, erreurs } = await ouvrirApercu({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
+    await f.click('#btn-menu');
+    await f.click('#menu-principal [data-action="exemple-stand-salon"]');
+    await f.waitForSelector('#table-lignes tr.ligne');
+    const largeur = await f.evaluate(() => document.documentElement.scrollWidth);
+    assert.ok(largeur <= 390, 'largeur ' + largeur);
+    assert.equal(await f.isVisible('#bandeau-apercu'), true);
+    assert.deepEqual(erreurs, []);
+    await contexte.close();
+  });
+});

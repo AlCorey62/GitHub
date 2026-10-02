@@ -437,7 +437,15 @@ kbd {
   font-size: 13px;
 }
 .bandeau .ic {
+  flex-shrink: 0;
   color: var(--attention-icone);
+}
+.bandeau-info {
+  border-color: var(--accent-piste);
+  background: var(--accent-doux);
+}
+.bandeau-info .ic {
+  color: var(--accent-texte);
 }
 @media (min-width: 1528px) {
   .bandeau {

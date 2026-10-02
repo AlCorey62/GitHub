@@ -3,8 +3,9 @@
  * Assemble app.html, fichier unique et autonome (styles et scripts en ligne), à partir de src/,
  * ainsi que sw.js (service worker, cache versionné par l'empreinte de app.html).
  *
- *   node scripts/build.js           écrit app.html et sw.js
- *   node scripts/build.js --check   vérifie qu'ils sont à jour (intégration continue)
+ *   node scripts/build.js                            écrit app.html et sw.js
+ *   node scripts/build.js --check                    vérifie qu'ils sont à jour (intégration continue)
+ *   node scripts/build.js --apercu-claude <fichier>  écrit aussi la variante pour l'aperçu des artefacts Claude
  */
 const fs = require('fs');
 const path = require('path');
@@ -71,6 +72,33 @@ function construire() {
   return { 'app.html': app, 'sw.js': sw };
 }
 
+// Variante pour l'aperçu des artefacts Claude. Le visualiseur fournit lui-même doctype, <html>,
+// <head> (charset, viewport) et <body> : la page garde son titre, ses styles, son contenu et ses
+// scripts, et signale à l'interface le cadre verrouillé (impression, téléchargements, fenêtres,
+// requêtes vers d'autres sites bloqués), qu'elle explique au lieu d'échouer en silence.
+function versionApercuClaude(app) {
+  const extraire = (debut, fin) => {
+    const i = app.indexOf(debut);
+    const j = app.lastIndexOf(fin);
+    if (i < 0 || j < i) throw new Error('structure de app.html inattendue (' + debut + ' … ' + fin + ') pour l\'aperçu Claude.');
+    return app.slice(i + debut.length, j);
+  };
+  const tete = extraire('<head>', '</head>');
+  const corps = extraire('<body>', '</body>');
+  const scripts = tete.match(/<script>[\s\S]*?<\/script>/g) || [];
+  const styles = tete.match(/<style>[\s\S]*?<\/style>/g) || [];
+  if (scripts.length !== 1 || styles.length !== 1) throw new Error('en-tête de app.html inattendu pour l\'aperçu Claude.');
+  return [
+    '<title>Calculateur d\u2019Énergie Stand</title>',
+    '<!-- Calculateur d\'Énergie Stand ' + pkg.version + ', Dark Side Energy : variante pour l\'aperçu des artefacts Claude, GÉNÉRÉE par « node scripts/build.js --apercu-claude ». -->',
+    '<script>document.documentElement.lang = \'fr\'; window.CALCULATEUR_STAND_APERCU_CLAUDE = true;</script>',
+    scripts[0],
+    styles[0],
+    corps.trim(),
+    '',
+  ].join('\n');
+}
+
 function principal() {
   const sorties = construire();
   if (process.argv.includes('--check')) {
@@ -87,11 +115,23 @@ function principal() {
   }
   for (const [f, contenu] of Object.entries(sorties)) fs.writeFileSync(path.join(racine, f), contenu);
   console.log('app.html (' + Math.round(Buffer.byteLength(sorties['app.html']) / 1024) + ' Ko) et sw.js écrits.');
+  const i = process.argv.indexOf('--apercu-claude');
+  if (i >= 0) {
+    const cible = process.argv[i + 1];
+    if (!cible || cible.startsWith('--')) throw new Error('chemin du fichier manquant après --apercu-claude.');
+    const apercu = versionApercuClaude(sorties['app.html']);
+    fs.writeFileSync(path.resolve(cible), apercu);
+    console.log('Aperçu Claude écrit : ' + path.resolve(cible) + ' (' + Math.round(Buffer.byteLength(apercu) / 1024) + ' Ko).');
+  }
 }
 
-try {
-  principal();
-} catch (e) {
-  console.error('Échec de l\'assemblage : ' + e.message);
-  process.exit(1);
+if (require.main === module) {
+  try {
+    principal();
+  } catch (e) {
+    console.error('Échec de l\'assemblage : ' + e.message);
+    process.exit(1);
+  }
 }
+
+module.exports = { construire, versionApercuClaude };

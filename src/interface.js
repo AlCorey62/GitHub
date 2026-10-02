@@ -99,6 +99,15 @@
       return true;
     }
   })();
+  // Variante assemblée par « build.js --apercu-claude » pour l'aperçu des artefacts Claude : ce cadre
+  // bloque impression, téléchargements, fenêtres, requêtes vers d'autres sites et état dans l'adresse.
+  const apercuClaude = window.CALCULATEUR_STAND_APERCU_CLAUDE === true;
+
+  function bloqueParApercu(message) {
+    if (!apercuClaude) return false;
+    toast(message, { type: 'attention', duree: 8000, cle: 'apercu' });
+    return true;
+  }
 
   /* Formats d'affichage */
 
@@ -184,6 +193,7 @@
   const ICONES_NIVEAU = { erreur: 'erreur', attention: 'alerte', info: 'info' };
 
   function telecharger(nom, contenu, type) {
+    if (bloqueParApercu('Téléchargement bloqué par l\u2019aperçu Claude : ouvrez le fichier app.html dans un navigateur pour enregistrer « ' + nom + ' ».')) return false;
     const blob = contenu instanceof Blob ? contenu : new Blob([contenu], { type });
     const url = URL.createObjectURL(blob);
     const a = h('a', { href: url, download: nom, hidden: true });
@@ -191,6 +201,7 @@
     a.click();
     a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 5000);
+    return true;
   }
 
   async function copierTexte(texte) {
@@ -1840,7 +1851,7 @@
     controleur: null,
     cache: new Map(),
     actif() {
-      return prefs.rechercheEnLigne !== false && this.etat !== 'indisponible' && navigator.onLine !== false;
+      return !apercuClaude && prefs.rechercheEnLigne !== false && this.etat !== 'indisponible' && navigator.onLine !== false;
     },
     nettoyer(d, i) {
       if (!d || typeof d !== 'object') return null;
@@ -2035,7 +2046,9 @@
       const pied = h('div', { class: 'sugg-pied' });
       let texte;
       let action = null;
-      if (prefs.rechercheEnLigne === false) {
+      if (apercuClaude) {
+        texte = 'Base en ligne Dark Side Energy : indisponible dans l\u2019aperçu Claude';
+      } else if (prefs.rechercheEnLigne === false) {
         texte = 'Base en ligne Dark Side Energy : désactivée';
         action = ['activer', 'Activer'];
       } else if (EnLigne.etat === 'indisponible') {
@@ -2046,7 +2059,7 @@
         action = ['desactiver', 'Désactiver la base en ligne'];
       }
       pied.append(h('span', null, icone('globe'), ' ', texte));
-      pied.append(h('button', { type: 'button', class: 'lien', dataset: { combo: action[0] }, text: action[1] }));
+      if (action) pied.append(h('button', { type: 'button', class: 'lien', dataset: { combo: action[0] }, text: action[1] }));
       return pied;
     },
 
@@ -2328,7 +2341,7 @@
       toast('Aucun bilan à exporter.', { type: 'attention' });
       return;
     }
-    telecharger('Récapitulatif des bilans - ' + dateFichier() + '.csv', M.exporterRecapCSV(projets), 'text/csv;charset=utf-8');
+    if (!telecharger('Récapitulatif des bilans - ' + dateFichier() + '.csv', M.exporterRecapCSV(projets), 'text/csv;charset=utf-8')) return;
     toast('Récapitulatif exporté : ' + pluriel(projets.length, 'bilan', 'bilans') + '.', { type: 'ok' });
   }
 
@@ -2338,7 +2351,7 @@
       toast('Aucun bilan à sauvegarder.', { type: 'attention' });
       return;
     }
-    telecharger('Sauvegarde des bilans - ' + dateFichier() + '.json', M.serialiserSauvegarde(projets), 'application/json');
+    if (!telecharger('Sauvegarde des bilans - ' + dateFichier() + '.json', M.serialiserSauvegarde(projets), 'application/json')) return;
     toast('Sauvegarde complète enregistrée : ' + pluriel(projets.length, 'bilan', 'bilans') + '.', { type: 'ok' });
   }
 
@@ -2777,6 +2790,7 @@
   /* Partage */
 
   async function partager() {
+    if (bloqueParApercu('Lien de partage indisponible dans l\u2019aperçu Claude : il fonctionne une fois l\u2019outil publié sur un site (GitHub Pages par exemple).')) return;
     let code;
     try {
       code = await M.encoderPartage(etat.projet);
@@ -2838,12 +2852,12 @@
   /* Exports */
 
   function exporterCSV() {
-    telecharger(nomFichier(etat.projet.info.nom, ' - équipements.csv'), M.exporterCSV(etat.projet, etat.resultat), 'text/csv;charset=utf-8');
+    if (!telecharger(nomFichier(etat.projet.info.nom, ' - équipements.csv'), M.exporterCSV(etat.projet, etat.resultat), 'text/csv;charset=utf-8')) return;
     toast('Tableau exporté (CSV pour Excel).', { type: 'ok' });
   }
 
   function exporterJSON() {
-    telecharger(nomFichier(etat.projet.info.nom, '.bilan-stand.json'), M.serialiserProjet(etat.projet), 'application/json');
+    if (!telecharger(nomFichier(etat.projet.info.nom, '.bilan-stand.json'), M.serialiserProjet(etat.projet), 'application/json')) return;
     toast('Fichier du bilan enregistré : il se rouvre avec « Ouvrir un fichier ».', { type: 'ok' });
   }
 
@@ -3148,6 +3162,7 @@
   }
 
   function imprimer() {
+    if (bloqueParApercu('Impression bloquée par l\u2019aperçu Claude : ouvrez le fichier app.html dans un navigateur pour imprimer le rapport ou l\u2019enregistrer en PDF.')) return;
     try {
       window.print();
     } catch (e) {
@@ -3521,7 +3536,7 @@
   }
 
   function activerApplication() {
-    if (!/^https?:$/.test(location.protocol) || dansIframe || !window.fetch) return;
+    if (apercuClaude || !/^https?:$/.test(location.protocol) || dansIframe || !window.fetch) return;
     fetch('manifest.webmanifest', { method: 'HEAD', cache: 'no-store' })
       .then((r) => {
         if (!r.ok) return;
@@ -3541,7 +3556,8 @@
     prefs = Object.assign(prefs, Stockage.lirePrefs());
     appliquerTheme();
     $('#bandeau-stockage').hidden = Stockage.ok;
-    if (dansIframe) $('#menu-plein-ecran').hidden = false;
+    $('#bandeau-apercu').hidden = !apercuClaude;
+    if (dansIframe && !apercuClaude) $('#menu-plein-ecran').hidden = false;
     const { projets, illisibles } = Stockage.lireTous();
     const projet = projets.find((p) => p.id === prefs.dernierBilan) || projets[0] || M.creerProjet('');
     lierEvenements();
