@@ -16,7 +16,7 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   entreprise/              L'entreprise, nous rejoindre
   news/                    Le sais-tu ? et actualités (8 articles)
   faq/                     Questions fréquentes (17 questions, balisage FAQPage)
-  lexique/                 Lexique de 46 termes (balisage DefinedTermSet)
+  lexique/                 Lexique de 46 termes, avec recherche (balisage DefinedTermSet)
   bilan-de-puissance/      Outil de bilan de puissance (démo 4 lignes, accès complet pour les clients)
   compte/                  Espace client : activation du compte, connexion, mot de passe oublié (non indexé)
   calculette-electro/      Conversions, chute de tension, repères par connecteur
@@ -28,7 +28,7 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   **/index.html.md         Version Markdown de chaque page (générée)
   assets/css/main.css      Charte graphique complète
   assets/js/               main.js (menu, animations, formulaire), elec.js (formules), bilan.js, calculette.js,
-                           identity.js (connexion Netlify Identity), compte.js (espace client)
+                           identity.js (connexion Netlify Identity), compte.js (espace client), lexique.js (recherche)
   assets/fonts/            Police Archivo auto-hébergée (licence OFL)
   assets/img/              Logos vectorisés, photos optimisées, icônes, image de partage, carte-monde.svg
 tools/

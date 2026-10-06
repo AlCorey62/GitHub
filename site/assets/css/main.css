@@ -3417,7 +3417,8 @@ mark.todo {
   color: var(--c-text-2);
 }
 
-.glossary__item:target {
+.glossary__item:target,
+.glossary__item:has(> dt:target) {
   background: rgba(195, 0, 0, 0.08);
   box-shadow: inset 3px 0 0 var(--c-brand);
   padding-left: 16px;
@@ -3425,6 +3426,67 @@ mark.todo {
 
 @media (max-width: 640px) {
   .glossary__item { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Recherche dans le lexique : champ collé sous l'en-tête pendant le défilement */
+.glossary-search {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-line);
+}
+
+.glossary-search[hidden],
+.glossary-empty[hidden],
+.glossary__item[hidden] {
+  display: none;
+}
+
+.glossary-search__field {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.glossary-search__field svg {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  color: var(--c-text-3);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.glossary-search__field .input {
+  padding-left: 42px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.glossary-search__count {
+  flex: none;
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--c-text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.glossary-empty {
+  margin: 0;
+  padding: 24px 0;
+  color: var(--c-text-2);
+}
+
+/* Lien vers un terme : il s'affiche sous la barre de recherche (l'ancre est portée par le terme) */
+.glossary-search:not([hidden]) ~ .glossary dt {
+  scroll-margin-top: 84px;
 }
 
 /* Encadré « À retenir » et bloc « En bref » */
