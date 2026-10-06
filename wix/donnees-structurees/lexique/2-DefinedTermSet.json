@@ -16,6 +16,13 @@
   "hasDefinedTerm": [
     {
       "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#adblue",
+      "name": "AdBlue",
+      "description": "Solution d'urée injectée dans l'échappement des moteurs diesel récents, notamment de nombreux groupes Stage V, pour réduire les émissions d'oxydes d'azote (NOx) grâce à un catalyseur SCR. Le groupe en consomme en plus de son carburant : elle se prévoit dans la logistique, au même titre que le gazole ou le HVO.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
       "@id": "https://www.darkside-energy.com/lexique#armoire-de-distribution",
       "name": "Armoire de distribution",
       "description": "Ensemble électrique mobile qui reçoit une arrivée de forte intensité, par exemple 125 A ou 400 A, et la répartit en départs protégés, par exemple 16 A, 32 A ou 63 A, vers les coffrets et les équipements.",
@@ -26,6 +33,27 @@
       "@id": "https://www.darkside-energy.com/lexique#bilan-de-puissance",
       "name": "Bilan de puissance",
       "description": "Recensement de tous les équipements électriques d'un événement, avec leur puissance, leur type de raccordement et leur coefficient de foisonnement. Il sert à dimensionner les sources, les câbles et les protections.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#cable-unifilaire",
+      "name": "Câble unifilaire",
+      "description": "Câble à un seul conducteur, de forte section, par exemple 150 ou 240 mm². Pour les fortes intensités, chaque phase, le neutre et la terre ont leur propre câble, raccordé par des connecteurs Powerlock. À ne pas confondre avec le schéma unifilaire.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#calibre",
+      "name": "Calibre",
+      "description": "Intensité nominale d'une protection ou d'un connecteur, en ampères. Les calibres normalisés courants en événementiel sont 16, 32, 63, 125, 250 et 400 A. Le calibre d'une protection doit rester compatible avec la section du câble qu'elle protège.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#charge-de-securite",
+      "name": "Chargé de sécurité",
+      "description": "Professionnel désigné par l'organisateur d'un salon ou d'une exposition pour veiller au respect des règles de sécurité, notamment sur les stands. C'est lui qui refuse l' ilotage.",
       "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
     },
     {
@@ -51,9 +79,30 @@
     },
     {
       "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#convention-de-raccordement",
+      "name": "Convention de raccordement",
+      "description": "Document établi avec le gestionnaire du réseau de distribution, le plus souvent Enedis, qui fixe les conditions techniques et financières d'un raccordement au réseau : puissance, point de raccordement, ouvrages à réaliser. Pour un événement raccordé au réseau, c'est le point de départ de la chaîne électrique.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
       "@id": "https://www.darkside-energy.com/lexique#cos-phi",
       "name": "cos φ (facteur de puissance)",
       "description": "Rapport entre la puissance active, en watts, et la puissance apparente, en voltampères. Il vaut 1 pour une charge purement résistive et moins pour les moteurs ou certaines alimentations électroniques.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#delestage",
+      "name": "Délestage",
+      "description": "Coupure volontaire des charges non prioritaires quand la puissance demandée dépasse ce que la source peut fournir, pour préserver l'alimentation des équipements essentiels. Il se prévoit dès le bilan de puissance, en classant les départs par priorité.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#designation-des-cables",
+      "name": "Désignation des câbles (3G2,5, 5G16…)",
+      "description": "Notation qui donne le nombre de conducteurs et leur section : le premier chiffre indique le nombre de conducteurs, la lettre G signale un conducteur de protection vert et jaune, le dernier nombre la section en mm². Un 5G16 compte ainsi cinq conducteurs de 16 mm² (trois phases, neutre et terre), un 3G2,5 trois conducteurs de 2,5 mm² (phase, neutre et terre).",
       "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
     },
     {
@@ -68,6 +117,13 @@
       "@id": "https://www.darkside-energy.com/lexique#disjoncteur",
       "name": "Disjoncteur",
       "description": "Protection qui coupe un circuit lorsque l'intensité dépasse son calibre (surcharge) ou en cas de court-circuit. Son pouvoir de coupure s'exprime en kiloampères (kA).",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#erp",
+      "name": "ERP",
+      "description": "Établissement recevant du public : salle de spectacle, parc des expositions, stade, chapiteau… Les installations électriques, y compris temporaires, y obéissent à des règles de sécurité spécifiques et font l'objet de vérifications réglementaires.",
       "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
     },
     {
@@ -100,6 +156,13 @@
     },
     {
       "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#habilitations-electriques",
+      "name": "Habilitations électriques",
+      "description": "Autorisations délivrées par l'employeur, après formation, pour réaliser des opérations sur des installations électriques ou à leur voisinage, selon la norme NF C 18-510. Leurs symboles précisent le domaine : H0 pour les travaux non électriques au voisinage de la haute tension, B2V pour les travaux électriques en basse tension, y compris au voisinage, BR pour les interventions générales en basse tension, BC pour les consignations en basse tension.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
       "@id": "https://www.darkside-energy.com/lexique#hvo",
       "name": "HVO",
       "description": "Carburant renouvelable issu d'huiles et de graisses hydrotraitées (Hydrotreated Vegetable Oil), utilisable à la place du gazole dans les groupes électrogènes compatibles.",
@@ -107,9 +170,23 @@
     },
     {
       "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#hybridation",
+      "name": "Hybridation",
+      "description": "Association d'un pack batterie et d'un groupe électrogène : la batterie alimente les faibles charges et couvre les pointes, le groupe ne démarre que lorsque la demande ou la recharge l'exige. Résultat : moins d'heures de fonctionnement du groupe, donc moins de carburant consommé et moins de bruit.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
       "@id": "https://www.darkside-energy.com/lexique#ilotage",
       "name": "Ilotage",
       "description": "Fait d'alimenter un stand depuis le coffret d'un autre stand. Il est systématiquement refusé par les chargés de sécurité des salons, car il empêche la protection différentielle de jouer correctement son rôle.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#inverseur-de-sources",
+      "name": "Inverseur de sources",
+      "description": "Appareil qui bascule l'alimentation d'une installation d'une source à une autre, par exemple du réseau vers un groupe électrogène de secours en cas de coupure. Un verrouillage empêche les deux sources d'alimenter le circuit en même temps. Le basculement, manuel ou automatique, s'accompagne en général d'une brève coupure.",
       "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
     },
     {
@@ -124,6 +201,20 @@
       "@id": "https://www.darkside-energy.com/lexique#monophase-triphase",
       "name": "Monophasé et triphasé",
       "description": "Sur un réseau 230/400 V, le monophasé fournit 230 V entre une phase et le neutre. Le triphasé fournit 400 V entre phases et permet de transporter plus de puissance à intensité égale.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#montage-exploitation-demontage",
+      "name": "Montage, exploitation, démontage",
+      "description": "Les trois phases d'un événement : le montage installe et met en service la distribution, l'exploitation couvre l'événement lui-même avec une permanence électrique, le démontage dépose et replie le matériel. Ce sont les dates à préciser dans une demande de devis.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#note-de-calcul",
+      "name": "Note de calcul",
+      "description": "Document du bureau d'étude qui justifie les choix d'une installation : sections de câbles, calibres et sélectivité des protections, chutes de tension. Elle accompagne le schéma unifilaire et sert de référence lors des vérifications.",
       "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
     },
     {
@@ -149,9 +240,37 @@
     },
     {
       "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#plan-d-implantation",
+      "name": "Plan d'implantation",
+      "description": "Plan qui positionne les sources, les transformateurs, les armoires et les coffrets sur le site, dans le respect des distances de sécurité et des accès. Il va de pair avec le plan de cheminement des câbles.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#poste-de-livraison",
+      "name": "Poste de livraison",
+      "description": "Installation par laquelle un site raccordé en haute tension (HTA, 20 kV le plus souvent) reçoit l'électricité du réseau, avec comptage et protections. Un transformateur abaisse ensuite la tension en 230/400 V. Le poste source, lui, est l'installation du gestionnaire de réseau qui alimente tout un secteur.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
       "@id": "https://www.darkside-energy.com/lexique#powerlock",
       "name": "Powerlock",
       "description": "Connecteurs unipolaires verrouillables de forte puissance, un par phase, pour le neutre et pour la terre, utilisés pour les liaisons de 400 A et plus entre les sources et les armoires.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#prise-de-terre",
+      "name": "Prise de terre",
+      "description": "Liaison électrique entre l'installation et le sol. Sur un événement, elle est réalisée par des piquets de terre enfoncés dans le sol et reliés au conducteur de protection. Elle écoule les courants de défaut : associée au différentiel, elle assure la protection des personnes.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#puissance-de-soutirage",
+      "name": "Puissance de soutirage",
+      "description": "Puissance maximale qu'un site peut prélever sur le réseau, fixée par son contrat de raccordement. Pour un événement, elle indique ce que le lieu peut fournir sans renfort : au-delà, il faut un raccordement temporaire, un groupe électrogène ou une batterie.",
       "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
     },
     {
@@ -177,9 +296,23 @@
     },
     {
       "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#selectivite",
+      "name": "Sélectivité",
+      "description": "Coordination des protections pour qu'en cas de défaut, seule la protection située juste en amont déclenche. Le reste de l'installation reste alimenté : un défaut sur un stand ne coupe pas tout le hall. Elle se vérifie dans la note de calcul.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
       "@id": "https://www.darkside-energy.com/lexique#stage-v",
       "name": "Stage V",
       "description": "Niveau le plus exigeant de la réglementation européenne sur les émissions des moteurs d'engins mobiles non routiers (règlement (UE) 2016/1628), qui s'applique notamment aux groupes électrogènes mobiles.",
+      "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.darkside-energy.com/lexique#synchronisation",
+      "name": "Synchronisation des groupes",
+      "description": "Mise en parallèle de plusieurs groupes électrogènes sur un même réseau : avant le couplage, leurs tensions, fréquences et phases doivent coïncider. Les groupes se partagent alors la charge, c'est le principe du groupe Twin zéro coupure.",
       "inDefinedTermSet": "https://www.darkside-energy.com/lexique#lexique"
     },
     {

@@ -16,7 +16,7 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   entreprise/              L'entreprise, nous rejoindre
   news/                    Le sais-tu ? et actualités (8 articles)
   faq/                     Questions fréquentes (17 questions, balisage FAQPage)
-  lexique/                 Lexique de 27 termes (balisage DefinedTermSet)
+  lexique/                 Lexique de 46 termes (balisage DefinedTermSet)
   bilan-de-puissance/      Outil de bilan de puissance (démo 4 lignes, accès complet pour les clients)
   compte/                  Espace client : activation du compte, connexion, mot de passe oublié (non indexé)
   calculette-electro/      Conversions, chute de tension, repères par connecteur
