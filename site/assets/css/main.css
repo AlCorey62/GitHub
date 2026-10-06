@@ -1611,7 +1611,7 @@ a.tag:hover {
   border: 1px solid var(--c-line);
   border-radius: var(--radius);
   background:
-    radial-gradient(60% 80% at 78% 26%, rgba(195, 0, 0, 0.14), transparent 62%),
+    radial-gradient(45% 80% at 49% 23%, rgba(195, 0, 0, 0.14), transparent 62%),
     var(--c-bg-2);
   overflow: hidden;
 }

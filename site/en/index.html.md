@@ -109,7 +109,7 @@ Configurations to be validated with our engineering office, based on your power 
 
 International sports competitions, concerts in Zénith arenas, in stadiums and on tour, fairs, trade shows, corporate shows, festivals or ceremonies.
 
-*From Carvin: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva and Cromvoirt.*
+*From Carvin: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima and Miyagi.*
 
 - Zénith de Lille
 - Lille Grand Palais
@@ -129,6 +129,8 @@ International sports competitions, concerts in Zénith arenas, in stadiums and o
 - MetLife Stadium, New Jersey
 - BMO Field, Toronto
 - Verona Arena
+- International Stadium Yokohama
+- Ryōgoku Kokugikan, Tokyo
 
 [All our references](https://www.darkside-energy.com/en/references/)
 

@@ -27,7 +27,7 @@
     "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
   },
   "primaryImageOfPage": "{{URL_WIX:og-image.png}}",
-  "dateModified": "2026-09-25",
+  "dateModified": "2026-10-06",
   "breadcrumb": {
     "@id": "https://www.darkside-energy.com/faq#breadcrumb"
   },
@@ -61,7 +61,7 @@
       "name": "Dans quels lieux Dark Side Energy est-elle intervenue ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé à l'Estadio Banorte de Mexico, au MetLife Stadium (New Jersey), au BMO Field de Toronto, à l'Arène de Vérone et sur le lac Léman. La liste complète est sur la page Références."
+        "text": "Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé à l'Estadio Banorte de Mexico, au MetLife Stadium (New Jersey), au BMO Field de Toronto, à l'Arène de Vérone, sur le lac Léman et au Japon, notamment au Stade international de Yokohama, au Stade de Miyagi et au Ryōgoku Kokugikan de Tokyo. La liste complète est sur la page Références."
       }
     },
     {

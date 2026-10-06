@@ -2,7 +2,7 @@
 
 > Les réponses de Dark Side Energy : qui nous sommes, nos métiers, la location de matériel, le Twin zéro coupure, la puissance d'une P17, la chute de tension.
 
-Source : https://www.darkside-energy.com/faq/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/faq/ · Dark Side Energy · Mise à jour : 2026-10-06
 
 L'entreprise, nos métiers, le matériel et les bases techniques de la distribution électrique événementielle, en quelques lignes.
 
@@ -27,7 +27,7 @@ Dark Side Energy a été créée en mai 2016. La SARL DARK SIDE ENERGY (SIREN 87
 
 ### Dans quels lieux Dark Side Energy est-elle intervenue ?
 
-Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé à l'Estadio Banorte de Mexico, au MetLife Stadium (New Jersey), au BMO Field de Toronto, à l'Arène de Vérone et sur le lac Léman. La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
+Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé à l'Estadio Banorte de Mexico, au MetLife Stadium (New Jersey), au BMO Field de Toronto, à l'Arène de Vérone, sur le lac Léman et au Japon, notamment au Stade international de Yokohama, au Stade de Miyagi et au Ryōgoku Kokugikan de Tokyo. La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
 
 ### Comment demander un devis ?
 

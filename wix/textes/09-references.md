@@ -4,7 +4,7 @@ Compétitions sportives internationales, concerts en Zénith, en stade et en tou
 
 ## Des lieux qui ne laissent pas de place à l'improvisation.
 
-Par respect des contrats de confidentialité signés sur chaque événement, nous citons ici des lieux plutôt que des clients ou des artistes. Sélection de lieux où nos équipes sont intervenues depuis 2024.
+Par respect des contrats de confidentialité signés sur chaque événement, nous citons ici des lieux plutôt que des clients ou des artistes. Sélection de lieux où nos équipes sont intervenues.
 
 - **Zénith de Lille** (Lille)
 - **Accor Arena** (Paris)
@@ -38,7 +38,7 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
 
-*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève et Cromvoirt.*
+*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima et Miyagi.*
 
 - **Estadio Banorte, ex-Estadio Azteca** (Mexico, Mexique)
 - **MetLife Stadium** (East Rutherford, New Jersey, États-Unis)
@@ -51,6 +51,14 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 - **Livigno Snow Park et Aerials & Moguls Park** (Livigno, Italie)
 - **Bernardus Golf** (Cromvoirt, Pays-Bas)
 - **Lac Léman** (Genève, Suisse)
+- **Stade international de Yokohama** (Yokohama, Japon)
+- **Stade de Miyagi** (Rifu, Miyagi, Japon)
+- **Fukushima Azuma Baseball Stadium** (Fukushima, Japon)
+- **Ryōgoku Kokugikan** (Tokyo, Japon)
+- **Equestrian Park (Baji Kōen)** (Tokyo, Japon)
+- **Asaka Shooting Range** (Tokyo, Japon)
+- **Enoshima Yacht Harbour** (Fujisawa, Japon)
+- **Izu MTB Course** (Izu, Japon)
 
 ## Du salon au stade, de la scène au plateau.
 

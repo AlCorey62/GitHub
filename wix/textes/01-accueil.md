@@ -105,7 +105,7 @@ Configurations à valider avec notre bureau d'étude selon votre bilan de puissa
 
 Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
 
-*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève et Cromvoirt.*
+*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima et Miyagi.*
 
 - Zénith de Lille
 - Lille Grand Palais
@@ -125,6 +125,8 @@ Compétitions sportives internationales, concerts en Zénith, en stade et en tou
 - MetLife Stadium, New Jersey
 - BMO Field, Toronto
 - Arène de Vérone
+- Stade international de Yokohama
+- Ryōgoku Kokugikan, Tokyo
 
 [Toutes nos références](https://www.darkside-energy.com/references)
 
