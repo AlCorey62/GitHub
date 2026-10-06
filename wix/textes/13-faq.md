@@ -11,7 +11,7 @@ L'entreprise, nos métiers, le matériel et les bases techniques de la distribut
 
 ### Que fait Dark Side Energy ?
 
-Dark Side Energy est une entreprise française spécialisée dans la distribution électrique événementielle. Elle intervient en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, des concerts, des événements sportifs, des festivals et des cérémonies, en France et à l'international. Elle loue et vend aussi du matériel de distribution électrique.
+Dark Side Energy est une entreprise française spécialisée dans la distribution électrique événementielle. Elle intervient en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, des concerts, des événements sportifs, des festivals et des cérémonies, en France et à l'international. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes.
 
 ### Où est basée Dark Side Energy et où intervient-elle ?
 

@@ -1,6 +1,6 @@
 # Site web Dark Side Energy
 
-Nouveau site vitrine de Dark Side Energy : distribution électrique événementielle, régie technique, coordination générale, bureau d'étude, consulting, matériel, énergie responsable, références, et deux outils en ligne (bilan de puissance, calculette électro).
+Nouveau site vitrine de Dark Side Energy : distribution électrique événementielle, régie technique, coordination générale, bureau d'étude, consulting, matériel, énergie responsable, références, et deux outils en ligne (bilan de puissance, calculette électro). Version française à la racine, version anglaise complète sous `/en/`.
 
 Site statique en HTML, CSS et JavaScript, **sans dépendance** : il s'ouvre et se déploie tel quel. Node.js (version 18 ou plus) sert uniquement aux scripts d'assemblage, de contrôle et de test.
 
@@ -10,7 +10,7 @@ Site statique en HTML, CSS et JavaScript, **sans dépendance** : il s'ouvre et s
 site/                      Dossier publié (c'est lui qui est mis en ligne)
   index.html               Accueil
   distribution-electrique/ regie-technique/ coordination-generale/ bureaudetude/ consulting/
-  nos-produits/            Matériel, location et vente
+  nos-produits/            Matériel en location clé en main
   energie-responsable/     Démarche RSE
   references/              Lieux et historique
   entreprise/              L'entreprise, nous rejoindre
@@ -22,6 +22,7 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   calculette-electro/      Conversions, chute de tension, repères par connecteur
   contact/                 Formulaire (Netlify Forms) et page de confirmation
   mentions-legales/        Mentions légales et confidentialité
+  en/                      Version anglaise : mêmes pages, adresses en anglais (voir « Version anglaise »)
   404.html, robots.txt, sitemap.xml, site.webmanifest, favicon.ico
   llms.txt, llms-full.txt  Résumé et contenu complet du site pour les assistants IA (générés)
   **/index.html.md         Version Markdown de chaque page (générée)
@@ -62,6 +63,7 @@ En local, la connexion au bilan de puissance est simulée : compte `test@darksid
 - **Titre et description (SEO)** d'une page : le bloc `<!--page { ... } -->` en haut du fichier.
 - **Coordonnées, menu, réseaux sociaux** : `tools/site.config.mjs`.
 - **Nouvelle page** : copier une page existante, adapter le bloc `<!--page -->` et le contenu.
+- **Page en anglais** : modifier aussi sa version dans `site/en/` (voir « Version anglaise »).
 
 Puis lancer :
 
@@ -73,10 +75,21 @@ node --test               # vérifie les formules électriques
 
 Les blocs entre `<!-- head:start -->` et `<!-- head:end -->` (de même `header`, `breadcrumb`, `cta`, `footer`) sont générés : ne pas les modifier à la main. Les icônes s'écrivent `<svg data-icon="nom"></svg>` (liste dans `tools/icons.json`).
 
+## Version anglaise
+
+Les 24 pages anglaises sont dans `site/en/`, avec des adresses en anglais : `/en/power-distribution/`, `/en/engineering/`, `/en/power-assessment/`, etc. Seules les quatre actualités de 2016 restent en français.
+
+- **Lien entre les deux versions** : chaque page anglaise porte dans son bloc `<!--page -->` les clés `"lang": "en"` et `"alternate": "/adresse-francaise/"`. Le build en déduit le bouton FR / EN de l'en-tête (il mène à la même page dans l'autre langue), les balises `hreflang`, le plan du site et la section anglaise de `llms.txt`. `check.mjs` vérifie que chaque paire se cite dans les deux sens.
+- **Textes communs** (menu, pied de page, fil d'Ariane, appel à l'action) : `NAV_EN`, `CTA_EN` et `UI.en` dans `tools/site.config.mjs`. Le slogan anglais (`sloganEn`) est à valider.
+- **Outils** : les scripts lisent la langue de la page (`<html lang="en">`) pour les messages, les nombres (1,385.6) et l'export CSV (séparateur virgule en anglais, point-virgule en français).
+- **Formulaire** : la version anglaise envoie ses demandes au formulaire Netlify `contact-en`, pour savoir qu'il faut répondre en anglais.
+- **Espace client** : les e-mails de Netlify Identity pointent vers l'accueil français. Le lien ouvre l'espace client anglais (`/en/account/`) si le navigateur du client n'est pas réglé en français.
+- **Anciennes adresses** : les adresses anglaises de l'ancien site Wix (`/en/test-externe`, `/en/nos-produits`, etc.) sont redirigées vers les pages anglaises ; toute autre adresse `/en/` inconnue affiche la page d'erreur anglaise (`netlify.toml`).
+
 ## Mise en ligne sur Netlify
 
 1. Sur Netlify : *Add new site*, *Import from Git*, choisir ce dépôt. Les réglages sont lus dans `netlify.toml` (dossier publié `site`, commande `node tools/build.mjs`).
-2. Vérifier le site sur l'adresse provisoire `*.netlify.app`, et tester le formulaire de contact : les messages arrivent dans *Forms* sur Netlify, où l'on peut activer une notification par e-mail vers contact@darkside-energy.com.
+2. Vérifier le site sur l'adresse provisoire `*.netlify.app`, et tester le formulaire de contact : les messages arrivent dans *Forms* sur Netlify, où l'on peut activer une notification par e-mail vers contact@darkside-energy.com. Deux formulaires y apparaissent : `contact` (site français) et `contact-en` (version anglaise, demandes à traiter en anglais) ; choisir « Any form » pour la notification.
 3. Bascule du domaine : voir ci-dessous. Le certificat HTTPS est créé automatiquement par Netlify.
 4. Une fois la bascule faite, déclarer `https://www.darkside-energy.com/sitemap.xml` dans Google Search Console.
 

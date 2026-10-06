@@ -7,9 +7,12 @@ export const SITE = {
   legalForm: "SARL",
   url: "https://www.darkside-energy.com",
   slogan: "La puissance de l'électricité, sans tension, avec intensité.",
+  // Traduction du slogan pour la version anglaise (à valider)
+  sloganEn: "The power of electricity, without the tension, with intensity.",
   email: "contact@darkside-energy.com",
   phone: "07 68 24 40 88",
   phoneIntl: "+33768244088",
+  phoneIntlDisplay: "+33 7 68 24 40 88", // format affiché sur la version anglaise
   // Adresse du siège (domicile du gérant) : affichée seulement dans les mentions légales, obligation légale
   address: {
     street: "37 rue Thibaut",
@@ -63,6 +66,108 @@ export const NAV = [
 
 export const CTA = { label: "Demander un devis", href: "contact/" };
 
+// Version anglaise (/en/) : même structure que NAV, liens relatifs à l'accueil anglais
+export const NAV_EN = [
+  {
+    key: "metiers",
+    label: "Services",
+    children: [
+      { key: "distribution", label: "Power distribution", desc: "From stand power box to distribution cabinet", href: "power-distribution/" },
+      { key: "regie", label: "Technical management", desc: "Crews, subcontracting and logistics", href: "technical-management/" },
+      { key: "coordination", label: "General coordination", desc: "Technical direction and production management", href: "general-coordination/" },
+      { key: "bureau", label: "Engineering office", desc: "Assessments, diagrams, plans and calculation notes", href: "engineering/" },
+      { key: "consulting", label: "Consulting", desc: "Specifications and tailored solutions", href: "consulting/" },
+    ],
+  },
+  { key: "materiel", label: "Equipment", href: "equipment/" },
+  { key: "rse", label: "Responsible energy", href: "responsible-energy/" },
+  { key: "references", label: "References", href: "references/" },
+  {
+    key: "outils",
+    label: "Resources",
+    children: [
+      { key: "bilan", label: "Power assessment", desc: "Estimate your needs, phase by phase", href: "power-assessment/" },
+      { key: "calculette", label: "Electrical calculator", desc: "Conversions and voltage drop", href: "electrical-calculator/" },
+      { key: "news", label: "Did you know?", desc: "The basics of the trade, made simple", href: "did-you-know/" },
+      { key: "faq", label: "FAQ", desc: "Our answers, in short", href: "faq/" },
+      { key: "lexique", label: "Glossary", desc: "P17, Powerlock, diversity factor, MDB…", href: "glossary/" },
+    ],
+  },
+  { key: "entreprise", label: "Company", href: "company/" },
+];
+
+export const CTA_EN = { label: "Request a quote", href: "contact/" };
+
+// Textes d'interface générés par le build, par langue
+export const UI = {
+  fr: {
+    locale: "fr-FR",
+    ogLocale: "fr_FR",
+    home: "Accueil",
+    homeTitle: "Distribution électrique événementielle",
+    skip: "Aller au contenu",
+    backHome: "retour à l'accueil",
+    mainNav: "Navigation principale",
+    openMenu: "Ouvrir le menu",
+    breadcrumb: "Fil d'Ariane",
+    markdown: "Version Markdown de la page",
+    switchLabel: "English version",
+    switchText: "EN",
+    footerServices: "Métiers",
+    footerResources: "Ressources",
+    footerContact: "Contact",
+    footerArea: "Hauts-de-France, interventions partout en France et à l'international",
+    footerEquipment: "Matériel en location clé en main",
+    footerRse: "Énergie responsable",
+    footerRefs: "Références",
+    footerCompany: "L'entreprise",
+    legal: "Mentions légales et confidentialité",
+    faq: "Questions fréquentes",
+    aiInfo: "Infos pour les IA",
+    newWindow: "nouvelle fenêtre",
+    catalog: "Métiers et services",
+    catalogEquipment: "Matériel de distribution électrique en location clé en main",
+    ctaTitle: "Un projet ? Parlons puissance.",
+    ctaText: "Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.",
+    anyBrowser: "Tout navigateur web",
+    mdSource: "Source",
+    mdUpdated: "Mise à jour",
+  },
+  en: {
+    locale: "en-GB",
+    ogLocale: "en_GB",
+    home: "Home",
+    homeTitle: "Event power distribution",
+    skip: "Skip to content",
+    backHome: "back to the home page",
+    mainNav: "Main navigation",
+    openMenu: "Open the menu",
+    breadcrumb: "Breadcrumb",
+    markdown: "Markdown version of this page",
+    switchLabel: "version française",
+    switchText: "FR",
+    footerServices: "Services",
+    footerResources: "Resources",
+    footerContact: "Contact",
+    footerArea: "Hauts-de-France, France. Working across France and worldwide",
+    footerEquipment: "Equipment, turnkey hire",
+    footerRse: "Responsible energy",
+    footerRefs: "References",
+    footerCompany: "Company",
+    legal: "Legal notice and privacy",
+    faq: "FAQ",
+    aiInfo: "Info for AI assistants",
+    newWindow: "new window",
+    catalog: "Services",
+    catalogEquipment: "Electrical distribution equipment, turnkey hire",
+    ctaTitle: "A project? Let's talk power.",
+    ctaText: "Venue, dates, known requirements: tell us about your event and we will get back to you quickly.",
+    anyBrowser: "Any web browser",
+    mdSource: "Source",
+    mdUpdated: "Updated",
+  },
+};
+
 // Données structurées et informations pour les moteurs de recherche et les IA (GEO).
 // Les réseaux et fiches à ajouter dès qu'ils existent : LinkedIn, fiche Google Business Profile, Wikidata.
 export const ENTITY = {
@@ -88,6 +193,27 @@ export const ENTITY = {
     "Chute de tension",
     "Habilitations électriques",
   ],
+  knowsAboutEn: [
+    "Event power distribution",
+    "Technical management",
+    "General event coordination",
+    "Electrical engineering office",
+    "Power assessment",
+    "Single-line diagram",
+    "Temporary electrical grid connection",
+    "Generators",
+    "Twin zero-interruption generator sets",
+    "Battery packs",
+    "HVO fuel",
+    "P17 connectors (IEC 60309)",
+    "Powerlock connectors",
+    "Wheelchair-accessible cable protectors",
+    "NF C 15-100 standard",
+    "Voltage drop",
+    "Electrical authorisations (habilitations électriques)",
+  ],
+  descriptionEn:
+    "Dark Side Energy is a French event power distribution company, founded in 2016 and based in Carvin (Pas-de-Calais, northern France). Its teams work in France and abroad in power distribution, technical management, general coordination, engineering and consulting, for trade shows, concerts, sporting events, festivals and ceremonies. It also supplies electrical distribution equipment on a turnkey hire basis: installed and run by its teams, with no dry hire.",
   areaServed: ["France"],
   languages: ["French", "English"],
   // Liens vers d'autres profils officiels de l'entreprise (ajoutés aux réseaux sociaux dans le balisage)
@@ -96,7 +222,9 @@ export const ENTITY = {
     id: "damien-nirel",
     name: "Damien Nirel",
     jobTitle: "Gérant et directeur technique",
+    jobTitleEn: "Managing director and technical director",
     description: "Plus de 15 ans d'expérience en énergie événementielle internationale.",
+    descriptionEn: "More than 15 years of experience in international event power.",
   },
 };
 
@@ -135,29 +263,29 @@ export const MAP = {
   parallel: 40,
   hq: { name: "Carvin", lat: 50.49, lon: 2.96 },
   places: [
-    { name: "Mexico", lat: 19.3, lon: -99.15 },
+    { name: "Mexico", en: "Mexico City", lat: 19.3, lon: -99.15 },
     { name: "Kansas City", lat: 39.05, lon: -94.48 },
     { name: "Toronto", lat: 43.63, lon: -79.42 },
-    { name: "Philadelphie", lat: 39.9, lon: -75.17 },
+    { name: "Philadelphie", en: "Philadelphia", lat: 39.9, lon: -75.17 },
     { name: "New Jersey", lat: 40.81, lon: -74.07 },
-    { name: "Vérone", lat: 45.44, lon: 10.99 },
+    { name: "Vérone", en: "Verona", lat: 45.44, lon: 10.99 },
     { name: "Cortina d'Ampezzo", lat: 46.54, lon: 12.14 },
     { name: "Bormio", lat: 46.47, lon: 10.37 },
     { name: "Livigno", lat: 46.54, lon: 10.14 },
-    { name: "Genève", lat: 46.2, lon: 6.14 },
+    { name: "Genève", en: "Geneva", lat: 46.2, lon: 6.14 },
     { name: "Cromvoirt", lat: 51.65, lon: 5.24 },
   ],
   // Étiquettes : position du point d'ancrage, décalage en pixels de la carte, alignement
   labels: [
     { text: "Carvin", lat: 50.49, lon: 2.96, dx: -11, dy: -15, anchor: "end", hq: true },
-    { text: "Mexico", lat: 19.3, lon: -99.15, dx: -10, dy: 4, anchor: "end" },
+    { text: "Mexico", en: "Mexico City", lat: 19.3, lon: -99.15, dx: -10, dy: 4, anchor: "end" },
     { text: "Kansas City", lat: 39.05, lon: -94.48, dx: -10, dy: 4, anchor: "end" },
     { text: "Toronto", lat: 43.63, lon: -79.42, dx: -10, dy: -5, anchor: "end" },
     { text: "New Jersey", lat: 40.81, lon: -74.07, dx: 9, dy: -6, anchor: "start" },
-    { text: "Philadelphie", lat: 39.9, lon: -75.17, dx: 9, dy: 14, anchor: "start" },
+    { text: "Philadelphie", en: "Philadelphia", lat: 39.9, lon: -75.17, dx: 9, dy: 14, anchor: "start" },
     { text: "Cromvoirt", lat: 51.65, lon: 5.24, dx: 9, dy: -5, anchor: "start" },
-    { text: "Genève", lat: 46.2, lon: 6.14, dx: -9, dy: 10, anchor: "end" },
-    { text: "Vérone · Cortina", lat: 45.44, lon: 10.99, dx: 14, dy: 10, anchor: "start" },
+    { text: "Genève", en: "Geneva", lat: 46.2, lon: 6.14, dx: -9, dy: 10, anchor: "end" },
+    { text: "Vérone · Cortina", en: "Verona · Cortina", lat: 45.44, lon: 10.99, dx: 14, dy: 10, anchor: "start" },
     { text: "Bormio · Livigno", lat: 45.44, lon: 10.99, dx: 14, dy: 25, anchor: "start" },
   ],
   // Quelques villes de France où les équipes interviennent (points sans ligne)

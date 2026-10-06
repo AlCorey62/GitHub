@@ -111,7 +111,7 @@ Par page (réglages SEO de la page dans Wix) :
 Pour le site :
 
 - Redirection 301 : /test-externe vers /bilan-de-puissance. Si Wix ne la crée pas au changement d'adresse de la page, l'ajouter dans le gestionnaire de redirections.
-- Version anglaise : l'adresse /en/test-externe a été relevée sur l'ancien site. Vérifier si une version anglaise est encore active dans Wix. Le nouveau site est en français uniquement : décision de Damien (traduire, ou désactiver l'anglais et rediriger les adresses /en/ vers les pages françaises).
+- Version anglaise : le nouveau site a une version anglaise complète sous /en/, avec des adresses en anglais (`site/en/`). Ce dossier ne couvre que le français : dans Wix, l'anglais passe par l'application Wix Multilingual, page par page, à partir des pages de `site/en/`. L'adresse /en/test-externe a été relevée sur l'ancien site : vérifier si une version anglaise est encore active dans Wix.
 - robots.txt (éditeur robots.txt de Wix) : vérifier qu'aucun robot listé dans `site/robots.txt` n'est bloqué (pas de « Disallow: / » pour lui). Ne pas ajouter de groupe « Allow: / » par robot : sur Wix, un groupe nommé ferait perdre au robot les exclusions techniques que Wix déclare pour tous (« User-agent: * »).
 - llms.txt : d'après la documentation Wix consultée lors de la préparation, Wix le génère automatiquement et permet de le modifier, sous conditions (offre premium, domaine connecté, site indexé), avec un déploiement d'abord en anglais. À vérifier pour un site en français. S'il est modifiable, partir de `wix/llms.txt`. Les versions Markdown des pages et `llms-full.txt` du nouveau site n'ont pas d'équivalent sur Wix.
 - Plan du site : Wix génère /sitemap.xml. Le déclarer dans Google Search Console et Bing Webmaster Tools.

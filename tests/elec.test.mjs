@@ -1,10 +1,10 @@
 // Tests des formules électriques du site : `node --test`
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import {
   convert, currentFromApparent, apparentFromCurrent, voltageDrop, minSection, maxLength,
-  nextRating, connectorFor, powerBalance, SQRT3, SECTIONS,
+  nextRating, connectorFor, powerBalance, fmt, LANG, SQRT3, SECTIONS,
 } from "../site/assets/js/elec.js";
 
 const close = (a, b, tol = 1e-6) => assert.ok(Math.abs(a - b) <= tol, `${a} ≠ ${b} (tolérance ${tol})`);
@@ -98,6 +98,30 @@ test("les repères de puissance publiés sur le site correspondent aux formules"
     const phases = Number(m[2]);
     const shown = Number(m[3].replace(/\s/g, "").replace(",", "."));
     const expected = apparentFromCurrent(I, phases) / 1000;
+    close(shown, Math.round(expected * 10) / 10, 1e-9);
+  }
+});
+
+test("version anglaise : textes, formats et repères publiés", () => {
+  assert.equal(LANG, "fr", "hors navigateur, la langue par défaut est le français");
+  assert.equal(connectorFor(16, 1, "en"), "16 A socket");
+  assert.equal(connectorFor(32, 1, "en"), "P17 32 A single-phase");
+  assert.equal(connectorFor(125, 3, "en"), "P17 125 A");
+  assert.equal(connectorFor(null, 3, "en"), "Several incoming supplies or a power distribution cabinet");
+  assert.equal(fmt(1385.64, 1, "en"), "1,385.6");
+  assert.equal(fmt(0.9, 2, "en"), "0.90");
+  const mono = powerBalance([{ name: "LED", qty: 1, power: 1000, type: "tri", cosPhi: 1, ks: 1 }], { network: "mono", lang: "en" });
+  assert.match(mono.warnings[0], /^“LED” is declared as three-phase/);
+  assert.equal(mono.connector, connectorFor(mono.rating, 1, "en"));
+
+  const page = new URL("../site/en/electrical-calculator/index.html", import.meta.url);
+  if (!existsSync(page)) return;
+  const html = readFileSync(page, "utf8");
+  const rows = [...html.matchAll(/<tr data-check="(\d+)-(\d)">[\s\S]*?<td class="num">([\d,.]+?)\s?kVA<\/td>/g)];
+  assert.ok(rows.length >= 8, `repères trouvés (anglais) : ${rows.length}`);
+  for (const m of rows) {
+    const shown = Number(m[3].replace(/,/g, ""));
+    const expected = apparentFromCurrent(Number(m[1]), Number(m[2])) / 1000;
     close(shown, Math.round(expected * 10) / 10, 1e-9);
   }
 });

@@ -6,6 +6,9 @@
 //   Monophasé : S = U × I avec U = 230 V (tension simple)
 //   Triphasé  : S = √3 × U × I avec U = 400 V (tension composée)
 
+// Langue de la page : anglais sous /en/, français sinon (et hors navigateur, pour les tests)
+export const LANG = typeof document !== "undefined" && document.documentElement.lang === "en" ? "en" : "fr";
+
 export const U_MONO = 230;
 export const U_TRI = 400;
 export const SQRT3 = Math.sqrt(3);
@@ -106,26 +109,27 @@ export function nextRating(I) {
 }
 
 /** Connectique usuelle en événementiel pour un calibre donné (repère indicatif). */
-export function connectorFor(rating, phases = 3) {
-  if (rating == null) return "Plusieurs arrivées ou armoire de puissance";
+export function connectorFor(rating, phases = 3, lang = LANG) {
+  const en = lang === "en";
+  if (rating == null) return en ? "Several incoming supplies or a power distribution cabinet" : "Plusieurs arrivées ou armoire de puissance";
   if (phases === 1) {
-    if (rating <= 16) return "Prise 16 A";
-    if (rating <= 63) return `P17 ${rating} A monophasé`;
-    return "Arrivée triphasée conseillée";
+    if (rating <= 16) return en ? "16 A socket" : "Prise 16 A";
+    if (rating <= 63) return en ? `P17 ${rating} A single-phase` : `P17 ${rating} A monophasé`;
+    return en ? "Three-phase supply recommended" : "Arrivée triphasée conseillée";
   }
   if (rating <= 125) return `P17 ${rating} A`;
   if (rating <= 400) return "Powerlock 400 A";
   if (rating <= 660) return "Powerlock 660 A";
-  return "Plusieurs arrivées Powerlock";
+  return en ? "Several Powerlock supplies" : "Plusieurs arrivées Powerlock";
 }
 
 /**
  * Bilan de puissance.
  * @param {Array<{name?:string, zone?:string, qty:number, power:number, type:"tri"|"mono", phase?:"auto"|"L1"|"L2"|"L3", cosPhi:number, ks:number}>} lines
  *   power : puissance unitaire en W, ks : coefficient de foisonnement (0 à 1)
- * @param {{network?:"tri"|"mono", reservePct?:number}} options
+ * @param {{network?:"tri"|"mono", reservePct?:number, lang?:"fr"|"en"}} options
  */
-export function powerBalance(lines, { network = "tri", reservePct = 0 } = {}) {
+export function powerBalance(lines, { network = "tri", reservePct = 0, lang = LANG } = {}) {
   const phases = { L1: 0, L2: 0, L3: 0 }; // courants (A)
   const phaseS = { L1: 0, L2: 0, L3: 0 }; // puissances apparentes (VA)
   const rows = [];
@@ -141,7 +145,11 @@ export function powerBalance(lines, { network = "tri", reservePct = 0 } = {}) {
     const ks = Math.min(1, Math.max(0, Number.isFinite(toNumber(l.ks)) ? toNumber(l.ks) : 1));
     const type = network === "mono" ? "mono" : l.type === "tri" ? "tri" : "mono";
     if (network === "mono" && l.type === "tri" && qty * power > 0) {
-      warnings.push(`« ${l.name || `Ligne ${index + 1}`} » est déclarée en triphasé sur un réseau monophasé : elle est comptée en monophasé.`);
+      warnings.push(
+        lang === "en"
+          ? `“${l.name || `Line ${index + 1}`}” is declared as three-phase on a single-phase network: it is counted as single-phase.`
+          : `« ${l.name || `Ligne ${index + 1}`} » est déclarée en triphasé sur un réseau monophasé : elle est comptée en monophasé.`
+      );
     }
     const pInst = qty * power;
     const pF = pInst * ks;
@@ -212,15 +220,15 @@ export function powerBalance(lines, { network = "tri", reservePct = 0 } = {}) {
     reservePct: (reserve - 1) * 100,
     Idesign,
     rating,
-    connector: connectorFor(rating, network === "mono" ? 1 : 3),
+    connector: connectorFor(rating, network === "mono" ? 1 : 3, lang),
     Sequivalent,
     Ssource: Sequivalent * reserve,
     warnings,
   };
 }
 
-/** Formatage français d'un nombre. */
-export function fmt(n, digits = 1) {
+/** Formatage d'un nombre dans la langue de la page (1 385,6 en français, 1,385.6 en anglais). */
+export function fmt(n, digits = 1, lang = LANG) {
   if (n == null || !Number.isFinite(n)) return "-";
-  return n.toLocaleString("fr-FR", { minimumFractionDigits: digits, maximumFractionDigits: digits });
+  return n.toLocaleString(lang === "en" ? "en-GB" : "fr-FR", { minimumFractionDigits: digits, maximumFractionDigits: digits });
 }

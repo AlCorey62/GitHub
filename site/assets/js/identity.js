@@ -6,6 +6,26 @@ const API = "/.netlify/identity";
 const KEY = "darkside-auth-v1";
 // Sur l'aperçu publié hors Netlify (<html data-preview>), la connexion est simulée
 const PREVIEW = document.documentElement.hasAttribute("data-preview");
+const EN = document.documentElement.lang === "en";
+
+// Messages d'erreur, selon la langue de la page
+const MSG = {
+  rate: ["Trop de tentatives. Patientez quelques minutes avant de réessayer.", "Too many attempts. Please wait a few minutes before trying again."],
+  server: ["Le service de connexion est indisponible. Réessayez plus tard.", "The sign-in service is unavailable. Please try again later."],
+  unconfirmed: ["Ce compte n'est pas encore activé : utilisez le lien reçu par e-mail.", "This account is not activated yet: use the link you received by email."],
+  credentials: ["E-mail ou mot de passe incorrect.", "Incorrect email or password."],
+  token: ["Ce lien n'est plus valable. Demandez un nouveau lien.", "This link is no longer valid. Request a new link."],
+  session: ["Votre session a expiré. Connectez-vous à nouveau.", "Your session has expired. Please sign in again."],
+  password: ["Mot de passe refusé : choisissez-en un plus long.", "Password rejected: choose a longer one."],
+  unknown: ["La demande n'a pas abouti. Réessayez ou contactez-nous.", "The request failed. Try again or contact us."],
+  network: ["Connexion impossible. Vérifiez votre réseau et réessayez.", "Unable to connect. Check your network and try again."],
+  unavailable: [
+    "La connexion n'est pas encore activée sur ce site. Contactez-nous pour accéder au bilan complet.",
+    "Sign-in is not enabled on this site yet. Contact us to access the full power assessment.",
+  ],
+  expiredLink: ["Votre session a expiré. Demandez un nouveau lien.", "Your session has expired. Request a new link."],
+};
+const msg = (code) => MSG[code][EN ? 1 : 0];
 
 export class AuthError extends Error {
   constructor(code, message) {
@@ -40,16 +60,16 @@ function clear() {
 
 function errorFor(path, status, data) {
   const text = data ? String(data.error_description || data.msg || data.error || "") : "";
-  if (status === 429) return new AuthError("rate", "Trop de tentatives. Patientez quelques minutes avant de réessayer.");
-  if (status >= 500) return new AuthError("server", "Le service de connexion est indisponible. Réessayez plus tard.");
+  if (status === 429) return new AuthError("rate", msg("rate"));
+  if (status >= 500) return new AuthError("server", msg("server"));
   if (path === "/token") {
-    if (/confirm/i.test(text)) return new AuthError("unconfirmed", "Ce compte n'est pas encore activé : utilisez le lien reçu par e-mail.");
-    return new AuthError("credentials", "E-mail ou mot de passe incorrect.");
+    if (/confirm/i.test(text)) return new AuthError("unconfirmed", msg("unconfirmed"));
+    return new AuthError("credentials", msg("credentials"));
   }
-  if (path === "/verify") return new AuthError("token", "Ce lien n'est plus valable. Demandez un nouveau lien.");
-  if (status === 401 || status === 403) return new AuthError("session", "Votre session a expiré. Connectez-vous à nouveau.");
-  if (status === 422 && /password/i.test(text)) return new AuthError("password", "Mot de passe refusé : choisissez-en un plus long.");
-  return new AuthError("unknown", "La demande n'a pas abouti. Réessayez ou contactez-nous.");
+  if (path === "/verify") return new AuthError("token", msg("token"));
+  if (status === 401 || status === 403) return new AuthError("session", msg("session"));
+  if (status === 422 && /password/i.test(text)) return new AuthError("password", msg("password"));
+  return new AuthError("unknown", msg("unknown"));
 }
 
 async function request(path, { method = "GET", json, form, token } = {}) {
@@ -68,7 +88,7 @@ async function request(path, { method = "GET", json, form, token } = {}) {
   try {
     res = await fetch(API + path, { method, headers, body, credentials: "same-origin" });
   } catch (e) {
-    throw new AuthError("network", "Connexion impossible. Vérifiez votre réseau et réessayez.");
+    throw new AuthError("network", msg("network"));
   }
   let data = null;
   try {
@@ -77,7 +97,7 @@ async function request(path, { method = "GET", json, form, token } = {}) {
     /* réponse vide */
   }
   if (res.status === 404 && !data) {
-    throw new AuthError("unavailable", "La connexion n'est pas encore activée sur ce site. Contactez-nous pour accéder au bilan complet.");
+    throw new AuthError("unavailable", msg("unavailable"));
   }
   if (!res.ok) throw errorFor(path, res.status, data);
   return data;
@@ -158,7 +178,7 @@ export async function verifyRecovery(token) {
 
 export async function updatePassword(password) {
   const s = read();
-  if (!s) throw new AuthError("session", "Votre session a expiré. Demandez un nouveau lien.");
+  if (!s) throw new AuthError("session", msg("expiredLink"));
   await request("/user", { method: "PUT", json: { password }, token: s.access });
 }
 

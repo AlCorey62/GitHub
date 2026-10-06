@@ -1,6 +1,6 @@
 // Bilan de puissance : saisie des lignes, calcul, export CSV, impression, envoi au bureau d'étude.
 // Démo limitée à 4 lignes ; au-delà, export et impression : accès client (Netlify Identity, sur invitation).
-import { powerBalance, fmt } from "./elec.js";
+import { powerBalance, fmt, LANG } from "./elec.js";
 import * as auth from "./identity.js";
 
 const STORAGE_KEY = "darkside-bilan-v1";
@@ -11,6 +11,102 @@ const tpl = $("b-row-tpl");
 const FIELDS = ["name", "zone", "qty", "power", "type", "phase", "cosPhi", "ks"];
 const tool = $("bilan-form");
 const gate = $("b-gate");
+
+// Textes de l'outil, selon la langue de la page
+const T = {
+  fr: {
+    connectedTo: (p) => `Raccordée sur ${p}`,
+    mono: "Monophasé",
+    tri: "Triphasé",
+    beyond: "au-delà de 2 000 A",
+    empty: "Ajoutez vos appareils pour obtenir le bilan.",
+    monoVerdict: (i) => `Toutes les charges sont sur une seule phase : ${i} A à prévoir.`,
+    gap: (d) => `Écart ${d} %`,
+    balanced: "Phases bien équilibrées.",
+    warnGap: (d) => `La phase la plus chargée dépasse la moyenne de ${d} %. Répartissez autrement les lignes monophasées si possible.`,
+    badGap: (d) => `Déséquilibre important (${d} % au-dessus de la moyenne) : la source doit être dimensionnée sur la phase la plus chargée.`,
+    clientOnly: "Réservé aux comptes clients",
+    hidden: (n, max) => `Ce bilan compte ${n} lignes : seules les ${max} premières sont affichées et calculées en démo. Connectez-vous pour le retrouver en entier.`,
+    summaryTitle: "Bilan de puissance (outil en ligne Dark Side Energy)",
+    event: "Événement",
+    place: "Lieu",
+    network: "Réseau",
+    netMono: "monophasé 230 V",
+    netTri: "triphasé 400 V",
+    pinst: "Puissance installée",
+    pf: "Puissance foisonnée",
+    s: "Puissance apparente",
+    currents: "Courants",
+    reserve: (r, rating) => `Réserve : ${r} %, calibre indicatif : ${rating}`,
+    detail: "Détail :",
+    unnamed: "Sans nom",
+    type: { tri: "tri", mono: "mono" },
+    ks: "foisonnement",
+    sep: " : ",
+    csvSep: ";",
+    head: ["Désignation", "Zone", "Quantité", "Puissance unitaire (W)", "Type", "Phase", "cos phi", "Foisonnement", "Puissance installée (W)", "Puissance foisonnée (W)", "Puissance apparente (VA)", "Intensité (A)"],
+    total: "Total",
+    current: (p) => `Courant ${p} (A)`,
+    file: "bilan-de-puissance",
+    demoLimit: `La démo est limitée à ${DEMO_MAX} lignes. Connectez-vous pour continuer votre bilan.`,
+    confirmReset: "Effacer toutes les lignes du bilan ?",
+    csvGate: "L'export CSV est réservé aux comptes clients.",
+    printGate: "L'impression est réservée aux comptes clients.",
+    sendEmpty: "Ajoutez au moins une ligne avec une puissance avant d'envoyer.",
+    truncated: "Bilan complet disponible en export CSV.",
+    gate: "Connectez-vous pour ajouter des lignes, exporter et imprimer votre bilan.",
+    missing: "Saisissez votre e-mail et votre mot de passe.",
+    signingIn: "Connexion…",
+    signedIn: "Vous êtes connecté : accès complet au bilan.",
+    signedOut: "Vous êtes déconnecté.",
+  },
+  en: {
+    connectedTo: (p) => `Connected to ${p}`,
+    mono: "Single-phase",
+    tri: "Three-phase",
+    beyond: "above 2,000 A",
+    empty: "Add your equipment to get the assessment.",
+    monoVerdict: (i) => `All loads are on a single phase: allow for ${i} A.`,
+    gap: (d) => `Imbalance ${d}%`,
+    balanced: "Phases well balanced.",
+    warnGap: (d) => `The most loaded phase is ${d}% above the average. Spread the single-phase lines differently if possible.`,
+    badGap: (d) => `Significant imbalance (${d}% above the average): the source must be sized on the most loaded phase.`,
+    clientOnly: "Client accounts only",
+    hidden: (n, max) => `This assessment has ${n} lines: only the first ${max} are shown and calculated in the demo. Sign in to get it back in full.`,
+    summaryTitle: "Power assessment (Dark Side Energy online tool)",
+    event: "Event",
+    place: "Venue",
+    network: "Network",
+    netMono: "single-phase 230 V",
+    netTri: "three-phase 400 V",
+    pinst: "Installed power",
+    pf: "Diversified power",
+    s: "Apparent power",
+    currents: "Currents",
+    reserve: (r, rating) => `Reserve: ${r}%, indicative rating: ${rating}`,
+    detail: "Details:",
+    unnamed: "Unnamed",
+    type: { tri: "three-phase", mono: "single-phase" },
+    ks: "diversity factor",
+    sep: ": ",
+    csvSep: ",",
+    head: ["Description", "Zone", "Quantity", "Unit power (W)", "Type", "Phase", "cos phi", "Diversity factor", "Installed power (W)", "Diversified power (W)", "Apparent power (VA)", "Current (A)"],
+    total: "Total",
+    current: (p) => `Current ${p} (A)`,
+    file: "power-assessment",
+    demoLimit: `The demo is limited to ${DEMO_MAX} lines. Sign in to continue your assessment.`,
+    confirmReset: "Clear all the lines of the assessment?",
+    csvGate: "CSV export is for client accounts only.",
+    printGate: "Printing is for client accounts only.",
+    sendEmpty: "Add at least one line with a power value before sending.",
+    truncated: "Full assessment available as a CSV export.",
+    gate: "Sign in to add lines, export and print your assessment.",
+    missing: "Enter your email and password.",
+    signingIn: "Signing in…",
+    signedIn: "You are signed in: full access to the assessment.",
+    signedOut: "You are signed out.",
+  },
+}[LANG];
 
 let session = null; // session client vérifiée par le serveur, null en démo
 let hiddenLines = []; // lignes d'un bilan enregistré au-delà de la démo, rendues à la connexion
@@ -87,17 +183,17 @@ function compute() {
     const row = result.rows[i];
     tr.querySelector("[data-out='s']").value = fmt(row ? row.s / 1000 : 0, 2);
     const phase = tr.querySelector("[data-k='phase']");
-    phase.title = row && row.assigned ? `Raccordée sur ${row.assigned}` : "";
+    phase.title = row && row.assigned ? T.connectedTo(row.assigned) : "";
   });
 
   // Synthèse
-  $("b-badge").textContent = net === "mono" ? "Monophasé" : "Triphasé";
+  $("b-badge").textContent = net === "mono" ? T.mono : T.tri;
   $("b-pinst").textContent = fmt(result.Pinst / 1000, 2);
   $("b-pf").textContent = fmt(result.Pf / 1000, 2);
   $("b-s").textContent = fmt(result.S / 1000, 2);
   $("b-imax").textContent = fmt(result.Imax, 1);
   const empty = result.S === 0;
-  $("b-rating").textContent = empty ? "-" : result.rating ? `${fmt(result.rating, 0)} A` : "au-delà de 2 000 A";
+  $("b-rating").textContent = empty ? "-" : result.rating ? `${fmt(result.rating, 0)} A` : T.beyond;
   $("b-connector").textContent = empty ? "-" : result.connector;
   $("b-source").textContent = empty ? "-" : fmt(result.Ssource / 1000, 1);
 
@@ -117,24 +213,24 @@ function compute() {
   const tag = $("b-balance");
   if (empty) {
     verdict.dataset.level = "";
-    verdict.textContent = "Ajoutez vos appareils pour obtenir le bilan.";
+    verdict.textContent = T.empty;
     tag.textContent = "-";
   } else if (net === "mono") {
     verdict.dataset.level = "ok";
-    verdict.textContent = `Toutes les charges sont sur une seule phase : ${fmt(result.Imax, 1)} A à prévoir.`;
-    tag.textContent = "Monophasé";
+    verdict.textContent = T.monoVerdict(fmt(result.Imax, 1));
+    tag.textContent = T.mono;
   } else {
     const d = result.imbalancePct;
-    tag.textContent = `Écart ${fmt(d, 0)} %`;
+    tag.textContent = T.gap(fmt(d, 0));
     if (d <= 10) {
       verdict.dataset.level = "ok";
-      verdict.textContent = "Phases bien équilibrées.";
+      verdict.textContent = T.balanced;
     } else if (d <= 25) {
       verdict.dataset.level = "warn";
-      verdict.textContent = `La phase la plus chargée dépasse la moyenne de ${fmt(d, 0)} %. Répartissez autrement les lignes monophasées si possible.`;
+      verdict.textContent = T.warnGap(fmt(d, 0));
     } else {
       verdict.dataset.level = "bad";
-      verdict.textContent = `Déséquilibre important (${fmt(d, 0)} % au-dessus de la moyenne) : la source doit être dimensionnée sur la phase la plus chargée.`;
+      verdict.textContent = T.badGap(fmt(d, 0));
     }
   }
 
@@ -156,7 +252,7 @@ function renderAccess() {
   $("b-access").querySelector("[data-when='client']").hidden = !session;
   $("b-user").textContent = session ? session.email : "";
   document.querySelectorAll("[data-full]").forEach((btn) => {
-    btn.title = session ? "" : "Réservé aux comptes clients";
+    btn.title = session ? "" : T.clientOnly;
   });
   const notice = $("b-hidden");
   if (notice) notice.remove();
@@ -164,7 +260,7 @@ function renderAccess() {
     const p = document.createElement("p");
     p.id = "b-hidden";
     p.className = "access access--warn no-print";
-    p.textContent = `Ce bilan compte ${DEMO_MAX + hiddenLines.length} lignes : seules les ${DEMO_MAX} premières sont affichées et calculées en démo. Connectez-vous pour le retrouver en entier.`;
+    p.textContent = T.hidden(DEMO_MAX + hiddenLines.length, DEMO_MAX);
     $("b-access").after(p);
   }
 }
@@ -196,45 +292,51 @@ function unlock(s) {
 function summaryText() {
   if (!last) return "";
   const { result, net, reservePct } = last;
+  const c = T.sep;
   const lines = [
-    "Bilan de puissance (outil en ligne Dark Side Energy)",
-    `Événement : ${$("b-event").value || "-"}`,
-    `Lieu : ${$("b-place").value || "-"}`,
-    `Réseau : ${net === "mono" ? "monophasé 230 V" : "triphasé 400 V"}`,
-    `Puissance installée : ${fmt(result.Pinst / 1000, 2)} kW`,
-    `Puissance foisonnée : ${fmt(result.Pf / 1000, 2)} kW`,
-    `Puissance apparente : ${fmt(result.S / 1000, 2)} kVA`,
-    `Courants : ${Object.entries(result.phases).map(([p, v]) => `${p} ${fmt(v, 1)} A`).join(", ")}`,
-    `Réserve : ${fmt(reservePct, 0)} %, calibre indicatif : ${result.rating ? `${result.rating} A` : "au-delà de 2 000 A"}`,
+    T.summaryTitle,
+    `${T.event}${c}${$("b-event").value || "-"}`,
+    `${T.place}${c}${$("b-place").value || "-"}`,
+    `${T.network}${c}${net === "mono" ? T.netMono : T.netTri}`,
+    `${T.pinst}${c}${fmt(result.Pinst / 1000, 2)} kW`,
+    `${T.pf}${c}${fmt(result.Pf / 1000, 2)} kW`,
+    `${T.s}${c}${fmt(result.S / 1000, 2)} kVA`,
+    `${T.currents}${c}${Object.entries(result.phases).map(([p, v]) => `${p} ${fmt(v, 1)} A`).join(", ")}`,
+    T.reserve(fmt(reservePct, 0), result.rating ? `${result.rating} A` : T.beyond),
     "",
-    "Détail :",
+    T.detail,
   ];
   result.rows.forEach((r) => {
     if (!r.pInst) return;
-    lines.push(`- ${r.name || "Sans nom"}${r.zone ? ` (${r.zone})` : ""} : ${r.qty} × ${fmt(r.power, 0)} W, ${r.type}, cos φ ${fmt(r.cosPhi, 2)}, foisonnement ${fmt(r.ks, 2)}, ${fmt(r.s / 1000, 2)} kVA`);
+    lines.push(`- ${r.name || T.unnamed}${r.zone ? ` (${r.zone})` : ""}${c}${r.qty} × ${fmt(r.power, 0)} W, ${T.type[r.type]}, cos φ ${fmt(r.cosPhi, 2)}, ${T.ks} ${fmt(r.ks, 2)}, ${fmt(r.s / 1000, 2)} kVA`);
   });
   return lines.join("\n");
 }
 
+// Export CSV : nombres sans séparateur de milliers, lisibles par un tableur
+// (virgule décimale et point-virgule en français, point décimal et virgule en anglais)
 function csv() {
   if (!last) return "";
   const { result } = last;
   const esc = (v) => `"${String(v).replace(/"/g, '""')}"`;
-  const head = ["Désignation", "Zone", "Quantité", "Puissance unitaire (W)", "Type", "Phase", "cos phi", "Foisonnement", "Puissance installée (W)", "Puissance foisonnée (W)", "Puissance apparente (VA)", "Intensité (A)"];
+  const n = (v, digits) => {
+    const t = (Number(v) || 0).toFixed(digits);
+    return LANG === "en" ? t : t.replace(".", ",");
+  };
   const rows = result.rows.map((r) => [
-    r.name, r.zone, r.qty, r.power, r.type, r.assigned || "", fmt(r.cosPhi, 2), fmt(r.ks, 2),
-    fmt(r.pInst, 0), fmt(r.pF, 0), fmt(r.s, 0), fmt(r.current || 0, 2),
+    r.name, r.zone, r.qty, r.power, T.type[r.type], r.assigned || "", n(r.cosPhi, 2), n(r.ks, 2),
+    n(r.pInst, 0), n(r.pF, 0), n(r.s, 0), n(r.current || 0, 2),
   ]);
   rows.push([]);
-  rows.push(["Total", "", "", "", "", "", "", "", fmt(result.Pinst, 0), fmt(result.Pf, 0), fmt(result.S, 0), ""]);
-  Object.entries(result.phases).forEach(([p, v]) => rows.push([`Courant ${p} (A)`, fmt(v, 2)]));
-  return "﻿" + [head, ...rows].map((r) => r.map(esc).join(";")).join("\r\n");
+  rows.push([T.total, "", "", "", "", "", "", "", n(result.Pinst, 0), n(result.Pf, 0), n(result.S, 0), ""]);
+  Object.entries(result.phases).forEach(([p, v]) => rows.push([T.current(p), n(v, 2)]));
+  return "\ufeff" + [T.head, ...rows].map((r) => r.map(esc).join(T.csvSep)).join("\r\n");
 }
 
 // Événements
 $("b-add").addEventListener("click", () => {
   if (!session && rowsEl.children.length >= DEMO_MAX) {
-    openGate("La démo est limitée à 4 lignes. Connectez-vous pour continuer votre bilan.");
+    openGate(T.demoLimit);
     return;
   }
   addRow({}, true);
@@ -271,7 +373,7 @@ document.querySelectorAll("input[name='b-network']").forEach((el) =>
 
 
 $("b-reset").addEventListener("click", () => {
-  if (!window.confirm("Effacer toutes les lignes du bilan ?")) return;
+  if (!window.confirm(T.confirmReset)) return;
   rowsEl.innerHTML = "";
   hiddenLines = [];
   $("b-event").value = "";
@@ -283,13 +385,13 @@ $("b-reset").addEventListener("click", () => {
 
 $("b-csv").addEventListener("click", () => {
   if (!session) {
-    openGate("L'export CSV est réservé aux comptes clients.");
+    openGate(T.csvGate);
     return;
   }
   const blob = new Blob([csv()], { type: "text/csv;charset=utf-8" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = `bilan-de-puissance-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.download = `${T.file}-${new Date().toISOString().slice(0, 10)}.csv`;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -298,10 +400,10 @@ $("b-csv").addEventListener("click", () => {
 
 $("b-print").addEventListener("click", () => {
   if (!session) {
-    openGate("L'impression est réservée aux comptes clients.");
+    openGate(T.printGate);
     return;
   }
-  $("print-date").textContent = new Date().toLocaleDateString("fr-FR");
+  $("print-date").textContent = new Date().toLocaleDateString(LANG === "en" ? "en-GB" : "fr-FR");
   window.print();
 });
 
@@ -310,11 +412,11 @@ $("b-send").addEventListener("click", () => {
   const status = $("b-status");
   if (!last || !last.result.S) {
     status.dataset.state = "error";
-    status.textContent = "Ajoutez au moins une ligne avec une puissance avant d'envoyer.";
+    status.textContent = T.sendEmpty;
     return;
   }
   const max = 1800;
-  const message = text.length > max ? `${text.slice(0, max)}\n[…] Bilan complet disponible en export CSV.` : text;
+  const message = text.length > max ? `${text.slice(0, max)}\n[…] ${T.truncated}` : text;
   const url = new URL("../contact/", window.location.href);
   url.searchParams.set("objet", "bilan");
   url.searchParams.set("message", message);
@@ -322,7 +424,7 @@ $("b-send").addEventListener("click", () => {
 });
 
 document.querySelectorAll("[data-open-gate]").forEach((btn) =>
-  btn.addEventListener("click", () => openGate("Connectez-vous pour ajouter des lignes, exporter et imprimer votre bilan."))
+  btn.addEventListener("click", () => openGate(T.gate))
 );
 
 $("b-login").addEventListener("submit", async (e) => {
@@ -333,18 +435,18 @@ $("b-login").addEventListener("submit", async (e) => {
   const submit = e.target.querySelector("[type='submit']");
   if (!email || !password) {
     status.dataset.state = "error";
-    status.textContent = "Saisissez votre e-mail et votre mot de passe.";
+    status.textContent = T.missing;
     return;
   }
   submit.disabled = true;
   status.dataset.state = "";
-  status.textContent = "Connexion…";
+  status.textContent = T.signingIn;
   try {
     unlock(await auth.login(email, password));
     $("l-password").value = "";
     status.textContent = "";
     $("b-status").dataset.state = "ok";
-    $("b-status").textContent = "Vous êtes connecté : accès complet au bilan.";
+    $("b-status").textContent = T.signedIn;
     $("b-add").focus();
   } catch (err) {
     status.dataset.state = "error";
@@ -361,7 +463,7 @@ $("b-logout").addEventListener("click", async () => {
   renderAccess();
   compute();
   $("b-status").dataset.state = "";
-  $("b-status").textContent = "Vous êtes déconnecté.";
+  $("b-status").textContent = T.signedOut;
 });
 
 // Initialisation

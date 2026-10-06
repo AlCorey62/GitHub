@@ -2,9 +2,32 @@
 (function () {
   "use strict";
 
-  // Liens reçus par e-mail (invitation, mot de passe oublié) : traités par l'espace client
-  if (/^#(invite|recovery|confirmation|email_change)_token=/.test(window.location.hash) && !/\/compte\/(index\.html)?$/.test(window.location.pathname)) {
-    window.location.replace("/compte/" + window.location.hash);
+  var EN = document.documentElement.lang === "en";
+  var T = EN
+    ? {
+        open: "Open the menu",
+        close: "Close the menu",
+        required: "Please fill in the required fields highlighted.",
+        sending: "Sending…",
+        sent: "Message received! We will get back to you shortly.",
+        failed: "Sending failed. Email us directly at ",
+      }
+    : {
+        open: "Ouvrir le menu",
+        close: "Fermer le menu",
+        required: "Merci de compléter les champs obligatoires signalés.",
+        sending: "Envoi en cours…",
+        sent: "Message réceptionné ! Nous revenons vers vous rapidement.",
+        failed: "L'envoi n'a pas abouti. Écrivez-nous directement à ",
+      };
+
+  // Liens reçus par e-mail (invitation, mot de passe oublié) : traités par l'espace client.
+  // Les e-mails pointent vers l'accueil français : espace client anglais depuis une page anglaise,
+  // ou si le navigateur n'est pas réglé en français.
+  if (/^#(invite|recovery|confirmation|email_change)_token=/.test(window.location.hash) && !/\/(compte|en\/account)\/(index\.html)?$/.test(window.location.pathname)) {
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "fr"];
+    var english = EN || !/^fr\b/i.test(langs[0] || "fr");
+    window.location.replace((english ? "/en/account/" : "/compte/") + window.location.hash);
     return;
   }
 
@@ -25,7 +48,7 @@
     if (!nav || !toggle) return;
     nav.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.querySelector(".visually-hidden").textContent = open ? "Fermer le menu" : "Ouvrir le menu";
+    toggle.querySelector(".visually-hidden").textContent = open ? T.close : T.open;
     document.body.classList.toggle("nav-open", open);
   }
 
@@ -153,7 +176,7 @@
       if (invalid.length) {
         e.preventDefault();
         status.dataset.state = "error";
-        status.textContent = "Merci de compléter les champs obligatoires signalés.";
+        status.textContent = T.required;
         invalid[0].focus();
         return;
       }
@@ -162,7 +185,7 @@
       var btn = form.querySelector("[type='submit']");
       btn.disabled = true;
       status.dataset.state = "";
-      status.textContent = "Envoi en cours…";
+      status.textContent = T.sending;
       var body = new URLSearchParams(new FormData(form)).toString();
       fetch(form.getAttribute("action") || "/", {
         method: "POST",
@@ -173,12 +196,11 @@
           if (!r.ok) throw new Error(String(r.status));
           form.reset();
           status.dataset.state = "ok";
-          status.textContent = "Message réceptionné ! Nous revenons vers vous rapidement.";
+          status.textContent = T.sent;
         })
         .catch(function () {
           status.dataset.state = "error";
-          status.innerHTML =
-            "L'envoi n'a pas abouti. Écrivez-nous directement à <a href=\"mailto:contact@darkside-energy.com\">contact@darkside-energy.com</a>.";
+          status.innerHTML = T.failed + "<a href=\"mailto:contact@darkside-energy.com\">contact@darkside-energy.com</a>.";
         })
         .then(function () {
           btn.disabled = false;

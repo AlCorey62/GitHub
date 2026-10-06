@@ -112,6 +112,8 @@ const pages = new Map();
 for (const file of walk(SITE_DIR)) {
   const url = pageUrl(file);
   if (SKIP[url]) continue;
+  // Version anglaise : hors du dossier Wix (elle demanderait l'application Wix Multilingual)
+  if (url.startsWith("/en/")) continue;
   if (!WIX[url]) throw new Error(`Page sans correspondance Wix : ${url} (compléter WIX dans tools/wix-kit.mjs)`);
   const html = readFileSync(file, "utf8");
   const cfg = JSON.parse(html.match(/<!--page\s*([\s\S]*?)-->/)[1]);
@@ -138,6 +140,8 @@ for (const p of pages.values()) {
   mkdirSync(dir, { recursive: true });
   p.ld.forEach((obj, i) => {
     const out = deep(obj);
+    // Le site Wix est en français seulement (la version anglaise n'est pas reprise)
+    if (out["@type"] === "WebSite" && Array.isArray(out.inLanguage)) out.inLanguage = "fr-FR";
     writeFileSync(join(dir, `${i + 1}-${out["@type"]}.json`), JSON.stringify(out, null, 2) + "\n");
     blocks++;
   });
@@ -190,6 +194,7 @@ const llms = readFileSync(join(SITE_DIR, "llms.txt"), "utf8")
   .split("\n")
   .filter((l) => !l.startsWith("Chaque page existe aussi en Markdown"))
   .join("\n")
+  .replace(/\n+## English version[\s\S]*$/, "\n")
   .replace(/\n{3,}/g, "\n\n");
 writeFileSync(join(OUT, "llms.txt"), rewriteText(llms));
 

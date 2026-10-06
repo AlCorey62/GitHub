@@ -175,12 +175,12 @@ function renderList(n, ctx, depth) {
       const when = li.children.find((c) => c.tag && hasClass(c, "when"));
       let text;
       if (head) {
-        const title = (when ? `${clean(textOf(when)).trim()} : ` : "") + clean(inline(head.children, ctx)).trim();
+        const title = (when ? `${clean(textOf(when)).trim()}${ctx.colon}` : "") + clean(inline(head.children, ctx)).trim();
         const rest = blocks(li.children.filter((c) => c !== head && c !== when), { ...ctx, depth: depth + 1 })
           .filter(Boolean)
           .map((b) => b.replace(/\n+/g, " "))
           .join(" ");
-        text = rest ? `**${title}** : ${rest}` : `**${title}**`;
+        text = rest ? `**${title}**${ctx.colon}${rest}` : `**${title}**`;
       } else {
         const nested = parts.filter((p) => /^\s*(-|\d+\.) /.test(p));
         const flat = parts.filter((p) => !/^\s*(-|\d+\.) /.test(p)).map((p) => p.replace(/\n+/g, " "));
@@ -223,7 +223,7 @@ function renderTable(n, ctx) {
     out.push(`| ${pad(head.cells).join(" | ")} |`, `| ${Array(width).fill("---").join(" | ")} |`);
     rows.filter((r) => !r.head).forEach((r) => out.push(`| ${pad(r.cells).join(" | ")} |`));
   } else {
-    rows.forEach((r) => out.push(r.cells.length > 1 ? `- **${r.cells[0]}** : ${r.cells.slice(1).join(", ")}` : `- ${r.cells[0]}`));
+    rows.forEach((r) => out.push(r.cells.length > 1 ? `- **${r.cells[0]}**${ctx.colon}${r.cells.slice(1).join(", ")}` : `- ${r.cells[0]}`));
   }
   return out.join("\n");
 }
@@ -238,7 +238,7 @@ function renderDl(n, ctx) {
       else if (c.tag === "dt") dt = clean(inline(c.children, ctx)).trim();
       else if (c.tag === "dd") {
         const dd = clean(inline(c.children, ctx)).trim();
-        if (dd) out.push(dt ? `- **${dt}** : ${dd}` : `- ${dd}`);
+        if (dd) out.push(dt ? `- **${dt}**${ctx.colon}${dd}` : `- ${dd}`);
         dt = null;
       }
     }
@@ -307,7 +307,7 @@ function blocks(nodes, ctx) {
         .map((s) => {
           const v = s.children.find((c) => c.tag && hasClass(c, "stat__value"));
           const l = s.children.find((c) => c.tag && hasClass(c, "stat__label"));
-          return `- **${clean(textOf(v || { text: "" })).trim()}** : ${clean(textOf(l || { text: "" })).trim()}`;
+          return `- **${clean(textOf(v || { text: "" })).trim()}**${ctx.colon}${clean(textOf(l || { text: "" })).trim()}`;
         });
       if (items.length) out.push(items.join("\n"));
     } else {
@@ -328,6 +328,8 @@ export function pageToMarkdown(html, pageUrl) {
   const tree = parse(main ? main[1] : html);
   const ctx = {
     depth: 0,
+    // Deux-points à la française (espace avant) sauf pour les pages en anglais
+    colon: /<html lang="en"/.test(html) ? ": " : " : ",
     resolve: (href) => {
       if (/^(mailto:|tel:)/.test(href)) return href;
       try {

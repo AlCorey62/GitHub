@@ -114,7 +114,8 @@ createServer(async (req, res) => {
   const file = await resolve(req.url);
   if (!file) {
     res.writeHead(404, { "Content-Type": TYPES[".html"] });
-    res.end(await readFile(join(ROOT, "404.html")));
+    // Comme sur Netlify (netlify.toml) : page d'erreur anglaise pour les adresses /en/
+    res.end(await readFile(join(ROOT, pathname.startsWith("/en/") ? "en/404.html" : "404.html")));
     return;
   }
   res.writeHead(200, { "Content-Type": TYPES[extname(file)] || "application/octet-stream" });

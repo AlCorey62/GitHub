@@ -17,11 +17,6 @@
   status = 301
 
 [[redirects]]
-  from = "/en/test-externe"
-  to = "/bilan-de-puissance/"
-  status = 301
-
-[[redirects]]
   from = "/accueil"
   to = "/"
   status = 301
@@ -76,10 +71,100 @@
   to = "/news/"
   status = 301
 
+# --- Version anglaise (/en/) ---
+# Anciennes adresses anglaises de Wix (mêmes noms que les pages françaises) vers les pages anglaises.
+# Ces règles ne s'appliquent que si aucun fichier n'existe à l'adresse demandée.
+
+[[redirects]]
+  from = "/en/accueil"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/en/test-externe"
+  to = "/en/power-assessment/"
+  status = 301
+
+[[redirects]]
+  from = "/en/distribution-electrique"
+  to = "/en/power-distribution/"
+  status = 301
+
+[[redirects]]
+  from = "/en/regie-technique"
+  to = "/en/technical-management/"
+  status = 301
+
+[[redirects]]
+  from = "/en/coordination-generale"
+  to = "/en/general-coordination/"
+  status = 301
+
+[[redirects]]
+  from = "/en/bureaudetude"
+  to = "/en/engineering/"
+  status = 301
+
+[[redirects]]
+  from = "/en/nos-produits"
+  to = "/en/equipment/"
+  status = 301
+
+[[redirects]]
+  from = "/en/energie-responsable"
+  to = "/en/responsible-energy/"
+  status = 301
+
+[[redirects]]
+  from = "/en/entreprise"
+  to = "/en/company/"
+  status = 301
+
+[[redirects]]
+  from = "/en/bilan-de-puissance"
+  to = "/en/power-assessment/"
+  status = 301
+
+[[redirects]]
+  from = "/en/calculette-electro"
+  to = "/en/electrical-calculator/"
+  status = 301
+
+[[redirects]]
+  from = "/en/lexique"
+  to = "/en/glossary/"
+  status = 301
+
+[[redirects]]
+  from = "/en/mentions-legales"
+  to = "/en/legal-notice/"
+  status = 301
+
+[[redirects]]
+  from = "/en/compte"
+  to = "/en/account/"
+  status = 301
+
+[[redirects]]
+  from = "/en/news"
+  to = "/en/did-you-know/"
+  status = 301
+
+[[redirects]]
+  from = "/en/single-post/*"
+  to = "/en/did-you-know/"
+  status = 301
+
+[[redirects]]
+  from = "/en/blog/*"
+  to = "/en/did-you-know/"
+  status = 301
+
+# Toute autre adresse /en/ inconnue : page d'erreur en anglais
 [[redirects]]
   from = "/en/*"
-  to = "/"
-  status = 301
+  to = "/en/404.html"
+  status = 404
 
 # --- En-têtes HTTP ---
 

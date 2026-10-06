@@ -16,7 +16,7 @@ import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, dirname, sep } from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
-import { SITE, NAV, CTA, ENTITY, LLMS, MAP } from "./site.config.mjs";
+import { SITE, NAV, CTA, ENTITY, LLMS, MAP, NAV_EN, CTA_EN, UI } from "./site.config.mjs";
 import { pageToMarkdown } from "./markdown.mjs";
 import { WIDTH, HEIGHT, project } from "./map.mjs";
 
@@ -50,6 +50,17 @@ function pageUrl(file) {
   if (rel.endsWith("/index.html")) return "/" + rel.slice(0, -"index.html".length);
   return "/" + rel;
 }
+
+// Chemin relatif vers l'accueil de la langue de la page (/ ou /en/)
+function homePrefix(file, cfg, lang) {
+  if (cfg.absoluteRoot) return lang === "en" ? "/en/" : "/";
+  if (lang !== "en") return rootPrefix(file, cfg);
+  const depth = relative(join(SITE_DIR, "en"), dirname(file)).split(sep).filter(Boolean).length;
+  return depth === 0 ? "./" : "../".repeat(depth);
+}
+
+// Pages légales par langue (pied de page)
+const LEGAL = { fr: "mentions-legales/", en: "legal-notice/" };
 
 function rootPrefix(file, cfg) {
   if (cfg.absoluteRoot) return "/";
@@ -103,9 +114,20 @@ function expandSvgs(html) {
 // --- Blocs communs ------------------------------------------------------------
 
 function head(cfg, ctx) {
-  const { root, url, v } = ctx;
-  const isHome = url === "/";
-  const title = isHome ? `${SITE.name} | Distribution électrique événementielle` : `${cfg.title} | ${SITE.name}`;
+  const { root, url, v, t } = ctx;
+  const isHome = url === "/" || url === "/en/";
+  const title = isHome ? `${SITE.name} | ${t.homeTitle}` : `${cfg.title} | ${SITE.name}`;
+  // Correspondance entre les deux langues (hreflang), pour les pages indexées
+  const alternates = [];
+  if (!cfg.noindex && !cfg.absoluteRoot && ctx.alt) {
+    const fr = ctx.lang === "fr" ? url : ctx.alt;
+    const en = ctx.lang === "en" ? url : ctx.alt;
+    alternates.push(
+      `<link rel="alternate" hreflang="fr" href="${SITE.url}${fr}">`,
+      `<link rel="alternate" hreflang="en" href="${SITE.url}${en}">`,
+      `<link rel="alternate" hreflang="x-default" href="${SITE.url}${fr}">`
+    );
+  }
   const canonical = SITE.url + url;
   const ogImage = `${SITE.url}/${cfg.image || SITE.ogImage}`;
   const lines = [
@@ -115,12 +137,14 @@ function head(cfg, ctx) {
     `<meta name="description" content="${esc(cfg.description)}">`,
     cfg.noindex ? `<meta name="robots" content="noindex, follow">` : `<link rel="canonical" href="${canonical}">`,
     cfg.noindex ? "" : `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">`,
-    cfg.noindex || cfg.absoluteRoot ? "" : `<link rel="alternate" type="text/markdown" href="index.html.md" title="Version Markdown de la page">`,
+    ...alternates,
+    cfg.noindex || cfg.absoluteRoot ? "" : `<link rel="alternate" type="text/markdown" href="index.html.md" title="${t.markdown}">`,
     `<meta name="theme-color" content="${SITE.themeColor}">`,
     `<meta name="color-scheme" content="dark">`,
     `<meta property="og:type" content="${cfg.type === "article" ? "article" : "website"}">`,
     `<meta property="og:site_name" content="${SITE.name}">`,
-    `<meta property="og:locale" content="fr_FR">`,
+    `<meta property="og:locale" content="${t.ogLocale}">`,
+    ctx.alt ? `<meta property="og:locale:alternate" content="${UI[ctx.lang === "en" ? "fr" : "en"].ogLocale}">` : "",
     `<meta property="og:title" content="${esc(cfg.ogTitle || (isHome ? SITE.name : cfg.title))}">`,
     `<meta property="og:description" content="${esc(cfg.description)}">`,
     `<meta property="og:url" content="${canonical}">`,
@@ -152,7 +176,11 @@ function head(cfg, ctx) {
 const ORG_ID = `${SITE.url}/#organisation`;
 const SITE_ID = `${SITE.url}/#website`;
 
-function organizationLd() {
+function organizationLd(lang = "fr") {
+  const en = lang === "en";
+  const t = UI[lang];
+  const nav = en ? NAV_EN : NAV;
+  const langHome = en ? `${SITE.url}/en/` : `${SITE.url}/`;
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -161,7 +189,7 @@ function organizationLd() {
     legalName: SITE.legalName,
     url: `${SITE.url}/`,
     logo: `${SITE.url}/assets/img/logo-dark-side-energy.png`,
-    slogan: SITE.slogan,
+    slogan: en ? SITE.sloganEn : SITE.slogan,
     email: SITE.email,
     telephone: SITE.phoneIntl,
     // Siège au domicile du gérant : ville seulement (adresse complète dans les mentions légales)
@@ -175,11 +203,11 @@ function organizationLd() {
       { "@type": "PropertyValue", propertyID: "SIREN", value: SITE.siren.replace(/\s/g, "") },
       { "@type": "PropertyValue", propertyID: "SIRET", value: SITE.siret.replace(/\s/g, "") },
     ],
-    description: ENTITY.description,
+    description: en ? ENTITY.descriptionEn : ENTITY.description,
     foundingDate: ENTITY.foundingDate,
     image: `${SITE.url}/${SITE.ogImage}`,
     areaServed: ENTITY.areaServed.map((name) => ({ "@type": "Country", name })),
-    knowsAbout: ENTITY.knowsAbout,
+    knowsAbout: en ? ENTITY.knowsAboutEn : ENTITY.knowsAbout,
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -188,16 +216,16 @@ function organizationLd() {
         telephone: SITE.phoneIntl,
         areaServed: "FR",
         availableLanguage: ENTITY.languages,
-        url: `${SITE.url}/contact/`,
+        url: `${langHome}contact/`,
       },
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Métiers et services",
+      name: t.catalog,
       itemListElement: [
-        ...NAV.find((n) => n.key === "metiers").children.map((c) => ({ label: c.label, href: c.href })),
-        { label: "Location et vente de matériel de distribution électrique", href: "nos-produits/" },
-      ].map((c) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: c.label, url: `${SITE.url}/${c.href}` } })),
+        ...nav.find((n) => n.key === "metiers").children.map((c) => ({ label: c.label, href: c.href })),
+        { label: t.catalogEquipment, href: nav.find((n) => n.key === "materiel").href },
+      ].map((c) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: c.label, url: `${langHome}${c.href}` } })),
     },
     sameAs: [...SITE.socials.map((s) => s.href), ...ENTITY.sameAs],
   };
@@ -239,18 +267,21 @@ function glossaryFrom(html, url) {
 function jsonLd(cfg, ctx) {
   const out = [];
   const canonical = SITE.url + ctx.url;
-  if (ctx.url === "/" || cfg.nav === "entreprise") {
-    out.push(organizationLd());
+  const inLanguage = ctx.t.locale;
+  const langHome = ctx.lang === "en" ? `${SITE.url}/en/` : `${SITE.url}/`;
+  const isHome = ctx.url === "/" || ctx.url === "/en/";
+  if (isHome || cfg.nav === "entreprise") {
+    out.push(organizationLd(ctx.lang));
   }
-  if (ctx.url === "/") {
+  if (isHome) {
     out.push({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "@id": SITE_ID,
       name: SITE.name,
       url: `${SITE.url}/`,
-      description: ENTITY.description,
-      inLanguage: "fr-FR",
+      description: ctx.lang === "en" ? ENTITY.descriptionEn : ENTITY.description,
+      inLanguage: [UI.fr.locale, UI.en.locale],
       publisher: { "@id": ORG_ID },
     });
   }
@@ -262,7 +293,7 @@ function jsonLd(cfg, ctx) {
       url: canonical,
       name: cfg.title,
       description: cfg.description,
-      inLanguage: "fr-FR",
+      inLanguage,
       isPartOf: { "@type": "WebSite", "@id": SITE_ID, name: SITE.name, url: `${SITE.url}/` },
       about: orgRef(),
       publisher: orgRef(),
@@ -289,7 +320,7 @@ function jsonLd(cfg, ctx) {
       areaServed: ENTITY.areaServed.map((name) => ({ "@type": "Country", name })),
       availableChannel: {
         "@type": "ServiceChannel",
-        serviceUrl: `${SITE.url}/contact/`,
+        serviceUrl: `${langHome}contact/`,
         servicePhone: { "@type": "ContactPoint", telephone: SITE.phoneIntl, email: SITE.email, contactType: "sales" },
         availableLanguage: ENTITY.languages,
       },
@@ -304,8 +335,8 @@ function jsonLd(cfg, ctx) {
       description: cfg.description,
       url: canonical,
       applicationCategory: "UtilitiesApplication",
-      operatingSystem: "Tout navigateur web",
-      inLanguage: "fr-FR",
+      operatingSystem: ctx.t.anyBrowser,
+      inLanguage,
       ...(cfg.app.restricted ? {} : { isAccessibleForFree: true, offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" } }),
       featureList: cfg.app.features,
       provider: orgRef(),
@@ -319,7 +350,7 @@ function jsonLd(cfg, ctx) {
       name: cfg.title,
       description: cfg.description,
       url: canonical,
-      inLanguage: "fr-FR",
+      inLanguage,
       publisher: orgRef(),
       hasDefinedTerm: glossaryFrom(ctx.html, canonical),
     });
@@ -331,13 +362,13 @@ function jsonLd(cfg, ctx) {
       "@type": "Person",
       "@id": `${canonical}#${p.id}`,
       name: p.name,
-      jobTitle: p.jobTitle,
-      description: p.description,
+      jobTitle: ctx.lang === "en" ? p.jobTitleEn : p.jobTitle,
+      description: ctx.lang === "en" ? p.descriptionEn : p.description,
       worksFor: orgRef(),
     });
   }
   if (cfg.breadcrumb && cfg.breadcrumb.length) {
-    const items = [["Accueil", ""], ...cfg.breadcrumb];
+    const items = [[ctx.t.home, ""], ...cfg.breadcrumb];
     out.push({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -346,7 +377,7 @@ function jsonLd(cfg, ctx) {
         "@type": "ListItem",
         position: i + 1,
         name,
-        item: i === items.length - 1 ? SITE.url + ctx.url : `${SITE.url}/${href || ""}`,
+        item: i === items.length - 1 ? SITE.url + ctx.url : `${langHome}${href || ""}`,
       })),
     });
   }
@@ -359,7 +390,7 @@ function jsonLd(cfg, ctx) {
       datePublished: cfg.article.date,
       ...(cfg.updated ? { dateModified: cfg.updated } : {}),
       isPartOf: { "@id": SITE_ID },
-      inLanguage: "fr-FR",
+      inLanguage,
       mainEntityOfPage: SITE.url + ctx.url,
       image: `${SITE.url}/${cfg.image || SITE.ogImage}`,
       author: { "@type": "Organization", name: SITE.name, url: `${SITE.url}/` },
@@ -370,8 +401,12 @@ function jsonLd(cfg, ctx) {
 }
 
 function header(cfg, ctx) {
-  const { root } = ctx;
+  const { root, home, t } = ctx;
   const active = cfg.nav || "";
+  // Lien vers la même page dans l'autre langue, ou vers son accueil (toujours l'accueil depuis la page 404)
+  const other = ctx.lang === "en" ? "fr" : "en";
+  const target = (!cfg.absoluteRoot && ctx.alt) || (ctx.lang === "en" ? "/" : "/en/");
+  const switchHref = cfg.absoluteRoot ? target : `${root}${target.slice(1)}`;
   const item = (it) => {
     if (it.children) {
       const isActive = it.children.some((c) => c.key === active);
@@ -379,23 +414,25 @@ function header(cfg, ctx) {
       const links = it.children
         .map(
           (c) =>
-            `<li><a href="${root}${c.href}"${c.key === active ? ` aria-current="page"` : ""}>${esc(c.label)}<span>${esc(c.desc)}</span></a></li>`
+            `<li><a href="${home}${c.href}"${c.key === active ? ` aria-current="page"` : ""}>${esc(c.label)}<span>${esc(c.desc)}</span></a></li>`
         )
         .join("");
       return `<li class="has-sub${isActive ? " is-active" : ""}"><button class="nav-link" type="button" aria-expanded="false" aria-controls="${subId}">${esc(it.label)}${icon("chevron-down", ` class="chevron"`)}</button><div class="subnav" id="${subId}"><ul>${links}</ul></div></li>`;
     }
-    return `<li><a class="nav-link" href="${root}${it.href}"${it.key === active ? ` aria-current="page"` : ""}>${esc(it.label)}</a></li>`;
+    return `<li><a class="nav-link" href="${home}${it.href}"${it.key === active ? ` aria-current="page"` : ""}>${esc(it.label)}</a></li>`;
   };
   return [
-    `<a class="skip-link" href="#contenu">Aller au contenu</a>`,
+    `<a class="skip-link" href="#contenu">${t.skip}</a>`,
     `<header class="site-header" data-header>`,
     `<div class="container header-inner">`,
-    `<a class="brand" href="${root}" aria-label="${SITE.name}, retour à l'accueil">${logo("horizontal")}</a>`,
-    `<nav class="main-nav" id="main-nav" aria-label="Navigation principale">`,
-    `<ul class="nav-list">${NAV.map(item).join("")}</ul>`,
-    `<a class="btn btn--sm nav-cta" href="${root}${CTA.href}">${esc(CTA.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,
+    `<a class="brand" href="${home}" aria-label="${SITE.name}, ${esc(t.backHome)}">${logo("horizontal")}</a>`,
+    `<nav class="main-nav" id="main-nav" aria-label="${t.mainNav}">`,
+    `<ul class="nav-list">${ctx.nav.map(item).join("")}</ul>`,
+    // Nom accessible qui reprend le texte visible (« EN (English version) »), en langue cible
+    `<a class="lang-switch" href="${switchHref}" hreflang="${other}" lang="${other}">${t.switchText}<span class="visually-hidden"> (${esc(t.switchLabel)})</span></a>`,
+    `<a class="btn btn--sm nav-cta" href="${home}${ctx.cta.href}">${esc(ctx.cta.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,
     `</nav>`,
-    `<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">Ouvrir le menu</span><span class="burger" aria-hidden="true"></span></button>`,
+    `<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">${t.openMenu}</span><span class="burger" aria-hidden="true"></span></button>`,
     `</div>`,
     `</header>`,
   ].join("\n");
@@ -403,53 +440,54 @@ function header(cfg, ctx) {
 
 function breadcrumb(cfg, ctx) {
   if (!cfg.breadcrumb || !cfg.breadcrumb.length) return "";
-  const items = [["Accueil", ""], ...cfg.breadcrumb];
+  const items = [[ctx.t.home, ""], ...cfg.breadcrumb];
   const lis = items
     .map(([label, href], i) =>
       i === items.length - 1
         ? `<li><span aria-current="page">${esc(label)}</span></li>`
-        : `<li><a href="${ctx.root}${href || ""}">${esc(label)}</a></li>`
+        : `<li><a href="${ctx.home}${href || ""}">${esc(label)}</a></li>`
     )
     .join("");
-  return `<nav class="breadcrumb" aria-label="Fil d'Ariane"><ol>${lis}</ol></nav>`;
+  return `<nav class="breadcrumb" aria-label="${esc(ctx.t.breadcrumb)}"><ol>${lis}</ol></nav>`;
 }
 
 function footer(cfg, ctx) {
-  const { root } = ctx;
-  const metiers = NAV.find((n) => n.key === "metiers").children;
-  const outils = NAV.find((n) => n.key === "outils").children;
+  const { root, home, t } = ctx;
+  const metiers = ctx.nav.find((n) => n.key === "metiers").children;
+  const outils = ctx.nav.find((n) => n.key === "outils").children;
+  const hrefOf = (key) => ctx.nav.find((n) => n.key === key).href;
   const socials = SITE.socials
-    .map((s) => `<li><a href="${s.href}" rel="noopener" target="_blank" aria-label="${esc(s.label)} (nouvelle fenêtre)">${icon(s.icon)}</a></li>`)
+    .map((s) => `<li><a href="${s.href}" rel="noopener" target="_blank" aria-label="${esc(s.label)} (${t.newWindow})">${icon(s.icon)}</a></li>`)
     .join("");
   return [
     `<footer class="site-footer">`,
     `<div class="container footer-grid">`,
     `<div class="footer-brand">`,
-    `<a class="brand" href="${root}" aria-label="${SITE.name}, retour à l'accueil">${logo("horizontal")}</a>`,
-    `<p>${esc(SITE.slogan)}</p>`,
+    `<a class="brand" href="${home}" aria-label="${SITE.name}, ${esc(t.backHome)}">${logo("horizontal")}</a>`,
+    `<p>${esc(ctx.lang === "en" ? SITE.sloganEn : SITE.slogan)}</p>`,
     `<ul class="social">${socials}</ul>`,
     `</div>`,
-    `<nav aria-label="Métiers"><p class="footer-title">Métiers</p><ul class="footer-links">${metiers
-      .map((m) => `<li><a href="${root}${m.href}">${esc(m.label)}</a></li>`)
+    `<nav aria-label="${t.footerServices}"><p class="footer-title">${t.footerServices}</p><ul class="footer-links">${metiers
+      .map((m) => `<li><a href="${home}${m.href}">${esc(m.label)}</a></li>`)
       .join("")}</ul></nav>`,
-    `<nav aria-label="Ressources"><p class="footer-title">Ressources</p><ul class="footer-links">`,
-    `<li><a href="${root}nos-produits/">Matériel en location clé en main</a></li>`,
-    `<li><a href="${root}energie-responsable/">Énergie responsable</a></li>`,
-    `<li><a href="${root}references/">Références</a></li>`,
-    ...outils.map((o) => `<li><a href="${root}${o.href}">${esc(o.label)}</a></li>`),
-    `<li><a href="${root}entreprise/">L'entreprise</a></li>`,
+    `<nav aria-label="${t.footerResources}"><p class="footer-title">${t.footerResources}</p><ul class="footer-links">`,
+    `<li><a href="${home}${hrefOf("materiel")}">${esc(t.footerEquipment)}</a></li>`,
+    `<li><a href="${home}${hrefOf("rse")}">${esc(t.footerRse)}</a></li>`,
+    `<li><a href="${home}${hrefOf("references")}">${esc(t.footerRefs)}</a></li>`,
+    ...outils.map((o) => `<li><a href="${home}${o.href}">${esc(o.label)}</a></li>`),
+    `<li><a href="${home}${hrefOf("entreprise")}">${esc(t.footerCompany)}</a></li>`,
     `</ul></nav>`,
-    `<div><p class="footer-title">Contact</p>`,
+    `<div><p class="footer-title">${t.footerContact}</p>`,
     `<address class="footer-contact">`,
-    `<p>${SITE.name}<br>Hauts-de-France, interventions partout en France et à l'international</p>`,
-    `<p><a href="mailto:${SITE.email}">${SITE.email}</a><br><a href="tel:${SITE.phoneIntl}">${SITE.phone.replace(/ /g, "\u00A0")}</a></p>`,
+    `<p>${SITE.name}<br>${esc(t.footerArea)}</p>`,
+    `<p><a href="mailto:${SITE.email}">${SITE.email}</a><br><a href="tel:${SITE.phoneIntl}">${(ctx.lang === "en" ? SITE.phoneIntlDisplay : SITE.phone).replace(/ /g, "\u00A0")}</a></p>`,
     `</address>`,
-    `<a class="btn btn--sm" href="${root}${CTA.href}">${esc(CTA.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,
+    `<a class="btn btn--sm" href="${home}${ctx.cta.href}">${esc(ctx.cta.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,
     `</div>`,
     `</div>`,
     `<div class="container"><div class="footer-bottom">`,
     `<p>© <span data-year>${new Date().getFullYear()}</span> ${SITE.name}, ${SITE.legalForm}. SIREN ${SITE.siren}.</p>`,
-    `<ul><li><a href="${root}mentions-legales/">Mentions légales et confidentialité</a></li><li><a href="${root}faq/">Questions fréquentes</a></li><li><a href="${root}llms.txt">Infos pour les IA</a></li><li><a href="${root}contact/">Contact</a></li></ul>`,
+    `<ul><li><a href="${home}${LEGAL[ctx.lang]}">${esc(t.legal)}</a></li><li><a href="${home}faq/">${esc(t.faq)}</a></li><li><a href="${root}llms.txt">${esc(t.aiInfo)}</a></li><li><a href="${home}contact/">${esc(t.footerContact)}</a></li></ul>`,
     `</div></div>`,
     `</footer>`,
   ].join("\n");
@@ -484,19 +522,22 @@ function worldMap(cfg, ctx) {
     const [x, y] = project(lat, lon);
     return `<circle class="map__dot" cx="${r1(x)}" cy="${r1(y)}" r="2.4"/>`;
   });
+  const en = ctx.lang === "en";
   const labels = MAP.labels.map((l) => {
     const [x, y] = project(l.lat, l.lon);
-    return `<text class="map__label${l.hq ? " map__label--hq" : ""}" x="${r1(x + l.dx)}" y="${r1(y + l.dy)}" text-anchor="${l.anchor}">${esc(l.text)}</text>`;
+    return `<text class="map__label${l.hq ? " map__label--hq" : ""}" x="${r1(x + l.dx)}" y="${r1(y + l.dy)}" text-anchor="${l.anchor}">${esc(en && l.en ? l.en : l.text)}</text>`;
   });
-  const names = MAP.places.map((p) => p.name);
-  const list = `${names.slice(0, -1).join(", ")} et ${names[names.length - 1]}`;
+  const names = MAP.places.map((p) => (en && p.en ? p.en : p.name));
+  const list = `${names.slice(0, -1).join(", ")} ${en ? "and" : "et"} ${names[names.length - 1]}`;
   return [
     `<figure class="map reveal">`,
     `<div class="map__canvas no-md">`,
     `<img class="map__base" src="${ctx.root}assets/img/carte-monde.svg" width="${WIDTH}" height="${HEIGHT}" alt="" loading="lazy" decoding="async">`,
     `<svg class="map__layer" viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img" aria-labelledby="carte-titre carte-desc">`,
-    `<title id="carte-titre">Nos interventions à l'international</title>`,
-    `<desc id="carte-desc">Depuis le siège de ${esc(SITE.name)} à ${esc(MAP.hq.name)}, des lignes rejoignent les villes où ses équipes sont intervenues : ${esc(list)}.</desc>`,
+    en ? `<title id="carte-titre">Our work abroad</title>` : `<title id="carte-titre">Nos interventions à l'international</title>`,
+    en
+      ? `<desc id="carte-desc">From the ${esc(SITE.name)} base in ${esc(MAP.hq.name)}, lines reach the cities where its teams have worked: ${esc(list)}.</desc>`
+      : `<desc id="carte-desc">Depuis le siège de ${esc(SITE.name)} à ${esc(MAP.hq.name)}, des lignes rejoignent les villes où ses équipes sont intervenues : ${esc(list)}.</desc>`,
     ...dots,
     ...arcs,
     ...flows,
@@ -506,16 +547,16 @@ function worldMap(cfg, ctx) {
     ...labels,
     `</svg>`,
     `</div>`,
-    `<figcaption class="map__caption">Depuis ${esc(MAP.hq.name)} : ${esc(list)}.</figcaption>`,
+    en ? `<figcaption class="map__caption">From ${esc(MAP.hq.name)}: ${esc(list)}.</figcaption>` : `<figcaption class="map__caption">Depuis ${esc(MAP.hq.name)} : ${esc(list)}.</figcaption>`,
     `</figure>`,
   ].join("\n");
 }
 
 function cta(cfg, ctx) {
   const c = cfg.cta || {};
-  const title = c.title || "Un projet ? Parlons puissance.";
-  const text = c.text || "Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.";
-  const href = `${ctx.root}${CTA.href}${c.objet ? `?objet=${encodeURIComponent(c.objet)}` : ""}`;
+  const title = c.title || ctx.t.ctaTitle;
+  const text = c.text || ctx.t.ctaText;
+  const href = `${ctx.home}${ctx.cta.href}${c.objet ? `?objet=${encodeURIComponent(c.objet)}` : ""}`;
   return [
     `<section class="section" aria-label="Contact">`,
     `<div class="container">`,
@@ -526,7 +567,7 @@ function cta(cfg, ctx) {
     `<p>${esc(text)}</p>`,
     `</div>`,
     `<div class="btn-row">`,
-    `<a class="btn btn--light" href="${href}">${esc(c.button || CTA.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,
+    `<a class="btn btn--light" href="${href}">${esc(c.button || ctx.cta.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,
     `<a class="btn btn--ghost btn--case" href="mailto:${SITE.email}">${SITE.email}</a>`,
     `</div>`,
     `</div>`,
@@ -579,6 +620,23 @@ const v = {
 };
 
 const files = walk(SITE_DIR).sort();
+
+// Pages en deux langues : chaque page anglaise indique sa page française ("alternate")
+const PAIRS = new Map();
+for (const file of files) {
+  const m = readFileSync(file, "utf8").match(/<!--page\s*([\s\S]*?)-->/);
+  let c = null;
+  try {
+    c = m ? JSON.parse(m[1]) : null;
+  } catch (e) {
+    continue; // erreur signalée dans la boucle principale
+  }
+  if (!c || c.lang !== "en" || !c.alternate) continue;
+  const enUrl = pageUrl(file);
+  PAIRS.set(enUrl, c.alternate);
+  PAIRS.set(c.alternate, enUrl);
+}
+
 const sitemap = [];
 const pagesMd = [];
 let count = 0;
@@ -600,7 +658,19 @@ for (const file of files) {
     if (!cfg[k]) throw new Error(`Champ "${k}" manquant dans ${file}`);
   }
   const url = pageUrl(file);
-  const ctx = { root: rootPrefix(file, cfg), url, v, html };
+  const lang = cfg.lang === "en" ? "en" : "fr";
+  const ctx = {
+    root: rootPrefix(file, cfg),
+    home: homePrefix(file, cfg, lang),
+    url,
+    v,
+    html,
+    lang,
+    t: UI[lang],
+    nav: lang === "en" ? NAV_EN : NAV,
+    cta: lang === "en" ? CTA_EN : CTA,
+    alt: PAIRS.get(url) || null,
+  };
 
   html = replaceBlock(html, "head", head(cfg, ctx), file);
   html = replaceBlock(html, "header", header(cfg, ctx), file);
@@ -609,31 +679,43 @@ for (const file of files) {
   html = replaceBlock(html, "carte", worldMap(cfg, ctx), file);
   html = replaceBlock(html, "footer", footer(cfg, ctx), file);
   html = expandSvgs(html);
-  html = frenchTypo(html);
+  if (lang === "fr") html = frenchTypo(html);
   writeFileSync(file, html);
   count++;
 
   if (!cfg.noindex && !cfg.absoluteRoot) {
     const canonical = SITE.url + url;
     let md = pageToMarkdown(html, canonical);
-    const meta = [`> ${cfg.description}`, "", `Source : ${canonical} · ${SITE.name}${cfg.updated ? ` · Mise à jour : ${cfg.updated}` : ""}`];
+    const colon = lang === "fr" ? " : " : ": ";
+    const meta = [`> ${cfg.description}`, "", `${ctx.t.mdSource}${colon}${canonical} · ${SITE.name}${cfg.updated ? ` · ${ctx.t.mdUpdated}${colon}${cfg.updated}` : ""}`];
     const lines = md.split("\n");
     md = lines[0].startsWith("# ") ? [lines[0], "", ...meta, "", ...lines.slice(1)].join("\n") : [`# ${cfg.title}`, "", ...meta, "", md].join("\n");
     md = md.replace(/\n{3,}/g, "\n\n");
     writeFileSync(join(dirname(file), "index.html.md"), md);
-    pagesMd.push({ url, title: cfg.title, description: cfg.description, md });
+    pagesMd.push({ url, lang, title: cfg.title, description: cfg.description, md });
   }
 
-  if (!cfg.noindex && cfg.sitemap !== false) sitemap.push({ url, lastmod: cfg.updated || cfg.article?.date });
+  if (!cfg.noindex && cfg.sitemap !== false) sitemap.push({ url, alt: ctx.alt, lastmod: cfg.updated || cfg.article?.date });
 }
 
 const today = new Date().toISOString().slice(0, 10);
+const inSitemap = new Set(sitemap.map((p) => p.url));
+const hreflang = (p) => {
+  if (!p.alt || !inSitemap.has(p.alt)) return "";
+  const fr = p.url.startsWith("/en/") ? p.alt : p.url;
+  const en = p.url.startsWith("/en/") ? p.url : p.alt;
+  return [
+    `<xhtml:link rel="alternate" hreflang="fr" href="${SITE.url}${fr}"/>`,
+    `<xhtml:link rel="alternate" hreflang="en" href="${SITE.url}${en}"/>`,
+    `<xhtml:link rel="alternate" hreflang="x-default" href="${SITE.url}${fr}"/>`,
+  ].join("");
+};
 const xml = [
   `<?xml version="1.0" encoding="UTF-8"?>`,
-  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
+  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`,
   ...sitemap
     .sort((a, b) => a.url.localeCompare(b.url))
-    .map((p) => `  <url><loc>${SITE.url}${p.url}</loc><lastmod>${p.lastmod || today}</lastmod></url>`),
+    .map((p) => `  <url><loc>${SITE.url}${p.url}</loc><lastmod>${p.lastmod || today}</lastmod>${hreflang(p)}</url>`),
   `</urlset>`,
   ``,
 ].join("\n");
@@ -664,11 +746,24 @@ for (const [title, urls] of LLMS.sections) {
   }
   llms.push("");
 }
-const missing = pagesMd.filter((p) => !listed.has(p.url) && p.url !== "/").map((p) => p.url);
+const missing = pagesMd.filter((p) => p.lang === "fr" && !listed.has(p.url) && p.url !== "/").map((p) => p.url);
 if (missing.length) console.warn(`llms.txt : pages non listées ${missing.join(", ")}`);
+const order = ["/", ...LLMS.sections.flatMap(([, urls]) => urls)];
+// Version anglaise : dans l'ordre des pages françaises, puis les éventuelles autres pages anglaises
+const enPages = pagesMd.filter((p) => p.lang === "en");
+const enOrder = [...order.map((u) => PAIRS.get(u)).filter((u) => u && byUrl.has(u)), ...enPages.map((p) => p.url)].filter(
+  (u, i, all) => all.indexOf(u) === i
+);
+if (enOrder.length) {
+  llms.push("## English version", "", `> ${ENTITY.descriptionEn}`, "");
+  for (const u of enOrder) {
+    const p = byUrl.get(u);
+    llms.push(`- [${u === "/en/" ? `${SITE.name}, home page` : p.title}](${SITE.url}${u}): ${p.description}`);
+  }
+  llms.push("");
+}
 writeFileSync(join(SITE_DIR, "llms.txt"), llms.join("\n"));
 
-const order = ["/", ...LLMS.sections.flatMap(([, urls]) => urls)];
 const full = [
   `# ${SITE.name} : contenu complet du site`,
   "",
@@ -680,6 +775,8 @@ const full = [
     .map((u) => byUrl.get(u))
     .filter(Boolean)
     .flatMap((p) => ["---", "", p.md.trim(), ""]),
+  ...(enOrder.length ? ["---", "", "# English version", "", `> ${ENTITY.descriptionEn}`, ""] : []),
+  ...enOrder.map((u) => byUrl.get(u)).flatMap((p) => ["---", "", p.md.trim(), ""]),
 ];
 writeFileSync(join(SITE_DIR, "llms-full.txt"), full.join("\n"));
 

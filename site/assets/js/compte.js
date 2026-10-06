@@ -6,6 +6,42 @@ const $ = (id) => document.getElementById(id);
 const status = $("c-status");
 const views = Array.from(document.querySelectorAll("[data-view]"));
 
+// Messages, selon la langue de la page
+const T = {
+  fr: {
+    tooShort: "Le mot de passe doit compter au moins 8 caractères.",
+    mismatch: "Les deux mots de passe ne sont pas identiques.",
+    wait: "Un instant…",
+    missing: "Saisissez votre e-mail et votre mot de passe.",
+    signedIn: "Vous êtes connecté.",
+    activated: "Compte activé.",
+    welcome: "Bienvenue ! Votre mot de passe est enregistré et vous êtes connecté : le bilan de puissance complet est accessible.",
+    changed: "Mot de passe modifié.",
+    changedText: "Votre nouveau mot de passe est enregistré et vous êtes connecté.",
+    missingEmail: "Saisissez l'adresse e-mail de votre compte.",
+    sent: "Si un compte existe pour cette adresse, un e-mail vient de vous être envoyé. Pensez à vérifier les courriers indésirables.",
+    signedOut: "Vous êtes déconnecté.",
+    checking: "Vérification du lien…",
+    active: "Votre compte client est actif : le bilan de puissance complet est accessible.",
+  },
+  en: {
+    tooShort: "The password must be at least 8 characters long.",
+    mismatch: "The two passwords do not match.",
+    wait: "One moment…",
+    missing: "Enter your email and password.",
+    signedIn: "You are signed in.",
+    activated: "Account activated.",
+    welcome: "Welcome! Your password is saved and you are signed in: the full power assessment is available.",
+    changed: "Password changed.",
+    changedText: "Your new password is saved and you are signed in.",
+    missingEmail: "Enter the email address of your account.",
+    sent: "If an account exists for this address, an email has just been sent to you. Remember to check your spam folder.",
+    signedOut: "You are signed out.",
+    checking: "Checking the link…",
+    active: "Your client account is active: the full power assessment is available.",
+  },
+}[document.documentElement.lang === "en" ? "en" : "fr"];
+
 const hash = new URLSearchParams(window.location.hash.slice(1));
 const token = {
   invite: hash.get("invite_token"),
@@ -43,8 +79,8 @@ function showSession(session) {
 function newPassword(form) {
   const password = form.querySelector("[name='password']").value;
   const confirm = form.querySelector("[name='confirm']").value;
-  if (password.length < 8) throw new Error("Le mot de passe doit compter au moins 8 caractères.");
-  if (password !== confirm) throw new Error("Les deux mots de passe ne sont pas identiques.");
+  if (password.length < 8) throw new Error(T.tooShort);
+  if (password !== confirm) throw new Error(T.mismatch);
   return password;
 }
 
@@ -54,7 +90,7 @@ function onSubmit(id, handler) {
     e.preventDefault();
     const submit = form.querySelector("[type='submit']");
     submit.disabled = true;
-    say("Un instant…");
+    say(T.wait);
     try {
       await handler(form);
     } catch (err) {
@@ -68,39 +104,39 @@ function onSubmit(id, handler) {
 onSubmit("c-login", async (form) => {
   const email = form.email.value.trim();
   const password = form.password.value;
-  if (!email || !password) throw new Error("Saisissez votre e-mail et votre mot de passe.");
+  if (!email || !password) throw new Error(T.missing);
   const session = await auth.login(email, password);
   form.password.value = "";
   showSession(session);
-  say("Vous êtes connecté.", "ok");
+  say(T.signedIn, "ok");
 });
 
 onSubmit("c-invite", async (form) => {
   await auth.acceptInvite(token.invite, newPassword(form));
-  message("Compte activé.", "Bienvenue ! Votre mot de passe est enregistré et vous êtes connecté : le bilan de puissance complet est accessible.");
+  message(T.activated, T.welcome);
 });
 
 onSubmit("c-reset", async (form) => {
   await auth.updatePassword(newPassword(form));
-  message("Mot de passe modifié.", "Votre nouveau mot de passe est enregistré et vous êtes connecté.");
+  message(T.changed, T.changedText);
 });
 
 onSubmit("c-forgot", async (form) => {
   const email = form.email.value.trim();
-  if (!email) throw new Error("Saisissez l'adresse e-mail de votre compte.");
+  if (!email) throw new Error(T.missingEmail);
   try {
     await auth.requestRecovery(email);
   } catch (err) {
     // Même réponse qu'un compte existe ou non, sauf panne
     if (["network", "rate", "server", "unavailable"].includes(err.code)) throw err;
   }
-  say("Si un compte existe pour cette adresse, un e-mail vient de vous être envoyé. Pensez à vérifier les courriers indésirables.", "ok");
+  say(T.sent, "ok");
 });
 
 $("c-logout").addEventListener("click", async () => {
   await auth.logout();
   show("login");
-  say("Vous êtes déconnecté.");
+  say(T.signedOut);
 });
 
 window.addEventListener("hashchange", () => {
@@ -115,7 +151,7 @@ async function start() {
     return;
   }
   if (token.recovery) {
-    say("Vérification du lien…");
+    say(T.checking);
     try {
       await auth.verifyRecovery(token.recovery);
       say("");
@@ -129,7 +165,7 @@ async function start() {
   if (token.confirmation) {
     try {
       await auth.confirmSignup(token.confirmation);
-      message("Compte activé.", "Votre compte client est actif : le bilan de puissance complet est accessible.");
+      message(T.activated, T.active);
     } catch (err) {
       say(err.message, "error");
       show("login");
