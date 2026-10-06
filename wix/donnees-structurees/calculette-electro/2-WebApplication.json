@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://www.darkside-energy.com/calculette-electro#application",
+  "name": "Calculette électro Dark Side Energy",
+  "description": "Calculette électrique gratuite : conversion W, kVA et ampères en mono 230 V et tri 400 V, chute de tension NF C 15-100, repères P17 et Powerlock.",
+  "url": "https://www.darkside-energy.com/calculette-electro",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Tout navigateur web",
+  "inLanguage": "fr-FR",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "featureList": [
+    "Conversion W, kW, VA, kVA et ampères en monophasé 230 V et triphasé 400 V",
+    "Calcul de la chute de tension selon la méthode de la norme NF C 15-100",
+    "Section minimale de câble pour une chute de tension donnée",
+    "Repères de puissance par connecteur P17 et Powerlock"
+  ],
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://www.darkside-energy.com/#organisation",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/",
+    "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
+  }
+}

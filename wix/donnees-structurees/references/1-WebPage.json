@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.darkside-energy.com/references#webpage",
+  "url": "https://www.darkside-energy.com/references",
+  "name": "Références : Zéniths, arenas, stades et salons",
+  "description": "Des milliers de prestations depuis 2016 : Zéniths, arenas, stades, salons et lieux d'exception, en France et à l'international.",
+  "inLanguage": "fr-FR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://www.darkside-energy.com/#website",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/"
+  },
+  "about": {
+    "@type": "Organization",
+    "@id": "https://www.darkside-energy.com/#organisation",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/",
+    "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.darkside-energy.com/#organisation",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/",
+    "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
+  },
+  "primaryImageOfPage": "{{URL_WIX:og-image.png}}",
+  "dateModified": "2026-09-25",
+  "breadcrumb": {
+    "@id": "https://www.darkside-energy.com/references#breadcrumb"
+  }
+}

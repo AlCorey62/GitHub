@@ -1,0 +1,31 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.darkside-energy.com/#webpage",
+  "url": "https://www.darkside-energy.com/",
+  "name": "Distribution électrique événementielle",
+  "description": "Distribution électrique événementielle, régie technique, coordination générale et bureau d'étude. Salons, concerts, sport et festivals, depuis 2016.",
+  "inLanguage": "fr-FR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://www.darkside-energy.com/#website",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/"
+  },
+  "about": {
+    "@type": "Organization",
+    "@id": "https://www.darkside-energy.com/#organisation",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/",
+    "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.darkside-energy.com/#organisation",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/",
+    "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
+  },
+  "primaryImageOfPage": "{{URL_WIX:og-image.png}}",
+  "dateModified": "2026-09-25"
+}

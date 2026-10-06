@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://www.darkside-energy.com/contact#webpage",
+  "url": "https://www.darkside-energy.com/contact",
+  "name": "Contact et demande de devis",
+  "description": "Contactez Dark Side Energy pour un devis : distribution électrique, régie, coordination, bureau d'étude, matériel. 37 rue Thibaut, 62220 Carvin.",
+  "inLanguage": "fr-FR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://www.darkside-energy.com/#website",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/"
+  },
+  "about": {
+    "@type": "Organization",
+    "@id": "https://www.darkside-energy.com/#organisation",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/",
+    "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.darkside-energy.com/#organisation",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/",
+    "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
+  },
+  "primaryImageOfPage": "{{URL_WIX:og-image.png}}",
+  "dateModified": "2026-09-25",
+  "breadcrumb": {
+    "@id": "https://www.darkside-energy.com/contact#breadcrumb"
+  }
+}

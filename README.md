@@ -34,9 +34,12 @@ tools/
                            versions Markdown, llms.txt et llms-full.txt
   markdown.mjs             Conversion des pages en Markdown pour les IA
   indexnow.mjs             Signale les pages à Bing et aux moteurs IndexNow après une mise en ligne
+  wix-kit.mjs              Prépare le dossier wix/ (reconstruction du site dans Wix)
   check.mjs                Contrôle qualité (liens, ancres, titres, images, mentions à compléter)
   serve.mjs                Serveur local de prévisualisation
   og-image.html            Modèle de l'image de partage réseaux sociaux
+wix/                       Passation pour reconstruire le site dans Wix : note, plan des pages, textes,
+                           données structurées (voir wix/README.md)
 tests/elec.test.mjs        Tests des formules électriques
 netlify.toml               Hébergement Netlify : build, redirections des anciennes URL, en-têtes de sécurité
 app.html                   Ancien prototype « Calculateur d'Énergie Stand » (non publié, conservé)
@@ -75,6 +78,8 @@ Les blocs entre `<!-- head:start -->` et `<!-- head:end -->` (de même `header`,
 Les anciennes adresses Wix (`/test-externe`, `/single-post/...`, `/en/...`) sont redirigées en 301 vers les nouvelles pages (voir `netlify.toml`) : le référencement acquis est conservé. Les autres adresses (`/distribution-electrique`, `/regie-technique`, `/bureaudetude`, `/consulting`, `/nos-produits`, `/calculette-electro`, `/contact`, `/mentions-legales`, `/news`) sont identiques à l'ancien site.
 
 Autre hébergeur : le dossier `site/` peut être publié tel quel sur n'importe quel hébergement statique. Il faudra alors reprendre les redirections et en-têtes de `netlify.toml` et remplacer Netlify Forms par un autre service de formulaire.
+
+Reconstruction dans Wix (au lieu de Netlify) : suivre `wix/README.md`.
 
 ## Points à valider avant la mise en ligne
 

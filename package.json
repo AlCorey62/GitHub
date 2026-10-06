@@ -8,7 +8,8 @@
     "build": "node tools/build.mjs",
     "check": "node tools/check.mjs",
     "test": "node --test",
-    "serve": "node tools/serve.mjs 8080"
+    "serve": "node tools/serve.mjs 8080",
+    "wix": "node tools/wix-kit.mjs"
   },
   "engines": {
     "node": ">=18"
