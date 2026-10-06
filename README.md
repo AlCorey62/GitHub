@@ -72,8 +72,30 @@ Les blocs entre `<!-- head:start -->` et `<!-- head:end -->` (de même `header`,
 
 1. Sur Netlify : *Add new site*, *Import from Git*, choisir ce dépôt. Les réglages sont lus dans `netlify.toml` (dossier publié `site`, commande `node tools/build.mjs`).
 2. Vérifier le site sur l'adresse provisoire `*.netlify.app`, et tester le formulaire de contact : les messages arrivent dans *Forms* sur Netlify, où l'on peut activer une notification par e-mail vers contact@darkside-energy.com.
-3. Bascule du domaine : dans Netlify, *Domain management*, ajouter `www.darkside-energy.com` et `darkside-energy.com`, puis modifier les enregistrements DNS chez le gestionnaire du domaine (aujourd'hui relié à Wix) selon les indications de Netlify. Le certificat HTTPS est créé automatiquement.
+3. Bascule du domaine : voir ci-dessous. Le certificat HTTPS est créé automatiquement par Netlify.
 4. Une fois la bascule faite, déclarer `https://www.darkside-energy.com/sitemap.xml` dans Google Search Console.
+
+### Garder le domaine darkside-energy.com
+
+Situation relevée le 06/10/2026 (registre du .com et DNS publics) :
+
+- Le domaine est enregistré chez **OVH** (depuis le 18/04/2016, échéance le 18/04/2028), indépendamment de Wix : changer d'hébergeur ne change pas le nom de domaine.
+- Ses serveurs DNS sont ceux de **Wix** (`ns4.wixdns.net`, `ns5.wixdns.net`) : Wix gère aujourd'hui toute la zone DNS, **messagerie comprise**.
+- Messagerie Microsoft 365 : MX `darksideenergy-com02b.mail.protection.outlook.com`, CNAME `autodiscover`, CNAME `selector1._domainkey` et `selector2._domainkey`, TXT SPF `v=spf1 include:spf.protection.outlook.com include:mailgun.org -all`, TXT `_dmarc`. Un service d'envoi via Mailgun est aussi déclaré (SPF et TXT `mx._domainkey`).
+- Aucun enregistrement CAA : rien n'empêche la création du certificat HTTPS par Netlify.
+
+Prérequis : l'accès au compte OVH qui gère le domaine.
+
+Procédure recommandée : rapatrier la zone DNS chez OVH, sans coupure de la messagerie.
+
+1. Dans Netlify, *Domain management* : ajouter `www.darkside-energy.com` (domaine principal, celui des adresses canoniques du site), puis `darkside-energy.com`.
+2. Dans Wix, relever **tous** les enregistrements DNS du domaine. La liste ci-dessus vient de requêtes publiques et peut être incomplète.
+3. Chez OVH, préparer la zone DNS : recopier à l'identique tous les enregistrements relevés dans Wix (messagerie, vérifications), sauf ceux du site, puis ajouter ceux de Netlify :
+   - `darkside-energy.com` : enregistrement A vers `75.2.60.5` (répartiteur de charge Netlify, documentation Netlify « Configure external DNS ») ;
+   - `www.darkside-energy.com` : CNAME vers l'adresse `*.netlify.app` du site.
+4. Chez OVH, remplacer les serveurs DNS de Wix par ceux d'OVH. La propagation prend en général jusqu'à 48 h. Les deux zones contenant les mêmes enregistrements de messagerie, les e-mails continuent d'arriver pendant la bascule.
+5. Vérifier : site en HTTPS sur `www.darkside-energy.com`, redirection depuis `darkside-energy.com`, envoi et réception d'un e-mail de test.
+6. Seulement ensuite, résilier l'offre Wix. Tant que les serveurs DNS sont ceux de Wix, la messagerie en dépend.
 
 Les anciennes adresses Wix (`/test-externe`, `/single-post/...`, `/en/...`) sont redirigées en 301 vers les nouvelles pages (voir `netlify.toml`) : le référencement acquis est conservé. Les autres adresses (`/distribution-electrique`, `/regie-technique`, `/bureaudetude`, `/consulting`, `/nos-produits`, `/calculette-electro`, `/contact`, `/mentions-legales`, `/news`) sont identiques à l'ancien site.
 
