@@ -1,6 +1,12 @@
-// Dark Side Energy - comportements communs : menu, sous-menus, en-tête, apparitions, formulaire de contact.
+// Dark Side Energy - comportements communs : liens de l'espace client, menu, sous-menus, en-tête, apparitions, formulaire de contact.
 (function () {
   "use strict";
+
+  // Liens reçus par e-mail (invitation, mot de passe oublié) : traités par l'espace client
+  if (/^#(invite|recovery|confirmation|email_change)_token=/.test(window.location.hash) && !/\/compte\/(index\.html)?$/.test(window.location.pathname)) {
+    window.location.replace("/compte/" + window.location.hash);
+    return;
+  }
 
   var header = document.querySelector("[data-header]");
   var nav = document.getElementById("main-nav");

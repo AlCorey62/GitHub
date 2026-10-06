@@ -49,6 +49,7 @@ const WIX = {
 // Pages du nouveau site sans équivalent Wix
 const SKIP = {
   "/contact/merci/": "Pas de page : message de confirmation du formulaire Wix",
+  "/compte/": "Pas de page : l'espace client accompagne le bilan de puissance hébergé hors de Wix (Netlify Identity)",
   "/404.html": "Pas de page : page 404 de Wix (personnalisation facultative)",
 };
 

@@ -2,7 +2,7 @@
 
 > Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle loue et vend aussi du matériel de distribution électrique.
 
-Site : https://www.darkside-energy.com/ · Généré le 2026-09-25
+Site : https://www.darkside-energy.com/ · Généré le 2026-10-06
 
 ---
 
@@ -117,6 +117,8 @@ Configurations à valider avec notre bureau d'étude selon votre bilan de puissa
 
 Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
 
+*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève et Cromvoirt.*
+
 - Zénith de Lille
 - Lille Grand Palais
 - Stade de France
@@ -131,6 +133,10 @@ Compétitions sportives internationales, concerts en Zénith, en stade et en tou
 - Arkéa Arena
 - Zénith de Paris
 - Paris Expo Porte de Versailles
+- Estadio Banorte, Mexico
+- MetLife Stadium, New Jersey
+- BMO Field, Toronto
+- Arène de Vérone
 
 [Toutes nos références](https://www.darkside-energy.com/references/)
 
@@ -140,7 +146,7 @@ Deux outils pour préparer vos échanges avec notre bureau d'étude. Les résult
 
 ### [Bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
 
-Listez vos appareils, appliquez vos coefficients de foisonnement : puissance totale, courant par phase et calibre de raccordement indicatif.
+Listez vos appareils, appliquez vos coefficients de foisonnement : puissance totale, courant par phase et calibre de raccordement indicatif. Démo en libre accès, version complète pour nos clients.
 
 ### [Calculette électro](https://www.darkside-energy.com/calculette-electro/)
 
@@ -651,13 +657,13 @@ Partagez-nous vos besoins : nous étudions le raccordement, l'hybridation et le 
 
 # Bilan de puissance.
 
-> Bilan de puissance gratuit en ligne : puissance foisonnée, courant par phase, calibre de raccordement et puissance de source indicatifs.
+> Bilan de puissance en ligne : puissance foisonnée, courant par phase, calibre et source indicatifs. Démo libre, accès complet réservé à nos clients.
 
 Source : https://www.darkside-energy.com/bilan-de-puissance/ · Dark Side Energy · Mise à jour : 2026-09-25
 
 Listez vos appareils, indiquez leur puissance et leur coefficient de foisonnement : l'outil calcule la puissance à prévoir, le courant sur chaque phase et un calibre de raccordement indicatif.
 
-Les données restent dans votre navigateur. Rien n'est envoyé sans votre action.
+Démo en libre accès jusqu'à 4 lignes, version complète réservée à nos clients sur invitation. Les données de votre bilan restent dans votre navigateur.
 
 ## Quelques repères pour bien remplir votre bilan.
 
@@ -797,7 +803,7 @@ Dark Side Energy a été créée en mai 2016. La SARL DARK SIDE ENERGY (SIREN 87
 
 ### Dans quels lieux Dark Side Energy est-elle intervenue ?
 
-Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
+Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé à l'Estadio Banorte de Mexico, au MetLife Stadium (New Jersey), au BMO Field de Toronto, à l'Arène de Vérone et sur le lac Léman. La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
 
 ### Comment demander un devis ?
 
@@ -1255,7 +1261,7 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Des milliers de prestations depuis 2016 : Zéniths, arenas, stades, salons et lieux d'exception, en France et à l'international.
 
-Source : https://www.darkside-energy.com/references/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/references/ · Dark Side Energy · Mise à jour : 2026-10-06
 
 Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies : nos équipes connaissent le terrain.
 
@@ -1283,17 +1289,31 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 - **Stade Vélodrome** (Marseille)
 - **Stab Vélodrome** (Roubaix)
 - **Hippodrome de Marcq-en-Barœul** (Marcq-en-Barœul)
-- **Lac Léman** (Genève, Suisse)
+- **Golf National** (Guyancourt)
 
 - **Lille Grand Palais** (Lille)
 - **Paris Expo Porte de Versailles** (Paris)
+- **Parc des expositions de Paris-Le Bourget** (Le Bourget)
 - **Grand Palais** (Paris)
 - **Musée du Louvre** (Paris)
 - **Nice Acropolis** (Nice)
-- **Palais Rameau** (Lille)
 - **La Cité des Échanges** (Marcq-en-Barœul)
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
+
+*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève et Cromvoirt.*
+
+- **Estadio Banorte, ex-Estadio Azteca** (Mexico, Mexique)
+- **MetLife Stadium** (East Rutherford, New Jersey, États-Unis)
+- **Lincoln Financial Field** (Philadelphie, États-Unis)
+- **Arrowhead Stadium** (Kansas City, États-Unis)
+- **BMO Field** (Toronto, Canada)
+- **Arène de Vérone** (Vérone, Italie)
+- **Stade de glace de Cortina d'Ampezzo** (Cortina d'Ampezzo, Italie)
+- **Stelvio Ski Centre** (Bormio, Italie)
+- **Livigno Snow Park et Aerials & Moguls Park** (Livigno, Italie)
+- **Bernardus Golf** (Cromvoirt, Pays-Bas)
+- **Lac Léman** (Genève, Suisse)
 
 ## Du salon au stade, de la scène au plateau.
 
@@ -1393,13 +1413,15 @@ Les informations que Dark Side Energy est susceptible de réunir résultent de l
 - **Destinataires** : les seules équipes de Dark Side Energy. Les messages transitent par l'hébergeur du site, qui agit en qualité de sous-traitant.
 - **Durée de conservation** : 3 ans à compter du dernier contact pour les demandes commerciales, 2 ans pour les candidatures.
 
+**Comptes clients du bilan de puissance** : ouverts sur invitation de Dark Side Energy. L'adresse e-mail et le mot de passe du client, jamais stocké en clair, sont gérés par le service d'authentification de l'hébergeur du site (Netlify Identity), qui agit en qualité de sous-traitant. Finalité : donner accès à la version complète de l'outil. Conservation : tant que le compte est actif ; il est supprimé sur simple demande.
+
 Conformément au règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment. Pour exercer ces droits, il vous suffit de nous contacter par e-mail : [damien@darkside-energy.com](mailto:damien@darkside-energy.com). Vous pouvez également adresser une réclamation à la CNIL ([www.cnil.fr](https://www.cnil.fr/)).
 
 ## Cookies et stockage local
 
 Ce site n'utilise ni cookie publicitaire, ni outil de mesure d'audience, ni service tiers de suivi. Les polices de caractères sont hébergées avec le site : aucune donnée n'est transmise à un service tiers lors de votre visite.
 
-L'outil Bilan de puissance enregistre vos saisies dans le stockage local de votre navigateur pour que vous les retrouviez à votre prochaine visite. Ces données restent sur votre appareil et ne nous sont pas transmises, sauf si vous choisissez de nous envoyer votre bilan. Vous pouvez les supprimer à tout moment avec le bouton « Tout effacer » de l'outil ou depuis les réglages de votre navigateur.
+L'outil Bilan de puissance enregistre vos saisies dans le stockage local de votre navigateur pour que vous les retrouviez à votre prochaine visite. Ces données restent sur votre appareil et ne nous sont pas transmises, sauf si vous choisissez de nous envoyer votre bilan. Vous pouvez les supprimer à tout moment avec le bouton « Tout effacer » de l'outil ou depuis les réglages de votre navigateur. Si vous êtes connecté à votre compte client, votre jeton de session est conservé de la même façon, jusqu'à la déconnexion.
 
 ## Contenu du site et outils de calcul
 

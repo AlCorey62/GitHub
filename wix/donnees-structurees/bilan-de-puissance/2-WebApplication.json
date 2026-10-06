@@ -3,23 +3,18 @@
   "@type": "WebApplication",
   "@id": "https://www.darkside-energy.com/bilan-de-puissance#application",
   "name": "Bilan de puissance en ligne Dark Side Energy",
-  "description": "Bilan de puissance gratuit en ligne : puissance foisonnée, courant par phase, calibre de raccordement et puissance de source indicatifs.",
+  "description": "Bilan de puissance en ligne : puissance foisonnée, courant par phase, calibre et source indicatifs. Démo libre, accès complet réservé à nos clients.",
   "url": "https://www.darkside-energy.com/bilan-de-puissance",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Tout navigateur web",
   "inLanguage": "fr-FR",
-  "isAccessibleForFree": true,
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "EUR"
-  },
   "featureList": [
     "Saisie des appareils avec quantité, puissance unitaire, cos φ et coefficient de foisonnement",
     "Répartition automatique des charges monophasées sur les trois phases",
     "Puissances installée, foisonnée et apparente, courant par phase",
     "Calibre de raccordement, connectique et puissance de source indicatifs",
-    "Export CSV, impression et envoi au bureau d'étude"
+    "Export CSV, impression et envoi au bureau d'étude",
+    "Démo en libre accès jusqu'à 4 lignes, accès complet réservé aux clients sur invitation"
   ],
   "provider": {
     "@type": "Organization",

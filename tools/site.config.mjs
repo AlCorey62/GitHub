@@ -108,16 +108,65 @@ export const LLMS = {
     "Création : 2016 ; SARL immatriculée en novembre 2019",
     "Capacités : de la distribution 16 A jusqu'aux armoires 2 000 A, groupes électrogènes de 6 à 2 000 kVA, expertise haute et basse tension",
     "Zone d'intervention : France et international",
-    "Lieux où les équipes sont intervenues (sélection) : Zénith de Lille, Lille Grand Palais, Stade de France, Accor Arena, Paris La Défense Arena, Decathlon Arena Stade Pierre Mauroy, Arena Grand Paris, Grand Palais, Musée du Louvre, Allianz Riviera, Stade Vélodrome",
+    "Lieux où les équipes sont intervenues (sélection) : Zénith de Lille, Lille Grand Palais, Stade de France, Accor Arena, Paris La Défense Arena, Decathlon Arena Stade Pierre Mauroy, Arena Grand Paris, Grand Palais, Musée du Louvre, Allianz Riviera, Stade Vélodrome, Golf National",
+    "À l'international (sélection) : Estadio Banorte (Mexico), MetLife Stadium (New Jersey), Lincoln Financial Field (Philadelphie), Arrowhead Stadium (Kansas City), BMO Field (Toronto), Arène de Vérone, Cortina d'Ampezzo, Bormio et Livigno (Italie), Bernardus Golf (Pays-Bas), lac Léman (Genève)",
     "Contact : contact@darkside-energy.com, +33 7 68 24 40 88, https://www.darkside-energy.com/contact/",
     "Slogan : « La puissance de l'électricité, sans tension, avec intensité. »",
   ],
   sections: [
     ["Métiers", ["/distribution-electrique/", "/regie-technique/", "/coordination-generale/", "/bureaudetude/", "/consulting/"]],
     ["Matériel et énergie", ["/nos-produits/", "/energie-responsable/"]],
-    ["Outils de calcul gratuits", ["/bilan-de-puissance/", "/calculette-electro/"]],
+    ["Outils de calcul en ligne", ["/bilan-de-puissance/", "/calculette-electro/"]],
     ["Ressources", ["/faq/", "/lexique/", "/news/", "/news/distribution-electrique-evenementielle/", "/news/groupe-twin-zero-coupure/", "/news/section-de-cable/", "/news/pourquoi-ca-saute/"]],
     ["Entreprise", ["/entreprise/", "/references/", "/contact/"]],
     ["Optional", ["/mentions-legales/", "/news/creation-dark-side-energy/", "/news/fetes-maritimes-brest-2016/", "/news/lille-grand-palais-2016/", "/news/repertoire-national-des-electros/"]],
+  ],
+};
+
+// Carte des interventions (accueil et références) : cadrage, siège et lieux réalisés à l'international
+// (vérifiés dans Rentman). Le fond de carte site/assets/img/carte-monde.svg se régénère avec
+// `node tools/carte.mjs` seulement si le cadrage change.
+export const MAP = {
+  width: 1000,
+  lon: [-130, 40],
+  lat: [8, 66],
+  parallel: 40,
+  hq: { name: "Carvin", lat: 50.49, lon: 2.96 },
+  places: [
+    { name: "Mexico", lat: 19.3, lon: -99.15 },
+    { name: "Kansas City", lat: 39.05, lon: -94.48 },
+    { name: "Toronto", lat: 43.63, lon: -79.42 },
+    { name: "Philadelphie", lat: 39.9, lon: -75.17 },
+    { name: "New Jersey", lat: 40.81, lon: -74.07 },
+    { name: "Vérone", lat: 45.44, lon: 10.99 },
+    { name: "Cortina d'Ampezzo", lat: 46.54, lon: 12.14 },
+    { name: "Bormio", lat: 46.47, lon: 10.37 },
+    { name: "Livigno", lat: 46.54, lon: 10.14 },
+    { name: "Genève", lat: 46.2, lon: 6.14 },
+    { name: "Cromvoirt", lat: 51.65, lon: 5.24 },
+  ],
+  // Étiquettes : position du point d'ancrage, décalage en pixels de la carte, alignement
+  labels: [
+    { text: "Carvin", lat: 50.49, lon: 2.96, dx: -11, dy: -15, anchor: "end", hq: true },
+    { text: "Mexico", lat: 19.3, lon: -99.15, dx: -10, dy: 4, anchor: "end" },
+    { text: "Kansas City", lat: 39.05, lon: -94.48, dx: -10, dy: 4, anchor: "end" },
+    { text: "Toronto", lat: 43.63, lon: -79.42, dx: -10, dy: -5, anchor: "end" },
+    { text: "New Jersey", lat: 40.81, lon: -74.07, dx: 9, dy: -6, anchor: "start" },
+    { text: "Philadelphie", lat: 39.9, lon: -75.17, dx: 9, dy: 14, anchor: "start" },
+    { text: "Cromvoirt", lat: 51.65, lon: 5.24, dx: 9, dy: -5, anchor: "start" },
+    { text: "Genève", lat: 46.2, lon: 6.14, dx: -9, dy: 10, anchor: "end" },
+    { text: "Vérone · Cortina", lat: 45.44, lon: 10.99, dx: 14, dy: 10, anchor: "start" },
+    { text: "Bormio · Livigno", lat: 45.44, lon: 10.99, dx: 14, dy: 25, anchor: "start" },
+  ],
+  // Quelques villes de France où les équipes interviennent (points sans ligne)
+  france: [
+    [48.86, 2.35],
+    [43.71, 7.26],
+    [43.3, 5.37],
+    [44.86, -0.53],
+    [43.6, 1.44],
+    [48.57, 7.75],
+    [49.89, 2.3],
+    [48.77, 2.07],
   ],
 };

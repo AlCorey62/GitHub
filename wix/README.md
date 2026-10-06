@@ -77,6 +77,8 @@ Prérequis non réalisé à ce jour : une version intégrable des outils (pages 
 
 À défaut : un bouton vers l'outil hébergé, comme aujourd'hui.
 
+Accès : le bilan de puissance est en démo jusqu'à 4 lignes, l'accès complet est réservé aux comptes clients (Netlify Identity, sur invitation). Il doit donc rester hébergé sur Netlify, avec sa page `/compte/` (activation, connexion, mot de passe oublié).
+
 ## 7. Formulaire de contact
 
 Champs, dans l'ordre (référence : `site/contact/index.html`) :
@@ -87,7 +89,7 @@ Champs, dans l'ordre (référence : `site/contact/index.html`) :
 | Société | Texte | Non |
 | E-mail | E-mail | Oui |
 | Téléphone | Téléphone | Non |
-| Objet | Liste : Distribution électrique ; Régie technique ou personnel ; Coordination générale ; Bureau d'étude ou audit ; Consulting ; Location ou vente de matériel ; Validation d'un bilan de puissance ; Candidature ; Autre demande | Oui |
+| Objet | Liste : Distribution électrique ; Régie technique ou personnel ; Coordination générale ; Bureau d'étude ou audit ; Consulting ; Location ou vente de matériel ; Validation d'un bilan de puissance ; Accès au bilan de puissance en ligne ; Candidature ; Autre demande | Oui |
 | Dates de l'événement | Texte, aide « ex. montage le 12, exploitation du 13 au 15 » | Non |
 | Lieu | Texte, aide « ex. Lille Grand Palais, hall 1 » | Non |
 | Message | Texte long, aide « Décrivez votre projet : type d'événement, besoins connus, puissance, plans disponibles… » | Oui |

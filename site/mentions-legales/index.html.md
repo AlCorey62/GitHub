@@ -41,13 +41,15 @@ Les informations que Dark Side Energy est susceptible de réunir résultent de l
 - **Destinataires** : les seules équipes de Dark Side Energy. Les messages transitent par l'hébergeur du site, qui agit en qualité de sous-traitant.
 - **Durée de conservation** : 3 ans à compter du dernier contact pour les demandes commerciales, 2 ans pour les candidatures.
 
+**Comptes clients du bilan de puissance** : ouverts sur invitation de Dark Side Energy. L'adresse e-mail et le mot de passe du client, jamais stocké en clair, sont gérés par le service d'authentification de l'hébergeur du site (Netlify Identity), qui agit en qualité de sous-traitant. Finalité : donner accès à la version complète de l'outil. Conservation : tant que le compte est actif ; il est supprimé sur simple demande.
+
 Conformément au règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment. Pour exercer ces droits, il vous suffit de nous contacter par e-mail : [damien@darkside-energy.com](mailto:damien@darkside-energy.com). Vous pouvez également adresser une réclamation à la CNIL ([www.cnil.fr](https://www.cnil.fr/)).
 
 ## Cookies et stockage local
 
 Ce site n'utilise ni cookie publicitaire, ni outil de mesure d'audience, ni service tiers de suivi. Les polices de caractères sont hébergées avec le site : aucune donnée n'est transmise à un service tiers lors de votre visite.
 
-L'outil Bilan de puissance enregistre vos saisies dans le stockage local de votre navigateur pour que vous les retrouviez à votre prochaine visite. Ces données restent sur votre appareil et ne nous sont pas transmises, sauf si vous choisissez de nous envoyer votre bilan. Vous pouvez les supprimer à tout moment avec le bouton « Tout effacer » de l'outil ou depuis les réglages de votre navigateur.
+L'outil Bilan de puissance enregistre vos saisies dans le stockage local de votre navigateur pour que vous les retrouviez à votre prochaine visite. Ces données restent sur votre appareil et ne nous sont pas transmises, sauf si vous choisissez de nous envoyer votre bilan. Vous pouvez les supprimer à tout moment avec le bouton « Tout effacer » de l'outil ou depuis les réglages de votre navigateur. Si vous êtes connecté à votre compte client, votre jeton de session est conservé de la même façon, jusqu'à la déconnexion.
 
 ## Contenu du site et outils de calcul
 

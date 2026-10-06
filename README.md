@@ -17,7 +17,8 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   news/                    Le sais-tu ? et actualités (8 articles)
   faq/                     Questions fréquentes (17 questions, balisage FAQPage)
   lexique/                 Lexique de 27 termes (balisage DefinedTermSet)
-  bilan-de-puissance/      Outil de bilan de puissance
+  bilan-de-puissance/      Outil de bilan de puissance (démo 4 lignes, accès complet pour les clients)
+  compte/                  Espace client : activation du compte, connexion, mot de passe oublié (non indexé)
   calculette-electro/      Conversions, chute de tension, repères par connecteur
   contact/                 Formulaire (Netlify Forms) et page de confirmation
   mentions-legales/        Mentions légales et confidentialité
@@ -25,18 +26,20 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   llms.txt, llms-full.txt  Résumé et contenu complet du site pour les assistants IA (générés)
   **/index.html.md         Version Markdown de chaque page (générée)
   assets/css/main.css      Charte graphique complète
-  assets/js/               main.js (menu, animations, formulaire), elec.js (formules), bilan.js, calculette.js
+  assets/js/               main.js (menu, animations, formulaire), elec.js (formules), bilan.js, calculette.js,
+                           identity.js (connexion Netlify Identity), compte.js (espace client)
   assets/fonts/            Police Archivo auto-hébergée (licence OFL)
-  assets/img/              Logos vectorisés, photos optimisées, icônes, image de partage
+  assets/img/              Logos vectorisés, photos optimisées, icônes, image de partage, carte-monde.svg
 tools/
-  site.config.mjs          Coordonnées, réseaux sociaux, menu : À MODIFIER ICI
+  site.config.mjs          Coordonnées, réseaux sociaux, menu, lieux de la carte : À MODIFIER ICI
   build.mjs                Assemble en-tête, pied de page, SEO, données structurées, icônes, sitemap,
                            versions Markdown, llms.txt et llms-full.txt
   markdown.mjs             Conversion des pages en Markdown pour les IA
   indexnow.mjs             Signale les pages à Bing et aux moteurs IndexNow après une mise en ligne
   wix-kit.mjs              Prépare le dossier wix/ (reconstruction du site dans Wix)
+  carte.mjs, map.mjs       Fond de la carte des interventions (points) et projection commune
   check.mjs                Contrôle qualité (liens, ancres, titres, images, mentions à compléter)
-  serve.mjs                Serveur local de prévisualisation
+  serve.mjs                Serveur local de prévisualisation (simule aussi la connexion client)
   og-image.html            Modèle de l'image de partage réseaux sociaux
 wix/                       Passation pour reconstruire le site dans Wix : note, plan des pages, textes,
                            données structurées (voir wix/README.md)
@@ -50,6 +53,8 @@ app.html                   Ancien prototype « Calculateur d'Énergie Stand » (
 ```bash
 node tools/serve.mjs      # puis ouvrir http://localhost:8080
 ```
+
+En local, la connexion au bilan de puissance est simulée : compte `test@darkside-energy.com`, mot de passe `essai-local`. Liens d'essai : `http://localhost:8080/#invite_token=invitation` (activation d'un compte) et `http://localhost:8080/#recovery_token=recuperation` (nouveau mot de passe).
 
 ## Modifier le contenu
 
@@ -74,6 +79,20 @@ Les blocs entre `<!-- head:start -->` et `<!-- head:end -->` (de même `header`,
 2. Vérifier le site sur l'adresse provisoire `*.netlify.app`, et tester le formulaire de contact : les messages arrivent dans *Forms* sur Netlify, où l'on peut activer une notification par e-mail vers contact@darkside-energy.com.
 3. Bascule du domaine : voir ci-dessous. Le certificat HTTPS est créé automatiquement par Netlify.
 4. Une fois la bascule faite, déclarer `https://www.darkside-energy.com/sitemap.xml` dans Google Search Console.
+
+### Comptes clients du bilan de puissance (Netlify Identity)
+
+Le bilan de puissance est en démo jusqu'à 4 lignes. Au-delà, ainsi que pour l'export CSV et l'impression, le visiteur doit se connecter. Les comptes sont ouverts sur invitation.
+
+1. Netlify, *Project configuration*, *Identity* : activer Identity.
+2. *Registration preferences* : **Invite only**. Laisser les fournisseurs externes (Google, GitHub…) désactivés.
+3. Pour ouvrir un accès : *Identity*, *Invite users*, saisir l'e-mail du client. Il reçoit un lien, choisit son mot de passe sur la page `/compte/` et accède au bilan complet.
+4. Mot de passe oublié : le client passe par `/compte/#oubli`. Pour retirer un accès : supprimer l'utilisateur dans *Identity*.
+5. Les demandes d'accès arrivent par le formulaire de contact (objet « Accès au bilan de puissance en ligne »).
+
+Les e-mails d'invitation et de récupération partent de `no-reply@netlify.com`, en anglais, avec les modèles de Netlify. Des modèles en français et une adresse d'envoi au nom de Dark Side Energy demandent l'offre Pro de Netlify.
+
+Limite à connaître : le site est statique et son code est public. La limite de la démo est appliquée dans le navigateur : elle arrête les visiteurs, pas un développeur décidé. Un verrou strict demanderait de faire le calcul sur le serveur.
 
 ### Garder le domaine darkside-energy.com
 
@@ -161,4 +180,6 @@ Photos optimisées en WebP et JPEG, logo vectorisé depuis le logo officiel (rou
 
 ## Crédits
 
-Police Archivo (SIL Open Font License 1.1), icônes Lucide (ISC) et Simple Icons (CC0) : voir `site/assets/fonts/OFL-Archivo.txt` et `tools/icons.LICENSE.txt`.
+Police Archivo (SIL Open Font License 1.1), icônes Lucide (ISC) et Simple Icons (CC0) : voir `site/assets/fonts/OFL-Archivo.txt` et `tools/icons.LICENSE.txt`. Fond de carte d'après Natural Earth (domaine public), via world-atlas (ISC) : voir `tools/carte.LICENSE.txt`.
+
+La carte des interventions se règle dans `MAP` (`tools/site.config.mjs`) : siège, lieux, étiquettes. Le fond en points (`site/assets/img/carte-monde.svg`) se régénère avec `node tools/carte.mjs`, seulement si le cadrage change.

@@ -26,17 +26,31 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 - **Stade Vélodrome** (Marseille)
 - **Stab Vélodrome** (Roubaix)
 - **Hippodrome de Marcq-en-Barœul** (Marcq-en-Barœul)
-- **Lac Léman** (Genève, Suisse)
+- **Golf National** (Guyancourt)
 
 - **Lille Grand Palais** (Lille)
 - **Paris Expo Porte de Versailles** (Paris)
+- **Parc des expositions de Paris-Le Bourget** (Le Bourget)
 - **Grand Palais** (Paris)
 - **Musée du Louvre** (Paris)
 - **Nice Acropolis** (Nice)
-- **Palais Rameau** (Lille)
 - **La Cité des Échanges** (Marcq-en-Barœul)
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
+
+*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève et Cromvoirt.*
+
+- **Estadio Banorte, ex-Estadio Azteca** (Mexico, Mexique)
+- **MetLife Stadium** (East Rutherford, New Jersey, États-Unis)
+- **Lincoln Financial Field** (Philadelphie, États-Unis)
+- **Arrowhead Stadium** (Kansas City, États-Unis)
+- **BMO Field** (Toronto, Canada)
+- **Arène de Vérone** (Vérone, Italie)
+- **Stade de glace de Cortina d'Ampezzo** (Cortina d'Ampezzo, Italie)
+- **Stelvio Ski Centre** (Bormio, Italie)
+- **Livigno Snow Park et Aerials & Moguls Park** (Livigno, Italie)
+- **Bernardus Golf** (Cromvoirt, Pays-Bas)
+- **Lac Léman** (Genève, Suisse)
 
 ## Du salon au stade, de la scène au plateau.
 

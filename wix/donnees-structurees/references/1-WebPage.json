@@ -27,7 +27,7 @@
     "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
   },
   "primaryImageOfPage": "{{URL_WIX:og-image.png}}",
-  "dateModified": "2026-09-25",
+  "dateModified": "2026-10-06",
   "breadcrumb": {
     "@id": "https://www.darkside-energy.com/references#breadcrumb"
   }

@@ -1,11 +1,19 @@
 // Bilan de puissance : saisie des lignes, calcul, export CSV, impression, envoi au bureau d'étude.
+// Démo limitée à 4 lignes ; au-delà, export et impression : accès client (Netlify Identity, sur invitation).
 import { powerBalance, fmt } from "./elec.js";
+import * as auth from "./identity.js";
 
 const STORAGE_KEY = "darkside-bilan-v1";
+const DEMO_MAX = 4;
 const $ = (id) => document.getElementById(id);
 const rowsEl = $("b-rows");
 const tpl = $("b-row-tpl");
 const FIELDS = ["name", "zone", "qty", "power", "type", "phase", "cosPhi", "ks"];
+const tool = $("bilan-form");
+const gate = $("b-gate");
+
+let session = null; // session client vérifiée par le serveur, null en démo
+let hiddenLines = []; // lignes d'un bilan enregistré au-delà de la démo, rendues à la connexion
 
 function network() {
   return document.querySelector("input[name='b-network']:checked").value;
@@ -48,7 +56,7 @@ function save() {
       place: $("b-place").value,
       network: network(),
       reserve: $("b-reserve").value,
-      lines: readLines(),
+      lines: readLines().concat(hiddenLines),
     };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   } catch (e) {
@@ -141,6 +149,50 @@ function compute() {
   save();
 }
 
+// Accès : démo ou compte client
+function renderAccess() {
+  tool.classList.toggle("is-client", Boolean(session));
+  $("b-access").querySelector("[data-when='demo']").hidden = Boolean(session);
+  $("b-access").querySelector("[data-when='client']").hidden = !session;
+  $("b-user").textContent = session ? session.email : "";
+  document.querySelectorAll("[data-full]").forEach((btn) => {
+    btn.title = session ? "" : "Réservé aux comptes clients";
+  });
+  const notice = $("b-hidden");
+  if (notice) notice.remove();
+  if (!session && hiddenLines.length) {
+    const p = document.createElement("p");
+    p.id = "b-hidden";
+    p.className = "access access--warn no-print";
+    p.textContent = `Ce bilan compte ${DEMO_MAX + hiddenLines.length} lignes : seules les ${DEMO_MAX} premières sont affichées et calculées en démo. Connectez-vous pour le retrouver en entier.`;
+    $("b-access").after(p);
+  }
+}
+
+function openGate(reason) {
+  $("b-gate-reason").textContent = reason;
+  gate.hidden = false;
+  gate.scrollIntoView({ behavior: "smooth", block: "center" });
+  $("l-email").focus({ preventScroll: true });
+}
+
+// Passage en démo : au-delà de 4 lignes, les lignes sont mises de côté (et conservées)
+function enforceDemo() {
+  const rows = Array.from(rowsEl.children);
+  if (rows.length > DEMO_MAX) {
+    hiddenLines = readLines().slice(DEMO_MAX).concat(hiddenLines);
+    rows.slice(DEMO_MAX).forEach((tr) => tr.remove());
+  }
+}
+
+function unlock(s) {
+  session = s;
+  gate.hidden = true;
+  hiddenLines.splice(0).forEach((l) => addRow(l));
+  renderAccess();
+  compute();
+}
+
 function summaryText() {
   if (!last) return "";
   const { result, net, reservePct } = last;
@@ -181,6 +233,10 @@ function csv() {
 
 // Événements
 $("b-add").addEventListener("click", () => {
+  if (!session && rowsEl.children.length >= DEMO_MAX) {
+    openGate("La démo est limitée à 4 lignes. Connectez-vous pour continuer votre bilan.");
+    return;
+  }
   addRow({}, true);
   compute();
 });
@@ -217,13 +273,19 @@ document.querySelectorAll("input[name='b-network']").forEach((el) =>
 $("b-reset").addEventListener("click", () => {
   if (!window.confirm("Effacer toutes les lignes du bilan ?")) return;
   rowsEl.innerHTML = "";
+  hiddenLines = [];
   $("b-event").value = "";
   $("b-place").value = "";
   addRow();
+  renderAccess();
   compute();
 });
 
 $("b-csv").addEventListener("click", () => {
+  if (!session) {
+    openGate("L'export CSV est réservé aux comptes clients.");
+    return;
+  }
   const blob = new Blob([csv()], { type: "text/csv;charset=utf-8" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
@@ -235,6 +297,10 @@ $("b-csv").addEventListener("click", () => {
 });
 
 $("b-print").addEventListener("click", () => {
+  if (!session) {
+    openGate("L'impression est réservée aux comptes clients.");
+    return;
+  }
   $("print-date").textContent = new Date().toLocaleDateString("fr-FR");
   window.print();
 });
@@ -255,6 +321,49 @@ $("b-send").addEventListener("click", () => {
   window.location.href = url.toString();
 });
 
+document.querySelectorAll("[data-open-gate]").forEach((btn) =>
+  btn.addEventListener("click", () => openGate("Connectez-vous pour ajouter des lignes, exporter et imprimer votre bilan."))
+);
+
+$("b-login").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = $("l-email").value.trim();
+  const password = $("l-password").value;
+  const status = $("b-login-status");
+  const submit = e.target.querySelector("[type='submit']");
+  if (!email || !password) {
+    status.dataset.state = "error";
+    status.textContent = "Saisissez votre e-mail et votre mot de passe.";
+    return;
+  }
+  submit.disabled = true;
+  status.dataset.state = "";
+  status.textContent = "Connexion…";
+  try {
+    unlock(await auth.login(email, password));
+    $("l-password").value = "";
+    status.textContent = "";
+    $("b-status").dataset.state = "ok";
+    $("b-status").textContent = "Vous êtes connecté : accès complet au bilan.";
+    $("b-add").focus();
+  } catch (err) {
+    status.dataset.state = "error";
+    status.textContent = err.message;
+  } finally {
+    submit.disabled = false;
+  }
+});
+
+$("b-logout").addEventListener("click", async () => {
+  await auth.logout();
+  session = null;
+  enforceDemo();
+  renderAccess();
+  compute();
+  $("b-status").dataset.state = "";
+  $("b-status").textContent = "Vous êtes déconnecté.";
+});
+
 // Initialisation
 const saved = load();
 if (saved && Array.isArray(saved.lines) && saved.lines.length) {
@@ -263,10 +372,15 @@ if (saved && Array.isArray(saved.lines) && saved.lines.length) {
   if (saved.reserve != null) $("b-reserve").value = saved.reserve;
   const radio = document.querySelector(`input[name='b-network'][value='${saved.network === "mono" ? "mono" : "tri"}']`);
   if (radio) radio.checked = true;
-  saved.lines.forEach((l) => addRow(l));
+  saved.lines.slice(0, DEMO_MAX).forEach((l) => addRow(l));
+  hiddenLines = saved.lines.slice(DEMO_MAX);
 } else {
   addRow();
   addRow();
   addRow();
 }
+renderAccess();
 compute();
+auth.currentSession().then((s) => {
+  if (s) unlock(s);
+});

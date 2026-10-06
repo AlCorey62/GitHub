@@ -2,7 +2,7 @@
 
 Listez vos appareils, indiquez leur puissance et leur coefficient de foisonnement : l'outil calcule la puissance à prévoir, le courant sur chaque phase et un calibre de raccordement indicatif.
 
-Les données restent dans votre navigateur. Rien n'est envoyé sans votre action.
+Démo en libre accès jusqu'à 4 lignes, version complète réservée à nos clients sur invitation. Les données de votre bilan restent dans votre navigateur.
 
 ## Quelques repères pour bien remplir votre bilan.
 

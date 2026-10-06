@@ -16,8 +16,9 @@ import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, dirname, sep } from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
-import { SITE, NAV, CTA, ENTITY, LLMS } from "./site.config.mjs";
+import { SITE, NAV, CTA, ENTITY, LLMS, MAP } from "./site.config.mjs";
 import { pageToMarkdown } from "./markdown.mjs";
+import { WIDTH, HEIGHT, project } from "./map.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE_DIR = join(ROOT, "site");
@@ -306,8 +307,7 @@ function jsonLd(cfg, ctx) {
       applicationCategory: "UtilitiesApplication",
       operatingSystem: "Tout navigateur web",
       inLanguage: "fr-FR",
-      isAccessibleForFree: true,
-      offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+      ...(cfg.app.restricted ? {} : { isAccessibleForFree: true, offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" } }),
       featureList: cfg.app.features,
       provider: orgRef(),
     });
@@ -457,6 +457,62 @@ function footer(cfg, ctx) {
   ].join("\n");
 }
 
+// Carte des interventions : lignes animées du siège vers les lieux réalisés à l'international
+function worldMap(cfg, ctx) {
+  const r1 = (n) => Math.round(n * 10) / 10;
+  const [hx, hy] = project(MAP.hq.lat, MAP.hq.lon);
+  const arcs = [];
+  const flows = [];
+  const pins = [];
+  MAP.places.forEach((p, i) => {
+    const [x, y] = project(p.lat, p.lon);
+    const dx = x - hx;
+    const dy = y - hy;
+    const d = Math.hypot(dx, dy);
+    // Courbe vers le haut, plus marquée pour les liaisons courtes
+    let nx = dy / d;
+    let ny = -dx / d;
+    if (ny > 0) {
+      nx = -nx;
+      ny = -ny;
+    }
+    const lift = d * (d < 120 ? 0.42 : 0.24);
+    const path = `M${r1(hx)} ${r1(hy)}Q${r1((hx + x) / 2 + nx * lift)} ${r1((hy + y) / 2 + ny * lift)} ${r1(x)} ${r1(y)}`;
+    arcs.push(`<path class="map__arc" style="--i:${i}" pathLength="1" d="${path}"/>`);
+    flows.push(`<path class="map__flow" style="--i:${i}" pathLength="1" d="${path}"/>`);
+    pins.push(`<circle class="map__pin" style="--i:${i}" cx="${r1(x)}" cy="${r1(y)}" r="3.6"/>`);
+  });
+  const dots = MAP.france.map(([lat, lon]) => {
+    const [x, y] = project(lat, lon);
+    return `<circle class="map__dot" cx="${r1(x)}" cy="${r1(y)}" r="2.4"/>`;
+  });
+  const labels = MAP.labels.map((l) => {
+    const [x, y] = project(l.lat, l.lon);
+    return `<text class="map__label${l.hq ? " map__label--hq" : ""}" x="${r1(x + l.dx)}" y="${r1(y + l.dy)}" text-anchor="${l.anchor}">${esc(l.text)}</text>`;
+  });
+  const names = MAP.places.map((p) => p.name);
+  const list = `${names.slice(0, -1).join(", ")} et ${names[names.length - 1]}`;
+  return [
+    `<figure class="map reveal">`,
+    `<div class="map__canvas no-md">`,
+    `<img class="map__base" src="${ctx.root}assets/img/carte-monde.svg" width="${WIDTH}" height="${HEIGHT}" alt="" loading="lazy" decoding="async">`,
+    `<svg class="map__layer" viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img" aria-labelledby="carte-titre carte-desc">`,
+    `<title id="carte-titre">Nos interventions à l'international</title>`,
+    `<desc id="carte-desc">Depuis le siège de ${esc(SITE.name)} à ${esc(MAP.hq.name)}, des lignes rejoignent les villes où ses équipes sont intervenues : ${esc(list)}.</desc>`,
+    ...dots,
+    ...arcs,
+    ...flows,
+    ...pins,
+    `<circle class="map__ring" cx="${r1(hx)}" cy="${r1(hy)}" r="7"/>`,
+    `<circle class="map__hq" cx="${r1(hx)}" cy="${r1(hy)}" r="5"/>`,
+    ...labels,
+    `</svg>`,
+    `</div>`,
+    `<figcaption class="map__caption">Depuis ${esc(MAP.hq.name)} : ${esc(list)}.</figcaption>`,
+    `</figure>`,
+  ].join("\n");
+}
+
 function cta(cfg, ctx) {
   const c = cfg.cta || {};
   const title = c.title || "Un projet ? Parlons puissance.";
@@ -485,7 +541,7 @@ function cta(cfg, ctx) {
 function replaceBlock(html, name, content, file) {
   const re = new RegExp(`(<!-- ${name}:start -->)[\\s\\S]*?(<!-- ${name}:end -->)`);
   if (!re.test(html)) {
-    if (name === "breadcrumb" || name === "cta") return html;
+    if (name === "breadcrumb" || name === "cta" || name === "carte") return html;
     throw new Error(`Bloc "${name}" introuvable dans ${file}`);
   }
   return html.replace(re, `$1\n${content}\n$2`);
@@ -552,6 +608,7 @@ for (const file of files) {
   html = replaceBlock(html, "header", header(cfg, ctx), file);
   html = replaceBlock(html, "breadcrumb", breadcrumb(cfg, ctx), file);
   html = replaceBlock(html, "cta", cta(cfg, ctx), file);
+  html = replaceBlock(html, "carte", worldMap(cfg, ctx), file);
   html = replaceBlock(html, "footer", footer(cfg, ctx), file);
   html = expandSvgs(html);
   html = frenchTypo(html);

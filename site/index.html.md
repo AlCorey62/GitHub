@@ -109,6 +109,8 @@ Configurations à valider avec notre bureau d'étude selon votre bilan de puissa
 
 Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
 
+*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève et Cromvoirt.*
+
 - Zénith de Lille
 - Lille Grand Palais
 - Stade de France
@@ -123,6 +125,10 @@ Compétitions sportives internationales, concerts en Zénith, en stade et en tou
 - Arkéa Arena
 - Zénith de Paris
 - Paris Expo Porte de Versailles
+- Estadio Banorte, Mexico
+- MetLife Stadium, New Jersey
+- BMO Field, Toronto
+- Arène de Vérone
 
 [Toutes nos références](https://www.darkside-energy.com/references/)
 
@@ -132,7 +138,7 @@ Deux outils pour préparer vos échanges avec notre bureau d'étude. Les résult
 
 ### [Bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
 
-Listez vos appareils, appliquez vos coefficients de foisonnement : puissance totale, courant par phase et calibre de raccordement indicatif.
+Listez vos appareils, appliquez vos coefficients de foisonnement : puissance totale, courant par phase et calibre de raccordement indicatif. Démo en libre accès, version complète pour nos clients.
 
 ### [Calculette électro](https://www.darkside-energy.com/calculette-electro/)
 

@@ -4,7 +4,7 @@
   "@id": "https://www.darkside-energy.com/bilan-de-puissance#webpage",
   "url": "https://www.darkside-energy.com/bilan-de-puissance",
   "name": "Bilan de puissance en ligne",
-  "description": "Bilan de puissance gratuit en ligne : puissance foisonnée, courant par phase, calibre de raccordement et puissance de source indicatifs.",
+  "description": "Bilan de puissance en ligne : puissance foisonnée, courant par phase, calibre et source indicatifs. Démo libre, accès complet réservé à nos clients.",
   "inLanguage": "fr-FR",
   "isPartOf": {
     "@type": "WebSite",

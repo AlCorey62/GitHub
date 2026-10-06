@@ -1345,6 +1345,155 @@ a.tag:hover {
   stroke-linecap: round;
 }
 
+/* Carte des interventions */
+.map {
+  margin: 0 0 clamp(28px, 4vw, 48px);
+}
+
+.map__canvas {
+  position: relative;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(60% 80% at 78% 26%, rgba(195, 0, 0, 0.14), transparent 62%),
+    var(--c-bg-2);
+  overflow: hidden;
+}
+
+.map__base,
+.map__layer {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map__layer {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  font-family: var(--font);
+}
+
+.map__arc {
+  fill: none;
+  stroke: var(--c-accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  opacity: 0.8;
+}
+
+.map__flow {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-dasharray: 0.035 2;
+  stroke-dashoffset: 0.035;
+  filter: drop-shadow(0 0 4px rgba(255, 60, 40, 0.95));
+}
+
+.map__pin {
+  fill: var(--c-accent);
+  filter: drop-shadow(0 0 5px rgba(255, 60, 40, 0.8));
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.map__dot {
+  fill: var(--c-accent);
+  opacity: 0.5;
+}
+
+.map__hq {
+  fill: #fff;
+  filter: drop-shadow(0 0 6px rgba(255, 60, 40, 0.95));
+}
+
+.map__ring {
+  fill: none;
+  stroke: var(--c-accent);
+  stroke-width: 1.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: map-ring 2.6s ease-out infinite;
+}
+
+.map__label {
+  fill: var(--c-text-2);
+  font-size: 12.5px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  paint-order: stroke;
+  stroke: var(--c-bg-2);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.map__label--hq {
+  fill: #fff;
+}
+
+.map__caption {
+  margin-top: 12px;
+  font-size: var(--fs-sm);
+  color: var(--c-text-3);
+}
+
+/* Animation : les lignes se tracent quand la carte apparaît, puis le courant circule */
+.js .map__arc { stroke-dashoffset: 1; }
+.js .map__pin { opacity: 0; }
+.js .map__flow { opacity: 0; }
+
+.js .map.is-visible .map__arc {
+  animation: map-draw 1.5s var(--ease) both;
+  animation-delay: calc(var(--i) * 0.16s);
+}
+
+.js .map.is-visible .map__pin {
+  animation: map-pin 0.5s var(--ease) both;
+  animation-delay: calc(1.1s + var(--i) * 0.16s);
+}
+
+.js .map.is-visible .map__flow {
+  opacity: 1;
+  animation: map-flow 2.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite both;
+  animation-delay: calc(1.8s + var(--i) * 0.42s);
+}
+
+@keyframes map-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes map-pin {
+  from { opacity: 0; transform: scale(0.2); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes map-flow {
+  from { stroke-dashoffset: 0.035; }
+  to { stroke-dashoffset: -1; }
+}
+
+@keyframes map-ring {
+  from { transform: scale(0.7); opacity: 0.9; }
+  to { transform: scale(2.8); opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .map__label { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .map__arc { stroke-dashoffset: 0; animation: none !important; }
+  .js .map__pin { opacity: 1; animation: none !important; }
+  .map__flow { display: none; }
+  .map__ring { animation: none; }
+}
+
 /* Cartouche façon plan */
 .drawing {
   position: relative;
@@ -1457,6 +1606,30 @@ a.tag:hover {
 @keyframes sld-pulse {
   0%, 100% { opacity: 0.35; }
   50% { opacity: 1; }
+}
+
+/* Inverseur de sources : cadre et verrouillage mécanique */
+.sld .frame {
+  fill: none;
+  stroke: #4a4a53;
+  stroke-width: 1.2;
+  stroke-dasharray: 4 4;
+}
+
+.sld .link {
+  fill: none;
+  stroke: #8b8b94;
+  stroke-width: 1.2;
+  stroke-dasharray: 3 3;
+}
+
+/* Groupe de secours en veille */
+.sld .dot--idle {
+  fill: none;
+  stroke: var(--c-text-3);
+  stroke-width: 1;
+  filter: none;
+  animation-duration: 3.6s;
 }
 
 /* Hero pages intérieures */
@@ -2211,6 +2384,140 @@ a.tag:hover {
 
 @media (max-width: 960px) {
   .panel--result { position: static; }
+}
+
+/* Accès client au bilan de puissance : démo, connexion, espace client */
+.access {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin: -6px 0 18px;
+  padding: 10px 14px;
+  border: 1px solid var(--c-line-2);
+  border-radius: var(--radius-sm);
+  background: var(--c-surface-2);
+  font-size: var(--fs-sm);
+  color: var(--c-text-2);
+}
+
+.access > span {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+.access > span[hidden] {
+  display: none;
+}
+
+.access svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  color: var(--c-accent);
+}
+
+.access b {
+  color: var(--c-text);
+  overflow-wrap: anywhere;
+}
+
+.access--warn {
+  border-color: rgba(255, 176, 32, 0.45);
+  color: var(--c-text);
+}
+
+.link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 700;
+  color: var(--c-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.link-btn:hover {
+  color: var(--c-text);
+}
+
+.gate {
+  margin-top: 20px;
+  border-color: rgba(255, 74, 61, 0.45);
+  background:
+    radial-gradient(90% 120% at 0% 0%, rgba(195, 0, 0, 0.14), transparent 60%),
+    var(--c-surface);
+}
+
+.gate__head {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.gate__head > svg {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  margin-top: 2px;
+  color: var(--c-accent);
+}
+
+.gate__head h2 {
+  margin: 0 0 6px;
+  font-size: var(--fs-h4);
+}
+
+.gate__head p {
+  margin: 0;
+  color: var(--c-text-2);
+}
+
+.gate__actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px 20px;
+}
+
+.gate__link {
+  font-size: var(--fs-sm);
+  color: var(--c-text-2);
+}
+
+.gate__foot {
+  margin: 16px 0 0;
+  font-size: var(--fs-sm);
+  color: var(--c-text-3);
+}
+
+/* Export et impression : cadenas tant que le client n'est pas connecté */
+[data-full] .ico-lock { display: none; }
+#bilan-form:not(.is-client) [data-full] .ico-lock { display: inline-block; }
+#bilan-form:not(.is-client) [data-full] .ico-full { display: none; }
+
+.account {
+  max-width: 640px;
+}
+
+.account .panel h2 {
+  margin: 0 0 10px;
+  font-size: var(--fs-h3);
+}
+
+.account .panel > p {
+  color: var(--c-text-2);
+}
+
+.account .form-grid {
+  margin-top: 20px;
 }
 
 .readout {
