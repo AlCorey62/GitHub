@@ -1346,6 +1346,230 @@ a.tag:hover {
   stroke-linecap: round;
 }
 
+/* Pages thématiques : chapeau avec schéma animé */
+.page-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(28px, 4.5vw, 64px);
+  align-items: center;
+}
+
+.page-hero--visual h1 {
+  max-width: 16ch;
+}
+
+@media (max-width: 960px) {
+  .page-hero__grid { grid-template-columns: minmax(0, 1fr); }
+  .page-hero__visual { max-width: 560px; }
+}
+
+/* Schémas animés : éléments communs */
+.sld .hall {
+  fill: none;
+  stroke: #4a4a53;
+  stroke-width: 1.5;
+}
+
+.sld .zone {
+  fill: rgba(255, 255, 255, 0.025);
+  stroke: #34343b;
+  stroke-width: 1;
+}
+
+.sld .band {
+  fill: rgba(255, 255, 255, 0.035);
+  stroke: #2c2c32;
+  stroke-width: 1;
+}
+
+.sld .grid {
+  stroke: #222227;
+  stroke-width: 1;
+}
+
+.sld .lbl--accent {
+  fill: var(--c-accent);
+}
+
+/* Coffret de stand qui s'allume à l'arrivée du courant (même cycle que .flow) */
+.sld .coffret {
+  fill: var(--c-surface);
+  stroke: var(--c-accent);
+  stroke-width: 1.3;
+}
+
+.sld .coffret--hit {
+  animation: sld-hit 4.2s linear infinite;
+}
+
+@keyframes sld-hit {
+  0%, 84% { fill: var(--c-surface); }
+  90% { fill: var(--c-accent); }
+  100% { fill: var(--c-surface); }
+}
+
+/* Planning : barres qui se déploient, curseur du jour */
+.sld .bar {
+  fill: rgba(255, 74, 61, 0.16);
+  stroke: var(--c-accent);
+  stroke-width: 1.2;
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: sld-grow 0.9s var(--ease) both;
+}
+
+.sld .bar--long {
+  fill: rgba(255, 255, 255, 0.05);
+  stroke: #5a5a64;
+}
+
+@keyframes sld-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.sld .sweep {
+  animation: sld-sweep 9s linear infinite;
+}
+
+@keyframes sld-sweep {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--sweep, 400px)); }
+}
+
+.sld .cursor {
+  stroke: var(--c-accent);
+  stroke-width: 1.4;
+}
+
+.sld .cursor-head {
+  fill: var(--c-accent);
+}
+
+/* Tracé progressif, comme une table traçante, en boucle */
+.sld .plot {
+  stroke-dasharray: 100;
+  animation: sld-plot 10s var(--ease) infinite both;
+}
+
+@keyframes sld-plot {
+  0% { stroke-dashoffset: 100; opacity: 1; }
+  22% { stroke-dashoffset: 0; }
+  88% { stroke-dashoffset: 0; opacity: 1; }
+  96%, 100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.sld .appear {
+  animation: sld-appear 10s ease infinite both;
+}
+
+@keyframes sld-appear {
+  0%, 18% { opacity: 0; }
+  24%, 88% { opacity: 1; }
+  96%, 100% { opacity: 0; }
+}
+
+.sld .tick {
+  fill: none;
+  stroke: var(--c-accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sld .note-1 { animation: sld-note-1 10s ease infinite both; }
+.sld .note-2 { animation: sld-note-2 10s ease infinite both; }
+.sld .note-3 { animation: sld-note-3 10s ease infinite both; }
+.sld .note-4 { animation: sld-note-4 10s ease infinite both; }
+.sld .note-5 { animation: sld-note-5 10s ease infinite both; }
+
+@keyframes sld-note-1 { 0%, 26% { opacity: 0; } 30%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }
+@keyframes sld-note-2 { 0%, 34% { opacity: 0; } 38%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }
+@keyframes sld-note-3 { 0%, 42% { opacity: 0; } 46%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }
+@keyframes sld-note-4 { 0%, 50% { opacity: 0; } 54%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }
+@keyframes sld-note-5 { 0%, 58% { opacity: 0; } 62%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }
+
+/* Démarche : une impulsion parcourt les étapes, qui s'allument tour à tour */
+.sld .flow--steps {
+  animation: sld-steps 6s linear infinite;
+  stroke-dasharray: 8 200;
+}
+
+@keyframes sld-steps {
+  0% { stroke-dashoffset: 8; }
+  70%, 100% { stroke-dashoffset: -100; }
+}
+
+.sld .step {
+  fill: var(--c-surface);
+  stroke: #4a4a53;
+  stroke-width: 1.5;
+}
+
+.sld .step--on {
+  fill: rgba(255, 74, 61, 0.18);
+  stroke: var(--c-accent);
+}
+
+.sld .step-2 { animation: sld-step-2 6s linear infinite; }
+.sld .step-3 { animation: sld-step-3 6s linear infinite; }
+.sld .step-4 { animation: sld-step-4 6s linear infinite; }
+
+@keyframes sld-step-2 { 0%, 21% { fill: var(--c-surface); stroke: #4a4a53; } 23%, 95% { fill: rgba(255, 74, 61, 0.18); stroke: var(--c-accent); } 100% { fill: var(--c-surface); stroke: #4a4a53; } }
+@keyframes sld-step-3 { 0%, 43% { fill: var(--c-surface); stroke: #4a4a53; } 45%, 95% { fill: rgba(255, 74, 61, 0.18); stroke: var(--c-accent); } 100% { fill: var(--c-surface); stroke: #4a4a53; } }
+@keyframes sld-step-4 { 0%, 65% { fill: var(--c-surface); stroke: #4a4a53; } 67%, 95% { fill: rgba(255, 74, 61, 0.18); stroke: var(--c-accent); } 100% { fill: var(--c-surface); stroke: #4a4a53; } }
+
+/* Profil de charge : courbe tracée une fois, pointes couvertes par la batterie */
+.sld .curve {
+  fill: none;
+  stroke: var(--c-text);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  animation: sld-draw 2.4s var(--ease) both;
+}
+
+@keyframes sld-draw {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+
+.sld .area {
+  fill: rgba(255, 74, 61, 0.34);
+  animation: sld-fade 0.9s ease 2s both;
+}
+
+@keyframes sld-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sld .scan {
+  stroke: var(--c-accent);
+  stroke-width: 1.2;
+  opacity: 0.8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sld .coffret--hit,
+  .sld .bar,
+  .sld .sweep,
+  .sld .plot,
+  .sld .appear,
+  .sld [class*="note-"],
+  .sld .step-2,
+  .sld .step-3,
+  .sld .step-4,
+  .sld .curve,
+  .sld .area {
+    animation: none !important;
+  }
+  .sld .plot,
+  .sld .curve { stroke-dashoffset: 0; }
+  .sld .sweep,
+  .sld .flow--steps { display: none; }
+}
+
 /* Carte des interventions */
 .map {
   margin: 0 0 clamp(28px, 4vw, 48px);

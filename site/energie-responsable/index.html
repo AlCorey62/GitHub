@@ -44,7 +44,7 @@
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <link rel="preload" href="../assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/main.css?v=6377838f">
+<link rel="stylesheet" href="../assets/css/main.css?v=969ddfa3">
 <script>document.documentElement.classList.add("js")</script>
 <script src="../assets/js/main.js?v=4773a4e1" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.darkside-energy.com/energie-responsable/#webpage","url":"https://www.darkside-energy.com/energie-responsable/","name":"Énergie responsable et démarche RSE","description":"Notre démarche RSE : le réseau d'abord, des solutions hybrides (HVO, Stage V, batteries), le juste dimensionnement et des engagements internes.","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","@id":"https://www.darkside-energy.com/#website","name":"Dark Side Energy","url":"https://www.darkside-energy.com/"},"about":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"},"publisher":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"},"primaryImageOfPage":"https://www.darkside-energy.com/assets/img/og-image.png","dateModified":"2026-09-25","breadcrumb":{"@id":"https://www.darkside-energy.com/energie-responsable/#breadcrumb"}}</script>
@@ -68,14 +68,51 @@
 
 <main id="contenu">
 
-  <section class="page-hero">
-    <div class="container">
-      <!-- breadcrumb:start -->
+  <section class="page-hero page-hero--visual">
+    <div class="container page-hero__grid">
+      <div class="page-hero__text">
+        <!-- breadcrumb:start -->
 <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="../">Accueil</a></li><li><span aria-current="page">Énergie responsable</span></li></ol></nav>
 <!-- breadcrumb:end -->
-      <p class="eyebrow">Énergie responsable</p>
-      <h1>Sortir du « tout groupe électrogène ».</h1>
-      <p class="lead">L'électricité, énergie ressource pour lutter contre le réchauffement climatique, est au cœur de nos métiers. La dynamique RSE est en mouvement depuis de nombreuses années chez Dark Side Energy.</p>
+        <p class="eyebrow">Énergie responsable</p>
+        <h1>Sortir du « tout groupe électrogène ».</h1>
+        <p class="lead">L'électricité, énergie ressource pour lutter contre le réchauffement climatique, est au cœur de nos métiers. La dynamique RSE est en mouvement depuis de nombreuses années chez Dark Side Energy.</p>
+      </div>
+      <div class="page-hero__visual reveal" data-delay="1">
+        <figure class="drawing">
+          <figcaption class="drawing__bar"><span>Profil de charge</span><span>Hybridation batterie et groupe</span></figcaption>
+          <div class="drawing__canvas">
+            <svg class="sld" viewBox="0 0 560 340" role="img" aria-labelledby="profil-titre profil-desc">
+              <title id="profil-titre">Profil de charge d'un événement en hybridation batterie et groupe</title>
+              <desc id="profil-desc">La courbe de consommation varie au fil de la journée. Le groupe électrogène est dimensionné au juste besoin ; les pointes au-dessus de sa puissance sont absorbées par la batterie.</desc>
+              <defs><clipPath id="profil-pointes"><rect x="60" y="20" width="480" height="130"/></clipPath></defs>
+              <path class="wire" d="M60 30 V282 H536"/>
+              <path class="sym" d="M56 38 L60 30 L64 38 M528 278 L536 282 L528 286"/>
+              <text class="lbl lbl--sm" x="70" y="34">Puissance</text>
+              <text class="lbl lbl--sm" x="536" y="302" text-anchor="end">Temps</text>
+              <path class="area" clip-path="url(#profil-pointes)" d="M60 250 C 95 245, 105 222, 130 215 S 170 190, 190 185 S 225 180, 240 172 S 268 92, 285 92 S 305 168, 325 170 S 350 174, 360 170 S 393 70, 410 70 S 432 165, 455 168 S 485 205, 500 215 S 525 234, 536 236 L536 282 L60 282 Z"/>
+              <path class="link" d="M60 150 H536"/>
+              <text class="lbl lbl--sm" x="68" y="142">Groupe au juste besoin</text>
+              <path class="curve" pathLength="100" d="M60 250 C 95 245, 105 222, 130 215 S 170 190, 190 185 S 225 180, 240 172 S 268 92, 285 92 S 305 168, 325 170 S 350 174, 360 170 S 393 70, 410 70 S 432 165, 455 168 S 485 205, 500 215 S 525 234, 536 236"/>
+              <text class="lbl lbl--sm lbl--accent" x="348" y="50" text-anchor="middle">Pointes absorbées par la batterie</text>
+              <g class="sweep" style="--sweep:476px;animation-duration:8s">
+                <path class="scan" d="M60 30 V282"/>
+              </g>
+              <path class="curve" pathLength="100" d="M60 322 h18" style="animation:none"/>
+              <text class="lbl lbl--sm" x="84" y="326">Consommation</text>
+              <path class="link" d="M210 322 h18"/>
+              <text class="lbl lbl--sm" x="234" y="326">Groupe</text>
+              <rect class="area" x="322" y="317" width="10" height="10" style="animation:none"/>
+              <text class="lbl lbl--sm" x="338" y="326">Batterie</text>
+            </svg>
+          </div>
+          <div class="drawing__foot" aria-hidden="true">
+            <div><b>Titre</b>Juste dimensionnement</div>
+            <div><b>Auteur</b>Bureau d'étude</div>
+            <div><b>Indice</b>A</div>
+          </div>
+        </figure>
+      </div>
     </div>
   </section>
 
