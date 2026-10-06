@@ -138,12 +138,11 @@ Pour le site :
 
 À trancher avant publication :
 
-- Mentions légales : capital social, RCS, TVA intracommunautaire, hébergeur.
-- Données issues de Rentman et du mémoire technique : lieux de références, labels, « 70 % de nos salariés équipés de véhicules électriques ».
+- Mentions légales : capital (10 000 €), RCS Arras et TVA (FR21879105377) relevés au registre ; hébergeur à adapter (Wix au lieu de Netlify).
+- Données issues de Rentman et du mémoire technique : lieux de références (villes seulement pour l'international), labels et « 70 % de nos salariés équipés de véhicules électriques » (justificatifs disponibles).
 - Citations attribuées à Damien Nirel.
-- Durées de conservation des données : 3 ans pour les demandes commerciales, 2 ans pour les candidatures.
+- Durées de conservation des données : 3 ans pour les demandes commerciales, 2 ans pour les candidatures (validées).
 - Liens des réseaux sociaux (Facebook, X).
-- Droits sur les photos de passages de câbles.
 - Relecture technique de la FAQ et du lexique.
 
 Incohérences relevées :

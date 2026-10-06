@@ -27,7 +27,7 @@ Dark Side Energy was founded in May 2016. DARK SIDE ENERGY SARL (SIREN 879 105 3
 
 ### Which venues has Dark Side Energy worked at?
 
-Dark Side Energy's teams have worked at venues including the Zénith de Lille, Lille Grand Palais, the Stade de France, the Accor Arena, Paris La Défense Arena, the Decathlon Arena Stade Pierre Mauroy, the Arena Grand Paris, the Grand Palais, the Musée du Louvre, the Allianz Riviera and the Stade Vélodrome. Internationally, they have worked at the Estadio Banorte in Mexico City, MetLife Stadium (New Jersey), BMO Field in Toronto, the Verona Arena, on Lake Geneva and in Japan, including the International Stadium Yokohama, Miyagi Stadium and the Ryōgoku Kokugikan in Tokyo. The full list is on the [References](https://www.darkside-energy.com/en/references/) page.
+Dark Side Energy's teams have worked at venues including the Zénith de Lille, Lille Grand Palais, the Stade de France, the Accor Arena, Paris La Défense Arena, the Decathlon Arena Stade Pierre Mauroy, the Arena Grand Paris, the Grand Palais, the Musée du Louvre, the Allianz Riviera and the Stade Vélodrome. Internationally, they have worked in Mexico (Mexico City), the United States (New Jersey, Philadelphia, Kansas City), Canada (Toronto), Italy (Verona, Cortina d'Ampezzo, Bormio, Livigno), on Lake Geneva and in Japan (Tokyo, Yokohama, Fukushima, Miyagi). The full list is on the [References](https://www.darkside-energy.com/en/references/) page.
 
 ### How do I request a quote?
 

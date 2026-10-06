@@ -125,12 +125,6 @@ International sports competitions, concerts in Zénith arenas, in stadiums and o
 - Arkéa Arena
 - Zénith de Paris
 - Paris Expo Porte de Versailles
-- Estadio Banorte, Mexico City
-- MetLife Stadium, New Jersey
-- BMO Field, Toronto
-- Verona Arena
-- International Stadium Yokohama
-- Ryōgoku Kokugikan, Tokyo
 
 [All our references](https://www.darkside-energy.com/en/references/)
 

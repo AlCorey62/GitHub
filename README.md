@@ -155,12 +155,13 @@ Reconstruction dans Wix (au lieu de Netlify) : suivre `wix/README.md`.
 
 ## Points à valider avant la mise en ligne
 
-1. **Mentions légales** : capital social, greffe RCS, numéro de TVA intracommunautaire, hébergeur (surlignés en orange sur la page).
-2. **Données issues de sources internes** (Rentman, mémoire technique de juin 2026, document « Métiers Site Internet ») : liste des lieux de référence, gamme de matériel, statut des labels (Label du Spectacle, Prestadd, ISO 20121), part de véhicules électriques (70 %).
-3. **Citations** attribuées à Damien Nirel (extraites du mémoire technique).
-4. **Durées de conservation des données** proposées dans la politique de confidentialité (3 ans prospects, 2 ans candidatures).
-5. **Réseaux sociaux** : liens Facebook et X repris de l'ancien site, à confirmer ou compléter (LinkedIn par exemple) dans `tools/site.config.mjs`.
-6. **Images des passages de câbles** : reprises de l'ancien site, vérifier les droits si elles proviennent d'un fournisseur.
+1. **Mentions légales** : complétées d'après le registre (capital 10 000 €, RCS Arras, TVA FR21879105377) et le site de Netlify (adresse de l'hébergeur). Le téléphone de l'hébergeur (+1 650 963 4977) vient de l'annuaire officiel américain du Data Privacy Framework : à confirmer.
+2. **Données issues de sources internes** (Rentman, mémoire technique de juin 2026, document « Métiers Site Internet ») : liste des lieux de référence, gamme de matériel. Les justificatifs des labels (Label du Spectacle, Prestadd, ISO 20121) et de la part de véhicules électriques (70 %) sont disponibles (confirmé par Damien).
+3. **Références internationales** (Mexique, États-Unis, Canada, Italie, Japon) : villes seulement, sans nom de site, car certains contrats de sous-traitance interdisent de citer les sites.
+4. **Citations** attribuées à Damien Nirel (extraites du mémoire technique), sur les pages Bureau d'étude et Régie technique.
+5. **Données personnelles** : durées de conservation validées (3 ans pour les demandes, 2 ans pour les candidatures). Netlify Forms garde les messages sans limite : les supprimer au-delà de ces durées.
+6. **Réseaux sociaux** : liens Facebook et X repris de l'ancien site, à confirmer ou compléter (LinkedIn par exemple) dans `tools/site.config.mjs`.
+7. **Clientèle exclusivement professionnelle** (indiqué dans les mentions légales) : pas de médiateur de la consommation à désigner.
 
 ## Référencement par les moteurs et les assistants IA (GEO)
 

@@ -6,25 +6,27 @@ Conformément aux dispositions des articles 6-III et 19 de la loi n° 2004-575 d
 
 - **Raison sociale** : DARK SIDE ENERGY
 - **Forme juridique** : SARL (société à responsabilité limitée)
-- **Capital social** : [à compléter]
+- **Capital social** : 10 000 €
 - **Siège social** : 37 rue Thibaut, 62220 Carvin, France
 - **SIREN** : 879 105 377
 - **SIRET du siège** : 879 105 377 00029
-- **RCS** : [à compléter : greffe d'immatriculation]
-- **TVA intracommunautaire** : [à compléter]
+- **RCS** : 879 105 377 RCS Arras
+- **TVA intracommunautaire** : FR21879105377
 - **Téléphone** : [07 68 24 40 88](tel:+33768244088)
 - **E-mail** : [contact@darkside-energy.com](mailto:contact@darkside-energy.com)
 - **Directeur de la publication** : Damien Nirel, gérant
 
+Les prestations de Dark Side Energy s'adressent exclusivement aux professionnels.
+
 ## Hébergement
 
-[à compléter selon l'hébergeur retenu : raison sociale, adresse et téléphone de l'hébergeur]
+Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, États-Unis. Téléphone : +1 650 963 4977. Site : www.netlify.com.
 
 ## Propriété intellectuelle
 
 L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés. Les marques, textes, logos et photos de ce site sont la propriété de Dark Side Energy, sauf mention contraire. La reproduction de tout ou partie de ce site est formellement interdite sauf autorisation expresse de la société éditrice.
 
-Crédits : police de caractères Archivo (SIL Open Font License 1.1), icônes Lucide (licence ISC) et Simple Icons (licence CC0).
+Crédits : police de caractères Archivo (SIL Open Font License 1.1), icônes Lucide (licence ISC), Simple Icons (licence CC0) et fond de carte d'après Natural Earth (domaine public).
 
 ## Données personnelles
 
@@ -34,12 +36,14 @@ Les informations que Dark Side Energy est susceptible de réunir résultent de l
 - **Données collectées** par le formulaire de contact : nom, société, e-mail, téléphone, objet, dates et lieu de l'événement, message.
 - **Finalités** : répondre à votre demande (devis, information, candidature) et en assurer le suivi.
 - **Base légale** : votre consentement, recueilli par la case à cocher du formulaire, et les mesures précontractuelles prises à votre demande.
-- **Destinataires** : les seules équipes de Dark Side Energy. Les messages transitent par l'hébergeur du site, qui agit en qualité de sous-traitant.
+- **Destinataires** : les seules équipes de Dark Side Energy. Les messages transitent par l'hébergeur du site, Netlify, Inc., qui agit en qualité de sous-traitant et peut traiter les données aux États-Unis. Ce transfert repose sur le cadre de protection des données UE-États-Unis (Data Privacy Framework), auquel Netlify est certifié et que la Commission européenne a reconnu par une décision d'adéquation du 10 juillet 2023.
 - **Durée de conservation** : 3 ans à compter du dernier contact pour les demandes commerciales, 2 ans pour les candidatures.
+
+**Données de connexion** : lors de votre visite, l'hébergeur du site traite des données techniques, notamment l'adresse IP, nécessaires à la sécurité et au bon fonctionnement du site.
 
 **Comptes clients du bilan de puissance** : ouverts sur invitation de Dark Side Energy. L'adresse e-mail et le mot de passe du client, jamais stocké en clair, sont gérés par le service d'authentification de l'hébergeur du site (Netlify Identity), qui agit en qualité de sous-traitant. Finalité : donner accès à la version complète de l'outil. Conservation : tant que le compte est actif ; il est supprimé sur simple demande.
 
-Conformément au règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment. Pour exercer ces droits, il vous suffit de nous contacter par e-mail : [damien@darkside-energy.com](mailto:damien@darkside-energy.com). Vous pouvez également adresser une réclamation à la CNIL ([www.cnil.fr](https://www.cnil.fr/)).
+Conformément au règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité de vos données, du droit de retirer votre consentement à tout moment et du droit de définir des directives relatives au sort de vos données après votre décès. Pour exercer ces droits, il vous suffit de nous contacter par e-mail : [damien@darkside-energy.com](mailto:damien@darkside-energy.com). Vous pouvez également adresser une réclamation à la CNIL ([www.cnil.fr](https://www.cnil.fr/)).
 
 ## Cookies et stockage local
 

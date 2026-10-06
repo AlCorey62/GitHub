@@ -2,7 +2,7 @@
 
 > Notre démarche RSE : le réseau d'abord, des solutions hybrides (HVO, Stage V, batteries), le juste dimensionnement et des engagements internes.
 
-Source : https://www.darkside-energy.com/energie-responsable/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/energie-responsable/ · Dark Side Energy · Mise à jour : 2026-10-06
 
 L'électricité, énergie ressource pour lutter contre le réchauffement climatique, est au cœur de nos métiers. La dynamique RSE est en mouvement depuis de nombreuses années chez Dark Side Energy.
 
@@ -32,7 +32,7 @@ Des sources positionnées au plus proche des centres de charge et des cheminemen
 
 ## Des engagements au quotidien.
 
-- **Des produits éco-responsables dès nos débuts** : projecteurs LED dimmables par système TRIAC, boîtiers électriques intelligents avec gestion des horaires de fonctionnement et de la puissance.
+- **Des équipements qui limitent la consommation, dès nos débuts** : projecteurs LED dimmables par système TRIAC, boîtiers électriques intelligents avec gestion des horaires de fonctionnement et de la puissance.
 - **70 % de nos salariés équipés de véhicules électriques.**
 - **Moins de déplacements** : études menées en visioconférence dès que possible, visites de site mutualisées.
 - **Zéro papier** : échanges et livrables dématérialisés sur des plateformes collaboratives sécurisées.

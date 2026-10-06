@@ -32,7 +32,7 @@ Sources positioned as close as possible to the load centres, and cable routes dr
 
 ## Everyday commitments.
 
-- **Eco-friendly products from the very start**: TRIAC-dimmable LED floodlights, smart electrical units managing operating hours and power.
+- **Equipment that limits consumption, from the very start**: TRIAC-dimmable LED floodlights, smart electrical units managing operating hours and power.
 - **70% of our employees have electric vehicles.**
 - **Less travel**: studies carried out by video conference whenever possible, combined site visits.
 - **Paperless**: digital exchanges and deliverables on secure collaborative platforms.

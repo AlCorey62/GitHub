@@ -133,12 +133,6 @@ Compétitions sportives internationales, concerts en Zénith, en stade et en tou
 - Arkéa Arena
 - Zénith de Paris
 - Paris Expo Porte de Versailles
-- Estadio Banorte, Mexico
-- MetLife Stadium, New Jersey
-- BMO Field, Toronto
-- Arène de Vérone
-- Stade international de Yokohama
-- Ryōgoku Kokugikan, Tokyo
 
 [Toutes nos références](https://www.darkside-energy.com/references/)
 
@@ -590,7 +584,7 @@ Précisez les quantités, les dates et le lieu : nous vous proposons une solutio
 
 > Notre démarche RSE : le réseau d'abord, des solutions hybrides (HVO, Stage V, batteries), le juste dimensionnement et des engagements internes.
 
-Source : https://www.darkside-energy.com/energie-responsable/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/energie-responsable/ · Dark Side Energy · Mise à jour : 2026-10-06
 
 L'électricité, énergie ressource pour lutter contre le réchauffement climatique, est au cœur de nos métiers. La dynamique RSE est en mouvement depuis de nombreuses années chez Dark Side Energy.
 
@@ -620,7 +614,7 @@ Des sources positionnées au plus proche des centres de charge et des cheminemen
 
 ## Des engagements au quotidien.
 
-- **Des produits éco-responsables dès nos débuts** : projecteurs LED dimmables par système TRIAC, boîtiers électriques intelligents avec gestion des horaires de fonctionnement et de la puissance.
+- **Des équipements qui limitent la consommation, dès nos débuts** : projecteurs LED dimmables par système TRIAC, boîtiers électriques intelligents avec gestion des horaires de fonctionnement et de la puissance.
 - **70 % de nos salariés équipés de véhicules électriques.**
 - **Moins de déplacements** : études menées en visioconférence dès que possible, visites de site mutualisées.
 - **Zéro papier** : échanges et livrables dématérialisés sur des plateformes collaboratives sécurisées.
@@ -796,7 +790,7 @@ Dark Side Energy a été créée en mai 2016. La SARL DARK SIDE ENERGY (SIREN 87
 
 ### Dans quels lieux Dark Side Energy est-elle intervenue ?
 
-Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé à l'Estadio Banorte de Mexico, au MetLife Stadium (New Jersey), au BMO Field de Toronto, à l'Arène de Vérone, sur le lac Léman et au Japon, notamment au Stade international de Yokohama, au Stade de Miyagi et au Ryōgoku Kokugikan de Tokyo. La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
+Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé au Mexique (Mexico), aux États-Unis (New Jersey, Philadelphie, Kansas City), au Canada (Toronto), en Italie (Vérone, Cortina d'Ampezzo, Bormio, Livigno), sur le lac Léman et au Japon (Tokyo, Yokohama, Fukushima, Miyagi). La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
 
 ### Comment demander un devis ?
 
@@ -1311,25 +1305,23 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 
 *Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima et Miyagi.*
 
-- **Estadio Banorte, ex-Estadio Azteca** (Mexico, Mexique)
-- **MetLife Stadium** (East Rutherford, New Jersey, États-Unis)
-- **Lincoln Financial Field** (Philadelphie, États-Unis)
-- **Arrowhead Stadium** (Kansas City, États-Unis)
-- **BMO Field** (Toronto, Canada)
-- **Arène de Vérone** (Vérone, Italie)
-- **Stade de glace de Cortina d'Ampezzo** (Cortina d'Ampezzo, Italie)
-- **Stelvio Ski Centre** (Bormio, Italie)
-- **Livigno Snow Park et Aerials & Moguls Park** (Livigno, Italie)
+- **Mexico** (Mexique)
+- **New Jersey** (États-Unis)
+- **Philadelphie** (États-Unis)
+- **Kansas City** (États-Unis)
+- **Toronto** (Canada)
+- **Vérone** (Italie)
+- **Cortina d'Ampezzo** (Italie)
+- **Bormio** (Italie)
+- **Livigno** (Italie)
 - **Bernardus Golf** (Cromvoirt, Pays-Bas)
 - **Lac Léman** (Genève, Suisse)
-- **Stade international de Yokohama** (Yokohama, Japon)
-- **Stade de Miyagi** (Rifu, Miyagi, Japon)
-- **Fukushima Azuma Baseball Stadium** (Fukushima, Japon)
-- **Ryōgoku Kokugikan** (Tokyo, Japon)
-- **Equestrian Park (Baji Kōen)** (Tokyo, Japon)
-- **Asaka Shooting Range** (Tokyo, Japon)
-- **Enoshima Yacht Harbour** (Fujisawa, Japon)
-- **Izu MTB Course** (Izu, Japon)
+- **Tokyo** (Japon)
+- **Yokohama** (Japon)
+- **Fujisawa** (Japon)
+- **Izu** (Japon)
+- **Fukushima** (Japon)
+- **Miyagi** (Japon)
 
 ## Du salon au stade, de la scène au plateau.
 
@@ -1639,12 +1631,6 @@ International sports competitions, concerts in Zénith arenas, in stadiums and o
 - Arkéa Arena
 - Zénith de Paris
 - Paris Expo Porte de Versailles
-- Estadio Banorte, Mexico City
-- MetLife Stadium, New Jersey
-- BMO Field, Toronto
-- Verona Arena
-- International Stadium Yokohama
-- Ryōgoku Kokugikan, Tokyo
 
 [All our references](https://www.darkside-energy.com/en/references/)
 
@@ -2126,7 +2112,7 @@ Sources positioned as close as possible to the load centres, and cable routes dr
 
 ## Everyday commitments.
 
-- **Eco-friendly products from the very start**: TRIAC-dimmable LED floodlights, smart electrical units managing operating hours and power.
+- **Equipment that limits consumption, from the very start**: TRIAC-dimmable LED floodlights, smart electrical units managing operating hours and power.
 - **70% of our employees have electric vehicles.**
 - **Less travel**: studies carried out by video conference whenever possible, combined site visits.
 - **Paperless**: digital exchanges and deliverables on secure collaborative platforms.
@@ -2302,7 +2288,7 @@ Dark Side Energy was founded in May 2016. DARK SIDE ENERGY SARL (SIREN 879 105 3
 
 ### Which venues has Dark Side Energy worked at?
 
-Dark Side Energy's teams have worked at venues including the Zénith de Lille, Lille Grand Palais, the Stade de France, the Accor Arena, Paris La Défense Arena, the Decathlon Arena Stade Pierre Mauroy, the Arena Grand Paris, the Grand Palais, the Musée du Louvre, the Allianz Riviera and the Stade Vélodrome. Internationally, they have worked at the Estadio Banorte in Mexico City, MetLife Stadium (New Jersey), BMO Field in Toronto, the Verona Arena, on Lake Geneva and in Japan, including the International Stadium Yokohama, Miyagi Stadium and the Ryōgoku Kokugikan in Tokyo. The full list is on the [References](https://www.darkside-energy.com/en/references/) page.
+Dark Side Energy's teams have worked at venues including the Zénith de Lille, Lille Grand Palais, the Stade de France, the Accor Arena, Paris La Défense Arena, the Decathlon Arena Stade Pierre Mauroy, the Arena Grand Paris, the Grand Palais, the Musée du Louvre, the Allianz Riviera and the Stade Vélodrome. Internationally, they have worked in Mexico (Mexico City), the United States (New Jersey, Philadelphia, Kansas City), Canada (Toronto), Italy (Verona, Cortina d'Ampezzo, Bormio, Livigno), on Lake Geneva and in Japan (Tokyo, Yokohama, Fukushima, Miyagi). The full list is on the [References](https://www.darkside-energy.com/en/references/) page.
 
 ### How do I request a quote?
 
@@ -2790,25 +2776,23 @@ Out of respect for the confidentiality agreements signed for each event, we name
 
 *From Carvin: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima and Miyagi.*
 
-- **Estadio Banorte, formerly Estadio Azteca** (Mexico City, Mexico)
-- **MetLife Stadium** (East Rutherford, New Jersey, United States)
-- **Lincoln Financial Field** (Philadelphia, United States)
-- **Arrowhead Stadium** (Kansas City, United States)
-- **BMO Field** (Toronto, Canada)
-- **Verona Arena** (Verona, Italy)
-- **Cortina d'Ampezzo ice stadium** (Cortina d'Ampezzo, Italy)
-- **Stelvio Ski Centre** (Bormio, Italy)
-- **Livigno Snow Park and Aerials & Moguls Park** (Livigno, Italy)
+- **Mexico City** (Mexico)
+- **New Jersey** (United States)
+- **Philadelphia** (United States)
+- **Kansas City** (United States)
+- **Toronto** (Canada)
+- **Verona** (Italy)
+- **Cortina d'Ampezzo** (Italy)
+- **Bormio** (Italy)
+- **Livigno** (Italy)
 - **Bernardus Golf** (Cromvoirt, Netherlands)
 - **Lake Geneva** (Geneva, Switzerland)
-- **International Stadium Yokohama** (Yokohama, Japan)
-- **Miyagi Stadium** (Rifu, Miyagi, Japan)
-- **Fukushima Azuma Baseball Stadium** (Fukushima, Japan)
-- **Ryōgoku Kokugikan** (Tokyo, Japan)
-- **Equestrian Park (Baji Kōen)** (Tokyo, Japan)
-- **Asaka Shooting Range** (Tokyo, Japan)
-- **Enoshima Yacht Harbour** (Fujisawa, Japan)
-- **Izu MTB Course** (Izu, Japan)
+- **Tokyo** (Japan)
+- **Yokohama** (Japan)
+- **Fujisawa** (Japan)
+- **Izu** (Japan)
+- **Fukushima** (Japan)
+- **Miyagi** (Japan)
 
 ## From trade show to stadium, from stage to set.
 

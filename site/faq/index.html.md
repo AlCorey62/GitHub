@@ -27,7 +27,7 @@ Dark Side Energy a été créée en mai 2016. La SARL DARK SIDE ENERGY (SIREN 87
 
 ### Dans quels lieux Dark Side Energy est-elle intervenue ?
 
-Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé à l'Estadio Banorte de Mexico, au MetLife Stadium (New Jersey), au BMO Field de Toronto, à l'Arène de Vérone, sur le lac Léman et au Japon, notamment au Stade international de Yokohama, au Stade de Miyagi et au Ryōgoku Kokugikan de Tokyo. La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
+Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé au Mexique (Mexico), aux États-Unis (New Jersey, Philadelphie, Kansas City), au Canada (Toronto), en Italie (Vérone, Cortina d'Ampezzo, Bormio, Livigno), sur le lac Léman et au Japon (Tokyo, Yokohama, Fukushima, Miyagi). La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
 
 ### Comment demander un devis ?
 

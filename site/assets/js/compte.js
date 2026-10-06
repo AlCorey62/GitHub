@@ -9,7 +9,7 @@ const views = Array.from(document.querySelectorAll("[data-view]"));
 // Messages, selon la langue de la page
 const T = {
   fr: {
-    tooShort: "Le mot de passe doit compter au moins 8 caractères.",
+    tooShort: "Le mot de passe doit compter au moins 12 caractères.",
     mismatch: "Les deux mots de passe ne sont pas identiques.",
     wait: "Un instant…",
     missing: "Saisissez votre e-mail et votre mot de passe.",
@@ -25,7 +25,7 @@ const T = {
     active: "Votre compte client est actif : le bilan de puissance complet est accessible.",
   },
   en: {
-    tooShort: "The password must be at least 8 characters long.",
+    tooShort: "The password must be at least 12 characters long.",
     mismatch: "The two passwords do not match.",
     wait: "One moment…",
     missing: "Enter your email and password.",
@@ -79,7 +79,7 @@ function showSession(session) {
 function newPassword(form) {
   const password = form.querySelector("[name='password']").value;
   const confirm = form.querySelector("[name='confirm']").value;
-  if (password.length < 8) throw new Error(T.tooShort);
+  if (password.length < 12) throw new Error(T.tooShort);
   if (password !== confirm) throw new Error(T.mismatch);
   return password;
 }
