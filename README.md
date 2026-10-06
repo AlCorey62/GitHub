@@ -84,18 +84,36 @@ Situation relevée le 06/10/2026 (registre du .com et DNS publics) :
 - Messagerie Microsoft 365 : MX `darksideenergy-com02b.mail.protection.outlook.com`, CNAME `autodiscover`, CNAME `selector1._domainkey` et `selector2._domainkey`, TXT SPF `v=spf1 include:spf.protection.outlook.com include:mailgun.org -all`, TXT `_dmarc`. Un service d'envoi via Mailgun est aussi déclaré (SPF et TXT `mx._domainkey`).
 - Aucun enregistrement CAA : rien n'empêche la création du certificat HTTPS par Netlify.
 
+#### Option retenue : garder les DNS chez Wix (le plus simple)
+
+Wix reste le gestionnaire DNS : rien ne change chez OVH et aucun abonnement n'est résilié. Seuls les deux enregistrements du site changent. Ceux de la messagerie ne sont pas touchés.
+
+1. Netlify : mettre le site en ligne et le vérifier sur son adresse provisoire `*.netlify.app` (pages, outils, formulaire).
+2. Netlify, *Domain management* : ajouter `www.darkside-energy.com` (domaine principal, celui des adresses canoniques du site), puis `darkside-energy.com`.
+3. Wix, *Domaines*, `darkside-energy.com`, *Gérer les enregistrements DNS* : faire une capture d'écran de tous les enregistrements avant toute modification.
+4. Modifier uniquement ces deux enregistrements :
+   - A de `darkside-energy.com` : remplacer les trois adresses Wix (`185.230.63.107`, `185.230.63.171`, `185.230.63.186`) par la seule adresse `75.2.60.5` (répartiteur de charge Netlify, documentation Netlify « Configure external DNS ») ;
+   - CNAME `www` : remplacer `cdn3.wixdns.net` par l'adresse `*.netlify.app` du site.
+
+   Ne toucher à aucune autre ligne (MX, TXT, `autodiscover`, `_domainkey`, `_dmarc`). Aucun enregistrement AAAA n'existe, rien à modifier de ce côté.
+5. Attendre la propagation : durée de cache actuelle de ces deux enregistrements 1 h, jusqu'à 48 h selon Wix. Netlify crée ensuite le certificat HTTPS.
+6. Vérifier : `https://www.darkside-energy.com`, redirection depuis `darkside-energy.com`, une ancienne adresse (`/test-externe`), le formulaire, l'envoi et la réception d'un e-mail.
+
+À ne pas faire : retirer le domaine de Wix (*Remove from Wix*), changer les serveurs DNS chez OVH, désassigner le domaine du site Wix. La documentation Wix ne dit pas ce que la désassignation change aux DNS : ne l'envisager que si Wix refuse la modification de l'étape 4, après la capture de l'étape 3.
+
+Retour arrière : remettre les valeurs relevées à l'étape 3 (valeurs par défaut documentées par Wix : A `185.230.63.107`, CNAME `www` vers `cdn1.wixdns.net`). Le site Wix n'est pas modifié par l'opération.
+
+Limite : la messagerie reste dépendante des DNS Wix. Garder l'abonnement Wix tant que les DNS y sont.
+
+#### Pour résilier Wix un jour : rapatrier la zone DNS chez OVH
+
 Prérequis : l'accès au compte OVH qui gère le domaine.
 
-Procédure recommandée : rapatrier la zone DNS chez OVH, sans coupure de la messagerie.
-
-1. Dans Netlify, *Domain management* : ajouter `www.darkside-energy.com` (domaine principal, celui des adresses canoniques du site), puis `darkside-energy.com`.
-2. Dans Wix, relever **tous** les enregistrements DNS du domaine. La liste ci-dessus vient de requêtes publiques et peut être incomplète.
-3. Chez OVH, préparer la zone DNS : recopier à l'identique tous les enregistrements relevés dans Wix (messagerie, vérifications), sauf ceux du site, puis ajouter ceux de Netlify :
-   - `darkside-energy.com` : enregistrement A vers `75.2.60.5` (répartiteur de charge Netlify, documentation Netlify « Configure external DNS ») ;
-   - `www.darkside-energy.com` : CNAME vers l'adresse `*.netlify.app` du site.
-4. Chez OVH, remplacer les serveurs DNS de Wix par ceux d'OVH. La propagation prend en général jusqu'à 48 h. Les deux zones contenant les mêmes enregistrements de messagerie, les e-mails continuent d'arriver pendant la bascule.
-5. Vérifier : site en HTTPS sur `www.darkside-energy.com`, redirection depuis `darkside-energy.com`, envoi et réception d'un e-mail de test.
-6. Seulement ensuite, résilier l'offre Wix. Tant que les serveurs DNS sont ceux de Wix, la messagerie en dépend.
+1. Dans Wix, relever **tous** les enregistrements DNS du domaine. La liste ci-dessus vient de requêtes publiques et peut être incomplète.
+2. Chez OVH, préparer la zone DNS : recopier à l'identique tous les enregistrements relevés dans Wix (messagerie, vérifications, site).
+3. Chez OVH, remplacer les serveurs DNS de Wix par ceux d'OVH. La propagation prend en général jusqu'à 48 h. Les deux zones contenant les mêmes enregistrements, les e-mails continuent d'arriver pendant la bascule.
+4. Vérifier le site et l'envoi et la réception d'un e-mail.
+5. Seulement ensuite, résilier l'offre Wix.
 
 Les anciennes adresses Wix (`/test-externe`, `/single-post/...`, `/en/...`) sont redirigées en 301 vers les nouvelles pages (voir `netlify.toml`) : le référencement acquis est conservé. Les autres adresses (`/distribution-electrique`, `/regie-technique`, `/bureaudetude`, `/consulting`, `/nos-produits`, `/calculette-electro`, `/contact`, `/mentions-legales`, `/news`) sont identiques à l'ancien site.
 
