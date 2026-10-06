@@ -80,7 +80,7 @@ Les blocs entre `<!-- head:start -->` et `<!-- head:end -->` (de même `header`,
 Les 24 pages anglaises sont dans `site/en/`, avec des adresses en anglais : `/en/power-distribution/`, `/en/engineering/`, `/en/power-assessment/`, etc. Seules les quatre actualités de 2016 restent en français.
 
 - **Lien entre les deux versions** : chaque page anglaise porte dans son bloc `<!--page -->` les clés `"lang": "en"` et `"alternate": "/adresse-francaise/"`. Le build en déduit le bouton FR / EN de l'en-tête (il mène à la même page dans l'autre langue), les balises `hreflang`, le plan du site et la section anglaise de `llms.txt`. `check.mjs` vérifie que chaque paire se cite dans les deux sens.
-- **Textes communs** (menu, pied de page, fil d'Ariane, appel à l'action) : `NAV_EN`, `CTA_EN` et `UI.en` dans `tools/site.config.mjs`. Le slogan anglais (`sloganEn`) est à valider.
+- **Textes communs** (menu, pied de page, fil d'Ariane, appel à l'action) : `NAV_EN`, `CTA_EN` et `UI.en` dans `tools/site.config.mjs`. Slogan anglais (`sloganEn`) : « The power of electricity, without the tension, fully amped. »
 - **Outils** : les scripts lisent la langue de la page (`<html lang="en">`) pour les messages, les nombres (1,385.6) et l'export CSV (séparateur virgule en anglais, point-virgule en français).
 - **Formulaire** : la version anglaise envoie ses demandes au formulaire Netlify `contact-en`, pour savoir qu'il faut répondre en anglais.
 - **Espace client** : les e-mails de Netlify Identity pointent vers l'accueil français. Le lien ouvre l'espace client anglais (`/en/account/`) si le navigateur du client n'est pas réglé en français.

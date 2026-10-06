@@ -1,4 +1,4 @@
-# The power of electricity, without the tension, with intensity.
+# The power of electricity, without the tension, fully amped.
 
 > Event power distribution, technical management, general coordination and engineering office. Trade shows, concerts, sport and festivals, since 2016.
 

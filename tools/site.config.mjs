@@ -7,8 +7,8 @@ export const SITE = {
   legalForm: "SARL",
   url: "https://www.darkside-energy.com",
   slogan: "La puissance de l'électricité, sans tension, avec intensité.",
-  // Traduction du slogan pour la version anglaise (à valider)
-  sloganEn: "The power of electricity, without the tension, with intensity.",
+  // Slogan de la version anglaise : « amped » (survolté) évoque les ampères, en écho à « intensité »
+  sloganEn: "The power of electricity, without the tension, fully amped.",
   email: "contact@darkside-energy.com",
   phone: "07 68 24 40 88",
   phoneIntl: "+33768244088",
