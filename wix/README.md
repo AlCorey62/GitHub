@@ -89,7 +89,7 @@ Champs, dans l'ordre (référence : `site/contact/index.html`) :
 | Société | Texte | Non |
 | E-mail | E-mail | Oui |
 | Téléphone | Téléphone | Non |
-| Objet | Liste : Distribution électrique ; Régie technique ou personnel ; Coordination générale ; Bureau d'étude ou audit ; Consulting ; Location ou vente de matériel ; Validation d'un bilan de puissance ; Accès au bilan de puissance en ligne ; Candidature ; Autre demande | Oui |
+| Objet | Liste : Distribution électrique ; Régie technique ou personnel ; Coordination générale ; Bureau d'étude ou audit ; Consulting ; Location de matériel clé en main ; Validation d'un bilan de puissance ; Accès au bilan de puissance en ligne ; Candidature ; Autre demande | Oui |
 | Dates de l'événement | Texte, aide « ex. montage le 12, exploitation du 13 au 15 » | Non |
 | Lieu | Texte, aide « ex. Lille Grand Palais, hall 1 » | Non |
 | Message | Texte long, aide « Décrivez votre projet : type d'événement, besoins connus, puissance, plans disponibles… » | Oui |
@@ -148,7 +148,7 @@ Pour le site :
 
 Incohérences relevées :
 
-- Anciennes mentions légales Wix : adresse à Phalempin et SIRET 879 105 377 00011 (établissement fermé). Siège actuel : 37 rue Thibaut, 62220 Carvin, SIRET 879 105 377 00029.
+- Anciennes mentions légales Wix : adresse à Phalempin et SIRET 879 105 377 00011 (établissement fermé). Siège actuel : Carvin, SIRET 879 105 377 00029 (adresse complète dans les mentions légales seulement).
 - Calibre maximal des armoires : « Du coffret 16 A à l'armoire 2 000 A » (/distribution-electrique et menu, repris de l'ancien site) contre « De 16 A à 1 600 A » (/nos-produits, catalogue de location Rentman).
 - Description de l'entreprise dans Wix (projecteurs pour ERP) : voir section 5.
 

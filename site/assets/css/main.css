@@ -980,7 +980,8 @@ a.tag:hover {
 .stat__value {
   display: block;
   margin-bottom: 12px;
-  font-size: clamp(1.45rem, 1rem + 1.15vw, 2.05rem);
+  font-size: clamp(1.35rem, 1rem + 0.8vw, 1.7rem);
+  white-space: nowrap;
   font-weight: 800;
   font-stretch: 108%;
   line-height: 1.1;

@@ -19,7 +19,7 @@ Dark Side Energy est une entreprise française spécialisée dans la distributio
 
 ### Où est basée Dark Side Energy et où intervient-elle ?
 
-Le siège de Dark Side Energy est situé au 37 rue Thibaut, 62220 Carvin, dans le Pas-de-Calais (Hauts-de-France). Ses équipes interviennent en France et à l'international.
+Dark Side Energy est basée à Carvin, dans le Pas-de-Calais (Hauts-de-France). Le siège ne reçoit pas de public : ses équipes interviennent directement sur les sites, en France et à l'international.
 
 ### Depuis quand Dark Side Energy existe-t-elle ?
 
@@ -55,7 +55,7 @@ Des visites de site, des études de raccordement, des bilans de puissance, des s
 
 ### Peut-on louer du matériel sans technicien ?
 
-Oui, en location sèche : armoires et coffrets, câbles P17 et Powerlock, passages de câbles Modulo avec rampes PMR, groupes électrogènes et packs batteries. Le matériel peut aussi être installé et exploité par les équipes de Dark Side Energy. Voir la page [Matériel](https://www.darkside-energy.com/nos-produits/).
+Non. Le matériel est loué uniquement en clé en main : armoires et coffrets, câbles P17 et Powerlock, passages de câbles Modulo avec rampes PMR, groupes électrogènes et packs batteries sont fournis avec les équipes de Dark Side Energy, qui les installent et les exploitent. Dark Side Energy ne fait ni location sèche, ni vente. Voir la page [Matériel](https://www.darkside-energy.com/nos-produits/).
 
 ### Qu'est-ce qu'un groupe électrogène Twin zéro coupure ?
 

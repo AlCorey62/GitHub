@@ -10,6 +10,7 @@ export const SITE = {
   email: "contact@darkside-energy.com",
   phone: "07 68 24 40 88",
   phoneIntl: "+33768244088",
+  // Adresse du siège (domicile du gérant) : affichée seulement dans les mentions légales, obligation légale
   address: {
     street: "37 rue Thibaut",
     postalCode: "62220",
@@ -36,7 +37,7 @@ export const NAV = [
     key: "metiers",
     label: "Métiers",
     children: [
-      { key: "distribution", label: "Distribution électrique", desc: "Du coffret 16 A à l'armoire 2 000 A", href: "distribution-electrique/" },
+      { key: "distribution", label: "Distribution électrique", desc: "Du coffret de stand à l'armoire de puissance", href: "distribution-electrique/" },
       { key: "regie", label: "Régie technique", desc: "Équipes, sous-traitance et logistique", href: "regie-technique/" },
       { key: "coordination", label: "Coordination générale", desc: "Direction technique et régie générale", href: "coordination-generale/" },
       { key: "bureau", label: "Bureau d'étude", desc: "Bilans, schémas, plans et notes de calcul", href: "bureaudetude/" },
@@ -67,7 +68,7 @@ export const CTA = { label: "Demander un devis", href: "contact/" };
 export const ENTITY = {
   foundingDate: "2016",
   description:
-    "Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle loue et vend aussi du matériel de distribution électrique.",
+    "Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.",
   knowsAbout: [
     "Distribution électrique événementielle",
     "Régie technique",
@@ -103,10 +104,11 @@ export const ENTITY = {
 export const LLMS = {
   facts: [
     "Raison sociale : DARK SIDE ENERGY, SARL, SIREN 879 105 377",
-    "Siège : 37 rue Thibaut, 62220 Carvin, France (Pas-de-Calais, Hauts-de-France)",
+    "Siège : Carvin, Pas-de-Calais (Hauts-de-France), France",
     "Activité : distribution électrique événementielle (code NAF 90.02Z, activités de soutien au spectacle vivant)",
     "Création : 2016 ; SARL immatriculée en novembre 2019",
-    "Capacités : de la distribution 16 A jusqu'aux armoires 2 000 A, groupes électrogènes de 6 à 2 000 kVA, expertise haute et basse tension",
+    "Capacités : distribution électrique du coffret de stand à l'armoire de puissance, sur réseau, groupe électrogène ou batterie, expertise haute et basse tension",
+    "Matériel : location uniquement clé en main, avec installation et exploitation par les équipes de Dark Side Energy ; pas de location sèche ni de vente",
     "Zone d'intervention : France et international",
     "Lieux où les équipes sont intervenues (sélection) : Zénith de Lille, Lille Grand Palais, Stade de France, Accor Arena, Paris La Défense Arena, Decathlon Arena Stade Pierre Mauroy, Arena Grand Paris, Grand Palais, Musée du Louvre, Allianz Riviera, Stade Vélodrome, Golf National",
     "À l'international (sélection) : Estadio Banorte (Mexico), MetLife Stadium (New Jersey), Lincoln Financial Field (Philadelphie), Arrowhead Stadium (Kansas City), BMO Field (Toronto), Arène de Vérone, Cortina d'Ampezzo, Bormio et Livigno (Italie), Bernardus Golf (Pays-Bas), lac Léman (Genève)",
@@ -119,7 +121,7 @@ export const LLMS = {
     ["Outils de calcul en ligne", ["/bilan-de-puissance/", "/calculette-electro/"]],
     ["Ressources", ["/faq/", "/lexique/", "/news/", "/news/distribution-electrique-evenementielle/", "/news/groupe-twin-zero-coupure/", "/news/section-de-cable/", "/news/pourquoi-ca-saute/"]],
     ["Entreprise", ["/entreprise/", "/references/", "/contact/"]],
-    ["Optional", ["/mentions-legales/", "/news/creation-dark-side-energy/", "/news/fetes-maritimes-brest-2016/", "/news/lille-grand-palais-2016/", "/news/repertoire-national-des-electros/"]],
+    ["Optional", ["/news/creation-dark-side-energy/", "/news/fetes-maritimes-brest-2016/", "/news/lille-grand-palais-2016/", "/news/repertoire-national-des-electros/"]],
   ],
 };
 

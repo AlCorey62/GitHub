@@ -11,8 +11,6 @@
   "telephone": "+33768244088",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "37 rue Thibaut",
-    "postalCode": "62220",
     "addressLocality": "Carvin",
     "addressRegion": "Hauts-de-France",
     "addressCountry": "FR"
@@ -29,7 +27,7 @@
       "value": "87910537700029"
     }
   ],
-  "description": "Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle loue et vend aussi du matériel de distribution électrique.",
+  "description": "Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.",
   "foundingDate": "2016",
   "image": "{{URL_WIX:og-image.png}}",
   "areaServed": [

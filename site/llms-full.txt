@@ -1,6 +1,6 @@
 # Dark Side Energy : contenu complet du site
 
-> Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle loue et vend aussi du matériel de distribution électrique.
+> Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.
 
 Site : https://www.darkside-energy.com/ · Généré le 2026-10-06
 
@@ -22,10 +22,10 @@ Distribution électrique, régie technique, coordination générale et bureau d'
 - Événements sportifs
 - Festivals de plein air
 
-- **16 A → 2 000 A** : De la petite distribution électrique aux grandes armoires de puissance
-- **6 → 2 000 kVA** : Des groupes électrogènes à la mesure de chaque événement
-- **Depuis 2016** : Des milliers de prestations événementielles réalisées par nos équipes
+- **Sur le terrain** : Des électriciens spécialisés dans l'événementiel, du montage au démontage
+- **Bureau d'étude** : Bilans de puissance, schémas et plans, exploitables sur place
 - **HT + BT** : Du poste source jusqu'au tableau de distribution, toute la chaîne en interne
+- **Clé en main** : Matériel, installation et exploitation par nos équipes, sans location sèche
 
 ## Dark Side Energy, qui sommes-nous ?
 
@@ -55,9 +55,9 @@ Bilans de puissance, schémas unifilaires, plans d'implantation et notes de calc
 
 Nous analysons vos attentes, élaborons un cahier des charges clair et précis, puis trouvons les meilleurs produits et les meilleurs collaborateurs.
 
-### [Matériel, location et vente](https://www.darkside-energy.com/nos-produits/)
+### [Matériel en location clé en main](https://www.darkside-energy.com/nos-produits/)
 
-Armoires, coffrets, câbles P17 et Powerlock, groupes, packs batteries, passages de câbles PMR : en location sèche ou avec nos équipes.
+Armoires, coffrets, câbles P17 et Powerlock, groupes, packs batteries, passages de câbles PMR : toujours fournis avec nos équipes, qui les installent et les exploitent.
 
 ## Le terrain au service de l'étude.
 
@@ -103,7 +103,7 @@ Nous maîtrisons les technologies alternatives et nous les mettons en avant aupr
 
 [Notre démarche](https://www.darkside-energy.com/energie-responsable/)
 
-### Énergie disponible en location
+### Énergie en location clé en main
 
 - **Packs batteries** : 45 kVA / 55 kWh
 - 90 kVA / 120 kWh
@@ -181,9 +181,9 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 ---
 
-# Du coffret 16 A à l'armoire 2 000 A.
+# Du coffret de stand à l'armoire de puissance.
 
-> Techniciens électriciens spécialisés dans l'événementiel : du coffret 16 A à l'armoire 2 000 A, du groupe électrogène 6 kVA au 2 000 kVA.
+> Techniciens électriciens spécialisés dans l'événementiel : distribution électrique du coffret de stand à l'armoire de puissance, sur réseau, groupe électrogène ou batterie.
 
 Source : https://www.darkside-energy.com/distribution-electrique/ · Dark Side Energy · Mise à jour : 2026-09-25
 
@@ -196,10 +196,10 @@ Dark Side Energy intègre une équipe de techniciens électriciens spécialisés
 
 Nous installons votre matériel ou celui que vous avez loué, selon vos plans ou selon les nôtres, préparés avec notre [bureau d'étude](https://www.darkside-energy.com/bureaudetude/).
 
-De la petite distribution électrique aux grandes armoires de puissance, du groupe électrogène 6 kVA au 2 000 kVA, nous prenons en charge toute la chaîne. Nous pouvons également vous aider à constituer vos équipes via notre [régie technique](https://www.darkside-energy.com/regie-technique/).
+De la petite distribution électrique aux grandes armoires de puissance, sur le réseau, un groupe électrogène ou une batterie, nous prenons en charge toute la chaîne. Nous pouvons également vous aider à constituer vos équipes via notre [régie technique](https://www.darkside-energy.com/regie-technique/).
 
 - **Distribution complète** : armoires, coffrets, câbles, connectique [P17](https://www.darkside-energy.com/lexique/#p17) et [Powerlock](https://www.darkside-energy.com/lexique/#powerlock).
-- **Monophasé, triphasé et tétraphasé**, de 16 A à 2 000 A.
+- **Monophasé, triphasé et tétraphasé**, du coffret de stand aux armoires de puissance.
 - **Coffrets de stand** pour les salons, foires et expositions.
 - **Groupes électrogènes**, dont les configurations Twin zéro coupure.
 - **Raccordements temporaires** tarif bleu et tarif jaune, compteurs forains.
@@ -241,7 +241,6 @@ Deux groupes électrogènes synchronisés tournent en même temps et fournissent
 - **P17 63 A triphasé** : 43,6 kVA
 - **P17 125 A triphasé** : 86,6 kVA
 - **Powerlock 400 A** : 277,1 kVA
-- **Armoire 2 000 A** : 1 385,6 kVA
 
 Calcul théorique en 400 V : `S = √3 × U × I`, sans foisonnement ni marge. [Tous les repères dans la calculette électro](https://www.darkside-energy.com/calculette-electro/).
 
@@ -511,11 +510,11 @@ Un événement à lancer, un lieu à équiper, un service à développer : chaqu
 
 # Le matériel qui fait passer le courant.
 
-> Location et vente : passages de câbles Modulo PMR, armoires et coffrets, câbles P17 et Powerlock, groupes électrogènes Stage V, packs batteries.
+> Location clé en main : armoires, coffrets, câbles P17 et Powerlock, passages de câbles PMR, groupes et batteries, installés et exploités par nos équipes.
 
 Source : https://www.darkside-energy.com/nos-produits/ · Dark Side Energy · Mise à jour : 2026-09-25
 
-Armoires, coffrets, câbles, énergie et passages de câbles : en location sèche, en prestation avec nos équipes, ou à la vente pour vos propres installations.
+Armoires, coffrets, câbles, énergie et passages de câbles : le matériel est fourni avec nos équipes, qui l'installent, l'exploitent et le démontent. Nous ne faisons ni location sèche, ni vente.
 
 [Demander un devis](https://www.darkside-energy.com/contact/?objet=materiel)
 
@@ -533,13 +532,13 @@ Conçus pour l'événementiel et les ERP (établissements recevant du public), l
 - **Modularité** : Par multiple de 5 canaux, les éléments s'additionnent sans limite
 - **Rampes** : Conformes aux normes PMR (personnes à mobilité réduite) : accès sécurisé et facilité pour tous
 - **Usage** : Événementiel, ERP, installations temporaires
-- **Formules** : Location ponctuelle, location à la saison ou à l'année, vente
+- **Formule** : Location clé en main, posés et déposés par nos équipes
 
-## De 16 A à 1 600 A.
+## Du coffret de stand à l'armoire de puissance.
 
-Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un hall ou un village, et des coffrets de stand pour les salons. En vente, nous réalisons aussi des coffrets et armoires sur mesure.
+Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un hall ou un village, et des coffrets de stand pour les salons.
 
-*Location*
+*Location clé en main*
 
 | Matériel | Départs |
 | --- | --- |
@@ -550,15 +549,11 @@ Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un h
 | Armoire 125 A tétra | 12 × 16 A, 4 × 32 A tri, 2 × 63 A tri, recopie |
 | Armoires de puissance | 250 A, 400 A, 1 000 A, 1 600 A |
 
-À la vente et sur mesure : coffrets polyester 32 A et 63 A, armoires sur châssis métallique de 125 A à 400 A, coffrets de raccordement tarif bleu.
-
 ## P17 et Powerlock, de 2 à 50 m.
 
 Des câbles souples prolongateurs pour tous les calibres courants de l'événementiel, et la terre qui va avec : câble 16 mm² et piquets de terre.
 
-À la vente : câbles au mètre (R2V, U1000 R2V), rallonges et multiprises, connectique P17 Mennekes, sets et embases Powerlock et PowerSyntax.
-
-*Location, longueurs disponibles selon les références*
+*Location clé en main, longueurs selon les références*
 
 | Câble | Connecteur | Calibre | Longueurs |
 | --- | --- | --- | --- |
@@ -582,13 +577,13 @@ Le réseau quand c'est possible, des groupes récents ou des batteries quand c'e
 - **Raccordements** : Raccordements temporaires tarif bleu et tarif jaune, jusqu'à 400 A
 - **Et aussi** : Climatisation 100 kW à détente directe, éclairage LED
 
-Disponibilités, quantités et tarifs sur demande. Le matériel peut être loué seul (location sèche) ou installé et exploité par nos équipes.
+Disponibilités, quantités et tarifs sur demande. Le matériel est toujours loué avec nos équipes, qui l'installent, l'exploitent et le démontent : pas de location sèche.
 
 ## Un besoin de matériel ?
 
-Location sèche, prestation avec nos équipes ou achat : précisez les quantités, les dates et le lieu, nous vous répondons rapidement.
+Précisez les quantités, les dates et le lieu : nous vous proposons une solution clé en main, du matériel à son exploitation.
 
-[Demander un devis matériel](https://www.darkside-energy.com/contact/?objet=materiel)
+[Demander un devis](https://www.darkside-energy.com/contact/?objet=materiel)
 [contact@darkside-energy.com](mailto:contact@darkside-energy.com)
 
 ---
@@ -795,7 +790,7 @@ Dark Side Energy est une entreprise française spécialisée dans la distributio
 
 ### Où est basée Dark Side Energy et où intervient-elle ?
 
-Le siège de Dark Side Energy est situé au 37 rue Thibaut, 62220 Carvin, dans le Pas-de-Calais (Hauts-de-France). Ses équipes interviennent en France et à l'international.
+Dark Side Energy est basée à Carvin, dans le Pas-de-Calais (Hauts-de-France). Le siège ne reçoit pas de public : ses équipes interviennent directement sur les sites, en France et à l'international.
 
 ### Depuis quand Dark Side Energy existe-t-elle ?
 
@@ -831,7 +826,7 @@ Des visites de site, des études de raccordement, des bilans de puissance, des s
 
 ### Peut-on louer du matériel sans technicien ?
 
-Oui, en location sèche : armoires et coffrets, câbles P17 et Powerlock, passages de câbles Modulo avec rampes PMR, groupes électrogènes et packs batteries. Le matériel peut aussi être installé et exploité par les équipes de Dark Side Energy. Voir la page [Matériel](https://www.darkside-energy.com/nos-produits/).
+Non. Le matériel est loué uniquement en clé en main : armoires et coffrets, câbles P17 et Powerlock, passages de câbles Modulo avec rampes PMR, groupes électrogènes et packs batteries sont fournis avec les équipes de Dark Side Energy, qui les installent et les exploitent. Dark Side Energy ne fait ni location sèche, ni vente. Voir la page [Matériel](https://www.darkside-energy.com/nos-produits/).
 
 ### Qu'est-ce qu'un groupe électrogène Twin zéro coupure ?
 
@@ -1343,7 +1338,7 @@ Parlez-nous de votre projet : lieu, dates et besoins connus suffisent pour comme
 
 # Parlons de votre événement.
 
-> Contactez Dark Side Energy pour un devis : distribution électrique, régie, coordination, bureau d'étude, matériel. 37 rue Thibaut, 62220 Carvin.
+> Contactez Dark Side Energy pour un devis : distribution électrique, régie, coordination, bureau d'étude, matériel clé en main. Intervention en France et à l'international.
 
 Source : https://www.darkside-energy.com/contact/ · Dark Side Energy · Mise à jour : 2026-09-25
 
@@ -1352,14 +1347,11 @@ Distribution électrique, régie, coordination, étude ou matériel : décrivez-
 ## Coordonnées
 
 **Dark Side Energy**
-37 rue Thibaut
-62220 Carvin
+Nos équipes viennent à vous, partout en France et à l'international. Pas d'accueil du public au siège.
 
 [contact@darkside-energy.com](mailto:contact@darkside-energy.com)
 
 [07 68 24 40 88](tel:+33768244088)
-
-[Voir sur une carte (OpenStreetMap)](https://www.openstreetmap.org/search?query=37%20rue%20Thibaut%2062220%20Carvin)
 
 ## Pour un devis efficace
 
@@ -1367,73 +1359,6 @@ Distribution électrique, régie, coordination, étude ou matériel : décrivez-
 - Les dates de montage, d'exploitation et de démontage.
 - La liste de vos besoins, ou votre [bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/).
 - Vos plans, que vous pourrez nous transmettre en réponse à notre premier e-mail.
-
----
-
-# Mentions légales et confidentialité.
-
-> Mentions légales du site Dark Side Energy : éditeur, hébergement, propriété intellectuelle, données personnelles et stockage local.
-
-Source : https://www.darkside-energy.com/mentions-legales/ · Dark Side Energy · Mise à jour : 2026-09-25
-
-Conformément aux dispositions des articles 6-III et 19 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, nous vous informons que :
-
-## Éditeur du site
-
-- **Raison sociale** : DARK SIDE ENERGY
-- **Forme juridique** : SARL (société à responsabilité limitée)
-- **Capital social** : [à compléter]
-- **Siège social** : 37 rue Thibaut, 62220 Carvin, France
-- **SIREN** : 879 105 377
-- **SIRET du siège** : 879 105 377 00029
-- **RCS** : [à compléter : greffe d'immatriculation]
-- **TVA intracommunautaire** : [à compléter]
-- **Téléphone** : [07 68 24 40 88](tel:+33768244088)
-- **E-mail** : [contact@darkside-energy.com](mailto:contact@darkside-energy.com)
-- **Directeur de la publication** : Damien Nirel, gérant
-
-## Hébergement
-
-[à compléter selon l'hébergeur retenu : raison sociale, adresse et téléphone de l'hébergeur]
-
-## Propriété intellectuelle
-
-L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés. Les marques, textes, logos et photos de ce site sont la propriété de Dark Side Energy, sauf mention contraire. La reproduction de tout ou partie de ce site est formellement interdite sauf autorisation expresse de la société éditrice.
-
-Crédits : police de caractères Archivo (SIL Open Font License 1.1), icônes Lucide (licence ISC) et Simple Icons (licence CC0).
-
-## Données personnelles
-
-Les informations que Dark Side Energy est susceptible de réunir résultent de l'enregistrement volontaire de coordonnées fournies par l'internaute, lui permettant de recevoir une documentation, un devis, ou de se renseigner sur un point quelconque. Ces informations ne seront jamais transmises à des tiers.
-
-- **Responsable du traitement** : DARK SIDE ENERGY, 37 rue Thibaut, 62220 Carvin.
-- **Données collectées** par le formulaire de contact : nom, société, e-mail, téléphone, objet, dates et lieu de l'événement, message.
-- **Finalités** : répondre à votre demande (devis, information, candidature) et en assurer le suivi.
-- **Base légale** : votre consentement, recueilli par la case à cocher du formulaire, et les mesures précontractuelles prises à votre demande.
-- **Destinataires** : les seules équipes de Dark Side Energy. Les messages transitent par l'hébergeur du site, qui agit en qualité de sous-traitant.
-- **Durée de conservation** : 3 ans à compter du dernier contact pour les demandes commerciales, 2 ans pour les candidatures.
-
-**Comptes clients du bilan de puissance** : ouverts sur invitation de Dark Side Energy. L'adresse e-mail et le mot de passe du client, jamais stocké en clair, sont gérés par le service d'authentification de l'hébergeur du site (Netlify Identity), qui agit en qualité de sous-traitant. Finalité : donner accès à la version complète de l'outil. Conservation : tant que le compte est actif ; il est supprimé sur simple demande.
-
-Conformément au règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment. Pour exercer ces droits, il vous suffit de nous contacter par e-mail : [damien@darkside-energy.com](mailto:damien@darkside-energy.com). Vous pouvez également adresser une réclamation à la CNIL ([www.cnil.fr](https://www.cnil.fr/)).
-
-## Cookies et stockage local
-
-Ce site n'utilise ni cookie publicitaire, ni outil de mesure d'audience, ni service tiers de suivi. Les polices de caractères sont hébergées avec le site : aucune donnée n'est transmise à un service tiers lors de votre visite.
-
-L'outil Bilan de puissance enregistre vos saisies dans le stockage local de votre navigateur pour que vous les retrouviez à votre prochaine visite. Ces données restent sur votre appareil et ne nous sont pas transmises, sauf si vous choisissez de nous envoyer votre bilan. Vous pouvez les supprimer à tout moment avec le bouton « Tout effacer » de l'outil ou depuis les réglages de votre navigateur. Si vous êtes connecté à votre compte client, votre jeton de session est conservé de la même façon, jusqu'à la déconnexion.
-
-## Contenu du site et outils de calcul
-
-Dark Side Energy ne peut garantir l'exactitude, la précision, l'actualisation ou l'exhaustivité des informations mises à disposition sur ce site. En conséquence, Dark Side Energy décline toute responsabilité pour les éventuelles imprécisions, inexactitudes ou omissions portant sur des informations disponibles sur ce site.
-
-Les résultats des outils Bilan de puissance et Calculette électro sont fournis à titre indicatif. Ils ne remplacent pas une étude réalisée par un professionnel qualifié et ne sauraient engager la responsabilité de Dark Side Energy.
-
-Dark Side Energy s'engage à tout faire pour que le site www.darkside-energy.com soit accessible à tout moment, mais décline toute responsabilité en cas de difficulté d'accès ou d'interruption de la connexion, quelles qu'en soient les causes. Dark Side Energy se réserve le droit de procéder à toute modification du site qu'elle jugera utile, sans avertissement préalable.
-
-## Droit applicable
-
-Le présent site et ses mentions légales sont soumis au droit français.
 
 ---
 

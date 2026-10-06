@@ -164,10 +164,9 @@ function organizationLd() {
     slogan: SITE.slogan,
     email: SITE.email,
     telephone: SITE.phoneIntl,
+    // Siège au domicile du gérant : ville seulement (adresse complète dans les mentions légales)
     address: {
       "@type": "PostalAddress",
-      streetAddress: SITE.address.street,
-      postalCode: SITE.address.postalCode,
       addressLocality: SITE.address.city,
       addressRegion: SITE.address.region,
       addressCountry: SITE.address.country,
@@ -419,7 +418,6 @@ function footer(cfg, ctx) {
   const { root } = ctx;
   const metiers = NAV.find((n) => n.key === "metiers").children;
   const outils = NAV.find((n) => n.key === "outils").children;
-  const a = SITE.address;
   const socials = SITE.socials
     .map((s) => `<li><a href="${s.href}" rel="noopener" target="_blank" aria-label="${esc(s.label)} (nouvelle fenêtre)">${icon(s.icon)}</a></li>`)
     .join("");
@@ -435,7 +433,7 @@ function footer(cfg, ctx) {
       .map((m) => `<li><a href="${root}${m.href}">${esc(m.label)}</a></li>`)
       .join("")}</ul></nav>`,
     `<nav aria-label="Ressources"><p class="footer-title">Ressources</p><ul class="footer-links">`,
-    `<li><a href="${root}nos-produits/">Matériel, location et vente</a></li>`,
+    `<li><a href="${root}nos-produits/">Matériel en location clé en main</a></li>`,
     `<li><a href="${root}energie-responsable/">Énergie responsable</a></li>`,
     `<li><a href="${root}references/">Références</a></li>`,
     ...outils.map((o) => `<li><a href="${root}${o.href}">${esc(o.label)}</a></li>`),
@@ -443,7 +441,7 @@ function footer(cfg, ctx) {
     `</ul></nav>`,
     `<div><p class="footer-title">Contact</p>`,
     `<address class="footer-contact">`,
-    `<p>${SITE.name}<br>${esc(a.street)}<br>${a.postalCode} ${esc(a.city)}</p>`,
+    `<p>${SITE.name}<br>Hauts-de-France, interventions partout en France et à l'international</p>`,
     `<p><a href="mailto:${SITE.email}">${SITE.email}</a><br><a href="tel:${SITE.phoneIntl}">${SITE.phone.replace(/ /g, "\u00A0")}</a></p>`,
     `</address>`,
     `<a class="btn btn--sm" href="${root}${CTA.href}">${esc(CTA.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,

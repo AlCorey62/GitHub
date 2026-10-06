@@ -10,10 +10,10 @@ Distribution électrique, régie technique, coordination générale et bureau d'
 - Événements sportifs
 - Festivals de plein air
 
-- **16 A → 2 000 A** : De la petite distribution électrique aux grandes armoires de puissance
-- **6 → 2 000 kVA** : Des groupes électrogènes à la mesure de chaque événement
-- **Depuis 2016** : Des milliers de prestations événementielles réalisées par nos équipes
+- **Sur le terrain** : Des électriciens spécialisés dans l'événementiel, du montage au démontage
+- **Bureau d'étude** : Bilans de puissance, schémas et plans, exploitables sur place
 - **HT + BT** : Du poste source jusqu'au tableau de distribution, toute la chaîne en interne
+- **Clé en main** : Matériel, installation et exploitation par nos équipes, sans location sèche
 
 ## Dark Side Energy, qui sommes-nous ?
 
@@ -43,9 +43,9 @@ Bilans de puissance, schémas unifilaires, plans d'implantation et notes de calc
 
 Nous analysons vos attentes, élaborons un cahier des charges clair et précis, puis trouvons les meilleurs produits et les meilleurs collaborateurs.
 
-### [Matériel, location et vente](https://www.darkside-energy.com/nos-produits)
+### [Matériel en location clé en main](https://www.darkside-energy.com/nos-produits)
 
-Armoires, coffrets, câbles P17 et Powerlock, groupes, packs batteries, passages de câbles PMR : en location sèche ou avec nos équipes.
+Armoires, coffrets, câbles P17 et Powerlock, groupes, packs batteries, passages de câbles PMR : toujours fournis avec nos équipes, qui les installent et les exploitent.
 
 ## Le terrain au service de l'étude.
 
@@ -91,7 +91,7 @@ Nous maîtrisons les technologies alternatives et nous les mettons en avant aupr
 
 [Notre démarche](https://www.darkside-energy.com/energie-responsable)
 
-### Énergie disponible en location
+### Énergie en location clé en main
 
 - **Packs batteries** : 45 kVA / 55 kWh
 - 90 kVA / 120 kWh

@@ -8,10 +8,11 @@
 //  - llms.txt : résumé pour les IA, adapté aux adresses Wix
 // La note wix/README.md est rédigée à la main et n'est pas modifiée par ce script.
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, statSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, dirname, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { SITE, NAV } from "./site.config.mjs";
+import { pageToMarkdown } from "./markdown.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE_DIR = join(ROOT, "site");
@@ -149,7 +150,10 @@ mkdirSync(join(OUT, "textes"), { recursive: true });
 const textFile = (u, i) => `${String(i + 1).padStart(2, "0")}-${ldDir(u)}.md`;
 order.forEach((u, i) => {
   const p = pages.get(u);
-  const md = readFileSync(join(dirname(p.file), "index.html.md"), "utf8")
+  // Page non indexée (mentions légales) : pas de version Markdown publiée, on la produit ici
+  const mdFile = join(dirname(p.file), "index.html.md");
+  const source = existsSync(mdFile) ? readFileSync(mdFile, "utf8") : pageToMarkdown(readFileSync(p.file, "utf8"), SITE.url + u);
+  const md = source
     .split("\n")
     .filter((l) => l !== `> ${p.cfg.description}` && !l.startsWith("Source : "))
     .join("\n")

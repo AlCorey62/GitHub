@@ -1,6 +1,6 @@
-# Du coffret 16 A à l'armoire 2 000 A.
+# Du coffret de stand à l'armoire de puissance.
 
-> Techniciens électriciens spécialisés dans l'événementiel : du coffret 16 A à l'armoire 2 000 A, du groupe électrogène 6 kVA au 2 000 kVA.
+> Techniciens électriciens spécialisés dans l'événementiel : distribution électrique du coffret de stand à l'armoire de puissance, sur réseau, groupe électrogène ou batterie.
 
 Source : https://www.darkside-energy.com/distribution-electrique/ · Dark Side Energy · Mise à jour : 2026-09-25
 
@@ -13,10 +13,10 @@ Dark Side Energy intègre une équipe de techniciens électriciens spécialisés
 
 Nous installons votre matériel ou celui que vous avez loué, selon vos plans ou selon les nôtres, préparés avec notre [bureau d'étude](https://www.darkside-energy.com/bureaudetude/).
 
-De la petite distribution électrique aux grandes armoires de puissance, du groupe électrogène 6 kVA au 2 000 kVA, nous prenons en charge toute la chaîne. Nous pouvons également vous aider à constituer vos équipes via notre [régie technique](https://www.darkside-energy.com/regie-technique/).
+De la petite distribution électrique aux grandes armoires de puissance, sur le réseau, un groupe électrogène ou une batterie, nous prenons en charge toute la chaîne. Nous pouvons également vous aider à constituer vos équipes via notre [régie technique](https://www.darkside-energy.com/regie-technique/).
 
 - **Distribution complète** : armoires, coffrets, câbles, connectique [P17](https://www.darkside-energy.com/lexique/#p17) et [Powerlock](https://www.darkside-energy.com/lexique/#powerlock).
-- **Monophasé, triphasé et tétraphasé**, de 16 A à 2 000 A.
+- **Monophasé, triphasé et tétraphasé**, du coffret de stand aux armoires de puissance.
 - **Coffrets de stand** pour les salons, foires et expositions.
 - **Groupes électrogènes**, dont les configurations Twin zéro coupure.
 - **Raccordements temporaires** tarif bleu et tarif jaune, compteurs forains.
@@ -58,7 +58,6 @@ Deux groupes électrogènes synchronisés tournent en même temps et fournissent
 - **P17 63 A triphasé** : 43,6 kVA
 - **P17 125 A triphasé** : 86,6 kVA
 - **Powerlock 400 A** : 277,1 kVA
-- **Armoire 2 000 A** : 1 385,6 kVA
 
 Calcul théorique en 400 V : `S = √3 × U × I`, sans foisonnement ni marge. [Tous les repères dans la calculette électro](https://www.darkside-energy.com/calculette-electro/).
 

@@ -2,9 +2,9 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://www.darkside-energy.com/nos-produits#service",
-  "name": "Location et vente de matériel de distribution électrique",
-  "serviceType": "Location de matériel électrique événementiel",
-  "description": "Location et vente : passages de câbles Modulo PMR, armoires et coffrets, câbles P17 et Powerlock, groupes électrogènes Stage V, packs batteries.",
+  "name": "Location clé en main de matériel de distribution électrique",
+  "serviceType": "Location de matériel électrique événementiel avec installation et exploitation",
+  "description": "Location clé en main : armoires, coffrets, câbles P17 et Powerlock, passages de câbles PMR, groupes et batteries, installés et exploités par nos équipes.",
   "url": "https://www.darkside-energy.com/nos-produits",
   "provider": {
     "@type": "Organization",

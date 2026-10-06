@@ -1,10 +1,10 @@
 # Le matériel qui fait passer le courant.
 
-> Location et vente : passages de câbles Modulo PMR, armoires et coffrets, câbles P17 et Powerlock, groupes électrogènes Stage V, packs batteries.
+> Location clé en main : armoires, coffrets, câbles P17 et Powerlock, passages de câbles PMR, groupes et batteries, installés et exploités par nos équipes.
 
 Source : https://www.darkside-energy.com/nos-produits/ · Dark Side Energy · Mise à jour : 2026-09-25
 
-Armoires, coffrets, câbles, énergie et passages de câbles : en location sèche, en prestation avec nos équipes, ou à la vente pour vos propres installations.
+Armoires, coffrets, câbles, énergie et passages de câbles : le matériel est fourni avec nos équipes, qui l'installent, l'exploitent et le démontent. Nous ne faisons ni location sèche, ni vente.
 
 [Demander un devis](https://www.darkside-energy.com/contact/?objet=materiel)
 
@@ -22,13 +22,13 @@ Conçus pour l'événementiel et les ERP (établissements recevant du public), l
 - **Modularité** : Par multiple de 5 canaux, les éléments s'additionnent sans limite
 - **Rampes** : Conformes aux normes PMR (personnes à mobilité réduite) : accès sécurisé et facilité pour tous
 - **Usage** : Événementiel, ERP, installations temporaires
-- **Formules** : Location ponctuelle, location à la saison ou à l'année, vente
+- **Formule** : Location clé en main, posés et déposés par nos équipes
 
-## De 16 A à 1 600 A.
+## Du coffret de stand à l'armoire de puissance.
 
-Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un hall ou un village, et des coffrets de stand pour les salons. En vente, nous réalisons aussi des coffrets et armoires sur mesure.
+Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un hall ou un village, et des coffrets de stand pour les salons.
 
-*Location*
+*Location clé en main*
 
 | Matériel | Départs |
 | --- | --- |
@@ -39,15 +39,11 @@ Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un h
 | Armoire 125 A tétra | 12 × 16 A, 4 × 32 A tri, 2 × 63 A tri, recopie |
 | Armoires de puissance | 250 A, 400 A, 1 000 A, 1 600 A |
 
-À la vente et sur mesure : coffrets polyester 32 A et 63 A, armoires sur châssis métallique de 125 A à 400 A, coffrets de raccordement tarif bleu.
-
 ## P17 et Powerlock, de 2 à 50 m.
 
 Des câbles souples prolongateurs pour tous les calibres courants de l'événementiel, et la terre qui va avec : câble 16 mm² et piquets de terre.
 
-À la vente : câbles au mètre (R2V, U1000 R2V), rallonges et multiprises, connectique P17 Mennekes, sets et embases Powerlock et PowerSyntax.
-
-*Location, longueurs disponibles selon les références*
+*Location clé en main, longueurs selon les références*
 
 | Câble | Connecteur | Calibre | Longueurs |
 | --- | --- | --- | --- |
@@ -71,11 +67,11 @@ Le réseau quand c'est possible, des groupes récents ou des batteries quand c'e
 - **Raccordements** : Raccordements temporaires tarif bleu et tarif jaune, jusqu'à 400 A
 - **Et aussi** : Climatisation 100 kW à détente directe, éclairage LED
 
-Disponibilités, quantités et tarifs sur demande. Le matériel peut être loué seul (location sèche) ou installé et exploité par nos équipes.
+Disponibilités, quantités et tarifs sur demande. Le matériel est toujours loué avec nos équipes, qui l'installent, l'exploitent et le démontent : pas de location sèche.
 
 ## Un besoin de matériel ?
 
-Location sèche, prestation avec nos équipes ou achat : précisez les quantités, les dates et le lieu, nous vous répondons rapidement.
+Précisez les quantités, les dates et le lieu : nous vous proposons une solution clé en main, du matériel à son exploitation.
 
-[Demander un devis matériel](https://www.darkside-energy.com/contact/?objet=materiel)
+[Demander un devis](https://www.darkside-energy.com/contact/?objet=materiel)
 [contact@darkside-energy.com](mailto:contact@darkside-energy.com)

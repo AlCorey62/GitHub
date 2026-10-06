@@ -5,14 +5,11 @@ Distribution électrique, régie, coordination, étude ou matériel : décrivez-
 ## Coordonnées
 
 **Dark Side Energy**
-37 rue Thibaut
-62220 Carvin
+Nos équipes viennent à vous, partout en France et à l'international. Pas d'accueil du public au siège.
 
 [contact@darkside-energy.com](mailto:contact@darkside-energy.com)
 
 [07 68 24 40 88](tel:+33768244088)
-
-[Voir sur une carte (OpenStreetMap)](https://www.openstreetmap.org/search?query=37%20rue%20Thibaut%2062220%20Carvin)
 
 ## Pour un devis efficace
 

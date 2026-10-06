@@ -1,6 +1,6 @@
 # Parlons de votre événement.
 
-> Contactez Dark Side Energy pour un devis : distribution électrique, régie, coordination, bureau d'étude, matériel. 37 rue Thibaut, 62220 Carvin.
+> Contactez Dark Side Energy pour un devis : distribution électrique, régie, coordination, bureau d'étude, matériel clé en main. Intervention en France et à l'international.
 
 Source : https://www.darkside-energy.com/contact/ · Dark Side Energy · Mise à jour : 2026-09-25
 
@@ -9,14 +9,11 @@ Distribution électrique, régie, coordination, étude ou matériel : décrivez-
 ## Coordonnées
 
 **Dark Side Energy**
-37 rue Thibaut
-62220 Carvin
+Nos équipes viennent à vous, partout en France et à l'international. Pas d'accueil du public au siège.
 
 [contact@darkside-energy.com](mailto:contact@darkside-energy.com)
 
 [07 68 24 40 88](tel:+33768244088)
-
-[Voir sur une carte (OpenStreetMap)](https://www.openstreetmap.org/search?query=37%20rue%20Thibaut%2062220%20Carvin)
 
 ## Pour un devis efficace
 
