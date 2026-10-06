@@ -336,6 +336,11 @@ hr {
   align-items: start;
 }
 
+/* Section sur une seule colonne : largeur de lecture */
+.measure {
+  max-width: 780px;
+}
+
 .split--reverse > :first-child {
   order: 2;
 }

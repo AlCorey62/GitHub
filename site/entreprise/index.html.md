@@ -49,11 +49,7 @@ Le réseau d'abord, l'hybride quand il le faut, et toujours le juste dimensionne
 
 « Le dessin est d'autant plus pertinent lorsqu'il est réalisé par des personnes l'ayant déjà appréhendé sur site. Notre façon de travailler est née de ce principe. »
 
-Plus de 15 ans d'expérience en énergie événementielle internationale, au service de vos projets.
-
-> Ce qui fait la force de cette équipe, ce n'est pas son organigramme. C'est son niveau d'expérience.
->
-> **Damien Nirel**, gérant et directeur technique
+**Damien Nirel**, gérant et directeur technique : plus de 15 ans d'expérience en énergie événementielle internationale, au service de vos projets.
 
 ## Rejoins le côté obscur de l'électricité !
 

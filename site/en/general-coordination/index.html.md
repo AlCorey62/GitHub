@@ -38,10 +38,6 @@ The many trades under our roof, such as engineering, technical and production ma
 - Trade shows and conferences
 - Ceremonies
 
-> What makes this team strong is not its organisation chart. It is its level of experience.
->
-> **Damien Nirel**, managing director and technical director
-
 ## A role to fill on your event?
 
 Technical direction, production management, coordination: let's talk about your organisation and your needs.

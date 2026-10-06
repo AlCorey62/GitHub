@@ -38,10 +38,6 @@ La multitude de métiers chez nous, comme l'ingénierie, la régie technique et 
 - Salons et congrès
 - Cérémonies
 
-> Ce qui fait la force de cette équipe, ce n'est pas son organigramme. C'est son niveau d'expérience.
->
-> **Damien Nirel**, gérant et directeur technique
-
 ## Un poste à pourvoir sur votre événement ?
 
 Direction technique, régie générale, coordination : parlons de votre organisation et de vos besoins.
