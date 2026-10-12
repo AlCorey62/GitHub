@@ -123,16 +123,64 @@
     closeSubs();
   });
 
-  // Apparition au défilement
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  // Titres principaux : chaque mot est enveloppé pour monter l'un après l'autre
+  if (!reduceMotion) {
+    document.querySelectorAll(".hero h1, .page-hero h1").forEach(function (h1) {
+      var i = 0;
+      (function wrap(node) {
+        Array.prototype.slice.call(node.childNodes).forEach(function (child) {
+          if (child.nodeType === 1) return wrap(child);
+          if (child.nodeType !== 3 || !child.textContent.trim()) return;
+          var frag = document.createDocumentFragment();
+          var parts = child.textContent.split(/([ \t\n\r]+)/);
+          // Ponctuation collée à l'élément précédent (« tension, ») : rattachée à son dernier mot
+          var prev = child.previousSibling;
+          var last = prev && prev.nodeType === 1 && prev.querySelectorAll(".w > span");
+          if (parts[0] && last && last.length) {
+            var tail = document.createElement("span");
+            tail.style.color = getComputedStyle(node).color;
+            tail.textContent = parts.shift();
+            last[last.length - 1].appendChild(tail);
+          }
+          parts.forEach(function (part) {
+            if (!part) return;
+            if (/^[ \t\n\r]+$/.test(part)) return frag.appendChild(document.createTextNode(part));
+            var outer = document.createElement("span");
+            var inner = document.createElement("span");
+            outer.className = "w";
+            inner.style.setProperty("--i", i++);
+            inner.textContent = part;
+            outer.appendChild(inner);
+            frag.appendChild(outer);
+          });
+          node.replaceChild(frag, child);
+        });
+      })(h1);
+      h1.classList.add("split-words");
+    });
+  }
+
+  // Apparition au défilement : les éléments visibles en même temps arrivent l'un après l'autre.
+  // Une fois l'apparition terminée, la classe reveal est retirée pour rendre aux éléments leurs propres transitions.
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && reveals.length) {
     var io = new IntersectionObserver(
       function (entries) {
+        var batch = 0;
         entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            io.unobserve(entry.target);
-          }
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          if (!el.hasAttribute("data-delay")) el.style.transitionDelay = Math.min(batch, 6) * 0.08 + "s";
+          batch++;
+          el.classList.add("is-visible");
+          io.unobserve(el);
+          setTimeout(function () {
+            el.style.transitionDelay = "";
+            el.classList.remove("reveal");
+          }, 1600);
         });
       },
       { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
@@ -144,6 +192,71 @@
     reveals.forEach(function (el) {
       el.classList.add("is-visible");
     });
+  }
+
+  // Lueur qui suit le pointeur : cartes et haut de l'accueil
+  if (finePointer) {
+    var pending = null;
+    document.addEventListener(
+      "pointermove",
+      function (e) {
+        if (pending) return;
+        pending = requestAnimationFrame(function () {
+          pending = null;
+          var card = e.target.closest && e.target.closest(".card");
+          if (card) {
+            var r = card.getBoundingClientRect();
+            card.style.setProperty("--mx", e.clientX - r.left + "px");
+            card.style.setProperty("--my", e.clientY - r.top + "px");
+          }
+          var hero = e.target.closest && e.target.closest(".hero");
+          if (hero) {
+            var h = hero.getBoundingClientRect();
+            hero.style.setProperty("--px", e.clientX - h.left + "px");
+            hero.style.setProperty("--py", e.clientY - h.top + "px");
+          }
+        });
+      },
+      { passive: true }
+    );
+  }
+
+  // Grand bandeau des métiers : il dérive lentement et accélère avec le défilement
+  var kinetic = document.querySelector(".kinetic");
+  if (kinetic && !reduceMotion) {
+    var rows = Array.prototype.map.call(kinetic.querySelectorAll(".kinetic__row"), function (row) {
+      return { track: row.querySelector(".kinetic__track"), reverse: row.classList.contains("kinetic__row--reverse"), half: 0 };
+    });
+    var measure = function () {
+      rows.forEach(function (r) {
+        r.half = r.track.scrollWidth / 2;
+      });
+    };
+    var running = false;
+    var frame = function (t) {
+      if (!running) return;
+      var pos = t * 0.03 + window.scrollY * 0.45;
+      rows.forEach(function (r) {
+        if (!r.half) return;
+        var offset = ((pos % r.half) + r.half) % r.half;
+        r.track.style.setProperty("--shift", (r.reverse ? offset - r.half : -offset).toFixed(1) + "px");
+      });
+      requestAnimationFrame(frame);
+    };
+    measure();
+    window.addEventListener("resize", measure, { passive: true });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        var visible = entries[entries.length - 1].isIntersecting;
+        if (visible && !running) {
+          running = true;
+          measure();
+          requestAnimationFrame(frame);
+        } else if (!visible) {
+          running = false;
+        }
+      }).observe(kinetic);
+    }
   }
 
   // Année courante
