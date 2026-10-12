@@ -43,7 +43,7 @@ Le réseau d'abord, l'hybride quand il le faut, et toujours le juste dimensionne
 
 ## Une double culture ingénierie et terrain.
 
-« Le dessin est d'autant plus pertinent lorsqu'il est réalisé par des personnes l'ayant déjà appréhendé sur site. Notre façon de travailler est née de ce principe. »
+Le dessin est d'autant plus pertinent lorsqu'il est réalisé par des personnes l'ayant déjà appréhendé sur site. Notre façon de travailler est née de ce principe.
 
 **Damien Nirel**, gérant et directeur technique : plus de 15 ans d'expérience en énergie événementielle internationale, au service de vos projets.
 

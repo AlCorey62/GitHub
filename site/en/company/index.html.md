@@ -47,7 +47,7 @@ The grid first, hybrid when needed, and always the right sizing.
 
 ## A dual culture of engineering and fieldwork.
 
-“A drawing is all the more relevant when it is made by people who have already experienced it on site. Our way of working was born from this principle.”
+A drawing is all the more relevant when it is made by people who have already experienced it on site. Our way of working was born from this principle.
 
 **Damien Nirel**, managing director and technical director: more than 15 years of experience in international event power, at the service of your projects.
 

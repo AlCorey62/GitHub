@@ -1049,46 +1049,6 @@ a.tag:hover {
   .stat:last-child { border-bottom: 0; }
 }
 
-/* Citation / crédo */
-.quote {
-  position: relative;
-  margin: 0;
-  padding: clamp(28px, 4vw, 48px);
-  border-radius: var(--radius);
-  background:
-    radial-gradient(90% 140% at 0% 0%, rgba(195, 0, 0, 0.18), transparent 60%),
-    var(--c-surface);
-  border: 1px solid var(--c-line);
-}
-
-.quote p {
-  font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
-  font-weight: 560;
-  line-height: 1.35;
-  color: #fff;
-  font-stretch: 105%;
-}
-
-.quote footer {
-  font-size: var(--fs-sm);
-  color: var(--c-text-3);
-  letter-spacing: 0.04em;
-}
-
-.quote footer strong {
-  color: var(--c-text-2);
-}
-
-.quote::before {
-  content: "";
-  position: absolute;
-  left: clamp(28px, 4vw, 48px);
-  top: 0;
-  width: 64px;
-  height: 3px;
-  background: var(--c-brand);
-}
-
 /* Étapes */
 .steps {
   counter-reset: step;

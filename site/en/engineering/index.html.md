@@ -17,10 +17,6 @@ Technical design expertise and operational knowledge add up: this dual role in e
 
 We can also design standards-compliant distribution boxes and special adaptors, and put you in touch with the right suppliers.
 
-> From the grid connection agreement to the client's socket, the whole chain is covered in-house. No grey areas in the design: a single shared understanding, from the substation down to the distribution board.
->
-> **Damien Nirel**, managing director and technical director
-
 ## From site visit to calculation notes.
 
 Every deliverable carries a full title block (title, author, revision index, status) and a revision history. Bilingual French and English deliverables on request.

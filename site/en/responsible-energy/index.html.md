@@ -26,10 +26,6 @@ Power assessments drawn up with realistic diversity factors, based on our operat
 
 Sources positioned as close as possible to the load centres, and cable routes drawn to keep cable lengths down. Stable source areas, to limit the risk of fuel-related pollution.
 
-> Power assessments are not based solely on manufacturers' data sheets: they draw on real data built up over thousands of events delivered by our teams since 2016. This grounding in the field lets us size installations just right.
->
-> **Damien Nirel**, managing director and technical director
-
 ## Everyday commitments.
 
 - **Equipment that limits consumption, from the very start**: TRIAC-dimmable LED floodlights, smart electrical units managing operating hours and power.

@@ -27,10 +27,6 @@ Le recrutement d'un personnel qualifié et expérimenté, la gestion des sous-tr
 
 Artistes, organisateurs, lieux : ce qui se passe en coulisses reste en coulisses. C'est aussi pour cela que, sur ce site, nous parlons de lieux plutôt que de clients.
 
-> La réactivité n'est pas un argument commercial, c'est une condition de base dans notre travail.
->
-> **Damien Nirel**, gérant et directeur technique
-
 ## Vous cherchez le technicien idéal pour votre prestation ?
 
 Vous êtes organisateur, prestataire ou loueur de matériel de distribution électrique et vous avez besoin d'électriciens ? Contactez-nous : nous trouvons le profil adapté à votre prestation, du technicien au chef d'équipe.

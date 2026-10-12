@@ -17,10 +17,6 @@ L'expertise technique de conception et la connaissance opérationnelle s'additio
 
 Nous pouvons également concevoir des coffrets électriques et des adaptateurs spéciaux aux normes, et vous mettre en relation avec les bons fournisseurs.
 
-> De la convention de raccordement jusqu'à la prise du client, toute la chaîne est couverte en interne. Pas de zone grise dans la conception : une lecture commune, du poste source jusqu'au tableau de distribution.
->
-> **Damien Nirel**, gérant et directeur technique
-
 ## De la visite de site aux notes de calcul.
 
 Chaque livrable porte un cartouche complet (titre, auteur, indice de révision, statut) et un historique des révisions. Livrables bilingues français et anglais sur demande.

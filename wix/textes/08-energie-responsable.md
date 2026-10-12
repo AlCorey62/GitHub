@@ -22,10 +22,6 @@ Des bilans de puissance établis avec des coefficients de foisonnement réaliste
 
 Des sources positionnées au plus proche des centres de charge et des cheminements tracés pour limiter le linéaire de câble. Des zones de sources stables, pour limiter les risques de pollution liés au carburant.
 
-> Les bilans de puissance ne partent pas uniquement des fiches techniques fabricants : ils s'appuient sur des données réelles accumulées au fil de milliers de prestations événementielles réalisées par nos équipes depuis 2016. Cette base de terrain nous permet de calibrer les installations à leur juste dimension.
->
-> **Damien Nirel**, gérant et directeur technique
-
 ## Des engagements au quotidien.
 
 - **Des équipements qui limitent la consommation, dès nos débuts** : projecteurs LED dimmables par système TRIAC, boîtiers électriques intelligents avec gestion des horaires de fonctionnement et de la puissance.

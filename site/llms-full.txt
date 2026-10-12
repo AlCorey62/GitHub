@@ -2,7 +2,7 @@
 
 > Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.
 
-Site : https://www.darkside-energy.com/ · Généré le 2026-10-06
+Site : https://www.darkside-energy.com/ · Généré le 2026-10-12
 
 ---
 
@@ -282,10 +282,6 @@ Le recrutement d'un personnel qualifié et expérimenté, la gestion des sous-tr
 
 Artistes, organisateurs, lieux : ce qui se passe en coulisses reste en coulisses. C'est aussi pour cela que, sur ce site, nous parlons de lieux plutôt que de clients.
 
-> La réactivité n'est pas un argument commercial, c'est une condition de base dans notre travail.
->
-> **Damien Nirel**, gérant et directeur technique
-
 ## Vous cherchez le technicien idéal pour votre prestation ?
 
 Vous êtes organisateur, prestataire ou loueur de matériel de distribution électrique et vous avez besoin d'électriciens ? Contactez-nous : nous trouvons le profil adapté à votre prestation, du technicien au chef d'équipe.
@@ -376,10 +372,6 @@ Le dessin est d'autant plus pertinent lorsqu'il est réalisé par des personnes 
 L'expertise technique de conception et la connaissance opérationnelle s'additionnent : cette double casquette d'ingénierie et de régie de terrain permet d'anticiper les fragilités à consolider, de proposer des solutions pragmatiques et efficientes, et de produire des livrables réellement exploitables par les équipes sur place le moment venu.
 
 Nous pouvons également concevoir des coffrets électriques et des adaptateurs spéciaux aux normes, et vous mettre en relation avec les bons fournisseurs.
-
-> De la convention de raccordement jusqu'à la prise du client, toute la chaîne est couverte en interne. Pas de zone grise dans la conception : une lecture commune, du poste source jusqu'au tableau de distribution.
->
-> **Damien Nirel**, gérant et directeur technique
 
 ## De la visite de site aux notes de calcul.
 
@@ -607,10 +599,6 @@ Des bilans de puissance établis avec des coefficients de foisonnement réaliste
 ### Des implantations optimisées
 
 Des sources positionnées au plus proche des centres de charge et des cheminements tracés pour limiter le linéaire de câble. Des zones de sources stables, pour limiter les risques de pollution liés au carburant.
-
-> Les bilans de puissance ne partent pas uniquement des fiches techniques fabricants : ils s'appuient sur des données réelles accumulées au fil de milliers de prestations événementielles réalisées par nos équipes depuis 2016. Cette base de terrain nous permet de calibrer les installations à leur juste dimension.
->
-> **Damien Nirel**, gérant et directeur technique
 
 ## Des engagements au quotidien.
 
@@ -1231,7 +1219,7 @@ Le réseau d'abord, l'hybride quand il le faut, et toujours le juste dimensionne
 
 ## Une double culture ingénierie et terrain.
 
-« Le dessin est d'autant plus pertinent lorsqu'il est réalisé par des personnes l'ayant déjà appréhendé sur site. Notre façon de travailler est née de ce principe. »
+Le dessin est d'autant plus pertinent lorsqu'il est réalisé par des personnes l'ayant déjà appréhendé sur site. Notre façon de travailler est née de ce principe.
 
 **Damien Nirel**, gérant et directeur technique : plus de 15 ans d'expérience en énergie événementielle internationale, au service de vos projets.
 
@@ -1780,10 +1768,6 @@ Our teams handle the recruitment of qualified, experienced crew, subcontractor m
 
 Artists, organisers, venues: what happens backstage stays backstage. That is also why, on this site, we talk about venues rather than clients.
 
-> Responsiveness is not a selling point: it is a basic requirement of our work.
->
-> **Damien Nirel**, managing director and technical director
-
 ## Looking for the ideal technician for your job?
 
 Are you an organiser, a service provider or a power distribution equipment hire company in need of electricians? Get in touch: we will find the right profile for your job, from technician to crew chief.
@@ -1874,10 +1858,6 @@ A drawing is all the more relevant when it is made by people who have already de
 Technical design expertise and operational knowledge add up: this dual role in engineering and on-site technical management lets us anticipate the weak points that need strengthening, propose pragmatic and efficient solutions, and produce deliverables that the teams on site can genuinely use when the time comes.
 
 We can also design standards-compliant distribution boxes and special adaptors, and put you in touch with the right suppliers.
-
-> From the grid connection agreement to the client's socket, the whole chain is covered in-house. No grey areas in the design: a single shared understanding, from the substation down to the distribution board.
->
-> **Damien Nirel**, managing director and technical director
 
 ## From site visit to calculation notes.
 
@@ -2105,10 +2085,6 @@ Power assessments drawn up with realistic diversity factors, based on our operat
 ### Optimised layouts
 
 Sources positioned as close as possible to the load centres, and cable routes drawn to keep cable lengths down. Stable source areas, to limit the risk of fuel-related pollution.
-
-> Power assessments are not based solely on manufacturers' data sheets: they draw on real data built up over thousands of events delivered by our teams since 2016. This grounding in the field lets us size installations just right.
->
-> **Damien Nirel**, managing director and technical director
 
 ## Everyday commitments.
 
@@ -2702,7 +2678,7 @@ The grid first, hybrid when needed, and always the right sizing.
 
 ## A dual culture of engineering and fieldwork.
 
-“A drawing is all the more relevant when it is made by people who have already experienced it on site. Our way of working was born from this principle.”
+A drawing is all the more relevant when it is made by people who have already experienced it on site. Our way of working was born from this principle.
 
 **Damien Nirel**, managing director and technical director: more than 15 years of experience in international event power, at the service of your projects.
 
