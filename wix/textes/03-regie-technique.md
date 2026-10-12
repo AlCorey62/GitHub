@@ -35,9 +35,9 @@ Nos équipes suivent une formation continue : habilitations électriques mainten
 
 [Demander du personnel](https://www.darkside-energy.com/contact)
 
-### Tu es électro ?
+### Vous êtes électro ?
 
-Rejoins le côté obscur de l'électricité ! Tu as tes habilitations et tu veux travailler sur des salons, des concerts et des événements sportifs ? Fais-toi connaître.
+Rejoignez le côté obscur de l'électricité ! Vous avez vos habilitations et vous voulez travailler sur des salons, des concerts et des événements sportifs ? Faites-vous connaître.
 
 [Envoyer ma candidature](https://www.darkside-energy.com/contact)
 

@@ -64,7 +64,7 @@ Actualité · 23 juin 2016 · 1 min
 
 ### [Répertoire national des électros](https://www.darkside-energy.com/single-post/2016/06/23/r%C3%A9pertoire-national-des-%C3%A9lectros)
 
-Tu es électro, tu as tes habilitations, tu cherches du travail ? Rejoins le côté obscur de l'électricité !
+Vous êtes électro, vous avez vos habilitations, vous cherchez du travail ? Rejoignez le côté obscur de l'électricité !
 
 Actualité · 26 mai 2016 · 1 min
 

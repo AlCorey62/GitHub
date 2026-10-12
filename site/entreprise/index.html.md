@@ -51,11 +51,11 @@ Le dessin est d'autant plus pertinent lorsqu'il est réalisé par des personnes 
 
 **Damien Nirel**, gérant et directeur technique : plus de 15 ans d'expérience en énergie événementielle internationale, au service de vos projets.
 
-## Rejoins le côté obscur de l'électricité !
+## Rejoignez le côté obscur de l'électricité !
 
-Tu es électro, tu as tes habilitations, tu cherches du travail ?
+Vous êtes électro, vous avez vos habilitations, vous cherchez du travail ?
 
-Salons, concerts, événements sportifs, cérémonies : fais-toi connaître et rejoins nos équipes.
+Salons, concerts, événements sportifs, cérémonies : faites-vous connaître et rejoignez nos équipes.
 
 [Envoyer ma candidature](https://www.darkside-energy.com/contact/?objet=candidature)
 

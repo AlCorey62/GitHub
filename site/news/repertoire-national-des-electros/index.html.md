@@ -6,9 +6,9 @@ Source : https://www.darkside-energy.com/news/repertoire-national-des-electros/ 
 
 23 juin 2016 · 1 min de lecture · Mis à jour le 25 septembre 2026
 
-**Rejoins le côté obscur de l'électricité !**
+**Rejoignez le côté obscur de l'électricité !**
 
-Tu es électro, tu as tes habilitations, tu cherches du travail ? Fais-toi connaître auprès de Dark Side Energy et sois contacté pour travailler avec des sociétés professionnelles de location et de prestation dans le milieu événementiel et culturel !
+Vous êtes électro, vous avez vos habilitations, vous cherchez du travail ? Faites-vous connaître auprès de Dark Side Energy et soyez contacté pour travailler avec des sociétés professionnelles de location et de prestation dans le milieu événementiel et culturel !
 
 Vous êtes prestataire ou loueur de matériel de distribution électrique et vous avez besoin d'électriciens ? [Contactez-nous](https://www.darkside-energy.com/contact/?objet=regie) pour trouver le technicien idéal pour votre prestation !
 
