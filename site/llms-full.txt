@@ -117,7 +117,7 @@ Configurations à valider avec notre bureau d'étude selon votre bilan de puissa
 
 Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
 
-*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima et Miyagi.*
+*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - Zénith de Lille
 - Lille Grand Palais
@@ -1531,7 +1531,7 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
 
-*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima et Miyagi.*
+*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - **Mexico** (Mexique)
 - **New Jersey** (États-Unis)
@@ -1843,7 +1843,7 @@ Configurations to be validated with our engineering office, based on your power 
 
 International sports competitions, concerts in Zénith arenas, in stadiums and on tour, fairs, trade shows, corporate shows, festivals or ceremonies.
 
-*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima and Miyagi.*
+*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - Zénith de Lille
 - Lille Grand Palais
@@ -3230,7 +3230,7 @@ Out of respect for the confidentiality agreements signed for each event, we name
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
 
-*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima and Miyagi.*
+*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - **Mexico City** (Mexico)
 - **New Jersey** (United States)

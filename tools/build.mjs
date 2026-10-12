@@ -527,7 +527,8 @@ function worldMap(cfg, ctx) {
     return `<text class="map__label${l.hq ? " map__label--hq" : ""}" x="${r1(x + l.dx)}" y="${r1(y + l.dy)}" text-anchor="${l.anchor}">${esc(en && l.en ? l.en : l.text)}</text>`;
   });
   const names = MAP.places.map((p) => (en && p.en ? p.en : p.name));
-  const list = `${names.slice(0, -1).join(", ")} ${en ? "and" : "et"} ${names[names.length - 1]}`;
+  // Liste ouverte (pas de « et » final) : ce ne sont que quelques-unes des villes
+  const list = `${names.join(", ")}…`;
   return [
     `<figure class="map reveal">`,
     `<div class="map__canvas no-md">`,
@@ -535,8 +536,8 @@ function worldMap(cfg, ctx) {
     `<svg class="map__layer" viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img" aria-labelledby="carte-titre carte-desc">`,
     en ? `<title id="carte-titre">Our work abroad</title>` : `<title id="carte-titre">Nos interventions à l'international</title>`,
     en
-      ? `<desc id="carte-desc">Lines link France to the cities around the world where ${esc(SITE.name)} teams have worked: ${esc(list)}.</desc>`
-      : `<desc id="carte-desc">Des lignes relient la France aux villes du monde où les équipes de ${esc(SITE.name)} sont intervenues : ${esc(list)}.</desc>`,
+      ? `<desc id="carte-desc">Lines link France to the cities around the world where ${esc(SITE.name)} teams have worked, including: ${esc(list)}</desc>`
+      : `<desc id="carte-desc">Des lignes relient la France aux villes du monde où les équipes de ${esc(SITE.name)} sont intervenues, notamment : ${esc(list)}</desc>`,
     ...dots,
     ...arcs,
     ...flows,
@@ -546,7 +547,7 @@ function worldMap(cfg, ctx) {
     ...labels,
     `</svg>`,
     `</div>`,
-    en ? `<figcaption class="map__caption">Around the world: ${esc(list)}.</figcaption>` : `<figcaption class="map__caption">À travers le monde : ${esc(list)}.</figcaption>`,
+    en ? `<figcaption class="map__caption">Around the world: ${esc(list)}</figcaption>` : `<figcaption class="map__caption">À travers le monde : ${esc(list)}</figcaption>`,
     `</figure>`,
   ].join("\n");
 }
