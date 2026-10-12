@@ -31,6 +31,8 @@ Our teams handle the recruitment of qualified, experienced crew, subcontractor m
 
 Artists, organisers, venues: what happens backstage stays backstage. That is also why, on this site, we talk about venues rather than clients.
 
+*Generator park at night.*
+
 ## Looking for the ideal technician for your job?
 
 Are you an organiser, a service provider or a power distribution equipment hire company in need of electricians? Get in touch: we will find the right profile for your job, from technician to crew chief.

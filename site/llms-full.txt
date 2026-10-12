@@ -69,7 +69,7 @@ Et de la convention de raccordement jusqu'à la prise du client, toute la chaîn
 
 [Le bureau d'étude](https://www.darkside-energy.com/bureaudetude/)
 
-*Cheminement de câbles sur site.*
+*Câbles de puissance au pied des conteneurs.*
 
 ## Chaque événement est unique, et donc sa configuration également.
 
@@ -281,6 +281,8 @@ Le recrutement d'un personnel qualifié et expérimenté, la gestion des sous-tr
 ## Un contrat de confidentialité signé sur chaque événement.
 
 Artistes, organisateurs, lieux : ce qui se passe en coulisses reste en coulisses. C'est aussi pour cela que, sur ce site, nous parlons de lieux plutôt que de clients.
+
+*Parc de groupes électrogènes, de nuit.*
 
 ## Vous cherchez le technicien idéal pour votre prestation ?
 
@@ -522,6 +524,8 @@ Conçus pour l'événementiel et les ERP (établissements recevant du public), l
 
 Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un hall ou un village, et des coffrets de stand pour les salons.
 
+*Armoire de distribution et départs P17.*
+
 *Location clé en main*
 
 | Matériel | Départs |
@@ -536,6 +540,8 @@ Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un h
 ## P17 et Powerlock, de 2 à 50 m.
 
 Des câbles souples prolongateurs pour tous les calibres courants de l'événementiel, et la terre qui va avec : câble 16 mm² et piquets de terre.
+
+*Connecteurs Powerlock sur un site enneigé.*
 
 *Location clé en main, longueurs selon les références*
 
@@ -1463,6 +1469,8 @@ Le dessin est d'autant plus pertinent lorsqu'il est réalisé par des personnes 
 
 **Damien Nirel**, gérant et directeur technique : plus de 15 ans d'expérience en énergie événementielle internationale, au service de vos projets.
 
+*L'équipe sur le terrain.*
+
 ## Rejoignez le côté obscur de l'électricité !
 
 Vous êtes électro, vous avez vos habilitations, vous cherchez du travail ?
@@ -1795,7 +1803,7 @@ And from the grid connection agreement to the client's socket, the whole chain i
 
 [The engineering office](https://www.darkside-energy.com/en/engineering/)
 
-*Cable routing on site.*
+*Power cables at the foot of the containers.*
 
 ## Every event is unique, and so is its set-up.
 
@@ -2007,6 +2015,8 @@ Our teams handle the recruitment of qualified, experienced crew, subcontractor m
 ## A confidentiality agreement signed for every event.
 
 Artists, organisers, venues: what happens backstage stays backstage. That is also why, on this site, we talk about venues rather than clients.
+
+*Generator park at night.*
 
 ## Looking for the ideal technician for your job?
 
@@ -2248,6 +2258,8 @@ Designed for events and for buildings open to the public (French *ERP*), Modulo 
 
 Ready-to-use four-pole distribution cabinets to supply a stage, a hall or a village, and stand power boxes for trade shows.
 
+*Distribution cabinet and P17 outlets.*
+
 *Turnkey hire*
 
 | Equipment | Outputs |
@@ -2262,6 +2274,8 @@ Ready-to-use four-pole distribution cabinets to supply a stage, a hall or a vill
 ## P17 and Powerlock, from 2 to 50 m.
 
 Flexible extension cables for every rating commonly used in events, and the earthing to go with them: 16 mm² cable and earth rods.
+
+*Powerlock connectors on a snowy site.*
 
 *Turnkey hire, lengths depending on the reference*
 
@@ -3161,6 +3175,8 @@ The grid first, hybrid when needed, and always the right sizing.
 A drawing is all the more relevant when it is made by people who have already experienced it on site. Our way of working was born from this principle.
 
 **Damien Nirel**, managing director and technical director: more than 15 years of experience in international event power, at the service of your projects.
+
+*The team on site.*
 
 ## Join the dark side of electricity!
 

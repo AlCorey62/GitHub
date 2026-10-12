@@ -28,6 +28,8 @@ Conçus pour l'événementiel et les ERP (établissements recevant du public), l
 
 Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un hall ou un village, et des coffrets de stand pour les salons.
 
+*Armoire de distribution et départs P17.*
+
 *Location clé en main*
 
 | Matériel | Départs |
@@ -42,6 +44,8 @@ Des armoires tétrapolaires prêtes à l'emploi pour distribuer une scène, un h
 ## P17 et Powerlock, de 2 à 50 m.
 
 Des câbles souples prolongateurs pour tous les calibres courants de l'événementiel, et la terre qui va avec : câble 16 mm² et piquets de terre.
+
+*Connecteurs Powerlock sur un site enneigé.*
 
 *Location clé en main, longueurs selon les références*
 

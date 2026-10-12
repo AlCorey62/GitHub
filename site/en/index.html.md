@@ -61,7 +61,7 @@ And from the grid connection agreement to the client's socket, the whole chain i
 
 [The engineering office](https://www.darkside-energy.com/en/engineering/)
 
-*Cable routing on site.*
+*Power cables at the foot of the containers.*
 
 ## Every event is unique, and so is its set-up.
 

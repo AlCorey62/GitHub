@@ -57,7 +57,7 @@ Et de la convention de raccordement jusqu'à la prise du client, toute la chaîn
 
 [Le bureau d'étude](https://www.darkside-energy.com/bureaudetude)
 
-*Cheminement de câbles sur site.*
+*Câbles de puissance au pied des conteneurs.*
 
 ## Chaque événement est unique, et donc sa configuration également.
 

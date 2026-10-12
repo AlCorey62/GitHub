@@ -28,6 +28,8 @@ Designed for events and for buildings open to the public (French *ERP*), Modulo 
 
 Ready-to-use four-pole distribution cabinets to supply a stage, a hall or a village, and stand power boxes for trade shows.
 
+*Distribution cabinet and P17 outlets.*
+
 *Turnkey hire*
 
 | Equipment | Outputs |
@@ -42,6 +44,8 @@ Ready-to-use four-pole distribution cabinets to supply a stage, a hall or a vill
 ## P17 and Powerlock, from 2 to 50 m.
 
 Flexible extension cables for every rating commonly used in events, and the earthing to go with them: 16 mm² cable and earth rods.
+
+*Powerlock connectors on a snowy site.*
 
 *Turnkey hire, lengths depending on the reference*
 
