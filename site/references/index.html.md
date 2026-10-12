@@ -42,7 +42,7 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
 
-*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima et Miyagi.*
+*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima et Miyagi.*
 
 - **Mexico** (Mexique)
 - **New Jersey** (États-Unis)
@@ -76,7 +76,7 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 1. **Mai 2016 : Création de Dark Side Energy** : Des humains professionnalisés dans la distribution électrique d'événement.
 2. **Mai 2016 : Fêtes maritimes internationales de Brest** : Première mission, confiée par Revolt Location : de nombreux groupes électrogènes, des compteurs forains, une vingtaine de mâts d'éclairage autonomes et plus de 400 coffrets à distribuer sur les berges du port de Brest.
 3. **Octobre 2016 : Lille Grand Palais** : Deux salons confiés depuis la rentrée pour la distribution électrique, l'ADSL et la téléphonie : Créer, puis Sénioreva.
-4. **2019 et 2020 : La SARL Dark Side Energy** : Immatriculation de la société en novembre 2019, puis installation du siège à Carvin (Pas-de-Calais) en novembre 2020.
+4. **2019 : La SARL Dark Side Energy** : Immatriculation de la société en novembre 2019.
 5. **Aujourd'hui : Des Zéniths aux stades** : Concerts, compétitions sportives, salons et cérémonies, en France et à l'international.
 
 ## Votre événement, notre prochaine référence ?

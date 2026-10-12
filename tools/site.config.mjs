@@ -173,7 +173,7 @@ export const UI = {
 export const ENTITY = {
   foundingDate: "2016",
   description:
-    "Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin (Pas-de-Calais). Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.",
+    "Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.",
   knowsAbout: [
     "Distribution électrique événementielle",
     "Régie technique",
@@ -213,7 +213,7 @@ export const ENTITY = {
     "Electrical authorisations (habilitations électriques)",
   ],
   descriptionEn:
-    "Dark Side Energy is a French event power distribution company, founded in 2016 and based in Carvin (Pas-de-Calais, northern France). Its teams work in France and abroad in power distribution, technical management, general coordination, engineering and consulting, for trade shows, concerts, sporting events, festivals and ceremonies. It also supplies electrical distribution equipment on a turnkey hire basis: installed and run by its teams, with no dry hire.",
+    "Dark Side Energy is a French event power distribution company, founded in 2016 and based in Hauts-de-France, northern France. Its teams work in France and abroad in power distribution, technical management, general coordination, engineering and consulting, for trade shows, concerts, sporting events, festivals and ceremonies. It also supplies electrical distribution equipment on a turnkey hire basis: installed and run by its teams, with no dry hire.",
   areaServed: ["France"],
   languages: ["French", "English"],
   // Liens vers d'autres profils officiels de l'entreprise (ajoutés aux réseaux sociaux dans le balisage)
@@ -232,7 +232,7 @@ export const ENTITY = {
 export const LLMS = {
   facts: [
     "Raison sociale : DARK SIDE ENERGY, SARL, SIREN 879 105 377",
-    "Siège : Carvin, Pas-de-Calais (Hauts-de-France), France",
+    "Siège : Hauts-de-France, France",
     "Activité : distribution électrique événementielle (code NAF 90.02Z, activités de soutien au spectacle vivant)",
     "Création : 2016 ; SARL immatriculée en novembre 2019",
     "Capacités : distribution électrique du coffret de stand à l'armoire de puissance, sur réseau, groupe électrogène ou batterie, expertise haute et basse tension",
@@ -261,7 +261,7 @@ export const MAP = {
   lon: [-140, 150],
   lat: [-8, 68],
   parallel: 40,
-  hq: { name: "Carvin", lat: 50.49, lon: 2.96 },
+  hq: { name: "France", lat: 50.49, lon: 2.96 },
   places: [
     { name: "Mexico", en: "Mexico City", lat: 19.3, lon: -99.15 },
     { name: "Kansas City", lat: 39.05, lon: -94.48 },
@@ -283,7 +283,7 @@ export const MAP = {
   ],
   // Étiquettes : position du point d'ancrage, décalage en pixels de la carte, alignement
   labels: [
-    { text: "Carvin", lat: 50.49, lon: 2.96, dx: -11, dy: -15, anchor: "end", hq: true },
+    { text: "France", lat: 50.49, lon: 2.96, dx: -11, dy: -15, anchor: "end", hq: true },
     { text: "Mexico", en: "Mexico City", lat: 19.3, lon: -99.15, dx: -10, dy: 4, anchor: "end" },
     { text: "Kansas City", lat: 39.05, lon: -94.48, dx: -10, dy: 4, anchor: "end" },
     { text: "Toronto", lat: 43.63, lon: -79.42, dx: -10, dy: -5, anchor: "end" },

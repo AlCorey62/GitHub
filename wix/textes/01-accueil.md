@@ -17,7 +17,7 @@ Distribution électrique, régie technique, coordination générale et bureau d'
 
 ## Dark Side Energy, qui sommes-nous ?
 
-Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée à Carvin, dans le Pas-de-Calais. Ses techniciens électriciens, chefs de projet et ingénieurs interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour les salons, concerts, événements sportifs, festivals et cérémonies. [En savoir plus](https://www.darkside-energy.com/entreprise).
+Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses techniciens électriciens, chefs de projet et ingénieurs interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour les salons, concerts, événements sportifs, festivals et cérémonies. [En savoir plus](https://www.darkside-energy.com/entreprise).
 
 ## De l'idée jusqu'à la réalisation, sur toute la partie électrique.
 
@@ -105,7 +105,7 @@ Configurations à valider avec notre bureau d'étude selon votre bilan de puissa
 
 Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
 
-*Depuis Carvin : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima et Miyagi.*
+*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima et Miyagi.*
 
 - Zénith de Lille
 - Lille Grand Palais

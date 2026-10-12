@@ -192,10 +192,9 @@ function organizationLd(lang = "fr") {
     slogan: en ? SITE.sloganEn : SITE.slogan,
     email: SITE.email,
     telephone: SITE.phoneIntl,
-    // Siège au domicile du gérant : ville seulement (adresse complète dans les mentions légales)
+    // Siège au domicile du gérant : région seulement (adresse complète dans les mentions légales)
     address: {
       "@type": "PostalAddress",
-      addressLocality: SITE.address.city,
       addressRegion: SITE.address.region,
       addressCountry: SITE.address.country,
     },
@@ -536,8 +535,8 @@ function worldMap(cfg, ctx) {
     `<svg class="map__layer" viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img" aria-labelledby="carte-titre carte-desc">`,
     en ? `<title id="carte-titre">Our work abroad</title>` : `<title id="carte-titre">Nos interventions à l'international</title>`,
     en
-      ? `<desc id="carte-desc">From the ${esc(SITE.name)} base in ${esc(MAP.hq.name)}, lines reach the cities where its teams have worked: ${esc(list)}.</desc>`
-      : `<desc id="carte-desc">Depuis le siège de ${esc(SITE.name)} à ${esc(MAP.hq.name)}, des lignes rejoignent les villes où ses équipes sont intervenues : ${esc(list)}.</desc>`,
+      ? `<desc id="carte-desc">Lines link France to the cities around the world where ${esc(SITE.name)} teams have worked: ${esc(list)}.</desc>`
+      : `<desc id="carte-desc">Des lignes relient la France aux villes du monde où les équipes de ${esc(SITE.name)} sont intervenues : ${esc(list)}.</desc>`,
     ...dots,
     ...arcs,
     ...flows,
@@ -547,7 +546,7 @@ function worldMap(cfg, ctx) {
     ...labels,
     `</svg>`,
     `</div>`,
-    en ? `<figcaption class="map__caption">From ${esc(MAP.hq.name)}: ${esc(list)}.</figcaption>` : `<figcaption class="map__caption">Depuis ${esc(MAP.hq.name)} : ${esc(list)}.</figcaption>`,
+    en ? `<figcaption class="map__caption">Around the world: ${esc(list)}.</figcaption>` : `<figcaption class="map__caption">À travers le monde : ${esc(list)}.</figcaption>`,
     `</figure>`,
   ].join("\n");
 }

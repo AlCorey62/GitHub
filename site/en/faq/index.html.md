@@ -19,11 +19,11 @@ Dark Side Energy is a French company specialising in event power distribution. I
 
 ### Where is Dark Side Energy based and where does it work?
 
-Dark Side Energy is based in Carvin, in the Pas-de-Calais (Hauts-de-France, northern France). The head office is not open to the public: its teams work directly on site, in France and internationally.
+Dark Side Energy is based in Hauts-de-France, northern France. The head office is not open to the public: its teams work directly on site, in France and internationally.
 
 ### How long has Dark Side Energy been in business?
 
-Dark Side Energy was founded in May 2016. DARK SIDE ENERGY SARL (SIREN 879 105 377) has been registered since November 2019, and its head office has been in Carvin since November 2020.
+Dark Side Energy was founded in May 2016. DARK SIDE ENERGY SARL (SIREN 879 105 377) has been registered since November 2019.
 
 ### Which venues has Dark Side Energy worked at?
 

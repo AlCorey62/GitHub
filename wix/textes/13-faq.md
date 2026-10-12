@@ -15,11 +15,11 @@ Dark Side Energy est une entreprise française spécialisée dans la distributio
 
 ### Où est basée Dark Side Energy et où intervient-elle ?
 
-Dark Side Energy est basée à Carvin, dans le Pas-de-Calais (Hauts-de-France). Le siège ne reçoit pas de public : ses équipes interviennent directement sur les sites, en France et à l'international.
+Dark Side Energy est basée dans les Hauts-de-France. Le siège ne reçoit pas de public : ses équipes interviennent directement sur les sites, en France et à l'international.
 
 ### Depuis quand Dark Side Energy existe-t-elle ?
 
-Dark Side Energy a été créée en mai 2016. La SARL DARK SIDE ENERGY (SIREN 879 105 377) est immatriculée depuis novembre 2019, et son siège est installé à Carvin depuis novembre 2020.
+Dark Side Energy a été créée en mai 2016. La SARL DARK SIDE ENERGY (SIREN 879 105 377) est immatriculée depuis novembre 2019.
 
 ### Dans quels lieux Dark Side Energy est-elle intervenue ?
 

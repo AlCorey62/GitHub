@@ -14,7 +14,7 @@ Et parce que l'électricité reste une affaire de sécurité, nos équipes suive
 
 - **Raison sociale** : DARK SIDE ENERGY
 - **Forme juridique** : SARL
-- **Siège** : Carvin (62)
+- **Siège** : Hauts-de-France
 - **Création** : 2016
 - **SIREN** : 879 105 377
 - **Activité** : Soutien au spectacle vivant

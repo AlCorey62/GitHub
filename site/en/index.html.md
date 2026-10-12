@@ -21,7 +21,7 @@ Power distribution, technical management, general coordination and engineering o
 
 ## Who is Dark Side Energy?
 
-Dark Side Energy is a French event power distribution company, founded in 2016 and based in Carvin, in the Pas-de-Calais (northern France). Its electrical technicians, project managers and engineers work in France and internationally across power distribution, technical management, general coordination, engineering office and consulting, for trade shows, concerts, sporting events, festivals and ceremonies. [Learn more](https://www.darkside-energy.com/en/company/).
+Dark Side Energy is a French event power distribution company, founded in 2016 and based in Hauts-de-France, northern France. Its electrical technicians, project managers and engineers work in France and internationally across power distribution, technical management, general coordination, engineering office and consulting, for trade shows, concerts, sporting events, festivals and ceremonies. [Learn more](https://www.darkside-energy.com/en/company/).
 
 ## From idea to delivery, for everything electrical.
 
@@ -109,7 +109,7 @@ Configurations to be validated with our engineering office, based on your power 
 
 International sports competitions, concerts in Zénith arenas, in stadiums and on tour, fairs, trade shows, corporate shows, festivals or ceremonies.
 
-*From Carvin: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima and Miyagi.*
+*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima and Miyagi.*
 
 - Zénith de Lille
 - Lille Grand Palais

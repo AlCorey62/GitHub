@@ -4,7 +4,7 @@
   "@id": "https://www.darkside-energy.com/entreprise#webpage",
   "url": "https://www.darkside-energy.com/entreprise",
   "name": "L'entreprise",
-  "description": "Dark Side Energy, SARL basée à Carvin : des humains professionnalisés dans la distribution électrique d'événement depuis 2016. Nous rejoindre.",
+  "description": "Dark Side Energy, SARL basée dans les Hauts-de-France : des humains professionnalisés dans la distribution électrique d'événement depuis 2016. Nous rejoindre.",
   "inLanguage": "fr-FR",
   "isPartOf": {
     "@type": "WebSite",

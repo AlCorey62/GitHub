@@ -42,7 +42,7 @@ Out of respect for the confidentiality agreements signed for each event, we name
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
 
-*From Carvin: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima and Miyagi.*
+*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima and Miyagi.*
 
 - **Mexico City** (Mexico)
 - **New Jersey** (United States)
@@ -76,7 +76,7 @@ Out of respect for the confidentiality agreements signed for each event, we name
 1. **May 2016: Dark Side Energy is founded**: People who made event power distribution their profession.
 2. **May 2016: Brest International Maritime Festival**: First assignment, entrusted to us by Revolt Location: many generators, temporary metered grid connections, around twenty self-powered lighting towers and more than 400 distribution boxes to deploy along the quaysides of the port of Brest.
 3. **October 2016: Lille Grand Palais**: Two trade shows entrusted to us since September for power distribution, ADSL and telephony: Créer, then Sénioreva.
-4. **2019 and 2020: Dark Side Energy SARL**: Company registered in November 2019, then head office established in Carvin (Pas-de-Calais) in November 2020.
+4. **2019: Dark Side Energy SARL**: Company registered in November 2019.
 5. **Today: From Zéniths to stadiums**: Concerts, sports competitions, trade shows and ceremonies, in France and abroad.
 
 ## Your event, our next reference?

@@ -1,6 +1,6 @@
 # People who made event power distribution their profession.
 
-> Dark Side Energy, an SARL based in Carvin, France: people who have made event power distribution their profession since 2016. Join us.
+> Dark Side Energy, an SARL based in northern France: people who have made event power distribution their profession since 2016. Join us.
 
 Source: https://www.darkside-energy.com/en/company/ · Dark Side Energy · Updated: 2026-10-06
 
@@ -18,7 +18,7 @@ And because electricity remains a matter of safety, our teams receive continuous
 
 - **Registered name**: DARK SIDE ENERGY
 - **Legal form**: SARL
-- **Head office**: Carvin, Pas-de-Calais (62)
+- **Head office**: Hauts-de-France, northern France
 - **Founded**: 2016
 - **SIREN**: 879 105 377
 - **Activity**: Support for the performing arts
