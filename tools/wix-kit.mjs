@@ -19,7 +19,8 @@ const SITE_DIR = join(ROOT, "site");
 const OUT = join(ROOT, "wix");
 
 // Correspondance avec le site Wix actuel (adresses relevées le 25/09/2026 sur www.darkside-energy.com).
-// Les 8 articles existent déjà dans le blog Wix : on garde leur adresse, aucune redirection à créer.
+// Les 8 articles de 2016 et 2017 existent déjà dans le blog Wix : on garde leur adresse, aucune redirection à créer.
+// Les 4 articles du 12/10/2026 sont à créer dans le blog Wix : l'adresse définitive dépend de Wix.
 const WIX = {
   "/": ["/", "Mettre à jour (page d'accueil existante)"],
   "/distribution-electrique/": ["/distribution-electrique", "Mettre à jour"],
@@ -46,6 +47,10 @@ const WIX = {
   "/news/repertoire-national-des-electros/": ["/single-post/2016/06/23/répertoire-national-des-électros", "Mettre à jour l'article existant"],
   "/news/fetes-maritimes-brest-2016/": ["/single-post/2016/05/26/fêtes-maritimes-internationales-de-brest-2016", "Mettre à jour l'article existant"],
   "/news/creation-dark-side-energy/": ["/single-post/2016/05/25/création-de-dark-side-energy-1", "Mettre à jour l'article existant"],
+  "/news/kva-ou-kw/": ["/post/kva-ou-kw", "Créer l'article dans le blog Wix (adresse à confirmer)"],
+  "/news/coefficient-de-foisonnement/": ["/post/coefficient-de-foisonnement", "Créer l'article dans le blog Wix (adresse à confirmer)"],
+  "/news/puissance-prise-p17/": ["/post/puissance-prise-p17", "Créer l'article dans le blog Wix (adresse à confirmer)"],
+  "/news/equilibrer-les-phases/": ["/post/equilibrer-les-phases", "Créer l'article dans le blog Wix (adresse à confirmer)"],
 };
 // Pages du nouveau site sans équivalent Wix
 const SKIP = {

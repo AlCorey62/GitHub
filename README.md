@@ -14,7 +14,7 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   energie-responsable/     Démarche RSE
   references/              Lieux et historique
   entreprise/              L'entreprise, nous rejoindre
-  news/                    Le sais-tu ? et actualités (8 articles)
+  news/                    Le sais-tu ? et actualités (12 articles)
   faq/                     Questions fréquentes (17 questions, balisage FAQPage)
   lexique/                 Lexique de 46 termes, avec recherche (balisage DefinedTermSet)
   bilan-de-puissance/      Outil de bilan de puissance (démo 4 lignes, accès complet pour les clients)

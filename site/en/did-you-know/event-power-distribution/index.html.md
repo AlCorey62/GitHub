@@ -38,6 +38,7 @@ Need power distribution for your trade show or your stage?
 
 [Our core business: power distribution](https://www.darkside-energy.com/en/power-distribution/)
 
+[Single-phase or three-phase: why balance the phases?](https://www.darkside-energy.com/en/did-you-know/balancing-phases/)
 [What is a Twin zero-interruption generator set?](https://www.darkside-energy.com/en/did-you-know/twin-generators/)
 
 ## A project? Let's talk power.

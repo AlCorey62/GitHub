@@ -150,23 +150,23 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
-Le sais-tu ? · 1 min
+Le sais-tu ? · 2 min
 
-### [Pourquoi « ça saute » ?](https://www.darkside-energy.com/news/pourquoi-ca-saute/)
+### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
 
-Différentiel 30 mA, disjoncteur : le coffret vous a soit sauvé la vie, soit sauvé votre installation.
+Puissance active, puissance apparente et cos φ : pourquoi les groupes et les raccordements se comptent en kVA.
 
 Le sais-tu ? · 2 min
 
-### [Qu'est-ce qu'un groupe Twin zéro coupure ?](https://www.darkside-energy.com/news/groupe-twin-zero-coupure/)
+### [Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/news/coefficient-de-foisonnement/)
 
-Deux groupes synchronisés qui se partagent la charge : si l'un tombe, l'autre prend le relais, sans aucune coupure.
+Tous les appareils ne fonctionnent pas en même temps à pleine puissance. Le foisonnement évite la surcapacité.
 
-Le sais-tu ? · 1 min
+Le sais-tu ? · 2 min
 
-### [La section de câble dépend aussi de la longueur](https://www.darkside-energy.com/news/section-de-cable/)
+### [Quelle puissance tirer d'une prise P17 ?](https://www.darkside-energy.com/news/puissance-prise-p17/)
 
-Plus le câble est long, plus la chute de tension est importante. Le choix de la section se prépare.
+De 3,7 kVA pour une prise 16 A monophasée à 277,1 kVA pour un Powerlock 400 A : des maximums, pas des objectifs.
 
 ## Un projet ? Parlons puissance.
 
@@ -921,6 +921,30 @@ Beaucoup de calculs expliquent l'électricité, mais le but de ces articles est 
 
 ## Comprendre avant de brancher.
 
+Le sais-tu ? · 12 octobre 2026 · 2 min
+
+### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
+
+Puissance active, puissance apparente et cos φ : pourquoi les groupes et les raccordements se comptent en kVA.
+
+Le sais-tu ? · 12 octobre 2026 · 2 min
+
+### [Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/news/coefficient-de-foisonnement/)
+
+Tous les appareils ne fonctionnent pas en même temps à pleine puissance. Le foisonnement évite la surcapacité.
+
+Le sais-tu ? · 12 octobre 2026 · 2 min
+
+### [Quelle puissance tirer d'une prise P17 ?](https://www.darkside-energy.com/news/puissance-prise-p17/)
+
+De 3,7 kVA pour une prise 16 A monophasée à 277,1 kVA pour un Powerlock 400 A : des maximums, pas des objectifs.
+
+Le sais-tu ? · 12 octobre 2026 · 2 min
+
+### [Monophasé ou triphasé : pourquoi équilibrer les phases ?](https://www.darkside-energy.com/news/equilibrer-les-phases/)
+
+La phase la plus chargée fixe la taille de la source. Bien répartir les appareils évite de surdimensionner.
+
 Le sais-tu ? · 8 mai 2017 · 2 min
 
 ### [Qu'est-ce que la distribution électrique événementielle ?](https://www.darkside-energy.com/news/distribution-electrique-evenementielle/)
@@ -980,6 +1004,221 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 ---
 
+# kVA ou kW : quelle différence ?
+
+> kW et kVA expliqués simplement : puissance active, puissance apparente et cos φ. Pourquoi les groupes et les raccordements se comptent en kVA.
+
+Source : https://www.darkside-energy.com/news/kva-ou-kw/ · Dark Side Energy · Mise à jour : 2026-10-12
+
+12 octobre 2026 · 2 min de lecture
+
+- Le kW mesure la puissance active, celle que vos appareils consomment réellement.
+- Le kVA mesure la puissance apparente : c'est elle qui dimensionne les câbles, les protections et les sources.
+- Les deux sont reliés par le cos φ : puissance active = puissance apparente × cos φ.
+
+Vous avez fait la liste de vos appareils : tout est en kW. Vous demandez un groupe électrogène, et on vous répond en kVA. Est-ce la même chose ? Pas tout à fait, et la différence compte.
+
+## Reprenons depuis le départ
+
+Le [kW et le kVA](https://www.darkside-energy.com/lexique/#kva-kw) ne mesurent pas la même chose.
+
+Le **kW** (kilowatt) mesure la **puissance active** : celle que l'appareil consomme réellement pour produire de la lumière, du son, de la chaleur ou du mouvement.
+
+Le **kVA** (kilovoltampère) mesure la **puissance apparente** : la tension multipliée par l'intensité. En monophasé, S = U × I ; en triphasé, S = √3 × U × I. À tension donnée, c'est elle qui fixe l'intensité dans les câbles : elle dimensionne donc les câbles, les protections et les sources.
+
+Entre les deux, il y a le [cos φ](https://www.darkside-energy.com/lexique/#cos-phi), ou facteur de puissance : puissance active = puissance apparente × cos φ. Pour une charge purement résistive, il vaut 1 et les kW égalent les kVA. Pour les moteurs ou certaines alimentations électroniques, il est inférieur à 1 : il faut alors plus de kVA que de kW.
+
+Par exemple, 22 kW en triphasé 400 V avec un cos φ de 0,9 demandent 22 ÷ 0,9, soit environ 24,4 kVA. L'intensité vaut alors 22 000 W ÷ (√3 × 400 V × 0,9), soit environ 35,3 A par phase. Avec un cos φ de 1, les mêmes 22 kW ne demanderaient que 22 kVA, soit environ 31,8 A par phase. Les formules de conversion sont dans nos [questions fréquentes](https://www.darkside-energy.com/faq/#kw-en-amperes).
+
+C'est pour cela que les groupes électrogènes, les packs batteries et les raccordements s'expriment en kVA : une source doit fournir toute l'intensité demandée, quel que soit le cos φ des appareils branchés. Les kVA disent ce qu'elle peut délivrer ; le cos φ de vos appareils dit combien de kW vous en tirerez.
+
+## Pour résumer
+
+Pour savoir ce que vos appareils consomment, regardez les kW. Pour choisir les câbles, les protections et la source, raisonnez en kVA. Et si vous ne connaissez pas le cos φ, notre calculette retient 0,9 par défaut, une hypothèse que vous pouvez modifier.
+
+> Les kW, c'est ce que vous consommez. Les kVA, c'est ce que vous devez prévoir.
+
+Convertissez vos kW en kVA et en ampères, en monophasé ou en triphasé.
+
+[Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#conversion)
+
+[Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/news/coefficient-de-foisonnement/)
+
+## Un projet ? Parlons puissance.
+
+Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
+
+[Demander un devis](https://www.darkside-energy.com/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
+# Qu'est-ce que le coefficient de foisonnement ?
+
+> Le foisonnement expliqué simplement : tous les appareils ne tournent pas en même temps à pleine puissance. Comment l'appliquer dans un bilan.
+
+Source : https://www.darkside-energy.com/news/coefficient-de-foisonnement/ · Dark Side Energy · Mise à jour : 2026-10-12
+
+12 octobre 2026 · 2 min de lecture
+
+- Tous les appareils ne fonctionnent pas en même temps à pleine puissance : le foisonnement en tient compte.
+- C'est un coefficient compris entre 0 et 1, appliqué ligne par ligne dans le bilan de puissance.
+- Un foisonnement réaliste évite la surcapacité, donc le matériel et l'énergie inutiles.
+
+Faites la liste de tous les appareils d'un événement, additionnez leurs puissances, et vous obtenez un chiffre impressionnant. Sur le terrain, pourtant, ce chiffre est rarement atteint : tous ces appareils ne fonctionnent pas en même temps, et rarement à pleine puissance.
+
+## Reprenons depuis le départ
+
+La somme des puissances de tous les appareils, c'est la **puissance installée**. Mais un projecteur n'est pas toujours à pleine intensité, un appareil de cuisson ne chauffe pas en continu, et certains équipements ne servent qu'à certains moments de la journée.
+
+Le [coefficient de foisonnement](https://www.darkside-energy.com/lexique/#foisonnement) traduit cette réalité. C'est un nombre compris entre 0 et 1 : 1 si tous les appareils d'une ligne fonctionnent en même temps à pleine puissance, moins sinon. Multipliez la puissance installée par ce coefficient, et vous obtenez la **puissance foisonnée**, celle qu'il faut réellement prévoir.
+
+Par exemple, 10 projecteurs de 1 000 W représentent 10 × 1 000 W, soit 10 kW installés. Avec un foisonnement de 0,8, la ligne compte pour 10 kW × 0,8, soit 8 kW foisonnés : 2 kW de moins à prévoir sur cette seule ligne.
+
+## Pourquoi c'est important
+
+Sans foisonnement, on dimensionne pour une situation qui n'arrive pas : sources plus grosses, câbles de plus forte section, protections de plus fort calibre. C'est de la **surcapacité**, donc du matériel et de l'énergie inutiles.
+
+À l'inverse, un foisonnement trop optimiste expose à une source qui ne suit pas, ou à des protections qui [sautent](https://www.darkside-energy.com/news/pourquoi-ca-saute/). Le bon coefficient ne se devine pas : il s'appuie sur l'expérience du terrain, selon le type d'appareils et la façon dont l'événement se déroule.
+
+Dans le [bilan de puissance](https://www.darkside-energy.com/lexique/#bilan-de-puissance), il s'applique ligne par ligne : chaque ligne d'appareils reçoit son propre coefficient. Un appareil qui tourne en permanence à pleine puissance garde 1, un ensemble utilisé par intermittence descend plus bas.
+
+Pour résumer, la puissance installée dit ce que vous branchez, la puissance foisonnée dit ce qui fonctionne réellement en même temps. C'est à partir d'elle, ramenée en kVA avec le cos φ, que se dimensionnent les sources, les câbles et les protections.
+
+> On ne dimensionne pas pour tout ce qui est branché, mais pour ce qui fonctionne en même temps.
+
+Listez vos appareils et appliquez un foisonnement à chaque ligne : l'outil calcule la puissance à prévoir.
+
+[Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
+
+[kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
+[Quelle puissance tirer d'une prise P17 ?](https://www.darkside-energy.com/news/puissance-prise-p17/)
+
+## Un projet ? Parlons puissance.
+
+Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
+
+[Demander un devis](https://www.darkside-energy.com/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
+# Quelle puissance tirer d'une prise P17 ?
+
+> Combien de kVA derrière une prise P17 ? Les repères de 16 A à 125 A et du Powerlock 400 A, la marge à garder et le rôle de la longueur du câble.
+
+Source : https://www.darkside-energy.com/news/puissance-prise-p17/ · Dark Side Energy · Mise à jour : 2026-10-12
+
+12 octobre 2026 · 2 min de lecture
+
+- La puissance d'une prise dépend de son calibre et de son réseau : monophasé 230 V ou triphasé 400 V.
+- Une P17 32 A triphasée, par exemple, fournit au plus 22,2 kVA.
+- Ce sont des maximums théoriques : gardez une marge et tenez compte de la longueur du câble.
+
+Sur un salon comme sur un concert, une question revient sans cesse : combien de puissance peut-on tirer de cette prise ?
+
+La réponse dépend de deux choses : le calibre de la prise, en ampères, et le réseau qui l'alimente, monophasé 230 V ou triphasé 400 V.
+
+## Reprenons depuis le départ
+
+En France, on appelle [P17](https://www.darkside-energy.com/lexique/#p17) les prises et fiches industrielles conformes à la norme CEI 60309. Elles existent en 16, 32, 63 et 125 A, en monophasé ou en triphasé, et sont le standard de la distribution électrique événementielle.
+
+La puissance apparente d'une prise se calcule simplement : tension × intensité en monophasé, √3 × tension × intensité en triphasé. Par exemple, une P17 16 A triphasée donne √3 × 400 V × 16 A, soit environ 11 085 VA, arrondis à 11,1 kVA.
+
+Voici nos repères, en 230 V pour le monophasé et en 400 V pour le triphasé :
+
+- prise 16 A monophasée : 3,7 kVA ;
+- P17 16 A triphasée : 11,1 kVA ;
+- P17 32 A triphasée : 22,2 kVA ;
+- P17 63 A triphasée : 43,6 kVA ;
+- P17 125 A triphasée : 86,6 kVA.
+
+Au-delà, on passe aux connecteurs [Powerlock](https://www.darkside-energy.com/lexique/#powerlock), un par phase, pour le neutre et pour la terre : un Powerlock 400 A représente 277,1 kVA.
+
+## Des maximums, pas des objectifs
+
+Attention : ces valeurs sont des puissances apparentes maximales théoriques, sans foisonnement ni marge. Elles disent ce que la prise peut fournir au plus, pas ce qu'il est raisonnable d'y brancher.
+
+Une prise chargée à son maximum ne laisse aucune réserve : au moindre dépassement, le disjoncteur coupe. Nous gardons donc toujours une marge entre la puissance demandée et la capacité de la prise.
+
+La longueur du câble compte aussi. Un câble est une résistance : plus il est long, plus la [chute de tension](https://www.darkside-energy.com/lexique/#chute-de-tension) augmente, et moins l'appareil en bout de ligne reçoit de tension. Sur une grande longueur, il faut donc une [section de câble](https://www.darkside-energy.com/news/section-de-cable/) plus forte.
+
+Pour résumer, le calibre et le réseau donnent le maximum de la prise. Le foisonnement de vos appareils, la marge et la longueur du câble disent ce que vous pouvez vraiment y raccorder.
+
+> Ce qu'une prise peut donner n'est pas ce qu'il faut lui demander.
+
+Retrouvez la puissance de chaque connecteur et convertissez kVA, kW et ampères en un instant.
+
+[Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#reperes)
+
+[Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/news/coefficient-de-foisonnement/)
+[Monophasé ou triphasé : pourquoi équilibrer les phases ?](https://www.darkside-energy.com/news/equilibrer-les-phases/)
+
+## Un projet ? Parlons puissance.
+
+Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
+
+[Demander un devis](https://www.darkside-energy.com/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
+# Monophasé ou triphasé : pourquoi équilibrer les phases ?
+
+> Monophasé 230 V, triphasé 400 V : pourquoi répartir les charges sur L1, L2 et L3, et comment la phase la plus chargée fixe la taille de la source.
+
+Source : https://www.darkside-energy.com/news/equilibrer-les-phases/ · Dark Side Energy · Mise à jour : 2026-10-12
+
+12 octobre 2026 · 2 min de lecture
+
+- Sur un réseau 230/400 V, on a 230 V entre une phase et le neutre, et 400 V entre deux phases.
+- Une source triphasée se dimensionne sur sa phase la plus chargée.
+- Bien répartir les appareils monophasés sur L1, L2 et L3 évite de surdimensionner l'installation.
+
+Sur un événement, beaucoup d'appareils se branchent en [monophasé](https://www.darkside-energy.com/lexique/#monophase-triphase), sur une simple prise 16 A. Pourtant, l'armoire de distribution qui les alimente est le plus souvent triphasée. Comment passe-t-on de l'un à l'autre, et pourquoi la façon de brancher les appareils change-t-elle la taille de la source ?
+
+## Reprenons depuis le départ
+
+Nous travaillons sur un réseau 230/400 V. Une installation triphasée comporte trois phases, notées L1, L2 et L3. En raccordement [tétra](https://www.darkside-energy.com/lexique/#tetra), s'y ajoutent le neutre et la terre. Sur ce réseau :
+
+- entre une phase et le neutre, on a 230 V : c'est le **monophasé** ;
+- entre deux phases, on a 400 V : c'est le **triphasé**, qui transporte plus de puissance à intensité égale.
+
+Un appareil triphasé charge les trois phases. Un appareil monophasé, lui, n'en charge qu'une. Les charges monophasées se répartissent donc entre L1, L2 et L3, et c'est là que tout se joue.
+
+## La phase la plus chargée fait la loi
+
+Une source se dimensionne sur sa phase la plus chargée. C'est la méthode de notre bilan de puissance : source à prévoir = 3 × 230 V × courant de la phase la plus chargée.
+
+Par exemple, prenons trois appareils monophasés qui consomment chacun 10 A :
+
+- répartis sur L1, L2 et L3, chaque phase porte 10 A, et la source à prévoir est de 3 × 230 V × 10 A = 6 900 VA, soit 6,9 kVA ;
+- branchés tous les trois sur L1, cette phase porte 30 A, et il faut 3 × 230 V × 30 A = 20 700 VA, soit 20,7 kVA.
+
+Mêmes appareils, même consommation, mais une source trois fois plus grosse et un calibre de raccordement plus élevé. Un déséquilibre oblige donc à surdimensionner l'installation, pour rien.
+
+C'est pourquoi notre outil de [bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/) répartit automatiquement les lignes monophasées : il les place une à une, des plus puissantes aux moins puissantes, sur la phase la moins chargée.
+
+Pour résumer, le monophasé alimente les appareils, le triphasé alimente l'installation, et l'équilibre entre les phases fixe la taille de la source.
+
+> Ce n'est pas la puissance totale qui dimensionne la source, c'est la phase la plus chargée.
+
+Listez vos appareils : l'outil répartit les lignes monophasées sur les trois phases et calcule le courant de chacune.
+
+[Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
+
+[Quelle puissance tirer d'une prise P17 ?](https://www.darkside-energy.com/news/puissance-prise-p17/)
+[Qu'est-ce que la distribution électrique événementielle ?](https://www.darkside-energy.com/news/distribution-electrique-evenementielle/)
+
+## Un projet ? Parlons puissance.
+
+Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
+
+[Demander un devis](https://www.darkside-energy.com/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
 # Qu'est-ce que la distribution électrique événementielle ?
 
 > Distribution électrique événementielle : partir des alimentations du lieu pour distribuer l'électricité en sécurité. Et pourquoi l'ilotage est interdit.
@@ -1020,6 +1259,7 @@ Besoin d'une distribution pour votre salon ou votre scène ?
 
 [Notre métier : la distribution électrique](https://www.darkside-energy.com/distribution-electrique/)
 
+[Monophasé ou triphasé : pourquoi équilibrer les phases ?](https://www.darkside-energy.com/news/equilibrer-les-phases/)
 [Qu'est-ce qu'un groupe Twin zéro coupure ?](https://www.darkside-energy.com/news/groupe-twin-zero-coupure/)
 
 ## Un projet ? Parlons puissance.
@@ -1636,23 +1876,23 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
-Did you know? · 1 min
+Did you know? · 2 min
 
-### [Why does it trip?](https://www.darkside-energy.com/en/did-you-know/why-it-trips/)
+### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
 
-30 mA RCD, circuit breaker: the distribution box has either saved your life or saved your installation.
+Active power, apparent power and cos φ: why generators and grid connections are rated in kVA.
 
 Did you know? · 2 min
 
-### [What is a Twin zero-interruption generator set?](https://www.darkside-energy.com/en/did-you-know/twin-generators/)
+### [What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
 
-Two synchronised generators sharing the load: if one fails, the other takes over, with no interruption at all.
+Not all equipment runs at full power at the same time. The diversity factor avoids overcapacity.
 
-Did you know? · 1 min
+Did you know? · 2 min
 
-### [Cable size also depends on length](https://www.darkside-energy.com/en/did-you-know/cable-size/)
+### [How much power can you draw from a P17 socket?](https://www.darkside-energy.com/en/did-you-know/p17-socket-power/)
 
-The longer the cable, the greater the voltage drop. Choosing the cable size needs planning.
+From 3.7 kVA for a 16 A single-phase socket to 277.1 kVA for a 400 A Powerlock: maximums, not targets.
 
 ## A project? Let's talk power.
 
@@ -2407,6 +2647,30 @@ Plenty of calculations explain electricity, but the aim of these articles is to 
 
 ## Understand before you plug in.
 
+Did you know? · 12 October 2026 · 2 min
+
+### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
+
+Active power, apparent power and cos φ: why generators and grid connections are rated in kVA.
+
+Did you know? · 12 October 2026 · 2 min
+
+### [What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
+
+Not all equipment runs at full power at the same time. The diversity factor avoids overcapacity.
+
+Did you know? · 12 October 2026 · 2 min
+
+### [How much power can you draw from a P17 socket?](https://www.darkside-energy.com/en/did-you-know/p17-socket-power/)
+
+From 3.7 kVA for a 16 A single-phase socket to 277.1 kVA for a 400 A Powerlock: maximums, not targets.
+
+Did you know? · 12 October 2026 · 2 min
+
+### [Single-phase or three-phase: why balance the phases?](https://www.darkside-energy.com/en/did-you-know/balancing-phases/)
+
+The most loaded phase sets the size of the source. Spreading equipment evenly avoids oversizing.
+
 Did you know? · 8 May 2017 · 2 min
 
 ### [What is event power distribution?](https://www.darkside-energy.com/en/did-you-know/event-power-distribution/)
@@ -2430,6 +2694,221 @@ Did you know? · 8 May 2017 · 1 min
 ### [Why does it “trip”?](https://www.darkside-energy.com/en/did-you-know/why-it-trips/)
 
 30 mA RCD, circuit breaker: the distribution box has either saved your life or saved your installation.
+
+## A project? Let's talk power.
+
+Venue, dates, known requirements: tell us about your event and we will get back to you quickly.
+
+[Request a quote](https://www.darkside-energy.com/en/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
+# kVA or kW: what's the difference?
+
+> kW and kVA explained simply: active power, apparent power and cos φ. Why generators and grid connections are rated in kVA.
+
+Source: https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/ · Dark Side Energy · Updated: 2026-10-12
+
+12 October 2026 · 2 min read
+
+- The kW measures active power, the power your equipment actually consumes.
+- The kVA measures apparent power: it determines the size of cables, protection devices and sources.
+- The two are linked by cos φ: active power = apparent power × cos φ.
+
+You have listed your equipment: everything is in kW. You ask for a generator, and the answer comes back in kVA. Is it the same thing? Not quite, and the difference matters.
+
+## Back to basics
+
+The [kW and the kVA](https://www.darkside-energy.com/en/glossary/#kva-kw) do not measure the same thing.
+
+The **kW** (kilowatt) measures **active power**: the power the equipment actually consumes to produce light, sound, heat or movement.
+
+The **kVA** (kilovolt-ampere) measures **apparent power**: voltage multiplied by current. In single-phase, S = U × I; in three-phase, S = √3 × U × I. At a given voltage, it is what sets the current in the cables: so it determines the size of cables, protection devices and sources.
+
+Between the two sits [cos φ](https://www.darkside-energy.com/en/glossary/#cos-phi), the power factor: active power = apparent power × cos φ. For a purely resistive load, it equals 1 and kW equal kVA. For motors or some electronic power supplies, it is lower than 1: you then need more kVA than kW.
+
+For example, 22 kW in three-phase 400 V with a cos φ of 0.9 require 22 ÷ 0.9, or about 24.4 kVA. The current is then 22,000 W ÷ (√3 × 400 V × 0.9), or about 35.3 A per phase. With a cos φ of 1, the same 22 kW would need only 22 kVA, or about 31.8 A per phase. The conversion formulas are in our [FAQ](https://www.darkside-energy.com/en/faq/#kw-en-amperes).
+
+That is why generators, battery packs and grid connections are rated in kVA: a source must deliver all the current drawn, whatever the cos φ of the equipment plugged into it. The kVA tell you what it can supply; the cos φ of your equipment tells you how many kW you will get from it.
+
+## To sum up
+
+To know what your equipment consumes, look at the kW. To choose cables, protection devices and the source, think in kVA. And if you do not know the cos φ, our calculator assumes 0.9 by default, an assumption you can change.
+
+> kW is what you consume. kVA is what you need to plan for.
+
+Convert your kW into kVA and amps, in single-phase or three-phase.
+
+[Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
+
+[What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
+
+## A project? Let's talk power.
+
+Venue, dates, known requirements: tell us about your event and we will get back to you quickly.
+
+[Request a quote](https://www.darkside-energy.com/en/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
+# What is the diversity factor?
+
+> The diversity factor explained simply: not all equipment runs at full power at the same time. How to apply it in a power assessment.
+
+Source: https://www.darkside-energy.com/en/did-you-know/diversity-factor/ · Dark Side Energy · Updated: 2026-10-12
+
+12 October 2026 · 2 min read
+
+- Not all equipment runs at full power at the same time: the diversity factor takes this into account.
+- It is a coefficient between 0 and 1, applied line by line in the power assessment.
+- A realistic diversity factor avoids overcapacity, and therefore unnecessary equipment and energy.
+
+List all the equipment at an event, add up its power, and you get an impressive figure. On site, however, that figure is rarely reached: not all this equipment runs at the same time, and rarely at full power.
+
+## Back to basics
+
+The sum of the power of all the equipment is the **installed power**. But a floodlight is not always at full intensity, a cooking appliance does not heat continuously, and some equipment is only used at certain times of the day.
+
+The [diversity factor](https://www.darkside-energy.com/en/glossary/#foisonnement) reflects this reality. It is a number between 0 and 1: 1 if all the equipment on a line runs at full power at the same time, less otherwise. Multiply the installed power by this factor and you get the **diversified power**, the power you actually need to plan for.
+
+For example, 10 floodlights of 1,000 W represent 10 × 1,000 W, or 10 kW installed. With a diversity factor of 0.8, the line counts for 10 kW × 0.8, or 8 kW diversified: 2 kW less to plan for on this line alone.
+
+## Why it matters
+
+Without a diversity factor, you size for a situation that never happens: bigger sources, larger cable sizes, higher-rated protection devices. That is **overcapacity**, and therefore unnecessary equipment and energy.
+
+Conversely, an overly optimistic diversity factor leaves you with a source that cannot keep up, or with protection devices that [trip](https://www.darkside-energy.com/en/did-you-know/why-it-trips/). The right factor cannot be guessed: it draws on field experience, according to the type of equipment and the way the event runs.
+
+In the [power assessment](https://www.darkside-energy.com/en/glossary/#bilan-de-puissance), it is applied line by line: each line of equipment gets its own factor. Equipment that runs continuously at full power keeps 1; a group used intermittently goes lower.
+
+To sum up, installed power tells you what you plug in, diversified power tells you what actually runs at the same time. It is from the diversified power, converted into kVA with cos φ, that sources, cables and protection devices are sized.
+
+> You do not size for everything that is plugged in, but for what runs at the same time.
+
+List your equipment and apply a diversity factor to each line: the tool calculates the power required.
+
+[Run a power assessment](https://www.darkside-energy.com/en/power-assessment/)
+
+[kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
+[How much power can you draw from a P17 socket?](https://www.darkside-energy.com/en/did-you-know/p17-socket-power/)
+
+## A project? Let's talk power.
+
+Venue, dates, known requirements: tell us about your event and we will get back to you quickly.
+
+[Request a quote](https://www.darkside-energy.com/en/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
+# How much power can you draw from a P17 socket?
+
+> How many kVA behind a P17 socket? Reference figures from 16 A to 125 A and for a 400 A Powerlock, the margin to keep and why cable length matters.
+
+Source: https://www.darkside-energy.com/en/did-you-know/p17-socket-power/ · Dark Side Energy · Updated: 2026-10-12
+
+12 October 2026 · 2 min read
+
+- The power of a socket depends on its rating and its supply: single-phase 230 V or three-phase 400 V.
+- A 32 A three-phase P17, for example, supplies at most 22.2 kVA.
+- These are theoretical maximums: keep a margin and allow for the cable length.
+
+At a trade show or a concert, one question keeps coming up: how much power can you draw from this socket?
+
+The answer depends on two things: the socket's rating, in amperes, and the supply feeding it, single-phase 230 V or three-phase 400 V.
+
+## Back to basics
+
+In France, [P17](https://www.darkside-energy.com/en/glossary/#p17) is the name commonly given to industrial sockets and plugs complying with the CEI 60309 standard (IEC 60309). They come in 16, 32, 63 and 125 A, single-phase or three-phase, and they are the standard for event power distribution.
+
+The apparent power of a socket is simple to work out: voltage × current in single-phase, √3 × voltage × current in three-phase. For example, a 16 A three-phase P17 gives √3 × 400 V × 16 A, or about 11,085 VA, rounded to 11.1 kVA.
+
+Here are our reference figures, at 230 V for single-phase and at 400 V for three-phase:
+
+- 16 A single-phase socket: 3.7 kVA;
+- 16 A three-phase P17: 11.1 kVA;
+- 32 A three-phase P17: 22.2 kVA;
+- 63 A three-phase P17: 43.6 kVA;
+- 125 A three-phase P17: 86.6 kVA.
+
+Beyond that, we move on to [Powerlock](https://www.darkside-energy.com/en/glossary/#powerlock) connectors, one per phase, one for neutral and one for earth: a 400 A Powerlock represents 277.1 kVA.
+
+## Maximums, not targets
+
+Be careful: these figures are theoretical maximum apparent power, with no diversity factor and no margin. They tell you the most the socket can supply, not what it is sensible to plug into it.
+
+A socket loaded to its maximum leaves no reserve: at the slightest overshoot, the circuit breaker trips. So we always keep a margin between the power required and the capacity of the socket.
+
+Cable length matters too. A cable is a resistance: the longer it is, the greater the [voltage drop](https://www.darkside-energy.com/en/glossary/#chute-de-tension), and the lower the voltage reaching the equipment at the end of the line. Over long runs, you therefore need a larger [cable size](https://www.darkside-energy.com/en/did-you-know/cable-size/).
+
+To sum up, the rating and the supply give the socket's maximum. The diversity factor of your equipment, the margin and the cable length tell you what you can really connect to it.
+
+> What a socket can give is not what you should ask of it.
+
+Find the power behind each connector and convert kVA, kW and amps in an instant.
+
+[Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#reperes)
+
+[What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
+[Single-phase or three-phase: why balance the phases?](https://www.darkside-energy.com/en/did-you-know/balancing-phases/)
+
+## A project? Let's talk power.
+
+Venue, dates, known requirements: tell us about your event and we will get back to you quickly.
+
+[Request a quote](https://www.darkside-energy.com/en/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
+# Single-phase or three-phase: why balance the phases?
+
+> Single-phase 230 V, three-phase 400 V: why spread loads over L1, L2 and L3, and how the most loaded phase sets the size of the source.
+
+Source: https://www.darkside-energy.com/en/did-you-know/balancing-phases/ · Dark Side Energy · Updated: 2026-10-12
+
+12 October 2026 · 2 min read
+
+- On a 230/400 V network, you get 230 V between a phase and the neutral, and 400 V between two phases.
+- A three-phase source is sized on its most loaded phase.
+- Spreading single-phase equipment evenly over L1, L2 and L3 avoids oversizing the installation.
+
+At an event, a lot of equipment plugs in as [single-phase](https://www.darkside-energy.com/en/glossary/#monophase-triphase), on an ordinary 16 A socket. Yet the distribution cabinet feeding it is usually three-phase. How do you get from one to the other, and why does the way the equipment is connected change the size of the source?
+
+## Back to basics
+
+We work on a 230/400 V network. A three-phase installation has three phases, labelled L1, L2 and L3. In a [four-pole (3P+N)](https://www.darkside-energy.com/en/glossary/#tetra) connection, a neutral and an earth are added. On this network:
+
+- between a phase and the neutral, you get 230 V: this is **single-phase**;
+- between two phases, you get 400 V: this is **three-phase**, which carries more power for the same current.
+
+Three-phase equipment loads all three phases. Single-phase equipment loads only one. Single-phase loads are therefore spread over L1, L2 and L3, and that is where it all happens.
+
+## The most loaded phase decides
+
+A source is sized on its most loaded phase. That is the method used in our power assessment: source required = 3 × 230 V × current on the most loaded phase.
+
+For example, take three single-phase appliances each drawing 10 A:
+
+- spread over L1, L2 and L3, each phase carries 10 A, and the source required is 3 × 230 V × 10 A = 6,900 VA, or 6.9 kVA;
+- all three plugged into L1, that phase carries 30 A, and you need 3 × 230 V × 30 A = 20,700 VA, or 20.7 kVA.
+
+Same equipment, same consumption, but a source three times larger and a higher connection rating. An imbalance therefore forces you to oversize the installation, for nothing.
+
+That is why our [power assessment](https://www.darkside-energy.com/en/power-assessment/) tool allocates single-phase lines automatically: it places them one by one, from the most to the least powerful, on the least loaded phase.
+
+To sum up, single-phase powers the equipment, three-phase powers the installation, and the balance between the phases sets the size of the source.
+
+> It is not the total power that sizes the source, it is the most loaded phase.
+
+List your equipment: the tool allocates single-phase lines across the three phases and calculates the current on each one.
+
+[Run a power assessment](https://www.darkside-energy.com/en/power-assessment/)
+
+[How much power can you draw from a P17 socket?](https://www.darkside-energy.com/en/did-you-know/p17-socket-power/)
+[What is event power distribution?](https://www.darkside-energy.com/en/did-you-know/event-power-distribution/)
 
 ## A project? Let's talk power.
 
@@ -2480,6 +2959,7 @@ Need power distribution for your trade show or your stage?
 
 [Our core business: power distribution](https://www.darkside-energy.com/en/power-distribution/)
 
+[Single-phase or three-phase: why balance the phases?](https://www.darkside-energy.com/en/did-you-know/balancing-phases/)
 [What is a Twin zero-interruption generator set?](https://www.darkside-energy.com/en/did-you-know/twin-generators/)
 
 ## A project? Let's talk power.

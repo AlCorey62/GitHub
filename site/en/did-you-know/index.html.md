@@ -8,6 +8,30 @@ Plenty of calculations explain electricity, but the aim of these articles is to 
 
 ## Understand before you plug in.
 
+Did you know? · 12 October 2026 · 2 min
+
+### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
+
+Active power, apparent power and cos φ: why generators and grid connections are rated in kVA.
+
+Did you know? · 12 October 2026 · 2 min
+
+### [What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
+
+Not all equipment runs at full power at the same time. The diversity factor avoids overcapacity.
+
+Did you know? · 12 October 2026 · 2 min
+
+### [How much power can you draw from a P17 socket?](https://www.darkside-energy.com/en/did-you-know/p17-socket-power/)
+
+From 3.7 kVA for a 16 A single-phase socket to 277.1 kVA for a 400 A Powerlock: maximums, not targets.
+
+Did you know? · 12 October 2026 · 2 min
+
+### [Single-phase or three-phase: why balance the phases?](https://www.darkside-energy.com/en/did-you-know/balancing-phases/)
+
+The most loaded phase sets the size of the source. Spreading equipment evenly avoids oversizing.
+
 Did you know? · 8 May 2017 · 2 min
 
 ### [What is event power distribution?](https://www.darkside-energy.com/en/did-you-know/event-power-distribution/)

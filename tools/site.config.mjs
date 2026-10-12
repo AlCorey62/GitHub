@@ -247,7 +247,7 @@ export const LLMS = {
     ["Métiers", ["/distribution-electrique/", "/regie-technique/", "/coordination-generale/", "/bureaudetude/", "/consulting/"]],
     ["Matériel et énergie", ["/nos-produits/", "/energie-responsable/"]],
     ["Outils de calcul en ligne", ["/bilan-de-puissance/", "/calculette-electro/"]],
-    ["Ressources", ["/faq/", "/lexique/", "/news/", "/news/distribution-electrique-evenementielle/", "/news/groupe-twin-zero-coupure/", "/news/section-de-cable/", "/news/pourquoi-ca-saute/"]],
+    ["Ressources", ["/faq/", "/lexique/", "/news/", "/news/kva-ou-kw/", "/news/coefficient-de-foisonnement/", "/news/puissance-prise-p17/", "/news/equilibrer-les-phases/", "/news/distribution-electrique-evenementielle/", "/news/groupe-twin-zero-coupure/", "/news/section-de-cable/", "/news/pourquoi-ca-saute/"]],
     ["Entreprise", ["/entreprise/", "/references/", "/contact/"]],
     ["Optional", ["/news/creation-dark-side-energy/", "/news/fetes-maritimes-brest-2016/", "/news/lille-grand-palais-2016/", "/news/repertoire-national-des-electros/"]],
   ],

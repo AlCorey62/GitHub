@@ -8,6 +8,30 @@ Beaucoup de calculs expliquent l'électricité, mais le but de ces articles est 
 
 ## Comprendre avant de brancher.
 
+Le sais-tu ? · 12 octobre 2026 · 2 min
+
+### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
+
+Puissance active, puissance apparente et cos φ : pourquoi les groupes et les raccordements se comptent en kVA.
+
+Le sais-tu ? · 12 octobre 2026 · 2 min
+
+### [Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/news/coefficient-de-foisonnement/)
+
+Tous les appareils ne fonctionnent pas en même temps à pleine puissance. Le foisonnement évite la surcapacité.
+
+Le sais-tu ? · 12 octobre 2026 · 2 min
+
+### [Quelle puissance tirer d'une prise P17 ?](https://www.darkside-energy.com/news/puissance-prise-p17/)
+
+De 3,7 kVA pour une prise 16 A monophasée à 277,1 kVA pour un Powerlock 400 A : des maximums, pas des objectifs.
+
+Le sais-tu ? · 12 octobre 2026 · 2 min
+
+### [Monophasé ou triphasé : pourquoi équilibrer les phases ?](https://www.darkside-energy.com/news/equilibrer-les-phases/)
+
+La phase la plus chargée fixe la taille de la source. Bien répartir les appareils évite de surdimensionner.
+
 Le sais-tu ? · 8 mai 2017 · 2 min
 
 ### [Qu'est-ce que la distribution électrique événementielle ?](https://www.darkside-energy.com/news/distribution-electrique-evenementielle/)

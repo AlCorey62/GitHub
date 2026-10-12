@@ -142,23 +142,23 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
-Did you know? · 1 min
+Did you know? · 2 min
 
-### [Why does it trip?](https://www.darkside-energy.com/en/did-you-know/why-it-trips/)
+### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
 
-30 mA RCD, circuit breaker: the distribution box has either saved your life or saved your installation.
+Active power, apparent power and cos φ: why generators and grid connections are rated in kVA.
 
 Did you know? · 2 min
 
-### [What is a Twin zero-interruption generator set?](https://www.darkside-energy.com/en/did-you-know/twin-generators/)
+### [What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
 
-Two synchronised generators sharing the load: if one fails, the other takes over, with no interruption at all.
+Not all equipment runs at full power at the same time. The diversity factor avoids overcapacity.
 
-Did you know? · 1 min
+Did you know? · 2 min
 
-### [Cable size also depends on length](https://www.darkside-energy.com/en/did-you-know/cable-size/)
+### [How much power can you draw from a P17 socket?](https://www.darkside-energy.com/en/did-you-know/p17-socket-power/)
 
-The longer the cable, the greater the voltage drop. Choosing the cable size needs planning.
+From 3.7 kVA for a 16 A single-phase socket to 277.1 kVA for a 400 A Powerlock: maximums, not targets.
 
 ## A project? Let's talk power.
 

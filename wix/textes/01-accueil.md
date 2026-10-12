@@ -138,23 +138,23 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
-Le sais-tu ? · 1 min
+Le sais-tu ? · 2 min
 
-### [Pourquoi « ça saute » ?](https://www.darkside-energy.com/single-post/2017/05/08/le-sais-tu-pourquoi-%C3%A7a-saute)
+### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/post/kva-ou-kw)
 
-Différentiel 30 mA, disjoncteur : le coffret vous a soit sauvé la vie, soit sauvé votre installation.
+Puissance active, puissance apparente et cos φ : pourquoi les groupes et les raccordements se comptent en kVA.
 
 Le sais-tu ? · 2 min
 
-### [Qu'est-ce qu'un groupe Twin zéro coupure ?](https://www.darkside-energy.com/single-post/2017/05/08/le-sais-tu-quest-ce-quun-groupe-twin-z%C3%A9ro-coupure)
+### [Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/post/coefficient-de-foisonnement)
 
-Deux groupes synchronisés qui se partagent la charge : si l'un tombe, l'autre prend le relais, sans aucune coupure.
+Tous les appareils ne fonctionnent pas en même temps à pleine puissance. Le foisonnement évite la surcapacité.
 
-Le sais-tu ? · 1 min
+Le sais-tu ? · 2 min
 
-### [La section de câble dépend aussi de la longueur](https://www.darkside-energy.com/single-post/2017/05/08/le-sais-tu-la-section-de-c%C3%A2ble-d%C3%A9pend-de-lintensit%C3%A9-mais-aussi-de-la-longueur)
+### [Quelle puissance tirer d'une prise P17 ?](https://www.darkside-energy.com/post/puissance-prise-p17)
 
-Plus le câble est long, plus la chute de tension est importante. Le choix de la section se prépare.
+De 3,7 kVA pour une prise 16 A monophasée à 277,1 kVA pour un Powerlock 400 A : des maximums, pas des objectifs.
 
 ## Un projet ? Parlons puissance.
 

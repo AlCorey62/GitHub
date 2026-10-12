@@ -58,7 +58,7 @@ Ce dossier permet de reconstruire dans Wix le nouveau site Dark Side Energy (dos
    - Bouton « Demander un devis » vers /contact.
    - Pied de page : reprendre celui de `site/index.html` (coordonnées, métiers, ressources, réseaux sociaux, mentions légales).
 4. Pages : suivre `pages.csv` dans l'ordre (colonne « Action »). Pour chaque page : sections et textes depuis `wix/textes/`, images, liens internes (liens de page Wix, pas d'adresse tapée à la main), puis réglages SEO (section 8). Montrer chaque page terminée à Damien.
-5. Blog : mettre à jour les 8 articles existants. Leurs adresses ne changent pas, aucune redirection à créer. Puis la page /news.
+5. Blog : mettre à jour les 8 articles existants. Leurs adresses ne changent pas, aucune redirection à créer. Créer ensuite les 4 nouveaux articles « Le sais-tu ? » (textes 26 à 29) et relever leur adresse Wix. Puis la page /news.
 6. Outils de calcul : section 6.
 7. Formulaire de contact : section 7.
 8. Référencement : section 8.
@@ -132,7 +132,7 @@ Pour le site :
 - Rendu approché : grilles, polices et animations dépendent de l'éditeur Wix.
 - Outils de calcul intégrés depuis un autre hébergement, sans préremplissage du formulaire.
 - Moins de maîtrise du balisage : pas de versions Markdown, llms.txt géré par Wix, en-têtes de sécurité gérés par Wix.
-- Construction avec le navigateur intégré : lente (éditeur par glisser-déposer, 17 pages et 8 articles). Damien garde l'app ouverte sur son Mac et reste disponible pour la connexion, les autorisations et la publication.
+- Construction avec le navigateur intégré : lente (éditeur par glisser-déposer, 17 pages et 12 articles). Damien garde l'app ouverte sur son Mac et reste disponible pour la connexion, les autorisations et la publication.
 
 ## 11. Points à valider par Damien
 
