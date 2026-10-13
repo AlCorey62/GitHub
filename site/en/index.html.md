@@ -109,7 +109,7 @@ Configurations to be validated with our engineering office, based on your power 
 
 International sports competitions, concerts in Zénith arenas, in stadiums and on tour, fairs, trade shows, corporate shows, festivals or ceremonies.
 
-*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
+*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - Zénith de Lille
 - Lille Grand Palais

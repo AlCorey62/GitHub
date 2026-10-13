@@ -42,7 +42,7 @@ Out of respect for the confidentiality agreements signed for each event, we name
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
 
-*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
+*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - **Mexico City** (Mexico)
 - **New Jersey** (United States)
@@ -55,6 +55,7 @@ Out of respect for the confidentiality agreements signed for each event, we name
 - **Livigno** (Italy)
 - **Bernardus Golf** (Cromvoirt, Netherlands)
 - **Lake Geneva** (Geneva, Switzerland)
+- **Birmingham** (United Kingdom)
 - **Tokyo** (Japan)
 - **Yokohama** (Japan)
 - **Fujisawa** (Japan)

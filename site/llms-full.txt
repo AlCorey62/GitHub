@@ -2,7 +2,7 @@
 
 > Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.
 
-Site : https://www.darkside-energy.com/ · Généré le 2026-10-12
+Site : https://www.darkside-energy.com/ · Généré le 2026-10-13
 
 ---
 
@@ -117,7 +117,7 @@ Configurations à valider avec notre bureau d'étude selon votre bilan de puissa
 
 Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
 
-*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
+*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - Zénith de Lille
 - Lille Grand Palais
@@ -784,7 +784,7 @@ Dark Side Energy a été créée en mai 2016. La SARL DARK SIDE ENERGY (SIREN 87
 
 ### Dans quels lieux Dark Side Energy est-elle intervenue ?
 
-Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé au Mexique (Mexico), aux États-Unis (New Jersey, Philadelphie, Kansas City), au Canada (Toronto), en Italie (Vérone, Cortina d'Ampezzo, Bormio, Livigno), sur le lac Léman et au Japon (Tokyo, Yokohama, Fukushima, Miyagi). La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
+Les équipes de Dark Side Energy sont notamment intervenues au Zénith de Lille, à Lille Grand Palais, au Stade de France, à l'Accor Arena, à Paris La Défense Arena, à la Decathlon Arena Stade Pierre Mauroy, à l'Arena Grand Paris, au Grand Palais, au Musée du Louvre, à l'Allianz Riviera et au Stade Vélodrome. À l'international, elles ont travaillé au Mexique (Mexico), aux États-Unis (New Jersey, Philadelphie, Kansas City), au Canada (Toronto), au Royaume-Uni (Birmingham), en Italie (Vérone, Cortina d'Ampezzo, Bormio, Livigno), sur le lac Léman et au Japon (Tokyo, Yokohama, Fukushima, Miyagi). La liste complète est sur la page [Références](https://www.darkside-energy.com/references/).
 
 ### Comment demander un devis ?
 
@@ -1539,7 +1539,7 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
 
-*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
+*À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - **Mexico** (Mexique)
 - **New Jersey** (États-Unis)
@@ -1552,6 +1552,7 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 - **Livigno** (Italie)
 - **Bernardus Golf** (Cromvoirt, Pays-Bas)
 - **Lac Léman** (Genève, Suisse)
+- **Birmingham** (Royaume-Uni)
 - **Tokyo** (Japon)
 - **Yokohama** (Japon)
 - **Fujisawa** (Japon)
@@ -1851,7 +1852,7 @@ Configurations to be validated with our engineering office, based on your power 
 
 International sports competitions, concerts in Zénith arenas, in stadiums and on tour, fairs, trade shows, corporate shows, festivals or ceremonies.
 
-*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
+*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - Zénith de Lille
 - Lille Grand Palais
@@ -2518,7 +2519,7 @@ Dark Side Energy was founded in May 2016. DARK SIDE ENERGY SARL (SIREN 879 105 3
 
 ### Which venues has Dark Side Energy worked at?
 
-Dark Side Energy's teams have worked at venues including the Zénith de Lille, Lille Grand Palais, the Stade de France, the Accor Arena, Paris La Défense Arena, the Decathlon Arena Stade Pierre Mauroy, the Arena Grand Paris, the Grand Palais, the Musée du Louvre, the Allianz Riviera and the Stade Vélodrome. Internationally, they have worked in Mexico (Mexico City), the United States (New Jersey, Philadelphia, Kansas City), Canada (Toronto), Italy (Verona, Cortina d'Ampezzo, Bormio, Livigno), on Lake Geneva and in Japan (Tokyo, Yokohama, Fukushima, Miyagi). The full list is on the [References](https://www.darkside-energy.com/en/references/) page.
+Dark Side Energy's teams have worked at venues including the Zénith de Lille, Lille Grand Palais, the Stade de France, the Accor Arena, Paris La Défense Arena, the Decathlon Arena Stade Pierre Mauroy, the Arena Grand Paris, the Grand Palais, the Musée du Louvre, the Allianz Riviera and the Stade Vélodrome. Internationally, they have worked in Mexico (Mexico City), the United States (New Jersey, Philadelphia, Kansas City), Canada (Toronto), the United Kingdom (Birmingham), Italy (Verona, Cortina d'Ampezzo, Bormio, Livigno), on Lake Geneva and in Japan (Tokyo, Yokohama, Fukushima, Miyagi). The full list is on the [References](https://www.darkside-energy.com/en/references/) page.
 
 ### How do I request a quote?
 
@@ -3246,7 +3247,7 @@ Out of respect for the confidentiality agreements signed for each event, we name
 - **Gare Lille Flandres** (Lille)
 - **Parc de la Hotoie** (Amiens)
 
-*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
+*Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
 
 - **Mexico City** (Mexico)
 - **New Jersey** (United States)
@@ -3259,6 +3260,7 @@ Out of respect for the confidentiality agreements signed for each event, we name
 - **Livigno** (Italy)
 - **Bernardus Golf** (Cromvoirt, Netherlands)
 - **Lake Geneva** (Geneva, Switzerland)
+- **Birmingham** (United Kingdom)
 - **Tokyo** (Japan)
 - **Yokohama** (Japan)
 - **Fujisawa** (Japan)
