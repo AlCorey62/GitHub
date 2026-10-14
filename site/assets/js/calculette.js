@@ -10,7 +10,11 @@ const root = document.querySelector("[data-calc]");
 const T = EN
   ? {
       mono: "Single-phase",
+      bi: "Two-phase",
       tri: "Three-phase",
+      rating: "Rating",
+      biNote: "Two-phase: there is no two-phase cable in our fleet; choose the socket and cable to suit your equipment.",
+      pickSection: "Choose the cable size under “Another cable” to calculate the voltage drop.",
       iTri: "Current per phase",
       iMono: "Current",
       perPhase: "per phase",
@@ -45,7 +49,11 @@ const T = EN
     }
   : {
       mono: "Monophasé",
+      bi: "Biphasé",
       tri: "Triphasé",
+      rating: "Calibre",
+      biNote: "Biphasé\u202f: pas de câble biphasé dans notre parc, prise et câble à choisir selon votre matériel.",
+      pickSection: "Choisissez la section du câble dans «\u202fAutre câble\u202f» pour calculer la chute de tension.",
       iTri: "Intensité par phase",
       iMono: "Intensité",
       perPhase: "par phase",
@@ -105,6 +113,7 @@ const store = {
   },
 };
 
+const phName = (ph) => (ph === 1 ? T.mono : ph === 2 ? T.bi : T.tri);
 const parse = (s) => parseFloat(String(s ?? "").trim().replace(/\s/g, "").replace(",", "."));
 const toField = (n) => (Number.isFinite(n) ? String(Math.round(n * 1e6) / 1e6).replace(".", DEC) : "");
 const num = (n) => fmt(n, n < 100 ? 2 : 1);
@@ -113,8 +122,6 @@ const pct = (n) => `${fmt(n, 2)}${PCT}`;
 
 const el = {
   network: $("calc-network"),
-  ph1: $("calc-ph1"),
-  ph3: $("calc-ph3"),
   custom: $("calc-custom"),
   u1: $("calc-u1"),
   u3: $("calc-u3"),
@@ -172,11 +179,12 @@ const checked = (name) => document.querySelector(`input[name='${name}']:checked`
 function state() {
   const custom = el.network.value === "custom";
   const net = custom ? { id: "custom", mono: parse(el.u1.value), tri: parse(el.u3.value), hz: Number(el.hz.value) } : networkById(el.network.value);
-  const ph = el.ph1.checked ? 1 : 3;
+  const ph = Number(checked("calc-phases").value);
   return {
     net,
     ph,
-    U: ph === 3 ? net.tri : net.mono,
+    // Biphasé et triphasé : tension entre phases ; monophasé : tension simple
+    U: ph === 1 ? net.mono : net.tri,
     value: parse(el.value.value),
     unit: checked("calc-unit").value,
     cos: parse(el.cos.value),
@@ -207,10 +215,11 @@ function render() {
 
   el.custom.hidden = st.net.id !== "custom";
   root.querySelector('[data-volt="1"]').textContent = st.net.mono > 0 ? `${volts(st.net.mono)} V` : "";
+  root.querySelector('[data-volt="2"]').textContent = st.net.tri > 0 ? `${volts(st.net.tri)} V` : "";
   root.querySelector('[data-volt="3"]').textContent = st.net.tri > 0 ? `${volts(st.net.tri)} V` : "";
   el.unitShown.textContent = st.unit;
-  el.iLabel.textContent = st.ph === 3 ? T.iTri : T.iMono;
-  el.context.textContent = `${st.ph === 3 ? T.tri : T.mono} ${netOk ? volts(st.U) : "-"} V · ${st.net.hz} Hz · cos φ ${st.cos > 0 && st.cos <= 1 ? fmt(st.cos, 2) : "-"}`;
+  el.iLabel.textContent = st.ph === 1 ? T.iMono : T.iTri;
+  el.context.textContent = `${phName(st.ph)} ${netOk ? volts(st.U) : "-"} V · ${st.net.hz} Hz · cos φ ${st.cos > 0 && st.cos <= 1 ? fmt(st.cos, 2) : "-"}`;
 
   const r = netOk ? convert({ value: st.value, unit: st.unit, phases: st.ph, U: st.U, cosPhi: st.cos }) : null;
   if (!r) {
@@ -246,6 +255,13 @@ function render() {
     el.loadBar.dataset.level = reco.loadPct > LOAD_WARN_PCT ? "warn" : "ok";
     el.load.textContent = `${fmt(reco.loadPct, 0)}${PCT} ${T.ofRating(reco.item.rating)}`;
     if (reco.loadPct > LOAD_WARN_PCT) note = T.lowMargin;
+  } else if (reco.status === "biphase") {
+    el.plug.textContent = `${T.rating} ${fmt(reco.rating, 0)} A`;
+    el.cable.textContent = "-";
+    el.loadBar.style.width = `${Math.min(100, reco.loadPct)}%`;
+    el.loadBar.dataset.level = reco.loadPct > LOAD_WARN_PCT ? "warn" : "ok";
+    el.load.textContent = `${fmt(reco.loadPct, 0)}${PCT} ${T.ofRating(reco.rating)}`;
+    note = reco.loadPct > LOAD_WARN_PCT ? `${T.biNote} ${T.lowMargin}` : T.biNote;
   } else {
     el.plug.textContent = "-";
     el.cable.textContent = "-";
@@ -281,7 +297,7 @@ function render() {
       el.verdict.textContent = drop.pct <= st.limit * 0.8 ? T.ok(st.limit) : drop.pct <= st.limit ? T.warn(st.limit) : T.bad(st.limit);
     } else {
       el.verdict.dataset.level = "";
-      el.verdict.textContent = "";
+      el.verdict.textContent = T.pickSection;
     }
     el.minRow.hidden = !over;
     if (over) {
@@ -313,11 +329,12 @@ function summary(c = current, withLink = true) {
   const { st, r, reco, drop, L } = c;
   const lines = [
     T.title,
-    `${toField(st.value)} ${st.unit} · ${(st.ph === 3 ? T.tri : T.mono).toLowerCase()} ${volts(st.U)} V · ${st.net.hz} Hz · cos φ ${fmt(st.cos, 2)}`,
-    `${T.current}${COLON} ${num(r.I)} A${st.ph === 3 ? ` ${T.perPhase}` : ""}`,
+    `${toField(st.value)} ${st.unit} · ${phName(st.ph).toLowerCase()} ${volts(st.U)} V · ${st.net.hz} Hz · cos φ ${fmt(st.cos, 2)}`,
+    `${T.current}${COLON} ${num(r.I)} A${st.ph === 1 ? "" : ` ${T.perPhase}`}`,
     `P ${num(r.P / 1000)} kW · S ${num(r.S / 1000)} kVA · Q ${num(r.Q / 1000)} kvar`,
   ];
   if (reco.status === "ok") lines.push(`${T.connection}${COLON} ${reco.item.connector}, ${T.cable} ${reco.item.cable} (${fmt(reco.loadPct, 0)}${PCT} ${T.ofRating(reco.item.rating)})`);
+  if (reco.status === "biphase") lines.push(`${T.connection}${COLON} ${T.rating.toLowerCase()} ${fmt(reco.rating, 0)} A (${fmt(reco.loadPct, 0)}${PCT})`);
   if (drop) lines.push(`${T.dropOver(fmt(L, L % 1 ? 1 : 0))}${COLON} ${pct(drop.pct)} (${T.limit(st.limit)})`);
   if (withLink) lines.push(shareUrl(st));
   return lines.join("\n");
@@ -351,7 +368,7 @@ function apply(s) {
   if (has("u1") && parse(s.u1) > 0) el.u1.value = toField(parse(s.u1));
   if (has("u3") && parse(s.u3) > 0) el.u3.value = toField(parse(s.u3));
   if (has("hz") && ["50", "60"].includes(String(s.hz))) el.hz.value = String(s.hz);
-  if (has("ph")) (String(s.ph) === "1" ? el.ph1 : el.ph3).checked = true;
+  if (has("ph") && ["1", "2", "3"].includes(String(s.ph))) $(`calc-ph${s.ph}`).checked = true;
   if (has("u")) {
     const u = root.querySelector(`input[name='calc-unit'][value='${String(s.u).replace(/[^A-Za-z]/g, "")}']`);
     if (u) u.checked = true;
@@ -432,11 +449,12 @@ function save() {
   const { st, r, reco, drop, L } = current;
   const meta = [];
   if (reco.status === "ok") meta.push(`${reco.item.connector} · ${reco.item.cable}`);
+  if (reco.status === "biphase") meta.push(`${T.rating} ${fmt(reco.rating, 0)} A`);
   if (drop) meta.push(`ΔU ${pct(drop.pct)} ${T.over(fmt(L, L % 1 ? 1 : 0))}`);
   const entry = {
     t: Date.now(),
     main: `${num(r.I)} A`,
-    sub: `${toField(st.value)} ${st.unit} · ${st.ph === 3 ? T.tri : T.mono} ${volts(st.U)} V · cos φ ${fmt(st.cos, 2)}`,
+    sub: `${toField(st.value)} ${st.unit} · ${phName(st.ph)} ${volts(st.U)} V · cos φ ${fmt(st.cos, 2)}`,
     meta: meta.join(" · "),
     text: summary(current, true),
     state: snapshot(st),

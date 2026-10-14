@@ -59,7 +59,7 @@ No. Equipment is available for turnkey hire only: distribution cabinets and boxe
 
 ### What is a Twin zero-interruption generator set?
 
-It consists of two synchronised generators, each supplying 50% of the load. If one fails, the other takes over the entire load without any interruption, which protects computers and sound and lighting consoles. Some configurations synchronise 3 or 4 generators.
+It consists of two synchronised generators, each supplying 50% of the load and each sized to carry the whole load on its own. If one fails, the other takes over the entire load without any interruption, which protects computers and sound and lighting consoles. Some configurations synchronise 3 or 4 generators.
 
 ### What are the alternatives to diesel generators?
 

@@ -1899,6 +1899,22 @@ a.tag:hover {
   margin-bottom: 0;
 }
 
+/* Accroche sous le titre principal d'une page métier */
+.page-hero__sub {
+  margin: -4px 0 18px;
+  max-width: 24ch;
+  color: var(--c-accent);
+  font-size: var(--fs-h3);
+  font-weight: 750;
+  font-stretch: 112%;
+  line-height: 1.2;
+}
+
+/* Preuves de terrain juste après l'en-tête de l'accueil */
+.proof .marquee {
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
 .page-hero .btn-row {
   margin-top: 32px;
 }
@@ -3621,7 +3637,7 @@ a.tag:hover {
 
 .calc__phases .segmented {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
 }
 
@@ -4383,6 +4399,17 @@ a.tag:hover {
 @media (max-width: 520px) {
   .calc__custom {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Trois raccordements côte à côte : la tension passe sous le nom */
+  .calc__phases .segmented label {
+    padding: 7px 4px;
+    line-height: 1.25;
+  }
+
+  .calc__phases label span {
+    display: block;
+    font-size: 0.85em;
   }
 
   .calc__key {

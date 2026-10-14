@@ -4,7 +4,7 @@
 
 Source: https://www.darkside-energy.com/en/ · Dark Side Energy · Updated: 2026-10-06
 
-Power distribution, technical management, general coordination and engineering office: Dark Side Energy powers your events, from trade shows to stadiums, in France and internationally.
+Power distribution, technical management, general coordination and engineering office: from Hauts-de-France, northern France, Dark Side Energy powers your events, from trade shows to stadiums, in France and internationally.
 
 [Request a quote](https://www.darkside-energy.com/en/contact/)
 [Explore our services](https://www.darkside-energy.com/en/#metiers)
@@ -18,6 +18,29 @@ Power distribution, technical management, general coordination and engineering o
 - **Engineering office**: Power assessments, diagrams and plans, usable on site
 - **HV + LV**: From the substation to the distribution board, the whole chain in-house
 - **Turnkey**: Equipment, installation and operation by our teams, no dry hire
+
+## From Zénith arenas to stadiums, our teams know the ground.
+
+International sports competitions, concerts in Zénith arenas, in stadiums and on tour, fairs, trade shows, corporate shows, festivals or ceremonies.
+
+[All our references](https://www.darkside-energy.com/en/references/)
+
+*Power cables at the foot of the containers.*
+
+- Zénith de Lille
+- Lille Grand Palais
+- Stade de France
+- Accor Arena
+- Paris La Défense Arena
+- Decathlon Arena, Stade Pierre Mauroy
+- Arena Grand Paris
+- Grand Palais
+- Musée du Louvre
+- Allianz Riviera
+- Stade Vélodrome
+- Arkéa Arena
+- Zénith de Paris
+- Paris Expo Porte de Versailles
 
 ## Who is Dark Side Energy?
 
@@ -57,17 +80,17 @@ A study is only of value if the teams who will implement it on site can use it. 
 
 The many disciplines within our team, such as engineering, technical and production management or operational technical work, allow us to anticipate constraints and produce deliverables that reflect the reality on site.
 
-And from the grid connection agreement to the client's socket, the whole chain is covered in-house: no grey area between high and low voltage.
+And the whole chain is covered in-house: a single point of contact, from the grid connection agreement to the very last socket.
 
 [The engineering office](https://www.darkside-energy.com/en/engineering/)
 
-*Power cables at the foot of the containers.*
+*Distribution cabinet and P17 outlets.*
 
 ## Every event is unique, and so is its set-up.
 
 ### Trade shows, fairs and conferences
 
-A stand power box protected by a 30 mA RCD for every stand. Feeding a stand from its neighbour's box? That's a no.
+Every stand has its own power box protected by a 30 mA RCD: no extension lead run from the neighbouring stand, which safety officers refuse.
 
 ### Concerts and tours
 
@@ -105,26 +128,11 @@ We master alternative technologies and promote them to all our clients, to move 
 
 Configurations to be validated with our engineering office, based on your power assessment and the site constraints.
 
-## From Zénith arenas to stadiums, our teams know the ground.
+## In France and internationally.
 
-International sports competitions, concerts in Zénith arenas, in stadiums and on tour, fairs, trade shows, corporate shows, festivals or ceremonies.
+Our teams have worked across Europe, in North America and as far as Japan.
 
 *Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
-
-- Zénith de Lille
-- Lille Grand Palais
-- Stade de France
-- Accor Arena
-- Paris La Défense Arena
-- Decathlon Arena, Stade Pierre Mauroy
-- Arena Grand Paris
-- Grand Palais
-- Musée du Louvre
-- Allianz Riviera
-- Stade Vélodrome
-- Arkéa Arena
-- Zénith de Paris
-- Paris Expo Porte de Versailles
 
 [All our references](https://www.darkside-energy.com/en/references/)
 

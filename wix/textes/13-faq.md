@@ -55,7 +55,7 @@ Non. Le matériel est loué uniquement en clé en main : armoires et coffrets, c
 
 ### Qu'est-ce qu'un groupe électrogène Twin zéro coupure ?
 
-Ce sont deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge. Si l'un tombe en panne, l'autre reprend la totalité de la charge sans aucune coupure, ce qui protège les ordinateurs et les consoles son et lumière. Certaines configurations synchronisent 3 ou 4 groupes.
+Ce sont deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge, chacun étant dimensionné pour la reprendre seul en totalité. Si l'un tombe en panne, l'autre reprend la totalité de la charge sans aucune coupure, ce qui protège les ordinateurs et les consoles son et lumière. Certaines configurations synchronisent 3 ou 4 groupes.
 
 ### Quelles alternatives aux groupes électrogènes diesel ?
 

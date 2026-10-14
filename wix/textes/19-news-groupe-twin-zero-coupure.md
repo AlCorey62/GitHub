@@ -4,7 +4,7 @@
 
 - Un groupe Twin zéro coupure, ce sont deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge.
 - Si l'un tombe en panne, l'autre reprend toute la charge sans aucune coupure.
-- Ordinateurs, consoles son et lumière ne voient rien passer. On peut aller jusqu'à 3 ou 4 groupes synchronisés.
+- Chaque groupe est dimensionné pour reprendre seul toute la charge : ordinateurs, consoles son et lumière restent alimentés. On peut aller jusqu'à 3 ou 4 groupes synchronisés.
 
 Ton événement se trouve dans un lieu isolé ? Tu as besoin de plus de puissance que ce que le bâtiment peut te fournir ? Tu fais donc le choix de louer un groupe électrogène ! Très bien, mais pourquoi le loueur te propose un groupe Twin zéro coupure ?
 
@@ -18,9 +18,9 @@ Tous les loueurs pourront vous vanter les mérites de leurs groupes électrogèn
 
 ## Et voici le groupe Twin zéro coupure
 
-Deux groupes électrogènes reliés ensemble tournent en même temps : ils se synchronisent et fournissent chacun 50 % de la charge.
+Deux groupes électrogènes reliés ensemble tournent en même temps : ils se synchronisent et fournissent chacun 50 % de la charge, chacun étant dimensionné pour la reprendre seul en totalité.
 
-Si l'un des deux groupes tombe en panne, l'autre prend le relais des 50 % manquants et, comme il est déjà en route, il n'y a **aucune coupure** : les appareils électroniques ne voient pas la panne et ne s'arrêtent pas.
+Si l'un des deux groupes tombe en panne, l'autre prend le relais des 50 % manquants et, comme il est déjà en route, il n'y a **aucune coupure** : les appareils électroniques restent alimentés et ne s'arrêtent pas.
 
 En effet, un ordinateur qui subit même une micro-coupure peut très bien avoir un disque dur hors service à la suite de cette coupure. Certaines consoles lumière ou son fonctionnent sous un système d'exploitation qui a besoin de plusieurs secondes, voire de plusieurs minutes, pour redémarrer après une coupure de courant. Autant vous dire que certaines productions ne prennent pas ce risque et utilisent donc ce système.
 

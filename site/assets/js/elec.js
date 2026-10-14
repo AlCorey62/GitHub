@@ -5,6 +5,8 @@
 //   P : puissance active (W), S : puissance apparente (VA), Q : puissance réactive (var), I : intensité (A)
 //   Monophasé : S = U × I avec U = 230 V (tension simple)
 //   Triphasé  : S = √3 × U × I avec U = 400 V (tension composée)
+//   Biphasé   : S = U × I avec U = 400 V (charge entre deux phases), ou 200 V au Japon (monophasé à trois fils) ;
+//               calculs du monophasé avec la tension entre phases (phases = 2)
 //   Autres réseaux (NETWORKS) : mêmes formules avec leurs tensions simple et composée
 
 // Langue de la page : anglais sous /en/, français sinon (et hors navigateur, pour les tests)
@@ -169,7 +171,7 @@ const label = (v, lang) => (typeof v === "string" ? v : v[lang === "en" ? "en" :
 /**
  * Raccordement conseillé dans le parc pour une intensité, et chute de tension sur la longueur donnée.
  * @returns {null | {
- *   status: "ok" | "beyondMono" | "beyond",
+ *   status: "ok" | "beyondMono" | "beyond" | "biphase", rating?: number (biphasé),
  *   item?: {rating:number, connector:string, cable:string, section:number}, loadPct?: number,
  *   drop?: object|null, minSection?: object|null, better?: {cable:string, section:number, rating:number, drop:object}|null
  * }}
@@ -178,6 +180,11 @@ export function recommendLine({ current, phases = 3, length = 0, cosPhi = 1, U =
   const I = toNumber(current);
   const L = toNumber(length) || 0;
   if (!(I >= 0)) return null;
+  // Biphasé : pas de câble dédié dans le parc, seulement le calibre normalisé
+  if (phases === 2) {
+    const rating = nextRating(I);
+    return rating ? { status: "biphase", rating, loadPct: (100 * I) / rating } : { status: "beyond" };
+  }
   const list = PARC[phases === 1 ? 1 : 3];
   const pick = list.find((p) => p.rating >= I - 1e-9);
   if (!pick) return { status: phases === 1 ? "beyondMono" : "beyond" };

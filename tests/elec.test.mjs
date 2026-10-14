@@ -172,3 +172,19 @@ test("raccordement conseillé dans le parc", () => {
   assert.ok(long.minSection.section <= 35);
   assert.equal(LOAD_WARN_PCT, 80);
 });
+
+test("biphasé : charge entre deux phases, ou monophasé à trois fils (Japon 100/200 V)", () => {
+  // 8 kVA en biphasé 400 V → 20 A ; 4 kW cos 1 en biphasé 200 V (Japon) → 20 A
+  close(convert({ value: 8, unit: "kVA", phases: 2, U: 400, cosPhi: 1 }).I, 20);
+  close(convert({ value: 4, unit: "kW", phases: 2, U: networkById("jp50").tri, cosPhi: 1 }).I, 20);
+  close(convert({ value: 20, unit: "A", phases: 2, U: 400, cosPhi: 1 }).S, 8000);
+  // Chute de tension : aller et retour (b = 2), rapportée à la tension entre phases
+  const d = voltageDrop({ phases: 2, material: "cu", section: 6, length: 50, current: 20, cosPhi: 1, U: 400 });
+  close(d.u, 2 * 0.0225 * 50 / 6 * 20, 1e-9);
+  close(d.pct, (100 * d.u) / 400, 1e-9);
+  const r = recommendLine({ current: 20, phases: 2, length: 50 });
+  assert.equal(r.status, "biphase");
+  assert.equal(r.rating, 32);
+  close(r.loadPct, 62.5);
+  assert.equal(recommendLine({ current: 2500, phases: 2 }).status, "beyond");
+});

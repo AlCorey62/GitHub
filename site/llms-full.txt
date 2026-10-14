@@ -12,7 +12,7 @@ Site : https://www.darkside-energy.com/ · Généré le 2026-10-14
 
 Source : https://www.darkside-energy.com/ · Dark Side Energy · Mise à jour : 2026-10-06
 
-Distribution électrique, régie technique, coordination générale et bureau d'étude : Dark Side Energy alimente vos événements, du salon au stade, en France et à l'international.
+Distribution électrique, régie technique, coordination générale et bureau d'étude : depuis les Hauts-de-France, Dark Side Energy alimente vos événements, du salon au stade, en France et à l'international.
 
 [Demander un devis](https://www.darkside-energy.com/contact/)
 [Découvrir nos métiers](https://www.darkside-energy.com/#metiers)
@@ -26,6 +26,29 @@ Distribution électrique, régie technique, coordination générale et bureau d'
 - **Bureau d'étude** : Bilans de puissance, schémas et plans, exploitables sur place
 - **HT + BT** : Du poste source jusqu'au tableau de distribution, toute la chaîne en interne
 - **Clé en main** : Matériel, installation et exploitation par nos équipes, sans location sèche
+
+## Des Zéniths aux stades, nos équipes connaissent le terrain.
+
+Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
+
+[Toutes nos références](https://www.darkside-energy.com/references/)
+
+*Câbles de puissance au pied des conteneurs.*
+
+- Zénith de Lille
+- Lille Grand Palais
+- Stade de France
+- Accor Arena
+- Paris La Défense Arena
+- Decathlon Arena, Stade Pierre Mauroy
+- Arena Grand Paris
+- Grand Palais
+- Musée du Louvre
+- Allianz Riviera
+- Stade Vélodrome
+- Arkéa Arena
+- Zénith de Paris
+- Paris Expo Porte de Versailles
 
 ## Dark Side Energy, qui sommes-nous ?
 
@@ -65,17 +88,17 @@ Une étude n'a de valeur que si elle est exploitable par les équipes qui vont l
 
 La multitude de métiers chez nous, comme l'ingénierie, la régie technique et générale ou la technique opérationnelle, nous permet d'anticiper les contraintes et de produire des livrables fidèles à la réalité du terrain.
 
-Et de la convention de raccordement jusqu'à la prise du client, toute la chaîne est couverte en interne : pas de zone grise entre la haute et la basse tension.
+Et toute la chaîne est couverte en interne : un seul interlocuteur, de la convention de raccordement au réseau jusqu'à la dernière prise.
 
 [Le bureau d'étude](https://www.darkside-energy.com/bureaudetude/)
 
-*Câbles de puissance au pied des conteneurs.*
+*Armoire de distribution et départs P17.*
 
 ## Chaque événement est unique, et donc sa configuration également.
 
 ### Salons, foires et congrès
 
-Un coffret protégé par un différentiel 30 mA pour chaque stand. L'ilotage, c'est non.
+Chaque stand a son coffret protégé par un différentiel 30 mA : pas de rallonge tirée depuis le stand voisin, refusée par les chargés de sécurité.
 
 ### Concerts et tournées
 
@@ -113,26 +136,11 @@ Nous maîtrisons les technologies alternatives et nous les mettons en avant aupr
 
 Configurations à valider avec notre bureau d'étude selon votre bilan de puissance et les contraintes du site.
 
-## Des Zéniths aux stades, nos équipes connaissent le terrain.
+## En France et à l'international.
 
-Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
+Nos équipes sont intervenues en Europe, en Amérique du Nord et jusqu'au Japon.
 
 *À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
-
-- Zénith de Lille
-- Lille Grand Palais
-- Stade de France
-- Accor Arena
-- Paris La Défense Arena
-- Decathlon Arena, Stade Pierre Mauroy
-- Arena Grand Paris
-- Grand Palais
-- Musée du Louvre
-- Allianz Riviera
-- Stade Vélodrome
-- Arkéa Arena
-- Zénith de Paris
-- Paris Expo Porte de Versailles
 
 [Toutes nos références](https://www.darkside-energy.com/references/)
 
@@ -177,13 +185,15 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 ---
 
-# Du coffret de stand à l'armoire de puissance.
+# Distribution électrique événementielle.
 
 > Techniciens électriciens spécialisés dans l'événementiel : distribution électrique du coffret de stand à l'armoire de puissance, sur réseau, groupe électrogène ou batterie.
 
 Source : https://www.darkside-energy.com/distribution-electrique/ · Dark Side Energy · Mise à jour : 2026-09-25
 
-Dark Side Energy intègre une équipe de techniciens électriciens spécialisés dans l'événementiel, en France et à l'international. Nos projets sont variés pour notre plus grand plaisir : du salon à l'exposition, du live à la convention, de l'événement sportif au festival de plein air.
+Du coffret de stand à l'armoire de puissance.
+
+Basée dans les Hauts-de-France, Dark Side Energy intègre une équipe de techniciens électriciens spécialisés dans l'événementiel, qui interviennent en France et à l'international. Nos projets sont variés pour notre plus grand plaisir : du salon à l'exposition, du live à la convention, de l'événement sportif au festival de plein air.
 
 [Demander un devis](https://www.darkside-energy.com/contact/?objet=distribution)
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
@@ -227,7 +237,7 @@ Chaque stand doit avoir son coffret électrique équipé d'un différentiel 30 m
 
 ## Quand la moindre micro-coupure n'est pas une option.
 
-Deux groupes électrogènes synchronisés tournent en même temps et fournissent chacun 50 % de la charge. Si l'un tombe en panne, l'autre prend le relais et, comme il est déjà en route, il n'y a aucune coupure : consoles, ordinateurs et régies ne voient rien passer.
+Deux groupes électrogènes synchronisés tournent en même temps et fournissent chacun 50 % de la charge, chacun étant dimensionné pour la reprendre seul en totalité. Si l'un tombe en panne, l'autre prend le relais et, comme il est déjà en route, il n'y a aucune coupure : consoles, ordinateurs et régies restent alimentés.
 
 [Le groupe Twin zéro coupure expliqué](https://www.darkside-energy.com/news/groupe-twin-zero-coupure/)
 
@@ -699,6 +709,7 @@ Conversions, raccordement conseillé et chute de tension, en France comme à l'�
 
 - Monophasé : S = U0 × I, avec U0 la tension simple, entre phase et neutre (230 V en Europe).
 - Triphasé : S = √3 × U × I, avec U la tension composée, entre phases (400 V en Europe). L'intensité est donnée par phase.
+- Biphasé : charge raccordée entre deux phases (400 V en Europe), ou réseau monophasé à trois fils comme au Japon (200 V entre les deux phases) : S = U × I, avec U la tension entre phases.
 - Puissance active P = S × cos φ, puissance réactive Q = S × sin φ.
 - Hypothèse par défaut : cos φ = 0,9, modifiable.
 
@@ -712,21 +723,22 @@ Conversions, raccordement conseillé et chute de tension, en France comme à l'�
 - Japon, est (Tokyo) : 100/200 V, 50 Hz.
 - Japon, ouest (Osaka) : 100/200 V, 60 Hz.
 
-Ce sont des tensions nominales. Un réseau personnalisé est possible. Vérifiez toujours sur place la tension réellement fournie.
+Au Japon : 100 V en monophasé, 200 V en biphasé (monophasé à trois fils) et en triphasé. Ce sont des tensions nominales. Un réseau personnalisé est possible. Vérifiez toujours sur place la tension réellement fournie.
 
 ### Raccordement conseillé
 
 - La calculette retient le plus petit calibre de notre parc supérieur ou égal à l'intensité calculée. En monophasé : prise 16 A (câble 3G2,5) et P17 32 A (3G6). En triphasé : P17 32, 63 et 125 A (5G6, 5G16, 5G35) et Powerlock 400 A (unifilaires 150 ou 240 mm²). Câbles souples en cuivre.
 - Au-delà de 80 % du calibre, la marge est signalée comme faible.
 - Au-delà de 32 A en monophasé ou de 400 A en triphasé, le raccordement est à étudier.
+- En biphasé, la calculette donne le calibre normalisé : notre parc ne liste pas de câble biphasé.
 - Si la chute de tension dépasse la limite, la calculette indique la section minimale et, s'il existe, le câble du parc qui convient.
 
 ### Chute de tension
 
-- u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, avec b = 1 en triphasé et b = 2 en monophasé.
+- u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, avec b = 1 en triphasé et b = 2 en monophasé et en biphasé.
 - ρ = 0,0225 Ω·mm²/m pour le cuivre et 0,036 Ω·mm²/m pour l'aluminium (résistivité en service normal), λ = 0,08 mΩ/m à 50 Hz.
 - À 60 Hz, λ est augmentée dans le rapport des fréquences (0,096 mΩ/m) : hypothèse d'une réactance proportionnelle à la fréquence.
-- ΔU % = 100 × u ÷ U0, avec U0 la tension simple (U ÷ √3 en triphasé).
+- ΔU % = 100 × u ÷ U0, avec U0 la tension simple (U ÷ √3 en triphasé). En biphasé, ΔU % = 100 × u ÷ U, avec U la tension entre phases.
 - Limites de la norme NF C 15-100 pour une installation alimentée par le réseau public basse tension : 3 % pour l'éclairage, 5 % pour les autres usages. À l'étranger, appliquez les règles locales.
 
 Ces calculs ne vérifient ni le courant admissible du câble selon son mode de pose, ni la protection contre les surcharges et les courts-circuits. Les termes techniques sont expliqués dans le [lexique](https://www.darkside-energy.com/lexique/).
@@ -828,7 +840,7 @@ Non. Le matériel est loué uniquement en clé en main : armoires et coffrets, c
 
 ### Qu'est-ce qu'un groupe électrogène Twin zéro coupure ?
 
-Ce sont deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge. Si l'un tombe en panne, l'autre reprend la totalité de la charge sans aucune coupure, ce qui protège les ordinateurs et les consoles son et lumière. Certaines configurations synchronisent 3 ou 4 groupes.
+Ce sont deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge, chacun étant dimensionné pour la reprendre seul en totalité. Si l'un tombe en panne, l'autre reprend la totalité de la charge sans aucune coupure, ce qui protège les ordinateurs et les consoles son et lumière. Certaines configurations synchronisent 3 ou 4 groupes.
 
 ### Quelles alternatives aux groupes électrogènes diesel ?
 
@@ -891,7 +903,7 @@ Armoires, connecteurs, protections, énergie : les termes que vous croiserez dan
 - **ERP** : Établissement recevant du public : salle de spectacle, parc des expositions, stade, chapiteau… Les installations électriques, y compris temporaires, y obéissent à des règles de sécurité spécifiques et font l'objet de vérifications réglementaires.
 - **Foisonnement** : Coefficient compris entre 0 et 1 qui traduit le fait que tous les appareils ne fonctionnent pas en même temps à pleine puissance. Un foisonnement réaliste évite de surdimensionner l'installation.
 - **Groupe électrogène** : Moteur thermique qui entraîne un alternateur pour produire de l'électricité. Une électronique de régulation maintient la tension et la fréquence stables.
-- **Groupe Twin zéro coupure** : Deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge. Si l'un tombe en panne, l'autre reprend toute la charge sans coupure. Des configurations à 3 ou 4 groupes synchronisés existent.
+- **Groupe Twin zéro coupure** : Deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge, chacun étant dimensionné pour la reprendre seul en totalité. Si l'un tombe en panne, l'autre reprend toute la charge sans coupure. Des configurations à 3 ou 4 groupes synchronisés existent.
 - **GroupMan** : Technicien chargé du suivi et de l'exploitation des groupes électrogènes pendant un événement.
 - **Habilitations électriques** : Autorisations délivrées par l'employeur, après formation, pour réaliser des opérations sur des installations électriques ou à leur voisinage, selon la norme NF C 18-510. Leurs symboles précisent le domaine : H0 pour les travaux non électriques au voisinage de la haute tension, B2V pour les travaux électriques en basse tension, y compris au voisinage, BR pour les interventions générales en basse tension, BC pour les consignations en basse tension.
 - **HVO** : Carburant renouvelable issu d'huiles et de graisses hydrotraitées (Hydrotreated Vegetable Oil), utilisable à la place du gazole dans les groupes électrogènes compatibles.
@@ -1299,7 +1311,7 @@ Source : https://www.darkside-energy.com/news/groupe-twin-zero-coupure/ · Dark 
 
 - Un groupe Twin zéro coupure, ce sont deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge.
 - Si l'un tombe en panne, l'autre reprend toute la charge sans aucune coupure.
-- Ordinateurs, consoles son et lumière ne voient rien passer. On peut aller jusqu'à 3 ou 4 groupes synchronisés.
+- Chaque groupe est dimensionné pour reprendre seul toute la charge : ordinateurs, consoles son et lumière restent alimentés. On peut aller jusqu'à 3 ou 4 groupes synchronisés.
 
 Ton événement se trouve dans un lieu isolé ? Tu as besoin de plus de puissance que ce que le bâtiment peut te fournir ? Tu fais donc le choix de louer un groupe électrogène ! Très bien, mais pourquoi le loueur te propose un groupe Twin zéro coupure ?
 
@@ -1313,9 +1325,9 @@ Tous les loueurs pourront vous vanter les mérites de leurs groupes électrogèn
 
 ## Et voici le groupe Twin zéro coupure
 
-Deux groupes électrogènes reliés ensemble tournent en même temps : ils se synchronisent et fournissent chacun 50 % de la charge.
+Deux groupes électrogènes reliés ensemble tournent en même temps : ils se synchronisent et fournissent chacun 50 % de la charge, chacun étant dimensionné pour la reprendre seul en totalité.
 
-Si l'un des deux groupes tombe en panne, l'autre prend le relais des 50 % manquants et, comme il est déjà en route, il n'y a **aucune coupure** : les appareils électroniques ne voient pas la panne et ne s'arrêtent pas.
+Si l'un des deux groupes tombe en panne, l'autre prend le relais des 50 % manquants et, comme il est déjà en route, il n'y a **aucune coupure** : les appareils électroniques restent alimentés et ne s'arrêtent pas.
 
 En effet, un ordinateur qui subit même une micro-coupure peut très bien avoir un disque dur hors service à la suite de cette coupure. Certaines consoles lumière ou son fonctionnent sous un système d'exploitation qui a besoin de plusieurs secondes, voire de plusieurs minutes, pour redémarrer après une coupure de courant. Autant vous dire que certaines productions ne prennent pas ce risque et utilisent donc ce système.
 
@@ -1759,7 +1771,7 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 Source: https://www.darkside-energy.com/en/ · Dark Side Energy · Updated: 2026-10-06
 
-Power distribution, technical management, general coordination and engineering office: Dark Side Energy powers your events, from trade shows to stadiums, in France and internationally.
+Power distribution, technical management, general coordination and engineering office: from Hauts-de-France, northern France, Dark Side Energy powers your events, from trade shows to stadiums, in France and internationally.
 
 [Request a quote](https://www.darkside-energy.com/en/contact/)
 [Explore our services](https://www.darkside-energy.com/en/#metiers)
@@ -1773,6 +1785,29 @@ Power distribution, technical management, general coordination and engineering o
 - **Engineering office**: Power assessments, diagrams and plans, usable on site
 - **HV + LV**: From the substation to the distribution board, the whole chain in-house
 - **Turnkey**: Equipment, installation and operation by our teams, no dry hire
+
+## From Zénith arenas to stadiums, our teams know the ground.
+
+International sports competitions, concerts in Zénith arenas, in stadiums and on tour, fairs, trade shows, corporate shows, festivals or ceremonies.
+
+[All our references](https://www.darkside-energy.com/en/references/)
+
+*Power cables at the foot of the containers.*
+
+- Zénith de Lille
+- Lille Grand Palais
+- Stade de France
+- Accor Arena
+- Paris La Défense Arena
+- Decathlon Arena, Stade Pierre Mauroy
+- Arena Grand Paris
+- Grand Palais
+- Musée du Louvre
+- Allianz Riviera
+- Stade Vélodrome
+- Arkéa Arena
+- Zénith de Paris
+- Paris Expo Porte de Versailles
 
 ## Who is Dark Side Energy?
 
@@ -1812,17 +1847,17 @@ A study is only of value if the teams who will implement it on site can use it. 
 
 The many disciplines within our team, such as engineering, technical and production management or operational technical work, allow us to anticipate constraints and produce deliverables that reflect the reality on site.
 
-And from the grid connection agreement to the client's socket, the whole chain is covered in-house: no grey area between high and low voltage.
+And the whole chain is covered in-house: a single point of contact, from the grid connection agreement to the very last socket.
 
 [The engineering office](https://www.darkside-energy.com/en/engineering/)
 
-*Power cables at the foot of the containers.*
+*Distribution cabinet and P17 outlets.*
 
 ## Every event is unique, and so is its set-up.
 
 ### Trade shows, fairs and conferences
 
-A stand power box protected by a 30 mA RCD for every stand. Feeding a stand from its neighbour's box? That's a no.
+Every stand has its own power box protected by a 30 mA RCD: no extension lead run from the neighbouring stand, which safety officers refuse.
 
 ### Concerts and tours
 
@@ -1860,26 +1895,11 @@ We master alternative technologies and promote them to all our clients, to move 
 
 Configurations to be validated with our engineering office, based on your power assessment and the site constraints.
 
-## From Zénith arenas to stadiums, our teams know the ground.
+## In France and internationally.
 
-International sports competitions, concerts in Zénith arenas, in stadiums and on tour, fairs, trade shows, corporate shows, festivals or ceremonies.
+Our teams have worked across Europe, in North America and as far as Japan.
 
 *Around the world: Mexico City, Kansas City, Toronto, Philadelphia, New Jersey, Verona, Cortina d'Ampezzo, Bormio, Livigno, Geneva, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
-
-- Zénith de Lille
-- Lille Grand Palais
-- Stade de France
-- Accor Arena
-- Paris La Défense Arena
-- Decathlon Arena, Stade Pierre Mauroy
-- Arena Grand Paris
-- Grand Palais
-- Musée du Louvre
-- Allianz Riviera
-- Stade Vélodrome
-- Arkéa Arena
-- Zénith de Paris
-- Paris Expo Porte de Versailles
 
 [All our references](https://www.darkside-energy.com/en/references/)
 
@@ -1924,13 +1944,15 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 ---
 
-# From the stand power box to the power distribution cabinet.
+# Event power distribution.
 
 > Electricians specialised in events: power distribution from the stand power box to the power distribution cabinet, on grid, generator or battery.
 
 Source: https://www.darkside-energy.com/en/power-distribution/ · Dark Side Energy · Updated: 2026-10-06
 
-Dark Side Energy has a team of electrical technicians specialised in events, working in France and internationally. Our projects are varied, which is just how we like it: from trade shows to exhibitions, from live shows to conventions, from sporting events to open-air festivals.
+From the stand power box to the power distribution cabinet.
+
+Based in Hauts-de-France, northern France, Dark Side Energy has a team of electrical technicians specialised in events, working in France and internationally. Our projects are varied, which is just how we like it: from trade shows to exhibitions, from live shows to conventions, from sporting events to open-air festivals.
 
 [Request a quote](https://www.darkside-energy.com/en/contact/?objet=distribution)
 [Run a power assessment](https://www.darkside-energy.com/en/power-assessment/)
@@ -1974,7 +1996,7 @@ Each stand must have its own power box fitted with a 30 mA RCD to protect people
 
 ## When even the briefest micro-interruption is not an option.
 
-Two synchronised generators run at the same time, each supplying 50% of the load. If one fails, the other takes over and, because it is already running, there is no interruption at all: consoles, computers and control rooms don't notice a thing.
+Two synchronised generators run at the same time, each supplying 50% of the load and each sized to carry the whole load on its own. If one fails, the other takes over and, because it is already running, there is no interruption at all: consoles, computers and control rooms stay powered.
 
 [The Twin zero-interruption generator set explained](https://www.darkside-energy.com/en/did-you-know/twin-generators/)
 
@@ -2446,6 +2468,7 @@ Conversions, suggested connection and voltage drop, in France and abroad. The ca
 
 - Single-phase: S = U0 × I, where U0 is the phase-to-neutral voltage (230 V in Europe).
 - Three-phase: S = √3 × U × I, where U is the phase-to-phase voltage (400 V in Europe). The current is given per phase.
+- Two-phase: load connected between two phases (400 V in Europe), or a single-phase three-wire supply as in Japan (200 V between the two phases): S = U × I, where U is the phase-to-phase voltage.
 - Active power P = S × cos φ, reactive power Q = S × sin φ.
 - Default assumption: cos φ = 0.9, adjustable.
 
@@ -2459,21 +2482,22 @@ Conversions, suggested connection and voltage drop, in France and abroad. The ca
 - Japan, east (Tokyo): 100/200 V, 50 Hz.
 - Japan, west (Osaka): 100/200 V, 60 Hz.
 
-These are nominal voltages. A custom network is also possible. Always check the voltage actually supplied on site.
+In Japan: 100 V single-phase, 200 V two-phase (single-phase three-wire) and three-phase. These are nominal voltages. A custom network is also possible. Always check the voltage actually supplied on site.
 
 ### Suggested connection
 
 - The calculator picks the smallest rating in our fleet that is greater than or equal to the calculated current. Single-phase: 16 A socket (3G2.5 cable) and P17 32 A (3G6). Three-phase: P17 32, 63 and 125 A (5G6, 5G16, 5G35) and Powerlock 400 A (150 or 240 mm² single-core). Flexible copper cables.
 - Above 80% of the rating, the margin is flagged as low.
 - Above 32 A in single-phase or 400 A in three-phase, the connection needs to be engineered.
+- In two-phase, the calculator gives the standard rating: our fleet does not list a two-phase cable.
 - If the voltage drop exceeds the limit, the calculator gives the minimum cable size and, if there is one, the suitable cable from our fleet.
 
 ### Voltage drop
 
-- u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, with b = 1 in three-phase and b = 2 in single-phase.
+- u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, with b = 1 in three-phase and b = 2 in single-phase and two-phase.
 - ρ = 0.0225 Ω·mm²/m for copper and 0.036 Ω·mm²/m for aluminium (resistivity in normal service), λ = 0.08 mΩ/m at 50 Hz.
 - At 60 Hz, λ is increased in proportion to the frequency (0.096 mΩ/m): assumption that cable reactance is proportional to frequency.
-- ΔU% = 100 × u ÷ U0, where U0 is the phase-to-neutral voltage (U ÷ √3 in three-phase).
+- ΔU% = 100 × u ÷ U0, where U0 is the phase-to-neutral voltage (U ÷ √3 in three-phase). In two-phase, ΔU% = 100 × u ÷ U, where U is the phase-to-phase voltage.
 - Limits of the French NF C 15-100 standard for an installation supplied by the public low-voltage network: 3% for lighting, 5% for other uses. Abroad, apply the local rules.
 
 These calculations do not check the cable's current-carrying capacity for its installation method, nor protection against overloads and short circuits. Technical terms are explained in the [glossary](https://www.darkside-energy.com/en/glossary/).
@@ -2575,7 +2599,7 @@ No. Equipment is available for turnkey hire only: distribution cabinets and boxe
 
 ### What is a Twin zero-interruption generator set?
 
-It consists of two synchronised generators, each supplying 50% of the load. If one fails, the other takes over the entire load without any interruption, which protects computers and sound and lighting consoles. Some configurations synchronise 3 or 4 generators.
+It consists of two synchronised generators, each supplying 50% of the load and each sized to carry the whole load on its own. If one fails, the other takes over the entire load without any interruption, which protects computers and sound and lighting consoles. Some configurations synchronise 3 or 4 generators.
 
 ### What are the alternatives to diesel generators?
 
@@ -2638,7 +2662,7 @@ Distribution cabinets, connectors, protection devices, energy: the terms you wil
 - **ERP, public-access building (établissement recevant du public)**: French category for buildings open to the public: performance venues, exhibition centres, stadiums, marquees… Electrical installations there, including temporary ones, follow specific safety rules and undergo regulatory inspections.
 - **Diversity factor (foisonnement)**: Coefficient between 0 and 1 that reflects the fact that not all appliances run at full power at the same time. A realistic diversity factor avoids oversizing the installation.
 - **Generator (groupe électrogène)**: Combustion engine that drives an alternator to produce electricity. Control electronics keep the voltage and frequency stable.
-- **Twin zero-interruption generator set (groupe Twin zéro coupure)**: Two synchronised generators, each supplying 50% of the load. If one fails, the other takes over the whole load without interruption. Configurations with 3 or 4 synchronised generators also exist.
+- **Twin zero-interruption generator set (groupe Twin zéro coupure)**: Two synchronised generators, each supplying 50% of the load and each sized to carry the whole load on its own. If one fails, the other takes over the whole load without interruption. Configurations with 3 or 4 synchronised generators also exist.
 - **Generator technician (GroupMan)**: Technician in charge of monitoring and operating the generators during an event.
 - **Electrical authorisations (habilitations électriques)**: Authorisations issued by the employer, after training, to carry out operations on or near electrical installations, under the French standard NF C 18-510. Their codes define the scope: H0 for non-electrical work near high-voltage installations, B2V for low-voltage electrical work, including work nearby, BR for general low-voltage interventions, BC for low-voltage isolation (lockout).
 - **HVO**: Renewable fuel made from hydrotreated oils and fats (Hydrotreated Vegetable Oil), which can be used instead of diesel in compatible generators.
@@ -3020,7 +3044,7 @@ Source: https://www.darkside-energy.com/en/did-you-know/twin-generators/ · Dark
 
 - A Twin zero-interruption generator set is two synchronised generators, each supplying 50% of the load.
 - If one fails, the other takes over the whole load without any interruption.
-- Computers and sound and lighting consoles do not notice a thing. You can go up to 3 or 4 synchronised generators.
+- Each generator is sized to carry the whole load on its own: computers and sound and lighting consoles stay powered. You can go up to 3 or 4 synchronised generators.
 
 Is your event in a remote location? Do you need more power than the building can give you? So you decide to hire a generator! Good, but why is the hire company offering you a Twin zero-interruption generator set?
 
@@ -3034,9 +3058,9 @@ Every hire company will sing the praises of its generators. It is still an engin
 
 ## Enter the Twin zero-interruption generator set
 
-Two generators connected together run at the same time: they synchronise and each supplies 50% of the load.
+Two generators connected together run at the same time: they synchronise and each supplies 50% of the load, each one sized to carry the whole load on its own.
 
-If one of the two generators fails, the other takes over the missing 50% and, as it is already running, there is **no interruption at all**: electronic equipment does not see the failure and does not shut down.
+If one of the two generators fails, the other takes over the missing 50% and, as it is already running, there is **no interruption at all**: electronic equipment stays powered and does not shut down.
 
 Indeed, a computer that suffers even a micro-interruption may well end up with a dead hard drive as a result. Some lighting or sound consoles run on an operating system that needs several seconds, or even several minutes, to restart after a power cut. Needless to say, some productions do not take that risk and therefore use this system.
 

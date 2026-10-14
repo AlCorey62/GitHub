@@ -8,7 +8,7 @@ Source: https://www.darkside-energy.com/en/did-you-know/twin-generators/ · Dark
 
 - A Twin zero-interruption generator set is two synchronised generators, each supplying 50% of the load.
 - If one fails, the other takes over the whole load without any interruption.
-- Computers and sound and lighting consoles do not notice a thing. You can go up to 3 or 4 synchronised generators.
+- Each generator is sized to carry the whole load on its own: computers and sound and lighting consoles stay powered. You can go up to 3 or 4 synchronised generators.
 
 Is your event in a remote location? Do you need more power than the building can give you? So you decide to hire a generator! Good, but why is the hire company offering you a Twin zero-interruption generator set?
 
@@ -22,9 +22,9 @@ Every hire company will sing the praises of its generators. It is still an engin
 
 ## Enter the Twin zero-interruption generator set
 
-Two generators connected together run at the same time: they synchronise and each supplies 50% of the load.
+Two generators connected together run at the same time: they synchronise and each supplies 50% of the load, each one sized to carry the whole load on its own.
 
-If one of the two generators fails, the other takes over the missing 50% and, as it is already running, there is **no interruption at all**: electronic equipment does not see the failure and does not shut down.
+If one of the two generators fails, the other takes over the missing 50% and, as it is already running, there is **no interruption at all**: electronic equipment stays powered and does not shut down.
 
 Indeed, a computer that suffers even a micro-interruption may well end up with a dead hard drive as a result. Some lighting or sound consoles run on an operating system that needs several seconds, or even several minutes, to restart after a power cut. Needless to say, some productions do not take that risk and therefore use this system.
 

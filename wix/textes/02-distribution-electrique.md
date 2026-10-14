@@ -1,6 +1,8 @@
-# Du coffret de stand à l'armoire de puissance.
+# Distribution électrique événementielle.
 
-Dark Side Energy intègre une équipe de techniciens électriciens spécialisés dans l'événementiel, en France et à l'international. Nos projets sont variés pour notre plus grand plaisir : du salon à l'exposition, du live à la convention, de l'événement sportif au festival de plein air.
+Du coffret de stand à l'armoire de puissance.
+
+Basée dans les Hauts-de-France, Dark Side Energy intègre une équipe de techniciens électriciens spécialisés dans l'événementiel, qui interviennent en France et à l'international. Nos projets sont variés pour notre plus grand plaisir : du salon à l'exposition, du live à la convention, de l'événement sportif au festival de plein air.
 
 [Demander un devis](https://www.darkside-energy.com/contact)
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance)
@@ -44,7 +46,7 @@ Chaque stand doit avoir son coffret électrique équipé d'un différentiel 30 m
 
 ## Quand la moindre micro-coupure n'est pas une option.
 
-Deux groupes électrogènes synchronisés tournent en même temps et fournissent chacun 50 % de la charge. Si l'un tombe en panne, l'autre prend le relais et, comme il est déjà en route, il n'y a aucune coupure : consoles, ordinateurs et régies ne voient rien passer.
+Deux groupes électrogènes synchronisés tournent en même temps et fournissent chacun 50 % de la charge, chacun étant dimensionné pour la reprendre seul en totalité. Si l'un tombe en panne, l'autre prend le relais et, comme il est déjà en route, il n'y a aucune coupure : consoles, ordinateurs et régies restent alimentés.
 
 [Le groupe Twin zéro coupure expliqué](https://www.darkside-energy.com/single-post/2017/05/08/le-sais-tu-quest-ce-quun-groupe-twin-z%C3%A9ro-coupure)
 

@@ -18,6 +18,7 @@ Conversions, suggested connection and voltage drop, in France and abroad. The ca
 
 - Single-phase: S = U0 × I, where U0 is the phase-to-neutral voltage (230 V in Europe).
 - Three-phase: S = √3 × U × I, where U is the phase-to-phase voltage (400 V in Europe). The current is given per phase.
+- Two-phase: load connected between two phases (400 V in Europe), or a single-phase three-wire supply as in Japan (200 V between the two phases): S = U × I, where U is the phase-to-phase voltage.
 - Active power P = S × cos φ, reactive power Q = S × sin φ.
 - Default assumption: cos φ = 0.9, adjustable.
 
@@ -31,21 +32,22 @@ Conversions, suggested connection and voltage drop, in France and abroad. The ca
 - Japan, east (Tokyo): 100/200 V, 50 Hz.
 - Japan, west (Osaka): 100/200 V, 60 Hz.
 
-These are nominal voltages. A custom network is also possible. Always check the voltage actually supplied on site.
+In Japan: 100 V single-phase, 200 V two-phase (single-phase three-wire) and three-phase. These are nominal voltages. A custom network is also possible. Always check the voltage actually supplied on site.
 
 ### Suggested connection
 
 - The calculator picks the smallest rating in our fleet that is greater than or equal to the calculated current. Single-phase: 16 A socket (3G2.5 cable) and P17 32 A (3G6). Three-phase: P17 32, 63 and 125 A (5G6, 5G16, 5G35) and Powerlock 400 A (150 or 240 mm² single-core). Flexible copper cables.
 - Above 80% of the rating, the margin is flagged as low.
 - Above 32 A in single-phase or 400 A in three-phase, the connection needs to be engineered.
+- In two-phase, the calculator gives the standard rating: our fleet does not list a two-phase cable.
 - If the voltage drop exceeds the limit, the calculator gives the minimum cable size and, if there is one, the suitable cable from our fleet.
 
 ### Voltage drop
 
-- u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, with b = 1 in three-phase and b = 2 in single-phase.
+- u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, with b = 1 in three-phase and b = 2 in single-phase and two-phase.
 - ρ = 0.0225 Ω·mm²/m for copper and 0.036 Ω·mm²/m for aluminium (resistivity in normal service), λ = 0.08 mΩ/m at 50 Hz.
 - At 60 Hz, λ is increased in proportion to the frequency (0.096 mΩ/m): assumption that cable reactance is proportional to frequency.
-- ΔU% = 100 × u ÷ U0, where U0 is the phase-to-neutral voltage (U ÷ √3 in three-phase).
+- ΔU% = 100 × u ÷ U0, where U0 is the phase-to-neutral voltage (U ÷ √3 in three-phase). In two-phase, ΔU% = 100 × u ÷ U, where U is the phase-to-phase voltage.
 - Limits of the French NF C 15-100 standard for an installation supplied by the public low-voltage network: 3% for lighting, 5% for other uses. Abroad, apply the local rules.
 
 These calculations do not check the cable's current-carrying capacity for its installation method, nor protection against overloads and short circuits. Technical terms are explained in the [glossary](https://www.darkside-energy.com/en/glossary/).

@@ -1,6 +1,6 @@
 # La puissance de l'électricité, sans tension, avec intensité.
 
-Distribution électrique, régie technique, coordination générale et bureau d'étude : Dark Side Energy alimente vos événements, du salon au stade, en France et à l'international.
+Distribution électrique, régie technique, coordination générale et bureau d'étude : depuis les Hauts-de-France, Dark Side Energy alimente vos événements, du salon au stade, en France et à l'international.
 
 [Demander un devis](https://www.darkside-energy.com/contact)
 [Découvrir nos métiers](https://www.darkside-energy.com/#metiers)
@@ -14,6 +14,29 @@ Distribution électrique, régie technique, coordination générale et bureau d'
 - **Bureau d'étude** : Bilans de puissance, schémas et plans, exploitables sur place
 - **HT + BT** : Du poste source jusqu'au tableau de distribution, toute la chaîne en interne
 - **Clé en main** : Matériel, installation et exploitation par nos équipes, sans location sèche
+
+## Des Zéniths aux stades, nos équipes connaissent le terrain.
+
+Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
+
+[Toutes nos références](https://www.darkside-energy.com/references)
+
+*Câbles de puissance au pied des conteneurs.*
+
+- Zénith de Lille
+- Lille Grand Palais
+- Stade de France
+- Accor Arena
+- Paris La Défense Arena
+- Decathlon Arena, Stade Pierre Mauroy
+- Arena Grand Paris
+- Grand Palais
+- Musée du Louvre
+- Allianz Riviera
+- Stade Vélodrome
+- Arkéa Arena
+- Zénith de Paris
+- Paris Expo Porte de Versailles
 
 ## Dark Side Energy, qui sommes-nous ?
 
@@ -53,17 +76,17 @@ Une étude n'a de valeur que si elle est exploitable par les équipes qui vont l
 
 La multitude de métiers chez nous, comme l'ingénierie, la régie technique et générale ou la technique opérationnelle, nous permet d'anticiper les contraintes et de produire des livrables fidèles à la réalité du terrain.
 
-Et de la convention de raccordement jusqu'à la prise du client, toute la chaîne est couverte en interne : pas de zone grise entre la haute et la basse tension.
+Et toute la chaîne est couverte en interne : un seul interlocuteur, de la convention de raccordement au réseau jusqu'à la dernière prise.
 
 [Le bureau d'étude](https://www.darkside-energy.com/bureaudetude)
 
-*Câbles de puissance au pied des conteneurs.*
+*Armoire de distribution et départs P17.*
 
 ## Chaque événement est unique, et donc sa configuration également.
 
 ### Salons, foires et congrès
 
-Un coffret protégé par un différentiel 30 mA pour chaque stand. L'ilotage, c'est non.
+Chaque stand a son coffret protégé par un différentiel 30 mA : pas de rallonge tirée depuis le stand voisin, refusée par les chargés de sécurité.
 
 ### Concerts et tournées
 
@@ -101,26 +124,11 @@ Nous maîtrisons les technologies alternatives et nous les mettons en avant aupr
 
 Configurations à valider avec notre bureau d'étude selon votre bilan de puissance et les contraintes du site.
 
-## Des Zéniths aux stades, nos équipes connaissent le terrain.
+## En France et à l'international.
 
-Compétitions sportives internationales, concerts en Zénith, en stade et en tournée, foires, salons, shows corporate, festivals ou cérémonies.
+Nos équipes sont intervenues en Europe, en Amérique du Nord et jusqu'au Japon.
 
 *À travers le monde : Mexico, Kansas City, Toronto, Philadelphie, New Jersey, Vérone, Cortina d'Ampezzo, Bormio, Livigno, Genève, Cromvoirt, Birmingham, Tokyo, Yokohama, Fujisawa, Izu, Fukushima, Miyagi…*
-
-- Zénith de Lille
-- Lille Grand Palais
-- Stade de France
-- Accor Arena
-- Paris La Défense Arena
-- Decathlon Arena, Stade Pierre Mauroy
-- Arena Grand Paris
-- Grand Palais
-- Musée du Louvre
-- Allianz Riviera
-- Stade Vélodrome
-- Arkéa Arena
-- Zénith de Paris
-- Paris Expo Porte de Versailles
 
 [Toutes nos références](https://www.darkside-energy.com/references)
 

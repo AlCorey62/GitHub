@@ -1,10 +1,12 @@
-# From the stand power box to the power distribution cabinet.
+# Event power distribution.
 
 > Electricians specialised in events: power distribution from the stand power box to the power distribution cabinet, on grid, generator or battery.
 
 Source: https://www.darkside-energy.com/en/power-distribution/ · Dark Side Energy · Updated: 2026-10-06
 
-Dark Side Energy has a team of electrical technicians specialised in events, working in France and internationally. Our projects are varied, which is just how we like it: from trade shows to exhibitions, from live shows to conventions, from sporting events to open-air festivals.
+From the stand power box to the power distribution cabinet.
+
+Based in Hauts-de-France, northern France, Dark Side Energy has a team of electrical technicians specialised in events, working in France and internationally. Our projects are varied, which is just how we like it: from trade shows to exhibitions, from live shows to conventions, from sporting events to open-air festivals.
 
 [Request a quote](https://www.darkside-energy.com/en/contact/?objet=distribution)
 [Run a power assessment](https://www.darkside-energy.com/en/power-assessment/)
@@ -48,7 +50,7 @@ Each stand must have its own power box fitted with a 30 mA RCD to protect people
 
 ## When even the briefest micro-interruption is not an option.
 
-Two synchronised generators run at the same time, each supplying 50% of the load. If one fails, the other takes over and, because it is already running, there is no interruption at all: consoles, computers and control rooms don't notice a thing.
+Two synchronised generators run at the same time, each supplying 50% of the load and each sized to carry the whole load on its own. If one fails, the other takes over and, because it is already running, there is no interruption at all: consoles, computers and control rooms stay powered.
 
 [The Twin zero-interruption generator set explained](https://www.darkside-energy.com/en/did-you-know/twin-generators/)
 
