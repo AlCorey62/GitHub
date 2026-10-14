@@ -46,6 +46,8 @@ Compétitions sportives internationales, concerts en Zénith, en stade et en tou
 
 Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses techniciens électriciens, chefs de projet et ingénieurs interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour les salons, concerts, événements sportifs, festivals et cérémonies. [En savoir plus sur l'entreprise](https://www.darkside-energy.com/entreprise/).
 
+*Parc de groupes électrogènes, de nuit.*
+
 ## De l'idée jusqu'à la réalisation, sur toute la partie électrique.
 
 Que ce soit pour du consulting, du bureau d'étude, de la régie technique ou de la pose, notre but est de vous accompagner à chaque étape de vos projets : fourniture, distribution, coordination.

@@ -4756,13 +4756,17 @@ mark.todo {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(24px, 4vw, 56px);
-  align-items: start;
+  align-items: center;
 }
 
-.brief p {
+.brief__text > p:not(.eyebrow) {
   margin: 0;
   font-size: var(--fs-lg);
   color: #e2e2e6;
+}
+
+.brief__media {
+  margin: 0;
 }
 
 @media (max-width: 860px) {
