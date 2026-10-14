@@ -61,20 +61,40 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 
 ## Du salon au stade, de la scène au plateau.
 
-- Concerts et tournées
-- Salons, foires et congrès
-- Compétitions sportives
-- Festivals
-- Shows corporate
-- Cérémonies
+Chaque type d'événement a ses propres contraintes électriques.
+
+### Concerts et tournées
+
+Les armoires de distribution se retrouvent derrière la scène. Dans le meilleur des cas, chaque corps de métier a sa propre source, avec sa ou ses armoires, afin d'éviter certains « buzz » ou autres parasites électriques liés à l'électronique de certains appareils.
+
+En Zénith, en stade et en tournée.
+
+### Salons, foires et congrès
+
+Chaque stand doit avoir son coffret électrique équipé d'un différentiel 30 mA, pour la protection des personnes. Tirer une rallonge depuis le stand voisin, c'est de l'ilotage, systématiquement refusé par les chargés de sécurité.
+
+Un salon de 300 stands alimentés, c'est 300 coffrets électriques.
+
+### Compétitions sportives
+
+Compétitions nationales et internationales, en arena, en stade ou en pleine nature.
+
+### Festivals et plein air
+
+Groupes électrogènes, compteurs forains, cheminements de câbles et passages PMR.
+
+La faisabilité d'un raccordement au réseau existant est étudiée avant tout recours aux groupes électrogènes.
+
+### Shows corporate et cérémonies
+
+Conventions, shows corporate, cérémonies : une installation sûre, dimensionnée au juste besoin.
+
+Des bilans de puissance calibrés sur nos données terrain : pas de surcapacité systématique.
+
+### Et aussi
+
 - Tournages
 - Formation
-
-1. **Mai 2016 : Création de Dark Side Energy** : Des humains professionnalisés dans la distribution électrique d'événement.
-2. **Mai 2016 : Fêtes maritimes internationales de Brest** : Première mission, confiée par Revolt Location : de nombreux groupes électrogènes, des compteurs forains, une vingtaine de mâts d'éclairage autonomes et plus de 400 coffrets à distribuer sur les berges du port de Brest.
-3. **Octobre 2016 : Lille Grand Palais** : Deux salons confiés depuis la rentrée pour la distribution électrique, l'ADSL et la téléphonie : Créer, puis Sénioreva.
-4. **2019 : La SARL Dark Side Energy** : Immatriculation de la société en novembre 2019.
-5. **Aujourd'hui : Des Zéniths aux stades** : Concerts, compétitions sportives, salons et cérémonies, en France et à l'international.
 
 ## Votre événement, notre prochaine référence ?
 

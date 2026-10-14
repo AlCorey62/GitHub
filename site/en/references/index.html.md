@@ -65,20 +65,40 @@ Out of respect for the confidentiality agreements signed for each event, we name
 
 ## From trade show to stadium, from stage to set.
 
-- Concerts and tours
-- Trade shows, fairs and conferences
-- Sports competitions
-- Festivals
-- Corporate shows
-- Ceremonies
+Each type of event has its own electrical constraints.
+
+### Concerts and tours
+
+The distribution cabinets sit behind the stage. Ideally, each department has its own source, with its own cabinet or cabinets, to avoid “buzz” and other electrical interference caused by the electronics in some equipment.
+
+In Zénith arenas, in stadiums and on tour.
+
+### Trade shows, fairs and conferences
+
+Each stand must have its own power box fitted with a 30 mA RCD to protect people. Running an extension lead from the neighbouring stand, known in France as ilotage, is refused every time by safety officers.
+
+A trade show with 300 powered stands means 300 power boxes.
+
+### Sports competitions
+
+National and international competitions, in arenas, in stadiums or in the great outdoors.
+
+### Festivals and open-air events
+
+Generators, temporary metered grid connections, cable routing and wheelchair-accessible cable protectors.
+
+The feasibility of a connection to the existing grid is assessed before any use of generators.
+
+### Corporate shows and ceremonies
+
+Conventions, corporate shows, ceremonies: a safe installation, sized to what is actually needed.
+
+Power assessments calibrated on our field data: no systematic overcapacity.
+
+### Also
+
 - Filming
 - Training
-
-1. **May 2016: Dark Side Energy is founded**: People who made event power distribution their profession.
-2. **May 2016: Brest International Maritime Festival**: First assignment, entrusted to us by Revolt Location: many generators, temporary metered grid connections, around twenty self-powered lighting towers and more than 400 distribution boxes to deploy along the quaysides of the port of Brest.
-3. **October 2016: Lille Grand Palais**: Two trade shows entrusted to us since September for power distribution, ADSL and telephony: Créer, then Sénioreva.
-4. **2019: Dark Side Energy SARL**: Company registered in November 2019.
-5. **Today: From Zéniths to stadiums**: Concerts, sports competitions, trade shows and ceremonies, in France and abroad.
 
 ## Your event, our next reference?
 

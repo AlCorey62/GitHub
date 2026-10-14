@@ -20,7 +20,7 @@ De la petite distribution électrique aux grandes armoires de puissance, sur le 
 - **Raccordements temporaires** tarif bleu et tarif jaune, compteurs forains.
 - **Permanence électrique** pendant l'exploitation, et GroupMan pour le suivi des groupes électrogènes.
 
-*Salon Créer, Lille Grand Palais.*
+*Salon professionnel, Lille Grand Palais.*
 
 ## On ne distribue pas un salon comme un concert.
 

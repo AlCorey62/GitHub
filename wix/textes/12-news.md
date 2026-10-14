@@ -54,23 +54,11 @@ Différentiel 30 mA, disjoncteur : le coffret vous a soit sauvé la vie, soit sa
 
 ## Nos débuts, en 2016.
 
-Actualité · 6 octobre 2016 · 1 min
-
-### [Lille Grand Palais : deux salons depuis la rentrée](https://www.darkside-energy.com/single-post/2016/10/06/lille-grand-palais)
-
-Distribution électrique, ADSL et téléphonie pour les salons Créer et Sénioreva.
-
 Actualité · 23 juin 2016 · 1 min
 
 ### [Répertoire national des électros](https://www.darkside-energy.com/single-post/2016/06/23/r%C3%A9pertoire-national-des-%C3%A9lectros)
 
 Vous êtes électro, vous avez vos habilitations, vous cherchez du travail ? Rejoignez le côté obscur de l'électricité !
-
-Actualité · 26 mai 2016 · 1 min
-
-### [Fêtes maritimes internationales de Brest 2016](https://www.darkside-energy.com/single-post/2016/05/26/f%C3%AAtes-maritimes-internationales-de-brest-2016)
-
-Première mission : groupes électrogènes, compteurs forains, mâts d'éclairage et plus de 400 coffrets sur le port de Brest.
 
 Actualité · 25 mai 2016 · 1 min
 

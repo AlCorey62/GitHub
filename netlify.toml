@@ -26,9 +26,20 @@
   to = "/news/creation-dark-side-energy/"
   status = 301
 
+# Articles retirés le 14/10/2026 (informations clients) : renvoi vers la liste des articles
+[[redirects]]
+  from = "/news/fetes-maritimes-brest-2016/*"
+  to = "/news/"
+  status = 301
+
+[[redirects]]
+  from = "/news/lille-grand-palais-2016/*"
+  to = "/news/"
+  status = 301
+
 [[redirects]]
   from = "/single-post/2016/05/26/*"
-  to = "/news/fetes-maritimes-brest-2016/"
+  to = "/news/"
   status = 301
 
 [[redirects]]
@@ -38,7 +49,7 @@
 
 [[redirects]]
   from = "/single-post/2016/10/06/*"
-  to = "/news/lille-grand-palais-2016/"
+  to = "/news/"
   status = 301
 
 [[redirects]]

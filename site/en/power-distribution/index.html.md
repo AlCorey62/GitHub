@@ -24,7 +24,7 @@ From small distribution set-ups to large power distribution cabinets, on the gri
 - **Temporary grid connections** on *tarif bleu* (French grid connection up to 36 kVA) and *tarif jaune* (36 to 250 kVA), and *compteurs forains* (temporary metered grid connections for events).
 - **Electrical standby** during the show, and a GroupMan (generator technician) to monitor the generators.
 
-*Salon Créer, Lille Grand Palais.*
+*Trade show, Lille Grand Palais.*
 
 ## You don't power a trade show the way you power a concert.
 
