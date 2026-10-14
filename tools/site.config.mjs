@@ -24,6 +24,7 @@ export const SITE = {
   siren: "879 105 377",
   siret: "879 105 377 00029",
   socials: [
+    { key: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/dark-side-energy/", icon: "brand-linkedin" },
     { key: "facebook", label: "Facebook", href: "https://www.facebook.com/darksideenergy", icon: "brand-facebook" },
     { key: "x", label: "X (Twitter)", href: "https://twitter.com/DarkSide_Energy", icon: "brand-x" },
   ],
