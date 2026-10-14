@@ -51,8 +51,6 @@ A drawing is all the more relevant when it is made by people who have already ex
 
 **Damien Nirel**, managing director and technical director: more than 15 years of experience in international event power, at the service of your projects.
 
-*The team on site.*
-
 ## Join the dark side of electricity!
 
 Are you an electrician, with your authorisations, and looking for work?

@@ -196,7 +196,7 @@ Aucun propos n'est attribué à Damien Nirel sur le site (choix de Damien) : pas
 4. **Données personnelles** : durées de conservation validées (3 ans pour les demandes, 2 ans pour les candidatures). Netlify Forms garde les messages sans limite : les supprimer au-delà de ces durées.
 5. **Réseaux sociaux** : liens Facebook et X repris de l'ancien site, à confirmer ou compléter (LinkedIn par exemple) dans `tools/site.config.mjs`.
 6. **Clientèle exclusivement professionnelle** (indiqué dans les mentions légales) : pas de médiateur de la consommation à désigner.
-7. **Photos de terrain** (accueil, matériel, régie technique, entreprise) : fournies par Damien. Le nom d'un événement a été retiré par recadrage ; une bannière d'événement, les marques du loueur et du transporteur et une plaque d'immatriculation ont été floutées. À confirmer : les droits sur la photo des câbles au pied des conteneurs (prise par un photographe ?) et l'accord des personnes de l'équipe photographiées de dos.
+7. **Photos de terrain** (accueil, matériel, régie technique) : fournies par Damien. Une bannière d'événement, les marques du loueur et du transporteur et une plaque d'immatriculation ont été floutées. À confirmer : les droits sur la photo des câbles au pied des conteneurs (prise par un photographe ?).
 8. **Calculette** : tensions des réseaux étrangers (valeurs nominales usuelles) et parc de câbles à confirmer ; hypothèse de réactance à 60 Hz (0,096 mΩ/m) ; seuil d'alerte de charge à 80 % du calibre (seuil de Darkside Power Plan). Redirection de l'ancienne appli à faire le jour de la mise en ligne (voir « Calculette électro »).
 
 ## Référencement par les moteurs et les assistants IA (GEO)

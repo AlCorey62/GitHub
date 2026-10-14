@@ -51,8 +51,6 @@ Le dessin est d'autant plus pertinent lorsqu'il est réalisé par des personnes 
 
 **Damien Nirel**, gérant et directeur technique : plus de 15 ans d'expérience en énergie événementielle internationale, au service de vos projets.
 
-*L'équipe sur le terrain.*
-
 ## Rejoignez le côté obscur de l'électricité !
 
 Vous êtes électro, vous avez vos habilitations, vous cherchez du travail ?
