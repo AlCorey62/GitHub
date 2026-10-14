@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://www.darkside-energy.com/mentions-legales#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.darkside-energy.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mentions légales et confidentialité",
+      "item": "https://www.darkside-energy.com/mentions-legales"
+    }
+  ]
+}

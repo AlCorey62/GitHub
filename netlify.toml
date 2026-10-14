@@ -1,0 +1,213 @@
+# Configuration Netlify du site Dark Side Energy
+# Le site est statique : le dossier publié est "site/".
+# La commande de build réassemble en-têtes, pieds de page et sitemap (sans dépendance).
+
+[build]
+  publish = "site"
+  command = "node tools/build.mjs"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# --- Redirections des anciennes adresses du site Wix (301 = permanent, conserve le référencement) ---
+
+[[redirects]]
+  from = "/test-externe"
+  to = "/bilan-de-puissance/"
+  status = 301
+
+[[redirects]]
+  from = "/accueil"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/single-post/2016/05/25/*"
+  to = "/news/creation-dark-side-energy/"
+  status = 301
+
+[[redirects]]
+  from = "/single-post/2016/05/26/*"
+  to = "/news/fetes-maritimes-brest-2016/"
+  status = 301
+
+[[redirects]]
+  from = "/single-post/2016/06/23/*"
+  to = "/news/repertoire-national-des-electros/"
+  status = 301
+
+[[redirects]]
+  from = "/single-post/2016/10/06/*"
+  to = "/news/lille-grand-palais-2016/"
+  status = 301
+
+[[redirects]]
+  from = "/single-post/saistucequestladistributionelectrique"
+  to = "/news/distribution-electrique-evenementielle/"
+  status = 301
+
+[[redirects]]
+  from = "/single-post/2017/05/08/le-sais-tu-quest-ce-quun-groupe-twin-*"
+  to = "/news/groupe-twin-zero-coupure/"
+  status = 301
+
+[[redirects]]
+  from = "/single-post/2017/05/08/le-sais-tu-la-section-*"
+  to = "/news/section-de-cable/"
+  status = 301
+
+[[redirects]]
+  from = "/single-post/2017/05/08/le-sais-tu-pourquoi-*"
+  to = "/news/pourquoi-ca-saute/"
+  status = 301
+
+[[redirects]]
+  from = "/single-post/*"
+  to = "/news/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/news/"
+  status = 301
+
+# --- Version anglaise (/en/) ---
+# Anciennes adresses anglaises de Wix (mêmes noms que les pages françaises) vers les pages anglaises.
+# Ces règles ne s'appliquent que si aucun fichier n'existe à l'adresse demandée.
+
+[[redirects]]
+  from = "/en/accueil"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/en/test-externe"
+  to = "/en/power-assessment/"
+  status = 301
+
+[[redirects]]
+  from = "/en/distribution-electrique"
+  to = "/en/power-distribution/"
+  status = 301
+
+[[redirects]]
+  from = "/en/regie-technique"
+  to = "/en/technical-management/"
+  status = 301
+
+[[redirects]]
+  from = "/en/coordination-generale"
+  to = "/en/general-coordination/"
+  status = 301
+
+[[redirects]]
+  from = "/en/bureaudetude"
+  to = "/en/engineering/"
+  status = 301
+
+[[redirects]]
+  from = "/en/nos-produits"
+  to = "/en/equipment/"
+  status = 301
+
+[[redirects]]
+  from = "/en/energie-responsable"
+  to = "/en/responsible-energy/"
+  status = 301
+
+[[redirects]]
+  from = "/en/entreprise"
+  to = "/en/company/"
+  status = 301
+
+[[redirects]]
+  from = "/en/bilan-de-puissance"
+  to = "/en/power-assessment/"
+  status = 301
+
+[[redirects]]
+  from = "/en/calculette-electro"
+  to = "/en/electrical-calculator/"
+  status = 301
+
+[[redirects]]
+  from = "/en/lexique"
+  to = "/en/glossary/"
+  status = 301
+
+[[redirects]]
+  from = "/en/mentions-legales"
+  to = "/en/legal-notice/"
+  status = 301
+
+[[redirects]]
+  from = "/en/compte"
+  to = "/en/account/"
+  status = 301
+
+[[redirects]]
+  from = "/en/news"
+  to = "/en/did-you-know/"
+  status = 301
+
+[[redirects]]
+  from = "/en/single-post/*"
+  to = "/en/did-you-know/"
+  status = 301
+
+[[redirects]]
+  from = "/en/blog/*"
+  to = "/en/did-you-know/"
+  status = 301
+
+# Toute autre adresse /en/ inconnue : page d'erreur en anglais
+[[redirects]]
+  from = "/en/*"
+  to = "/en/404.html"
+  status = 404
+
+# --- En-têtes HTTP ---
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U=' 'sha256-tMr51a4Mob//DIOK6u7rVuJFtxXEI3vhGVHlPQn243U=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; font-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+
+# Versions Markdown des pages et fichiers pour les IA : bon encodage, et pas d'indexation
+# en doublon dans Google (les pages HTML restent les pages de référence)
+[[headers]]
+  for = "/*.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    X-Robots-Tag = "noindex, follow"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    X-Robots-Tag = "noindex, follow"
+
+# Calculette hors ligne : le service worker est toujours revérifié, pour que les mises à jour arrivent
+[[headers]]
+  for = "/calculette-sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/*.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

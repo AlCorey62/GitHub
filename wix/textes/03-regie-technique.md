@@ -1,0 +1,51 @@
+# Délestez-vous d'une charge de travail importante.
+
+De la conceptualisation au démontage de votre événement, Dark Side Energy s'occupe de votre projet comme si c'était le sien.
+
+[Nous confier votre régie](https://www.darkside-energy.com/contact)
+[Coordination générale](https://www.darkside-energy.com/coordination-generale)
+
+## Le bon personnel, au bon endroit, dans le respect de votre budget.
+
+Le recrutement d'un personnel qualifié et expérimenté, la gestion des sous-traitants, la logistique et la coordination des prestataires sont assurés par nos équipes, dans le respect de votre budget.
+
+### Gestion de projet
+
+- Repérages sur site.
+- Gestion des sous-traitances.
+- Recherche et recrutement du personnel qualifié.
+- Suivi et respect du budget.
+
+### Régie technique
+
+- Gestion d'équipe sur site.
+- Logistique du matériel et des personnes.
+- Coordination des prestataires.
+- Suivi du montage à l'exploitation, jusqu'au démontage.
+
+## Un contrat de confidentialité signé sur chaque événement.
+
+Artistes, organisateurs, lieux : ce qui se passe en coulisses reste en coulisses. C'est aussi pour cela que, sur ce site, nous parlons de lieux plutôt que de clients.
+
+*Parc de groupes électrogènes, de nuit.*
+
+## Vous cherchez le technicien idéal pour votre prestation ?
+
+Vous êtes organisateur, prestataire ou loueur de matériel de distribution électrique et vous avez besoin d'électriciens ? Contactez-nous : nous trouvons le profil adapté à votre prestation, du technicien au chef d'équipe.
+
+Nos équipes suivent une formation continue : habilitations électriques maintenues à jour (H0, B2V, BR, BC), dessin DAO, accompagnement des collaborateurs juniors.
+
+[Demander du personnel](https://www.darkside-energy.com/contact)
+
+### Vous êtes électro ?
+
+Rejoignez le côté obscur de l'électricité ! Vous avez vos habilitations et vous voulez travailler sur des salons, des concerts et des événements sportifs ? Faites-vous connaître.
+
+[Envoyer ma candidature](https://www.darkside-energy.com/contact)
+
+## Besoin de renforts ou d'une régie complète ?
+
+Dites-nous ce qu'il vous faut : un électro habilité pour une journée ou une régie technique de A à Z.
+
+[Demander un devis](https://www.darkside-energy.com/contact)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)

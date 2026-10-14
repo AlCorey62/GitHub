@@ -1,0 +1,249 @@
+# Site web Dark Side Energy
+
+Nouveau site vitrine de Dark Side Energy : distribution électrique événementielle, régie technique, coordination générale, bureau d'étude, consulting, matériel, énergie responsable, références, et deux outils en ligne (bilan de puissance, calculette électro). Version française à la racine, version anglaise complète sous `/en/`.
+
+Site statique en HTML, CSS et JavaScript, **sans dépendance** : il s'ouvre et se déploie tel quel. Node.js (version 18 ou plus) sert uniquement aux scripts d'assemblage, de contrôle et de test.
+
+## Arborescence
+
+```
+site/                      Dossier publié (c'est lui qui est mis en ligne)
+  index.html               Accueil
+  distribution-electrique/ regie-technique/ coordination-generale/ bureaudetude/ consulting/
+  nos-produits/            Matériel en location clé en main
+  energie-responsable/     Démarche RSE
+  references/              Lieux et historique
+  entreprise/              L'entreprise, nous rejoindre
+  news/                    Le sais-tu ? et actualités (12 articles)
+  faq/                     Questions fréquentes (17 questions, balisage FAQPage)
+  lexique/                 Lexique de 46 termes, avec recherche (balisage DefinedTermSet)
+  bilan-de-puissance/      Outil de bilan de puissance (démo 4 lignes, accès complet pour les clients)
+  compte/                  Espace client : activation du compte, connexion, mot de passe oublié (non indexé)
+  calculette-electro/      Calculette installable (voir « Calculette électro ») et son manifest.webmanifest
+  contact/                 Formulaire (Netlify Forms) et page de confirmation
+  mentions-legales/        Mentions légales et confidentialité
+  en/                      Version anglaise : mêmes pages, adresses en anglais (voir « Version anglaise »)
+  404.html, robots.txt, sitemap.xml, site.webmanifest, favicon.ico
+  calculette-sw.js         Service worker de la calculette (fonctionnement hors ligne)
+  llms.txt, llms-full.txt  Résumé et contenu complet du site pour les assistants IA (générés)
+  **/index.html.md         Version Markdown de chaque page (générée)
+  assets/css/main.css      Charte graphique complète
+  assets/js/               main.js (menu, animations, formulaire), elec.js (formules), bilan.js, calculette.js,
+                           identity.js (connexion Netlify Identity), compte.js (espace client), lexique.js (recherche)
+  assets/fonts/            Police Archivo auto-hébergée (licence OFL)
+  assets/img/              Logos vectorisés, photos optimisées, icônes, image de partage, carte-monde.svg
+tools/
+  site.config.mjs          Coordonnées, réseaux sociaux, menu, lieux de la carte : À MODIFIER ICI
+  build.mjs                Assemble en-tête, pied de page, SEO, données structurées, icônes, sitemap,
+                           versions Markdown, llms.txt et llms-full.txt
+  markdown.mjs             Conversion des pages en Markdown pour les IA
+  indexnow.mjs             Signale les pages à Bing et aux moteurs IndexNow après une mise en ligne
+  wix-kit.mjs              Prépare le dossier wix/ (reconstruction du site dans Wix)
+  carte.mjs, map.mjs       Fond de la carte des interventions (points) et projection commune
+  check.mjs                Contrôle qualité (liens, ancres, titres, images, mentions à compléter)
+  serve.mjs                Serveur local de prévisualisation (simule aussi la connexion client)
+  og-image.html            Modèle de l'image de partage réseaux sociaux
+wix/                       Passation pour reconstruire le site dans Wix : note, plan des pages, textes,
+                           données structurées (voir wix/README.md)
+tests/elec.test.mjs        Tests des formules électriques (conversions, chute de tension, réseaux, parc)
+tests/site.test.mjs        Tests du site construit (scripts autorisés par la CSP, réseaux de la calculette)
+netlify.toml               Hébergement Netlify : build, redirections des anciennes URL, en-têtes de sécurité
+app.html                   Ancien prototype « Calculateur d'Énergie Stand » (non publié, conservé)
+```
+
+## Prévisualiser en local
+
+```bash
+node tools/serve.mjs      # puis ouvrir http://localhost:8080
+```
+
+En local, la connexion au bilan de puissance est simulée : compte `test@darkside-energy.com`, mot de passe `essai-local`. Liens d'essai : `http://localhost:8080/#invite_token=invitation` (activation d'un compte) et `http://localhost:8080/#recovery_token=recuperation` (nouveau mot de passe).
+
+## Modifier le contenu
+
+- **Texte d'une page** : éditer directement le fichier `site/<page>/index.html`, entre les balises `<main>`.
+- **Titre et description (SEO)** d'une page : le bloc `<!--page { ... } -->` en haut du fichier.
+- **Coordonnées, menu, réseaux sociaux** : `tools/site.config.mjs`.
+- **Nouvelle page** : copier une page existante, adapter le bloc `<!--page -->` et le contenu.
+- **Page en anglais** : modifier aussi sa version dans `site/en/` (voir « Version anglaise »).
+
+Puis lancer :
+
+```bash
+node tools/build.mjs      # réassemble en-têtes, pieds de page, métadonnées, sitemap
+node tools/check.mjs      # vérifie liens, ancres, titres, images
+node --test               # vérifie les formules électriques
+```
+
+Les blocs entre `<!-- head:start -->` et `<!-- head:end -->` (de même `header`, `breadcrumb`, `cta`, `footer`) sont générés : ne pas les modifier à la main. Les icônes s'écrivent `<svg data-icon="nom"></svg>` (liste dans `tools/icons.json`).
+
+## Version anglaise
+
+Les 24 pages anglaises sont dans `site/en/`, avec des adresses en anglais : `/en/power-distribution/`, `/en/engineering/`, `/en/power-assessment/`, etc. Seules les quatre actualités de 2016 restent en français.
+
+- **Lien entre les deux versions** : chaque page anglaise porte dans son bloc `<!--page -->` les clés `"lang": "en"` et `"alternate": "/adresse-francaise/"`. Le build en déduit le bouton FR / EN de l'en-tête (il mène à la même page dans l'autre langue), les balises `hreflang`, le plan du site et la section anglaise de `llms.txt`. `check.mjs` vérifie que chaque paire se cite dans les deux sens.
+- **Textes communs** (menu, pied de page, fil d'Ariane, appel à l'action) : `NAV_EN`, `CTA_EN` et `UI.en` dans `tools/site.config.mjs`. Slogan anglais (`sloganEn`) : « The power of electricity, without the tension, fully amped. »
+- **Outils** : les scripts lisent la langue de la page (`<html lang="en">`) pour les messages, les nombres (1,385.6) et l'export CSV (séparateur virgule en anglais, point-virgule en français).
+- **Formulaire** : la version anglaise envoie ses demandes au formulaire Netlify `contact-en`, pour savoir qu'il faut répondre en anglais.
+- **Espace client** : les e-mails de Netlify Identity pointent vers l'accueil français. Le lien ouvre l'espace client anglais (`/en/account/`) si le navigateur du client n'est pas réglé en français.
+- **Anciennes adresses** : les adresses anglaises de l'ancien site Wix (`/en/test-externe`, `/en/nos-produits`, etc.) sont redirigées vers les pages anglaises ; toute autre adresse `/en/` inconnue affiche la page d'erreur anglaise (`netlify.toml`).
+
+## Calculette électro
+
+Page `/calculette-electro/` (anglais : `/en/electrical-calculator/`), qui remplace l'ancienne appli « Calc Dark Side » (https://darkside-energy.netlify.app) :
+
+- **Calculs** : conversion W, kW, VA, kVA, A en monophasé et triphasé ; prise et câble conseillés dans le parc (page Matériel) avec le taux de charge ; chute de tension (méthode NF C 15-100) avec section minimale et câble du parc qui convient ; réseaux étrangers (États-Unis, Canada, Mexique, Japon) ou tension personnalisée. Formules dans `site/assets/js/elec.js`, testées par `npm test`.
+- **Usage** : pavé numérique intégré (sur téléphone, le clavier du téléphone reste disponible), historique et derniers réglages gardés sur l'appareil (stockage local du navigateur, rien n'est envoyé), copie du résultat, partage par lien (les valeurs sont dans l'adresse).
+- **Appli** : installable sur l'écran d'accueil (manifeste par langue), fonctionne sans réseau grâce à `site/calculette-sw.js`, limité aux pages de la calculette. Ouverte depuis l'écran d'accueil, la page n'affiche que la calculette.
+- **Mise à jour** : après une modification, le service worker récupère la nouvelle version de la page à la visite suivante en ligne. Changer `CACHE` dans `calculette-sw.js` seulement si son fonctionnement change.
+
+**Ancienne appli, à la mise en ligne du site** : sur le site Netlify de l'ancienne appli (darkside-energy.netlify.app), remplacer le contenu par ces deux fichiers, pour renvoyer les utilisateurs vers la nouvelle calculette, y compris ceux qui l'ont installée sur leur téléphone :
+
+`_redirects`
+```
+/service-worker.js  /service-worker.js  200
+/*  https://www.darkside-energy.com/calculette-electro/  301!
+```
+
+`service-worker.js` (remplace l'ancien, qui gardait l'appli en cache, puis se désinstalle)
+```js
+self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    self.registration.unregister()
+      .then(() => self.clients.matchAll())
+      .then((clients) => clients.forEach((c) => c.navigate("https://www.darkside-energy.com/calculette-electro/")))
+  );
+});
+```
+
+L'ancienne appli utilisait Google Analytics ; la nouvelle calculette est mesurée comme le reste du site (voir « Mesure d'audience »).
+
+## Mise en ligne sur Netlify
+
+1. Sur Netlify : *Add new site*, *Import from Git*, choisir ce dépôt. Les réglages sont lus dans `netlify.toml` (dossier publié `site`, commande `node tools/build.mjs`).
+2. Vérifier le site sur l'adresse provisoire `*.netlify.app`, et tester le formulaire de contact : les messages arrivent dans *Forms* sur Netlify, où l'on peut activer une notification par e-mail vers contact@darkside-energy.com. Deux formulaires y apparaissent : `contact` (site français) et `contact-en` (version anglaise, demandes à traiter en anglais) ; choisir « Any form » pour la notification.
+3. Bascule du domaine : voir ci-dessous. Le certificat HTTPS est créé automatiquement par Netlify.
+4. Une fois la bascule faite, déclarer `https://www.darkside-energy.com/sitemap.xml` dans Google Search Console.
+
+### Mesure d'audience (Google Analytics 4)
+
+Le site mesure son audience avec Google Analytics 4, après accord du visiteur (bandeau Accepter / Refuser, même niveau pour les deux boutons). Sans accord, aucun script Google n'est chargé et aucun cookie n'est déposé. Le choix est gardé 6 mois ; le lien « Gestion des cookies » du pied de page permet de le changer.
+
+1. Google Analytics, *Administration*, propriété GA4 déjà utilisée, *Flux de données* : *Ajouter un flux*, *Web*, adresse `https://www.darkside-energy.com`, nom au choix (par exemple « Site Netlify »). Laisser la mesure améliorée activée.
+2. Recopier l'identifiant de mesure du flux (`G-XXXXXXXXXX`) dans `ga4` de `tools/site.config.mjs`, puis reconstruire (`npm run build`). Tant que `ga4` est vide, ni bandeau ni mesure, et `npm run check` le signale.
+3. *Administration*, *Collecte et conservation des données*, *Conservation des données* : **14 mois** (durée annoncée dans les mentions légales).
+4. *Collecte de données Google Signals* : laisser **désactivé** (aucun usage publicitaire, comme annoncé dans les mentions légales).
+5. *Événements* : marquer `generate_lead` comme événement clé. Il est envoyé à chaque demande envoyée par le formulaire de contact (visiteurs ayant accepté).
+6. Après la bascule du domaine, associer la propriété à Google Search Console (*Administration*, *Associations de produits*).
+
+La mesure ne fonctionne que sur `darkside-energy.com` et `www.darkside-energy.com` : l'adresse provisoire `*.netlify.app` et l'aperçu affichent le bandeau mais ne chargent jamais Analytics, pour ne pas fausser les chiffres. La politique de sécurité (`netlify.toml`, CSP) autorise les seuls domaines Google nécessaires.
+
+### Comptes clients du bilan de puissance (Netlify Identity)
+
+Le bilan de puissance est en démo jusqu'à 4 lignes. Au-delà, ainsi que pour l'export CSV et l'impression, le visiteur doit se connecter. Les comptes sont ouverts sur invitation.
+
+1. Netlify, *Project configuration*, *Identity* : activer Identity.
+2. *Registration preferences* : **Invite only**. Laisser les fournisseurs externes (Google, GitHub…) désactivés.
+3. Pour ouvrir un accès : *Identity*, *Invite users*, saisir l'e-mail du client. Il reçoit un lien, choisit son mot de passe sur la page `/compte/` et accède au bilan complet.
+4. Mot de passe oublié : le client passe par `/compte/#oubli`. Pour retirer un accès : supprimer l'utilisateur dans *Identity*.
+5. Les demandes d'accès arrivent par le formulaire de contact (objet « Accès au bilan de puissance en ligne »).
+
+Les e-mails d'invitation et de récupération partent de `no-reply@netlify.com`, en anglais, avec les modèles de Netlify. Des modèles en français et une adresse d'envoi au nom de Dark Side Energy demandent l'offre Pro de Netlify.
+
+Limite à connaître : le site est statique et son code est public. La limite de la démo est appliquée dans le navigateur : elle arrête les visiteurs, pas un développeur décidé. Un verrou strict demanderait de faire le calcul sur le serveur.
+
+### Garder le domaine darkside-energy.com
+
+Situation relevée le 06/10/2026 (registre du .com et DNS publics) :
+
+- Le domaine est enregistré chez **OVH** (depuis le 18/04/2016, échéance le 18/04/2028), indépendamment de Wix : changer d'hébergeur ne change pas le nom de domaine.
+- Ses serveurs DNS sont ceux de **Wix** (`ns4.wixdns.net`, `ns5.wixdns.net`) : Wix gère aujourd'hui toute la zone DNS, **messagerie comprise**.
+- Messagerie Microsoft 365 : MX `darksideenergy-com02b.mail.protection.outlook.com`, CNAME `autodiscover`, CNAME `selector1._domainkey` et `selector2._domainkey`, TXT SPF `v=spf1 include:spf.protection.outlook.com include:mailgun.org -all`, TXT `_dmarc`. Un service d'envoi via Mailgun est aussi déclaré (SPF et TXT `mx._domainkey`).
+- Aucun enregistrement CAA : rien n'empêche la création du certificat HTTPS par Netlify.
+
+#### Option retenue : garder les DNS chez Wix (le plus simple)
+
+Wix reste le gestionnaire DNS : rien ne change chez OVH et aucun abonnement n'est résilié. Seuls les deux enregistrements du site changent. Ceux de la messagerie ne sont pas touchés.
+
+1. Netlify : mettre le site en ligne et le vérifier sur son adresse provisoire `*.netlify.app` (pages, outils, formulaire).
+2. Netlify, *Domain management* : ajouter `www.darkside-energy.com` (domaine principal, celui des adresses canoniques du site), puis `darkside-energy.com`.
+3. Wix, *Domaines*, `darkside-energy.com`, *Gérer les enregistrements DNS* : faire une capture d'écran de tous les enregistrements avant toute modification.
+4. Modifier uniquement ces deux enregistrements :
+   - A de `darkside-energy.com` : remplacer les trois adresses Wix (`185.230.63.107`, `185.230.63.171`, `185.230.63.186`) par la seule adresse `75.2.60.5` (répartiteur de charge Netlify, documentation Netlify « Configure external DNS ») ;
+   - CNAME `www` : remplacer `cdn3.wixdns.net` par l'adresse `*.netlify.app` du site.
+
+   Ne toucher à aucune autre ligne (MX, TXT, `autodiscover`, `_domainkey`, `_dmarc`). Aucun enregistrement AAAA n'existe, rien à modifier de ce côté.
+5. Attendre la propagation : durée de cache actuelle de ces deux enregistrements 1 h, jusqu'à 48 h selon Wix. Netlify crée ensuite le certificat HTTPS.
+6. Vérifier : `https://www.darkside-energy.com`, redirection depuis `darkside-energy.com`, une ancienne adresse (`/test-externe`), le formulaire, l'envoi et la réception d'un e-mail.
+
+À ne pas faire : retirer le domaine de Wix (*Remove from Wix*), changer les serveurs DNS chez OVH, désassigner le domaine du site Wix. La documentation Wix ne dit pas ce que la désassignation change aux DNS : ne l'envisager que si Wix refuse la modification de l'étape 4, après la capture de l'étape 3.
+
+Retour arrière : remettre les valeurs relevées à l'étape 3 (valeurs par défaut documentées par Wix : A `185.230.63.107`, CNAME `www` vers `cdn1.wixdns.net`). Le site Wix n'est pas modifié par l'opération.
+
+Limite : la messagerie reste dépendante des DNS Wix. Garder l'abonnement Wix tant que les DNS y sont.
+
+#### Pour résilier Wix un jour : rapatrier la zone DNS chez OVH
+
+Prérequis : l'accès au compte OVH qui gère le domaine.
+
+1. Dans Wix, relever **tous** les enregistrements DNS du domaine. La liste ci-dessus vient de requêtes publiques et peut être incomplète.
+2. Chez OVH, préparer la zone DNS : recopier à l'identique tous les enregistrements relevés dans Wix (messagerie, vérifications, site).
+3. Chez OVH, remplacer les serveurs DNS de Wix par ceux d'OVH. La propagation prend en général jusqu'à 48 h. Les deux zones contenant les mêmes enregistrements, les e-mails continuent d'arriver pendant la bascule.
+4. Vérifier le site et l'envoi et la réception d'un e-mail.
+5. Seulement ensuite, résilier l'offre Wix.
+
+Les anciennes adresses Wix (`/test-externe`, `/single-post/...`, `/en/...`) sont redirigées en 301 vers les nouvelles pages (voir `netlify.toml`) : le référencement acquis est conservé. Les autres adresses (`/distribution-electrique`, `/regie-technique`, `/bureaudetude`, `/consulting`, `/nos-produits`, `/calculette-electro`, `/contact`, `/mentions-legales`, `/news`) sont identiques à l'ancien site.
+
+Autre hébergeur : le dossier `site/` peut être publié tel quel sur n'importe quel hébergement statique. Il faudra alors reprendre les redirections et en-têtes de `netlify.toml` et remplacer Netlify Forms par un autre service de formulaire.
+
+Reconstruction dans Wix (au lieu de Netlify) : suivre `wix/README.md`.
+
+## Points à valider avant la mise en ligne
+
+Aucun propos n'est attribué à Damien Nirel sur le site (choix de Damien) : pas de citation à ajouter.
+
+1. **Mentions légales** : complétées d'après le registre (capital 10 000 €, RCS Arras, TVA FR21879105377) et le site de Netlify (adresse de l'hébergeur). Le téléphone de l'hébergeur (+1 650 963 4977) vient de l'annuaire officiel américain du Data Privacy Framework : à confirmer.
+2. **Données issues de sources internes** (Rentman, mémoire technique de juin 2026, document « Métiers Site Internet ») : liste des lieux de référence, gamme de matériel. Les justificatifs des labels (Label du Spectacle, Prestadd, ISO 20121) et de la part de véhicules électriques (70 %) sont disponibles (confirmé par Damien).
+3. **Références internationales** (Mexique, États-Unis, Canada, Royaume-Uni, Italie, Japon) : villes seulement, sans nom de site, car certains contrats de sous-traitance interdisent de citer les sites.
+4. **Données personnelles** : durées de conservation validées (3 ans pour les demandes, 2 ans pour les candidatures). Netlify Forms garde les messages sans limite : les supprimer au-delà de ces durées.
+5. **Réseaux sociaux** : liens Facebook et X repris de l'ancien site, à confirmer ou compléter (LinkedIn par exemple) dans `tools/site.config.mjs`.
+6. **Clientèle exclusivement professionnelle** (indiqué dans les mentions légales) : pas de médiateur de la consommation à désigner.
+7. **Photos de terrain** (accueil, matériel, régie technique) : fournies par Damien. Une bannière d'événement, les marques du loueur et du transporteur et une plaque d'immatriculation ont été floutées. À confirmer : les droits sur la photo des câbles au pied des conteneurs (prise par un photographe ?).
+8. **Calculette** : tensions des réseaux étrangers (valeurs nominales usuelles) et parc de câbles à confirmer ; hypothèse de réactance à 60 Hz (0,096 mΩ/m) ; seuil d'alerte de charge à 80 % du calibre (seuil de Darkside Power Plan). Redirection de l'ancienne appli à faire le jour de la mise en ligne (voir « Calculette électro »).
+9. **Google Analytics** : flux web créé (G-W56X4DV0DT, renseigné dans `tools/site.config.mjs`). Réglages de la propriété à vérifier : conservation 14 mois, Google Signals désactivé, `generate_lead` en événement clé (voir « Mesure d'audience »).
+
+## Référencement par les moteurs et les assistants IA (GEO)
+
+Les assistants IA trouvent l'information de deux façons : ce qu'ils ont appris pendant leur entraînement (contenus collectés sur le web) et ce qu'ils vont chercher en direct (ChatGPT et Copilot s'appuient sur l'index de Bing, Gemini et les AI Overviews sur celui de Google, Perplexity sur son propre robot). Pour être cité, il faut donc être lisible, indexé, clair et cohérent partout.
+
+**Déjà intégré au site**
+
+- Contenu en HTML statique, lisible sans JavaScript par tous les robots (l'ancien site Wix affichait très peu de texte sans JavaScript).
+- `robots.txt` qui autorise explicitement les robots des moteurs et des IA (OpenAI, Anthropic, Perplexity, Google, Apple, Mistral, Meta, Amazon, Common Crawl).
+- `llms.txt` (résumé structuré du site, format llmstxt.org), `llms-full.txt` (tout le contenu en Markdown) et une version Markdown de chaque page (`index.html.md`), signalée dans l'en-tête HTML.
+- Données structurées Schema.org sur chaque page : organisation (identité, SIREN, adresse, contact, domaines d'expertise, services), page web, services, outils de calcul, questions fréquentes, lexique, articles, personne (directeur technique), fil d'Ariane. Vérifiées contre le vocabulaire officiel Schema.org.
+- Balise `robots` autorisant les extraits longs (`max-snippet:-1`), utilisés par les réponses générées.
+- Contenus faciles à citer : bloc « En bref » en page d'accueil, FAQ, lexique, encadrés « À retenir », méthodes de calcul explicites, dates de mise à jour.
+- Nom, adresse et téléphone identiques partout (pages, balisage, llms.txt).
+
+**À faire après la mise en ligne**
+
+1. Google Search Console : ajouter le site et déclarer `sitemap.xml`.
+2. Bing Webmaster Tools : importer le site depuis Search Console et déclarer `sitemap.xml`. Puis, après chaque mise en ligne : `node tools/indexnow.mjs`.
+3. Créer ou reprendre la fiche Google Business Profile avec exactement le même nom, la même adresse et le même téléphone ; ajouter son adresse dans `ENTITY.sameAs` (`tools/site.config.mjs`).
+4. Créer la page entreprise LinkedIn et l'ajouter dans `SITE.socials`.
+5. Harmoniser la fiche de l'entreprise sur les annuaires professionnels et les sites des labels (Label du Spectacle, Prestadd).
+6. Obtenir des mentions et des liens depuis les sites des partenaires, des lieux et de la presse spécialisée : les IA accordent beaucoup de poids aux sources tierces.
+7. Faire vivre le contenu : nouvelles questions dans la FAQ à partir des vraies demandes clients, nouveaux articles « Le sais-tu ? », dates `updated` à jour.
+8. Suivre le résultat en posant régulièrement des questions types à ChatGPT, Perplexity, Gemini et Claude, par exemple « distribution électrique événementielle Lille » ou « location passage de câbles PMR Hauts-de-France ».
+
+## Images
+
+Photos optimisées en WebP et JPEG, logo vectorisé depuis le logo officiel (rouge `#C30000`). Pour régénérer l'image de partage après un changement de slogan : ouvrir `tools/og-image.html` dans un navigateur à 1200 × 630 px et faire une capture vers `site/assets/img/og-image.png`.
+
+## Crédits
+
+Police Archivo (SIL Open Font License 1.1), icônes Lucide (ISC) et Simple Icons (CC0) : voir `site/assets/fonts/OFL-Archivo.txt` et `tools/icons.LICENSE.txt`. Fond de carte d'après Natural Earth (domaine public), via world-atlas (ISC) : voir `tools/carte.LICENSE.txt`.
+
+La carte des interventions se règle dans `MAP` (`tools/site.config.mjs`) : siège, lieux, étiquettes. Le fond en points (`site/assets/img/carte-monde.svg`) se régénère avec `node tools/carte.mjs`, seulement si le cadrage change.

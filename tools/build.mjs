@@ -1,0 +1,792 @@
+#!/usr/bin/env node
+// Assemble les blocs communs dans chaque page HTML de site/ :
+//   <!-- head:start --> ... <!-- head:end -->             balises <head> (SEO, favicons, CSS, JS)
+//   <!-- header:start --> ... <!-- header:end -->         en-tête et navigation
+//   <!-- breadcrumb:start --> ... <!-- breadcrumb:end --> fil d'Ariane
+//   <!-- footer:start --> ... <!-- footer:end -->         pied de page
+//   <svg data-icon="nom"></svg> / <svg data-logo="horizontal|stacked"></svg>
+// puis applique les espaces insécables de la typographie française et régénère :
+//   sitemap.xml, llms.txt, llms-full.txt et une version Markdown de chaque page (index.html.md)
+//   destinées aux moteurs de recherche et aux assistants IA.
+// Le script est idempotent : on peut le relancer autant de fois que nécessaire.
+//
+// Usage : node tools/build.mjs
+
+import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
+import { join, relative, dirname, sep } from "node:path";
+import { createHash } from "node:crypto";
+import { fileURLToPath } from "node:url";
+import { SITE, NAV, CTA, ENTITY, LLMS, MAP, NAV_EN, CTA_EN, UI } from "./site.config.mjs";
+import { pageToMarkdown } from "./markdown.mjs";
+import { WIDTH, HEIGHT, project } from "./map.mjs";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const SITE_DIR = join(ROOT, "site");
+const ICONS = JSON.parse(readFileSync(join(ROOT, "tools/icons.json"), "utf8"));
+
+const esc = (s) =>
+  String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+// --- Fichiers ---------------------------------------------------------------
+
+function walk(dir, out = []) {
+  for (const name of readdirSync(dir)) {
+    const p = join(dir, name);
+    if (statSync(p).isDirectory()) {
+      if (name === "assets") continue;
+      walk(p, out);
+    } else if (name.endsWith(".html")) {
+      out.push(p);
+    }
+  }
+  return out;
+}
+
+const hashOf = (p) => createHash("md5").update(readFileSync(p)).digest("hex").slice(0, 8);
+
+function pageUrl(file) {
+  const rel = relative(SITE_DIR, file).split(sep).join("/");
+  if (rel === "index.html") return "/";
+  if (rel.endsWith("/index.html")) return "/" + rel.slice(0, -"index.html".length);
+  return "/" + rel;
+}
+
+// Chemin relatif vers l'accueil de la langue de la page (/ ou /en/)
+function homePrefix(file, cfg, lang) {
+  if (cfg.absoluteRoot) return lang === "en" ? "/en/" : "/";
+  if (lang !== "en") return rootPrefix(file, cfg);
+  const depth = relative(join(SITE_DIR, "en"), dirname(file)).split(sep).filter(Boolean).length;
+  return depth === 0 ? "./" : "../".repeat(depth);
+}
+
+// Pages légales par langue (pied de page)
+const LEGAL = { fr: "mentions-legales/", en: "legal-notice/" };
+
+function rootPrefix(file, cfg) {
+  if (cfg.absoluteRoot) return "/";
+  const depth = relative(SITE_DIR, dirname(file)).split(sep).filter(Boolean).length;
+  return depth === 0 ? "./" : "../".repeat(depth);
+}
+
+// --- SVG --------------------------------------------------------------------
+
+function icon(name, extraAttrs = "") {
+  const ic = ICONS[name];
+  if (!ic) throw new Error(`Icône inconnue : ${name}`);
+  const base =
+    ic.type === "fill"
+      ? `viewBox="0 0 24 24" fill="currentColor"`
+      : `viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"`;
+  return `<svg data-icon="${name}"${extraAttrs} ${base} aria-hidden="true" focusable="false">${ic.body}</svg>`;
+}
+
+function loadLogo(file) {
+  const svg = readFileSync(join(SITE_DIR, "assets/img", file), "utf8");
+  return {
+    viewBox: svg.match(/viewBox="([^"]+)"/)[1],
+    d: svg.match(/ d="([^"]+)"/)[1],
+  };
+}
+
+const LOGOS = {
+  horizontal: loadLogo("logo-dark-side-energy.svg"),
+  stacked: loadLogo("logo-dark-side-energy-empile.svg"),
+};
+
+function logo(kind, extraAttrs = "") {
+  const l = LOGOS[kind];
+  if (!l) throw new Error(`Logo inconnu : ${kind}`);
+  return `<svg data-logo="${kind}"${extraAttrs} viewBox="${l.viewBox}" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="${l.d}"/></svg>`;
+}
+
+const GENERATED_ATTRS = /\s(viewBox|fill|stroke|stroke-width|stroke-linecap|stroke-linejoin|aria-hidden|focusable)="[^"]*"/g;
+
+function expandSvgs(html) {
+  html = html.replace(/<svg data-icon="([a-z0-9-]+)"([^>]*)>[\s\S]*?<\/svg>/g, (_, name, attrs) =>
+    icon(name, attrs.replace(GENERATED_ATTRS, ""))
+  );
+  html = html.replace(/<svg data-logo="([a-z]+)"([^>]*)>[\s\S]*?<\/svg>/g, (_, kind, attrs) =>
+    logo(kind, attrs.replace(GENERATED_ATTRS, ""))
+  );
+  return html;
+}
+
+// --- Blocs communs ------------------------------------------------------------
+
+function head(cfg, ctx) {
+  const { root, url, v, t } = ctx;
+  const isHome = url === "/" || url === "/en/";
+  const title = isHome ? `${SITE.name} | ${t.homeTitle}` : `${cfg.title} | ${SITE.name}`;
+  // Correspondance entre les deux langues (hreflang), pour les pages indexées
+  const alternates = [];
+  if (!cfg.noindex && !cfg.absoluteRoot && ctx.alt) {
+    const fr = ctx.lang === "fr" ? url : ctx.alt;
+    const en = ctx.lang === "en" ? url : ctx.alt;
+    alternates.push(
+      `<link rel="alternate" hreflang="fr" href="${SITE.url}${fr}">`,
+      `<link rel="alternate" hreflang="en" href="${SITE.url}${en}">`,
+      `<link rel="alternate" hreflang="x-default" href="${SITE.url}${fr}">`
+    );
+  }
+  const canonical = SITE.url + url;
+  const ogImage = `${SITE.url}/${cfg.image || SITE.ogImage}`;
+  const lines = [
+    `<meta charset="utf-8">`,
+    `<meta name="viewport" content="width=device-width, initial-scale=1${cfg.manifest ? ", viewport-fit=cover" : ""}">`,
+    `<title>${esc(title)}</title>`,
+    `<meta name="description" content="${esc(cfg.description)}">`,
+    cfg.noindex ? `<meta name="robots" content="noindex, follow">` : `<link rel="canonical" href="${canonical}">`,
+    cfg.noindex ? "" : `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">`,
+    ...alternates,
+    cfg.noindex || cfg.absoluteRoot ? "" : `<link rel="alternate" type="text/markdown" href="index.html.md" title="${t.markdown}">`,
+    `<meta name="theme-color" content="${SITE.themeColor}">`,
+    // Mesure d'audience : identifiant lu par main.js (bandeau de consentement, Google Analytics après accord)
+    SITE.ga4 ? `<meta name="ga4" content="${SITE.ga4}">` : "",
+    `<meta name="color-scheme" content="dark">`,
+    `<meta property="og:type" content="${cfg.type === "article" ? "article" : "website"}">`,
+    `<meta property="og:site_name" content="${SITE.name}">`,
+    `<meta property="og:locale" content="${t.ogLocale}">`,
+    ctx.alt ? `<meta property="og:locale:alternate" content="${UI[ctx.lang === "en" ? "fr" : "en"].ogLocale}">` : "",
+    `<meta property="og:title" content="${esc(cfg.ogTitle || (isHome ? SITE.name : cfg.title))}">`,
+    `<meta property="og:description" content="${esc(cfg.description)}">`,
+    `<meta property="og:url" content="${canonical}">`,
+    `<meta property="og:image" content="${ogImage}">`,
+    `<meta property="og:image:width" content="1200">`,
+    `<meta property="og:image:height" content="630">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    cfg.type === "article" && cfg.article ? `<meta property="article:published_time" content="${cfg.article.date}">` : "",
+    cfg.type === "article" && cfg.updated ? `<meta property="article:modified_time" content="${cfg.updated}">` : "",
+    `<link rel="icon" href="${root}assets/img/favicon.svg" type="image/svg+xml">`,
+    `<link rel="icon" href="${root}assets/img/favicon-32.png" sizes="32x32" type="image/png">`,
+    `<link rel="apple-touch-icon" href="${root}assets/img/apple-touch-icon.png">`,
+    `<link rel="manifest" href="${root}${cfg.manifest || "site.webmanifest"}">`,
+    // Page installable comme une application (calculette) : réglages pour l'écran d'accueil de l'iPhone
+    cfg.manifest ? `<meta name="mobile-web-app-capable" content="yes">` : "",
+    cfg.manifest ? `<meta name="apple-mobile-web-app-capable" content="yes">` : "",
+    cfg.manifest ? `<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">` : "",
+    cfg.manifest && cfg.app ? `<meta name="apple-mobile-web-app-title" content="${esc(cfg.app.short || cfg.app.name)}">` : "",
+    `<link rel="preload" href="${root}assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>`,
+    `<link rel="stylesheet" href="${root}assets/css/main.css?v=${v.css}">`,
+    `<script>document.documentElement.classList.add("js")</script>`,
+    // Calculette ouverte depuis l'écran d'accueil : mode application dès l'affichage
+    cfg.manifest ? `<script>if(matchMedia("(display-mode: standalone)").matches||navigator.standalone)document.documentElement.classList.add("is-app")</script>` : "",
+    `<script src="${root}assets/js/main.js?v=${v.js}" defer></script>`,
+  ];
+  for (const s of cfg.scripts || []) {
+    const h = hashOf(join(SITE_DIR, s));
+    lines.push(`<script type="module" src="${root}${s}?v=${h}"></script>`);
+  }
+  for (const ld of jsonLd(cfg, ctx)) {
+    lines.push(`<script type="application/ld+json">${JSON.stringify(ld)}</script>`);
+  }
+  return lines.filter(Boolean).join("\n");
+}
+
+const ORG_ID = `${SITE.url}/#organisation`;
+const SITE_ID = `${SITE.url}/#website`;
+
+function organizationLd(lang = "fr") {
+  const en = lang === "en";
+  const t = UI[lang];
+  const nav = en ? NAV_EN : NAV;
+  const langHome = en ? `${SITE.url}/en/` : `${SITE.url}/`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE.url}/#organisation`,
+    name: SITE.name,
+    legalName: SITE.legalName,
+    url: `${SITE.url}/`,
+    logo: `${SITE.url}/assets/img/logo-dark-side-energy.png`,
+    slogan: en ? SITE.sloganEn : SITE.slogan,
+    email: SITE.email,
+    telephone: SITE.phoneIntl,
+    // Siège au domicile du gérant : région seulement (adresse complète dans les mentions légales)
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: SITE.address.region,
+      addressCountry: SITE.address.country,
+    },
+    identifier: [
+      { "@type": "PropertyValue", propertyID: "SIREN", value: SITE.siren.replace(/\s/g, "") },
+      { "@type": "PropertyValue", propertyID: "SIRET", value: SITE.siret.replace(/\s/g, "") },
+    ],
+    description: en ? ENTITY.descriptionEn : ENTITY.description,
+    foundingDate: ENTITY.foundingDate,
+    image: `${SITE.url}/${SITE.ogImage}`,
+    areaServed: ENTITY.areaServed.map((name) => ({ "@type": "Country", name })),
+    knowsAbout: en ? ENTITY.knowsAboutEn : ENTITY.knowsAbout,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: SITE.email,
+        telephone: SITE.phoneIntl,
+        areaServed: "FR",
+        availableLanguage: ENTITY.languages,
+        url: `${langHome}contact/`,
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: t.catalog,
+      itemListElement: [
+        ...nav.find((n) => n.key === "metiers").children.map((c) => ({ label: c.label, href: c.href })),
+        { label: t.catalogEquipment, href: nav.find((n) => n.key === "materiel").href },
+      ].map((c) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: c.label, url: `${langHome}${c.href}` } })),
+    },
+    sameAs: [...SITE.socials.map((s) => s.href), ...ENTITY.sameAs],
+  };
+}
+
+const orgRef = () => ({ "@type": "Organization", "@id": ORG_ID, name: SITE.name, url: `${SITE.url}/`, logo: `${SITE.url}/assets/img/logo-dark-side-energy.png` });
+
+const plain = (s) =>
+  s
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;|&#8239;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&shy;/g, "")
+    .replace(/[\u00a0\u202f]/g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([.,)])/g, "$1")
+    .trim();
+
+function faqFrom(html) {
+  return [...html.matchAll(/<div class="faq-item"[^>]*>\s*<h3[^>]*>([\s\S]*?)<\/h3>\s*<div class="faq-answer">([\s\S]*?)<\/div>\s*<\/div>/g)].map((m) => ({
+    "@type": "Question",
+    name: plain(m[1]),
+    acceptedAnswer: { "@type": "Answer", text: plain(m[2]) },
+  }));
+}
+
+function glossaryFrom(html, url) {
+  return [...html.matchAll(/<div class="glossary__item">\s*<dt id="([^"]+)">([\s\S]*?)<\/dt>\s*<dd>([\s\S]*?)<\/dd>\s*<\/div>/g)].map((m) => ({
+    "@type": "DefinedTerm",
+    "@id": `${url}#${m[1]}`,
+    name: plain(m[2]),
+    description: plain(m[3]),
+    inDefinedTermSet: `${url}#lexique`,
+  }));
+}
+
+function jsonLd(cfg, ctx) {
+  const out = [];
+  const canonical = SITE.url + ctx.url;
+  const inLanguage = ctx.t.locale;
+  const langHome = ctx.lang === "en" ? `${SITE.url}/en/` : `${SITE.url}/`;
+  const isHome = ctx.url === "/" || ctx.url === "/en/";
+  if (isHome || cfg.nav === "entreprise") {
+    out.push(organizationLd(ctx.lang));
+  }
+  if (isHome) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": SITE_ID,
+      name: SITE.name,
+      url: `${SITE.url}/`,
+      description: ctx.lang === "en" ? ENTITY.descriptionEn : ENTITY.description,
+      inLanguage: [UI.fr.locale, UI.en.locale],
+      publisher: { "@id": ORG_ID },
+    });
+  }
+  if (!cfg.noindex) {
+    const page = {
+      "@context": "https://schema.org",
+      "@type": cfg.webPageType || "WebPage",
+      "@id": `${canonical}#webpage`,
+      url: canonical,
+      name: cfg.title,
+      description: cfg.description,
+      inLanguage,
+      isPartOf: { "@type": "WebSite", "@id": SITE_ID, name: SITE.name, url: `${SITE.url}/` },
+      about: orgRef(),
+      publisher: orgRef(),
+      primaryImageOfPage: `${SITE.url}/${cfg.image || SITE.ogImage}`,
+    };
+    if (cfg.updated) page.dateModified = cfg.updated;
+    if (cfg.breadcrumb && cfg.breadcrumb.length) page.breadcrumb = { "@id": `${canonical}#breadcrumb` };
+    if (cfg.webPageType === "FAQPage") {
+      page.mainEntity = faqFrom(ctx.html);
+      page.about = orgRef();
+    }
+    out.push(page);
+  }
+  if (cfg.service) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${canonical}#service`,
+      name: cfg.service.name,
+      serviceType: cfg.service.type,
+      description: cfg.description,
+      url: canonical,
+      provider: orgRef(),
+      areaServed: ENTITY.areaServed.map((name) => ({ "@type": "Country", name })),
+      availableChannel: {
+        "@type": "ServiceChannel",
+        serviceUrl: `${langHome}contact/`,
+        servicePhone: { "@type": "ContactPoint", telephone: SITE.phoneIntl, email: SITE.email, contactType: "sales" },
+        availableLanguage: ENTITY.languages,
+      },
+    });
+  }
+  if (cfg.app) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "@id": `${canonical}#application`,
+      name: cfg.app.name,
+      description: cfg.description,
+      url: canonical,
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: ctx.t.anyBrowser,
+      inLanguage,
+      ...(cfg.app.restricted ? {} : { isAccessibleForFree: true, offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" } }),
+      featureList: cfg.app.features,
+      provider: orgRef(),
+    });
+  }
+  if (cfg.glossary) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "DefinedTermSet",
+      "@id": `${canonical}#lexique`,
+      name: cfg.title,
+      description: cfg.description,
+      url: canonical,
+      inLanguage,
+      publisher: orgRef(),
+      hasDefinedTerm: glossaryFrom(ctx.html, canonical),
+    });
+  }
+  if (cfg.nav === "entreprise") {
+    const p = ENTITY.person;
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": `${canonical}#${p.id}`,
+      name: p.name,
+      jobTitle: ctx.lang === "en" ? p.jobTitleEn : p.jobTitle,
+      description: ctx.lang === "en" ? p.descriptionEn : p.description,
+      worksFor: orgRef(),
+    });
+  }
+  if (cfg.breadcrumb && cfg.breadcrumb.length) {
+    const items = [[ctx.t.home, ""], ...cfg.breadcrumb];
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": `${canonical}#breadcrumb`,
+      itemListElement: items.map(([name, href], i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name,
+        item: i === items.length - 1 ? SITE.url + ctx.url : `${langHome}${href || ""}`,
+      })),
+    });
+  }
+  if (cfg.type === "article" && cfg.article) {
+    out.push({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: cfg.title,
+      description: cfg.description,
+      datePublished: cfg.article.date,
+      ...(cfg.updated ? { dateModified: cfg.updated } : {}),
+      isPartOf: { "@id": SITE_ID },
+      inLanguage,
+      mainEntityOfPage: SITE.url + ctx.url,
+      image: `${SITE.url}/${cfg.image || SITE.ogImage}`,
+      author: { "@type": "Organization", name: SITE.name, url: `${SITE.url}/` },
+      publisher: { "@type": "Organization", name: SITE.name, logo: { "@type": "ImageObject", url: `${SITE.url}/assets/img/logo-dark-side-energy.png` } },
+    });
+  }
+  return out;
+}
+
+function header(cfg, ctx) {
+  const { root, home, t } = ctx;
+  const active = cfg.nav || "";
+  // Lien vers la même page dans l'autre langue, ou vers son accueil (toujours l'accueil depuis la page 404)
+  const other = ctx.lang === "en" ? "fr" : "en";
+  const target = (!cfg.absoluteRoot && ctx.alt) || (ctx.lang === "en" ? "/" : "/en/");
+  const switchHref = cfg.absoluteRoot ? target : `${root}${target.slice(1)}`;
+  const item = (it) => {
+    if (it.children) {
+      const isActive = it.children.some((c) => c.key === active);
+      const subId = `sub-${it.key}`;
+      const links = it.children
+        .map(
+          (c) =>
+            `<li><a href="${home}${c.href}"${c.key === active ? ` aria-current="page"` : ""}>${esc(c.label)}<span>${esc(c.desc)}</span></a></li>`
+        )
+        .join("");
+      return `<li class="has-sub${isActive ? " is-active" : ""}"><button class="nav-link" type="button" aria-expanded="false" aria-controls="${subId}">${esc(it.label)}${icon("chevron-down", ` class="chevron"`)}</button><div class="subnav" id="${subId}"><ul>${links}</ul></div></li>`;
+    }
+    return `<li><a class="nav-link" href="${home}${it.href}"${it.key === active ? ` aria-current="page"` : ""}>${esc(it.label)}</a></li>`;
+  };
+  return [
+    `<a class="skip-link" href="#contenu">${t.skip}</a>`,
+    `<header class="site-header" data-header>`,
+    `<div class="container header-inner">`,
+    `<a class="brand" href="${home}" aria-label="${SITE.name}, ${esc(t.backHome)}">${logo("horizontal")}</a>`,
+    `<nav class="main-nav" id="main-nav" aria-label="${t.mainNav}">`,
+    `<ul class="nav-list">${ctx.nav.map(item).join("")}</ul>`,
+    // Nom accessible qui reprend le texte visible (« EN (English version) »), en langue cible
+    `<a class="lang-switch" href="${switchHref}" hreflang="${other}" lang="${other}">${t.switchText}<span class="visually-hidden"> (${esc(t.switchLabel)})</span></a>`,
+    `<a class="btn btn--sm nav-cta" href="${home}${ctx.cta.href}">${esc(ctx.cta.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,
+    `</nav>`,
+    `<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="visually-hidden">${t.openMenu}</span><span class="burger" aria-hidden="true"></span></button>`,
+    `</div>`,
+    `</header>`,
+  ].join("\n");
+}
+
+function breadcrumb(cfg, ctx) {
+  if (!cfg.breadcrumb || !cfg.breadcrumb.length) return "";
+  const items = [[ctx.t.home, ""], ...cfg.breadcrumb];
+  const lis = items
+    .map(([label, href], i) =>
+      i === items.length - 1
+        ? `<li><span aria-current="page">${esc(label)}</span></li>`
+        : `<li><a href="${ctx.home}${href || ""}">${esc(label)}</a></li>`
+    )
+    .join("");
+  return `<nav class="breadcrumb" aria-label="${esc(ctx.t.breadcrumb)}"><ol>${lis}</ol></nav>`;
+}
+
+function footer(cfg, ctx) {
+  const { root, home, t } = ctx;
+  const metiers = ctx.nav.find((n) => n.key === "metiers").children;
+  const outils = ctx.nav.find((n) => n.key === "outils").children;
+  const hrefOf = (key) => ctx.nav.find((n) => n.key === key).href;
+  const socials = SITE.socials
+    .map((s) => `<li><a href="${s.href}" rel="noopener" target="_blank" aria-label="${esc(s.label)} (${t.newWindow})">${icon(s.icon)}</a></li>`)
+    .join("");
+  return [
+    `<footer class="site-footer">`,
+    `<div class="container footer-grid">`,
+    `<div class="footer-brand">`,
+    `<a class="brand" href="${home}" aria-label="${SITE.name}, ${esc(t.backHome)}">${logo("horizontal")}</a>`,
+    `<p>${esc(ctx.lang === "en" ? SITE.sloganEn : SITE.slogan)}</p>`,
+    `<ul class="social">${socials}</ul>`,
+    `</div>`,
+    `<nav aria-label="${t.footerServices}"><p class="footer-title">${t.footerServices}</p><ul class="footer-links">${metiers
+      .map((m) => `<li><a href="${home}${m.href}">${esc(m.label)}</a></li>`)
+      .join("")}</ul></nav>`,
+    `<nav aria-label="${t.footerResources}"><p class="footer-title">${t.footerResources}</p><ul class="footer-links">`,
+    `<li><a href="${home}${hrefOf("materiel")}">${esc(t.footerEquipment)}</a></li>`,
+    `<li><a href="${home}${hrefOf("rse")}">${esc(t.footerRse)}</a></li>`,
+    `<li><a href="${home}${hrefOf("references")}">${esc(t.footerRefs)}</a></li>`,
+    ...outils.map((o) => `<li><a href="${home}${o.href}">${esc(o.label)}</a></li>`),
+    `<li><a href="${home}${hrefOf("entreprise")}">${esc(t.footerCompany)}</a></li>`,
+    `</ul></nav>`,
+    `<div><p class="footer-title">${t.footerContact}</p>`,
+    `<address class="footer-contact">`,
+    `<p>${SITE.name}<br>${esc(t.footerArea)}</p>`,
+    `<p><a href="mailto:${SITE.email}">${SITE.email}</a><br><a href="tel:${SITE.phoneIntl}">${(ctx.lang === "en" ? SITE.phoneIntlDisplay : SITE.phone).replace(/ /g, "\u00A0")}</a></p>`,
+    `</address>`,
+    `<a class="btn btn--sm" href="${home}${ctx.cta.href}">${esc(ctx.cta.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,
+    `</div>`,
+    `</div>`,
+    `<div class="container"><div class="footer-bottom">`,
+    `<p>© <span data-year>${new Date().getFullYear()}</span> ${SITE.name}, ${SITE.legalForm}. SIREN ${SITE.siren}.</p>`,
+    `<ul><li><a href="${home}${LEGAL[ctx.lang]}">${esc(t.legal)}</a></li><li><a href="${home}faq/">${esc(t.faq)}</a></li><li><a href="${root}llms.txt">${esc(t.aiInfo)}</a></li><li><button class="footer-consent" type="button" data-consent-open hidden>${esc(t.cookies)}</button></li><li><a href="${home}contact/">${esc(t.footerContact)}</a></li></ul>`,
+    `</div></div>`,
+    `</footer>`,
+  ].join("\n");
+}
+
+// Carte des interventions : lignes animées du siège vers les lieux réalisés à l'international
+function worldMap(cfg, ctx) {
+  const r1 = (n) => Math.round(n * 10) / 10;
+  const [hx, hy] = project(MAP.hq.lat, MAP.hq.lon);
+  const arcs = [];
+  const flows = [];
+  const pins = [];
+  MAP.places.forEach((p, i) => {
+    const [x, y] = project(p.lat, p.lon);
+    const dx = x - hx;
+    const dy = y - hy;
+    const d = Math.hypot(dx, dy);
+    // Courbe vers le haut, plus marquée pour les liaisons courtes
+    let nx = dy / d;
+    let ny = -dx / d;
+    if (ny > 0) {
+      nx = -nx;
+      ny = -ny;
+    }
+    const lift = d * (d < 120 ? 0.42 : 0.24);
+    const path = `M${r1(hx)} ${r1(hy)}Q${r1((hx + x) / 2 + nx * lift)} ${r1((hy + y) / 2 + ny * lift)} ${r1(x)} ${r1(y)}`;
+    arcs.push(`<path class="map__arc" style="--i:${i}" pathLength="1" d="${path}"/>`);
+    flows.push(`<path class="map__flow" style="--i:${i}" pathLength="1" d="${path}"/>`);
+    pins.push(`<circle class="map__pin" style="--i:${i}" cx="${r1(x)}" cy="${r1(y)}" r="3.6"/>`);
+  });
+  const dots = MAP.france.map(([lat, lon]) => {
+    const [x, y] = project(lat, lon);
+    return `<circle class="map__dot" cx="${r1(x)}" cy="${r1(y)}" r="2.4"/>`;
+  });
+  const en = ctx.lang === "en";
+  const labels = MAP.labels.map((l) => {
+    const [x, y] = project(l.lat, l.lon);
+    return `<text class="map__label${l.hq ? " map__label--hq" : ""}" x="${r1(x + l.dx)}" y="${r1(y + l.dy)}" text-anchor="${l.anchor}">${esc(en && l.en ? l.en : l.text)}</text>`;
+  });
+  const names = MAP.places.map((p) => (en && p.en ? p.en : p.name));
+  // Liste ouverte (pas de « et » final) : ce ne sont que quelques-unes des villes
+  const list = `${names.join(", ")}…`;
+  return [
+    `<figure class="map reveal">`,
+    `<div class="map__canvas no-md">`,
+    `<img class="map__base" src="${ctx.root}assets/img/carte-monde.svg" width="${WIDTH}" height="${HEIGHT}" alt="" loading="lazy" decoding="async">`,
+    `<svg class="map__layer" viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img" aria-labelledby="carte-titre carte-desc">`,
+    en ? `<title id="carte-titre">Our work abroad</title>` : `<title id="carte-titre">Nos interventions à l'international</title>`,
+    en
+      ? `<desc id="carte-desc">Lines link France to the cities around the world where ${esc(SITE.name)} teams have worked, including: ${esc(list)}</desc>`
+      : `<desc id="carte-desc">Des lignes relient la France aux villes du monde où les équipes de ${esc(SITE.name)} sont intervenues, notamment : ${esc(list)}</desc>`,
+    ...dots,
+    ...arcs,
+    ...flows,
+    ...pins,
+    `<circle class="map__ring" cx="${r1(hx)}" cy="${r1(hy)}" r="7"/>`,
+    `<circle class="map__hq" cx="${r1(hx)}" cy="${r1(hy)}" r="5"/>`,
+    ...labels,
+    `</svg>`,
+    `</div>`,
+    en ? `<figcaption class="map__caption">Around the world: ${esc(list)}</figcaption>` : `<figcaption class="map__caption">À travers le monde : ${esc(list)}</figcaption>`,
+    `</figure>`,
+  ].join("\n");
+}
+
+function cta(cfg, ctx) {
+  const c = cfg.cta || {};
+  const title = c.title || ctx.t.ctaTitle;
+  const text = c.text || ctx.t.ctaText;
+  const href = `${ctx.home}${ctx.cta.href}${c.objet ? `?objet=${encodeURIComponent(c.objet)}` : ""}`;
+  return [
+    `<section class="section" aria-label="Contact">`,
+    `<div class="container">`,
+    `<div class="cta-band reveal">`,
+    `<div class="cta-band__inner">`,
+    `<div>`,
+    `<h2>${esc(title)}</h2>`,
+    `<p>${esc(text)}</p>`,
+    `</div>`,
+    `<div class="btn-row">`,
+    `<a class="btn btn--light" href="${href}">${esc(c.button || ctx.cta.label)}${icon("arrow-right", ` class="arrow"`)}</a>`,
+    `<a class="btn btn--ghost btn--case" href="mailto:${SITE.email}">${SITE.email}</a>`,
+    `</div>`,
+    `</div>`,
+    `</div>`,
+    `</div>`,
+    `</section>`,
+  ].join("\n");
+}
+
+function replaceBlock(html, name, content, file) {
+  const re = new RegExp(`(<!-- ${name}:start -->)[\\s\\S]*?(<!-- ${name}:end -->)`);
+  if (!re.test(html)) {
+    if (name === "breadcrumb" || name === "cta" || name === "carte") return html;
+    throw new Error(`Bloc "${name}" introuvable dans ${file}`);
+  }
+  return html.replace(re, `$1\n${content}\n$2`);
+}
+
+// --- Typographie française ------------------------------------------------------
+
+const NBSP = " ";
+const NNBSP = " ";
+const UNITS = "A|V|W|kW|kVA|kWh|MW|MWh|mA|kA|mm²|mm|m|km|%|Hz|°C|L|kg|h|min|ans|jours|€";
+
+function frenchTypo(html) {
+  const parts = html.split(
+    /(<!--[\s\S]*?-->|<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<textarea[\s\S]*?<\/textarea>|<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>|<[^>]+>)/
+  );
+  const unitRe = new RegExp(`(\\d) (?=(?:${UNITS})(?![\\p{L}\\d]))`, "gu");
+  for (let i = 0; i < parts.length; i += 2) {
+    let t = parts[i];
+    if (!t || !/\S/.test(t)) continue;
+    t = t
+      .replace(/ ([?!;])/g, `${NNBSP}$1`)
+      .replace(/ :/g, `${NBSP}:`)
+      .replace(/« /g, `«${NBSP}`)
+      .replace(/ »/g, `${NBSP}»`)
+      .replace(/(\d) (?=\d{3}(?!\d))/g, `$1${NNBSP}`)
+      .replace(unitRe, `$1${NBSP}`);
+    parts[i] = t;
+  }
+  return parts.join("");
+}
+
+// --- Construction -------------------------------------------------------------------
+
+const v = {
+  css: hashOf(join(SITE_DIR, "assets/css/main.css")),
+  js: hashOf(join(SITE_DIR, "assets/js/main.js")),
+};
+
+const files = walk(SITE_DIR).sort();
+
+// Pages en deux langues : chaque page anglaise indique sa page française ("alternate")
+const PAIRS = new Map();
+for (const file of files) {
+  const m = readFileSync(file, "utf8").match(/<!--page\s*([\s\S]*?)-->/);
+  let c = null;
+  try {
+    c = m ? JSON.parse(m[1]) : null;
+  } catch (e) {
+    continue; // erreur signalée dans la boucle principale
+  }
+  if (!c || c.lang !== "en" || !c.alternate) continue;
+  const enUrl = pageUrl(file);
+  PAIRS.set(enUrl, c.alternate);
+  PAIRS.set(c.alternate, enUrl);
+}
+
+const sitemap = [];
+const pagesMd = [];
+let count = 0;
+
+for (const file of files) {
+  let html = readFileSync(file, "utf8");
+  const m = html.match(/<!--page\s*([\s\S]*?)-->/);
+  if (!m) {
+    console.warn(`(ignoré, pas de configuration) ${relative(ROOT, file)}`);
+    continue;
+  }
+  let cfg;
+  try {
+    cfg = JSON.parse(m[1]);
+  } catch (e) {
+    throw new Error(`Configuration JSON invalide dans ${file} : ${e.message}`);
+  }
+  for (const k of ["title", "description"]) {
+    if (!cfg[k]) throw new Error(`Champ "${k}" manquant dans ${file}`);
+  }
+  const url = pageUrl(file);
+  const lang = cfg.lang === "en" ? "en" : "fr";
+  const ctx = {
+    root: rootPrefix(file, cfg),
+    home: homePrefix(file, cfg, lang),
+    url,
+    v,
+    html,
+    lang,
+    t: UI[lang],
+    nav: lang === "en" ? NAV_EN : NAV,
+    cta: lang === "en" ? CTA_EN : CTA,
+    alt: PAIRS.get(url) || null,
+  };
+
+  html = replaceBlock(html, "head", head(cfg, ctx), file);
+  html = replaceBlock(html, "header", header(cfg, ctx), file);
+  html = replaceBlock(html, "breadcrumb", breadcrumb(cfg, ctx), file);
+  html = replaceBlock(html, "cta", cta(cfg, ctx), file);
+  html = replaceBlock(html, "carte", worldMap(cfg, ctx), file);
+  html = replaceBlock(html, "footer", footer(cfg, ctx), file);
+  html = expandSvgs(html);
+  if (lang === "fr") html = frenchTypo(html);
+  writeFileSync(file, html);
+  count++;
+
+  if (!cfg.noindex && !cfg.absoluteRoot) {
+    const canonical = SITE.url + url;
+    let md = pageToMarkdown(html, canonical);
+    const colon = lang === "fr" ? " : " : ": ";
+    const meta = [`> ${cfg.description}`, "", `${ctx.t.mdSource}${colon}${canonical} · ${SITE.name}${cfg.updated ? ` · ${ctx.t.mdUpdated}${colon}${cfg.updated}` : ""}`];
+    const lines = md.split("\n");
+    md = lines[0].startsWith("# ") ? [lines[0], "", ...meta, "", ...lines.slice(1)].join("\n") : [`# ${cfg.title}`, "", ...meta, "", md].join("\n");
+    md = md.replace(/\n{3,}/g, "\n\n");
+    writeFileSync(join(dirname(file), "index.html.md"), md);
+    pagesMd.push({ url, lang, title: cfg.title, description: cfg.description, md });
+  }
+
+  if (!cfg.noindex && cfg.sitemap !== false) sitemap.push({ url, alt: ctx.alt, lastmod: cfg.updated || cfg.article?.date });
+}
+
+const today = new Date().toISOString().slice(0, 10);
+const inSitemap = new Set(sitemap.map((p) => p.url));
+const hreflang = (p) => {
+  if (!p.alt || !inSitemap.has(p.alt)) return "";
+  const fr = p.url.startsWith("/en/") ? p.alt : p.url;
+  const en = p.url.startsWith("/en/") ? p.url : p.alt;
+  return [
+    `<xhtml:link rel="alternate" hreflang="fr" href="${SITE.url}${fr}"/>`,
+    `<xhtml:link rel="alternate" hreflang="en" href="${SITE.url}${en}"/>`,
+    `<xhtml:link rel="alternate" hreflang="x-default" href="${SITE.url}${fr}"/>`,
+  ].join("");
+};
+const xml = [
+  `<?xml version="1.0" encoding="UTF-8"?>`,
+  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`,
+  ...sitemap
+    .sort((a, b) => a.url.localeCompare(b.url))
+    .map((p) => `  <url><loc>${SITE.url}${p.url}</loc><lastmod>${p.lastmod || today}</lastmod>${hreflang(p)}</url>`),
+  `</urlset>`,
+  ``,
+].join("\n");
+writeFileSync(join(SITE_DIR, "sitemap.xml"), xml);
+
+// --- llms.txt (format https://llmstxt.org) et llms-full.txt -------------------------------
+const byUrl = new Map(pagesMd.map((p) => [p.url, p]));
+const listed = new Set();
+const llms = [
+  `# ${SITE.name}`,
+  "",
+  `> ${ENTITY.description}`,
+  "",
+  "Informations clés :",
+  "",
+  ...LLMS.facts.map((f) => `- ${f}`),
+  "",
+  `Chaque page existe aussi en Markdown : ajouter \`index.html.md\` à son adresse. Contenu complet du site : ${SITE.url}/llms-full.txt`,
+  "",
+];
+for (const [title, urls] of LLMS.sections) {
+  llms.push(`## ${title}`, "");
+  for (const u of urls) {
+    const p = byUrl.get(u);
+    if (!p) throw new Error(`llms.txt : page introuvable ${u}`);
+    listed.add(u);
+    llms.push(`- [${p.title}](${SITE.url}${u}): ${p.description}`);
+  }
+  llms.push("");
+}
+const missing = pagesMd.filter((p) => p.lang === "fr" && !listed.has(p.url) && p.url !== "/").map((p) => p.url);
+if (missing.length) console.warn(`llms.txt : pages non listées ${missing.join(", ")}`);
+const order = ["/", ...LLMS.sections.flatMap(([, urls]) => urls)];
+// Version anglaise : dans l'ordre des pages françaises, puis les éventuelles autres pages anglaises
+const enPages = pagesMd.filter((p) => p.lang === "en");
+const enOrder = [...order.map((u) => PAIRS.get(u)).filter((u) => u && byUrl.has(u)), ...enPages.map((p) => p.url)].filter(
+  (u, i, all) => all.indexOf(u) === i
+);
+if (enOrder.length) {
+  llms.push("## English version", "", `> ${ENTITY.descriptionEn}`, "");
+  for (const u of enOrder) {
+    const p = byUrl.get(u);
+    llms.push(`- [${u === "/en/" ? `${SITE.name}, home page` : p.title}](${SITE.url}${u}): ${p.description}`);
+  }
+  llms.push("");
+}
+writeFileSync(join(SITE_DIR, "llms.txt"), llms.join("\n"));
+
+const full = [
+  `# ${SITE.name} : contenu complet du site`,
+  "",
+  `> ${ENTITY.description}`,
+  "",
+  `Site : ${SITE.url}/ · Généré le ${today}`,
+  "",
+  ...order
+    .map((u) => byUrl.get(u))
+    .filter(Boolean)
+    .flatMap((p) => ["---", "", p.md.trim(), ""]),
+  ...(enOrder.length ? ["---", "", "# English version", "", `> ${ENTITY.descriptionEn}`, ""] : []),
+  ...enOrder.map((u) => byUrl.get(u)).flatMap((p) => ["---", "", p.md.trim(), ""]),
+];
+writeFileSync(join(SITE_DIR, "llms-full.txt"), full.join("\n"));
+
+console.log(`${count} pages assemblées, ${sitemap.length} URL dans sitemap.xml, ${pagesMd.length} versions Markdown, llms.txt et llms-full.txt`);

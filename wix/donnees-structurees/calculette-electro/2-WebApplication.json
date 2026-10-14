@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://www.darkside-energy.com/calculette-electro#application",
+  "name": "Calculette électro Dark Side Energy",
+  "description": "Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.",
+  "url": "https://www.darkside-energy.com/calculette-electro",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Tout navigateur web",
+  "inLanguage": "fr-FR",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "featureList": [
+    "Conversion W, kW, VA, kVA et ampères en monophasé et en triphasé, et en biphasé au Japon",
+    "Réseaux étrangers : États-Unis, Canada, Mexique, Japon ou tension personnalisée",
+    "Prise et câble conseillés dans le parc de Dark Side Energy, avec le taux de charge",
+    "Chute de tension selon la méthode de la norme NF C 15-100 et section minimale",
+    "Pavé numérique, historique, copie et partage par lien",
+    "Installable sur téléphone, fonctionne sans réseau"
+  ],
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://www.darkside-energy.com/#organisation",
+    "name": "Dark Side Energy",
+    "url": "https://www.darkside-energy.com/",
+    "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
+  }
+}
