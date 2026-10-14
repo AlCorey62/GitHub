@@ -19,11 +19,12 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   lexique/                 Lexique de 46 termes, avec recherche (balisage DefinedTermSet)
   bilan-de-puissance/      Outil de bilan de puissance (démo 4 lignes, accès complet pour les clients)
   compte/                  Espace client : activation du compte, connexion, mot de passe oublié (non indexé)
-  calculette-electro/      Conversions, chute de tension, repères par connecteur
+  calculette-electro/      Calculette installable (voir « Calculette électro ») et son manifest.webmanifest
   contact/                 Formulaire (Netlify Forms) et page de confirmation
   mentions-legales/        Mentions légales et confidentialité
   en/                      Version anglaise : mêmes pages, adresses en anglais (voir « Version anglaise »)
   404.html, robots.txt, sitemap.xml, site.webmanifest, favicon.ico
+  calculette-sw.js         Service worker de la calculette (fonctionnement hors ligne)
   llms.txt, llms-full.txt  Résumé et contenu complet du site pour les assistants IA (générés)
   **/index.html.md         Version Markdown de chaque page (générée)
   assets/css/main.css      Charte graphique complète
@@ -44,7 +45,8 @@ tools/
   og-image.html            Modèle de l'image de partage réseaux sociaux
 wix/                       Passation pour reconstruire le site dans Wix : note, plan des pages, textes,
                            données structurées (voir wix/README.md)
-tests/elec.test.mjs        Tests des formules électriques
+tests/elec.test.mjs        Tests des formules électriques (conversions, chute de tension, réseaux, parc)
+tests/site.test.mjs        Tests du site construit (scripts autorisés par la CSP, réseaux de la calculette)
 netlify.toml               Hébergement Netlify : build, redirections des anciennes URL, en-têtes de sécurité
 app.html                   Ancien prototype « Calculateur d'Énergie Stand » (non publié, conservé)
 ```
@@ -85,6 +87,37 @@ Les 24 pages anglaises sont dans `site/en/`, avec des adresses en anglais : `/en
 - **Formulaire** : la version anglaise envoie ses demandes au formulaire Netlify `contact-en`, pour savoir qu'il faut répondre en anglais.
 - **Espace client** : les e-mails de Netlify Identity pointent vers l'accueil français. Le lien ouvre l'espace client anglais (`/en/account/`) si le navigateur du client n'est pas réglé en français.
 - **Anciennes adresses** : les adresses anglaises de l'ancien site Wix (`/en/test-externe`, `/en/nos-produits`, etc.) sont redirigées vers les pages anglaises ; toute autre adresse `/en/` inconnue affiche la page d'erreur anglaise (`netlify.toml`).
+
+## Calculette électro
+
+Page `/calculette-electro/` (anglais : `/en/electrical-calculator/`), qui remplace l'ancienne appli « Calc Dark Side » (https://darkside-energy.netlify.app) :
+
+- **Calculs** : conversion W, kW, VA, kVA, A en monophasé et triphasé ; prise et câble conseillés dans le parc (page Matériel) avec le taux de charge ; chute de tension (méthode NF C 15-100) avec section minimale et câble du parc qui convient ; réseaux étrangers (États-Unis, Canada, Mexique, Japon) ou tension personnalisée. Formules dans `site/assets/js/elec.js`, testées par `npm test`.
+- **Usage** : pavé numérique intégré (sur téléphone, le clavier du téléphone reste disponible), historique et derniers réglages gardés sur l'appareil (stockage local du navigateur, rien n'est envoyé), copie du résultat, partage par lien (les valeurs sont dans l'adresse).
+- **Appli** : installable sur l'écran d'accueil (manifeste par langue), fonctionne sans réseau grâce à `site/calculette-sw.js`, limité aux pages de la calculette. Ouverte depuis l'écran d'accueil, la page n'affiche que la calculette.
+- **Mise à jour** : après une modification, le service worker récupère la nouvelle version de la page à la visite suivante en ligne. Changer `CACHE` dans `calculette-sw.js` seulement si son fonctionnement change.
+
+**Ancienne appli, à la mise en ligne du site** : sur le site Netlify de l'ancienne appli (darkside-energy.netlify.app), remplacer le contenu par ces deux fichiers, pour renvoyer les utilisateurs vers la nouvelle calculette, y compris ceux qui l'ont installée sur leur téléphone :
+
+`_redirects`
+```
+/service-worker.js  /service-worker.js  200
+/*  https://www.darkside-energy.com/calculette-electro/  301!
+```
+
+`service-worker.js` (remplace l'ancien, qui gardait l'appli en cache, puis se désinstalle)
+```js
+self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    self.registration.unregister()
+      .then(() => self.clients.matchAll())
+      .then((clients) => clients.forEach((c) => c.navigate("https://www.darkside-energy.com/calculette-electro/")))
+  );
+});
+```
+
+L'ancienne appli utilisait Google Analytics ; la nouvelle calculette, comme le reste du site, n'a pas de mesure d'audience.
 
 ## Mise en ligne sur Netlify
 
@@ -164,6 +197,7 @@ Aucun propos n'est attribué à Damien Nirel sur le site (choix de Damien) : pas
 5. **Réseaux sociaux** : liens Facebook et X repris de l'ancien site, à confirmer ou compléter (LinkedIn par exemple) dans `tools/site.config.mjs`.
 6. **Clientèle exclusivement professionnelle** (indiqué dans les mentions légales) : pas de médiateur de la consommation à désigner.
 7. **Photos de terrain** (accueil, matériel, régie technique, entreprise) : fournies par Damien. Le nom d'un événement a été retiré par recadrage ; une bannière d'événement, les marques du loueur et du transporteur et une plaque d'immatriculation ont été floutées. À confirmer : les droits sur la photo des câbles au pied des conteneurs (prise par un photographe ?) et l'accord des personnes de l'équipe photographiées de dos.
+8. **Calculette** : tensions des réseaux étrangers (valeurs nominales usuelles) et parc de câbles à confirmer ; hypothèse de réactance à 60 Hz (0,096 mΩ/m) ; seuil d'alerte de charge à 80 % du calibre (seuil de Darkside Power Plan). Redirection de l'ancienne appli à faire le jour de la mise en ligne (voir « Calculette électro »).
 
 ## Référencement par les moteurs et les assistants IA (GEO)
 

@@ -5,6 +5,7 @@
 //   P : puissance active (W), S : puissance apparente (VA), Q : puissance réactive (var), I : intensité (A)
 //   Monophasé : S = U × I avec U = 230 V (tension simple)
 //   Triphasé  : S = √3 × U × I avec U = 400 V (tension composée)
+//   Autres réseaux (NETWORKS) : mêmes formules avec leurs tensions simple et composée
 
 // Langue de la page : anglais sous /en/, français sinon (et hors navigateur, pour les tests)
 export const LANG = typeof document !== "undefined" && document.documentElement.lang === "en" ? "en" : "fr";
@@ -71,7 +72,7 @@ export function convert({ value, unit, phases = 1, U = defaultVoltage(phases), c
  *   pct : chute relative (%) rapportée à U0
  *   dropLine : chute sur la tension d'alimentation (V), Uend : tension en bout de ligne (V)
  */
-export function voltageDrop({ phases = 3, material = "cu", section, length, current, cosPhi = 1, U = defaultVoltage(phases) }) {
+export function voltageDrop({ phases = 3, material = "cu", section, length, current, cosPhi = 1, U = defaultVoltage(phases), hz = 50 }) {
   const S = toNumber(section);
   const L = toNumber(length);
   const I = toNumber(current);
@@ -80,7 +81,9 @@ export function voltageDrop({ phases = 3, material = "cu", section, length, curr
   if (!rho || !(S > 0) || !(L >= 0) || !(I >= 0) || !(c > 0 && c <= 1) || !(U > 0)) return null;
   const b = phases === 3 ? 1 : 2;
   const sin = Math.sqrt(1 - c * c);
-  const u = b * ((rho * L) / S * c + LAMBDA * L * sin) * I;
+  // λ est donnée pour 50 Hz ; la réactance d'un câble est proportionnelle à la fréquence (hypothèse pour 60 Hz)
+  const lambda = LAMBDA * ((toNumber(hz) || 50) / 50);
+  const u = b * ((rho * L) / S * c + lambda * L * sin) * I;
   // U0 : tension nominale entre phase et neutre (230 V pour un réseau 230/400 V)
   const U0 = phases === 3 ? (U === U_TRI ? U_MONO : U / SQRT3) : U;
   const dropLine = phases === 3 ? u * SQRT3 : u;
@@ -97,8 +100,8 @@ export function minSection({ maxPct, ...line }) {
 }
 
 /** Longueur maximale (m) d'une ligne pour une chute de tension maximale (%). */
-export function maxLength({ maxPct, phases = 3, material = "cu", section, current, cosPhi = 1, U = defaultVoltage(phases) }) {
-  const one = voltageDrop({ phases, material, section, length: 1, current, cosPhi, U });
+export function maxLength({ maxPct, phases = 3, material = "cu", section, current, cosPhi = 1, U = defaultVoltage(phases), hz = 50 }) {
+  const one = voltageDrop({ phases, material, section, length: 1, current, cosPhi, U, hz });
   if (!one || one.pct === 0) return Infinity;
   return maxPct / one.pct;
 }
@@ -121,6 +124,75 @@ export function connectorFor(rating, phases = 3, lang = LANG) {
   if (rating <= 400) return "Powerlock 400 A";
   if (rating <= 660) return "Powerlock 660 A";
   return en ? "Several Powerlock supplies" : "Plusieurs arrivées Powerlock";
+}
+
+/**
+ * Réseaux basse tension usuels : tension simple (entre phase et neutre, monophasé), tension composée
+ * (entre phases, triphasé) et fréquence. Valeurs nominales ; vérifier sur place la tension réellement fournie.
+ */
+export const NETWORKS = [
+  { id: "eu", mono: 230, tri: 400, hz: 50, fr: "Europe et Royaume-Uni", en: "Europe and United Kingdom" },
+  { id: "us208", mono: 120, tri: 208, hz: 60, fr: "États-Unis et Canada", en: "United States and Canada" },
+  { id: "us480", mono: 277, tri: 480, hz: 60, fr: "États-Unis", en: "United States" },
+  { id: "ca600", mono: 347, tri: 600, hz: 60, fr: "Canada", en: "Canada" },
+  { id: "mx", mono: 127, tri: 220, hz: 60, fr: "Mexique", en: "Mexico" },
+  { id: "jp50", mono: 100, tri: 200, hz: 50, fr: "Japon, est (Tokyo)", en: "Japan, east (Tokyo)" },
+  { id: "jp60", mono: 100, tri: 200, hz: 60, fr: "Japon, ouest (Osaka)", en: "Japan, west (Osaka)" },
+];
+
+export const networkById = (id) => NETWORKS.find((n) => n.id === id) || NETWORKS[0];
+
+/**
+ * Parc de câbles de Dark Side Energy (page Matériel) : prise, câble souple cuivre et calibre.
+ * Monophasé : prises 16 A (3G2,5) et P17 32 A (3G6). Triphasé : P17 32, 63 et 125 A (5G6, 5G16, 5G35),
+ * Powerlock 400 A en unifilaires 150 ou 240 mm².
+ */
+export const PARC = {
+  1: [
+    { rating: 16, connector: { fr: "Prise 16 A", en: "16 A socket" }, cable: "3G2,5", section: 2.5 },
+    { rating: 32, connector: { fr: "P17 32 A monophasé", en: "P17 32 A single-phase" }, cable: "3G6", section: 6 },
+  ],
+  3: [
+    { rating: 32, connector: { fr: "P17 32 A triphasé", en: "P17 32 A three-phase" }, cable: "5G6", section: 6 },
+    { rating: 63, connector: { fr: "P17 63 A triphasé", en: "P17 63 A three-phase" }, cable: "5G16", section: 16 },
+    { rating: 125, connector: { fr: "P17 125 A triphasé", en: "P17 125 A three-phase" }, cable: "5G35", section: 35 },
+    { rating: 400, connector: { fr: "Powerlock 400 A", en: "Powerlock 400 A" }, cable: { fr: "Unifilaires 150 mm²", en: "150 mm² single-core" }, section: 150 },
+    { rating: 400, connector: { fr: "Powerlock 400 A", en: "Powerlock 400 A" }, cable: { fr: "Unifilaires 240 mm²", en: "240 mm² single-core" }, section: 240 },
+  ],
+};
+
+// Seuil d'alerte de charge d'un calibre (%)
+export const LOAD_WARN_PCT = 80;
+
+const label = (v, lang) => (typeof v === "string" ? v : v[lang === "en" ? "en" : "fr"]);
+
+/**
+ * Raccordement conseillé dans le parc pour une intensité, et chute de tension sur la longueur donnée.
+ * @returns {null | {
+ *   status: "ok" | "beyondMono" | "beyond",
+ *   item?: {rating:number, connector:string, cable:string, section:number}, loadPct?: number,
+ *   drop?: object|null, minSection?: object|null, better?: {cable:string, section:number, rating:number, drop:object}|null
+ * }}
+ */
+export function recommendLine({ current, phases = 3, length = 0, cosPhi = 1, U = defaultVoltage(phases), hz = 50, maxPct = DROP_LIMITS.autres, lang = LANG }) {
+  const I = toNumber(current);
+  const L = toNumber(length) || 0;
+  if (!(I >= 0)) return null;
+  const list = PARC[phases === 1 ? 1 : 3];
+  const pick = list.find((p) => p.rating >= I - 1e-9);
+  if (!pick) return { status: phases === 1 ? "beyondMono" : "beyond" };
+  const view = (p) => ({ rating: p.rating, connector: label(p.connector, lang), cable: label(p.cable, lang), section: p.section });
+  const line = { phases, material: "cu", length: L, current: I, cosPhi, U, hz };
+  const drop = L > 0 ? voltageDrop({ ...line, section: pick.section }) : null;
+  let min = null;
+  let better = null;
+  if (drop && drop.pct > maxPct) {
+    min = minSection({ ...line, maxPct });
+    // Câble du parc de section suffisante (même type de réseau), quelle que soit sa prise
+    const alt = list.find((p) => p.section > pick.section && voltageDrop({ ...line, section: p.section }).pct <= maxPct);
+    if (alt) better = { ...view(alt), drop: voltageDrop({ ...line, section: alt.section }) };
+  }
+  return { status: "ok", item: view(pick), loadPct: (100 * I) / pick.rating, drop, minSection: min, better };
 }
 
 /**

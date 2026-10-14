@@ -5,6 +5,7 @@ import { readFileSync, existsSync } from "node:fs";
 import {
   convert, currentFromApparent, apparentFromCurrent, voltageDrop, minSection, maxLength,
   nextRating, connectorFor, powerBalance, fmt, LANG, SQRT3, SECTIONS,
+  NETWORKS, networkById, PARC, recommendLine, LOAD_WARN_PCT,
 } from "../site/assets/js/elec.js";
 
 const close = (a, b, tol = 1e-6) => assert.ok(Math.abs(a - b) <= tol, `${a} ≠ ${b} (tolérance ${tol})`);
@@ -124,4 +125,50 @@ test("version anglaise : textes, formats et repères publiés", () => {
     const expected = apparentFromCurrent(Number(m[1]), Number(m[2])) / 1000;
     close(shown, Math.round(expected * 10) / 10, 1e-9);
   }
+});
+
+test("réseaux étrangers : tensions et fréquence", () => {
+  assert.equal(networkById("inconnu").id, "eu", "réseau par défaut : 230/400 V");
+  for (const n of NETWORKS) {
+    assert.ok(n.mono > 0 && n.tri > n.mono && (n.hz === 50 || n.hz === 60), n.id);
+  }
+  // 120/208 V : 10 kW en triphasé, cos φ = 1 → I = 10 000 / (√3 × 208)
+  const us = networkById("us208");
+  close(convert({ value: 10, unit: "kW", phases: 3, U: us.tri, cosPhi: 1 }).I, 10000 / (SQRT3 * 208));
+  close(convert({ value: 1.2, unit: "kW", phases: 1, U: us.mono, cosPhi: 1 }).I, 10);
+  // Japon 100/200 V (triangle) : ΔU % rapporté à U / √3, comme en 230/400 V
+  const jp = voltageDrop({ phases: 3, material: "cu", section: 16, length: 50, current: 40, cosPhi: 1, U: 200 });
+  close(jp.pct, (100 * jp.u) / (200 / SQRT3), 1e-9);
+  // 60 Hz : réactance 20 % plus élevée, sans effet si cos φ = 1
+  const base = { phases: 3, material: "cu", section: 50, length: 100, current: 100, cosPhi: 0.8 };
+  const r50 = voltageDrop({ ...base, hz: 50 });
+  const r60 = voltageDrop({ ...base, hz: 60 });
+  close(r60.u - r50.u, 0.08e-3 * 0.2 * 100 * 0.6 * 100, 1e-9);
+  close(voltageDrop({ ...base, cosPhi: 1, hz: 60 }).u, voltageDrop({ ...base, cosPhi: 1 }).u, 1e-12);
+});
+
+test("raccordement conseillé dans le parc", () => {
+  // Calibres du parc par ordre croissant, sections cohérentes
+  for (const ph of [1, 3]) {
+    const list = PARC[ph];
+    for (let i = 1; i < list.length; i++) assert.ok(list[i].rating >= list[i - 1].rating && list[i].section > list[i - 1].section);
+  }
+  const a = recommendLine({ current: 35.3, phases: 3, length: 0 });
+  assert.equal(a.status, "ok");
+  assert.equal(a.item.cable, "5G16");
+  assert.equal(a.item.rating, 63);
+  close(a.loadPct, (100 * 35.3) / 63);
+  assert.equal(a.drop, null, "sans longueur, pas de chute de tension");
+  assert.equal(recommendLine({ current: 16, phases: 1 }).item.cable, "3G2,5");
+  assert.equal(recommendLine({ current: 16.1, phases: 1 }).item.cable, "3G6");
+  assert.equal(recommendLine({ current: 40, phases: 1 }).status, "beyondMono");
+  assert.equal(recommendLine({ current: 401, phases: 3 }).status, "beyond");
+  assert.equal(recommendLine({ current: 200, phases: 3, lang: "en" }).item.cable, "150 mm² single-core");
+  // 63 A sur 150 m de 5G16 en 5 % : trop long ; le parc propose le 5G35
+  const long = recommendLine({ current: 63, phases: 3, length: 150, cosPhi: 0.9, maxPct: 5 });
+  assert.ok(long.drop.pct > 5);
+  assert.equal(long.better.cable, "5G35");
+  assert.ok(long.better.drop.pct <= 5);
+  assert.ok(long.minSection.section <= 35);
+  assert.equal(LOAD_WARN_PCT, 80);
 });

@@ -27,7 +27,8 @@ export const SITE = {
     { key: "facebook", label: "Facebook", href: "https://www.facebook.com/darksideenergy", icon: "brand-facebook" },
     { key: "x", label: "X (Twitter)", href: "https://twitter.com/DarkSide_Energy", icon: "brand-x" },
   ],
-  calcApp: "https://darkside-energy.netlify.app",
+  // Ancienne appli « Calc Dark Side » : à rediriger vers /calculette-electro/ à la mise en ligne (voir README)
+  oldCalcApp: "https://darkside-energy.netlify.app",
   // Clé IndexNow (Bing, Copilot, Yandex, Seznam, Naver) : le fichier site/<clé>.txt doit rester publié
   indexNowKey: "3b437b0f739a59eb3e76ac976d8c0458",
   themeColor: "#09090a",

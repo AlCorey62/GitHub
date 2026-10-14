@@ -32,7 +32,7 @@ Informations clés :
 ## Outils de calcul en ligne
 
 - [Bilan de puissance en ligne](https://www.darkside-energy.com/bilan-de-puissance): Bilan de puissance en ligne : puissance foisonnée, courant par phase, calibre et source indicatifs. Démo libre, accès complet réservé à nos clients.
-- [Calculette électro : conversions et chute de tension](https://www.darkside-energy.com/calculette-electro): Calculette électrique gratuite : conversion W, kVA et ampères en mono 230 V et tri 400 V, chute de tension NF C 15-100, repères P17 et Powerlock.
+- [Calculette électro : conversions et chute de tension](https://www.darkside-energy.com/calculette-electro): Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.
 
 ## Ressources
 

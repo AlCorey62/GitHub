@@ -132,7 +132,7 @@ function head(cfg, ctx) {
   const ogImage = `${SITE.url}/${cfg.image || SITE.ogImage}`;
   const lines = [
     `<meta charset="utf-8">`,
-    `<meta name="viewport" content="width=device-width, initial-scale=1">`,
+    `<meta name="viewport" content="width=device-width, initial-scale=1${cfg.manifest ? ", viewport-fit=cover" : ""}">`,
     `<title>${esc(title)}</title>`,
     `<meta name="description" content="${esc(cfg.description)}">`,
     cfg.noindex ? `<meta name="robots" content="noindex, follow">` : `<link rel="canonical" href="${canonical}">`,
@@ -157,10 +157,17 @@ function head(cfg, ctx) {
     `<link rel="icon" href="${root}assets/img/favicon.svg" type="image/svg+xml">`,
     `<link rel="icon" href="${root}assets/img/favicon-32.png" sizes="32x32" type="image/png">`,
     `<link rel="apple-touch-icon" href="${root}assets/img/apple-touch-icon.png">`,
-    `<link rel="manifest" href="${root}site.webmanifest">`,
+    `<link rel="manifest" href="${root}${cfg.manifest || "site.webmanifest"}">`,
+    // Page installable comme une application (calculette) : réglages pour l'écran d'accueil de l'iPhone
+    cfg.manifest ? `<meta name="mobile-web-app-capable" content="yes">` : "",
+    cfg.manifest ? `<meta name="apple-mobile-web-app-capable" content="yes">` : "",
+    cfg.manifest ? `<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">` : "",
+    cfg.manifest && cfg.app ? `<meta name="apple-mobile-web-app-title" content="${esc(cfg.app.short || cfg.app.name)}">` : "",
     `<link rel="preload" href="${root}assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>`,
     `<link rel="stylesheet" href="${root}assets/css/main.css?v=${v.css}">`,
     `<script>document.documentElement.classList.add("js")</script>`,
+    // Calculette ouverte depuis l'écran d'accueil : mode application dès l'affichage
+    cfg.manifest ? `<script>if(matchMedia("(display-mode: standalone)").matches||navigator.standalone)document.documentElement.classList.add("is-app")</script>` : "",
     `<script src="${root}assets/js/main.js?v=${v.js}" defer></script>`,
   ];
   for (const s of cfg.scripts || []) {

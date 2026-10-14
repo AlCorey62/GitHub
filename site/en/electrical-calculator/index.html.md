@@ -1,43 +1,54 @@
 # Electrical calculator.
 
-> Free electrical calculator: convert W, kVA and amps in single-phase 230 V and three-phase 400 V, NF C 15-100 voltage drop, P17 and Powerlock figures.
+> Free electrical calculator, installable and offline: W, kVA and amps conversions, suggested socket and cable, voltage drop per NF C 15-100.
 
-Source: https://www.darkside-energy.com/en/electrical-calculator/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/electrical-calculator/ · Dark Side Energy · Updated: 2026-10-14
 
-The everyday conversions and calculations of event power. The calculations run in your browser: no data is sent.
+Conversions, suggested connection and voltage drop, in France and abroad. The calculations run on your device: no data is sent.
 
-- [Power and current](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
+- [Calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
 - [Voltage drop](https://www.darkside-energy.com/en/electrical-calculator/#chute-de-tension)
+- [Method](https://www.darkside-energy.com/en/electrical-calculator/#methode)
 - [Figures per connector](https://www.darkside-energy.com/en/electrical-calculator/#reperes)
-- [The mobile app](https://www.darkside-energy.com/en/electrical-calculator/#appli)
-
-## Power and current.
-
-Enter a known value: the calculator works out the current and the active, apparent and reactive power.
-
-## Cable size also depends on length.
-
-Calculation using the method of the NF C 15-100 standard. Describe the line to check: the calculator gives the voltage drop and the minimum cable size to stay within the chosen limit.
-
-This calculation does not check the cable's current-carrying capacity for its installation method, its temperature rise, or its protection against overloads and short circuits. For a real installation, have your sizing validated by a study.
+- [Install the app](https://www.darkside-energy.com/en/electrical-calculator/#installer)
 
 ## Formulas and assumptions used.
 
 ### Power and current
 
-- Single-phase 230 V: S = U × I, so I = S ÷ 230.
-- Three-phase 400 V: S = √3 × U × I, so I = S ÷ (√3 × 400), current per phase.
+- Single-phase: S = U0 × I, where U0 is the phase-to-neutral voltage (230 V in Europe).
+- Three-phase: S = √3 × U × I, where U is the phase-to-phase voltage (400 V in Europe). The current is given per phase.
 - Active power P = S × cos φ, reactive power Q = S × sin φ.
 - Default assumption: cos φ = 0.9, adjustable.
 
+### Networks abroad
+
+- Europe and United Kingdom: 230/400 V, 50 Hz.
+- United States and Canada: 120/208 V, 60 Hz.
+- United States: 277/480 V, 60 Hz.
+- Canada: 347/600 V, 60 Hz.
+- Mexico: 127/220 V, 60 Hz.
+- Japan, east (Tokyo): 100/200 V, 50 Hz.
+- Japan, west (Osaka): 100/200 V, 60 Hz.
+
+These are nominal voltages. A custom network is also possible. Always check the voltage actually supplied on site.
+
+### Suggested connection
+
+- The calculator picks the smallest rating in our fleet that is greater than or equal to the calculated current. Single-phase: 16 A socket (3G2.5 cable) and P17 32 A (3G6). Three-phase: P17 32, 63 and 125 A (5G6, 5G16, 5G35) and Powerlock 400 A (150 or 240 mm² single-core). Flexible copper cables.
+- Above 80% of the rating, the margin is flagged as low.
+- Above 32 A in single-phase or 400 A in three-phase, the connection needs to be engineered.
+- If the voltage drop exceeds the limit, the calculator gives the minimum cable size and, if there is one, the suitable cable from our fleet.
+
 ### Voltage drop
 
-- u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, where b = 1 in three-phase and b = 2 in single-phase.
-- ρ = 0.0225 Ω·mm²/m for copper and 0.036 Ω·mm²/m for aluminium (resistivity in normal service), λ = 0.08 mΩ/m.
-- ΔU % = 100 × u ÷ U0, where U0 = 230 V, the voltage between phase and neutral.
-- Limits of the NF C 15-100 standard for an installation supplied by the public low-voltage grid: 3% for lighting, 5% for other uses.
+- u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, with b = 1 in three-phase and b = 2 in single-phase.
+- ρ = 0.0225 Ω·mm²/m for copper and 0.036 Ω·mm²/m for aluminium (resistivity in normal service), λ = 0.08 mΩ/m at 50 Hz.
+- At 60 Hz, λ is increased in proportion to the frequency (0.096 mΩ/m): assumption that cable reactance is proportional to frequency.
+- ΔU% = 100 × u ÷ U0, where U0 is the phase-to-neutral voltage (U ÷ √3 in three-phase).
+- Limits of the French NF C 15-100 standard for an installation supplied by the public low-voltage network: 3% for lighting, 5% for other uses. Abroad, apply the local rules.
 
-These calculations do not check the cable's current-carrying capacity for its installation method, or its protection against overloads and short circuits. Technical terms are explained in the [glossary](https://www.darkside-energy.com/en/glossary/).
+These calculations do not check the cable's current-carrying capacity for its installation method, nor protection against overloads and short circuits. Technical terms are explained in the [glossary](https://www.darkside-energy.com/en/glossary/).
 
 ## How many kVA behind each connector?
 
@@ -57,13 +68,14 @@ Theoretical maximum apparent power, without diversity or margin: S = U × I in s
 | 1,600 A distribution cabinet | Three-phase 400 V | 1,600 A | 1,108.5 kVA |
 | 2,000 A distribution cabinet | Three-phase 400 V | 2,000 A | 1,385.6 kVA |
 
-## Carry the calculator in your pocket.
+## Install the calculator on your phone.
 
-Our mobile app converts W, A, VA and kVA in single-phase and three-phase, with a history of your calculations.
+It opens like an app and works offline, even in a basement or on a site with no coverage. Your saved calculations stay on your device.
 
-It installs on your phone's home screen: on iPhone, open it in Safari, then tap “Share” and “Add to Home Screen”.
+- On iPhone: open this page in Safari, tap “Share” then “Add to Home Screen”.
+- On Android: open the browser menu, then “Install app” or “Add to Home screen”.
 
-[Open the Calc Dark Side app](https://darkside-energy.netlify.app/)
+The calculator is installed on this device.
 
 ## A more complex calculation?
 

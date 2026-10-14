@@ -4,7 +4,7 @@
 <!--page
 {
   "title": "Calculette électro : conversions et chute de tension",
-  "description": "Calculette électrique gratuite : conversion W, kVA et ampères en mono 230 V et tri 400 V, chute de tension NF C 15-100, repères P17 et Powerlock.",
+  "description": "Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.",
   "nav": "calculette",
   "breadcrumb": [
     [
@@ -24,23 +24,27 @@
     "objet": "bureau",
     "button": "Consulter le bureau d'étude"
   },
-  "updated": "2026-09-25",
+  "updated": "2026-10-14",
   "app": {
     "name": "Calculette électro Dark Side Energy",
     "features": [
-      "Conversion W, kW, VA, kVA et ampères en monophasé 230 V et triphasé 400 V",
-      "Calcul de la chute de tension selon la méthode de la norme NF C 15-100",
-      "Section minimale de câble pour une chute de tension donnée",
-      "Repères de puissance par connecteur P17 et Powerlock"
-    ]
-  }
+      "Conversion W, kW, VA, kVA et ampères en monophasé et en triphasé",
+      "Réseaux étrangers : États-Unis, Canada, Mexique, Japon ou tension personnalisée",
+      "Prise et câble conseillés dans le parc de Dark Side Energy, avec le taux de charge",
+      "Chute de tension selon la méthode de la norme NF C 15-100 et section minimale",
+      "Pavé numérique, historique, copie et partage par lien",
+      "Installable sur téléphone, fonctionne sans réseau"
+    ],
+    "short": "Calculette"
+  },
+  "manifest": "calculette-electro/manifest.webmanifest"
 }
 -->
 <!-- head:start -->
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Calculette électro : conversions et chute de tension | Dark Side Energy</title>
-<meta name="description" content="Calculette électrique gratuite : conversion W, kVA et ampères en mono 230 V et tri 400 V, chute de tension NF C 15-100, repères P17 et Powerlock.">
+<meta name="description" content="Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.">
 <link rel="canonical" href="https://www.darkside-energy.com/calculette-electro/">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="alternate" hreflang="fr" href="https://www.darkside-energy.com/calculette-electro/">
@@ -54,7 +58,7 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:title" content="Calculette électro : conversions et chute de tension">
-<meta property="og:description" content="Calculette électrique gratuite : conversion W, kVA et ampères en mono 230 V et tri 400 V, chute de tension NF C 15-100, repères P17 et Powerlock.">
+<meta property="og:description" content="Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.">
 <meta property="og:url" content="https://www.darkside-energy.com/calculette-electro/">
 <meta property="og:image" content="https://www.darkside-energy.com/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -63,14 +67,19 @@
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
-<link rel="manifest" href="../site.webmanifest">
+<link rel="manifest" href="../calculette-electro/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Calculette">
 <link rel="preload" href="../assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/main.css?v=7b5c8f60">
+<link rel="stylesheet" href="../assets/css/main.css?v=4f90626b">
 <script>document.documentElement.classList.add("js")</script>
+<script>if(matchMedia("(display-mode: standalone)").matches||navigator.standalone)document.documentElement.classList.add("is-app")</script>
 <script src="../assets/js/main.js?v=ceb0d7aa" defer></script>
-<script type="module" src="../assets/js/calculette.js?v=dda5bbf4"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.darkside-energy.com/calculette-electro/#webpage","url":"https://www.darkside-energy.com/calculette-electro/","name":"Calculette électro : conversions et chute de tension","description":"Calculette électrique gratuite : conversion W, kVA et ampères en mono 230 V et tri 400 V, chute de tension NF C 15-100, repères P17 et Powerlock.","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","@id":"https://www.darkside-energy.com/#website","name":"Dark Side Energy","url":"https://www.darkside-energy.com/"},"about":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"},"publisher":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"},"primaryImageOfPage":"https://www.darkside-energy.com/assets/img/og-image.png","dateModified":"2026-09-25","breadcrumb":{"@id":"https://www.darkside-energy.com/calculette-electro/#breadcrumb"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","@id":"https://www.darkside-energy.com/calculette-electro/#application","name":"Calculette électro Dark Side Energy","description":"Calculette électrique gratuite : conversion W, kVA et ampères en mono 230 V et tri 400 V, chute de tension NF C 15-100, repères P17 et Powerlock.","url":"https://www.darkside-energy.com/calculette-electro/","applicationCategory":"UtilitiesApplication","operatingSystem":"Tout navigateur web","inLanguage":"fr-FR","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["Conversion W, kW, VA, kVA et ampères en monophasé 230 V et triphasé 400 V","Calcul de la chute de tension selon la méthode de la norme NF C 15-100","Section minimale de câble pour une chute de tension donnée","Repères de puissance par connecteur P17 et Powerlock"],"provider":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"}}</script>
+<script type="module" src="../assets/js/calculette.js?v=a054dafa"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.darkside-energy.com/calculette-electro/#webpage","url":"https://www.darkside-energy.com/calculette-electro/","name":"Calculette électro : conversions et chute de tension","description":"Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","@id":"https://www.darkside-energy.com/#website","name":"Dark Side Energy","url":"https://www.darkside-energy.com/"},"about":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"},"publisher":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"},"primaryImageOfPage":"https://www.darkside-energy.com/assets/img/og-image.png","dateModified":"2026-10-14","breadcrumb":{"@id":"https://www.darkside-energy.com/calculette-electro/#breadcrumb"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","@id":"https://www.darkside-energy.com/calculette-electro/#application","name":"Calculette électro Dark Side Energy","description":"Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.","url":"https://www.darkside-energy.com/calculette-electro/","applicationCategory":"UtilitiesApplication","operatingSystem":"Tout navigateur web","inLanguage":"fr-FR","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["Conversion W, kW, VA, kVA et ampères en monophasé et en triphasé","Réseaux étrangers : États-Unis, Canada, Mexique, Japon ou tension personnalisée","Prise et câble conseillés dans le parc de Dark Side Energy, avec le taux de charge","Chute de tension selon la méthode de la norme NF C 15-100 et section minimale","Pavé numérique, historique, copie et partage par lien","Installable sur téléphone, fonctionne sans réseau"],"provider":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://www.darkside-energy.com/calculette-electro/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.darkside-energy.com/"},{"@type":"ListItem","position":2,"name":"Outils","item":"https://www.darkside-energy.com/#outils"},{"@type":"ListItem","position":3,"name":"Calculette électro","item":"https://www.darkside-energy.com/calculette-electro/"}]}</script>
 <!-- head:end -->
 </head>
@@ -92,162 +101,196 @@
 
 <main id="contenu">
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--compact">
     <div class="container">
       <!-- breadcrumb:start -->
 <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="../">Accueil</a></li><li><a href="../#outils">Outils</a></li><li><span aria-current="page">Calculette électro</span></li></ol></nav>
 <!-- breadcrumb:end -->
       <p class="eyebrow">Outils</p>
       <h1>Calculette électro.</h1>
-      <p class="lead">Les conversions et les calculs du quotidien de l'électro événementiel. Les calculs se font dans votre navigateur : aucune donnée n'est envoyée.</p>
+      <p class="lead">Conversions, raccordement conseillé et chute de tension, en France comme à l'étranger. Les calculs se font sur votre appareil : aucune donnée n'est envoyée.</p>
       <nav aria-label="Sommaire de la page">
       <ul class="tag-list" style="margin-top:28px">
-        <li><a class="tag" href="#conversion">Puissance et intensité</a></li>
+        <li><a class="tag" href="#conversion">Calculette</a></li>
         <li><a class="tag" href="#chute-de-tension">Chute de tension</a></li>
+        <li><a class="tag" href="#methode">Méthode</a></li>
         <li><a class="tag" href="#reperes">Repères par connecteur</a></li>
-        <li><a class="tag" href="#appli">L'appli mobile</a></li>
+        <li><a class="tag" href="#installer">Installer l'appli</a></li>
       </ul>
       </nav>
     </div>
   </section>
 
-  <section class="section" id="conversion" aria-labelledby="conv-title">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Conversion</p>
-        <h2 id="conv-title">Puissance et intensité.</h2>
-        <p>Saisissez une valeur connue : la calculette en déduit l'intensité, les puissances active, apparente et réactive.</p>
-      </div>
-      <div class="tool no-md" id="conv-form">
-        <div class="panel">
-          <div class="form-grid">
-            <fieldset class="field full" style="border:0;padding:0;margin:0">
-              <legend class="label" style="margin-bottom:8px">Réseau</legend>
-              <div class="segmented">
-                <input type="radio" name="conv-network" id="conv-mono" value="1">
-                <label for="conv-mono">Monophasé 230 V</label>
-                <input type="radio" name="conv-network" id="conv-tri" value="3" checked>
-                <label for="conv-tri">Triphasé 400 V</label>
-              </div>
-            </fieldset>
-            <div class="field">
-              <label for="conv-value">Valeur connue</label>
-              <input class="input input--num" id="conv-value" type="number" inputmode="decimal" min="0" step="any" value="22" required>
-            </div>
-            <div class="field">
-              <label for="conv-unit">Unité</label>
-              <select class="select" id="conv-unit">
-                <option value="W">W</option>
-                <option value="kW" selected>kW</option>
-                <option value="VA">VA</option>
-                <option value="kVA">kVA</option>
-                <option value="A">A</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="conv-cos">Facteur de puissance cos φ</label>
-              <input class="input input--num" id="conv-cos" type="number" inputmode="decimal" min="0.1" max="1" step="0.01" value="0.9" required>
-              <span class="hint">Hypothèse modifiable : 1 pour une charge résistive.</span>
-            </div>
-            <div class="field">
-              <label for="conv-voltage">Tension</label>
-              <div class="input-unit">
-                <input class="input input--num" id="conv-voltage" type="number" inputmode="decimal" min="1" step="any" value="400" required>
-                <span class="unit">V</span>
-              </div>
-              <span class="hint">230 V entre phase et neutre, 400 V entre phases.</span>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel--result" aria-live="polite">
-          <div class="panel__title"><h3>Résultats</h3><span class="tag tag--red" id="conv-badge">Triphasé</span></div>
-          <dl class="readout">
-            <div class="big"><dt>Intensité</dt><dd><span id="conv-i">-</span> <small>A</small></dd></div>
-            <div><dt>Puissance active P</dt><dd><span id="conv-p">-</span> kW</dd></div>
-            <div><dt>Puissance apparente S</dt><dd><span id="conv-s">-</span> kVA</dd></div>
-            <div><dt>Puissance réactive Q</dt><dd><span id="conv-q">-</span> kvar</dd></div>
-            <div><dt>Calibre normalisé supérieur</dt><dd><span id="conv-rating">-</span></dd></div>
-          </dl>
-          <p class="formula" id="conv-formula"><code>S = √3 × U × I</code> en triphasé, <code>S = U × I</code> en monophasé, <code>P = S × cos φ</code>.</p>
-          <p style="margin:16px 0 0"><button class="btn btn--ghost btn--sm" type="button" id="conv-to-drop">Utiliser cette intensité pour la chute de tension</button></p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="calc-appbar">
+    <a class="calc-appbar__brand" href="../" aria-label="Site Dark Side Energy"><svg data-logo="horizontal" viewBox="0 0 1200 290" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M8.0 245.5L8.0 201.0L46.5 201.0L85.0 201.0L85.0 214.5L85.0 228.0L61.5 228.0L38.0 228.0L38.0 233.0L38.0 238.0L53.0 238.0L68.0 238.0L68.0 246.0L68.0 254.0L53.0 254.0L38.0 254.0L38.0 258.5L38.0 263.0L65.0 263.0L92.0 263.0L92.0 276.5L92.0 290.0L50.0 290.0L8.0 290.0L8.0 245.5ZM221.0 245.5L221.0 201.0L235.8 201.0L250.7 201.0L262.9 216.5C269.7 225.0 275.5 232.2 275.8 232.4C276.2 232.6 276.3 225.7 276.2 216.9L275.8 201.0L290.9 201.0L306.0 201.0L306.0 245.5L306.0 290.0L291.2 290.0L276.3 290.0L263.9 274.4L251.5 258.7L251.2 274.4L250.9 290.0L236.0 290.0L221.0 290.0L221.0 245.5ZM438.0 245.5L438.0 201.0L476.5 201.0L515.0 201.0L515.0 214.5L515.0 228.0L491.5 228.0L468.0 228.0L468.0 233.0L468.0 238.0L483.0 238.0L498.0 238.0L498.0 246.0L498.0 254.0L483.0 254.0L468.0 254.0L468.0 258.5L468.0 263.0L495.0 263.0L522.0 263.0L522.0 276.5L522.0 290.0L480.0 290.0L438.0 290.0L438.0 245.5ZM651.0 245.5L651.0 201.0L682.3 201.0C716.9 201.0 720.1 201.4 727.8 207.1C734.5 212.0 737.3 217.7 737.8 227.5C738.2 234.3 737.9 236.3 736.2 239.6C733.3 245.4 727.1 250.5 720.1 253.0L714.0 255.3L717.1 259.1L720.2 263.0L733.6 263.0L747.0 263.0L747.0 276.5L747.0 290.0L729.1 290.0L711.2 290.0L697.6 275.8L684.0 261.6L684.0 275.8L684.0 290.0L667.5 290.0L651.0 290.0L651.0 245.5ZM907.7 288.4C891.3 284.5 879.8 274.6 874.4 260.0C872.2 254.0 871.7 239.8 873.4 233.3C876.4 221.8 883.8 212.7 894.1 207.5C904.9 202.0 906.6 201.7 935.8 201.3L963.0 200.8L963.0 214.4L963.0 228.0L942.2 228.0C918.1 228.0 913.0 229.0 908.2 234.4C903.1 240.3 903.1 252.2 908.3 257.8C911.2 260.9 919.0 263.0 927.6 263.0L934.9 263.0L935.2 254.2L935.5 245.5L949.2 245.2L963.0 244.9L963.0 267.5L963.0 290.0L938.2 289.9C920.7 289.9 911.8 289.4 907.7 288.4ZM1123.0 273.9L1123.0 257.8L1107.7 235.7C1099.2 223.5 1090.5 210.7 1088.1 207.2L1083.9 201.0L1101.8 201.0L1119.6 201.0L1128.4 214.6L1137.3 228.1L1146.3 214.6L1155.3 201.0L1173.2 201.0L1191.2 201.0L1185.8 208.8C1182.8 213.0 1174.0 225.8 1166.2 237.2L1152.0 257.8L1152.0 273.9L1152.0 290.0L1137.5 290.0L1123.0 290.0L1123.0 273.9ZM709.9 237.7C712.7 234.2 712.0 227.0 708.6 224.8C708.0 224.4 702.2 224.0 695.8 224.0L684.0 224.0L684.0 231.5L684.0 239.0L696.4 239.0C705.5 239.0 709.0 238.6 709.9 237.7ZM0.0 173.5L0.0 166.0L599.8 166.2L1199.5 166.5L1199.8 173.8L1200.1 181.0L600.0 181.0L0.0 181.0L0.0 173.5ZM0.0 73.5L0.0 -0.1L52.8 0.2C100.2 0.6 106.2 0.8 112.0 2.4C143.6 11.3 159.7 31.5 162.6 65.6C163.8 80.0 159.9 100.2 153.3 113.9C146.5 128.1 132.1 139.3 114.3 144.2C106.8 146.3 104.1 146.4 53.2 146.8L-0.0 147.1L0.0 73.5ZM156.0 145.9C156.0 145.0 195.4 24.3 201.8 5.5L203.5 0.5L240.4 0.5L277.3 0.5L300.4 69.5L323.5 138.5L323.8 69.2L324.0 -0.0L374.2 0.0C429.4 0.0 431.4 0.2 443.5 6.2C450.6 9.7 459.8 18.4 463.3 24.9C464.9 27.8 466.3 32.6 467.0 38.0C470.5 63.2 460.4 78.5 434.8 86.9C431.0 88.2 428.0 89.4 428.0 89.7C428.0 90.0 430.3 93.1 433.1 96.6L438.2 103.0L459.6 103.0L481.0 103.0L481.0 51.5L481.0 0.0L505.0 0.0L529.0 0.0L529.0 23.0C529.0 35.6 529.3 46.0 529.8 45.9C530.2 45.9 537.7 35.6 546.4 22.9L562.4 -0.0L586.7 -0.0L611.0 -0.0L597.7 17.7C575.5 47.5 557.0 72.5 556.7 73.1C556.6 73.4 561.9 80.3 568.5 88.3L580.5 103.0L602.2 103.0L624.0 103.0L624.0 125.0L624.0 147.0L594.8 146.8L565.6 146.5L559.2 139.0C555.7 134.9 547.9 125.5 541.8 118.2C535.6 111.0 530.3 105.0 529.9 105.0C529.4 105.0 529.1 114.3 529.1 125.8L529.1 146.5L476.2 146.8L423.3 147.0L400.4 122.9L377.5 98.7L377.2 122.9L377.0 147.0L323.6 147.0L270.2 147.0L265.7 134.2L261.2 121.5L239.4 121.5L217.5 121.5L213.0 134.2L208.5 147.0L182.2 147.0C163.5 147.0 156.0 146.7 156.0 145.9ZM715.0 125.1L715.0 103.0L734.8 102.9C766.9 102.9 767.9 101.6 750.6 84.4C744.2 78.0 737.0 70.0 734.5 66.5C724.9 53.2 720.9 39.5 723.1 27.7C725.3 15.4 731.2 7.1 740.9 2.6C745.4 0.5 746.8 0.5 813.8 0.2L882.0 -0.1L882.0 73.5L882.0 147.0L858.0 147.0L834.0 147.0L834.0 95.4L834.0 43.9L811.5 44.2C792.3 44.5 788.8 44.7 787.4 46.1C784.9 48.7 786.4 51.2 795.0 59.3C816.7 79.4 826.3 96.9 825.5 115.1C825.0 126.9 819.9 136.2 811.5 140.8C800.9 146.6 802.9 146.4 757.2 146.8L715.0 147.1L715.0 125.1ZM892.0 73.5L892.0 -0.1L944.8 0.2C1002.5 0.6 1002.4 0.6 1016.6 7.0C1039.0 17.1 1050.8 34.1 1054.1 61.0C1056.2 78.1 1052.8 98.3 1045.3 113.9C1038.6 127.9 1024.8 138.8 1007.0 144.1C999.7 146.3 998.0 146.4 945.8 146.8L892.0 147.2L892.0 73.5ZM1061.0 73.5L1061.0 0.0L1124.5 0.0L1188.0 0.0L1188.0 22.0L1188.0 44.0L1149.0 44.0L1110.0 44.0L1110.0 52.5L1110.0 61.0L1135.0 61.0L1160.0 61.0L1160.0 74.0L1160.0 87.0L1135.0 87.0L1110.0 87.0L1110.0 95.0L1110.0 103.0L1155.0 103.0L1200.0 103.0L1200.0 125.0L1200.0 147.0L1130.5 147.0L1061.0 147.0L1061.0 73.5ZM87.0 108.4C94.7 106.1 101.2 99.1 104.1 90.2C106.8 81.4 107.1 63.9 104.5 56.5C101.9 48.9 96.7 42.5 90.8 39.6C85.8 37.1 84.9 37.0 67.8 37.0L50.0 37.0L50.0 73.5L50.0 110.0L65.8 110.0C77.3 110.0 83.1 109.6 87.0 108.4ZM978.4 108.6C987.2 105.9 993.9 98.7 996.6 88.9C998.6 81.7 998.7 63.0 996.7 56.8C994.4 49.5 988.8 42.6 982.8 39.6C977.8 37.1 976.9 37.0 959.8 37.0L942.0 37.0L942.0 73.5L942.0 110.0L957.8 110.0C968.6 110.0 975.2 109.5 978.4 108.6ZM259.0 89.8C259.0 88.0 240.9 33.8 240.4 34.2C240.0 34.6 220.0 89.9 220.0 90.6C220.0 90.8 228.8 91.0 239.5 91.0C254.4 91.0 259.0 90.7 259.0 89.8ZM420.6 60.7C425.6 56.3 424.9 43.4 419.3 39.0C416.9 37.1 415.3 37.0 396.9 37.0L377.0 37.0L377.0 50.0L377.0 63.0L397.4 63.0C417.4 63.0 418.0 62.9 420.6 60.7Z"/></svg></a>
+  </div>
 
-  <section class="section section--alt" id="chute-de-tension" aria-labelledby="drop-title">
+  <section class="section calc-section" id="conversion" aria-labelledby="calc-title">
     <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Chute de tension</p>
-        <h2 id="drop-title">La section dépend aussi de la longueur.</h2>
-        <p>Calcul selon la méthode de la norme NF C 15-100. Indiquez la ligne à vérifier, la calculette donne la chute de tension et la section minimale pour rester dans la limite choisie.</p>
-      </div>
-      <div class="tool no-md" id="drop-form">
-        <div class="panel">
-          <div class="form-grid">
-            <fieldset class="field full" style="border:0;padding:0;margin:0">
-              <legend class="label" style="margin-bottom:8px">Réseau</legend>
+      <h2 class="visually-hidden" id="calc-title">Calculette</h2>
+      <div class="calc no-md" data-calc>
+        <div class="calc__device">
+          <div class="calc__settings">
+            <div class="field">
+              <label for="calc-network">Réseau</label>
+              <select class="select" id="calc-network">
+                <option value="eu" selected>Europe et Royaume-Uni · 230/400 V · 50 Hz</option>
+                <option value="us208">États-Unis et Canada · 120/208 V · 60 Hz</option>
+                <option value="us480">États-Unis · 277/480 V · 60 Hz</option>
+                <option value="ca600">Canada · 347/600 V · 60 Hz</option>
+                <option value="mx">Mexique · 127/220 V · 60 Hz</option>
+                <option value="jp50">Japon, est (Tokyo) · 100/200 V · 50 Hz</option>
+                <option value="jp60">Japon, ouest (Osaka) · 100/200 V · 60 Hz</option>
+                <option value="custom">Réseau personnalisé</option>
+              </select>
+            </div>
+            <fieldset class="calc__phases">
+              <legend class="label">Raccordement</legend>
               <div class="segmented">
-                <input type="radio" name="drop-network" id="drop-mono" value="1">
-                <label for="drop-mono">Monophasé 230 V</label>
-                <input type="radio" name="drop-network" id="drop-tri" value="3" checked>
-                <label for="drop-tri">Triphasé 400 V</label>
+                <input type="radio" name="calc-phases" id="calc-ph1" value="1"><label for="calc-ph1">Monophasé <span data-volt="1">230 V</span></label>
+                <input type="radio" name="calc-phases" id="calc-ph3" value="3" checked><label for="calc-ph3">Triphasé <span data-volt="3">400 V</span></label>
               </div>
             </fieldset>
-            <div class="field">
-              <label for="drop-material">Âme du câble</label>
-              <select class="select" id="drop-material">
-                <option value="cu" selected>Cuivre</option>
-                <option value="al">Aluminium</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="drop-section">Section</label>
-              <select class="select" id="drop-section"></select>
-            </div>
-            <div class="field">
-              <label for="drop-length">Longueur de la ligne</label>
-              <div class="input-unit">
-                <input class="input input--num" id="drop-length" type="number" inputmode="decimal" min="0" step="any" value="50" required>
-                <span class="unit">m</span>
+            <div class="calc__custom" id="calc-custom" hidden>
+              <div class="field">
+                <label for="calc-u1">Tension simple</label>
+                <div class="input-unit"><input class="input input--num" id="calc-u1" type="text" inputmode="decimal" autocomplete="off" value="230" data-calc-field><span class="unit">V</span></div>
               </div>
-            </div>
-            <div class="field">
-              <label for="drop-current">Intensité</label>
-              <div class="input-unit">
-                <input class="input input--num" id="drop-current" type="number" inputmode="decimal" min="0" step="any" value="63" required>
-                <span class="unit">A</span>
+              <div class="field">
+                <label for="calc-u3">Tension composée</label>
+                <div class="input-unit"><input class="input input--num" id="calc-u3" type="text" inputmode="decimal" autocomplete="off" value="400" data-calc-field><span class="unit">V</span></div>
               </div>
-            </div>
-            <div class="field">
-              <label for="drop-cos">Facteur de puissance cos φ</label>
-              <input class="input input--num" id="drop-cos" type="number" inputmode="decimal" min="0.1" max="1" step="0.01" value="0.9" required>
-            </div>
-            <div class="field">
-              <label for="drop-limit">Chute de tension maximale</label>
-              <select class="select" id="drop-limit">
-                <option value="3">3 % (éclairage)</option>
-                <option value="5" selected>5 % (autres usages)</option>
-              </select>
-              <span class="hint">Repères NF C 15-100, installation alimentée par le réseau public basse tension.</span>
+              <div class="field">
+                <label for="calc-hz">Fréquence</label>
+                <select class="select" id="calc-hz"><option value="50" selected>50 Hz</option><option value="60">60 Hz</option></select>
+              </div>
             </div>
           </div>
+          <div class="calc__screen">
+            <div class="calc__entry calc__entry--main is-active">
+              <label class="calc__label" for="calc-value">Valeur à convertir</label>
+              <div class="calc__line">
+                <input class="calc__input calc__input--main" id="calc-value" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="22" data-calc-field>
+                <span class="calc__unit" id="calc-unit-shown" aria-hidden="true">kW</span>
+              </div>
+            </div>
+            <fieldset class="calc__units">
+              <legend class="visually-hidden">Unité de la valeur</legend>
+              <div class="segmented segmented--fill">
+                <input type="radio" name="calc-unit" id="calc-u-w" value="W"><label for="calc-u-w">W</label>
+                <input type="radio" name="calc-unit" id="calc-u-kw" value="kW" checked><label for="calc-u-kw">kW</label>
+                <input type="radio" name="calc-unit" id="calc-u-va" value="VA"><label for="calc-u-va">VA</label>
+                <input type="radio" name="calc-unit" id="calc-u-kva" value="kVA"><label for="calc-u-kva">kVA</label>
+                <input type="radio" name="calc-unit" id="calc-u-a" value="A"><label for="calc-u-a">A</label>
+              </div>
+            </fieldset>
+            <div class="calc__minis">
+              <div class="calc__entry">
+                <label class="calc__label calc__label--plain" for="calc-cos">cos φ</label>
+                <input class="calc__input" id="calc-cos" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0,9" data-calc-field>
+              </div>
+              <div class="calc__entry">
+                <label class="calc__label" for="calc-length">Longueur<span class="calc__more"> de ligne</span></label>
+                <div class="calc__line">
+                  <input class="calc__input" id="calc-length" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="" placeholder="0" data-calc-field>
+                  <span class="calc__unit" aria-hidden="true">m</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calc__pad" id="calc-pad" role="group" aria-label="Pavé numérique">
+          <button type="button" class="calc__key" data-key="7">7</button>
+          <button type="button" class="calc__key" data-key="8">8</button>
+          <button type="button" class="calc__key" data-key="9">9</button>
+          <button type="button" class="calc__key calc__key--fn" data-key="back" aria-label="Effacer le dernier chiffre"><svg data-icon="delete" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 5a2 2 0 0 0-1.344.519l-6.328 5.74a1 1 0 0 0 0 1.481l6.328 5.741A2 2 0 0 0 10 19h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z" /><path d="m12 9 6 6" /><path d="m18 9-6 6" /></svg></button>
+          <button type="button" class="calc__key" data-key="4">4</button>
+          <button type="button" class="calc__key" data-key="5">5</button>
+          <button type="button" class="calc__key" data-key="6">6</button>
+          <button type="button" class="calc__key calc__key--fn" data-key="clear" aria-label="Vider le champ">C</button>
+          <button type="button" class="calc__key" data-key="1">1</button>
+          <button type="button" class="calc__key" data-key="2">2</button>
+          <button type="button" class="calc__key" data-key="3">3</button>
+          <button type="button" class="calc__key calc__key--fn" data-key="next" aria-label="Champ suivant"><svg data-icon="corner-down-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="9 10 4 15 9 20" /><path d="M20 4v7a4 4 0 0 1-4 4H4" /></svg></button>
+          <button type="button" class="calc__key calc__key--zero" data-key="0">0</button>
+          <button type="button" class="calc__key" data-key="dec" aria-label="Virgule">,</button>
+          <button type="button" class="calc__key calc__key--save" data-key="save" aria-label="Enregistrer le calcul">=</button>
+          </div>
+          <button class="calc__padtoggle" type="button" id="calc-pad-toggle" aria-pressed="false" hidden><svg data-icon="keyboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 8h.01" /><path d="M12 12h.01" /><path d="M14 8h.01" /><path d="M16 12h.01" /><path d="M18 8h.01" /><path d="M6 8h.01" /><path d="M7 16h10" /><path d="M8 12h.01" /><rect width="20" height="16" x="2" y="4" rx="2" /></svg><span>Utiliser le clavier du téléphone</span></button>
         </div>
-        <div class="panel panel--result" aria-live="polite">
-          <div class="panel__title"><h3>Résultats</h3><span class="tag tag--red" id="drop-badge">Triphasé</span></div>
-          <dl class="readout">
-            <div class="big"><dt>Chute de tension</dt><dd><span id="drop-pct">-</span> <small>%</small></dd></div>
-            <div><dt>Chute sur la tension d'alimentation</dt><dd><span id="drop-v">-</span> V</dd></div>
-            <div><dt>Tension en bout de ligne</dt><dd><span id="drop-end">-</span> V</dd></div>
-            <div><dt>Section minimale pour la limite choisie</dt><dd><span id="drop-min">-</span></dd></div>
+        <div class="calc__results">
+          <div class="calc__main">
+            <p class="calc__label" id="calc-i-label">Intensité par phase</p>
+            <p class="calc__big"><output id="calc-i" for="calc-value calc-cos">35,28</output> <small>A</small></p>
+            <p class="calc__context" id="calc-context">Triphasé 400 V · 50 Hz · cos φ 0,9</p>
+          </div>
+          <dl class="readout calc__powers">
+            <div><dt>Puissance active P</dt><dd><span id="calc-p">22,00</span> kW</dd></div>
+            <div><dt>Puissance apparente S</dt><dd><span id="calc-s">24,44</span> kVA</dd></div>
+            <div><dt>Puissance réactive Q</dt><dd><span id="calc-q">10,65</span> kvar</dd></div>
           </dl>
-          <p class="verdict" id="drop-verdict" data-level="">Renseignez la ligne pour obtenir un résultat.</p>
-          <p class="formula"><code>u = b × (ρ × L / S × cos φ + λ × L × sin φ) × I</code>, avec b = 1 en triphasé et 2 en monophasé, ρ = 0,0225 Ω·mm²/m pour le cuivre et 0,036 pour l'aluminium, λ = 0,08 mΩ/m. ΔU % rapportée à la tension entre phase et neutre.</p>
+          <div class="calc__block" id="calc-reco">
+            <h3 class="calc__h"><svg data-icon="plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22v-5" /><path d="M15 8V2" /><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z" /><path d="M9 8V2" /></svg>Raccordement conseillé</h3>
+            <div class="calc__pair">
+              <div><span class="calc__label">Prise</span><strong id="calc-plug">-</strong></div>
+              <div><span class="calc__label">Câble du parc</span><strong id="calc-cable">-</strong></div>
+            </div>
+            <div class="calc__load">
+              <span class="calc__label" id="calc-load-label">Taux de charge du calibre</span>
+              <div class="calc__gauge" role="img" aria-labelledby="calc-load-label calc-load"><i id="calc-load-bar"></i></div>
+              <span class="calc__loadval" id="calc-load">-</span>
+            </div>
+            <p class="calc__note" id="calc-reco-note" hidden></p>
+          </div>
+          <div class="calc__block" id="chute-de-tension">
+            <h3 class="calc__h"><svg data-icon="cable" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z" /><path d="M17 21v-2" /><path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10" /><path d="M21 21v-2" /><path d="M3 5V3" /><path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z" /><path d="M7 5V3" /></svg>Chute de tension <span class="calc__h-sub" id="calc-drop-len"></span></h3>
+            <p class="calc__hint" id="calc-drop-hint">Indiquez la longueur de la ligne pour calculer la chute de tension.</p>
+            <div class="calc__drop" id="calc-drop-body" hidden>
+              <p class="calc__dropval"><span id="calc-drop-pct">-</span> <small>%</small></p>
+              <fieldset class="calc__limit">
+                <legend class="visually-hidden">Chute de tension maximale</legend>
+                <div class="segmented segmented--sm">
+                  <input type="radio" name="calc-limit" id="calc-lim3" value="3"><label for="calc-lim3">3 % éclairage</label>
+                  <input type="radio" name="calc-limit" id="calc-lim5" value="5" checked><label for="calc-lim5">5 % autres usages</label>
+                </div>
+              </fieldset>
+              <p class="verdict" id="calc-verdict" data-level=""></p>
+              <dl class="readout readout--sm">
+                <div><dt>Tension en bout de ligne</dt><dd><span id="calc-uend">-</span> V</dd></div>
+                <div><dt>Chute sur la tension d'alimentation</dt><dd><span id="calc-dline">-</span> V</dd></div>
+                <div id="calc-min-row" hidden><dt>Section minimale pour la limite</dt><dd id="calc-min">-</dd></div>
+                <div id="calc-better-row" hidden><dt>Câble du parc qui convient</dt><dd id="calc-better">-</dd></div>
+              </dl>
+              <details class="calc__other">
+                <summary>Autre câble</summary>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="calc-section">Section</label>
+                    <select class="select" id="calc-section"><option value="">Câble conseillé</option></select>
+                  </div>
+                  <div class="field">
+                    <label for="calc-material">Âme du câble</label>
+                    <select class="select" id="calc-material"><option value="cu" selected>Cuivre</option><option value="al">Aluminium</option></select>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="calc__actions">
+            <button class="btn btn--sm" type="button" id="calc-save"><svg data-icon="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Enregistrer</button>
+            <button class="btn btn--ghost btn--sm" type="button" id="calc-copy"><svg data-icon="copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>Copier</button>
+            <button class="btn btn--ghost btn--sm" type="button" id="calc-share"><svg data-icon="share-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><line x1="8.59" x2="15.42" y1="13.51" y2="17.49" /><line x1="15.41" x2="8.59" y1="6.51" y2="10.49" /></svg>Partager</button>
+          </div>
+          <p class="calc__toast" id="calc-toast" role="status" aria-live="polite"></p>
+          <p class="visually-hidden" id="calc-live" aria-live="polite"></p>
         </div>
       </div>
-      <div class="note" style="margin-top:24px">
-        <svg data-icon="triangle-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg>
-        <p>Ce calcul ne vérifie ni le courant admissible du câble selon son mode de pose, ni l'échauffement, ni la protection contre les surcharges et les courts-circuits. Pour une installation réelle, faites valider votre dimensionnement par une étude.</p>
+      <div class="calc-history no-md" id="historique">
+        <div class="calc-history__head">
+          <h3><svg data-icon="history" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /><path d="M12 7v5l4 2" /></svg>Historique</h3>
+          <button class="btn btn--ghost btn--sm" type="button" id="calc-clear" hidden><svg data-icon="trash-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 11v6" /><path d="M14 11v6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /><path d="M3 6h18" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg><span>Tout effacer</span></button>
+        </div>
+        <p class="calc-history__empty" id="calc-history-empty">Touchez = ou « Enregistrer » pour garder un calcul. L'historique reste sur cet appareil.</p>
+        <ol class="calc-history__list" id="calc-history"></ol>
       </div>
     </div>
   </section>
@@ -261,17 +304,36 @@
       <div class="prose">
         <h3>Puissance et intensité</h3>
         <ul>
-          <li>Monophasé 230 V : S = U × I, soit I = S ÷ 230.</li>
-          <li>Triphasé 400 V : S = √3 × U × I, soit I = S ÷ (√3 × 400), intensité par phase.</li>
+          <li>Monophasé : S = U0 × I, avec U0 la tension simple, entre phase et neutre (230 V en Europe).</li>
+          <li>Triphasé : S = √3 × U × I, avec U la tension composée, entre phases (400 V en Europe). L'intensité est donnée par phase.</li>
           <li>Puissance active P = S × cos φ, puissance réactive Q = S × sin φ.</li>
           <li>Hypothèse par défaut : cos φ = 0,9, modifiable.</li>
+        </ul>
+        <h3>Réseaux à l'étranger</h3>
+        <ul>
+          <li>Europe et Royaume-Uni : 230/400 V, 50 Hz.</li>
+          <li>États-Unis et Canada : 120/208 V, 60 Hz.</li>
+          <li>États-Unis : 277/480 V, 60 Hz.</li>
+          <li>Canada : 347/600 V, 60 Hz.</li>
+          <li>Mexique : 127/220 V, 60 Hz.</li>
+          <li>Japon, est (Tokyo) : 100/200 V, 50 Hz.</li>
+          <li>Japon, ouest (Osaka) : 100/200 V, 60 Hz.</li>
+        </ul>
+        <p>Ce sont des tensions nominales. Un réseau personnalisé est possible. Vérifiez toujours sur place la tension réellement fournie.</p>
+        <h3>Raccordement conseillé</h3>
+        <ul>
+          <li>La calculette retient le plus petit calibre de notre parc supérieur ou égal à l'intensité calculée. En monophasé : prise 16 A (câble 3G2,5) et P17 32 A (3G6). En triphasé : P17 32, 63 et 125 A (5G6, 5G16, 5G35) et Powerlock 400 A (unifilaires 150 ou 240 mm²). Câbles souples en cuivre.</li>
+          <li>Au-delà de 80 % du calibre, la marge est signalée comme faible.</li>
+          <li>Au-delà de 32 A en monophasé ou de 400 A en triphasé, le raccordement est à étudier.</li>
+          <li>Si la chute de tension dépasse la limite, la calculette indique la section minimale et, s'il existe, le câble du parc qui convient.</li>
         </ul>
         <h3>Chute de tension</h3>
         <ul>
           <li>u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, avec b = 1 en triphasé et b = 2 en monophasé.</li>
-          <li>ρ = 0,0225 Ω·mm²/m pour le cuivre et 0,036 Ω·mm²/m pour l'aluminium (résistivité en service normal), λ = 0,08 mΩ/m.</li>
-          <li>ΔU % = 100 × u ÷ U0, avec U0 = 230 V, tension entre phase et neutre.</li>
-          <li>Limites de la norme NF C 15-100 pour une installation alimentée par le réseau public basse tension : 3 % pour l'éclairage, 5 % pour les autres usages.</li>
+          <li>ρ = 0,0225 Ω·mm²/m pour le cuivre et 0,036 Ω·mm²/m pour l'aluminium (résistivité en service normal), λ = 0,08 mΩ/m à 50 Hz.</li>
+          <li>À 60 Hz, λ est augmentée dans le rapport des fréquences (0,096 mΩ/m) : hypothèse d'une réactance proportionnelle à la fréquence.</li>
+          <li>ΔU % = 100 × u ÷ U0, avec U0 la tension simple (U ÷ √3 en triphasé).</li>
+          <li>Limites de la norme NF C 15-100 pour une installation alimentée par le réseau public basse tension : 3 % pour l'éclairage, 5 % pour les autres usages. À l'étranger, appliquez les règles locales.</li>
         </ul>
         <p>Ces calculs ne vérifient ni le courant admissible du câble selon son mode de pose, ni la protection contre les surcharges et les courts-circuits. Les termes techniques sont expliqués dans le <a href="../lexique/">lexique</a>.</p>
       </div>
@@ -308,19 +370,23 @@
     </div>
   </section>
 
-  <section class="section section--alt section--grid" id="appli" aria-labelledby="app-title">
+  <section class="section section--alt section--grid" id="installer" aria-labelledby="install-title">
     <div class="container split">
       <div>
         <p class="eyebrow">Sur le terrain</p>
-        <h2 id="app-title">Emportez la calculette dans votre poche.</h2>
-        <p class="lead">Notre application mobile convertit W, A, VA et kVA en monophasé et en triphasé, avec un historique de vos calculs.</p>
-        <p>Elle s'installe sur l'écran d'accueil de votre téléphone : sur iPhone, ouvrez-la dans Safari puis « Partager » et « Sur l'écran d'accueil ».</p>
-        <a class="btn" href="https://darkside-energy.netlify.app" rel="noopener" target="_blank">Ouvrir l'appli Calc Dark Side<svg data-icon="external-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg></a>
+        <h2 id="install-title">Installez la calculette sur votre téléphone.</h2>
+        <p class="lead">Elle s'ouvre comme une application et fonctionne sans réseau, même en sous-sol ou sur un site sans couverture. Vos calculs enregistrés restent sur votre appareil.</p>
+        <p><button class="btn" type="button" id="calc-install" hidden><svg data-icon="download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 15V3" /><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5" /></svg>Installer la calculette</button></p>
+        <ul class="calc-install">
+          <li><svg data-icon="smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></svg><span>Sur iPhone : ouvrez cette page dans Safari, touchez « Partager » puis « Sur l'écran d'accueil ».</span></li>
+          <li><svg data-icon="smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></svg><span>Sur Android : menu du navigateur, puis « Installer l'application » ou « Ajouter à l'écran d'accueil ».</span></li>
+        </ul>
+        <p class="calc-install__done" id="calc-installed" hidden><svg data-icon="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>La calculette est installée sur cet appareil.</p>
       </div>
-      <figure class="media" style="max-width:320px;justify-self:center">
+      <figure class="calc-phone">
         <picture>
-          <source type="image/webp" srcset="../assets/img/calculette-app-384.webp">
-          <img src="../assets/img/calculette-app-384.jpg" width="384" height="385" alt="Capture de l'application Calc Dark Side : écran affichant 115,47 A, sélecteurs de saisie en kW, conversion W vers A et triphasé 400 V" loading="lazy" decoding="async">
+          <source type="image/webp" srcset="../assets/img/calculette-appli-fr-390.webp 390w, ../assets/img/calculette-appli-fr-780.webp 780w" sizes="(max-width: 860px) 70vw, 320px">
+          <img src="../assets/img/calculette-appli-fr-780.jpg" width="780" height="1560" alt="La calculette Dark Side Energy ouverte comme une application sur un téléphone : 22 kW en triphasé 400 V donnent 35,28 A par phase, avec le pavé numérique" loading="lazy" decoding="async">
         </picture>
       </figure>
     </div>

@@ -34,7 +34,7 @@ Chaque page existe aussi en Markdown : ajouter `index.html.md` à son adresse. C
 ## Outils de calcul en ligne
 
 - [Bilan de puissance en ligne](https://www.darkside-energy.com/bilan-de-puissance/): Bilan de puissance en ligne : puissance foisonnée, courant par phase, calibre et source indicatifs. Démo libre, accès complet réservé à nos clients.
-- [Calculette électro : conversions et chute de tension](https://www.darkside-energy.com/calculette-electro/): Calculette électrique gratuite : conversion W, kVA et ampères en mono 230 V et tri 400 V, chute de tension NF C 15-100, repères P17 et Powerlock.
+- [Calculette électro : conversions et chute de tension](https://www.darkside-energy.com/calculette-electro/): Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.
 
 ## Ressources
 
@@ -76,7 +76,7 @@ Chaque page existe aussi en Markdown : ajouter `index.html.md` à son adresse. C
 - [Power distribution equipment on turnkey hire](https://www.darkside-energy.com/en/equipment/): Turnkey hire: cabinets, boxes, P17 and Powerlock cables, accessible cable protectors, generators and batteries, installed and run by our teams.
 - [Responsible energy and CSR approach](https://www.darkside-energy.com/en/responsible-energy/): Our CSR approach: the grid first, hybrid solutions (HVO, Stage V, batteries), right-sizing and in-house commitments.
 - [Online power assessment](https://www.darkside-energy.com/en/power-assessment/): Online power assessment: diversified power, current per phase, indicative rating and source. Free demo, full access reserved for our clients.
-- [Electrical calculator: conversions and voltage drop](https://www.darkside-energy.com/en/electrical-calculator/): Free electrical calculator: convert W, kVA and amps in single-phase 230 V and three-phase 400 V, NF C 15-100 voltage drop, P17 and Powerlock figures.
+- [Electrical calculator: conversions and voltage drop](https://www.darkside-energy.com/en/electrical-calculator/): Free electrical calculator, installable and offline: W, kVA and amps conversions, suggested socket and cable, voltage drop per NF C 15-100.
 - [Frequently asked questions about event power distribution](https://www.darkside-energy.com/en/faq/): Answers from Dark Side Energy: who we are, our services, equipment hire, the Twin zero-interruption generator set, the power of a P17, voltage drop.
 - [Event power distribution glossary](https://www.darkside-energy.com/en/glossary/): P17, Powerlock, MDB, diversity factor, stand-to-stand feeding, Twin generator sets, HVO, Stage V: the terms of event power explained simply.
 - [Did you know? The basics of power distribution](https://www.darkside-energy.com/en/did-you-know/): Event power distribution basics explained simply: stand-to-stand supply sharing, Twin zero-interruption generator sets, cable size, circuit breakers.

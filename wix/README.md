@@ -70,6 +70,7 @@ Faits :
 
 - Les deux outils sont des programmes JavaScript (`site/assets/js/elec.js`, `bilan.js`, `calculette.js`, vérifiés par `tests/elec.test.mjs`). L'éditeur Wix ne permet pas de les recréer tels quels.
 - Sur le site Wix actuel, la page /calculette-electro renvoie par un bouton vers l'application https://darkside-energy.netlify.app.
+- La nouvelle calculette (octobre 2026) est une page installable qui fonctionne hors ligne. Intégrée dans Wix par un iframe, elle perdrait l'installation et le hors ligne, et l'intégration est aujourd'hui bloquée par les en-têtes de sécurité du site (X-Frame-Options, frame-ancestors) : pour la calculette, préférer un bouton vers la page hébergée.
 
 Recommandation : héberger les deux outils hors de Wix (par exemple sur l'application Netlify existante) et les afficher dans les pages Wix /bilan-de-puissance et /calculette-electro avec l'élément d'intégration de Wix (iframe). Les textes d'explication (méthode, repères, limites) restent en texte Wix sous l'outil, pour le référencement.
 
