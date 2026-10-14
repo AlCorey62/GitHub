@@ -28,7 +28,7 @@
   "app": {
     "name": "Calculette électro Dark Side Energy",
     "features": [
-      "Conversion W, kW, VA, kVA et ampères en monophasé, biphasé et triphasé",
+      "Conversion W, kW, VA, kVA et ampères en monophasé et en triphasé, et en biphasé au Japon",
       "Réseaux étrangers : États-Unis, Canada, Mexique, Japon ou tension personnalisée",
       "Prise et câble conseillés dans le parc de Dark Side Energy, avec le taux de charge",
       "Chute de tension selon la méthode de la norme NF C 15-100 et section minimale",
@@ -73,13 +73,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Calculette">
 <link rel="preload" href="../assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/main.css?v=1beca5b0">
+<link rel="stylesheet" href="../assets/css/main.css?v=56126bce">
 <script>document.documentElement.classList.add("js")</script>
 <script>if(matchMedia("(display-mode: standalone)").matches||navigator.standalone)document.documentElement.classList.add("is-app")</script>
 <script src="../assets/js/main.js?v=ceb0d7aa" defer></script>
-<script type="module" src="../assets/js/calculette.js?v=439bd679"></script>
+<script type="module" src="../assets/js/calculette.js?v=4fb83b5e"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.darkside-energy.com/calculette-electro/#webpage","url":"https://www.darkside-energy.com/calculette-electro/","name":"Calculette électro : conversions et chute de tension","description":"Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","@id":"https://www.darkside-energy.com/#website","name":"Dark Side Energy","url":"https://www.darkside-energy.com/"},"about":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"},"publisher":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"},"primaryImageOfPage":"https://www.darkside-energy.com/assets/img/og-image.png","dateModified":"2026-10-14","breadcrumb":{"@id":"https://www.darkside-energy.com/calculette-electro/#breadcrumb"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","@id":"https://www.darkside-energy.com/calculette-electro/#application","name":"Calculette électro Dark Side Energy","description":"Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.","url":"https://www.darkside-energy.com/calculette-electro/","applicationCategory":"UtilitiesApplication","operatingSystem":"Tout navigateur web","inLanguage":"fr-FR","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["Conversion W, kW, VA, kVA et ampères en monophasé, biphasé et triphasé","Réseaux étrangers : États-Unis, Canada, Mexique, Japon ou tension personnalisée","Prise et câble conseillés dans le parc de Dark Side Energy, avec le taux de charge","Chute de tension selon la méthode de la norme NF C 15-100 et section minimale","Pavé numérique, historique, copie et partage par lien","Installable sur téléphone, fonctionne sans réseau"],"provider":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","@id":"https://www.darkside-energy.com/calculette-electro/#application","name":"Calculette électro Dark Side Energy","description":"Calculette électrique gratuite, installable et hors ligne : conversions W, kVA et ampères, prise et câble conseillés, chute de tension NF C 15-100.","url":"https://www.darkside-energy.com/calculette-electro/","applicationCategory":"UtilitiesApplication","operatingSystem":"Tout navigateur web","inLanguage":"fr-FR","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["Conversion W, kW, VA, kVA et ampères en monophasé et en triphasé, et en biphasé au Japon","Réseaux étrangers : États-Unis, Canada, Mexique, Japon ou tension personnalisée","Prise et câble conseillés dans le parc de Dark Side Energy, avec le taux de charge","Chute de tension selon la méthode de la norme NF C 15-100 et section minimale","Pavé numérique, historique, copie et partage par lien","Installable sur téléphone, fonctionne sans réseau"],"provider":{"@type":"Organization","@id":"https://www.darkside-energy.com/#organisation","name":"Dark Side Energy","url":"https://www.darkside-energy.com/","logo":"https://www.darkside-energy.com/assets/img/logo-dark-side-energy.png"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://www.darkside-energy.com/calculette-electro/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.darkside-energy.com/"},{"@type":"ListItem","position":2,"name":"Outils","item":"https://www.darkside-energy.com/#outils"},{"@type":"ListItem","position":3,"name":"Calculette électro","item":"https://www.darkside-energy.com/calculette-electro/"}]}</script>
 <!-- head:end -->
 </head>
@@ -148,7 +148,7 @@
               <legend class="label">Raccordement</legend>
               <div class="segmented">
                 <input type="radio" name="calc-phases" id="calc-ph1" value="1"><label for="calc-ph1">Monophasé <span data-volt="1">230 V</span></label>
-                <input type="radio" name="calc-phases" id="calc-ph2" value="2"><label for="calc-ph2">Biphasé <span data-volt="2">400 V</span></label>
+                <input type="radio" name="calc-phases" id="calc-ph2" value="2" hidden><label for="calc-ph2" hidden>Biphasé <span data-volt="2">200 V</span></label>
                 <input type="radio" name="calc-phases" id="calc-ph3" value="3" checked><label for="calc-ph3">Triphasé <span data-volt="3">400 V</span></label>
               </div>
             </fieldset>
@@ -307,7 +307,7 @@
         <ul>
           <li>Monophasé : S = U0 × I, avec U0 la tension simple, entre phase et neutre (230 V en Europe).</li>
           <li>Triphasé : S = √3 × U × I, avec U la tension composée, entre phases (400 V en Europe). L'intensité est donnée par phase.</li>
-          <li>Biphasé : charge raccordée entre deux phases (400 V en Europe), ou réseau monophasé à trois fils comme au Japon (200 V entre les deux phases) : S = U × I, avec U la tension entre phases.</li>
+          <li>Biphasé, au Japon uniquement (réseau monophasé à trois fils 100/200 V) : S = U × I, avec U = 200 V entre les deux phases.</li>
           <li>Puissance active P = S × cos φ, puissance réactive Q = S × sin φ.</li>
           <li>Hypothèse par défaut : cos φ = 0,9, modifiable.</li>
         </ul>
@@ -327,7 +327,7 @@
           <li>La calculette retient le plus petit calibre de notre parc supérieur ou égal à l'intensité calculée. En monophasé : prise 16 A (câble 3G2,5) et P17 32 A (3G6). En triphasé : P17 32, 63 et 125 A (5G6, 5G16, 5G35) et Powerlock 400 A (unifilaires 150 ou 240 mm²). Câbles souples en cuivre.</li>
           <li>Au-delà de 80 % du calibre, la marge est signalée comme faible.</li>
           <li>Au-delà de 32 A en monophasé ou de 400 A en triphasé, le raccordement est à étudier.</li>
-          <li>En biphasé, la calculette donne le calibre normalisé : notre parc ne liste pas de câble biphasé.</li>
+          <li>En biphasé (Japon), la calculette donne le calibre normalisé : notre parc ne liste pas de câble biphasé.</li>
           <li>Si la chute de tension dépasse la limite, la calculette indique la section minimale et, s'il existe, le câble du parc qui convient.</li>
         </ul>
         <h3>Chute de tension</h3>
@@ -335,7 +335,7 @@
           <li>u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, avec b = 1 en triphasé et b = 2 en monophasé et en biphasé.</li>
           <li>ρ = 0,0225 Ω·mm²/m pour le cuivre et 0,036 Ω·mm²/m pour l'aluminium (résistivité en service normal), λ = 0,08 mΩ/m à 50 Hz.</li>
           <li>À 60 Hz, λ est augmentée dans le rapport des fréquences (0,096 mΩ/m) : hypothèse d'une réactance proportionnelle à la fréquence.</li>
-          <li>ΔU % = 100 × u ÷ U0, avec U0 la tension simple (U ÷ √3 en triphasé). En biphasé, ΔU % = 100 × u ÷ U, avec U la tension entre phases.</li>
+          <li>ΔU % = 100 × u ÷ U0, avec U0 la tension simple (U ÷ √3 en triphasé). En biphasé (Japon), ΔU % = 100 × u ÷ U, avec U = 200 V.</li>
           <li>Limites de la norme NF C 15-100 pour une installation alimentée par le réseau public basse tension : 3 % pour l'éclairage, 5 % pour les autres usages. À l'étranger, appliquez les règles locales.</li>
         </ul>
         <p>Ces calculs ne vérifient ni le courant admissible du câble selon son mode de pose, ni la protection contre les surcharges et les courts-circuits. Les termes techniques sont expliqués dans le <a href="../lexique/">lexique</a>.</p>

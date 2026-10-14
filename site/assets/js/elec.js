@@ -5,8 +5,8 @@
 //   P : puissance active (W), S : puissance apparente (VA), Q : puissance réactive (var), I : intensité (A)
 //   Monophasé : S = U × I avec U = 230 V (tension simple)
 //   Triphasé  : S = √3 × U × I avec U = 400 V (tension composée)
-//   Biphasé   : S = U × I avec U = 400 V (charge entre deux phases), ou 200 V au Japon (monophasé à trois fils) ;
-//               calculs du monophasé avec la tension entre phases (phases = 2)
+//   Biphasé   : Japon uniquement (monophasé à trois fils 100/200 V) : S = U × I avec U = 200 V entre les deux phases ;
+//               calculs du monophasé avec cette tension (phases = 2)
 //   Autres réseaux (NETWORKS) : mêmes formules avec leurs tensions simple et composée
 
 // Langue de la page : anglais sous /en/, français sinon (et hors navigateur, pour les tests)
@@ -130,7 +130,8 @@ export function connectorFor(rating, phases = 3, lang = LANG) {
 
 /**
  * Réseaux basse tension usuels : tension simple (entre phase et neutre, monophasé), tension composée
- * (entre phases, triphasé) et fréquence. Valeurs nominales ; vérifier sur place la tension réellement fournie.
+ * (entre phases, triphasé), tension biphasée (Japon : monophasé à trois fils) et fréquence.
+ * Valeurs nominales ; vérifier sur place la tension réellement fournie.
  */
 export const NETWORKS = [
   { id: "eu", mono: 230, tri: 400, hz: 50, fr: "Europe et Royaume-Uni", en: "Europe and United Kingdom" },
@@ -138,8 +139,8 @@ export const NETWORKS = [
   { id: "us480", mono: 277, tri: 480, hz: 60, fr: "États-Unis", en: "United States" },
   { id: "ca600", mono: 347, tri: 600, hz: 60, fr: "Canada", en: "Canada" },
   { id: "mx", mono: 127, tri: 220, hz: 60, fr: "Mexique", en: "Mexico" },
-  { id: "jp50", mono: 100, tri: 200, hz: 50, fr: "Japon, est (Tokyo)", en: "Japan, east (Tokyo)" },
-  { id: "jp60", mono: 100, tri: 200, hz: 60, fr: "Japon, ouest (Osaka)", en: "Japan, west (Osaka)" },
+  { id: "jp50", mono: 100, bi: 200, tri: 200, hz: 50, fr: "Japon, est (Tokyo)", en: "Japan, east (Tokyo)" },
+  { id: "jp60", mono: 100, bi: 200, tri: 200, hz: 60, fr: "Japon, ouest (Osaka)", en: "Japan, west (Osaka)" },
 ];
 
 export const networkById = (id) => NETWORKS.find((n) => n.id === id) || NETWORKS[0];
@@ -180,7 +181,7 @@ export function recommendLine({ current, phases = 3, length = 0, cosPhi = 1, U =
   const I = toNumber(current);
   const L = toNumber(length) || 0;
   if (!(I >= 0)) return null;
-  // Biphasé : pas de câble dédié dans le parc, seulement le calibre normalisé
+  // Biphasé (Japon) : pas de câble dédié dans le parc, seulement le calibre normalisé
   if (phases === 2) {
     const rating = nextRating(I);
     return rating ? { status: "biphase", rating, loadPct: (100 * I) / rating } : { status: "beyond" };

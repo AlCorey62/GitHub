@@ -3637,8 +3637,17 @@ a.tag:hover {
 
 .calc__phases .segmented {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
+}
+
+/* Japon : monophasé, biphasé et triphasé */
+.calc__phases .segmented.has-bi {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.calc__phases .segmented [hidden] {
+  display: none;
 }
 
 .calc__phases .segmented label {

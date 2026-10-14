@@ -709,7 +709,7 @@ Conversions, raccordement conseillé et chute de tension, en France comme à l'�
 
 - Monophasé : S = U0 × I, avec U0 la tension simple, entre phase et neutre (230 V en Europe).
 - Triphasé : S = √3 × U × I, avec U la tension composée, entre phases (400 V en Europe). L'intensité est donnée par phase.
-- Biphasé : charge raccordée entre deux phases (400 V en Europe), ou réseau monophasé à trois fils comme au Japon (200 V entre les deux phases) : S = U × I, avec U la tension entre phases.
+- Biphasé, au Japon uniquement (réseau monophasé à trois fils 100/200 V) : S = U × I, avec U = 200 V entre les deux phases.
 - Puissance active P = S × cos φ, puissance réactive Q = S × sin φ.
 - Hypothèse par défaut : cos φ = 0,9, modifiable.
 
@@ -730,7 +730,7 @@ Au Japon : 100 V en monophasé, 200 V en biphasé (monophasé à trois fils) et 
 - La calculette retient le plus petit calibre de notre parc supérieur ou égal à l'intensité calculée. En monophasé : prise 16 A (câble 3G2,5) et P17 32 A (3G6). En triphasé : P17 32, 63 et 125 A (5G6, 5G16, 5G35) et Powerlock 400 A (unifilaires 150 ou 240 mm²). Câbles souples en cuivre.
 - Au-delà de 80 % du calibre, la marge est signalée comme faible.
 - Au-delà de 32 A en monophasé ou de 400 A en triphasé, le raccordement est à étudier.
-- En biphasé, la calculette donne le calibre normalisé : notre parc ne liste pas de câble biphasé.
+- En biphasé (Japon), la calculette donne le calibre normalisé : notre parc ne liste pas de câble biphasé.
 - Si la chute de tension dépasse la limite, la calculette indique la section minimale et, s'il existe, le câble du parc qui convient.
 
 ### Chute de tension
@@ -738,7 +738,7 @@ Au Japon : 100 V en monophasé, 200 V en biphasé (monophasé à trois fils) et 
 - u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, avec b = 1 en triphasé et b = 2 en monophasé et en biphasé.
 - ρ = 0,0225 Ω·mm²/m pour le cuivre et 0,036 Ω·mm²/m pour l'aluminium (résistivité en service normal), λ = 0,08 mΩ/m à 50 Hz.
 - À 60 Hz, λ est augmentée dans le rapport des fréquences (0,096 mΩ/m) : hypothèse d'une réactance proportionnelle à la fréquence.
-- ΔU % = 100 × u ÷ U0, avec U0 la tension simple (U ÷ √3 en triphasé). En biphasé, ΔU % = 100 × u ÷ U, avec U la tension entre phases.
+- ΔU % = 100 × u ÷ U0, avec U0 la tension simple (U ÷ √3 en triphasé). En biphasé (Japon), ΔU % = 100 × u ÷ U, avec U = 200 V.
 - Limites de la norme NF C 15-100 pour une installation alimentée par le réseau public basse tension : 3 % pour l'éclairage, 5 % pour les autres usages. À l'étranger, appliquez les règles locales.
 
 Ces calculs ne vérifient ni le courant admissible du câble selon son mode de pose, ni la protection contre les surcharges et les courts-circuits. Les termes techniques sont expliqués dans le [lexique](https://www.darkside-energy.com/lexique/).
@@ -2468,7 +2468,7 @@ Conversions, suggested connection and voltage drop, in France and abroad. The ca
 
 - Single-phase: S = U0 × I, where U0 is the phase-to-neutral voltage (230 V in Europe).
 - Three-phase: S = √3 × U × I, where U is the phase-to-phase voltage (400 V in Europe). The current is given per phase.
-- Two-phase: load connected between two phases (400 V in Europe), or a single-phase three-wire supply as in Japan (200 V between the two phases): S = U × I, where U is the phase-to-phase voltage.
+- Two-phase, in Japan only (single-phase three-wire supply, 100/200 V): S = U × I, where U = 200 V between the two phases.
 - Active power P = S × cos φ, reactive power Q = S × sin φ.
 - Default assumption: cos φ = 0.9, adjustable.
 
@@ -2489,7 +2489,7 @@ In Japan: 100 V single-phase, 200 V two-phase (single-phase three-wire) and thre
 - The calculator picks the smallest rating in our fleet that is greater than or equal to the calculated current. Single-phase: 16 A socket (3G2.5 cable) and P17 32 A (3G6). Three-phase: P17 32, 63 and 125 A (5G6, 5G16, 5G35) and Powerlock 400 A (150 or 240 mm² single-core). Flexible copper cables.
 - Above 80% of the rating, the margin is flagged as low.
 - Above 32 A in single-phase or 400 A in three-phase, the connection needs to be engineered.
-- In two-phase, the calculator gives the standard rating: our fleet does not list a two-phase cable.
+- In two-phase (Japan), the calculator gives the standard rating: our fleet does not list a two-phase cable.
 - If the voltage drop exceeds the limit, the calculator gives the minimum cable size and, if there is one, the suitable cable from our fleet.
 
 ### Voltage drop
@@ -2497,7 +2497,7 @@ In Japan: 100 V single-phase, 200 V two-phase (single-phase three-wire) and thre
 - u = b × (ρ × L ÷ S × cos φ + λ × L × sin φ) × I, with b = 1 in three-phase and b = 2 in single-phase and two-phase.
 - ρ = 0.0225 Ω·mm²/m for copper and 0.036 Ω·mm²/m for aluminium (resistivity in normal service), λ = 0.08 mΩ/m at 50 Hz.
 - At 60 Hz, λ is increased in proportion to the frequency (0.096 mΩ/m): assumption that cable reactance is proportional to frequency.
-- ΔU% = 100 × u ÷ U0, where U0 is the phase-to-neutral voltage (U ÷ √3 in three-phase). In two-phase, ΔU% = 100 × u ÷ U, where U is the phase-to-phase voltage.
+- ΔU% = 100 × u ÷ U0, where U0 is the phase-to-neutral voltage (U ÷ √3 in three-phase). In two-phase (Japan), ΔU% = 100 × u ÷ U, where U = 200 V.
 - Limits of the French NF C 15-100 standard for an installation supplied by the public low-voltage network: 3% for lighting, 5% for other uses. Abroad, apply the local rules.
 
 These calculations do not check the cable's current-carrying capacity for its installation method, nor protection against overloads and short circuits. Technical terms are explained in the [glossary](https://www.darkside-energy.com/en/glossary/).

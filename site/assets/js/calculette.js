@@ -13,7 +13,7 @@ const T = EN
       bi: "Two-phase",
       tri: "Three-phase",
       rating: "Rating",
-      biNote: "Two-phase: there is no two-phase cable in our fleet; choose the socket and cable to suit your equipment.",
+      biNote: "Two-phase (Japan): there is no two-phase cable in our fleet; choose the socket and cable to suit your equipment.",
       pickSection: "Choose the cable size under “Another cable” to calculate the voltage drop.",
       iTri: "Current per phase",
       iMono: "Current",
@@ -52,7 +52,7 @@ const T = EN
       bi: "Biphasé",
       tri: "Triphasé",
       rating: "Calibre",
-      biNote: "Biphasé\u202f: pas de câble biphasé dans notre parc, prise et câble à choisir selon votre matériel.",
+      biNote: "Biphasé (Japon)\u202f: pas de câble biphasé dans notre parc, prise et câble à choisir selon votre matériel.",
       pickSection: "Choisissez la section du câble dans «\u202fAutre câble\u202f» pour calculer la chute de tension.",
       iTri: "Intensité par phase",
       iMono: "Intensité",
@@ -179,12 +179,13 @@ const checked = (name) => document.querySelector(`input[name='${name}']:checked`
 function state() {
   const custom = el.network.value === "custom";
   const net = custom ? { id: "custom", mono: parse(el.u1.value), tri: parse(el.u3.value), hz: Number(el.hz.value) } : networkById(el.network.value);
+  // Biphasé seulement sur les réseaux qui en ont (Japon) ; sinon retour au triphasé
+  if (!net.bi && $("calc-ph2").checked) $("calc-ph3").checked = true;
   const ph = Number(checked("calc-phases").value);
   return {
     net,
     ph,
-    // Biphasé et triphasé : tension entre phases ; monophasé : tension simple
-    U: ph === 1 ? net.mono : net.tri,
+    U: ph === 1 ? net.mono : ph === 2 ? net.bi : net.tri,
     value: parse(el.value.value),
     unit: checked("calc-unit").value,
     cos: parse(el.cos.value),
@@ -215,7 +216,11 @@ function render() {
 
   el.custom.hidden = st.net.id !== "custom";
   root.querySelector('[data-volt="1"]').textContent = st.net.mono > 0 ? `${volts(st.net.mono)} V` : "";
-  root.querySelector('[data-volt="2"]').textContent = st.net.tri > 0 ? `${volts(st.net.tri)} V` : "";
+  const hasBi = Boolean(st.net.bi);
+  $("calc-ph2").hidden = !hasBi;
+  root.querySelector("label[for='calc-ph2']").hidden = !hasBi;
+  root.querySelector(".calc__phases .segmented").classList.toggle("has-bi", hasBi);
+  root.querySelector('[data-volt="2"]').textContent = hasBi ? `${volts(st.net.bi)} V` : "";
   root.querySelector('[data-volt="3"]').textContent = st.net.tri > 0 ? `${volts(st.net.tri)} V` : "";
   el.unitShown.textContent = st.unit;
   el.iLabel.textContent = st.ph === 1 ? T.iMono : T.iTri;
