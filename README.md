@@ -204,7 +204,7 @@ Reconstruction dans Wix (au lieu de Netlify) : suivre `wix/README.md`.
 Aucun propos n'est attribué à Damien Nirel sur le site (choix de Damien) : pas de citation à ajouter.
 
 1. **Mentions légales** : complétées d'après le registre (capital 10 000 €, RCS Arras, TVA FR21879105377) et le site de Netlify (adresse de l'hébergeur). Le téléphone de l'hébergeur (+1 650 963 4977) vient de l'annuaire officiel américain du Data Privacy Framework : à confirmer.
-2. **Données issues de sources internes** (Rentman, mémoire technique de juin 2026, document « Métiers Site Internet ») : liste des lieux de référence, gamme de matériel. Les justificatifs des labels (Label du Spectacle, Prestadd, ISO 20121) et de la part de véhicules électriques (70 %) sont disponibles (confirmé par Damien).
+2. **Données issues de sources internes** (Rentman, mémoire technique de juin 2026, document « Métiers Site Internet ») : liste des lieux de référence, gamme de matériel. Les justificatifs du Label du Spectacle et de la part de véhicules électriques (70 %) sont disponibles (confirmé par Damien).
 3. **Références internationales** (Mexique, États-Unis, Canada, Royaume-Uni, Italie, Japon) : villes seulement, sans nom de site, car certains contrats de sous-traitance interdisent de citer les sites.
 4. **Données personnelles** : durées de conservation validées (3 ans pour les demandes, 2 ans pour les candidatures). Netlify Forms garde les messages sans limite : les supprimer au-delà de ces durées.
 5. **Réseaux sociaux** : liens Facebook et X repris de l'ancien site, à confirmer ou compléter (LinkedIn par exemple) dans `tools/site.config.mjs`.
@@ -233,7 +233,7 @@ Les assistants IA trouvent l'information de deux façons : ce qu'ils ont appris 
 2. Bing Webmaster Tools : importer le site depuis Search Console et déclarer `sitemap.xml`. Puis, après chaque mise en ligne : `node tools/indexnow.mjs`.
 3. Créer ou reprendre la fiche Google Business Profile avec exactement le même nom, la même adresse et le même téléphone ; ajouter son adresse dans `ENTITY.sameAs` (`tools/site.config.mjs`).
 4. Créer la page entreprise LinkedIn et l'ajouter dans `SITE.socials`.
-5. Harmoniser la fiche de l'entreprise sur les annuaires professionnels et les sites des labels (Label du Spectacle, Prestadd).
+5. Harmoniser la fiche de l'entreprise sur les annuaires professionnels. Fiche du Label du Spectacle vérifiée le 14/10/2026 (nom, activité, lien vers le site) : la page Énergie responsable y renvoie, logo à l'appui (`site/assets/img/label-spectacle-*`). Prestadd et ISO 20121 ne sont plus affichés (démarches en cours, choix de Damien).
 6. Obtenir des mentions et des liens depuis les sites des partenaires, des lieux et de la presse spécialisée : les IA accordent beaucoup de poids aux sources tierces.
 7. Faire vivre le contenu : nouvelles questions dans la FAQ à partir des vraies demandes clients, nouveaux articles « Le sais-tu ? », dates `updated` à jour.
 8. Suivre le résultat en posant régulièrement des questions types à ChatGPT, Perplexity, Gemini et Claude, par exemple « distribution électrique événementielle Lille » ou « location passage de câbles PMR Hauts-de-France ».
