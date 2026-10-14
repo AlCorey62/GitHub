@@ -2393,6 +2393,55 @@ a.tag:hover {
 .badge-status--ok { color: var(--c-ok); }
 .badge-status--progress { color: var(--c-warn); }
 
+/* Label : logo relié à la fiche officielle de l'organisme */
+.label-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  align-items: center;
+  max-width: 880px;
+  padding: clamp(20px, 3vw, 32px);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+}
+
+.label-card__logo {
+  display: block;
+  width: 200px;
+  border-radius: 12px;
+  transition: transform 0.25s var(--ease);
+}
+
+.label-card__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.label-card__logo:hover {
+  transform: translateY(-3px);
+}
+
+.label-card__body h3 {
+  margin: 12px 0 8px;
+}
+
+.label-card__body p {
+  margin: 0 0 16px;
+  color: var(--c-text-2);
+}
+
+@media (max-width: 640px) {
+  .label-card {
+    grid-template-columns: 1fr;
+  }
+
+  .label-card__logo {
+    width: 160px;
+  }
+}
+
 /* 7. Formulaires et outils ------------------------------------------------ */
 
 .form-grid {

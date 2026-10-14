@@ -41,11 +41,13 @@ Sources positioned as close as possible to the load centres, and cable routes dr
 
 ## Recognised skills, a structured approach.
 
-| Initiative | Scope | Status |
-| --- | --- | --- |
-| Label du Spectacle | Sector label for live performance and events: safety, working conditions, responsible practices. | Awarded |
-| Label Prestadd | CSR framework for event service providers: environment, social, governance, responsible purchasing. | Application in progress |
-| ISO 20121 | Responsible management system applied to events. | File in preparation |
+Awarded
+
+### Label du Spectacle
+
+Sector label for live performance and event service providers: safety, working conditions, responsible practices.
+
+[See our listing on labelspectacle.org](https://www.labelspectacle.org/les-labellises/?entreprise=dark+side+energy&region=)
 
 ## Want to reduce your event's energy impact?
 

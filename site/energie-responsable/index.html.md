@@ -41,11 +41,13 @@ Des sources positionnées au plus proche des centres de charge et des cheminemen
 
 ## Des compétences reconnues, une démarche structurée.
 
-| Démarche | Objet | Statut |
-| --- | --- | --- |
-| Label du Spectacle | Label sectoriel du spectacle vivant et de l'événementiel : sécurité, conditions de travail, pratiques responsables. | Labellisé |
-| Label Prestadd | Référentiel RSE dédié aux prestataires événementiels : environnement, social, gouvernance, achats responsables. | Candidature en cours |
-| ISO 20121 | Système de management responsable appliqué aux événements. | Dossier en préparation |
+Labellisé
+
+### Label du Spectacle
+
+Label sectoriel des prestataires de service du spectacle vivant et de l'événementiel : sécurité, conditions de travail, pratiques responsables.
+
+[Voir notre fiche sur labelspectacle.org](https://www.labelspectacle.org/les-labellises/?entreprise=dark+side+energy&region=)
 
 ## Réduire l'impact énergétique de votre événement ?
 
