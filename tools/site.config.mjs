@@ -32,7 +32,7 @@ export const SITE = {
   // Google Analytics 4 : identifiant du flux web www.darkside-energy.com (G-XXXXXXXXXX), à créer dans la propriété GA4.
   // Vide : ni mesure ni bandeau. Rempli : bandeau de consentement, mesure seulement après acceptation
   // et seulement sur l'adresse définitive du site (jamais dans l'aperçu). Voir README, « Mesure d'audience ».
-  ga4: "",
+  ga4: "G-W56X4DV0DT",
   // Clé IndexNow (Bing, Copilot, Yandex, Seznam, Naver) : le fichier site/<clé>.txt doit rester publié
   indexNowKey: "3b437b0f739a59eb3e76ac976d8c0458",
   themeColor: "#09090a",
