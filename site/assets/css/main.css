@@ -3527,6 +3527,11 @@ a.tag:hover {
   -webkit-text-stroke: 0;
 }
 
+/* Texte du bandeau porté par data-t : purement décoratif, il n'est ni lu ni indexé */
+.kinetic__track span::before {
+  content: attr(data-t);
+}
+
 .kinetic__track span::after {
   content: "";
   width: 0.2em;

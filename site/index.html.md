@@ -21,7 +21,7 @@ Distribution électrique, régie technique, coordination générale et bureau d'
 
 ## Dark Side Energy, qui sommes-nous ?
 
-Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses techniciens électriciens, chefs de projet et ingénieurs interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour les salons, concerts, événements sportifs, festivals et cérémonies. [En savoir plus](https://www.darkside-energy.com/entreprise/).
+Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses techniciens électriciens, chefs de projet et ingénieurs interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour les salons, concerts, événements sportifs, festivals et cérémonies. [En savoir plus sur l'entreprise](https://www.darkside-energy.com/entreprise/).
 
 ## De l'idée jusqu'à la réalisation, sur toute la partie électrique.
 

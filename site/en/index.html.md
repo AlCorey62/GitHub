@@ -21,7 +21,7 @@ Power distribution, technical management, general coordination and engineering o
 
 ## Who is Dark Side Energy?
 
-Dark Side Energy is a French event power distribution company, founded in 2016 and based in Hauts-de-France, northern France. Its electrical technicians, project managers and engineers work in France and internationally across power distribution, technical management, general coordination, engineering office and consulting, for trade shows, concerts, sporting events, festivals and ceremonies. [Learn more](https://www.darkside-energy.com/en/company/).
+Dark Side Energy is a French event power distribution company, founded in 2016 and based in Hauts-de-France, northern France. Its electrical technicians, project managers and engineers work in France and internationally across power distribution, technical management, general coordination, engineering office and consulting, for trade shows, concerts, sporting events, festivals and ceremonies. [More about the company](https://www.darkside-energy.com/en/company/).
 
 ## From idea to delivery, for everything electrical.
 
