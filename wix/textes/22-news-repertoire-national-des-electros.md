@@ -12,8 +12,8 @@ Candidatures ouvertes toute l'année.
 
 [Envoyer ma candidature](https://www.darkside-energy.com/contact)
 
-[Lille Grand Palais : deux salons depuis la rentrée](https://www.darkside-energy.com/single-post/2016/10/06/lille-grand-palais)
-[Fêtes maritimes internationales de Brest 2016](https://www.darkside-energy.com/single-post/2016/05/26/f%C3%AAtes-maritimes-internationales-de-brest-2016)
+[Pourquoi « ça saute » ?](https://www.darkside-energy.com/single-post/2017/05/08/le-sais-tu-pourquoi-%C3%A7a-saute)
+[Création de Dark Side Energy](https://www.darkside-energy.com/single-post/2016/05/25/cr%C3%A9ation-de-dark-side-energy-1)
 
 ## Un projet ? Parlons puissance.
 

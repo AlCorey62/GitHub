@@ -32,7 +32,7 @@ Vérifiez la puissance de vos appareils avant de les brancher.
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance)
 
 [La section de câble dépend de l'intensité, mais aussi de la longueur !](https://www.darkside-energy.com/single-post/2017/05/08/le-sais-tu-la-section-de-c%C3%A2ble-d%C3%A9pend-de-lintensit%C3%A9-mais-aussi-de-la-longueur)
-[Lille Grand Palais : deux salons depuis la rentrée](https://www.darkside-energy.com/single-post/2016/10/06/lille-grand-palais)
+[Répertoire national des électros](https://www.darkside-energy.com/single-post/2016/06/23/r%C3%A9pertoire-national-des-%C3%A9lectros)
 
 ## Un projet ? Parlons puissance.
 

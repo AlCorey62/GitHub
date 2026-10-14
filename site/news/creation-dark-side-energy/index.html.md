@@ -20,7 +20,7 @@ Dix ans plus tard, l'aventure continue, des Zéniths aux stades.
 
 [Découvrir l'entreprise](https://www.darkside-energy.com/entreprise/)
 
-[Fêtes maritimes internationales de Brest 2016](https://www.darkside-energy.com/news/fetes-maritimes-brest-2016/)
+[Répertoire national des électros](https://www.darkside-energy.com/news/repertoire-national-des-electros/)
 
 ## Un projet ? Parlons puissance.
 

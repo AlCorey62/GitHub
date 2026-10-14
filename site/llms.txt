@@ -59,8 +59,6 @@ Chaque page existe aussi en Markdown : ajouter `index.html.md` à son adresse. C
 ## Optional
 
 - [Création de Dark Side Energy](https://www.darkside-energy.com/news/creation-dark-side-energy/): Mai 2016 : création de Dark Side Energy, des professionnels de la distribution électrique événementielle, du consulting à la pose.
-- [Fêtes maritimes internationales de Brest 2016](https://www.darkside-energy.com/news/fetes-maritimes-brest-2016/): Mai 2016 : première mission de Dark Side Energy, la gestion complète du projet des Fêtes maritimes internationales de Brest 2016 pour Revolt Location.
-- [Lille Grand Palais : deux salons depuis la rentrée](https://www.darkside-energy.com/news/lille-grand-palais-2016/): Octobre 2016 : Lille Grand Palais confie à Dark Side Energy la distribution électrique, l'ADSL et la téléphonie des salons Créer et Sénioreva.
 - [Répertoire national des électros](https://www.darkside-energy.com/news/repertoire-national-des-electros/): Électriciens habilités, rejoignez Dark Side Energy pour travailler dans l'événementiel et le culturel. Prestataires et loueurs, trouvez le technicien idéal pour votre prestation.
 
 ## English version

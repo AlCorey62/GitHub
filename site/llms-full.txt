@@ -213,7 +213,7 @@ De la petite distribution électrique aux grandes armoires de puissance, sur le 
 - **Raccordements temporaires** tarif bleu et tarif jaune, compteurs forains.
 - **Permanence électrique** pendant l'exploitation, et GroupMan pour le suivi des groupes électrogènes.
 
-*Salon Créer, Lille Grand Palais.*
+*Salon professionnel, Lille Grand Palais.*
 
 ## On ne distribue pas un salon comme un concert.
 
@@ -1005,23 +1005,11 @@ Différentiel 30 mA, disjoncteur : le coffret vous a soit sauvé la vie, soit sa
 
 ## Nos débuts, en 2016.
 
-Actualité · 6 octobre 2016 · 1 min
-
-### [Lille Grand Palais : deux salons depuis la rentrée](https://www.darkside-energy.com/news/lille-grand-palais-2016/)
-
-Distribution électrique, ADSL et téléphonie pour les salons Créer et Sénioreva.
-
 Actualité · 23 juin 2016 · 1 min
 
 ### [Répertoire national des électros](https://www.darkside-energy.com/news/repertoire-national-des-electros/)
 
 Vous êtes électro, vous avez vos habilitations, vous cherchez du travail ? Rejoignez le côté obscur de l'électricité !
-
-Actualité · 26 mai 2016 · 1 min
-
-### [Fêtes maritimes internationales de Brest 2016](https://www.darkside-energy.com/news/fetes-maritimes-brest-2016/)
-
-Première mission : groupes électrogènes, compteurs forains, mâts d'éclairage et plus de 400 coffrets sur le port de Brest.
 
 Actualité · 25 mai 2016 · 1 min
 
@@ -1433,7 +1421,7 @@ Vérifiez la puissance de vos appareils avant de les brancher.
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
 
 [La section de câble dépend de l'intensité, mais aussi de la longueur !](https://www.darkside-energy.com/news/section-de-cable/)
-[Lille Grand Palais : deux salons depuis la rentrée](https://www.darkside-energy.com/news/lille-grand-palais-2016/)
+[Répertoire national des électros](https://www.darkside-energy.com/news/repertoire-national-des-electros/)
 
 ## Un projet ? Parlons puissance.
 
@@ -1588,20 +1576,40 @@ Par respect des contrats de confidentialité signés sur chaque événement, nou
 
 ## Du salon au stade, de la scène au plateau.
 
-- Concerts et tournées
-- Salons, foires et congrès
-- Compétitions sportives
-- Festivals
-- Shows corporate
-- Cérémonies
+Chaque type d'événement a ses propres contraintes électriques.
+
+### Concerts et tournées
+
+Les armoires de distribution se retrouvent derrière la scène. Dans le meilleur des cas, chaque corps de métier a sa propre source, avec sa ou ses armoires, afin d'éviter certains « buzz » ou autres parasites électriques liés à l'électronique de certains appareils.
+
+En Zénith, en stade et en tournée.
+
+### Salons, foires et congrès
+
+Chaque stand doit avoir son coffret électrique équipé d'un différentiel 30 mA, pour la protection des personnes. Tirer une rallonge depuis le stand voisin, c'est de l'ilotage, systématiquement refusé par les chargés de sécurité.
+
+Un salon de 300 stands alimentés, c'est 300 coffrets électriques.
+
+### Compétitions sportives
+
+Compétitions nationales et internationales, en arena, en stade ou en pleine nature.
+
+### Festivals et plein air
+
+Groupes électrogènes, compteurs forains, cheminements de câbles et passages PMR.
+
+La faisabilité d'un raccordement au réseau existant est étudiée avant tout recours aux groupes électrogènes.
+
+### Shows corporate et cérémonies
+
+Conventions, shows corporate, cérémonies : une installation sûre, dimensionnée au juste besoin.
+
+Des bilans de puissance calibrés sur nos données terrain : pas de surcapacité systématique.
+
+### Et aussi
+
 - Tournages
 - Formation
-
-1. **Mai 2016 : Création de Dark Side Energy** : Des humains professionnalisés dans la distribution électrique d'événement.
-2. **Mai 2016 : Fêtes maritimes internationales de Brest** : Première mission, confiée par Revolt Location : de nombreux groupes électrogènes, des compteurs forains, une vingtaine de mâts d'éclairage autonomes et plus de 400 coffrets à distribuer sur les berges du port de Brest.
-3. **Octobre 2016 : Lille Grand Palais** : Deux salons confiés depuis la rentrée pour la distribution électrique, l'ADSL et la téléphonie : Créer, puis Sénioreva.
-4. **2019 : La SARL Dark Side Energy** : Immatriculation de la société en novembre 2019.
-5. **Aujourd'hui : Des Zéniths aux stades** : Concerts, compétitions sportives, salons et cérémonies, en France et à l'international.
 
 ## Votre événement, notre prochaine référence ?
 
@@ -1660,66 +1668,6 @@ Dix ans plus tard, l'aventure continue, des Zéniths aux stades.
 
 [Découvrir l'entreprise](https://www.darkside-energy.com/entreprise/)
 
-[Fêtes maritimes internationales de Brest 2016](https://www.darkside-energy.com/news/fetes-maritimes-brest-2016/)
-
-## Un projet ? Parlons puissance.
-
-Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
-
-[Demander un devis](https://www.darkside-energy.com/contact/)
-[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
-
----
-
-# Fêtes maritimes internationales de Brest 2016
-
-> Mai 2016 : première mission de Dark Side Energy, la gestion complète du projet des Fêtes maritimes internationales de Brest 2016 pour Revolt Location.
-
-Source : https://www.darkside-energy.com/news/fetes-maritimes-brest-2016/ · Dark Side Energy · Mise à jour : 2026-09-25
-
-26 mai 2016 · 1 min de lecture · Mis à jour le 25 septembre 2026
-
-Et voici la première mission confiée à Dark Side Energy par Revolt Location : la gestion complète du projet des Fêtes maritimes internationales de Brest 2016 !
-
-De nombreux groupes électrogènes, des compteurs forains, une vingtaine de mâts d'éclairage autonomes et plus de 400 coffrets à distribuer sur les berges du port de Brest.
-
-Merci à eux pour leur confiance !
-
-Grands sites en plein air, multiples sources, centaines de coffrets : c'est notre quotidien.
-
-[Notre métier : la distribution électrique](https://www.darkside-energy.com/distribution-electrique/)
-
-[Répertoire national des électros](https://www.darkside-energy.com/news/repertoire-national-des-electros/)
-[Création de Dark Side Energy](https://www.darkside-energy.com/news/creation-dark-side-energy/)
-
-## Un projet ? Parlons puissance.
-
-Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
-
-[Demander un devis](https://www.darkside-energy.com/contact/)
-[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
-
----
-
-# Lille Grand Palais : deux salons depuis la rentrée
-
-> Octobre 2016 : Lille Grand Palais confie à Dark Side Energy la distribution électrique, l'ADSL et la téléphonie des salons Créer et Sénioreva.
-
-Source : https://www.darkside-energy.com/news/lille-grand-palais-2016/ · Dark Side Energy · Mise à jour : 2026-09-25
-
-6 octobre 2016 · 1 min de lecture · Mis à jour le 25 septembre 2026
-
-Et voilà maintenant deux salons depuis la rentrée que Lille Grand Palais confie à Dark Side Energy pour la distribution électrique, l'ADSL et la téléphonie.
-
-Le salon Créer a été un véritable succès, et c'est désormais le salon Sénioreva qui ouvre ses portes au public ce jeudi 6 octobre !
-
-*Salon Créer, Lille Grand Palais.*
-
-Lille Grand Palais figure toujours parmi les lieux où nos équipes interviennent le plus.
-
-[Voir nos références](https://www.darkside-energy.com/references/)
-
-[Pourquoi « ça saute » ?](https://www.darkside-energy.com/news/pourquoi-ca-saute/)
 [Répertoire national des électros](https://www.darkside-energy.com/news/repertoire-national-des-electros/)
 
 ## Un projet ? Parlons puissance.
@@ -1749,8 +1697,8 @@ Candidatures ouvertes toute l'année.
 
 [Envoyer ma candidature](https://www.darkside-energy.com/contact/?objet=candidature)
 
-[Lille Grand Palais : deux salons depuis la rentrée](https://www.darkside-energy.com/news/lille-grand-palais-2016/)
-[Fêtes maritimes internationales de Brest 2016](https://www.darkside-energy.com/news/fetes-maritimes-brest-2016/)
+[Pourquoi « ça saute » ?](https://www.darkside-energy.com/news/pourquoi-ca-saute/)
+[Création de Dark Side Energy](https://www.darkside-energy.com/news/creation-dark-side-energy/)
 
 ## Un projet ? Parlons puissance.
 
@@ -1974,7 +1922,7 @@ From small distribution set-ups to large power distribution cabinets, on the gri
 - **Temporary grid connections** on *tarif bleu* (French grid connection up to 36 kVA) and *tarif jaune* (36 to 250 kVA), and *compteurs forains* (temporary metered grid connections for events).
 - **Electrical standby** during the show, and a GroupMan (generator technician) to monitor the generators.
 
-*Salon Créer, Lille Grand Palais.*
+*Trade show, Lille Grand Palais.*
 
 ## You don't power a trade show the way you power a concert.
 
@@ -3322,20 +3270,40 @@ Out of respect for the confidentiality agreements signed for each event, we name
 
 ## From trade show to stadium, from stage to set.
 
-- Concerts and tours
-- Trade shows, fairs and conferences
-- Sports competitions
-- Festivals
-- Corporate shows
-- Ceremonies
+Each type of event has its own electrical constraints.
+
+### Concerts and tours
+
+The distribution cabinets sit behind the stage. Ideally, each department has its own source, with its own cabinet or cabinets, to avoid “buzz” and other electrical interference caused by the electronics in some equipment.
+
+In Zénith arenas, in stadiums and on tour.
+
+### Trade shows, fairs and conferences
+
+Each stand must have its own power box fitted with a 30 mA RCD to protect people. Running an extension lead from the neighbouring stand, known in France as ilotage, is refused every time by safety officers.
+
+A trade show with 300 powered stands means 300 power boxes.
+
+### Sports competitions
+
+National and international competitions, in arenas, in stadiums or in the great outdoors.
+
+### Festivals and open-air events
+
+Generators, temporary metered grid connections, cable routing and wheelchair-accessible cable protectors.
+
+The feasibility of a connection to the existing grid is assessed before any use of generators.
+
+### Corporate shows and ceremonies
+
+Conventions, corporate shows, ceremonies: a safe installation, sized to what is actually needed.
+
+Power assessments calibrated on our field data: no systematic overcapacity.
+
+### Also
+
 - Filming
 - Training
-
-1. **May 2016: Dark Side Energy is founded**: People who made event power distribution their profession.
-2. **May 2016: Brest International Maritime Festival**: First assignment, entrusted to us by Revolt Location: many generators, temporary metered grid connections, around twenty self-powered lighting towers and more than 400 distribution boxes to deploy along the quaysides of the port of Brest.
-3. **October 2016: Lille Grand Palais**: Two trade shows entrusted to us since September for power distribution, ADSL and telephony: Créer, then Sénioreva.
-4. **2019: Dark Side Energy SARL**: Company registered in November 2019.
-5. **Today: From Zéniths to stadiums**: Concerts, sports competitions, trade shows and ceremonies, in France and abroad.
 
 ## Your event, our next reference?
 
