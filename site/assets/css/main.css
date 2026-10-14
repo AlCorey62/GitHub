@@ -3008,7 +3008,8 @@ a.tag:hover {
 .loads col.c-out { width: 9%; }
 .loads col.c-del { width: 52px; }
 
-@media (max-width: 900px) {
+/* Cartes sur petit écran seulement : à l'impression, le tableau garde ses colonnes */
+@media screen and (max-width: 900px) {
   .loads,
   .loads tbody,
   .loads tr,
@@ -4591,6 +4592,7 @@ a.tag:hover {
 
 @media print {
   :root {
+    color-scheme: light;
     --c-bg: #fff;
     --c-text: #111;
     --c-text-2: #333;
@@ -4599,10 +4601,35 @@ a.tag:hover {
     --c-line: #ccc;
   }
 
+  /* Aucun fond à l'impression : Safari repeint le fond de la page par-dessus le formulaire,
+     qui disparaissait du PDF. Le papier est blanc de toute façon. */
+  html,
   body {
-    background: #fff;
+    background: none !important;
+  }
+
+  body {
     color: #111;
     font-size: 11pt;
+  }
+
+  /* Pas de transition : l'impression montre l'état final de chaque élément */
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+
+  .js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .consent,
+  #nl-badge-frame,
+  #nl-hud-frame {
+    display: none !important;
   }
 
   .site-header,
@@ -4622,7 +4649,7 @@ a.tag:hover {
   .section,
   .panel,
   .panel--result {
-    background: #fff !important;
+    background: none !important;
     border-color: #ccc !important;
     padding-block: 12px;
     position: static;
@@ -4637,16 +4664,81 @@ a.tag:hover {
     color: #000 !important;
   }
 
+  .readout,
   .readout > div,
   .loads tr {
-    background: #fff !important;
+    background: none !important;
+  }
+
+  .readout > div + div {
+    border-top: 1px solid #ccc;
   }
 
   .input,
   .select {
     border-color: #999;
-    background: #fff;
+    background: none;
     color: #000;
+  }
+
+  .input:focus,
+  .select:focus {
+    border-color: #999 !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Champs vides : pas d'exemple imprimé comme s'il s'agissait d'une donnée */
+  .input::placeholder,
+  .textarea::placeholder {
+    color: transparent !important;
+  }
+
+  /* Réseau choisi : lisible sans fond coloré */
+  .segmented input:checked + label {
+    background: none;
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .segmented label {
+    color: #888;
+  }
+
+  /* Tableau des lignes : en entier, sans la colonne de suppression */
+  .loads-wrap {
+    overflow: visible;
+  }
+
+  .loads th:last-child,
+  .loads td:last-child,
+  .loads tbody tr:has([data-k="power"]:placeholder-shown) {
+    display: none;
+  }
+
+  .loads {
+    min-width: 0;
+  }
+
+  .loads col.c-del {
+    width: 0;
+  }
+
+  .loads th {
+    font-size: 7pt;
+  }
+
+  .loads .input,
+  .loads .select {
+    min-height: 0;
+    height: auto;
+    padding: 4px 6px;
+    font-size: 9pt;
+  }
+
+  .loads tr {
+    break-inside: avoid;
   }
 
   .tool {
