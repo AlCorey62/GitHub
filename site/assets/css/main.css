@@ -3205,6 +3205,68 @@ a.tag:hover {
   color: #fff;
 }
 
+.footer-consent {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--c-text-3);
+  font: inherit;
+  cursor: pointer;
+}
+
+.footer-consent:hover {
+  color: #fff;
+}
+
+.footer-consent[hidden] {
+  display: none;
+}
+
+/* Bandeau de consentement (mesure d'audience) : accepter et refuser au même niveau */
+.consent {
+  position: fixed;
+  z-index: 150;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  left: 16px;
+  max-width: 480px;
+  padding: 18px 20px;
+  border: 1px solid var(--c-line-2);
+  border-radius: 16px;
+  background: #141417;
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.9);
+  color: var(--c-text-2);
+  font-size: var(--fs-sm);
+}
+
+.consent p {
+  margin: 0 0 14px;
+}
+
+.consent .consent__title {
+  margin-bottom: 6px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.consent a {
+  color: var(--c-accent);
+}
+
+.consent__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .consent {
+    right: auto;
+    bottom: 24px;
+    left: 24px;
+  }
+}
+
 @media (max-width: 960px) {
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-brand { grid-column: 1 / -1; }

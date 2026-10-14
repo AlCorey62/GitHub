@@ -47,9 +47,13 @@ Conformément au règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du 6 jan
 
 ## Cookies et stockage local
 
-Ce site n'utilise ni cookie publicitaire, ni outil de mesure d'audience, ni service tiers de suivi. Les polices de caractères sont hébergées avec le site : aucune donnée n'est transmise à un service tiers lors de votre visite.
+**Mesure d'audience** : avec votre accord, ce site utilise Google Analytics, service de Google Ireland Limited, pour mesurer sa fréquentation (pages consultées, provenance des visites, type d'appareil) et améliorer ses contenus. Les cookies de mesure ne sont déposés qu'après votre acceptation dans le bandeau et expirent au bout de 13 mois. Aucun usage publicitaire : les signaux Google et la personnalisation des annonces sont désactivés. Les données sont conservées 14 mois. Google peut les traiter aux États-Unis ; ce transfert repose sur le cadre de protection des données UE-États-Unis (Data Privacy Framework). Base légale : votre consentement.
 
-L'outil Bilan de puissance enregistre vos saisies dans le stockage local de votre navigateur pour que vous les retrouviez à votre prochaine visite. Ces données restent sur votre appareil et ne nous sont pas transmises, sauf si vous choisissez de nous envoyer votre bilan. Vous pouvez les supprimer à tout moment avec le bouton « Tout effacer » de l'outil ou depuis les réglages de votre navigateur. Si vous êtes connecté à votre compte client, votre jeton de session est conservé de la même façon, jusqu'à la déconnexion.
+Votre choix est conservé 6 mois. Vous pouvez le modifier à tout moment avec le lien « Gestion des cookies » en bas de chaque page ; un refus supprime les cookies de mesure.
+
+Ce site n'utilise aucun cookie publicitaire. Les polices de caractères sont hébergées avec le site : aucune donnée n'est transmise à un service tiers pour les afficher.
+
+Les outils Bilan de puissance et Calculette électro enregistrent vos saisies (et, pour la calculette, l'historique de vos calculs) dans le stockage local de votre navigateur pour que vous les retrouviez à votre prochaine visite. Ces données restent sur votre appareil et ne nous sont pas transmises, sauf si vous choisissez de nous envoyer votre bilan. Vous pouvez les supprimer à tout moment avec le bouton « Tout effacer » de chaque outil ou depuis les réglages de votre navigateur. Si vous êtes connecté à votre compte client, votre jeton de session est conservé de la même façon, jusqu'à la déconnexion.
 
 ## Contenu du site et outils de calcul
 

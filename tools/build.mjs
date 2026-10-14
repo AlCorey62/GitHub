@@ -140,6 +140,8 @@ function head(cfg, ctx) {
     ...alternates,
     cfg.noindex || cfg.absoluteRoot ? "" : `<link rel="alternate" type="text/markdown" href="index.html.md" title="${t.markdown}">`,
     `<meta name="theme-color" content="${SITE.themeColor}">`,
+    // Mesure d'audience : identifiant lu par main.js (bandeau de consentement, Google Analytics après accord)
+    SITE.ga4 ? `<meta name="ga4" content="${SITE.ga4}">` : "",
     `<meta name="color-scheme" content="dark">`,
     `<meta property="og:type" content="${cfg.type === "article" ? "article" : "website"}">`,
     `<meta property="og:site_name" content="${SITE.name}">`,
@@ -493,7 +495,7 @@ function footer(cfg, ctx) {
     `</div>`,
     `<div class="container"><div class="footer-bottom">`,
     `<p>© <span data-year>${new Date().getFullYear()}</span> ${SITE.name}, ${SITE.legalForm}. SIREN ${SITE.siren}.</p>`,
-    `<ul><li><a href="${home}${LEGAL[ctx.lang]}">${esc(t.legal)}</a></li><li><a href="${home}faq/">${esc(t.faq)}</a></li><li><a href="${root}llms.txt">${esc(t.aiInfo)}</a></li><li><a href="${home}contact/">${esc(t.footerContact)}</a></li></ul>`,
+    `<ul><li><a href="${home}${LEGAL[ctx.lang]}">${esc(t.legal)}</a></li><li><a href="${home}faq/">${esc(t.faq)}</a></li><li><a href="${root}llms.txt">${esc(t.aiInfo)}</a></li><li><button class="footer-consent" type="button" data-consent-open hidden>${esc(t.cookies)}</button></li><li><a href="${home}contact/">${esc(t.footerContact)}</a></li></ul>`,
     `</div></div>`,
     `</footer>`,
   ].join("\n");

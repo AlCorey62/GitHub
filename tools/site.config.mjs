@@ -29,6 +29,10 @@ export const SITE = {
   ],
   // Ancienne appli « Calc Dark Side » : à rediriger vers /calculette-electro/ à la mise en ligne (voir README)
   oldCalcApp: "https://darkside-energy.netlify.app",
+  // Google Analytics 4 : identifiant du flux web www.darkside-energy.com (G-XXXXXXXXXX), à créer dans la propriété GA4.
+  // Vide : ni mesure ni bandeau. Rempli : bandeau de consentement, mesure seulement après acceptation
+  // et seulement sur l'adresse définitive du site (jamais dans l'aperçu). Voir README, « Mesure d'audience ».
+  ga4: "",
   // Clé IndexNow (Bing, Copilot, Yandex, Seznam, Naver) : le fichier site/<clé>.txt doit rester publié
   indexNowKey: "3b437b0f739a59eb3e76ac976d8c0458",
   themeColor: "#09090a",
@@ -125,6 +129,7 @@ export const UI = {
     legal: "Mentions légales et confidentialité",
     faq: "Questions fréquentes",
     aiInfo: "Infos pour les IA",
+    cookies: "Gestion des cookies",
     newWindow: "nouvelle fenêtre",
     catalog: "Métiers et services",
     catalogEquipment: "Matériel de distribution électrique en location clé en main",
@@ -158,6 +163,7 @@ export const UI = {
     legal: "Legal notice and privacy",
     faq: "FAQ",
     aiInfo: "Info for AI assistants",
+    cookies: "Cookie settings",
     newWindow: "new window",
     catalog: "Services",
     catalogEquipment: "Electrical distribution equipment, turnkey hire",

@@ -6,6 +6,7 @@
 //  - liste des mentions « à compléter » / « to be completed » restantes (avertissement)
 //  - langue déclarée (fr, ou en sous /en/) et liens hreflang réciproques entre les deux versions
 //  - données structurées JSON-LD valides, version Markdown présente, liens de llms.txt valides
+//  - identifiant Google Analytics renseigné (avertissement : les mentions légales décrivent la mesure d'audience)
 
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, dirname, relative, sep } from "node:path";
@@ -122,6 +123,10 @@ else {
     if (!existsSync(target)) errors.push(`llms.txt : lien cassé ${m[2]}`);
   }
 }
+
+// Mesure d'audience : les mentions légales la décrivent, l'identifiant doit être renseigné avant la mise en ligne
+const ga4 = /<meta name="ga4" content="(G-[A-Z0-9]+)">/.test(read(join(ROOT, "index.html")));
+if (!ga4) warnings.push("identifiant Google Analytics (ga4) non renseigné dans tools/site.config.mjs : ni bandeau ni mesure");
 
 for (const w of warnings) console.warn(`avertissement  ${w}`);
 for (const e of errors) console.error(`erreur         ${e}`);

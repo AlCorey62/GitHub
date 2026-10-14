@@ -259,6 +259,124 @@
     }
   }
 
+  // Mesure d'audience (Google Analytics 4) : bandeau de consentement ; Analytics n'est chargé qu'après
+  // acceptation, et seulement sur l'adresse définitive du site. Sans identifiant (meta ga4), rien ne s'affiche.
+  (function consent() {
+    var meta = document.querySelector('meta[name="ga4"]');
+    var id = meta && meta.getAttribute("content");
+    if (!id) return;
+    var KEY = "dse-consentement";
+    var VALIDITY = 182 * 24 * 3600 * 1000; // choix conservé 6 mois
+    var PROD = /(^|\.)darkside-energy\.com$/.test(location.hostname);
+    var C = EN
+      ? {
+          label: "Cookie consent",
+          title: "Audience measurement",
+          text: "With your consent, we use Google Analytics to see which pages are read and improve the website. No advertising use.",
+          more: "Our cookie policy",
+          refuse: "Decline",
+          accept: "Accept",
+        }
+      : {
+          label: "Consentement aux cookies",
+          title: "Mesure d'audience",
+          text: "Avec votre accord, nous utilisons Google Analytics pour savoir quelles pages sont consultées et améliorer le site. Aucun usage publicitaire.",
+          more: "Notre politique cookies",
+          refuse: "Refuser",
+          accept: "Accepter",
+        };
+    var legal = document.querySelector('.footer-bottom a[href*="mentions-legales"], .footer-bottom a[href*="legal-notice"]');
+    var legalHref = legal ? legal.getAttribute("href") + "#cookies" : "#";
+    var loaded = false;
+    var banner = null;
+
+    function read() {
+      try {
+        var v = JSON.parse(localStorage.getItem(KEY));
+        if (v && Date.now() - v.t < VALIDITY) return v.choice;
+      } catch (e) {
+        /* stockage indisponible : le bandeau sera reproposé */
+      }
+      return null;
+    }
+    function write(choice) {
+      try {
+        localStorage.setItem(KEY, JSON.stringify({ choice: choice, t: Date.now() }));
+      } catch (e) {
+        /* stockage indisponible */
+      }
+    }
+    function load() {
+      if (loaded || !PROD) return;
+      loaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "granted" });
+      window.gtag("js", new Date());
+      // Cookies limités à 13 mois, ni signaux Google ni personnalisation publicitaire
+      window.gtag("config", id, { cookie_expires: 34128000, allow_google_signals: false, allow_ad_personalization_signals: false });
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+      document.head.appendChild(s);
+    }
+    function clearCookies() {
+      var root = location.hostname.replace(/^www\./, "");
+      document.cookie.split(";").forEach(function (c) {
+        var name = c.split("=")[0].trim();
+        if (!/^_ga/.test(name)) return;
+        [location.hostname, "." + root, ""].forEach(function (d) {
+          document.cookie = name + "=; Max-Age=0; path=/" + (d ? "; domain=" + d : "");
+        });
+      });
+    }
+    function decide(choice) {
+      write(choice);
+      if (banner) {
+        banner.remove();
+        banner = null;
+      }
+      if (choice === "granted") {
+        load();
+      } else {
+        if (loaded && window.gtag) window.gtag("consent", "update", { analytics_storage: "denied" });
+        clearCookies();
+      }
+    }
+    function open() {
+      if (banner) return banner;
+      banner = document.createElement("div");
+      banner.className = "consent";
+      banner.setAttribute("role", "region");
+      banner.setAttribute("aria-label", C.label);
+      banner.innerHTML =
+        '<p class="consent__title">' + C.title + "</p>" +
+        "<p>" + C.text + ' <a href="' + legalHref + '">' + C.more + "</a></p>" +
+        '<div class="consent__actions">' +
+        '<button class="btn btn--ghost btn--sm" type="button" data-choice="denied">' + C.refuse + "</button>" +
+        '<button class="btn btn--ghost btn--sm" type="button" data-choice="granted">' + C.accept + "</button>" +
+        "</div>";
+      banner.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-choice]");
+        if (b) decide(b.getAttribute("data-choice"));
+      });
+      document.body.appendChild(banner);
+      return banner;
+    }
+
+    var choice = read();
+    if (choice === "granted") load();
+    else if (!choice) open();
+    document.querySelectorAll("[data-consent-open]").forEach(function (b) {
+      b.hidden = false;
+      b.addEventListener("click", function () {
+        open().querySelector("button").focus();
+      });
+    });
+  })();
+
   // Année courante
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
@@ -310,6 +428,8 @@
           form.reset();
           status.dataset.state = "ok";
           status.textContent = T.sent;
+          // Demande envoyée : compté dans Google Analytics si le visiteur l'a accepté
+          if (window.gtag) window.gtag("event", "generate_lead", { form_name: form.getAttribute("name") || "contact" });
         })
         .catch(function () {
           status.dataset.state = "error";

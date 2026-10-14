@@ -117,7 +117,7 @@ self.addEventListener("activate", (event) => {
 });
 ```
 
-L'ancienne appli utilisait Google Analytics ; la nouvelle calculette, comme le reste du site, n'a pas de mesure d'audience.
+L'ancienne appli utilisait Google Analytics ; la nouvelle calculette est mesurée comme le reste du site (voir « Mesure d'audience »).
 
 ## Mise en ligne sur Netlify
 
@@ -125,6 +125,19 @@ L'ancienne appli utilisait Google Analytics ; la nouvelle calculette, comme le r
 2. Vérifier le site sur l'adresse provisoire `*.netlify.app`, et tester le formulaire de contact : les messages arrivent dans *Forms* sur Netlify, où l'on peut activer une notification par e-mail vers contact@darkside-energy.com. Deux formulaires y apparaissent : `contact` (site français) et `contact-en` (version anglaise, demandes à traiter en anglais) ; choisir « Any form » pour la notification.
 3. Bascule du domaine : voir ci-dessous. Le certificat HTTPS est créé automatiquement par Netlify.
 4. Une fois la bascule faite, déclarer `https://www.darkside-energy.com/sitemap.xml` dans Google Search Console.
+
+### Mesure d'audience (Google Analytics 4)
+
+Le site mesure son audience avec Google Analytics 4, après accord du visiteur (bandeau Accepter / Refuser, même niveau pour les deux boutons). Sans accord, aucun script Google n'est chargé et aucun cookie n'est déposé. Le choix est gardé 6 mois ; le lien « Gestion des cookies » du pied de page permet de le changer.
+
+1. Google Analytics, *Administration*, propriété GA4 déjà utilisée, *Flux de données* : *Ajouter un flux*, *Web*, adresse `https://www.darkside-energy.com`, nom au choix (par exemple « Site Netlify »). Laisser la mesure améliorée activée.
+2. Recopier l'identifiant de mesure du flux (`G-XXXXXXXXXX`) dans `ga4` de `tools/site.config.mjs`, puis reconstruire (`npm run build`). Tant que `ga4` est vide, ni bandeau ni mesure, et `npm run check` le signale.
+3. *Administration*, *Collecte et conservation des données*, *Conservation des données* : **14 mois** (durée annoncée dans les mentions légales).
+4. *Collecte de données Google Signals* : laisser **désactivé** (aucun usage publicitaire, comme annoncé dans les mentions légales).
+5. *Événements* : marquer `generate_lead` comme événement clé. Il est envoyé à chaque demande envoyée par le formulaire de contact (visiteurs ayant accepté).
+6. Après la bascule du domaine, associer la propriété à Google Search Console (*Administration*, *Associations de produits*).
+
+La mesure ne fonctionne que sur `darkside-energy.com` et `www.darkside-energy.com` : l'adresse provisoire `*.netlify.app` et l'aperçu affichent le bandeau mais ne chargent jamais Analytics, pour ne pas fausser les chiffres. La politique de sécurité (`netlify.toml`, CSP) autorise les seuls domaines Google nécessaires.
 
 ### Comptes clients du bilan de puissance (Netlify Identity)
 
@@ -198,6 +211,7 @@ Aucun propos n'est attribué à Damien Nirel sur le site (choix de Damien) : pas
 6. **Clientèle exclusivement professionnelle** (indiqué dans les mentions légales) : pas de médiateur de la consommation à désigner.
 7. **Photos de terrain** (accueil, matériel, régie technique) : fournies par Damien. Une bannière d'événement, les marques du loueur et du transporteur et une plaque d'immatriculation ont été floutées. À confirmer : les droits sur la photo des câbles au pied des conteneurs (prise par un photographe ?).
 8. **Calculette** : tensions des réseaux étrangers (valeurs nominales usuelles) et parc de câbles à confirmer ; hypothèse de réactance à 60 Hz (0,096 mΩ/m) ; seuil d'alerte de charge à 80 % du calibre (seuil de Darkside Power Plan). Redirection de l'ancienne appli à faire le jour de la mise en ligne (voir « Calculette électro »).
+9. **Google Analytics** : identifiant du nouveau flux web à renseigner et réglages de la propriété à faire (voir « Mesure d'audience »).
 
 ## Référencement par les moteurs et les assistants IA (GEO)
 
