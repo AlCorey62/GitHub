@@ -14,7 +14,7 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   energie-responsable/     Démarche RSE
   references/              Lieux et historique
   entreprise/              L'entreprise, nous rejoindre
-  news/                    Le sais-tu ? et actualités (12 articles)
+  news/                    Le sais-tu ? et actualités ; feed.xml : flux RSS des articles (généré)
   faq/                     Questions fréquentes (17 questions, balisage FAQPage)
   lexique/                 Lexique de 46 termes, avec recherche (balisage DefinedTermSet)
   bilan-de-puissance/      Outil de bilan de puissance (démo 4 lignes, accès complet pour les clients)
@@ -43,10 +43,15 @@ tools/
   check.mjs                Contrôle qualité (liens, ancres, titres, images, mentions à compléter)
   serve.mjs                Serveur local de prévisualisation (simule aussi la connexion client)
   og-image.html            Modèle de l'image de partage réseaux sociaux
+  publier.mjs              Publication programmée des articles en attente (voir editorial/README.md)
+  visuels.mjs              Visuels des publications réseaux sociaux (Playwright)
+editorial/                 Programme éditorial « Le sais-tu ? » : règles, calendrier, anecdotes, modèles,
+                           articles en attente (a-paraitre/) et publications de la semaine (semaines/)
 wix/                       Passation pour reconstruire le site dans Wix : note, plan des pages, textes,
                            données structurées (voir wix/README.md)
 tests/elec.test.mjs        Tests des formules électriques (conversions, chute de tension, réseaux, parc)
 tests/site.test.mjs        Tests du site construit (scripts autorisés par la CSP, réseaux de la calculette)
+tests/editorial.test.mjs   Contrôle des articles en attente de publication
 netlify.toml               Hébergement Netlify : build, redirections des anciennes URL, en-têtes de sécurité
 app.html                   Ancien prototype « Calculateur d'Énergie Stand » (non publié, conservé)
 ```
@@ -222,6 +227,7 @@ Les assistants IA trouvent l'information de deux façons : ce qu'ils ont appris 
 - Contenu en HTML statique, lisible sans JavaScript par tous les robots (l'ancien site Wix affichait très peu de texte sans JavaScript).
 - `robots.txt` qui autorise explicitement les robots des moteurs et des IA (OpenAI, Anthropic, Perplexity, Google, Apple, Mistral, Meta, Amazon, Common Crawl).
 - `llms.txt` (résumé structuré du site, format llmstxt.org), `llms-full.txt` (tout le contenu en Markdown) et une version Markdown de chaque page (`index.html.md`), signalée dans l'en-tête HTML.
+- Flux RSS des articles : `/news/feed.xml` et `/en/did-you-know/feed.xml`, signalés dans l'en-tête de chaque page.
 - Données structurées Schema.org sur chaque page : organisation (identité, SIREN, adresse, contact, domaines d'expertise, services), page web, services, outils de calcul, questions fréquentes, lexique, articles, personne (directeur technique), fil d'Ariane. Vérifiées contre le vocabulaire officiel Schema.org.
 - Balise `robots` autorisant les extraits longs (`max-snippet:-1`), utilisés par les réponses générées.
 - Contenus faciles à citer : bloc « En bref » en page d'accueil, FAQ, lexique, encadrés « À retenir », méthodes de calcul explicites, dates de mise à jour.
