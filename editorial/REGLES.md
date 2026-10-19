@@ -10,7 +10,8 @@
 
 ## Exactitude
 
-- Ne jamais inventer une donnée : chiffres, normes, valeurs, durées, retours d'expérience. En cas de doute, ne pas l'écrire ou le signaler à Damien dans la PR.
+- Ne jamais inventer une donnée : chiffres, normes, valeurs, durées, retours d'expérience.
+- Vérifier soi-même chaque valeur chiffrée ou normative avant de l'écrire (sources, calculs) et lister ces vérifications dans la section « Valeurs vérifiées » de `publications.md`. Ce qui ne peut pas être vérifié est retiré, pas renvoyé à Damien.
 - Normes et valeurs : citer la référence (NF C 15-100, NF C 18-510, IEC 60309…) et rester aux valeurs établies. Les calculs sont faits avec `site/assets/js/elec.js` (mêmes formules que la calculette) et le détail est donné.
 - Hypothèses signalées comme telles (« cos φ de 0,9 retenu par défaut »).
 - Les cas terrain viennent uniquement de `anecdotes.md` : pas d'anecdote inventée.
@@ -51,4 +52,4 @@
 
 - Relire `calendrier.md` pour éviter les répétitions avec les articles existants (liste dans `site/news/index.html`).
 - Lancer `npm test` : il vérifie les articles en attente (configuration, dates, emplacements libres).
-- Récapitulatif lisible dans la PR : texte des articles et des publications, sources des chiffres, points à faire valider.
+- Page de relecture à jour (`node tools/relecture.mjs`, voir README) et lien dans la PR, avec les valeurs vérifiées.
