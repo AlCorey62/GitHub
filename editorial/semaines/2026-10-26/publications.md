@@ -2,11 +2,11 @@
 
 Statut : **à valider par Damien**. Publication conseillée entre 8 h et 9 h. Visuels dans ce dossier (1200 × 1200).
 
-## Points à faire valider
+## Valeurs vérifiées le 19/10/2026
 
-- Lundi : la limite de 3,5 mA par appareil branché sur prise (norme IEC 62368-1) et la recommandation des fabricants de garder la fuite permanente sous un tiers de la sensibilité du différentiel.
-- Mardi : « nos prises rouges sont en 5 broches » (repris du parc de câbles 5G de la calculette).
-- Jeudi : calcul fait avec la calculette du site (cos φ 0,9 par défaut, 30 m de ligne).
+- Différentiel 30 mA : ne doit pas déclencher jusqu'à 15 mA, doit déclencher à 30 mA (IEC 61008). Retirés faute de source suffisante : la limite de 3,5 mA par appareil et la règle du « tiers de la sensibilité ».
+- Prises P17 (IEC 60309) : couleurs bleu 200 à 250 V, rouge 380 à 480 V, jaune 100 à 130 V, noir 500 à 690 V ; terre à 6 h pour les prises bleues 230 V et rouges 400 V. Retiré : « nos prises rouges sont en 5 broches » (parc de câbles encore à confirmer).
+- Calcul du jeudi : 40 000 ÷ (√3 × 400 × 0,9) = 64,15 A, refait avec les formules de la calculette ; prise et câble proposés par la calculette (P17 125 A, 5G35, charge 51 %, chute de tension 0,51 % sur 30 m).
 
 ---
 
@@ -19,7 +19,7 @@ Statut : **à valider par Damien**. Publication conseillée entre 8 h et 9 h. Vi
 
 > Une rampe de LED en plus, et tout s'éteint. Pourtant, aucun appareil n'est en panne.
 >
-> Les drivers de LED et les alimentations électroniques laissent fuir en permanence un petit courant vers la terre. Sur un même différentiel 30 mA, ces fuites s'additionnent… et sa norme l'autorise à déclencher dès 15 mA.
+> Les projecteurs LED et les appareils électroniques reliés à la terre laissent fuir en permanence un petit courant vers la terre. Sur un même différentiel 30 mA, ces fuites s'additionnent… et il peut couper dès qu'elles dépassent 15 mA.
 >
 > La parade n'est jamais de retirer la protection : on répartit les appareils sur plusieurs circuits, chacun avec son différentiel.
 >
@@ -108,7 +108,7 @@ Statut : **à valider par Damien**. Publication conseillée entre 8 h et 9 h. Vi
 
 **Facebook**
 
-> ⚡ 40 kW en triphasé sur une P17 63 A ? Ça ne passe pas : 64,15 A par phase. La calculette vous le dit en deux secondes 👉 https://www.darkside-energy.com/calculette-electro/?v=40&u=kW&ph=3&n=eu&cos=0.9&l=30
+> ⚡ 40 kW en triphasé sur une P17 63 A ? Ça dépasse : 64,15 A par phase. La calculette vous le dit en deux secondes 👉 https://www.darkside-energy.com/calculette-electro/?v=40&u=kW&ph=3&n=eu&cos=0.9&l=30
 
 ---
 

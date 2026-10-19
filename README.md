@@ -45,6 +45,7 @@ tools/
   og-image.html            Modèle de l'image de partage réseaux sociaux
   publier.mjs              Publication programmée des articles en attente (voir editorial/README.md)
   visuels.mjs              Visuels des publications réseaux sociaux (Playwright)
+  relecture.mjs            Page de relecture d'une semaine éditoriale (visuels, textes, articles)
 editorial/                 Programme éditorial « Le sais-tu ? » : règles, calendrier, anecdotes, modèles,
                            articles en attente (a-paraitre/) et publications de la semaine (semaines/)
 wix/                       Passation pour reconstruire le site dans Wix : note, plan des pages, textes,

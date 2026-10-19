@@ -52,24 +52,24 @@
       <aside class="takeaways" aria-label="Key points">
         <p class="eyebrow">Key points</p>
         <ul class="check-list">
-          <li>LED drivers and electronic power supplies constantly leak a small current to earth: on the same RCD, these leakage currents add up.</li>
-          <li>A 30 mA RCD may trip from 15 mA: its standard allows tripping anywhere between half and all of its rated sensitivity.</li>
+          <li>LED fixtures and earthed electronic equipment constantly leak a small current to earth: on the same RCD, these leakage currents add up.</li>
+          <li>A 30 mA RCD may trip as soon as leakage exceeds 15 mA: its standard only forbids tripping up to half its sensitivity.</li>
           <li>Removing the protection is never the answer: spread the equipment over several circuits, each with its own RCD.</li>
         </ul>
       </aside>
       <article class="prose">
 <p>Picture this: one more bar of LED fixtures on a line that is already well loaded, and everything goes dark. No fixture is faulty, the power box is in good condition, the total load is far below the rating. Yet the <a href="../../glossary/#differentiel-30-ma">30 mA RCD</a> has tripped. It is not broken: it is doing exactly what it was designed to do.</p>
 <h2>Leakage currents add up</h2>
-<p>LED drivers, like most electronic power supplies (computers, screens, consoles, amplifiers), include a filter against electromagnetic interference. This filter connects the conductors to earth through capacitors: a small current flows to earth all the time, even when the equipment works perfectly.</p>
-<p>For one device, this current stays low: the equipment safety standard (IEC 62368-1) limits it to 3.5 mA for plug-connected equipment. But an RCD does not see devices one by one: it measures the sum of all leakage downstream. Twenty devices leaking 1 mA each make 20 mA of permanent leakage on the same RCD.</p>
+<p>LED fixtures, like most earthed electronic equipment (computers, screens, consoles, amplifiers), include a filter against electromagnetic interference. This filter connects the conductors to earth through capacitors: a small current flows to earth all the time, even when the equipment works perfectly.</p>
+<p>For one device, this current stays low. But an RCD does not see devices one by one: it measures the sum of all leakage downstream. For example, twenty devices leaking 1 mA each make 20 mA of permanent leakage on the same RCD.</p>
 <h2>A 30 mA RCD trips before 30 mA</h2>
-<p>A 30 mA RCD does not cut off at exactly 30 mA. Its product standards (IEC 61008 and IEC 61009) require it to trip at 30 mA at the latest, and allow it to trip from half that value, 15 mA. With 20 mA of permanent leakage, very little is needed to cross the threshold: one more device, a switch-on, some moisture on a connection.</p>
+<p>A 30 mA RCD does not cut off at exactly 30 mA. Its product standard (IEC 61008) requires it not to trip up to half its sensitivity, 15 mA, and to trip at 30 mA. In between, it may trip at any point. With 20 mA of permanent leakage, very little is needed to cross the threshold: one more device, a switch-on, some moisture on a connection.</p>
 <h2>At switch-on: inrush current</h2>
 <p>When powered up, each LED driver charges its input capacitors and draws, for a very brief moment, a current far higher than its operating current. Switched on all at once, dozens of drivers can trip the circuit <a href="../../glossary/#disjoncteur">breaker</a>, even though the operating load is well within limits. RCD or breaker, each has its own job: we explain it in <a href="../why-it-trips/">Why does it “trip”?</a></p>
 <h2>What we do</h2>
 <ul>
 <li><strong>Split</strong> electronic equipment over several circuits, each protected by its own RCD: leakage is shared instead of adding up.</li>
-<li><strong>Keep a margin</strong>: protection manufacturers recommend keeping permanent leakage to about a third of the rated sensitivity, around ten milliamps on a 30 mA RCD.</li>
+<li><strong>Keep a margin</strong>: since a 30 mA RCD may trip from 15 mA, the permanent leakage of each circuit must stay well below that.</li>
 <li><strong>Choose the right protection</strong>: for large amounts of electronics, RCDs with enhanced immunity, designed to withstand this leakage and inrush current better.</li>
 <li><strong>Stagger switch-on</strong> rather than powering everything up at once.</li>
 </ul>
