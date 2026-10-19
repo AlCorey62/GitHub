@@ -139,6 +139,7 @@ function head(cfg, ctx) {
     cfg.noindex ? "" : `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">`,
     ...alternates,
     cfg.noindex || cfg.absoluteRoot ? "" : `<link rel="alternate" type="text/markdown" href="index.html.md" title="${t.markdown}">`,
+    `<link rel="alternate" type="application/rss+xml" href="${SITE.url}${FEEDS[ctx.lang].path}" title="${esc(FEEDS[ctx.lang].title)}">`,
     `<meta name="theme-color" content="${SITE.themeColor}">`,
     // Mesure d'audience : identifiant lu par main.js (bandeau de consentement, Google Analytics après accord)
     SITE.ga4 ? `<meta name="ga4" content="${SITE.ga4}">` : "",
@@ -621,6 +622,15 @@ function frenchTypo(html) {
   return parts.join("");
 }
 
+// --- Flux RSS des articles (« Le sais-tu ? » en français, « Did you know? » en anglais) ---------
+const FEEDS = {
+  fr: { path: "/news/feed.xml", dir: "/news/", title: `Le sais-tu ? | ${SITE.name}`, language: "fr-FR",
+        description: "Articles de Dark Side Energy sur la distribution électrique événementielle : notions, méthodes et repères de terrain." },
+  en: { path: "/en/did-you-know/feed.xml", dir: "/en/did-you-know/", title: `Did you know? | ${SITE.name}`, language: "en-GB",
+        description: "Articles by Dark Side Energy on event power distribution: key notions, methods and field know-how." },
+};
+const xmlEsc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
 // --- Construction -------------------------------------------------------------------
 
 const v = {
@@ -648,6 +658,7 @@ for (const file of files) {
 
 const sitemap = [];
 const pagesMd = [];
+const articles = [];
 let count = 0;
 
 for (const file of files) {
@@ -705,6 +716,9 @@ for (const file of files) {
   }
 
   if (!cfg.noindex && cfg.sitemap !== false) sitemap.push({ url, alt: ctx.alt, lastmod: cfg.updated || cfg.article?.date });
+  if (!cfg.noindex && cfg.type === "article" && cfg.article?.date) {
+    articles.push({ url, lang, title: cfg.title, description: cfg.description, date: cfg.article.date });
+  }
 }
 
 const today = new Date().toISOString().slice(0, 10);
@@ -729,6 +743,39 @@ const xml = [
   ``,
 ].join("\n");
 writeFileSync(join(SITE_DIR, "sitemap.xml"), xml);
+
+// Flux RSS : articles du plus récent au plus ancien (publication à 7 h, heure de Paris)
+for (const [lang, feed] of Object.entries(FEEDS)) {
+  const items = articles
+    .filter((a) => a.lang === lang && a.url.startsWith(feed.dir))
+    .sort((a, b) => b.date.localeCompare(a.date) || a.url.localeCompare(b.url));
+  const rss = [
+    `<?xml version="1.0" encoding="UTF-8"?>`,
+    `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">`,
+    `<channel>`,
+    `<title>${xmlEsc(feed.title)}</title>`,
+    `<link>${SITE.url}${feed.dir}</link>`,
+    `<description>${xmlEsc(feed.description)}</description>`,
+    `<language>${feed.language}</language>`,
+    `<atom:link href="${SITE.url}${feed.path}" rel="self" type="application/rss+xml"/>`,
+    items.length ? `<lastBuildDate>${new Date(`${items[0].date}T05:00:00Z`).toUTCString()}</lastBuildDate>` : "",
+    ...items.map((a) =>
+      [
+        `<item>`,
+        `<title>${xmlEsc(a.title)}</title>`,
+        `<link>${SITE.url}${a.url}</link>`,
+        `<guid isPermaLink="true">${SITE.url}${a.url}</guid>`,
+        `<pubDate>${new Date(`${a.date}T05:00:00Z`).toUTCString()}</pubDate>`,
+        `<description>${xmlEsc(a.description)}</description>`,
+        `</item>`,
+      ].join("")
+    ),
+    `</channel>`,
+    `</rss>`,
+    ``,
+  ].filter((l) => l !== "");
+  writeFileSync(join(SITE_DIR, feed.path), rss.join("\n") + "\n");
+}
 
 // --- llms.txt (format https://llmstxt.org) et llms-full.txt -------------------------------
 const byUrl = new Map(pagesMd.map((p) => [p.url, p]));

@@ -201,6 +201,12 @@
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
 
+# Flux RSS des articles (repris par les outils de publication sur les réseaux sociaux)
+[[headers]]
+  for = "/*/feed.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
+
 [[headers]]
   for = "/llms-full.txt"
   [headers.values]
