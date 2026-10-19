@@ -53,6 +53,7 @@ tests/elec.test.mjs        Tests des formules électriques (conversions, chute d
 tests/site.test.mjs        Tests du site construit (scripts autorisés par la CSP, réseaux de la calculette)
 tests/editorial.test.mjs   Contrôle des articles en attente de publication
 netlify.toml               Hébergement Netlify : build, redirections des anciennes URL, en-têtes de sécurité
+.github/workflows/publication.yml  Publication programmée quotidienne des articles validés (voir editorial/README.md)
 app.html                   Ancien prototype « Calculateur d'Énergie Stand » (non publié, conservé)
 ```
 

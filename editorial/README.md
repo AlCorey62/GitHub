@@ -31,7 +31,7 @@ editorial/
 
 1. **Rédaction** : chaque jeudi, la semaine suivante non encore préparée est rédigée (articles dans `a-paraitre/`, textes et visuels dans `semaines/`) et proposée dans une demande de fusion (PR) avec le récapitulatif lisible.
 2. **Validation** : Damien relit, corrige ou refuse. Rien n'est publié sans son accord.
-3. **Publication des articles** : chaque article validé est mis en ligne le jour prévu (`node tools/publier.mjs`, puis `npm run build`, `npm run check`, `npm test`).
+3. **Publication des articles** : chaque matin vers 6 h (heure de Paris), la tâche GitHub « Publication programmée » (`.github/workflows/publication.yml`) met en ligne les articles validés du jour : `node tools/publier.mjs`, puis construction, contrôles et tests, puis envoi sur main, que Netlify publie. En cas d'échec, rien n'est envoyé et GitHub prévient par e-mail ; la tâche peut aussi être lancée à la main depuis l'onglet *Actions* du dépôt.
 4. **Réseaux sociaux** : les textes de `semaines/AAAA-MM-JJ/publications.md` sont programmés dans LinkedIn (planification de la page) et Meta Business Suite (Facebook), avec les visuels du même dossier. Les flux RSS du site (`/news/feed.xml`, `/en/did-you-know/feed.xml`) permettent aussi une diffusion automatique par un outil tiers.
 5. **Mesure** : chaque mois, dans Google Analytics (sources linkedin.com et facebook.com, événement `generate_lead`) et dans les statistiques LinkedIn et Facebook, on garde les formats qui marchent.
 
