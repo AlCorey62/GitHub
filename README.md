@@ -45,6 +45,7 @@ tools/
   og-image.html            Modèle de l'image de partage réseaux sociaux
   publier.mjs              Publication programmée des articles en attente (voir editorial/README.md)
   visuels.mjs              Visuels des publications réseaux sociaux (Playwright)
+  relecture.mjs            Page de relecture d'une semaine éditoriale (visuels, textes, articles)
 editorial/                 Programme éditorial « Le sais-tu ? » : règles, calendrier, anecdotes, modèles,
                            articles en attente (a-paraitre/) et publications de la semaine (semaines/)
 wix/                       Passation pour reconstruire le site dans Wix : note, plan des pages, textes,
@@ -53,6 +54,7 @@ tests/elec.test.mjs        Tests des formules électriques (conversions, chute d
 tests/site.test.mjs        Tests du site construit (scripts autorisés par la CSP, réseaux de la calculette)
 tests/editorial.test.mjs   Contrôle des articles en attente de publication
 netlify.toml               Hébergement Netlify : build, redirections des anciennes URL, en-têtes de sécurité
+.github/workflows/publication.yml  Publication programmée quotidienne des articles validés (voir editorial/README.md)
 app.html                   Ancien prototype « Calculateur d'Énergie Stand » (non publié, conservé)
 ```
 

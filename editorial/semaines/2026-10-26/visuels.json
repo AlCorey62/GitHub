@@ -1,0 +1,7 @@
+[
+  { "fichier": "2026-10-26-lundi.png", "rubrique": "Le sais-tu ?", "titre": "Pourquoi les *LED* font-elles sauter les différentiels ?", "sousTitre": "Des fuites qui s'additionnent sur un même différentiel 30 mA." },
+  { "fichier": "2026-10-27-mardi.png", "rubrique": "Le sais-tu ?", "titre": "Bleue, rouge, jaune : comment lire une *prise P17* ?", "sousTitre": "Couleur, broches et détrompeur." },
+  { "fichier": "2026-10-28-mercredi.png", "rubrique": "Vrai ou faux ?", "titre": "Un différentiel 30 mA protège contre les *surcharges*.", "sousTitre": "La réponse dans la publication." },
+  { "fichier": "2026-10-29-jeudi.png", "rubrique": "La calculette en situation", "titre": "40 kW en triphasé sur une *P17 63 A* ?", "sousTitre": "64,15 A par phase : il faut passer en 125 A." },
+  { "fichier": "2026-10-30-vendredi.png", "rubrique": "Coulisses", "titre": "Même sous la neige, *le courant passe*.", "sousTitre": "Connecteurs Powerlock : une couleur par conducteur.", "photo": "site/assets/img/powerlock-neige-1500.jpg" }
+]

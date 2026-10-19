@@ -117,6 +117,11 @@ for (const file of walk(SITE_DIR)) {
   if (SKIP[url]) continue;
   // Version anglaise : hors du dossier Wix (elle demanderait l'application Wix Multilingual)
   if (url.startsWith("/en/")) continue;
+  // Articles publiés par le programme éditorial (tools/publier.mjs) : à créer dans le blog Wix
+  if (!WIX[url] && /^\/news\/[^/]+\/$/.test(url)) {
+    WIX[url] = [`/post/${url.split("/")[2]}`, "Créer l'article dans le blog Wix (adresse à confirmer)"];
+    order.push(url);
+  }
   if (!WIX[url]) throw new Error(`Page sans correspondance Wix : ${url} (compléter WIX dans tools/wix-kit.mjs)`);
   const html = readFileSync(file, "utf8");
   const cfg = JSON.parse(html.match(/<!--page\s*([\s\S]*?)-->/)[1]);

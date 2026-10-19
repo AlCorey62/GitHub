@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--page
+{
+  "path": "en/did-you-know/leds-and-rcds/",
+  "title": "Why do LEDs trip RCDs?",
+  "description": "Leakage and inrush currents: why LEDs and electronics trip 30 mA RCDs, and how to split circuits to avoid it.",
+  "nav": "news",
+  "type": "article",
+  "article": {
+    "date": "2026-10-26",
+    "readingTime": "3 min",
+    "excerpt": "Leakage from LED drivers adds up on a single RCD. The fix: split the circuits.",
+    "kind": "Did you know?"
+  },
+  "breadcrumb": [
+    [
+      "Did you know?",
+      "did-you-know/"
+    ],
+    [
+      "Why do LEDs trip RCDs?"
+    ]
+  ],
+  "updated": "2026-10-26",
+  "lang": "en",
+  "alternate": "/news/led-et-differentiel/"
+}
+-->
+<!-- head:start -->
+<!-- head:end -->
+</head>
+<body>
+<!-- header:start -->
+<!-- header:end -->
+
+<main id="contenu">
+
+  <section class="page-hero">
+    <div class="container container--narrow">
+      <!-- breadcrumb:start -->
+<!-- breadcrumb:end -->
+      <p class="eyebrow">Did you know?</p>
+      <h1>Why do LEDs trip RCDs?</h1>
+      <p class="post-meta"><time datetime="2026-10-26">26 October 2026</time><span>3 min read</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <aside class="takeaways" aria-label="Key points">
+        <p class="eyebrow">Key points</p>
+        <ul class="check-list">
+          <li>LED fixtures and earthed electronic equipment constantly leak a small current to earth: on the same RCD, these leakage currents add up.</li>
+          <li>A 30 mA RCD may trip as soon as leakage exceeds 15 mA: its standard only forbids tripping up to half its sensitivity.</li>
+          <li>Removing the protection is never the answer: spread the equipment over several circuits, each with its own RCD.</li>
+        </ul>
+      </aside>
+      <article class="prose">
+<p>Picture this: one more bar of LED fixtures on a line that is already well loaded, and everything goes dark. No fixture is faulty, the power box is in good condition, the total load is far below the rating. Yet the <a href="../../glossary/#differentiel-30-ma">30 mA RCD</a> has tripped. It is not broken: it is doing exactly what it was designed to do.</p>
+<h2>Leakage currents add up</h2>
+<p>LED fixtures, like most earthed electronic equipment (computers, screens, consoles, amplifiers), include a filter against electromagnetic interference. This filter connects the conductors to earth through capacitors: a small current flows to earth all the time, even when the equipment works perfectly.</p>
+<p>For one device, this current stays low. But an RCD does not see devices one by one: it measures the sum of all leakage downstream. For example, twenty devices leaking 1 mA each make 20 mA of permanent leakage on the same RCD.</p>
+<h2>A 30 mA RCD trips before 30 mA</h2>
+<p>A 30 mA RCD does not cut off at exactly 30 mA. Its product standard (IEC 61008) requires it not to trip up to half its sensitivity, 15 mA, and to trip at 30 mA. In between, it may trip at any point. With 20 mA of permanent leakage, very little is needed to cross the threshold: one more device, a switch-on, some moisture on a connection.</p>
+<h2>At switch-on: inrush current</h2>
+<p>When powered up, each LED driver charges its input capacitors and draws, for a very brief moment, a current far higher than its operating current. Switched on all at once, dozens of drivers can trip the circuit <a href="../../glossary/#disjoncteur">breaker</a>, even though the operating load is well within limits. RCD or breaker, each has its own job: we explain it in <a href="../why-it-trips/">Why does it “trip”?</a></p>
+<h2>What we do</h2>
+<ul>
+<li><strong>Split</strong> electronic equipment over several circuits, each protected by its own RCD: leakage is shared instead of adding up.</li>
+<li><strong>Keep a margin</strong>: since a 30 mA RCD may trip from 15 mA, the permanent leakage of each circuit must stay well below that.</li>
+<li><strong>Choose the right protection</strong>: for large amounts of electronics, RCDs with enhanced immunity, designed to withstand this leakage and inrush current better.</li>
+<li><strong>Stagger switch-on</strong> rather than powering everything up at once.</li>
+</ul>
+<p>Removing the RCD, or replacing it with a less sensitive one, is never the answer: the 30 mA device is there to protect people.</p>
+<blockquote>An RCD that trips with LEDs is not faulty: it is adding up leakage. The answer is to split the circuits.</blockquote>
+      </article>
+      <div class="note note--info" style="margin-top:40px">
+        <svg data-icon="clipboard-list"></svg>
+        <div><p>How many circuits do you need? List your equipment in the power assessment.</p><p><a class="link-arrow" href="../../power-assessment/">Open the power assessment<svg data-icon="arrow-right"></svg></a></p></div>
+      </div>
+      <nav class="post-nav" aria-label="Articles"></nav>
+    </div>
+  </section>
+
+  <!-- cta:start -->
+<!-- cta:end -->
+
+</main>
+
+<!-- footer:start -->
+<!-- footer:end -->
+</body>
+</html>

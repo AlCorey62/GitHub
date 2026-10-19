@@ -30,8 +30,8 @@ editorial/
 ## Le circuit
 
 1. **Rédaction** : chaque jeudi, la semaine suivante non encore préparée est rédigée (articles dans `a-paraitre/`, textes et visuels dans `semaines/`) et proposée dans une demande de fusion (PR) avec le récapitulatif lisible.
-2. **Validation** : Damien relit, corrige ou refuse. Rien n'est publié sans son accord.
-3. **Publication des articles** : chaque article validé est mis en ligne le jour prévu (`node tools/publier.mjs`, puis `npm run build`, `npm run check`, `npm test`).
+2. **Validation** : Damien relit la semaine sur la page de relecture (https://claude.ai/artifact/NTaN4bsPi1FPkt4mbPPStv, mise à jour à chaque rédaction avec `node tools/relecture.mjs`), puis corrige ou valide. Rien n'est publié sans son accord.
+3. **Publication des articles** : chaque matin vers 6 h (heure de Paris), la tâche GitHub « Publication programmée » (`.github/workflows/publication.yml`) met en ligne les articles validés du jour : `node tools/publier.mjs`, puis construction, contrôles et tests, puis envoi sur main, que Netlify publie. En cas d'échec, rien n'est envoyé et GitHub prévient par e-mail ; la tâche peut aussi être lancée à la main depuis l'onglet *Actions* du dépôt.
 4. **Réseaux sociaux** : les textes de `semaines/AAAA-MM-JJ/publications.md` sont programmés dans LinkedIn (planification de la page) et Meta Business Suite (Facebook), avec les visuels du même dossier. Les flux RSS du site (`/news/feed.xml`, `/en/did-you-know/feed.xml`) permettent aussi une diffusion automatique par un outil tiers.
 5. **Mesure** : chaque mois, dans Google Analytics (sources linkedin.com et facebook.com, événement `generate_lead`) et dans les statistiques LinkedIn et Facebook, on garde les formats qui marchent.
 
@@ -43,6 +43,14 @@ npm run build && npm run check && npm test
 ```
 
 Le script place les pages dans `site/`, relie l'article au précédent, ajoute sa carte en tête de « Le sais-tu ? » et des trois derniers articles de l'accueil, puis l'ajoute à llms.txt.
+
+## Page de relecture
+
+```bash
+node tools/relecture.mjs editorial/semaines/2026-10-26 <dossier de sortie>
+```
+
+Rassemble sur une page, jour par jour : visuel, textes LinkedIn et Facebook (bouton Copier), lien et texte complet des articles du site. La page est republiée à la même adresse chaque semaine.
 
 ## Visuels
 
