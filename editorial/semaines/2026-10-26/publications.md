@@ -1,6 +1,6 @@
 # Semaine du 26 octobre 2026
 
-Statut : **à valider par Damien**. Publication conseillée entre 8 h et 9 h. Visuels dans ce dossier (1200 × 1200).
+Statut : **validé par Damien le 19/10/2026**. Publication conseillée entre 8 h et 9 h. Visuels dans ce dossier (1200 × 1200).
 
 ## Valeurs vérifiées le 19/10/2026
 

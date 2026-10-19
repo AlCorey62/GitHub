@@ -9,11 +9,11 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 26/10 | Le sais-tu ? (site) | Pourquoi les LED font-elles sauter les différentiels ? Courants de fuite, appels de courant, répartition des circuits | rédigé |
-| Mar 27/10 | Le sais-tu ? (site, en attendant les anecdotes) | Bleue, rouge, jaune : comment lire une prise P17 ? Couleurs, broches, détrompeur | rédigé |
-| Mer 28/10 | Vrai ou faux | « Un différentiel 30 mA protège l'installation contre les surcharges. » Faux | rédigé |
-| Jeu 29/10 | Calculette | 40 kW en triphasé sur une P17 63 A ? 64,2 A : il faut passer en 125 A | rédigé |
-| Ven 30/10 | Coulisses | Connecteurs Powerlock dans la neige : le montage continue quelle que soit la météo | rédigé |
+| Lun 26/10 | Le sais-tu ? (site) | Pourquoi les LED font-elles sauter les différentiels ? Courants de fuite, appels de courant, répartition des circuits | validé |
+| Mar 27/10 | Le sais-tu ? (site, en attendant les anecdotes) | Bleue, rouge, jaune : comment lire une prise P17 ? Couleurs, broches, détrompeur | validé |
+| Mer 28/10 | Vrai ou faux | « Un différentiel 30 mA protège l'installation contre les surcharges. » Faux | validé |
+| Jeu 29/10 | Calculette | 40 kW en triphasé sur une P17 63 A ? 64,15 A : il faut passer en 125 A | validé |
+| Ven 30/10 | Coulisses | Connecteurs Powerlock dans la neige : le montage continue quelle que soit la météo | validé |
 
 ## Semaine du 2 novembre 2026
 
