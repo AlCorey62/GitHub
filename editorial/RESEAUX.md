@@ -4,6 +4,7 @@ La tâche GitHub « Diffusion réseaux sociaux » (`.github/workflows/diffusion.
 
 - Elle ne publie que les semaines validées : ligne `Statut : **validé par Damien le JJ/MM/AAAA**` dans `semaines/AAAA-MM-JJ/publications.md`.
 - Elle prend le texte, le visuel et le lien du jour, et vérifie d'abord que le lien répond sur le site.
+- Elle vérifie aussi que le jeton donne accès à la page Dark Side Energy et pas à une autre page gérée par le même compte. Sinon, elle n'envoie rien.
 - Chaque envoi est noté dans `semaines/AAAA-MM-JJ/diffusion.json` : rien n'est publié deux fois, même avec les passages de secours.
 - En cas d'échec, GitHub prévient par e-mail. La publication peut alors être relancée à la main (onglet *Actions*, « Diffusion réseaux sociaux », *Run workflow*, mode « publier »).
 - Les accès sont rangés dans les secrets du dépôt GitHub. Ils ne sont jamais écrits dans le dépôt, ni envoyés par e-mail ou dans une conversation.
@@ -53,6 +54,7 @@ Prérequis : avoir le contrôle total de la page Facebook Dark Side Energy. Les 
    - coller ce jeton de 60 jours dans le champ *Access Token* ;
    - lancer la requête `GET` sur `me/accounts?fields=id,name,access_token` ;
    - si la réponse est vide (`"data": []`), la page dépend d'un portefeuille business : refaire les étapes 5 et 6 en cochant aussi `business_management` ;
+   - si la page Dark Side Energy n'est pas dans la liste (seulement d'autres pages du compte), refaire l'étape 5 : dans la fenêtre Facebook, cliquer sur **Modifier l'accès** et cocher la page Dark Side Energy, puis refaire les étapes 6 et 7. Si elle n'est pas proposée, vérifier dans les paramètres de la page Dark Side Energy (*Accès à la Page*) que votre profil a l'accès Facebook avec contrôle total, ou ajouter `business_management` si elle est gérée dans Meta Business Suite ;
    - la réponse donne, pour la page Dark Side Energy, son `id` et son `access_token`. C'est le jeton de la page, sans date d'expiration.
 8. Contrôle : coller ce jeton de page dans **Access Token Debugger**. Le type doit être *Page* et l'expiration **Never** (« Jamais »). Noter aussi la ligne « L'accès aux données expire » : Meta limite l'accès aux données à 90 jours d'inactivité pour les jetons utilisateur, et sa documentation ne précise pas le cas des jetons de page. Si une date s'affiche, prévoir de refaire les étapes 5 à 9 avant cette date.
 9. Sur GitHub, dépôt `AlCorey62/GitHub`, aller dans **Settings** > **Secrets and variables** > **Actions** > **New repository secret** et créer deux secrets :

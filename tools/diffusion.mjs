@@ -51,6 +51,13 @@ async function graph(method, path, form) {
   return json;
 }
 
+// Garde-fou : le jeton peut donner accès à une autre page gérée par le même compte.
+async function pageName() {
+  const { name = "" } = await graph("GET", `${FB.page}?fields=name`);
+  if (!/dark side energy/i.test(name)) throw new Error(`Le jeton donne accès à la page « ${name} » et non à Dark Side Energy : rien n'est envoyé.`);
+  return name;
+}
+
 function photo(file, caption, published) {
   const form = new FormData();
   form.append("source", new Blob([readFileSync(file)], { type: "image/png" }), "visuel.png");
@@ -61,10 +68,10 @@ function photo(file, caption, published) {
 
 if (verifier) {
   if (!FB.page || !FB.token) throw new Error("Secrets FACEBOOK_PAGE_ID et FACEBOOK_PAGE_TOKEN absents : voir editorial/RESEAUX.md.");
-  const page = await graph("GET", `${FB.page}?fields=name`);
+  const name = await pageName();
   const test = await photo(join(ROOT, "site/assets/img/icon-512.png"), "", false);
   await graph("DELETE", test.id);
-  console.log(`Accès Facebook vérifié : page « ${page.name} ». Photo de test non publiée, envoyée puis supprimée.`);
+  console.log(`Accès Facebook vérifié : page « ${name} ». Photo de test non publiée, envoyée puis supprimée.`);
   process.exit(0);
 }
 
@@ -112,6 +119,7 @@ else {
     const res = await fetch(day.link, { method: "HEAD", redirect: "follow" });
     if (!res.ok) throw new Error(`Le lien ne répond pas (${res.status}), l'article n'est peut-être pas encore en ligne : ${day.link}`);
   }
+  await pageName();
   const sent = await photo(visual, day.facebook, true);
   note("facebook", { id: sent.id, post: sent.post_id });
   console.log(`Facebook : publié (${sent.post_id}).`);
