@@ -1,0 +1,68 @@
+# Diffusion de la publication du jour sur les réseaux sociaux (voir tools/diffusion.mjs et editorial/RESEAUX.md).
+# Du lundi au vendredi, la publication du jour d'une semaine validée par Damien est envoyée sur la page Facebook,
+# puis notée dans editorial/semaines/<lundi>/diffusion.json, poussé sur main : rien n'est envoyé deux fois.
+# Lancement à la main (onglet Actions) : « verifier » teste l'accès sans rien publier, « publier » envoie
+# tout de suite la publication du jour.
+# Mise en place avec l'accord de Damien (20/10/2026).
+name: Diffusion réseaux sociaux
+
+on:
+  schedule:
+    # Horaires GitHub en UTC, trois passages : la tâche n'envoie rien avant 8 h 30 à Paris ni rien de déjà envoyé.
+    # Hiver : 7 h 37 (trop tôt), 8 h 37, puis 10 h 07 en secours. Été : 8 h 37, 9 h 37, 11 h 07.
+    - cron: "37 6 * * 1-5"
+    - cron: "37 7 * * 1-5"
+    - cron: "7 9 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "verifier : teste l'accès sans rien publier ; publier : envoie la publication du jour"
+        type: choice
+        options: [verifier, publier]
+        default: verifier
+
+permissions:
+  contents: write
+
+concurrency:
+  group: diffusion
+  cancel-in-progress: false
+
+jobs:
+  diffuser:
+    runs-on: ubuntu-latest
+    env:
+      DIFFUSION_RESUME: ${{ github.workspace }}/../resume-diffusion.txt
+      FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+      FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
+      MODE: ${{ inputs.mode }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Publication du jour
+        id: diff
+        run: |
+          case "$MODE" in
+            verifier) node tools/diffusion.mjs --verifier ;;
+            publier) node tools/diffusion.mjs ;;
+            *) node tools/diffusion.mjs --pas-avant 08:30 ;;
+          esac
+
+      # Même en cas d'échec d'un réseau, ce qui a été envoyé est noté pour ne pas le renvoyer.
+      - name: Journal sur main
+        if: always()
+        run: |
+          [ -s "$DIFFUSION_RESUME" ] || exit 0
+          git config user.name "Diffusion réseaux sociaux"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add editorial/semaines
+          { echo "Diffusion du $(TZ=Europe/Paris date +%d/%m/%Y)"; echo; cat "$DIFFUSION_RESUME"; } > ../message-diffusion.txt
+          git commit -F ../message-diffusion.txt
+          git pull --rebase origin main
+          git push origin HEAD:main

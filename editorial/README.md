@@ -8,13 +8,14 @@ Cinq publications par semaine sur LinkedIn et Facebook, du lundi au vendredi, do
 editorial/
   README.md            Ce mode d'emploi
   REGLES.md            Ligne éditoriale et règles d'écriture (à lire avant chaque rédaction)
+  RESEAUX.md           Diffusion automatique sur Facebook et LinkedIn : fonctionnement et mise en place des accès
   calendrier.md        Sujets prévus semaine par semaine, avec leur statut
   anecdotes.md         Anecdotes de terrain fournies par Damien : matière des « cas terrain »
   modeles/             Pages modèles d'un article (français et anglais)
   a-paraitre/          Articles validés en attente de leur date de publication
     AAAA-MM-JJ-nom/      fr.html (obligatoire), en.html (facultatif)
   semaines/            Publications réseaux sociaux de chaque semaine
-    AAAA-MM-JJ/          publications.md (textes LinkedIn et Facebook) et visuels PNG
+    AAAA-MM-JJ/          publications.md (textes LinkedIn et Facebook), visuels PNG et diffusion.json (journal des envois)
 ```
 
 ## La semaine type
@@ -30,9 +31,9 @@ editorial/
 ## Le circuit
 
 1. **Rédaction** : chaque jeudi, la semaine suivante non encore préparée est rédigée (articles dans `a-paraitre/`, textes et visuels dans `semaines/`) et proposée dans une demande de fusion (PR) avec le récapitulatif lisible.
-2. **Validation** : Damien relit la semaine sur la page de relecture (https://claude.ai/artifact/NTaN4bsPi1FPkt4mbPPStv, mise à jour à chaque rédaction avec `node tools/relecture.mjs`), puis corrige ou valide. Rien n'est publié sans son accord.
+2. **Validation** : Damien relit la semaine sur la page de relecture (https://claude.ai/artifact/NTaN4bsPi1FPkt4mbPPStv, mise à jour à chaque rédaction avec `node tools/relecture.mjs`), puis corrige ou valide. Rien n'est publié sans son accord : à sa validation, le statut de `publications.md` devient `**validé par Damien le JJ/MM/AAAA**` et la PR est fusionnée.
 3. **Publication des articles** : chaque matin vers 5 h 15 (heure d'hiver de Paris, avec un second passage de secours vers 6 h 45), la tâche GitHub « Publication programmée » (`.github/workflows/publication.yml`) met en ligne les articles validés du jour : `node tools/publier.mjs`, puis construction, contrôles et tests, puis envoi sur main, que Netlify publie. En cas d'échec, rien n'est envoyé et GitHub prévient par e-mail ; la tâche peut aussi être lancée à la main depuis l'onglet *Actions* du dépôt.
-4. **Réseaux sociaux** : les textes de `semaines/AAAA-MM-JJ/publications.md` sont programmés dans LinkedIn (planification de la page) et Meta Business Suite (Facebook), avec les visuels du même dossier. Les flux RSS du site (`/news/feed.xml`, `/en/did-you-know/feed.xml`) permettent aussi une diffusion automatique par un outil tiers.
+4. **Réseaux sociaux** : du lundi au vendredi vers 8 h 30, la tâche GitHub « Diffusion réseaux sociaux » (`.github/workflows/diffusion.yml`) publie le texte et le visuel du jour des semaines validées, après avoir vérifié que le lien répond. Facebook dès que le jeton de la page est en place, LinkedIn après l'accord de LinkedIn : voir `RESEAUX.md`. D'ici là, les textes de `semaines/AAAA-MM-JJ/publications.md` se programment à la main (planification de la page LinkedIn, Meta Business Suite). Les flux RSS du site (`/news/feed.xml`, `/en/did-you-know/feed.xml`) restent disponibles pour un outil tiers.
 5. **Mesure** : chaque mois, dans Google Analytics (sources linkedin.com et facebook.com, événement `generate_lead`) et dans les statistiques LinkedIn et Facebook, on garde les formats qui marchent.
 
 ## Publier un article à la main

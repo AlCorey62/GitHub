@@ -9,6 +9,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, copyFileSync } from "node:fs";
 import { join, dirname, resolve, basename } from "node:path";
 import { fileURLToPath } from "node:url";
+import { lireSemaine, addDays } from "./publications.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const week = resolve(process.argv[2] || "");
@@ -22,35 +23,10 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const inline = (s) => esc(s).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
 
 // --- publications.md --------------------------------------------------------------------
-const md = readFileSync(join(week, "publications.md"), "utf8");
-const parts = md.split(/\n## /);
-const title = parts[0].match(/^# (.+)$/m)?.[1] || `Semaine du ${monday}`;
-const status = (parts[0].match(/^Statut : (.+)$/m)?.[1] || "").replace(/\s*Visuels dans ce dossier[^.]*\./, "");
-const notes = [];
-const days = [];
-for (const part of parts.slice(1)) {
-  const [head, ...rest] = part.split("\n");
-  const body = rest.join("\n");
-  if (!/^(Lundi|Mardi|Mercredi|Jeudi|Vendredi|Samedi|Dimanche) /.test(head)) {
-    notes.push({ head, items: body.split("\n").filter((l) => l.startsWith("- ")).map((l) => l.slice(2)) });
-    continue;
-  }
-  const quote = (label) => {
-    const m = body.match(new RegExp(`\\*\\*${label}\\*\\*\\s*\\n\\n((?:>.*\\n?)+)`));
-    return m ? m[1].split("\n").map((l) => l.replace(/^> ?/, "")).join("\n").trim() : "";
-  };
-  days.push({
-    head,
-    visual: body.match(/\*\*Visuel\*\* : `([^`]+)`(.*)/),
-    link: body.match(/\*\*Lien\*\*[^:]*: (\S+)/)?.[1] || "",
-    linkedin: quote("LinkedIn"),
-    facebook: quote("Facebook"),
-  });
-}
+const { title, status, notes, days } = lireSemaine(week);
 
 // --- Articles en attente de la semaine ---------------------------------------------------
 const QUEUE = join(ROOT, "editorial", "a-paraitre");
-const addDays = (iso, n) => new Date(Date.parse(`${iso}T12:00:00Z`) + n * 864e5).toISOString().slice(0, 10);
 const weekDates = new Set([0, 1, 2, 3, 4, 5, 6].map((n) => addDays(monday, n)));
 const articles = new Map();
 for (const dir of existsSync(QUEUE) ? readdirSync(QUEUE) : []) {
@@ -71,16 +47,13 @@ for (const dir of existsSync(QUEUE) ? readdirSync(QUEUE) : []) {
 }
 
 // --- Page -------------------------------------------------------------------------------
-const DAYS = { Lundi: 0, Mardi: 1, Mercredi: 2, Jeudi: 3, Vendredi: 4, Samedi: 5, Dimanche: 6 };
 const files = {};
 const cards = days.map((d, i) => {
-  const [dayName] = d.head.split(" ");
-  const date = addDays(monday, DAYS[dayName] ?? 0);
   const [when, ...fmt] = d.head.split(" · ");
-  const art = articles.get(date);
+  const art = articles.get(d.date);
   let img = "";
   if (d.visual) {
-    const name = d.visual[1];
+    const name = d.visual;
     if (existsSync(join(week, name))) {
       copyFileSync(join(week, name), join(out, name));
       files[name] = name;
