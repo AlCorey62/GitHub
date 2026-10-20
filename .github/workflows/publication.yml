@@ -7,6 +7,9 @@ name: Publication programmée
 on:
   schedule:
     - cron: "17 4 * * *" # 4 h 17 UTC : 6 h 17 à Paris l'été, 5 h 17 l'hiver
+    # Second passage de secours : GitHub peut retarder ou sauter un déclenchement programmé
+    # (le 20/10/2026, celui de 4 h 17 n'a pas eu lieu). Sans article dû, la tâche ne fait rien.
+    - cron: "47 5 * * *" # 5 h 47 UTC : 7 h 47 à Paris l'été, 6 h 47 l'hiver
   workflow_dispatch:
 
 permissions:
