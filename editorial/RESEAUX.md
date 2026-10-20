@@ -11,7 +11,7 @@ La tâche GitHub « Diffusion réseaux sociaux » (`.github/workflows/diffusion.
 
 | Réseau | État | Secrets GitHub |
 |---|---|---|
-| Facebook | Prêt, en attente du jeton de la page | `FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_TOKEN` |
+| Facebook | Prêt, jeton de la page créé le 20/10/2026 | `FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_TOKEN` |
 | LinkedIn | En attente de l'accord de LinkedIn sur l'accès à son API | `LINKEDIN_ORG_ID`, `LINKEDIN_TOKEN` (plus tard) |
 
 Tant qu'un réseau n'a pas ses secrets, la tâche l'ignore sans erreur : on publie alors à la main (planification de la page LinkedIn, Meta Business Suite).
@@ -65,6 +65,8 @@ Prérequis : avoir le contrôle total de la page Facebook Dark Side Energy. Les 
    - Elle envoie une photo de test non publiée, puis la supprime aussitôt.
 
 Le jeton de page reste valable tant que les droits ne changent pas. Il faut refaire les étapes 5 à 9 dans trois cas : changement du mot de passe Facebook, retrait des droits sur la page, ou suppression de l'application.
+
+Jeton en place depuis le 20/10/2026 : expiration « Jamais », mais accès aux données limité à environ 3 mois (vers le 18/01/2027). Renouvellement prévu une semaine avant, en refaisant les étapes 5 à 9 (rappel programmé le 11/01/2027).
 
 ## LinkedIn : demande d'accès à l'API (une fois)
 
