@@ -15,7 +15,7 @@ La tâche GitHub « Diffusion réseaux sociaux » (`.github/workflows/diffusion.
 
 Tant qu'un réseau n'a pas ses secrets, la tâche l'ignore sans erreur : on publie alors à la main (planification de la page LinkedIn, Meta Business Suite).
 
-## Facebook : mise en place (une fois, environ 20 minutes, sur ordinateur)
+## Facebook : mise en place (une fois, environ 30 minutes, sur ordinateur)
 
 Prérequis : avoir le contrôle total de la page Facebook Dark Side Energy. Les intitulés des écrans Meta sont souvent en anglais.
 
@@ -31,28 +31,37 @@ Prérequis : avoir le contrôle total de la page Facebook Dark Side Energy. Les 
    - `pages_manage_engagement`
    - `pages_read_user_engagement`
 
-   L'application reste en mode développement. Elle n'a pas besoin d'être publiée, puisqu'elle ne sert qu'à notre propre page.
-4. Ouvrir **Graph API Explorer** (https://developers.facebook.com/tools/explorer/) :
+4. Mettre l'application en ligne. C'est indispensable : selon Meta, ce qu'une application en mode développement publie n'est visible que par les personnes qui ont un rôle sur l'application, donc pas par le public.
+   - **App settings** > **Basic**, renseigner :
+     - l'icône : https://www.darkside-energy.com/assets/img/icon-512.png ;
+     - *Privacy policy URL* : https://www.darkside-energy.com/mentions-legales/ ;
+     - *Data deletion instructions URL* : https://www.darkside-energy.com/mentions-legales/#donnees ;
+     - la catégorie (*Business and pages*) ;
+     - le contact pour la protection des données (vos coordonnées) ;
+   - puis menu **Publish** à gauche, vérifier les exigences affichées et cliquer sur **Publish**.
+
+   Hypothèse : pour publier sur notre propre page avec un compte administrateur de l'application, l'accès standard suffit, sans examen par Meta (*App Review*). Si Meta exige un examen pour `pages_manage_posts`, me le signaler avant d'aller plus loin.
+5. Ouvrir **Graph API Explorer** (https://developers.facebook.com/tools/explorer/) :
    - choisir l'application « Diffusion Dark Side Energy » ;
    - dans *User or Page*, choisir **Get User Access Token** ;
    - cocher les autorisations de l'étape 3, plus `pages_show_list` et `business_management` ;
    - cliquer sur **Generate Access Token** et choisir la page Dark Side Energy dans la fenêtre Facebook.
-5. Ouvrir **Access Token Debugger** (https://developers.facebook.com/tools/debug/accesstoken/) :
+6. Ouvrir **Access Token Debugger** (https://developers.facebook.com/tools/debug/accesstoken/) :
    - coller le jeton obtenu, cliquer sur **Debug**, puis sur **Extend Access Token** en bas de page ;
    - copier le nouveau jeton, valable 60 jours.
-6. Revenir dans **Graph API Explorer** :
+7. Revenir dans **Graph API Explorer** :
    - coller ce jeton de 60 jours dans le champ *Access Token* ;
    - lancer la requête `GET` sur `me/accounts` ;
    - la réponse donne, pour la page Dark Side Energy, son `id` et son `access_token`. C'est le jeton de la page, sans date d'expiration.
-7. Contrôle : coller ce jeton de page dans **Access Token Debugger**. La ligne *Expires* doit indiquer **Never**.
-8. Sur GitHub, dépôt `AlCorey62/GitHub`, aller dans **Settings** > **Secrets and variables** > **Actions** > **New repository secret** et créer deux secrets :
+8. Contrôle : coller ce jeton de page dans **Access Token Debugger**. La ligne *Expires* doit indiquer **Never**.
+9. Sur GitHub, dépôt `AlCorey62/GitHub`, aller dans **Settings** > **Secrets and variables** > **Actions** > **New repository secret** et créer deux secrets :
    - `FACEBOOK_PAGE_ID` : l'`id` de la page ;
    - `FACEBOOK_PAGE_TOKEN` : l'`access_token` de la page.
-9. Essai sans rien publier : onglet **Actions** > **Diffusion réseaux sociaux** > **Run workflow**, mode « verifier ».
+10. Essai sans rien publier : onglet **Actions** > **Diffusion réseaux sociaux** > **Run workflow**, mode « verifier ».
    - La tâche doit finir en vert, avec le nom de la page dans le journal.
    - Elle envoie une photo de test non publiée, puis la supprime aussitôt.
 
-Le jeton de page reste valable tant que les droits ne changent pas. Il faut refaire les étapes 4 à 8 dans trois cas : changement du mot de passe Facebook, retrait des droits sur la page, ou suppression de l'application.
+Le jeton de page reste valable tant que les droits ne changent pas. Il faut refaire les étapes 5 à 9 dans trois cas : changement du mot de passe Facebook, retrait des droits sur la page, ou suppression de l'application.
 
 ## LinkedIn : demande d'accès à l'API (une fois)
 
@@ -93,7 +102,8 @@ Le niveau d'accès de départ (*Development*) autorise 500 appels par jour, larg
 
 - Meta, jetons de page longue durée : https://developers.facebook.com/docs/facebook-login/guides/access-tokens/get-long-lived/
 - Meta, publier sur une page : https://developers.facebook.com/docs/pages-api/posts
-- Meta, créer l'application (cas d'usage Page) : https://developers.facebook.com/documentation/pages-api/create-an-app
+- Meta, créer et publier l'application (cas d'usage Page) : https://developers.facebook.com/documentation/pages-api/create-an-app
+- Meta, mode développement et mode en ligne : https://developers.facebook.com/docs/development/build-and-test/app-modes
 - LinkedIn, demande d'accès Community Management API : https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review
 - LinkedIn, niveaux d'accès et autorisations : https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access
 - LinkedIn, durée des jetons : https://learn.microsoft.com/en-us/linkedin/shared/authentication/programmatic-refresh-tokens
