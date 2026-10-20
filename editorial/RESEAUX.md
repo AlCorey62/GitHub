@@ -29,7 +29,7 @@ Prérequis : avoir le contrôle total de la page Facebook Dark Side Energy. Les 
    - `pages_manage_posts`
    - `pages_read_engagement`
    - `pages_manage_engagement`
-   - `pages_read_user_engagement`
+   - `pages_read_user_content` (nommée `pages_read_user_engagement` dans une page de la documentation Meta)
 
 4. Mettre l'application en ligne. C'est indispensable : selon Meta, ce qu'une application en mode développement publie n'est visible que par les personnes qui ont un rôle sur l'application, donc pas par le public.
    - **App settings** > **Basic**, renseigner :
@@ -51,9 +51,10 @@ Prérequis : avoir le contrôle total de la page Facebook Dark Side Energy. Les 
    - copier le nouveau jeton, valable 60 jours.
 7. Revenir dans **Graph API Explorer** :
    - coller ce jeton de 60 jours dans le champ *Access Token* ;
-   - lancer la requête `GET` sur `me/accounts` ;
+   - lancer la requête `GET` sur `me/accounts?fields=id,name,access_token` ;
+   - si la réponse est vide (`"data": []`), la page dépend d'un portefeuille business : refaire les étapes 5 et 6 en cochant aussi `business_management` ;
    - la réponse donne, pour la page Dark Side Energy, son `id` et son `access_token`. C'est le jeton de la page, sans date d'expiration.
-8. Contrôle : coller ce jeton de page dans **Access Token Debugger**. La ligne *Expires* doit indiquer **Never**.
+8. Contrôle : coller ce jeton de page dans **Access Token Debugger**. Le type doit être *Page* et l'expiration **Never** (« Jamais »). Noter aussi la ligne « L'accès aux données expire » : Meta limite l'accès aux données à 90 jours d'inactivité pour les jetons utilisateur, et sa documentation ne précise pas le cas des jetons de page. Si une date s'affiche, prévoir de refaire les étapes 5 à 9 avant cette date.
 9. Sur GitHub, dépôt `AlCorey62/GitHub`, aller dans **Settings** > **Secrets and variables** > **Actions** > **New repository secret** et créer deux secrets :
    - `FACEBOOK_PAGE_ID` : l'`id` de la page ;
    - `FACEBOOK_PAGE_TOKEN` : l'`access_token` de la page.
