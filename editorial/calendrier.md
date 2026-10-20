@@ -35,7 +35,7 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : à quoi il sert (schéma TT, RA × IΔn ≤ 50 V) | prévu |
+| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : à quoi il sert (RA × IΔn ≤ 50 V) **à vérifier** : TT ou TN-S selon la liaison du neutre du groupe (IET Wiring Matters 2011), pour ne pas contredire l'article du 20/10 | prévu |
 | Mar 10/11 | Cas terrain n° 2 (site) | Selon `anecdotes.md` ; à défaut : Powerlock, pourquoi on branche la terre en premier **à valider** : ordre de connexion pratiqué par nos équipes | prévu |
 | Mer 11/11 | (férié) | Pas de publication | |
 | Jeu 12/11 | Calculette | Réseaux étrangers : les mêmes kilowatts ne font pas les mêmes ampères en 120/208 V | prévu |

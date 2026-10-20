@@ -1918,6 +1918,10 @@ a.tag:hover {
   stroke-width: 1.6;
 }
 
+.sld .joint {
+  fill: #d6d6db;
+}
+
 .sld .ground {
   fill: none;
   stroke: #5a5a64;
