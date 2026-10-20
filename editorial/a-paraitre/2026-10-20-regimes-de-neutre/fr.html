@@ -51,8 +51,8 @@
         <p class="eyebrow">À retenir</p>
         <ul class="check-list">
           <li>Le régime de neutre dit comment le neutre de la source et les masses des appareils sont reliés à la terre.</li>
-          <li>Il décide de ce qui coupe en cas de défaut : le différentiel en TT, le disjoncteur ou le fusible en TN. En IT, rien ne coupe au premier défaut, une alarme prévient.</li>
-          <li>Sur un événement, le neutre et la terre restent séparés jusqu'au bout : un câble souple ne peut pas servir de conducteur PEN.</li>
+          <li>Il décide de ce qui coupe en cas de défaut : le différentiel en TT, le disjoncteur ou le fusible en TN. En IT, le premier défaut ne fait en principe pas couper : une alarme prévient, et il faut le réparer vite.</li>
+          <li>Dans la distribution temporaire en câbles souples, le neutre (N) et le conducteur de protection (PE) restent distincts : pas de conducteur PEN.</li>
         </ul>
       </aside>
       <article class="prose">
@@ -67,7 +67,7 @@
 <figure class="slt">
 <svg class="sld" viewBox="0 0 400 250" role="img" aria-labelledby="slt-tt-t slt-tt-d">
 <title id="slt-tt-t">Schéma TT</title>
-<desc id="slt-tt-d">Un défaut relie la phase à la masse de l'appareil. Le courant de défaut passe par la prise de terre de l'appareil, la terre et la prise de terre de la source, puis revient à la source. Le différentiel détecte la fuite et coupe.</desc>
+<desc id="slt-tt-d">Un défaut relie la phase à la masse de l'appareil. Le courant de défaut passe par la prise de terre de l'appareil, la terre et la prise de terre de la source, puis revient à la source. Limité par les résistances des prises de terre, il ne suffit pas à faire déclencher le disjoncteur : c'est le différentiel qui détecte la fuite et coupe.</desc>
 <text class="name" x="14" y="24">TT</text>
 <rect class="node node--hot" x="12" y="40" width="88" height="86" rx="4"/>
 <text class="lbl" x="56" y="78" text-anchor="middle">SOURCE</text>
@@ -94,15 +94,15 @@
 <text class="lbl lbl--sm" x="207" y="232" text-anchor="middle">TERRE</text>
 <path class="current" pathLength="100" d="M100 56 H356 L380 80 V126 H365 V214 H56 V126"/>
 </svg>
-<figcaption><strong>TT</strong> : le courant de défaut revient à la source par la terre. Il reste faible : c'est le différentiel qui le détecte et qui coupe.</figcaption>
+<figcaption><strong>TT</strong> : le courant de défaut revient à la source par la terre. Trop limité pour faire déclencher le disjoncteur, il est détecté par le différentiel, qui coupe.</figcaption>
 </figure>
-<p>Le neutre de la source est relié à une prise de terre, les masses des appareils à une autre. En cas de défaut, le courant traverse la terre pour revenir à la source. Les prises de terre ont une résistance, qui limite ce courant : il reste en général bien trop faible pour faire déclencher un <a href="../../lexique/#disjoncteur">disjoncteur</a> ou un fusible. C'est donc un <a href="../../lexique/#differentiel-30-ma">différentiel</a> qui détecte la fuite et qui coupe.</p>
+<p>Le neutre de la source est relié à une prise de terre, les masses des appareils à une autre. En cas de défaut, le courant traverse la terre pour revenir à la source. Les prises de terre ont une résistance, qui limite ce courant : il est en général trop faible pour faire déclencher un <a href="../../lexique/#disjoncteur">disjoncteur</a> ou un fusible dans le temps requis. Trop faible pour le disjoncteur ne veut pas dire sans danger pour une personne : c'est un <a href="../../lexique/#differentiel-30-ma">différentiel</a>, associé à la mise à la terre des masses, qui détecte la fuite et qui coupe.</p>
 <p>En France, c'est le schéma retenu pour les installations raccordées au réseau public basse tension.</p>
 <h2>TN : le défaut devient un court-circuit, le disjoncteur coupe</h2>
 <figure class="slt">
 <svg class="sld" viewBox="0 0 400 250" role="img" aria-labelledby="slt-tn-t slt-tn-d">
 <title id="slt-tn-t">Schéma TN-S</title>
-<desc id="slt-tn-d">Un défaut relie la phase à la masse de l'appareil. La masse est reliée au neutre de la source par le conducteur de protection : le courant de défaut est un court-circuit, le disjoncteur coupe aussitôt.</desc>
+<desc id="slt-tn-d">Un défaut relie la phase à la masse de l'appareil. La masse est reliée au neutre de la source par le conducteur de protection : le courant de défaut est un court-circuit, et le disjoncteur coupe dans le temps prescrit par la norme.</desc>
 <text class="name" x="14" y="24">TN-S</text>
 <rect class="node node--hot" x="12" y="40" width="88" height="86" rx="4"/>
 <text class="lbl" x="56" y="78" text-anchor="middle">SOURCE</text>
@@ -118,7 +118,7 @@
 <path class="spark" d="M356 56 L364 64 L358 67 L370 75 L380 80"/>
 <rect class="trip" x="182" y="44" width="40" height="78" rx="4"/>
 <text class="lbl" x="202" y="88" text-anchor="middle">DISJ.</text>
-<text class="lbl lbl--accent" x="202" y="142" text-anchor="middle">COUPE AUSSITÔT</text>
+<text class="lbl lbl--accent" x="202" y="142" text-anchor="middle">COUPE</text>
 <path class="wire" d="M56 126 V180"/>
 <path class="earth" d="M44 180 H68 M48 186 H64 M52 192 H60"/>
 <path class="pe" d="M365 126 V164 H56"/><path class="pe pe--stripe" d="M365 126 V164 H56"/>
@@ -127,20 +127,20 @@
 <text class="lbl lbl--sm" x="72" y="190">prise de terre</text>
 <path class="current current--strong" pathLength="100" d="M100 56 H356 L380 80 V126 H365 V164 H56 V126"/>
 </svg>
-<figcaption><strong>TN-S</strong> : la masse est reliée au neutre de la source par le conducteur de protection. Le défaut devient un court-circuit : le disjoncteur coupe.</figcaption>
+<figcaption><strong>TN-S</strong> : la masse est reliée au neutre de la source par le conducteur de protection. Le défaut devient un court-circuit : le disjoncteur coupe dans le temps prescrit.</figcaption>
 </figure>
-<p>Les masses sont reliées au neutre de la source par le conducteur de protection. Un défaut devient alors un court-circuit entre la phase et le neutre : le courant est élevé, et le disjoncteur ou le fusible coupe dans le délai maximal fixé par la norme.</p>
-<p>À une condition : que ce courant soit assez fort. Sur un câble très long, il ne l'est plus. La longueur des câbles se vérifie donc par le calcul, et à défaut on ajoute un différentiel.</p>
+<p>Les masses sont reliées au neutre de la source par le conducteur de protection. Un défaut franc devient alors un court-circuit entre la phase et le neutre : le courant est élevé, et le disjoncteur ou le fusible coupe dans le temps maximal fixé par la norme.</p>
+<p>À une condition : que ce courant soit assez fort. Il dépend de la source, de la longueur et de la section des câbles : cela se vérifie par le calcul, puis par des mesures. Si la condition n'est pas remplie, on adapte les câbles ou les protections. En TN-S, on peut aussi ajouter un différentiel ; pas en TN-C, où un différentiel ne peut pas être installé sur le PEN.</p>
 <p>Une troisième lettre précise le schéma TN :</p>
 <ul>
 <li><strong>TN-S</strong> : le neutre et le conducteur de protection sont deux fils séparés.</li>
 <li><strong>TN-C</strong> : ils sont confondus en un seul conducteur, le PEN. Il n'est admis que dans les installations fixes, à partir de 10 mm² en cuivre ou 16 mm² en aluminium, et il est interdit dans les câbles souples et dans les locaux à risque d'incendie ou d'explosion.</li>
 </ul>
-<h2>IT : au premier défaut, rien ne coupe</h2>
+<h2>IT : au premier défaut, en principe, rien ne coupe</h2>
 <figure class="slt">
 <svg class="sld" viewBox="0 0 400 250" role="img" aria-labelledby="slt-it-t slt-it-d">
 <title id="slt-it-t">Schéma IT</title>
-<desc id="slt-it-d">Un défaut relie la phase à la masse de l'appareil. Le neutre de la source n'est pas relié directement à la terre : le courant de défaut est très faible et rien ne coupe. Le contrôleur permanent d'isolement donne l'alarme.</desc>
+<desc id="slt-it-d">Un défaut relie la phase à la masse de l'appareil. Le neutre de la source n'est pas relié directement à la terre : le faible courant de défaut revient par les capacités du réseau par rapport à la terre (C) et par le contrôleur permanent d'isolement. En principe, l'installation reste en service, et le contrôleur donne l'alarme.</desc>
 <text class="name" x="14" y="24">IT</text>
 <rect class="node node--hot" x="12" y="40" width="88" height="86" rx="4"/>
 <text class="lbl" x="56" y="78" text-anchor="middle">SOURCE</text>
@@ -156,39 +156,43 @@
 <path class="spark" d="M356 56 L364 64 L358 67 L370 75 L380 80"/>
 <rect class="node" x="182" y="44" width="40" height="78" rx="4"/>
 <text class="lbl" x="202" y="88" text-anchor="middle">DISJ.</text>
-<text class="lbl lbl--sm" x="202" y="142" text-anchor="middle">PAS DE COUPURE</text>
+<text class="lbl lbl--sm" x="202" y="142" text-anchor="middle">EN SERVICE</text>
 <path class="wire" d="M56 126 V144 M56 168 V180"/>
 <rect class="alarm" x="38" y="144" width="36" height="24" rx="3"/>
 <text class="lbl lbl--sm" x="56" y="160" text-anchor="middle">CPI</text>
 <text class="lbl lbl--sm lbl--alarm" x="80" y="160">ALARME</text>
 <path class="earth" d="M44 180 H68 M48 186 H64 M52 192 H60"/>
+<path class="wire" d="M24 126 V156 M24 164 V214"/>
+<path class="sym" d="M16 156 H32 M16 164 H32"/>
+<text class="lbl lbl--sm" x="24" y="186" text-anchor="middle">C</text>
 <path class="pe" d="M365 126 V180"/><path class="pe pe--stripe" d="M365 126 V180"/>
 <path class="earth" d="M353 180 H377 M357 186 H373 M361 192 H369"/>
-<path class="ground" d="M56 192 V214 H365 V192"/>
+<path class="ground" d="M56 192 V214 M24 214 H365 V192"/>
 <text class="lbl lbl--sm" x="349" y="170" text-anchor="end">prise de terre</text>
 <text class="lbl lbl--sm" x="207" y="232" text-anchor="middle">TERRE</text>
 <path class="current current--weak" pathLength="100" d="M100 56 H356 L380 80 V126 H365 V214 H56 V168"/>
+<path class="current current--weak" pathLength="100" d="M365 214 H24 V164"/>
 </svg>
-<figcaption><strong>IT</strong> : le neutre de la source n'est pas relié directement à la terre. Au premier défaut, le courant reste très faible : rien ne coupe, le contrôleur permanent d'isolement donne l'alarme.</figcaption>
+<figcaption><strong>IT</strong> : le neutre de la source n'est pas relié directement à la terre. Au premier défaut, le faible courant revient par les capacités du réseau (C) et par le contrôleur permanent d'isolement : en principe, l'installation reste en service et le contrôleur donne l'alarme.</figcaption>
 </figure>
-<p>Le neutre de la source est isolé de la terre, ou relié par une impédance élevée. Au premier défaut, le courant n'a presque pas de chemin pour revenir : il reste très faible, la tension de contact n'est pas dangereuse, et l'installation continue de fonctionner.</p>
-<p>Un contrôleur permanent d'isolement (CPI) signale ce défaut. Il faut alors le rechercher et le réparer rapidement : un second défaut, sur un autre conducteur, provoque cette fois la coupure. On trouve l'IT là où une coupure serait grave, comme dans les blocs opératoires des hôpitaux ou les industries à fabrication continue.</p>
+<p>Le neutre de la source est isolé de la terre, ou relié par une impédance élevée. Au premier défaut, le courant ne peut revenir à la source que par l'isolement et les capacités du réseau par rapport à la terre, et par cette éventuelle impédance. Il reste en principe très faible : si le réseau respecte les conditions de protection prévues, le premier défaut n'impose pas de coupure et l'installation continue de fonctionner. Plus le réseau est étendu, plus ce courant augmente : ces conditions se vérifient à la conception.</p>
+<p>Un contrôleur permanent d'isolement (CPI) donne alors l'alarme. Le défaut doit être recherché et éliminé rapidement : si un second défaut apparaît sur un autre conducteur actif alors que le premier persiste, les protections coupent les circuits concernés. On trouve l'IT là où une coupure serait grave, comme dans les blocs opératoires des hôpitaux ou les industries à fabrication continue.</p>
 <h2>En résumé : qui coupe ?</h2>
 <div class="table-wrap">
 <table class="table">
 <thead><tr><th scope="col">Schéma</th><th scope="col">Neutre de la source</th><th scope="col">Masses</th><th scope="col">Au premier défaut</th></tr></thead>
 <tbody>
 <tr><th scope="row">TT</th><td>Relié à la terre</td><td>Reliées à une prise de terre</td><td>Le différentiel coupe</td></tr>
-<tr><th scope="row">TN</th><td>Relié à la terre</td><td>Reliées au neutre</td><td>Le disjoncteur ou le fusible coupe</td></tr>
-<tr><th scope="row">IT</th><td>Isolé ou relié par une impédance</td><td>Reliées à une prise de terre</td><td>Rien ne coupe, le CPI donne l'alarme</td></tr>
+<tr><th scope="row">TN</th><td>Relié à la terre</td><td>Reliées au neutre</td><td>Le disjoncteur ou le fusible coupe dans le temps prescrit</td></tr>
+<tr><th scope="row">IT</th><td>Isolé ou relié par une impédance</td><td>Reliées à une prise de terre</td><td>En principe pas de coupure, le CPI donne l'alarme</td></tr>
 </tbody>
 </table>
 </div>
 <h2>Et sur un événement ?</h2>
 <p>Branché sur l'installation d'un lieu, l'événement hérite de son schéma : en général du TT si le lieu est raccordé au réseau public basse tension, le schéma choisi pour son installation s'il dispose de son propre poste de transformation.</p>
-<p>Alimenté par un <a href="../../lexique/#groupe-electrogene">groupe électrogène</a>, l'événement a sa propre source. La liaison du neutre de l'alternateur à la terre, les piquets de terre et les protections se réalisent alors sur place, et doivent former un ensemble cohérent. Pour les groupes électrogènes, l'organisme de prévention du BTP (OPPBTP) préconise de relier le neutre de l'alternateur à une prise de terre, en schéma TT ou TN-S, avec des différentiels 30 mA sur les canalisations.</p>
-<p>Enfin, sur un événement, tout se raccorde par câbles souples. Comme un câble souple ne peut pas servir de PEN, le neutre et la terre restent séparés jusqu'au bout.</p>
-<blockquote>TT, TN, IT : demandez-vous qui coupe. Le différentiel, le disjoncteur, ou personne, et c'est alors l'alarme qui prévient.</blockquote>
+<p>Alimenté par un <a href="../../lexique/#groupe-electrogene">groupe électrogène</a>, l'événement a sa propre source. Le schéma, la mise à la terre et les protections se décident et se réalisent alors sur place, selon le groupe et l'installation alimentée, et doivent former un ensemble cohérent.</p>
+<p>Dans la distribution temporaire en câbles souples, le neutre (N) et le conducteur de protection (PE) restent distincts : ces câbles ne peuvent pas servir de PEN. La seule liaison entre neutre et PE est celle que prévoit le schéma retenu, à la source ; il n'y en a jamais dans les équipements en aval.</p>
+<blockquote>TT, TN, IT : demandez-vous qui coupe. Le différentiel, le disjoncteur, ou, au premier défaut en IT, personne : c'est l'alarme qui prévient.</blockquote>
       </article>
       <div class="note note--info" style="margin-top:40px">
         <svg data-icon="shield-check"></svg>
