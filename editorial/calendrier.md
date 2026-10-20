@@ -5,6 +5,12 @@ Les sujets marqués **à valider** reposent sur des valeurs que Damien confirme 
 
 Articles déjà en ligne (à ne pas refaire) : distribution électrique événementielle, groupe Twin zéro coupure, section de câble et longueur, pourquoi « ça saute », kVA ou kW, foisonnement, puissance d'une prise P17, équilibrer les phases.
 
+## Semaine du 19 octobre 2026 (essai de la chaîne)
+
+| Jour | Format | Sujet | Statut |
+|---|---|---|---|
+| Mar 20/10 | Le sais-tu ? (site) | TT, TN, IT : les régimes de neutre expliqués simplement, avec schémas animés (sujet demandé par Damien) | rédigé |
+
 ## Semaine du 26 octobre 2026
 
 | Jour | Format | Sujet | Statut |

@@ -46,6 +46,24 @@ for (const dir of existsSync(QUEUE) ? readdirSync(QUEUE) : []) {
   });
 }
 
+// --- Schémas animés des articles : règles .sld et .slt reprises de la feuille du site -----
+function siteDiagramCss() {
+  const css = readFileSync(join(ROOT, "site", "assets", "css", "main.css"), "utf8").replace(/\/\*[\s\S]*?\*\//g, "");
+  const keep = [];
+  let depth = 0, start = 0;
+  for (let i = 0; i < css.length; i++) {
+    if (css[i] === "{") depth++;
+    else if (css[i] === "}" && --depth === 0) {
+      const rule = css.slice(start, i + 1).trim();
+      const prelude = rule.slice(0, rule.indexOf("{")).trim();
+      if (/^@keyframes (sld|slt)-/.test(prelude) || prelude.split(",").every((sel) => /^\.(sld|slt)\b/.test(sel.trim()))) keep.push(rule);
+      start = i + 1;
+    }
+  }
+  return keep.join("\n");
+}
+const diagrams = [...articles.values()].some((a) => /class="sld"/.test(a.prose));
+
 // --- Page -------------------------------------------------------------------------------
 const files = {};
 const cards = days.map((d, i) => {
@@ -113,7 +131,7 @@ const page = `<title>Relecture Le sais-tu ?</title>
 * { box-sizing: border-box; }
 body { background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); padding-block: 28px 64px;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.wrap { max-width: 1080px; margin: 0 auto; display: grid; gap: 28px; }
+.wrap { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
 h1, h2, h3 { font-family: var(--display); font-stretch: 110%; text-wrap: balance; margin: 0; }
 h1 { font-size: clamp(1.7rem, 1.2rem + 2.2vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; }
 .kicker { margin: 0 0 8px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
@@ -127,7 +145,7 @@ h1 { font-size: clamp(1.7rem, 1.2rem + 2.2vw, 2.6rem); font-weight: 800; letter-
 .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .toc a { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); text-decoration: none; font-size: 0.9rem; }
 .toc a:hover, .toc a:focus-visible { border-color: var(--accent); }
-.day { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: grid; gap: 18px; scroll-margin-top: 16px; }
+.day { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; scroll-margin-top: 16px; }
 .day-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
 .when { margin: 0; font-family: var(--display); font-weight: 800; font-size: 1.25rem; font-stretch: 110%; }
 .fmt { margin: 0; color: var(--accent); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -159,6 +177,13 @@ h1 { font-size: clamp(1.7rem, 1.2rem + 2.2vw, 2.6rem); font-weight: 800; letter-
 .future span { word-break: break-all; }
 code { font-family: var(--mono); font-size: 0.88em; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+.prose .table-wrap { overflow-x: auto; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.prose th, .prose td { padding: 8px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+${diagrams ? `/* Schémas du site, sur fond sombre comme en ligne */
+.slt { --c-surface: #141417; --c-surface-2: #1b1b1f; --c-line: #26262b; --c-text: #f3f3f4; --c-text-2: #b4b4bb; --c-text-3: #8b8b94;
+  --c-brand: #c30000; --c-accent: #ff4a3d; --radius: 14px; --fs-sm: 0.9rem; --font: var(--body); color: var(--c-text-2); }
+${siteDiagramCss()}` : ""}
 </style>
 
 <main class="wrap">
