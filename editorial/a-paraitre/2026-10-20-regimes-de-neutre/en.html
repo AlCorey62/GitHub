@@ -4,8 +4,8 @@
 <!--page
 {
   "path": "en/did-you-know/earthing-systems/",
-  "title": "TT, TN, IT: earthing systems made simple",
-  "description": "What happens when an appliance develops a fault, and what trips? TT, TN and IT earthing systems made simple, with animated diagrams.",
+  "title": "TT or TN: earthing systems made simple",
+  "description": "What happens when an appliance develops a fault, and what disconnects the supply? TT and TN earthing systems made simple, with animated diagrams, and what changes at an event.",
   "nav": "news",
   "type": "article",
   "article": {
@@ -20,7 +20,7 @@
       "did-you-know/"
     ],
     [
-      "TT, TN, IT: earthing systems made simple"
+      "TT or TN: earthing systems made simple"
     ]
   ],
   "updated": "2026-10-20",
@@ -42,7 +42,7 @@
       <!-- breadcrumb:start -->
 <!-- breadcrumb:end -->
       <p class="eyebrow">Did you know?</p>
-      <h1>TT, TN, IT: earthing systems made simple</h1>
+      <h1>TT or TN: earthing systems made simple</h1>
       <p class="post-meta"><time datetime="2026-10-20">20 October 2026</time><span>4 min read</span></p>
     </div>
   </section>
@@ -53,7 +53,7 @@
         <p class="eyebrow">Key points</p>
         <ul class="check-list">
           <li>The earthing system describes how the source neutral and the metal casings of appliances are connected to earth.</li>
-          <li>It decides what disconnects the supply when an insulation fault occurs: the RCD in TT; the circuit breaker or fuse in TN, provided the fault current is high enough; in IT, in principle nothing on the first fault, and an alarm warns you.</li>
+          <li>It decides what disconnects the supply when an insulation fault occurs: the RCD in TT; the circuit breaker or fuse in TN, provided the fault current is high enough.</li>
           <li>In a temporary installation, 30 mA RCDs are mandatory in France whatever the earthing system, and the neutral (N) stays separate from the protective conductor (PE): no PEN in flexible cables.</li>
         </ul>
       </aside>
@@ -65,6 +65,7 @@
 <li><strong>The first</strong> concerns the neutral of the source, a transformer or a generator: <strong>T</strong>, connected directly to earth; <strong>I</strong>, isolated from earth or connected through a high impedance.</li>
 <li><strong>The second</strong> concerns the metal casings of appliances: <strong>T</strong>, connected to an <a href="../../glossary/#prise-de-terre">earth electrode</a>; <strong>N</strong>, connected to the source neutral by the protective conductor (PE), the green and yellow conductor.</li>
 </ul>
+<p>A third system, IT, with an isolated neutral, is used where an interruption would be serious, such as operating theatres; we do not use it at events.</p>
 <h2>TT: the earth carries the current back, the RCD trips</h2>
 <figure class="slt">
 <svg class="sld" viewBox="0 0 400 250" role="img" aria-labelledby="slt-tt-t slt-tt-d">
@@ -136,63 +137,22 @@
 <li><strong>TN-S</strong>: neutral and protective conductor separate.</li>
 <li><strong>TN-C</strong>: combined in a single conductor, the PEN, only allowed in fixed installations, from 10 mm² in copper (16 mm² in aluminium), forbidden in locations with a fire or explosion risk, and incompatible with an RCD.</li>
 </ul>
-<h2>IT: on the first fault, in principle, nothing trips</h2>
-<figure class="slt">
-<svg class="sld" viewBox="0 0 400 250" role="img" aria-labelledby="slt-it-t slt-it-d">
-<title id="slt-it-t">IT system</title>
-<desc id="slt-it-d">A fault connects the line conductor to the appliance's metal casing. The source neutral is not directly earthed: the small fault current returns through the network's capacitance to earth (C). The insulation monitoring device, connected between the system and earth, detects the fault and raises an alarm. In principle, the installation stays in service.</desc>
-<text class="name" x="14" y="24">IT</text>
-<rect class="node node--hot" x="12" y="40" width="88" height="86" rx="4"/>
-<text class="lbl" x="56" y="78" text-anchor="middle">SOURCE</text>
-<text class="lbl lbl--sm" x="56" y="94" text-anchor="middle" textLength="76" lengthAdjust="spacingAndGlyphs">transformer</text>
-<text class="lbl lbl--sm" x="56" y="106" text-anchor="middle">or genset</text>
-<path class="wire" d="M100 56 H356 M100 110 H330 M330 56 V72 M330 94 V110"/>
-<text class="lbl lbl--sm" x="108" y="50">LINE</text>
-<text class="lbl lbl--sm" x="230" y="104">NEUTRAL</text>
-<rect class="node" x="290" y="40" width="90" height="86" rx="4"/>
-<text class="lbl lbl--sm" x="335" y="34" text-anchor="middle">APPLIANCE</text>
-<rect class="sym" x="322" y="72" width="16" height="22" rx="2"/>
-<text class="lbl lbl--sm" x="335" y="119" text-anchor="middle">casing</text>
-<path class="spark" d="M356 56 L364 64 L358 67 L370 75 L380 80"/>
-<rect class="node" x="182" y="44" width="40" height="78" rx="4"/>
-<text class="lbl" x="202" y="88" text-anchor="middle">MCB</text>
-<text class="lbl lbl--sm" x="202" y="142" text-anchor="middle">STILL ON</text>
-<path class="wire" d="M120 110 V144 M120 168 V180 M160 110 V152 M160 160 V214"/>
-<circle class="joint" cx="120" cy="110" r="2.6"/>
-<circle class="joint" cx="160" cy="110" r="2.6"/>
-<rect class="alarm" x="102" y="144" width="36" height="24" rx="3"/>
-<text class="lbl lbl--sm" x="120" y="160" text-anchor="middle">IMD</text>
-<text class="lbl lbl--sm lbl--alarm" x="96" y="160" text-anchor="end">ALARM</text>
-<path class="earth" d="M108 180 H132 M112 186 H128 M116 192 H124"/>
-<path class="sym" d="M152 152 H168 M152 160 H168"/>
-<text class="lbl lbl--sm" x="172" y="160">C</text>
-<path class="pe" d="M365 126 V180"/><path class="pe pe--stripe" d="M365 126 V180"/><text class="lbl lbl--sm" x="371" y="154">PE</text>
-<path class="earth" d="M353 180 H377 M357 186 H373 M361 192 H369"/>
-<path class="ground" d="M120 192 V214 H365 V192"/>
-<text class="lbl lbl--sm" x="357" y="174" text-anchor="end">earth electrode</text>
-<text class="lbl lbl--sm" x="262" y="232" text-anchor="middle">EARTH</text>
-<path class="current current--weak" pathLength="100" d="M100 56 H356 L380 80 V126 H365 V214 H160 V110 H100"/>
-</svg>
-<figcaption><strong>IT</strong>: the source neutral is not directly earthed. On the first fault, the small current returns through the network's capacitance to earth (C). The insulation monitoring device detects the fault and raises an alarm; in principle, the installation stays in service.</figcaption>
-</figure>
-<p>The neutral is isolated from earth, or connected through a high impedance. On the first fault, the current can only return through the insulation and capacitance of the network, and through that possible impedance: it stays small and, if the network meets the conditions set at the design stage, does not require disconnection. The larger the network, the higher this current.</p>
-<p>An insulation monitoring device (IMD) raises an alarm: the fault must be found and cleared quickly, as a second fault on another live conductor requires disconnection. IT is used where an interruption would be serious: hospital operating theatres, continuous-process industries.</p>
 <h2>In short: what disconnects?</h2>
 <div class="table-wrap">
 <table class="table">
-<thead><tr><th scope="col">System</th><th scope="col">Source neutral</th><th scope="col">Metal casings</th><th scope="col">On the first insulation fault</th></tr></thead>
+<thead><tr><th scope="col">System</th><th scope="col">Source neutral</th><th scope="col">Metal casings</th><th scope="col">On an insulation fault</th></tr></thead>
 <tbody>
 <tr><th scope="row">TT</th><td>Earthed</td><td>Connected to an earth electrode</td><td>The RCD trips</td></tr>
 <tr><th scope="row">TN</th><td>Earthed</td><td>Connected to the neutral</td><td>The circuit breaker or fuse disconnects, provided the fault current is high enough</td></tr>
-<tr><th scope="row">IT</th><td>Isolated or connected through a high impedance</td><td>Connected to an earth electrode</td><td>In principle no disconnection, the IMD raises an alarm</td></tr>
 </tbody>
 </table>
 </div>
 <h2>And at an event?</h2>
 <p>An event installation is temporary: according to the French national safety institute (INRS), 30 mA RCDs are mandatory there, as on all socket-outlets up to 32 A, whatever the earthing system.</p>
-<p>On a venue supply, the event in principle fits into the earthing system that supplies it: usually TT in France if the venue is connected to the public low-voltage network. Local rules differ: in the UK, for example, BS 7671 restricts the use of a PME (TN-C-S) earth for temporary installations. On a <a href="../../glossary/#groupe-electrogene">generator</a>, the event has its own source: earthing system, earthing arrangements and protective devices are chosen at the design stage and verified on site. A generator delivers far less short-circuit current than a transformer: in TN, disconnection by circuit breaker must be checked carefully, otherwise RCDs take over.</p>
-<p>Finally, flexible cables cannot be used as a PEN: neutral (N) and protective conductor (PE) stay separate. Where the earthing system includes a neutral-earth link, there is only one, at the source or at the origin of the installation, never in downstream boards and boxes, unless they form a new source such as a transformer.</p>
-<blockquote>TT, TN, IT: ask yourself what disconnects. The RCD, the circuit breaker or fuse, or, on the first fault in IT, in principle nothing: an alarm warns you.</blockquote>
+<p>On a venue supply, the event in principle fits into the earthing system that supplies it: usually TT in France if the venue is connected to the public low-voltage network. A large venue with its own transformer may be TN, sometimes TN-C on the large cables: the PEN is then split into neutral and PE before the event's distribution boards, which are protected by RCDs. In French exhibition halls, the fire safety regulations require the earth terminal of each stand board to be connected to the building's protective network, and forbid individual earth rods. Local rules differ: in the UK, for example, BS 7671 restricts the use of a PME (TN-C-S) earth for temporary installations.</p>
+<p>Changing the earthing system requires a new source: a transformer with separate windings, or a <a href="../../glossary/#groupe-electrogene">generator</a>. On a generator, earthing system, earthing arrangements and protective devices are chosen at the design stage and verified on site. A generator delivers far less short-circuit current than a transformer: in TN, disconnection by circuit breaker must be checked carefully, otherwise RCDs take over.</p>
+<p>Finally, flexible cables cannot be used as a PEN: neutral (N) and protective conductor (PE) stay separate. Where the earthing system includes a neutral-earth link, there is only one, at the source or at the origin of the installation, never in downstream boards and boxes.</p>
+<blockquote>TT or TN: ask yourself what disconnects. In TT, the RCD; in TN, the circuit breaker or fuse, provided the fault current is high enough.</blockquote>
       </article>
       <div class="note note--info" style="margin-top:40px">
         <svg data-icon="shield-check"></svg>

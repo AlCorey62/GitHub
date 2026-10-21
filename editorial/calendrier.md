@@ -9,7 +9,7 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Mar 20/10 | Le sais-tu ? (site) | TT, TN, IT : les régimes de neutre expliqués simplement, avec schémas animés (sujet demandé par Damien) | rédigé |
+| Mar 20/10 | Le sais-tu ? (site) | TT ou TN : les régimes de neutre expliqués simplement, avec schémas animés et cas des ERP (sujet demandé par Damien, IT retiré) | rédigé |
 
 ## Semaine du 26 octobre 2026
 
