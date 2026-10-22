@@ -5,6 +5,12 @@ Les sujets marqués **à valider** reposent sur des valeurs que Damien confirme 
 
 Articles déjà en ligne (à ne pas refaire) : distribution électrique événementielle, groupe Twin zéro coupure, section de câble et longueur, pourquoi « ça saute », kVA ou kW, foisonnement, puissance d'une prise P17, équilibrer les phases.
 
+## Semaine du 19 octobre 2026 (essai de la chaîne)
+
+| Jour | Format | Sujet | Statut |
+|---|---|---|---|
+| Mar 20/10 | Le sais-tu ? (site) | TT ou TN : les régimes de neutre expliqués simplement, avec schémas animés et cas des ERP (sujet demandé par Damien, IT retiré) | rédigé |
+
 ## Semaine du 26 octobre 2026
 
 | Jour | Format | Sujet | Statut |
@@ -19,17 +25,17 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 2/11 | Le sais-tu ? (site) | Pourquoi un groupe électrogène n'aime pas tourner presque à vide (sous-charge, encrassement) **à valider** : taux de charge minimal conseillé | prévu |
-| Mar 3/11 | Cas terrain n° 1 (site) | Selon `anecdotes.md` ; à défaut : un câble enroulé sur son touret chauffe, pourquoi le dérouler | prévu |
-| Mer 4/11 | Vrai ou faux | « Une prise P17 bleue, c'est du 230 V. » Vrai | prévu |
-| Jeu 5/11 | Calculette | Chute de tension : 32 A en monophasé sur 80 m, quelle section ? | prévu |
-| Ven 6/11 | Coulisses | Armoire de distribution P17 : repérage des câbles | prévu |
+| Lun 2/11 | Le sais-tu ? (site) | Pourquoi un groupe électrogène n'aime pas tourner presque à vide (sous-charge, encrassement) ; seuil : « le plus souvent 30 % », pas de chiffre unique | rédigé |
+| Mar 3/11 | Le sais-tu ? (site, aucune anecdote disponible) | Un câble enroulé sur son touret chauffe, pourquoi le dérouler | rédigé |
+| Mer 4/11 | Vrai ou faux | « Une prise P17 bleue, c'est du 230 V. » Vrai | rédigé |
+| Jeu 5/11 | Calculette | Chute de tension : 32 A en monophasé sur 80 m, quelle section ? | rédigé |
+| Ven 6/11 | Coulisses | Armoire de distribution P17 : repérage des câbles | rédigé |
 
 ## Semaine du 9 novembre 2026
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : à quoi il sert (schéma TT, RA × IΔn ≤ 50 V) | prévu |
+| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : à quoi il sert (RA × IΔn ≤ 50 V) **à vérifier** : TT ou TN-S selon la liaison du neutre du groupe (IET Wiring Matters 2011), pour ne pas contredire l'article du 20/10 | prévu |
 | Mar 10/11 | Cas terrain n° 2 (site) | Selon `anecdotes.md` ; à défaut : Powerlock, pourquoi on branche la terre en premier **à valider** : ordre de connexion pratiqué par nos équipes | prévu |
 | Mer 11/11 | (férié) | Pas de publication | |
 | Jeu 12/11 | Calculette | Réseaux étrangers : les mêmes kilowatts ne font pas les mêmes ampères en 120/208 V | prévu |
