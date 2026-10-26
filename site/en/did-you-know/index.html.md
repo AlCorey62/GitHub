@@ -8,6 +8,12 @@ Plenty of calculations explain electricity, but the aim of these articles is to 
 
 ## Understand before you plug in.
 
+Did you know? · 26 October 2026 · 3 min
+
+### [Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
+
+Leakage from LED drivers adds up on a single RCD. The fix: split the circuits.
+
 Did you know? · 12 October 2026 · 2 min
 
 ### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)

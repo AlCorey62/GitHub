@@ -2,7 +2,7 @@
 
 > Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.
 
-Site : https://www.darkside-energy.com/ · Généré le 2026-10-19
+Site : https://www.darkside-energy.com/ · Généré le 2026-10-26
 
 ---
 
@@ -160,6 +160,12 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
+Le sais-tu ? · 26 octobre 2026 · 3 min
+
+### [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/news/led-et-differentiel/)
+
+Les fuites des drivers de LED s'additionnent sur un même différentiel. La parade : répartir les circuits.
+
 Le sais-tu ? · 2 min
 
 ### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
@@ -171,12 +177,6 @@ Le sais-tu ? · 2 min
 ### [Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/news/coefficient-de-foisonnement/)
 
 Tous les appareils ne fonctionnent pas en même temps à pleine puissance. Le foisonnement évite la surcapacité.
-
-Le sais-tu ? · 2 min
-
-### [Quelle puissance tirer d'une prise P17 ?](https://www.darkside-energy.com/news/puissance-prise-p17/)
-
-De 3,7 kVA pour une prise 16 A monophasée à 277,1 kVA pour un Powerlock 400 A : des maximums, pas des objectifs.
 
 ## Un projet ? Parlons puissance.
 
@@ -955,6 +955,12 @@ Beaucoup de calculs expliquent l'électricité, mais le but de ces articles est 
 
 ## Comprendre avant de brancher.
 
+Le sais-tu ? · 26 octobre 2026 · 3 min
+
+### [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/news/led-et-differentiel/)
+
+Les fuites des drivers de LED s'additionnent sur un même différentiel. La parade : répartir les circuits.
+
 Le sais-tu ? · 12 octobre 2026 · 2 min
 
 ### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
@@ -1026,6 +1032,60 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 ---
 
+# Pourquoi les LED font-elles sauter les différentiels ?
+
+> Courants de fuite et appels de courant : pourquoi les LED et l'électronique font déclencher les différentiels 30 mA, et comment répartir les circuits.
+
+Source : https://www.darkside-energy.com/news/led-et-differentiel/ · Dark Side Energy · Mise à jour : 2026-10-26
+
+26 octobre 2026 · 3 min de lecture
+
+- Les projecteurs LED et les appareils électroniques reliés à la terre laissent fuir en permanence un petit courant vers la terre : sur un même différentiel, ces fuites s'additionnent.
+- Un différentiel 30 mA peut déclencher dès que la fuite dépasse 15 mA : sa norme lui interdit seulement de couper jusqu'à la moitié de sa sensibilité.
+- La solution n'est jamais de retirer la protection : on répartit les appareils sur plusieurs circuits, chacun avec son différentiel.
+
+Imaginez : une rampe de projecteurs LED de plus sur une ligne déjà bien remplie, et tout s'éteint. Aucun appareil n'est en défaut, le coffret est en bon état, la puissance totale est loin du calibre. Pourtant, le [différentiel 30 mA](https://www.darkside-energy.com/lexique/#differentiel-30-ma) a déclenché. Il n'est pas en panne : il fait exactement ce pour quoi il est conçu.
+
+## Des fuites qui s'additionnent
+
+Les projecteurs LED, comme la plupart des appareils électroniques reliés à la terre (ordinateurs, écrans, consoles, amplificateurs), intègrent un filtre contre les perturbations électromagnétiques. Ce filtre relie les conducteurs à la terre par des condensateurs : un petit courant s'écoule en permanence vers la terre, même quand l'appareil fonctionne parfaitement.
+
+Pour un appareil, ce courant reste faible. Mais un différentiel ne voit pas les appareils un par un : il mesure la somme de toutes les fuites en aval. Par exemple, vingt appareils qui laissent fuir chacun 1 mA, ce sont 20 mA de fuite permanente sur le même différentiel.
+
+## Un 30 mA déclenche avant 30 mA
+
+Un différentiel 30 mA ne coupe pas pile à 30 mA. Sa norme de fabrication (IEC 61008) impose qu'il ne déclenche pas jusqu'à la moitié de sa sensibilité, soit 15 mA, et qu'il déclenche à 30 mA. Entre les deux, il peut couper à tout moment. Avec 20 mA de fuite permanente, il suffit de peu pour franchir le seuil : un appareil de plus, une mise sous tension, de l'humidité sur une liaison.
+
+## À l'allumage, l'appel de courant
+
+À la mise sous tension, chaque driver de LED charge ses condensateurs d'entrée et appelle, pendant un instant très bref, un courant bien supérieur à son courant de fonctionnement. Allumés tous en même temps, des dizaines de drivers peuvent faire déclencher le [disjoncteur](https://www.darkside-energy.com/lexique/#disjoncteur) du circuit, alors que la puissance en fonctionnement est largement dans les limites. Différentiel ou disjoncteur, chacun a son rôle : nous l'expliquons dans [Pourquoi « ça saute » ?](https://www.darkside-energy.com/news/pourquoi-ca-saute/)
+
+## Ce que nous faisons
+
+- **Répartir** les appareils électroniques sur plusieurs circuits, chacun protégé par son propre différentiel : les fuites se partagent au lieu de s'additionner.
+- **Garder de la marge** : puisqu'un 30 mA peut couper dès 15 mA, la fuite permanente de chaque circuit doit rester nettement en dessous.
+- **Choisir la bonne protection** : pour les ensembles importants d'électronique, des différentiels à immunité renforcée, conçus pour mieux supporter ces fuites et ces appels de courant.
+- **Échelonner les allumages** plutôt que tout mettre sous tension d'un coup.
+
+Retirer le différentiel, ou le remplacer par un modèle moins sensible, n'est jamais la solution : le 30 mA est là pour protéger les personnes.
+
+> Un différentiel qui saute avec des LED n'est pas en panne : il additionne des fuites. La réponse, c'est la répartition.
+
+Combien de circuits prévoir ? Listez vos appareils dans le bilan de puissance.
+
+[Ouvrir le bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
+
+[kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
+
+## Un projet ? Parlons puissance.
+
+Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
+
+[Demander un devis](https://www.darkside-energy.com/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
 # kVA ou kW : quelle différence ?
 
 > kW et kVA expliqués simplement : puissance active, puissance apparente et cos φ. Pourquoi les groupes et les raccordements se comptent en kVA.
@@ -1064,6 +1124,7 @@ Convertissez vos kW en kVA et en ampères, en monophasé ou en triphasé.
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#conversion)
 
+[Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/news/led-et-differentiel/)
 [Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/news/coefficient-de-foisonnement/)
 
 ## Un projet ? Parlons puissance.
@@ -1869,6 +1930,12 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
+Did you know? · 26 October 2026 · 3 min
+
+### [Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
+
+Leakage from LED drivers adds up on a single RCD. The fix: split the circuits.
+
 Did you know? · 2 min
 
 ### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
@@ -1880,12 +1947,6 @@ Did you know? · 2 min
 ### [What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
 
 Not all equipment runs at full power at the same time. The diversity factor avoids overcapacity.
-
-Did you know? · 2 min
-
-### [How much power can you draw from a P17 socket?](https://www.darkside-energy.com/en/did-you-know/p17-socket-power/)
-
-From 3.7 kVA for a 16 A single-phase socket to 277.1 kVA for a 400 A Powerlock: maximums, not targets.
 
 ## A project? Let's talk power.
 
@@ -2664,6 +2725,12 @@ Plenty of calculations explain electricity, but the aim of these articles is to 
 
 ## Understand before you plug in.
 
+Did you know? · 26 October 2026 · 3 min
+
+### [Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
+
+Leakage from LED drivers adds up on a single RCD. The fix: split the circuits.
+
 Did you know? · 12 October 2026 · 2 min
 
 ### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
@@ -2721,6 +2788,60 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 ---
 
+# Why do LEDs trip RCDs?
+
+> Leakage and inrush currents: why LEDs and electronics trip 30 mA RCDs, and how to split circuits to avoid it.
+
+Source: https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/ · Dark Side Energy · Updated: 2026-10-26
+
+26 October 2026 · 3 min read
+
+- LED fixtures and earthed electronic equipment constantly leak a small current to earth: on the same RCD, these leakage currents add up.
+- A 30 mA RCD may trip as soon as leakage exceeds 15 mA: its standard only forbids tripping up to half its sensitivity.
+- Removing the protection is never the answer: spread the equipment over several circuits, each with its own RCD.
+
+Picture this: one more bar of LED fixtures on a line that is already well loaded, and everything goes dark. No fixture is faulty, the power box is in good condition, the total load is far below the rating. Yet the [30 mA RCD](https://www.darkside-energy.com/en/glossary/#differentiel-30-ma) has tripped. It is not broken: it is doing exactly what it was designed to do.
+
+## Leakage currents add up
+
+LED fixtures, like most earthed electronic equipment (computers, screens, consoles, amplifiers), include a filter against electromagnetic interference. This filter connects the conductors to earth through capacitors: a small current flows to earth all the time, even when the equipment works perfectly.
+
+For one device, this current stays low. But an RCD does not see devices one by one: it measures the sum of all leakage downstream. For example, twenty devices leaking 1 mA each make 20 mA of permanent leakage on the same RCD.
+
+## A 30 mA RCD trips before 30 mA
+
+A 30 mA RCD does not cut off at exactly 30 mA. Its product standard (IEC 61008) requires it not to trip up to half its sensitivity, 15 mA, and to trip at 30 mA. In between, it may trip at any point. With 20 mA of permanent leakage, very little is needed to cross the threshold: one more device, a switch-on, some moisture on a connection.
+
+## At switch-on: inrush current
+
+When powered up, each LED driver charges its input capacitors and draws, for a very brief moment, a current far higher than its operating current. Switched on all at once, dozens of drivers can trip the circuit [breaker](https://www.darkside-energy.com/en/glossary/#disjoncteur), even though the operating load is well within limits. RCD or breaker, each has its own job: we explain it in [Why does it “trip”?](https://www.darkside-energy.com/en/did-you-know/why-it-trips/)
+
+## What we do
+
+- **Split** electronic equipment over several circuits, each protected by its own RCD: leakage is shared instead of adding up.
+- **Keep a margin**: since a 30 mA RCD may trip from 15 mA, the permanent leakage of each circuit must stay well below that.
+- **Choose the right protection**: for large amounts of electronics, RCDs with enhanced immunity, designed to withstand this leakage and inrush current better.
+- **Stagger switch-on** rather than powering everything up at once.
+
+Removing the RCD, or replacing it with a less sensitive one, is never the answer: the 30 mA device is there to protect people.
+
+> An RCD that trips with LEDs is not faulty: it is adding up leakage. The answer is to split the circuits.
+
+How many circuits do you need? List your equipment in the power assessment.
+
+[Open the power assessment](https://www.darkside-energy.com/en/power-assessment/)
+
+[kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
+
+## A project? Let's talk power.
+
+Venue, dates, known requirements: tell us about your event and we will get back to you quickly.
+
+[Request a quote](https://www.darkside-energy.com/en/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
 # kVA or kW: what's the difference?
 
 > kW and kVA explained simply: active power, apparent power and cos φ. Why generators and grid connections are rated in kVA.
@@ -2759,6 +2880,7 @@ Convert your kW into kVA and amps, in single-phase or three-phase.
 
 [Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
 
+[Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
 [What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
 
 ## A project? Let's talk power.

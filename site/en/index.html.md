@@ -152,6 +152,12 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
+Did you know? · 26 October 2026 · 3 min
+
+### [Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
+
+Leakage from LED drivers adds up on a single RCD. The fix: split the circuits.
+
 Did you know? · 2 min
 
 ### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
@@ -163,12 +169,6 @@ Did you know? · 2 min
 ### [What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
 
 Not all equipment runs at full power at the same time. The diversity factor avoids overcapacity.
-
-Did you know? · 2 min
-
-### [How much power can you draw from a P17 socket?](https://www.darkside-energy.com/en/did-you-know/p17-socket-power/)
-
-From 3.7 kVA for a 16 A single-phase socket to 277.1 kVA for a 400 A Powerlock: maximums, not targets.
 
 ## A project? Let's talk power.
 

@@ -148,6 +148,12 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
+Le sais-tu ? · 26 octobre 2026 · 3 min
+
+### [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/post/led-et-differentiel)
+
+Les fuites des drivers de LED s'additionnent sur un même différentiel. La parade : répartir les circuits.
+
 Le sais-tu ? · 2 min
 
 ### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/post/kva-ou-kw)
@@ -159,12 +165,6 @@ Le sais-tu ? · 2 min
 ### [Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/post/coefficient-de-foisonnement)
 
 Tous les appareils ne fonctionnent pas en même temps à pleine puissance. Le foisonnement évite la surcapacité.
-
-Le sais-tu ? · 2 min
-
-### [Quelle puissance tirer d'une prise P17 ?](https://www.darkside-energy.com/post/puissance-prise-p17)
-
-De 3,7 kVA pour une prise 16 A monophasée à 277,1 kVA pour un Powerlock 400 A : des maximums, pas des objectifs.
 
 ## Un projet ? Parlons puissance.
 

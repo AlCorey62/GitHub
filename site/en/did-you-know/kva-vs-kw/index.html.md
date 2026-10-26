@@ -36,6 +36,7 @@ Convert your kW into kVA and amps, in single-phase or three-phase.
 
 [Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
 
+[Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
 [What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
 
 ## A project? Let's talk power.
