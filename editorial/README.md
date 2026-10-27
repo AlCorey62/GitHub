@@ -16,6 +16,7 @@ editorial/
     AAAA-MM-JJ-nom/      fr.html (obligatoire), en.html (facultatif)
   semaines/            Publications réseaux sociaux de chaque semaine
     AAAA-MM-JJ/          publications.md (textes LinkedIn et Facebook), visuels PNG et diffusion.json (journal des envois)
+  brouillons/          Articles rédigés en attente de validation, sans date de parution (jamais publiés tels quels)
 ```
 
 ## La semaine type
