@@ -16,6 +16,7 @@ editorial/
     AAAA-MM-JJ-nom/      fr.html (obligatoire), en.html (facultatif)
   semaines/            Publications réseaux sociaux de chaque semaine
     AAAA-MM-JJ/          publications.md (textes LinkedIn et Facebook), visuels PNG et diffusion.json (journal des envois)
+  brouillons/          Articles rédigés en attente de validation, sans date de parution (jamais publiés tels quels)
 ```
 
 ## La semaine type
@@ -32,8 +33,8 @@ editorial/
 
 1. **Rédaction** : chaque jeudi, la semaine suivante non encore préparée est rédigée (articles dans `a-paraitre/`, textes et visuels dans `semaines/`) et proposée dans une demande de fusion (PR) avec le récapitulatif lisible.
 2. **Validation** : Damien relit la semaine sur la page de relecture (https://claude.ai/artifact/NTaN4bsPi1FPkt4mbPPStv, mise à jour à chaque rédaction avec `node tools/relecture.mjs`), puis corrige ou valide. Rien n'est publié sans son accord : à sa validation, le statut de `publications.md` devient `**validé par Damien le JJ/MM/AAAA**` et la PR est fusionnée.
-3. **Publication des articles** : chaque matin vers 5 h 15 (heure d'hiver de Paris, avec un second passage de secours vers 6 h 45), la tâche GitHub « Publication programmée » (`.github/workflows/publication.yml`) met en ligne les articles validés du jour : `node tools/publier.mjs`, puis construction, contrôles et tests, puis envoi sur main, que Netlify publie. En cas d'échec, rien n'est envoyé et GitHub prévient par e-mail ; la tâche peut aussi être lancée à la main depuis l'onglet *Actions* du dépôt.
-4. **Réseaux sociaux** : du lundi au vendredi vers 8 h 30, la tâche GitHub « Diffusion réseaux sociaux » (`.github/workflows/diffusion.yml`) publie le texte et le visuel du jour des semaines validées, après avoir vérifié que le lien répond. Facebook dès que le jeton de la page est en place, LinkedIn après l'accord de LinkedIn : voir `RESEAUX.md`. D'ici là, les textes de `semaines/AAAA-MM-JJ/publications.md` se programment à la main (planification de la page LinkedIn, Meta Business Suite). Les flux RSS du site (`/news/feed.xml`, `/en/did-you-know/feed.xml`) restent disponibles pour un outil tiers.
+3. **Publication des articles** : du lundi au vendredi à 8 h 26 (heure de Paris), une tâche programmée Claude lance la tâche GitHub « Publication programmée » (`.github/workflows/publication.yml`) quand un article validé est dû : `node tools/publier.mjs`, puis construction, contrôles et tests, puis envoi sur main, que Netlify publie en 1 à 2 minutes. Les déclenchements programmés de GitHub (4 h 17 et 5 h 47 UTC) restent en secours : depuis le 22/10/2026, ils arrivent avec plusieurs heures de retard. En cas d'échec, rien n'est envoyé, GitHub prévient par e-mail et Claude prévient Damien ; la tâche peut aussi être lancée à la main depuis l'onglet *Actions* du dépôt.
+4. **Réseaux sociaux** : juste après, la même tâche programmée Claude lance la tâche GitHub « Diffusion réseaux sociaux » (`.github/workflows/diffusion.yml`) publie le texte et le visuel du jour des semaines validées, après avoir vérifié que le lien répond. Facebook dès que le jeton de la page est en place, LinkedIn après l'accord de LinkedIn : voir `RESEAUX.md`. D'ici là, les textes de `semaines/AAAA-MM-JJ/publications.md` se programment à la main (planification de la page LinkedIn, Meta Business Suite). Les flux RSS du site (`/news/feed.xml`, `/en/did-you-know/feed.xml`) restent disponibles pour un outil tiers.
 5. **Mesure** : chaque mois, dans Google Analytics (sources linkedin.com et facebook.com, événement `generate_lead`) et dans les statistiques LinkedIn et Facebook, on garde les formats qui marchent.
 
 ## Publier un article à la main

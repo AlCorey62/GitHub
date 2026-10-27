@@ -1861,6 +1861,141 @@ a.tag:hover {
   animation-duration: 3.6s;
 }
 
+/* Schémas de liaison à la terre (TT, TN, IT) : trajet du courant de défaut */
+.slt {
+  margin: 32px 0;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  background: var(--c-surface);
+  overflow: hidden;
+}
+
+.slt .sld {
+  display: block;
+  padding: 14px 10px 6px;
+}
+
+.slt figcaption {
+  padding: 12px 16px;
+  font-size: var(--fs-sm);
+  color: var(--c-text-2);
+  border-top: 1px solid var(--c-line);
+}
+
+.slt figcaption strong {
+  color: var(--c-text);
+}
+
+.sld .name {
+  fill: var(--c-text);
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+}
+
+.slt .lbl {
+  font-size: 12px;
+}
+
+.slt .lbl--sm {
+  font-size: 10.5px;
+}
+
+.sld .pe {
+  fill: none;
+  stroke: #2f9e4f;
+  stroke-width: 2.4;
+}
+
+.sld .pe--stripe {
+  stroke: #e3c341;
+  stroke-dasharray: 5 5;
+}
+
+.sld .earth {
+  fill: none;
+  stroke: #b4b4bb;
+  stroke-width: 1.6;
+}
+
+.sld .joint {
+  fill: #d6d6db;
+}
+
+.sld .ground {
+  fill: none;
+  stroke: #5a5a64;
+  stroke-width: 1.2;
+  stroke-dasharray: 2 4;
+}
+
+.sld .current {
+  fill: none;
+  stroke: var(--c-accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 1.6 2.4;
+  filter: drop-shadow(0 0 4px rgba(255, 60, 40, 0.8));
+  animation: slt-current 1.4s linear infinite;
+}
+
+.sld .current--strong {
+  stroke-width: 4.2;
+  animation-duration: 0.7s;
+}
+
+.sld .current--weak {
+  stroke-width: 1.6;
+  opacity: 0.7;
+  filter: none;
+  animation-duration: 3s;
+}
+
+@keyframes slt-current {
+  to { stroke-dashoffset: -4; }
+}
+
+.sld .spark {
+  fill: none;
+  stroke: #ffd23f;
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+  animation: slt-spark 0.9s steps(2, jump-none) infinite;
+}
+
+@keyframes slt-spark {
+  0% { opacity: 1; }
+  100% { opacity: 0.25; }
+}
+
+.sld .trip {
+  fill: var(--c-surface);
+  stroke: var(--c-accent);
+  stroke-width: 1.6;
+  animation: slt-trip 2.8s ease-in-out infinite;
+}
+
+@keyframes slt-trip {
+  0%, 45%, 100% { fill: var(--c-surface); }
+  55%, 90% { fill: rgba(255, 74, 61, 0.35); }
+}
+
+.sld .alarm {
+  fill: var(--c-surface);
+  stroke: #ffb020;
+  stroke-width: 1.6;
+  animation: slt-alarm 1.6s ease-in-out infinite;
+}
+
+@keyframes slt-alarm {
+  0%, 100% { fill: var(--c-surface); }
+  50% { fill: rgba(255, 176, 32, 0.35); }
+}
+
+.sld .lbl--alarm {
+  fill: #ffb020;
+}
+
 /* Hero pages intérieures */
 .page-hero {
   position: relative;

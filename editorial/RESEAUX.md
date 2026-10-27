@@ -2,6 +2,8 @@
 
 La tâche GitHub « Diffusion réseaux sociaux » (`.github/workflows/diffusion.yml`, script `tools/diffusion.mjs`) publie elle-même la publication du jour, du lundi au vendredi vers 8 h 30 (heure de Paris).
 
+Depuis le 27/10/2026, c'est une tâche programmée Claude, du lundi au vendredi à 8 h 26, qui la lance (mode « publier ») après avoir vérifié que la semaine est validée et que le lien du jour répond : les déclenchements programmés de GitHub arrivent avec plusieurs heures de retard et ne servent plus que de secours. Le journal `diffusion.json` empêche tout doublon.
+
 - Elle ne publie que les semaines validées : ligne `Statut : **validé par Damien le JJ/MM/AAAA**` dans `semaines/AAAA-MM-JJ/publications.md`.
 - Elle prend le texte, le visuel et le lien du jour, et vérifie d'abord que le lien répond sur le site.
 - Elle vérifie aussi que le jeton donne accès à la page Dark Side Energy et pas à une autre page gérée par le même compte. Sinon, elle n'envoie rien.

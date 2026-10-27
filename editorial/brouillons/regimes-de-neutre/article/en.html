@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--page
+{
+  "path": "en/did-you-know/earthing-systems/",
+  "title": "TT or TN: earthing systems made simple",
+  "description": "What happens when an appliance develops a fault, and what disconnects the supply? TT and TN earthing systems made simple, with animated diagrams, and what changes at an event.",
+  "nav": "news",
+  "type": "article",
+  "article": {
+    "date": "2026-10-20",
+    "readingTime": "4 min",
+    "excerpt": "Two letters that tell you what happens when an appliance develops a fault, and which device trips.",
+    "kind": "Did you know?"
+  },
+  "breadcrumb": [
+    [
+      "Did you know?",
+      "did-you-know/"
+    ],
+    [
+      "TT or TN: earthing systems made simple"
+    ]
+  ],
+  "updated": "2026-10-20",
+  "lang": "en",
+  "alternate": "/news/regimes-de-neutre/"
+}
+-->
+<!-- head:start -->
+<!-- head:end -->
+</head>
+<body>
+<!-- header:start -->
+<!-- header:end -->
+
+<main id="contenu">
+
+  <section class="page-hero">
+    <div class="container container--narrow">
+      <!-- breadcrumb:start -->
+<!-- breadcrumb:end -->
+      <p class="eyebrow">Did you know?</p>
+      <h1>TT or TN: earthing systems made simple</h1>
+      <p class="post-meta"><time datetime="2026-10-20">20 October 2026</time><span>4 min read</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <aside class="takeaways" aria-label="Key points">
+        <p class="eyebrow">Key points</p>
+        <ul class="check-list">
+          <li>The earthing system describes how the source neutral and the metal casings of appliances are connected to earth.</li>
+          <li>It decides what disconnects the supply when an insulation fault occurs: the RCD in TT; the circuit breaker or fuse in TN, provided the fault current is high enough.</li>
+          <li>In a temporary installation, 30 mA RCDs are mandatory in France whatever the earthing system, and the neutral (N) stays separate from the protective conductor (PE): no PEN in flexible cables.</li>
+        </ul>
+      </aside>
+      <article class="prose">
+<p>Electrical equipment often has a metal casing: an <strong>exposed-conductive-part</strong>. If a live conductor touches it, through damaged insulation for example, it becomes live: this is an <strong>insulation fault</strong>, and anyone touching it risks an electric shock. The earthing system describes the path of the fault current, and therefore which device will disconnect the supply, or not.</p>
+<h2>Two letters say it all</h2>
+<p>In French, it is called the “régime de neutre”. It is written with two letters:</p>
+<ul>
+<li><strong>The first</strong> concerns the neutral of the source, a transformer or a generator: <strong>T</strong>, connected directly to earth; <strong>I</strong>, isolated from earth or connected through a high impedance.</li>
+<li><strong>The second</strong> concerns the metal casings of appliances: <strong>T</strong>, connected to an <a href="../../glossary/#prise-de-terre">earth electrode</a>; <strong>N</strong>, connected to the source neutral by the protective conductor (PE), the green and yellow conductor.</li>
+</ul>
+<p>A third system, IT, with an isolated neutral, is used where an interruption would be serious, such as operating theatres; we do not use it at events.</p>
+<h2>TT: the earth carries the current back, the RCD trips</h2>
+<figure class="slt">
+<svg class="sld" viewBox="0 0 400 250" role="img" aria-labelledby="slt-tt-t slt-tt-d">
+<title id="slt-tt-t">TT system</title>
+<desc id="slt-tt-d">A fault connects the line conductor to the appliance's metal casing. The fault current flows through the protective conductor, the appliance's earth electrode, the ground and the neutral earth electrode, back to the source. It is usually too small to operate a circuit breaker in time: the RCD detects the leakage and trips.</desc>
+<text class="name" x="14" y="24">TT</text>
+<rect class="node node--hot" x="12" y="40" width="88" height="86" rx="4"/>
+<text class="lbl" x="56" y="78" text-anchor="middle">SOURCE</text>
+<text class="lbl lbl--sm" x="56" y="94" text-anchor="middle" textLength="76" lengthAdjust="spacingAndGlyphs">transformer</text>
+<text class="lbl lbl--sm" x="56" y="106" text-anchor="middle">or genset</text>
+<path class="wire" d="M100 56 H356 M100 110 H330 M330 56 V72 M330 94 V110"/>
+<text class="lbl lbl--sm" x="108" y="50">LINE</text>
+<text class="lbl lbl--sm" x="230" y="104">NEUTRAL</text>
+<rect class="node" x="290" y="40" width="90" height="86" rx="4"/>
+<text class="lbl lbl--sm" x="335" y="34" text-anchor="middle">APPLIANCE</text>
+<rect class="sym" x="322" y="72" width="16" height="22" rx="2"/>
+<text class="lbl lbl--sm" x="335" y="119" text-anchor="middle">casing</text>
+<path class="spark" d="M356 56 L364 64 L358 67 L370 75 L380 80"/>
+<rect class="trip" x="182" y="44" width="40" height="78" rx="4"/>
+<text class="lbl" x="202" y="88" text-anchor="middle">RCD</text>
+<text class="lbl lbl--accent" x="202" y="142" text-anchor="middle">TRIPS</text>
+<path class="wire" d="M120 110 V180"/>
+<circle class="joint" cx="120" cy="110" r="2.6"/>
+<path class="earth" d="M108 180 H132 M112 186 H128 M116 192 H124"/>
+<path class="pe" d="M365 126 V180"/><path class="pe pe--stripe" d="M365 126 V180"/><text class="lbl lbl--sm" x="371" y="154">PE</text>
+<path class="earth" d="M353 180 H377 M357 186 H373 M361 192 H369"/>
+<path class="ground" d="M120 192 V214 H365 V192"/>
+<text class="lbl lbl--sm" x="136" y="190">earth electrode</text>
+<text class="lbl lbl--sm" x="357" y="174" text-anchor="end">earth electrode</text>
+<text class="lbl lbl--sm" x="242" y="232" text-anchor="middle">EARTH</text>
+<path class="current" pathLength="100" d="M100 56 H356 L380 80 V126 H365 V214 H120 V110 H100"/>
+</svg>
+<figcaption><strong>TT</strong>: the fault current returns to the source through the ground. It is usually too small to operate a circuit breaker in time: the RCD detects it and trips.</figcaption>
+</figure>
+<p>The source neutral is connected to one earth electrode, the casings to another. The fault current returns through the ground, which limits it: it is usually too small to operate a <a href="../../glossary/#disjoncteur">circuit breaker</a> or a fuse in time, which does not make it harmless. It is a <a href="../../glossary/#differentiel-30-ma">residual current device</a> (RCD), together with the earthing of the casings, that disconnects. In France, this is the system used for installations connected to the public low-voltage network.</p>
+<h2>TN: the fault becomes a short circuit, the breaker trips</h2>
+<figure class="slt">
+<svg class="sld" viewBox="0 0 400 250" role="img" aria-labelledby="slt-tn-t slt-tn-d">
+<title id="slt-tn-t">TN-S system</title>
+<desc id="slt-tn-d">A fault connects the line conductor to the appliance's metal casing. The casing is connected to the source neutral by the protective conductor: the fault becomes a short circuit. Provided it is high enough, which is checked by calculation, the circuit breaker trips within the prescribed time.</desc>
+<text class="name" x="14" y="24">TN-S</text>
+<rect class="node node--hot" x="12" y="40" width="88" height="86" rx="4"/>
+<text class="lbl" x="56" y="78" text-anchor="middle">SOURCE</text>
+<text class="lbl lbl--sm" x="56" y="94" text-anchor="middle" textLength="76" lengthAdjust="spacingAndGlyphs">transformer</text>
+<text class="lbl lbl--sm" x="56" y="106" text-anchor="middle">or genset</text>
+<path class="wire" d="M100 56 H356 M100 110 H330 M330 56 V72 M330 94 V110"/>
+<text class="lbl lbl--sm" x="108" y="50">LINE</text>
+<text class="lbl lbl--sm" x="230" y="104">NEUTRAL</text>
+<rect class="node" x="290" y="40" width="90" height="86" rx="4"/>
+<text class="lbl lbl--sm" x="335" y="34" text-anchor="middle">APPLIANCE</text>
+<rect class="sym" x="322" y="72" width="16" height="22" rx="2"/>
+<text class="lbl lbl--sm" x="335" y="119" text-anchor="middle">casing</text>
+<path class="spark" d="M356 56 L364 64 L358 67 L370 75 L380 80"/>
+<rect class="trip" x="182" y="44" width="40" height="78" rx="4"/>
+<text class="lbl" x="202" y="88" text-anchor="middle">MCB</text>
+<text class="lbl lbl--accent" x="202" y="142" text-anchor="middle">TRIPS</text>
+<path class="wire" d="M120 110 V180"/>
+<path class="earth" d="M108 180 H132 M112 186 H128 M116 192 H124"/>
+<path class="pe" d="M365 126 V164 H120"/><path class="pe pe--stripe" d="M365 126 V164 H120"/><text class="lbl lbl--sm" x="300" y="158">PE</text>
+<circle class="joint" cx="120" cy="110" r="2.6"/>
+<circle class="joint" cx="120" cy="164" r="2.6"/>
+<text class="lbl lbl--sm" x="136" y="190">earth electrode</text>
+<path class="current current--strong" pathLength="100" d="M100 56 H356 L380 80 V126 H365 V164 H120 V110 H100"/>
+</svg>
+<figcaption><strong>TN-S</strong>: the casing is connected to the source neutral by the protective conductor. The fault becomes a short circuit: provided it is high enough, the circuit breaker trips within the time prescribed by the standard.</figcaption>
+</figure>
+<p>The casings are connected to the neutral by the protective conductor. A fault of negligible impedance becomes a short circuit, which closes through this conductor: the circuit breaker (MCB) or fuse must disconnect within the time prescribed by the standard. Provided the current is high enough: it depends on the source and on the length and cross-section of the conductors, and is checked by calculation, then by measurement. If not, cables or protective devices are adapted, or, in TN-S, an RCD is added.</p>
+<ul>
+<li><strong>TN-S</strong>: neutral and protective conductor separate.</li>
+<li><strong>TN-C</strong>: combined in a single conductor, the PEN, only allowed in fixed installations, from 10 mm² in copper (16 mm² in aluminium), forbidden in locations with a fire or explosion risk, and incompatible with an RCD.</li>
+</ul>
+<h2>In short: what disconnects?</h2>
+<div class="table-wrap">
+<table class="table">
+<thead><tr><th scope="col">System</th><th scope="col">Source neutral</th><th scope="col">Metal casings</th><th scope="col">On an insulation fault</th></tr></thead>
+<tbody>
+<tr><th scope="row">TT</th><td>Earthed</td><td>Connected to an earth electrode</td><td>The RCD trips</td></tr>
+<tr><th scope="row">TN</th><td>Earthed</td><td>Connected to the neutral</td><td>The circuit breaker or fuse disconnects, provided the fault current is high enough</td></tr>
+</tbody>
+</table>
+</div>
+<h2>And at an event?</h2>
+<p>An event installation is temporary: according to the French national safety institute (INRS), 30 mA RCDs are mandatory there, as on all socket-outlets up to 32 A, whatever the earthing system.</p>
+<p>On a venue supply, the event in principle fits into the earthing system that supplies it: usually TT in France if the venue is connected to the public low-voltage network. A large venue with its own transformer may be TN, sometimes TN-C on the large cables: the PEN is then split into neutral and PE before the event's distribution boards, which are protected by RCDs. In French exhibition halls, the fire safety regulations require the earth terminal of each stand board to be connected to the building's protective network, and forbid individual earth rods. Local rules differ: in the UK, for example, BS 7671 restricts the use of a PME (TN-C-S) earth for temporary installations.</p>
+<p>Changing the earthing system requires a new source: a transformer with separate windings, or a <a href="../../glossary/#groupe-electrogene">generator</a>. On a generator, earthing system, earthing arrangements and protective devices are chosen at the design stage and verified on site. A generator delivers far less short-circuit current than a transformer: in TN, disconnection by circuit breaker must be checked carefully, otherwise RCDs take over.</p>
+<p>Finally, flexible cables cannot be used as a PEN: neutral (N) and protective conductor (PE) stay separate. Where the earthing system includes a neutral-earth link, there is only one, at the source or at the origin of the installation, never in downstream boards and boxes.</p>
+<blockquote>TT or TN: ask yourself what disconnects. In TT, the RCD; in TN, the circuit breaker or fuse, provided the fault current is high enough.</blockquote>
+      </article>
+      <div class="note note--info" style="margin-top:40px">
+        <svg data-icon="shield-check"></svg>
+        <div><p>Venue supply or generator: our engineering team selects the equipment and studies cable sizes, the selectivity of protective devices and voltage drop.</p><p><a class="link-arrow" href="../../engineering/">Discover our engineering services<svg data-icon="arrow-right"></svg></a></p></div>
+      </div>
+      <nav class="post-nav" aria-label="Articles"></nav>
+    </div>
+  </section>
+
+  <!-- cta:start -->
+<!-- cta:end -->
+
+</main>
+
+<!-- footer:start -->
+<!-- footer:end -->
+</body>
+</html>
