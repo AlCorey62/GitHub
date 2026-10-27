@@ -11,6 +11,17 @@ const DAYS = { Lundi: 0, Mardi: 1, Mercredi: 2, Jeudi: 3, Vendredi: 4, Samedi: 5
 
 export const addDays = (iso, n) => new Date(Date.parse(`${iso}T12:00:00Z`) + n * 864e5).toISOString().slice(0, 10);
 
+// Texte d'une publication LinkedIn au format « little » de l'API : les caractères réservés sont précédés
+// d'une barre oblique inverse, sinon LinkedIn les interprète ou refuse le texte, et chaque mot-clé (#mot en
+// début de mot) devient le modèle {hashtag|\#|mot}.
+export function little(text) {
+  const esc = (s) => s.replace(/[|{}@[\]()<>#\\*_~]/g, "\\$&");
+  return text
+    .split(/((?<=^|\s)#[\p{L}\p{N}]+)/u)
+    .map((part, i) => (i % 2 ? `{hashtag|\\#|${esc(part.slice(1))}}` : esc(part)))
+    .join("");
+}
+
 export function lireSemaine(week) {
   const monday = basename(week); // AAAA-MM-JJ
   const md = readFileSync(join(week, "publications.md"), "utf8");

@@ -1,9 +1,9 @@
 # Diffusion de la publication du jour sur les réseaux sociaux (voir tools/diffusion.mjs et editorial/RESEAUX.md).
-# Du lundi au vendredi, la publication du jour d'une semaine validée par Damien est envoyée sur la page Facebook,
-# puis notée dans editorial/semaines/<lundi>/diffusion.json, poussé sur main : rien n'est envoyé deux fois.
+# Du lundi au vendredi, la publication du jour d'une semaine validée par Damien est envoyée sur la page Facebook
+# et, à partir du 9/11/2026, sur la page LinkedIn, puis notée dans editorial/semaines/<lundi>/diffusion.json, poussé sur main : rien n'est envoyé deux fois.
 # Lancement à la main (onglet Actions) : « verifier » teste l'accès sans rien publier, « publier » envoie
 # tout de suite la publication du jour.
-# Mise en place avec l'accord de Damien (20/10/2026).
+# Mise en place avec l'accord de Damien (20/10/2026) ; LinkedIn ajouté après l'accord de LinkedIn (27/10/2026).
 name: Diffusion réseaux sociaux
 
 on:
@@ -35,6 +35,8 @@ jobs:
       DIFFUSION_RESUME: ${{ github.workspace }}/../resume-diffusion.txt
       FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
       FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
+      LINKEDIN_ORG_ID: ${{ secrets.LINKEDIN_ORG_ID }}
+      LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
       MODE: ${{ inputs.mode }}
     steps:
       - uses: actions/checkout@v4
