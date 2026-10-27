@@ -119,21 +119,19 @@ Sources techniques accessibles, lues par Pipo (lundi) et Mario (mardi) ; aucune 
 ## Vendredi 6/11 · Coulisses
 
 **Visuel** : `2026-11-06-vendredi.png` (photo de l'armoire P17, marques tierces floutées)
-**Lien** : https://www.darkside-energy.com/nos-produits/
+**Lien** : https://www.darkside-energy.com/distribution-electrique/
 
 **LinkedIn**
 
 > Bagues de couleur, étiquettes, numéros de départ : sur une armoire, chaque câble se repère d'un coup d'œil.
 >
-> Sur la photo, une de nos armoires de distribution, avec ses prises P17 bleues (230 V) et rouges (400 V) et ses câbles repérés.
+> Sur la photo, une armoire de distribution, avec ses prises P17 bleues (230 V) et rouges (400 V) et ses câbles repérés.
 >
-> Un repérage soigné permet de savoir d'où part chaque câble, au montage comme au dépannage.
->
-> Notre matériel est toujours fourni avec nos équipes, qui l'installent et l'exploitent :
-> https://www.darkside-energy.com/nos-produits/
+> Un repérage soigné permet de savoir d'où part chaque câble, au montage comme au dépannage. C'est le quotidien de nos techniciens électriciens :
+> https://www.darkside-energy.com/distribution-electrique/
 >
 > #événementiel #distributionélectrique #coulisses
 
 **Facebook**
 
-> 🏷️ Bagues de couleur, étiquettes, numéros : sur nos armoires, chaque câble se repère d'un coup d'œil 👉 https://www.darkside-energy.com/nos-produits/
+> 🏷️ Bagues de couleur, étiquettes, numéros : sur une armoire, chaque câble se repère d'un coup d'œil 👉 https://www.darkside-energy.com/distribution-electrique/

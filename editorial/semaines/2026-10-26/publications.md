@@ -115,7 +115,7 @@ Statut : **validé par Damien le 19/10/2026**. Publication conseillée entre 8 h
 ## Vendredi 30/10 · Coulisses
 
 **Visuel** : `2026-10-30-vendredi.png` (photo des connecteurs Powerlock dans la neige)
-**Lien** : https://www.darkside-energy.com/nos-produits/
+**Lien** : https://www.darkside-energy.com/distribution-electrique/
 
 **LinkedIn**
 
@@ -123,11 +123,11 @@ Statut : **validé par Damien le 19/10/2026**. Publication conseillée entre 8 h
 >
 > Sur la photo, des connecteurs Powerlock, utilisés pour les fortes intensités. Une bague de couleur par conducteur : on sait d'un coup d'œil quel câble va où.
 >
-> Notre matériel est toujours fourni avec nos équipes, qui l'installent et l'exploitent.
-> https://www.darkside-energy.com/nos-produits/
+> Nos techniciens électriciens prennent en charge la distribution électrique, de la conception au démontage.
+> https://www.darkside-energy.com/distribution-electrique/
 >
 > #événementiel #distributionélectrique #coulisses #Powerlock
 
 **Facebook**
 
-> ❄️ Même sous la neige, le courant passe. Connecteurs Powerlock : une couleur par conducteur, aucune hésitation au branchement 👉 https://www.darkside-energy.com/nos-produits/
+> ❄️ Même sous la neige, le courant passe. Connecteurs Powerlock : une couleur par conducteur, aucune hésitation au branchement 👉 https://www.darkside-energy.com/distribution-electrique/

@@ -6,6 +6,7 @@
 
 - **Lecteurs** : organisateurs d'événements, régisseurs, prestataires techniques, exploitants de salles, électriciens. Clientèle exclusivement professionnelle.
 - **But** : être utile en une minute de lecture, montrer notre maîtrise du terrain et amener le lecteur vers la calculette, le bilan de puissance ou une demande d'étude.
+- **Les équipes, pas le matériel** : notre parc est limité, ce n'est pas notre point fort. On met en avant le savoir-faire de nos techniciens et nos services (distribution, bureau d'étude, régie, coordination), pas notre matériel ; pas de lien vers « Nos produits » dans les publications (demande de Damien du 27/10/2026).
 - **Une publication = une idée**, un chiffre ou une règle concrète, une phrase à retenir, un lien vers le site.
 
 ## Exactitude
