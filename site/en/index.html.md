@@ -152,6 +152,12 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
+Did you know? · 27 October 2026 · 2 min
+
+### [Blue, red, yellow: how do you read a P17 socket?](https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/)
+
+Colour, pins and keying: the voltage and supply type of a P17 socket can be read at a glance.
+
 Did you know? · 26 October 2026 · 3 min
 
 ### [Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
@@ -163,12 +169,6 @@ Did you know? · 2 min
 ### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
 
 Active power, apparent power and cos φ: why generators and grid connections are rated in kVA.
-
-Did you know? · 2 min
-
-### [What is the diversity factor?](https://www.darkside-energy.com/en/did-you-know/diversity-factor/)
-
-Not all equipment runs at full power at the same time. The diversity factor avoids overcapacity.
 
 ## A project? Let's talk power.
 

@@ -41,6 +41,7 @@ Combien de circuits prévoir ? Listez vos appareils dans le bilan de puissance.
 
 [Ouvrir le bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
 
+[Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/news/lire-une-prise-p17/)
 [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
 
 ## Un projet ? Parlons puissance.

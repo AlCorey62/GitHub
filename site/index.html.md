@@ -152,6 +152,12 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
+Le sais-tu ? · 27 octobre 2026 · 2 min
+
+### [Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/news/lire-une-prise-p17/)
+
+Couleur, broches et détrompeur : la tension et le réseau d'une prise P17 se lisent d'un coup d'œil.
+
 Le sais-tu ? · 26 octobre 2026 · 3 min
 
 ### [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/news/led-et-differentiel/)
@@ -163,12 +169,6 @@ Le sais-tu ? · 2 min
 ### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
 
 Puissance active, puissance apparente et cos φ : pourquoi les groupes et les raccordements se comptent en kVA.
-
-Le sais-tu ? · 2 min
-
-### [Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/news/coefficient-de-foisonnement/)
-
-Tous les appareils ne fonctionnent pas en même temps à pleine puissance. Le foisonnement évite la surcapacité.
 
 ## Un projet ? Parlons puissance.
 

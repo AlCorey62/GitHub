@@ -41,6 +41,7 @@ How many circuits do you need? List your equipment in the power assessment.
 
 [Open the power assessment](https://www.darkside-energy.com/en/power-assessment/)
 
+[Blue, red, yellow: how do you read a P17 socket?](https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/)
 [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
 
 ## A project? Let's talk power.

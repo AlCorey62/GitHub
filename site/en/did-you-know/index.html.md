@@ -8,6 +8,12 @@ Plenty of calculations explain electricity, but the aim of these articles is to 
 
 ## Understand before you plug in.
 
+Did you know? · 27 October 2026 · 2 min
+
+### [Blue, red, yellow: how do you read a P17 socket?](https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/)
+
+Colour, pins and keying: the voltage and supply type of a P17 socket can be read at a glance.
+
 Did you know? · 26 October 2026 · 3 min
 
 ### [Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
