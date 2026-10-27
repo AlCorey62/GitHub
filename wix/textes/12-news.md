@@ -4,6 +4,18 @@ Beaucoup de calculs expliquent l'électricité, mais le but de ces articles est 
 
 ## Comprendre avant de brancher.
 
+Le sais-tu ? · 27 octobre 2026 · 2 min
+
+### [Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/post/lire-une-prise-p17)
+
+Couleur, broches et détrompeur : la tension et le réseau d'une prise P17 se lisent d'un coup d'œil.
+
+Le sais-tu ? · 26 octobre 2026 · 3 min
+
+### [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/post/led-et-differentiel)
+
+Les fuites des drivers de LED s'additionnent sur un même différentiel. La parade : répartir les circuits.
+
 Le sais-tu ? · 12 octobre 2026 · 2 min
 
 ### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/post/kva-ou-kw)

@@ -32,6 +32,7 @@ Convertissez vos kW en kVA et en ampères, en monophasé ou en triphasé.
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro#conversion)
 
+[Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/post/led-et-differentiel)
 [Qu'est-ce que le coefficient de foisonnement ?](https://www.darkside-energy.com/post/coefficient-de-foisonnement)
 
 ## Un projet ? Parlons puissance.
