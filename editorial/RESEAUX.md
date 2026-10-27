@@ -14,7 +14,7 @@ Depuis le 27/10/2026, c'est une tâche programmée Claude, du lundi au vendredi 
 | Réseau | État | Secrets GitHub |
 |---|---|---|
 | Facebook | Prêt, jeton de la page créé le 20/10/2026 | `FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_TOKEN` |
-| LinkedIn | En attente de l'accord de LinkedIn sur l'accès à son API | `LINKEDIN_ORG_ID`, `LINKEDIN_TOKEN` (plus tard) |
+| LinkedIn | Accès accordé le 27/10/2026, jeton à créer ; publication automatique à partir du 9/11/2026 | `LINKEDIN_ORG_ID`, `LINKEDIN_TOKEN` |
 
 Tant qu'un réseau n'a pas ses secrets, la tâche l'ignore sans erreur : on publie alors à la main (planification de la page LinkedIn, Meta Business Suite).
 
@@ -96,14 +96,33 @@ Prérequis :
      Traduction : nous utilisons l'API uniquement pour publier nos propres publications (texte et image) sur notre page, depuis notre outil éditorial interne, environ une par jour ouvré ; nous ne collectons, ne stockons ni ne traitons aucune donnée de membres LinkedIn.
 5. Envoyer la demande et attendre la réponse de LinkedIn par e-mail. En cas de refus, il faut créer une nouvelle application pour redemander.
 
-Après l'accord :
-- la diffusion LinkedIn est ajoutée au script ;
-- le jeton se crée avec l'outil **OAuth Token Generator** du portail développeur (https://www.linkedin.com/developers/tools/oauth/token-generator), autorisations `w_organization_social` et `r_organization_social` ;
-- il va dans le secret `LINKEDIN_TOKEN`, avec le numéro de la page (visible dans l'adresse de l'espace d'administration de la page) dans `LINKEDIN_ORG_ID`.
+LinkedIn a donné son accord le 27/10/2026 : niveau *Development*, application n° 266645385.
 
-Ce jeton dure 60 jours. Il faut le recréer tous les deux mois : les jetons renouvelables sont réservés aux partenaires agréés par LinkedIn.
+## LinkedIn : jeton d'accès (une fois, puis tous les deux mois, sur ordinateur)
 
-Le niveau d'accès de départ (*Development*) autorise 500 appels par jour, largement assez. LinkedIn demande que l'intégration soit construite dans les 12 mois suivant l'accord. Ensuite, il faudra probablement demander le niveau *Standard*, avec une courte vidéo de démonstration (à confirmer le moment venu).
+1. Aller sur https://www.linkedin.com/developers/apps, ouvrir l'application « Dark Side Energy Diffusion », onglet **Auth** : vérifier que `w_organization_social` et `r_organization_social` figurent dans les autorisations (*OAuth 2.0 scopes*).
+2. Ouvrir l'outil **OAuth Token Generator** : https://www.linkedin.com/developers/tools/oauth/token-generator
+   - choisir l'application « Dark Side Energy Diffusion » ;
+   - cocher `w_organization_social` et `r_organization_social` ;
+   - cliquer sur **Request access token**, se connecter avec le compte administrateur de la page et accepter ;
+   - copier le jeton affiché.
+
+   Si LinkedIn affiche une erreur sur l'adresse de redirection (*redirect_uri*), me la signaler avant d'aller plus loin.
+3. Numéro de la page : ouvrir la page LinkedIn Dark Side Energy en vue administrateur. L'adresse est de la forme `https://www.linkedin.com/company/123456789/admin/…` : le nombre est le numéro de la page.
+4. Sur GitHub, dépôt `AlCorey62/GitHub`, **Settings** > **Secrets and variables** > **Actions** :
+   - `LINKEDIN_TOKEN` : le jeton (s'il existe déjà, le remplacer avec **Update**) ;
+   - `LINKEDIN_ORG_ID` : le numéro de la page (une seule fois).
+5. Essai sans rien publier : onglet **Actions** > **Diffusion réseaux sociaux** > **Run workflow**, mode « verifier ». La tâche doit finir en vert et afficher le début de la dernière publication de la page Dark Side Energy.
+
+Le jeton dure 60 jours : le recréer une semaine avant son expiration (étapes 2, 4 et 5). Les jetons renouvelables automatiquement sont réservés aux partenaires agréés par LinkedIn.
+
+Jeton en place : pas encore.
+
+À savoir :
+- Jusqu'au 6/11/2026, les posts LinkedIn sont programmés à la main depuis la page LinkedIn ; la tâche ne publie sur LinkedIn qu'à partir du 9/11/2026.
+- Ce qui est publié : le texte LinkedIn du jour et son visuel, avec un texte alternatif repris du titre du visuel. Le texte est converti au format de l'API (caractères réservés échappés, mots-clés reconnus).
+- Le niveau *Development* limite l'application à 500 appels par jour ; une publication en utilise environ cinq. LinkedIn demande de passer au niveau *Standard* dans les 12 mois suivant l'accord, donc avant fin octobre 2027, avec une vidéo de démonstration de moins de 5 minutes. Sans cette demande, LinkedIn retire l'accès.
+- L'API LinkedIn change de version chaque mois et chaque version est maintenue au moins un an. Le script utilise la version 202610 (octobre 2026) : à remplacer par une version récente avant octobre 2027.
 
 ## Sources
 
@@ -115,3 +134,7 @@ Le niveau d'accès de départ (*Development*) autorise 500 appels par jour, larg
 - LinkedIn, niveaux d'accès et autorisations : https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access
 - LinkedIn, durée des jetons : https://learn.microsoft.com/en-us/linkedin/shared/authentication/programmatic-refresh-tokens
 - LinkedIn, outil de création de jeton : https://learn.microsoft.com/en-us/linkedin/shared/authentication/developer-portal-tools
+- LinkedIn, publier sur une page (Posts API) : https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api
+- LinkedIn, envoi d'images (Images API) : https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/images-api
+- LinkedIn, format du texte (little) : https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/little-text-format
+- LinkedIn, versions de l'API : https://learn.microsoft.com/en-us/linkedin/marketing/versioning

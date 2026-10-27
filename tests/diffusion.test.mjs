@@ -6,7 +6,7 @@ import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
-import { lireSemaine, addDays } from "../tools/publications.mjs";
+import { lireSemaine, addDays, little } from "../tools/publications.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const WEEKS = join(ROOT, "editorial", "semaines");
@@ -47,6 +47,19 @@ test("diffusion : essai à blanc sur chaque jour, sans rien envoyer", () => {
       const run = spawnSync(process.execPath, [join(ROOT, "tools", "diffusion.mjs"), "--essai", "--date", d.date], { env, encoding: "utf8" });
       assert.equal(run.status, 0, `${dir}, ${d.head} : ${run.stderr}`);
       assert.match(run.stdout, /Facebook \(essai|déjà envoyé|non validée/, `${dir}, ${d.head} : ${run.stdout}`);
+      assert.match(run.stdout, /LinkedIn (\(essai|: jusqu'au|: déjà envoyé)|non validée/, `${dir}, ${d.head} : ${run.stdout}`);
+    }
+  }
+});
+
+test("LinkedIn : texte au format little (caractères réservés, mots-clés)", () => {
+  assert.equal(little("Prises bleues (230 V) : a_b *c* @d"), "Prises bleues \\(230 V\\) : a\\_b \\*c\\* \\@d");
+  assert.equal(little("Lien\n#événementiel #P17"), "Lien\n{hashtag|\\#|événementiel} {hashtag|\\#|P17}");
+  assert.equal(little("C# et https://exemple.fr/?v=1&u=A"), "C\\# et https://exemple.fr/?v=1&u=A");
+  for (const dir of weeks) {
+    for (const d of lireSemaine(join(WEEKS, dir)).days) {
+      const rest = little(d.linkedin).replace(/\{hashtag\|\\#\|[^}]*\}/g, "").replace(/\\./g, "");
+      assert.ok(!/[|{}@[\]()<>#\\*_~]/.test(rest), `${dir}, ${d.head} : caractère réservé non échappé`);
     }
   }
 });
