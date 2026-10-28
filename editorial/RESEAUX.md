@@ -8,6 +8,7 @@ Depuis le 27/10/2026, c'est une tâche programmée Claude, du lundi au vendredi 
 - Elle prend le texte, le visuel et le lien du jour, et vérifie d'abord que le lien répond sur le site.
 - Elle vérifie aussi que le jeton donne accès à la page Dark Side Energy et pas à une autre page gérée par le même compte. Sinon, elle n'envoie rien.
 - Chaque envoi est noté dans `semaines/AAAA-MM-JJ/diffusion.json` : rien n'est publié deux fois, même avec les passages de secours.
+- Publication en plus du programme : section `## Jour JJ/MM · Hors programme · …` dans `publications.md` de la semaine (une seule par jour, ajoutée et validée par Damien), avec son visuel. Elle ne part qu'à la demande : onglet *Actions*, « Diffusion réseaux sociaux », *Run workflow*, mode « hors-programme ». Elle est publiée sur Facebook et sur LinkedIn, même avant le 9/11/2026, et notée à part dans le journal (« AAAA-MM-JJ hors programme »).
 - En cas d'échec, GitHub prévient par e-mail. La publication peut alors être relancée à la main (onglet *Actions*, « Diffusion réseaux sociaux », *Run workflow*, mode « publier »).
 - Les accès sont rangés dans les secrets du dépôt GitHub. Ils ne sont jamais écrits dans le dépôt, ni envoyés par e-mail ou dans une conversation.
 

@@ -2,7 +2,8 @@
 # Du lundi au vendredi, la publication du jour d'une semaine validée par Damien est envoyée sur la page Facebook
 # et, à partir du 9/11/2026, sur la page LinkedIn, puis notée dans editorial/semaines/<lundi>/diffusion.json, poussé sur main : rien n'est envoyé deux fois.
 # Lancement à la main (onglet Actions) : « verifier » teste l'accès sans rien publier, « publier » envoie
-# tout de suite la publication du jour.
+# tout de suite la publication du jour, « hors-programme » envoie la publication en plus du jour (section
+# « Hors programme » de publications.md, ajoutée et validée par Damien), sur Facebook et LinkedIn.
 # Mise en place avec l'accord de Damien (20/10/2026) ; LinkedIn ajouté après l'accord de LinkedIn (27/10/2026).
 name: Diffusion réseaux sociaux
 
@@ -16,9 +17,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "verifier : teste l'accès sans rien publier ; publier : envoie la publication du jour"
+        description: "verifier : teste l'accès sans rien publier ; publier : envoie la publication du jour ; hors-programme : envoie la publication en plus du jour"
         type: choice
-        options: [verifier, publier]
+        options: [verifier, publier, hors-programme]
         default: verifier
 
 permissions:
@@ -57,6 +58,7 @@ jobs:
           case "$MODE" in
             verifier) node tools/diffusion.mjs --verifier ;;
             publier) node tools/diffusion.mjs ;;
+            hors-programme) node tools/diffusion.mjs --hors-programme ;;
             *) node tools/diffusion.mjs --pas-avant 08:30 ;;
           esac
 

@@ -18,6 +18,7 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 | Lun 26/10 | Le sais-tu ? (site) | Pourquoi les LED font-elles sauter les différentiels ? Courants de fuite, appels de courant, répartition des circuits | validé |
 | Mar 27/10 | Le sais-tu ? (site, en attendant les anecdotes) | Bleue, rouge, jaune : comment lire une prise P17 ? Couleurs, broches, détrompeur | validé |
 | Mer 28/10 | Vrai ou faux | « Un différentiel 30 mA protège l'installation contre les surcharges. » Faux | validé |
+| Mer 28/10 | Hors programme | Questionnaire de satisfaction : invitation à donner son avis (page /avis/), demandée par Damien | validé |
 | Jeu 29/10 | Calculette | 40 kW en triphasé sur une P17 63 A ? 64,15 A : il faut passer en 125 A | validé |
 | Ven 30/10 | Coulisses | Connecteurs Powerlock dans la neige : le montage continue quelle que soit la météo | validé |
 

@@ -3,6 +3,8 @@
 //
 // Renvoie { monday, title, status, validated, notes, days } ; chaque jour porte sa date (AAAA-MM-JJ),
 // son titre, le nom du visuel, le lien et les textes LinkedIn et Facebook (citations « > » du fichier).
+// Une section dont le titre contient « Hors programme » est une publication en plus de celle du jour (extra: true),
+// envoyée seulement à la demande (tools/diffusion.mjs --hors-programme) ; une seule par jour.
 
 import { readFileSync } from "node:fs";
 import { join, basename } from "node:path";
@@ -45,6 +47,7 @@ export function lireSemaine(week) {
     days.push({
       head,
       date: addDays(monday, DAYS[dayName]),
+      extra: /hors programme/i.test(head),
       visual,
       link: body.match(/\*\*Lien\*\*[^:]*: (\S+)/)?.[1] || "",
       linkedin: quote("LinkedIn"),
