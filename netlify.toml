@@ -130,7 +130,8 @@
   to = "/news/pourquoi-ca-saute/"
   status = 301
 
-# Même articles au format d'adresse /post/ du blog Wix (sans la date), par précaution
+# Même articles au format d'adresse /post/ du blog Wix (sans la date), par précaution. Les accents s'écrivent
+# encodés (%C3%A9 pour « é »), comme dans les adresses reçues : Netlify ne reconnaît pas la forme accentuée.
 [[redirects]]
   from = "/post/saistucequestladistributionelectrique"
   to = "/news/distribution-electrique-evenementielle/"
@@ -152,7 +153,7 @@
   status = 301
 
 [[redirects]]
-  from = "/post/répertoire-national-des-électros"
+  from = "/post/r%C3%A9pertoire-national-des-%C3%A9lectros"
   to = "/news/repertoire-national-des-electros/"
   status = 301
 
@@ -162,7 +163,7 @@
   status = 301
 
 [[redirects]]
-  from = "/post/création-de-dark-side-energy-1"
+  from = "/post/cr%C3%A9ation-de-dark-side-energy-1"
   to = "/news/creation-dark-side-energy/"
   status = 301
 

@@ -28,6 +28,8 @@ const fileFor = (path) => {
 };
 
 test("redirections : 301 vers une page existante, sans chaîne", () => {
+  // Netlify ne reconnaît pas un caractère accentué écrit tel quel dans « from » : il faut la forme encodée
+  for (const r of rules) assert.ok(!/[^\x20-\x7e]/.test(r.from), `${r.from} : écrire les accents encodés (%C3%A9…)`);
   for (const r of rules.filter((r) => r.status !== 404)) {
     assert.equal(r.status, 301, `${r.from} : redirection ${r.status}, 301 attendu`);
     // Netlify sert un fichier existant avant toute redirection non forcée : une destination qui existe
@@ -58,6 +60,8 @@ test("redirections : anciennes pages Wix de l'audit SEO du 28/10/2026", () => {
     "/single-post/2016/05/25/création-de-dark-side-energy-1": "/news/creation-dark-side-energy/",
     "/single-post/2016/01/01/article-inconnu": "/news/",
     "/post/article-inconnu": "/news/",
+    "/post/r%C3%A9pertoire-national-des-%C3%A9lectros": "/news/repertoire-national-des-electros/",
+    "/post/cr%C3%A9ation-de-dark-side-energy-1": "/news/creation-dark-side-energy/",
   };
   for (const [from, to] of Object.entries(attendues)) {
     for (const path of [from, `${from}/`]) {
