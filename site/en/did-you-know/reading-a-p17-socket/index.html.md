@@ -2,7 +2,7 @@
 
 > Colour, number of pins, earth position: how to tell the voltage and supply type of a P17 socket (IEC 60309 standard) at a glance.
 
-Source: https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/ · Dark Side Energy · Updated: 2026-10-27
+Source: https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/ · Dark Side Energy · Updated: 2026-10-28
 
 27 October 2026 · 2 min read
 
@@ -37,6 +37,8 @@ Colour, pins and keying work together: a red 400 V plug will not fit a blue sock
 The [rating](https://www.darkside-energy.com/en/glossary/#calibre) (16, 32, 63 or 125 A) is marked on the socket and shows in its size: the higher it is, the bigger the socket, and a 32 A plug will not fit a 16 A socket. To find out how much power each rating can deliver, read [How much power can you draw from a P17 socket?](https://www.darkside-energy.com/en/did-you-know/p17-socket-power/)
 
 > Blue means 230 V. Red means 400 V. And if the plug will not go in, this is not the time to force it.
+
+Sockets, distribution cabinets and boxes: that is our core business, [event power distribution](https://www.darkside-energy.com/en/power-distribution/).
 
 Which socket for your equipment? The calculator suggests the right socket and cable.
 

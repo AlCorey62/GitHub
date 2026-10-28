@@ -9,8 +9,66 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Signalement des pages nouvelles ou modifiées à IndexNow (Bing, Copilot, ChatGPT) après chaque mise en ligne
+# en production. Voir netlify/plugins/indexnow/index.js.
+[[plugins]]
+  package = "./netlify/plugins/indexnow"
+
 # --- Redirections des anciennes adresses du site Wix (301 = permanent, conserve le référencement) ---
 
+# Anciennes pages Wix signalées en 404 par l'audit SEO (28/10/2026). Netlify accepte ces adresses avec ou sans / final.
+[[redirects]]
+  from = "/trouver-un-electro"
+  to = "/news/repertoire-national-des-electros/"
+  status = 301
+
+[[redirects]]
+  from = "/inscription-electro"
+  to = "/contact/?objet=candidature"
+  status = 301
+
+[[redirects]]
+  from = "/bilan-de-puissance-exposant"
+  to = "/bilan-de-puissance/"
+  status = 301
+
+[[redirects]]
+  from = "/bilan-de-puissance-prod"
+  to = "/bilan-de-puissance/"
+  status = 301
+
+[[redirects]]
+  from = "/calculs-electriques-tetra"
+  to = "/calculette-electro/"
+  status = 301
+
+[[redirects]]
+  from = "/calculs-electriques-mono"
+  to = "/calculette-electro/"
+  status = 301
+
+[[redirects]]
+  from = "/copie-de-calculette-tetra"
+  to = "/calculette-electro/"
+  status = 301
+
+[[redirects]]
+  from = "/projecteur-led-dimmable"
+  to = "/nos-produits/"
+  status = 301
+
+[[redirects]]
+  from = "/test"
+  to = "/"
+  status = 301
+
+# Ancienne page Wix au contenu inconnu (aucune trace dans le projet) : renvoi vers le matériel, à la demande de Damien
+[[redirects]]
+  from = "/100w"
+  to = "/nos-produits/"
+  status = 301
+
+# Ancienne adresse Wix du bilan de puissance
 [[redirects]]
   from = "/test-externe"
   to = "/bilan-de-puissance/"
@@ -72,6 +130,49 @@
   to = "/news/pourquoi-ca-saute/"
   status = 301
 
+# Même articles au format d'adresse /post/ du blog Wix (sans la date), par précaution. Les accents s'écrivent
+# encodés (%C3%A9 pour « é »), comme dans les adresses reçues : Netlify ne reconnaît pas la forme accentuée.
+[[redirects]]
+  from = "/post/saistucequestladistributionelectrique"
+  to = "/news/distribution-electrique-evenementielle/"
+  status = 301
+
+[[redirects]]
+  from = "/post/le-sais-tu-quest-ce-quun-groupe-twin-*"
+  to = "/news/groupe-twin-zero-coupure/"
+  status = 301
+
+[[redirects]]
+  from = "/post/le-sais-tu-la-section-*"
+  to = "/news/section-de-cable/"
+  status = 301
+
+[[redirects]]
+  from = "/post/le-sais-tu-pourquoi-*"
+  to = "/news/pourquoi-ca-saute/"
+  status = 301
+
+[[redirects]]
+  from = "/post/r%C3%A9pertoire-national-des-%C3%A9lectros"
+  to = "/news/repertoire-national-des-electros/"
+  status = 301
+
+[[redirects]]
+  from = "/post/repertoire-national-des-electros"
+  to = "/news/repertoire-national-des-electros/"
+  status = 301
+
+[[redirects]]
+  from = "/post/cr%C3%A9ation-de-dark-side-energy-1"
+  to = "/news/creation-dark-side-energy/"
+  status = 301
+
+[[redirects]]
+  from = "/post/creation-de-dark-side-energy-1"
+  to = "/news/creation-dark-side-energy/"
+  status = 301
+
+# Tout autre ancien article Wix : liste des articles (en dernier recours)
 [[redirects]]
   from = "/single-post/*"
   to = "/news/"
@@ -79,6 +180,11 @@
 
 [[redirects]]
   from = "/blog/*"
+  to = "/news/"
+  status = 301
+
+[[redirects]]
+  from = "/post/*"
   to = "/news/"
   status = 301
 
@@ -159,6 +265,57 @@
 [[redirects]]
   from = "/en/news"
   to = "/en/did-you-know/"
+  status = 301
+
+# Anciennes pages Wix de l'audit SEO, version anglaise
+[[redirects]]
+  from = "/en/trouver-un-electro"
+  to = "/en/did-you-know/"
+  status = 301
+
+[[redirects]]
+  from = "/en/inscription-electro"
+  to = "/en/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/en/bilan-de-puissance-exposant"
+  to = "/en/power-assessment/"
+  status = 301
+
+[[redirects]]
+  from = "/en/bilan-de-puissance-prod"
+  to = "/en/power-assessment/"
+  status = 301
+
+[[redirects]]
+  from = "/en/calculs-electriques-tetra"
+  to = "/en/electrical-calculator/"
+  status = 301
+
+[[redirects]]
+  from = "/en/calculs-electriques-mono"
+  to = "/en/electrical-calculator/"
+  status = 301
+
+[[redirects]]
+  from = "/en/copie-de-calculette-tetra"
+  to = "/en/electrical-calculator/"
+  status = 301
+
+[[redirects]]
+  from = "/en/projecteur-led-dimmable"
+  to = "/en/equipment/"
+  status = 301
+
+[[redirects]]
+  from = "/en/test"
+  to = "/en/"
+  status = 301
+
+[[redirects]]
+  from = "/en/100w"
+  to = "/en/equipment/"
   status = 301
 
 [[redirects]]

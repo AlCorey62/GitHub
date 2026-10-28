@@ -1,8 +1,8 @@
-# Power assessment.
+# Event power assessment.
 
 > Online power assessment: diversified power, current per phase, indicative rating and source. Free demo, full access reserved for our clients.
 
-Source: https://www.darkside-energy.com/en/power-assessment/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/power-assessment/ · Dark Side Energy · Updated: 2026-10-28
 
 List your equipment and enter its power and diversity factor: the tool calculates the power required, the current on each phase and an indicative connection rating.
 

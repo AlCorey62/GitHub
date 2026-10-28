@@ -2,7 +2,7 @@
 
 > kW and kVA explained simply: active power, apparent power and cos φ. Why generators and grid connections are rated in kVA.
 
-Source: https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/ · Dark Side Energy · Updated: 2026-10-12
+Source: https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/ · Dark Side Energy · Updated: 2026-10-28
 
 12 October 2026 · 2 min read
 
@@ -31,6 +31,8 @@ That is why generators, battery packs and grid connections are rated in kVA: a s
 To know what your equipment consumes, look at the kW. To choose cables, protection devices and the source, think in kVA. And if you do not know the cos φ, our calculator assumes 0.9 by default, an assumption you can change.
 
 > kW is what you consume. kVA is what you need to plan for.
+
+To size the power sources for your event, consult our [event electrical engineering office](https://www.darkside-energy.com/en/engineering/).
 
 Convert your kW into kVA and amps, in single-phase or three-phase.
 

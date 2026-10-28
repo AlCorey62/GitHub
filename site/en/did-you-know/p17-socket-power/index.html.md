@@ -2,7 +2,7 @@
 
 > How many kVA behind a P17 socket? Reference figures from 16 A to 125 A and for a 400 A Powerlock, the margin to keep and why cable length matters.
 
-Source: https://www.darkside-energy.com/en/did-you-know/p17-socket-power/ · Dark Side Energy · Updated: 2026-10-12
+Source: https://www.darkside-energy.com/en/did-you-know/p17-socket-power/ · Dark Side Energy · Updated: 2026-10-28
 
 12 October 2026 · 2 min read
 
@@ -41,6 +41,8 @@ Cable length matters too. A cable is a resistance: the longer it is, the greater
 To sum up, the rating and the supply give the socket's maximum. The diversity factor of your equipment, the margin and the cable length tell you what you can really connect to it.
 
 > What a socket can give is not what you should ask of it.
+
+To choose the sockets and connections for your event, consult our [event electrical engineering office](https://www.darkside-energy.com/en/engineering/).
 
 Find the power behind each connector and convert kVA, kW and amps in an instant.
 

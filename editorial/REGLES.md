@@ -36,7 +36,7 @@
 
 | Format | Longueur | Contenu |
 |---|---|---|
-| Le sais-tu ? (site) | 300 à 600 mots | Encadré « À retenir » (3 points), explication, exemple chiffré, phrase à retenir en citation, lien calculette ou bilan |
+| Le sais-tu ? (site) | 300 à 600 mots | Encadré « À retenir » (3 points), explication, exemple chiffré, phrase à retenir en citation, lien calculette ou bilan, puis une phrase de liaison courte vers la page métier concernée (distribution électrique, bureau d'étude, régie technique ou énergie responsable), ancre descriptive, jamais vers « Nos produits » |
 | Cas terrain (site) | 300 à 500 mots | Situation, ce qui se passait, cause, solution, ce qu'il faut retenir. Anonymisé |
 | Vrai ou faux | 60 à 120 mots | Affirmation, réponse, explication en 2 ou 3 phrases, lien vers l'article qui développe |
 | Calculette en situation | 60 à 120 mots | Cas chiffré, résultat de la calculette, conclusion pratique, lien vers la calculette |

@@ -32,6 +32,24 @@ const read = (f) => {
   return cache.get(f);
 };
 const ids = (html) => new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]));
+
+// Types schema.org employés par le site (tous vérifiés sur schema.org) : un type absent est une faute de frappe
+// ou un nouveau type à vérifier avant de l'ajouter ici.
+const SCHEMA_TYPES = new Set([
+  "AboutPage", "Answer", "Article", "BreadcrumbList", "CollectionPage", "ContactPage", "ContactPoint", "Country",
+  "DefinedTerm", "DefinedTermSet", "FAQPage", "ImageObject", "ListItem", "Offer", "OfferCatalog", "Organization",
+  "Person", "Place", "PostalAddress", "PropertyValue", "Question", "Service", "ServiceChannel", "WebApplication",
+  "WebPage", "WebSite",
+]);
+// Tous les @type d'un bloc JSON-LD, avec leurs dates (datePublished, dateModified)
+function* schemaTypes(node) {
+  if (Array.isArray(node)) for (const n of node) yield* schemaTypes(n);
+  else if (node && typeof node === "object") {
+    for (const t of [].concat(node["@type"] || [])) yield [t, null];
+    for (const k of ["datePublished", "dateModified"]) if (node[k]) yield ["WebPage", String(node[k])];
+    for (const v of Object.values(node)) yield* schemaTypes(v);
+  }
+}
 const urlOf = (rel) => "/" + rel.replace(/(^|\/)index\.html$/, "$1");
 const hreflangs = new Map(); // adresse de la page -> { fr, en, x-default }
 
@@ -64,7 +82,11 @@ for (const file of pages) {
   for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     try {
       const data = JSON.parse(m[1]);
-      if (!data["@context"] || !data["@type"]) errors.push(`${rel} : JSON-LD sans @context ou @type`);
+      if (data["@context"] !== "https://schema.org" || !data["@type"]) errors.push(`${rel} : JSON-LD sans @context schema.org ou @type`);
+      for (const [type, date] of schemaTypes(data)) {
+        if (!SCHEMA_TYPES.has(type)) errors.push(`${rel} : type JSON-LD inconnu de la liste schema.org du site « ${type} »`);
+        if (date && !/^\d{4}(-\d{2}-\d{2})?$/.test(date)) errors.push(`${rel} : date JSON-LD invalide « ${date} »`);
+      }
     } catch (e) {
       errors.push(`${rel} : JSON-LD invalide (${e.message})`);
     }

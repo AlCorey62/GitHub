@@ -2,7 +2,7 @@
 
 > Dark Side Energy, SARL basée dans les Hauts-de-France : des humains professionnalisés dans la distribution électrique d'événement depuis 2016. Nous rejoindre.
 
-Source : https://www.darkside-energy.com/entreprise/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/entreprise/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 Depuis 2016, notre but est de vous accompagner de l'idée jusqu'à la réalisation de vos projets sur la partie électrique : fourniture, distribution, étude, régie et coordination.
 
@@ -18,7 +18,7 @@ Et parce que l'électricité reste une affaire de sécurité, nos équipes suive
 
 - **Raison sociale** : DARK SIDE ENERGY
 - **Forme juridique** : SARL
-- **Siège** : Hauts-de-France
+- **Siège** : Carvin, Hauts-de-France
 - **Création** : 2016
 - **SIREN** : 879 105 377
 - **Activité** : Soutien au spectacle vivant

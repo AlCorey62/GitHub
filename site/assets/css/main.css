@@ -132,7 +132,9 @@ figure {
 h1,
 h2,
 h3,
-h4 {
+h4,
+.hero__title,
+.page-hero__title {
   margin: 0 0 0.5em;
   color: var(--c-text);
   font-weight: 780;
@@ -142,7 +144,9 @@ h4 {
   text-wrap: balance;
 }
 
-h1 { font-size: var(--fs-h1); }
+h1,
+.hero__title,
+.page-hero__title { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); line-height: 1.15; }
 h4 { font-size: var(--fs-h4); line-height: 1.2; }
@@ -1260,7 +1264,7 @@ a.tag:hover {
   align-items: center;
 }
 
-.hero h1 {
+.hero .hero__title {
   font-size: var(--fs-display);
   font-weight: 800;
   font-stretch: 110%;
@@ -1269,7 +1273,7 @@ a.tag:hover {
   margin-bottom: 0.45em;
 }
 
-.hero h1 .accent {
+.hero .hero__title .accent {
   color: var(--c-accent);
 }
 
@@ -1358,7 +1362,8 @@ a.tag:hover {
   align-items: center;
 }
 
-.page-hero--visual h1 {
+.page-hero--visual h1,
+.page-hero--visual .page-hero__title {
   max-width: 16ch;
 }
 
@@ -2025,8 +2030,17 @@ a.tag:hover {
   z-index: 1;
 }
 
-.page-hero h1 {
+.page-hero h1,
+.page-hero .page-hero__title {
   max-width: 17ch;
+}
+
+/* H1 porté par le surtitre (accueil, bureau d'étude) : même rendu qu'un surtitre en paragraphe */
+.hero h1.eyebrow,
+.page-hero h1.eyebrow {
+  max-width: none;
+  line-height: inherit;
+  text-wrap: pretty;
 }
 
 .page-hero .lead {

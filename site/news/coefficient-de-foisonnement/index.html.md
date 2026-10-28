@@ -2,7 +2,7 @@
 
 > Le foisonnement expliqué simplement : tous les appareils ne tournent pas en même temps à pleine puissance. Comment l'appliquer dans un bilan.
 
-Source : https://www.darkside-energy.com/news/coefficient-de-foisonnement/ · Dark Side Energy · Mise à jour : 2026-10-12
+Source : https://www.darkside-energy.com/news/coefficient-de-foisonnement/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 12 octobre 2026 · 2 min de lecture
 
@@ -31,6 +31,8 @@ Dans le [bilan de puissance](https://www.darkside-energy.com/lexique/#bilan-de-p
 Pour résumer, la puissance installée dit ce que vous branchez, la puissance foisonnée dit ce qui fonctionne réellement en même temps. C'est à partir d'elle, ramenée en kVA avec le cos φ, que se dimensionnent les sources, les câbles et les protections.
 
 > On ne dimensionne pas pour tout ce qui est branché, mais pour ce qui fonctionne en même temps.
+
+Pour appliquer le foisonnement à votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude/).
 
 Listez vos appareils et appliquez un foisonnement à chaque ligne : l'outil calcule la puissance à prévoir.
 

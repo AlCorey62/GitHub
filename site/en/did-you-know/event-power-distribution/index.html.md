@@ -2,15 +2,15 @@
 
 > Event power distribution: starting from the venue's supplies to distribute electricity safely. And why taking power from the next stand is banned.
 
-Source: https://www.darkside-energy.com/en/did-you-know/event-power-distribution/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/did-you-know/event-power-distribution/ · Dark Side Energy · Updated: 2026-10-28
 
-8 May 2017 · 2 min read · Updated 6 October 2026
+8 May 2017 · 2 min read · Updated 28 October 2026
 
 - Event power distribution starts from the venue's supplies and takes electricity wherever the organisers need it, in compliance with safety standards.
 - For live shows, the distribution cabinets sit behind the stage, ideally with one source per department.
 - At trade shows, every stand has its own distribution box with a 30 mA RCD: *ilotage* (sharing a supply between stands) is banned.
 
-Dark Side Energy specialises in event power distribution. Fine, but what exactly does that mean?
+Dark Side Energy specialises in [event power distribution](https://www.darkside-energy.com/en/power-distribution/). Fine, but what exactly does that mean?
 
 Every event is unique, and so is its configuration. Halls and venues designed for events are equipped with one or more main power supplies.
 

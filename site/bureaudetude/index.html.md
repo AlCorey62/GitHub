@@ -1,8 +1,10 @@
-# Le terrain au service de l'étude.
+# Bureau d'étude électrique événementiel
 
 > Bureau d'étude électrique événementiel : raccordement, bilan de puissance, schéma unifilaire, plans et notes de calcul. Le terrain au service de l'étude.
 
-Source : https://www.darkside-energy.com/bureaudetude/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/bureaudetude/ · Dark Side Energy · Mise à jour : 2026-10-28
+
+Le terrain au service de l'étude.
 
 Beaucoup d'événements ont lieu dans des salles adaptées, mais beaucoup aussi dans des salles qui le sont moins. Notre bureau d'étude vous aide à calculer l'énergie nécessaire et trouve les solutions adaptées à l'événement : groupes électrogènes, compteurs forains, raccordements.
 

@@ -2,7 +2,7 @@
 
 > kW et kVA expliqués simplement : puissance active, puissance apparente et cos φ. Pourquoi les groupes et les raccordements se comptent en kVA.
 
-Source : https://www.darkside-energy.com/news/kva-ou-kw/ · Dark Side Energy · Mise à jour : 2026-10-12
+Source : https://www.darkside-energy.com/news/kva-ou-kw/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 12 octobre 2026 · 2 min de lecture
 
@@ -31,6 +31,8 @@ C'est pour cela que les groupes électrogènes, les packs batteries et les racco
 Pour savoir ce que vos appareils consomment, regardez les kW. Pour choisir les câbles, les protections et la source, raisonnez en kVA. Et si vous ne connaissez pas le cos φ, notre calculette retient 0,9 par défaut, une hypothèse que vous pouvez modifier.
 
 > Les kW, c'est ce que vous consommez. Les kVA, c'est ce que vous devez prévoir.
+
+Pour dimensionner les sources de votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude/).
 
 Convertissez vos kW en kVA et en ampères, en monophasé ou en triphasé.
 

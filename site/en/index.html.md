@@ -1,8 +1,10 @@
-# The power of electricity, without the tension, fully amped.
+# Event power distribution
 
 > Event power distribution, technical management, general coordination and engineering office. Trade shows, concerts, sport and festivals, since 2016.
 
-Source: https://www.darkside-energy.com/en/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/ · Dark Side Energy · Updated: 2026-10-28
+
+The power of electricity, without the tension, fully amped.
 
 Power distribution, technical management, general coordination and engineering office: from Hauts-de-France, northern France, Dark Side Energy powers your events, from trade shows to stadiums, in France and internationally.
 

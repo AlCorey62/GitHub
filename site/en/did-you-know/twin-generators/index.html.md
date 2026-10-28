@@ -2,9 +2,9 @@
 
 > Twin zero-interruption generator set: two synchronised generators, each carrying 50% of the load. If one fails, there is no interruption.
 
-Source: https://www.darkside-energy.com/en/did-you-know/twin-generators/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/did-you-know/twin-generators/ · Dark Side Energy · Updated: 2026-10-28
 
-8 May 2017 · 2 min read · Updated 6 October 2026
+8 May 2017 · 2 min read · Updated 28 October 2026
 
 - A Twin zero-interruption generator set is two synchronised generators, each supplying 50% of the load.
 - If one fails, the other takes over the whole load without any interruption.
@@ -29,6 +29,8 @@ If one of the two generators fails, the other takes over the missing 50% and, as
 Indeed, a computer that suffers even a micro-interruption may well end up with a dead hard drive as a result. Some lighting or sound consoles run on an operating system that needs several seconds, or even several minutes, to restart after a power cut. Needless to say, some productions do not take that risk and therefore use this system.
 
 **Bonus:** in certain more specific cases, you can even go up to 3 or 4 synchronised generators (tri-pack, quadri-pack).
+
+Twin generator sets are one of the solutions of our [event power distribution](https://www.darkside-energy.com/en/power-distribution/) service.
 
 Today we also offer Stage V generators in twin versions and battery packs, on their own or in hybrid setups.
 

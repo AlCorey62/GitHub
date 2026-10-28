@@ -1,8 +1,10 @@
-# La puissance de l'électricité, sans tension, avec intensité.
+# Distribution électrique événementielle
 
 > Distribution électrique événementielle, régie technique, coordination générale et bureau d'étude. Salons, concerts, sport et festivals, depuis 2016.
 
-Source : https://www.darkside-energy.com/ · Dark Side Energy · Mise à jour : 2026-10-06
+Source : https://www.darkside-energy.com/ · Dark Side Energy · Mise à jour : 2026-10-28
+
+La puissance de l'électricité, sans tension, avec intensité.
 
 Distribution électrique, régie technique, coordination générale et bureau d'étude : depuis les Hauts-de-France, Dark Side Energy alimente vos événements, du salon au stade, en France et à l'international.
 

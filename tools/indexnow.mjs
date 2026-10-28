@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Signale toutes les pages du sitemap aux moteurs compatibles IndexNow (Bing, et donc Copilot et
 // la recherche de ChatGPT qui s'appuie sur l'index Bing ; Yandex, Seznam, Naver).
-// À lancer APRÈS chaque mise en ligne du site sur son domaine définitif :
+// Envoi automatique après chaque mise en ligne en production : netlify/plugins/indexnow (pages modifiées seulement).
+// Envoi à la main, si besoin :
 //   node tools/indexnow.mjs            (toutes les URL du sitemap)
 //   node tools/indexnow.mjs /faq/      (seulement certaines pages)
 
