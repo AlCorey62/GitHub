@@ -26,7 +26,7 @@ export const SITE = {
   socials: [
     { key: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/dark-side-energy/", icon: "brand-linkedin" },
     { key: "facebook", label: "Facebook", href: "https://www.facebook.com/darksideenergy", icon: "brand-facebook" },
-    { key: "x", label: "X (Twitter)", href: "https://twitter.com/DarkSide_Energy", icon: "brand-x" },
+    { key: "x", label: "X (Twitter)", href: "https://x.com/DarkSide_Energy", icon: "brand-x" },
   ],
   // Ancienne appli « Calc Dark Side » : à rediriger vers /calculette-electro/ à la mise en ligne (voir README)
   oldCalcApp: "https://darkside-energy.netlify.app",
@@ -122,7 +122,7 @@ export const UI = {
     footerServices: "Métiers",
     footerResources: "Ressources",
     footerContact: "Contact",
-    footerArea: "Hauts-de-France, interventions partout en France et à l'international",
+    footerArea: "Carvin, Hauts-de-France, interventions partout en France et à l'international",
     footerEquipment: "Matériel en location clé en main",
     footerRse: "Énergie responsable",
     footerRefs: "Références",
@@ -156,7 +156,7 @@ export const UI = {
     footerServices: "Services",
     footerResources: "Resources",
     footerContact: "Contact",
-    footerArea: "Hauts-de-France, France. Working across France and worldwide",
+    footerArea: "Carvin, Hauts-de-France, France. Working across France and worldwide",
     footerEquipment: "Equipment, turnkey hire",
     footerRse: "Responsible energy",
     footerRefs: "References",

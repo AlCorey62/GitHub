@@ -2,7 +2,7 @@
 
 > Courants de fuite et appels de courant : pourquoi les LED et l'électronique font déclencher les différentiels 30 mA, et comment répartir les circuits.
 
-Source : https://www.darkside-energy.com/news/led-et-differentiel/ · Dark Side Energy · Mise à jour : 2026-10-26
+Source : https://www.darkside-energy.com/news/led-et-differentiel/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 26 octobre 2026 · 3 min de lecture
 
@@ -36,6 +36,8 @@ Un différentiel 30 mA ne coupe pas pile à 30 mA. Sa norme de fabrication (IEC 
 Retirer le différentiel, ou le remplacer par un modèle moins sensible, n'est jamais la solution : le 30 mA est là pour protéger les personnes.
 
 > Un différentiel qui saute avec des LED n'est pas en panne : il additionne des fuites. La réponse, c'est la répartition.
+
+Répartir les circuits fait partie de notre métier : la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
 
 Combien de circuits prévoir ? Listez vos appareils dans le bilan de puissance.
 

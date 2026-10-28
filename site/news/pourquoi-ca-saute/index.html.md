@@ -2,9 +2,9 @@
 
 > Pourquoi un coffret électrique « saute » : différentiel 30 mA et disjoncteur expliqués simplement. Appareil en défaut ou circuit surchargé ?
 
-Source : https://www.darkside-energy.com/news/pourquoi-ca-saute/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/news/pourquoi-ca-saute/ · Dark Side Energy · Mise à jour : 2026-10-28
 
-8 mai 2017 · 1 min de lecture · Mis à jour le 25 septembre 2026
+8 mai 2017 · 1 min de lecture · Mis à jour le 28 octobre 2026
 
 - Le différentiel 30 mA coupe quand un appareil laisse fuir du courant : il protège les personnes.
 - Le disjoncteur coupe en cas de surcharge ou de court-circuit : il protège l'installation.
@@ -30,6 +30,8 @@ Le disjoncteur, lui, coupe dès que l'intensité qui le traverse dépasse celle 
 Soit vous avez un ou plusieurs appareils en défaut, soit vous avez branché trop d'appareils sur le même circuit.
 
 > Le coffret, lui, vous a soit sauvé la vie, soit sauvé votre installation.
+
+Coffrets, différentiels et disjoncteurs : c'est notre métier, la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
 
 Vérifiez la puissance de vos appareils avant de les brancher.
 

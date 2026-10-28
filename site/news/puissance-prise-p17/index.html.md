@@ -2,7 +2,7 @@
 
 > Combien de kVA derrière une prise P17 ? Les repères de 16 A à 125 A et du Powerlock 400 A, la marge à garder et le rôle de la longueur du câble.
 
-Source : https://www.darkside-energy.com/news/puissance-prise-p17/ · Dark Side Energy · Mise à jour : 2026-10-12
+Source : https://www.darkside-energy.com/news/puissance-prise-p17/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 12 octobre 2026 · 2 min de lecture
 
@@ -41,6 +41,8 @@ La longueur du câble compte aussi. Un câble est une résistance : plus il est 
 Pour résumer, le calibre et le réseau donnent le maximum de la prise. Le foisonnement de vos appareils, la marge et la longueur du câble disent ce que vous pouvez vraiment y raccorder.
 
 > Ce qu'une prise peut donner n'est pas ce qu'il faut lui demander.
+
+Pour choisir les prises et les raccordements de votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude/).
 
 Retrouvez la puissance de chaque connecteur et convertissez kVA, kW et ampères en un instant.
 

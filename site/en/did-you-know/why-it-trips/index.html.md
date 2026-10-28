@@ -2,9 +2,9 @@
 
 > Why a distribution box “trips”: 30 mA RCD and circuit breaker explained simply. Faulty appliance or overloaded circuit?
 
-Source: https://www.darkside-energy.com/en/did-you-know/why-it-trips/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/did-you-know/why-it-trips/ · Dark Side Energy · Updated: 2026-10-28
 
-8 May 2017 · 1 min read · Updated 6 October 2026
+8 May 2017 · 1 min read · Updated 28 October 2026
 
 - The 30 mA RCD cuts the power when an appliance leaks current: it protects people.
 - The circuit breaker cuts the power in the event of an overload or a short circuit: it protects the installation.
@@ -30,6 +30,8 @@ The circuit breaker, for its part, trips as soon as the current flowing through 
 Either you have one or more faulty appliances, or you have plugged too many appliances into the same circuit.
 
 > As for the box, it has either saved your life or saved your installation.
+
+Distribution boxes, RCDs and circuit breakers: that is our core business, [event power distribution](https://www.darkside-energy.com/en/power-distribution/).
 
 Check the power of your appliances before plugging them in.
 

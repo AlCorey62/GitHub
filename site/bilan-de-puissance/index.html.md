@@ -1,8 +1,8 @@
-# Bilan de puissance.
+# Bilan de puissance événementiel.
 
 > Bilan de puissance en ligne : puissance foisonnée, courant par phase, calibre et source indicatifs. Démo libre, accès complet réservé à nos clients.
 
-Source : https://www.darkside-energy.com/bilan-de-puissance/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/bilan-de-puissance/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 Listez vos appareils, indiquez leur puissance et leur coefficient de foisonnement : l'outil calcule la puissance à prévoir, le courant sur chaque phase et un calibre de raccordement indicatif.
 

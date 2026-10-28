@@ -2,7 +2,7 @@
 
 > Couleur, nombre de broches, position de la terre : comment reconnaître d'un coup d'œil la tension et le réseau d'une prise P17 (norme IEC 60309).
 
-Source : https://www.darkside-energy.com/news/lire-une-prise-p17/ · Dark Side Energy · Mise à jour : 2026-10-27
+Source : https://www.darkside-energy.com/news/lire-une-prise-p17/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 27 octobre 2026 · 2 min de lecture
 
@@ -37,6 +37,8 @@ Couleur, broches et détrompeur se complètent : une fiche rouge 400 V n'entre p
 Le [calibre](https://www.darkside-energy.com/lexique/#calibre) (16, 32, 63 ou 125 A) est inscrit sur la prise et se reconnaît à la taille : plus il est élevé, plus la prise est grosse, et une fiche 32 A n'entre pas dans une prise 16 A. Pour savoir quelle puissance tirer de chaque calibre, lisez [Quelle puissance tirer d'une prise P17 ?](https://www.darkside-energy.com/news/puissance-prise-p17/)
 
 > Bleu, c'est du 230 V. Rouge, c'est du 400 V. Et si la fiche ne rentre pas, ce n'est pas le moment de forcer.
+
+Prises, armoires et coffrets : c'est notre métier, la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
 
 Quelle prise pour votre appareil ? La calculette propose la prise et le câble adaptés.
 

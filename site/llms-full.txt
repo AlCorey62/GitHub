@@ -2,15 +2,17 @@
 
 > Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.
 
-Site : https://www.darkside-energy.com/ · Généré le 2026-10-27
+Site : https://www.darkside-energy.com/ · Généré le 2026-10-28
 
 ---
 
-# La puissance de l'électricité, sans tension, avec intensité.
+# Distribution électrique événementielle
 
 > Distribution électrique événementielle, régie technique, coordination générale et bureau d'étude. Salons, concerts, sport et festivals, depuis 2016.
 
-Source : https://www.darkside-energy.com/ · Dark Side Energy · Mise à jour : 2026-10-06
+Source : https://www.darkside-energy.com/ · Dark Side Energy · Mise à jour : 2026-10-28
+
+La puissance de l'électricité, sans tension, avec intensité.
 
 Distribution électrique, régie technique, coordination générale et bureau d'étude : depuis les Hauts-de-France, Dark Side Energy alimente vos événements, du salon au stade, en France et à l'international.
 
@@ -368,11 +370,13 @@ Direction technique, régie générale, coordination : parlons de votre organisa
 
 ---
 
-# Le terrain au service de l'étude.
+# Bureau d'étude électrique événementiel
 
 > Bureau d'étude électrique événementiel : raccordement, bilan de puissance, schéma unifilaire, plans et notes de calcul. Le terrain au service de l'étude.
 
-Source : https://www.darkside-energy.com/bureaudetude/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/bureaudetude/ · Dark Side Energy · Mise à jour : 2026-10-28
+
+Le terrain au service de l'étude.
 
 Beaucoup d'événements ont lieu dans des salles adaptées, mais beaucoup aussi dans des salles qui le sont moins. Notre bureau d'étude vous aide à calculer l'énergie nécessaire et trouve les solutions adaptées à l'événement : groupes électrogènes, compteurs forains, raccordements.
 
@@ -650,11 +654,11 @@ Partagez-nous vos besoins : nous étudions le raccordement, l'hybridation et le 
 
 ---
 
-# Bilan de puissance.
+# Bilan de puissance événementiel.
 
 > Bilan de puissance en ligne : puissance foisonnée, courant par phase, calibre et source indicatifs. Démo libre, accès complet réservé à nos clients.
 
-Source : https://www.darkside-energy.com/bilan-de-puissance/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/bilan-de-puissance/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 Listez vos appareils, indiquez leur puissance et leur coefficient de foisonnement : l'outil calcule la puissance à prévoir, le courant sur chaque phase et un calibre de raccordement indicatif.
 
@@ -1042,7 +1046,7 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Couleur, nombre de broches, position de la terre : comment reconnaître d'un coup d'œil la tension et le réseau d'une prise P17 (norme IEC 60309).
 
-Source : https://www.darkside-energy.com/news/lire-une-prise-p17/ · Dark Side Energy · Mise à jour : 2026-10-27
+Source : https://www.darkside-energy.com/news/lire-une-prise-p17/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 27 octobre 2026 · 2 min de lecture
 
@@ -1078,6 +1082,8 @@ Le [calibre](https://www.darkside-energy.com/lexique/#calibre) (16, 32, 63 ou 12
 
 > Bleu, c'est du 230 V. Rouge, c'est du 400 V. Et si la fiche ne rentre pas, ce n'est pas le moment de forcer.
 
+Prises, armoires et coffrets : c'est notre métier, la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
+
 Quelle prise pour votre appareil ? La calculette propose la prise et le câble adaptés.
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#conversion)
@@ -1097,7 +1103,7 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Courants de fuite et appels de courant : pourquoi les LED et l'électronique font déclencher les différentiels 30 mA, et comment répartir les circuits.
 
-Source : https://www.darkside-energy.com/news/led-et-differentiel/ · Dark Side Energy · Mise à jour : 2026-10-26
+Source : https://www.darkside-energy.com/news/led-et-differentiel/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 26 octobre 2026 · 3 min de lecture
 
@@ -1132,6 +1138,8 @@ Retirer le différentiel, ou le remplacer par un modèle moins sensible, n'est j
 
 > Un différentiel qui saute avec des LED n'est pas en panne : il additionne des fuites. La réponse, c'est la répartition.
 
+Répartir les circuits fait partie de notre métier : la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
+
 Combien de circuits prévoir ? Listez vos appareils dans le bilan de puissance.
 
 [Ouvrir le bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
@@ -1152,7 +1160,7 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > kW et kVA expliqués simplement : puissance active, puissance apparente et cos φ. Pourquoi les groupes et les raccordements se comptent en kVA.
 
-Source : https://www.darkside-energy.com/news/kva-ou-kw/ · Dark Side Energy · Mise à jour : 2026-10-12
+Source : https://www.darkside-energy.com/news/kva-ou-kw/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 12 octobre 2026 · 2 min de lecture
 
@@ -1182,6 +1190,8 @@ Pour savoir ce que vos appareils consomment, regardez les kW. Pour choisir les c
 
 > Les kW, c'est ce que vous consommez. Les kVA, c'est ce que vous devez prévoir.
 
+Pour dimensionner les sources de votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude/).
+
 Convertissez vos kW en kVA et en ampères, en monophasé ou en triphasé.
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#conversion)
@@ -1202,7 +1212,7 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Le foisonnement expliqué simplement : tous les appareils ne tournent pas en même temps à pleine puissance. Comment l'appliquer dans un bilan.
 
-Source : https://www.darkside-energy.com/news/coefficient-de-foisonnement/ · Dark Side Energy · Mise à jour : 2026-10-12
+Source : https://www.darkside-energy.com/news/coefficient-de-foisonnement/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 12 octobre 2026 · 2 min de lecture
 
@@ -1232,6 +1242,8 @@ Pour résumer, la puissance installée dit ce que vous branchez, la puissance fo
 
 > On ne dimensionne pas pour tout ce qui est branché, mais pour ce qui fonctionne en même temps.
 
+Pour appliquer le foisonnement à votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude/).
+
 Listez vos appareils et appliquez un foisonnement à chaque ligne : l'outil calcule la puissance à prévoir.
 
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
@@ -1252,7 +1264,7 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Combien de kVA derrière une prise P17 ? Les repères de 16 A à 125 A et du Powerlock 400 A, la marge à garder et le rôle de la longueur du câble.
 
-Source : https://www.darkside-energy.com/news/puissance-prise-p17/ · Dark Side Energy · Mise à jour : 2026-10-12
+Source : https://www.darkside-energy.com/news/puissance-prise-p17/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 12 octobre 2026 · 2 min de lecture
 
@@ -1292,6 +1304,8 @@ Pour résumer, le calibre et le réseau donnent le maximum de la prise. Le foiso
 
 > Ce qu'une prise peut donner n'est pas ce qu'il faut lui demander.
 
+Pour choisir les prises et les raccordements de votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude/).
+
 Retrouvez la puissance de chaque connecteur et convertissez kVA, kW et ampères en un instant.
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#reperes)
@@ -1312,7 +1326,7 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Monophasé 230 V, triphasé 400 V : pourquoi répartir les charges sur L1, L2 et L3, et comment la phase la plus chargée fixe la taille de la source.
 
-Source : https://www.darkside-energy.com/news/equilibrer-les-phases/ · Dark Side Energy · Mise à jour : 2026-10-12
+Source : https://www.darkside-energy.com/news/equilibrer-les-phases/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 12 octobre 2026 · 2 min de lecture
 
@@ -1348,6 +1362,8 @@ Pour résumer, le monophasé alimente les appareils, le triphasé alimente l'ins
 
 > Ce n'est pas la puissance totale qui dimensionne la source, c'est la phase la plus chargée.
 
+Répartir les charges entre les phases fait partie de notre métier : la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
+
 Listez vos appareils : l'outil répartit les lignes monophasées sur les trois phases et calcule le courant de chacune.
 
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
@@ -1368,15 +1384,15 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Distribution électrique événementielle : partir des alimentations du lieu pour distribuer l'électricité en sécurité. Et pourquoi l'ilotage est interdit.
 
-Source : https://www.darkside-energy.com/news/distribution-electrique-evenementielle/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/news/distribution-electrique-evenementielle/ · Dark Side Energy · Mise à jour : 2026-10-28
 
-8 mai 2017 · 2 min de lecture · Mis à jour le 25 septembre 2026
+8 mai 2017 · 2 min de lecture · Mis à jour le 28 octobre 2026
 
 - La distribution électrique événementielle part des alimentations du lieu pour amener l'électricité là où l'organisation en a besoin, en respectant les normes de sécurité.
 - En spectacle, les armoires sont placées derrière la scène, idéalement avec une source par corps de métier.
 - En salon, chaque stand a son coffret avec différentiel 30 mA : l'ilotage est interdit.
 
-Dark Side Energy est spécialisé dans la distribution électrique événementielle, ok, mais c'est quoi au juste ?
+Dark Side Energy est spécialisé dans la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/), ok, mais c'est quoi au juste ?
 
 Chaque événement est unique, et donc sa configuration également. Les salles et lieux prévus pour les événements sont équipés d'une ou plusieurs alimentations électriques générales.
 
@@ -1420,9 +1436,9 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Groupe Twin zéro coupure : deux groupes électrogènes synchronisés, chacun à 50 % de la charge. Si l'un tombe en panne, aucune coupure.
 
-Source : https://www.darkside-energy.com/news/groupe-twin-zero-coupure/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/news/groupe-twin-zero-coupure/ · Dark Side Energy · Mise à jour : 2026-10-28
 
-8 mai 2017 · 2 min de lecture · Mis à jour le 25 septembre 2026
+8 mai 2017 · 2 min de lecture · Mis à jour le 28 octobre 2026
 
 - Un groupe Twin zéro coupure, ce sont deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge.
 - Si l'un tombe en panne, l'autre reprend toute la charge sans aucune coupure.
@@ -1448,6 +1464,8 @@ En effet, un ordinateur qui subit même une micro-coupure peut très bien avoir 
 
 **Petit plus :** dans certains cas plus précis, on peut même monter à 3 ou 4 groupes synchronisés (tri-pack, quadri-pack).
 
+Le groupe Twin fait partie des solutions de notre [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
+
 Aujourd'hui, nous proposons aussi des groupes Stage V en version twin et des packs batteries, seuls ou en hybridation.
 
 [Voir l'énergie disponible](https://www.darkside-energy.com/nos-produits/#energie)
@@ -1468,9 +1486,9 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Pourquoi la section d'un câble dépend de l'intensité mais aussi de la longueur : résistance, échauffement et chute de tension, simplement.
 
-Source : https://www.darkside-energy.com/news/section-de-cable/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/news/section-de-cable/ · Dark Side Energy · Mise à jour : 2026-10-28
 
-8 mai 2017 · 1 min de lecture · Mis à jour le 25 septembre 2026
+8 mai 2017 · 1 min de lecture · Mis à jour le 28 octobre 2026
 
 - Un câble est un très bon conducteur, mais aussi une résistance.
 - Plus il est long, plus il chauffe et plus la chute de tension augmente.
@@ -1489,6 +1507,8 @@ La longueur de câble amplifie l'échauffement de celui-ci et provoque une **chu
 Beaucoup d'appareils ont une plage de tension acceptable assez faible : on est souvent sur du 220 à 250 V. Si l'appareil reçoit moins, il risque de mal fonctionner, voire de tomber en panne.
 
 Le choix de la section est donc important lors du tirage de grandes longueurs. Il existe de nombreux abaques qui vous permettent de choisir facilement, et notre calculette le fait pour vous.
+
+Pour calculer les sections de câbles de votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude/).
 
 Calculez la chute de tension de votre ligne : section, longueur, intensité, monophasé ou triphasé.
 
@@ -1510,9 +1530,9 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Pourquoi un coffret électrique « saute » : différentiel 30 mA et disjoncteur expliqués simplement. Appareil en défaut ou circuit surchargé ?
 
-Source : https://www.darkside-energy.com/news/pourquoi-ca-saute/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/news/pourquoi-ca-saute/ · Dark Side Energy · Mise à jour : 2026-10-28
 
-8 mai 2017 · 1 min de lecture · Mis à jour le 25 septembre 2026
+8 mai 2017 · 1 min de lecture · Mis à jour le 28 octobre 2026
 
 - Le différentiel 30 mA coupe quand un appareil laisse fuir du courant : il protège les personnes.
 - Le disjoncteur coupe en cas de surcharge ou de court-circuit : il protège l'installation.
@@ -1539,6 +1559,8 @@ Soit vous avez un ou plusieurs appareils en défaut, soit vous avez branché tro
 
 > Le coffret, lui, vous a soit sauvé la vie, soit sauvé votre installation.
 
+Coffrets, différentiels et disjoncteurs : c'est notre métier, la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
+
 Vérifiez la puissance de vos appareils avant de les brancher.
 
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
@@ -1559,7 +1581,7 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Dark Side Energy, SARL basée dans les Hauts-de-France : des humains professionnalisés dans la distribution électrique d'événement depuis 2016. Nous rejoindre.
 
-Source : https://www.darkside-energy.com/entreprise/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/entreprise/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 Depuis 2016, notre but est de vous accompagner de l'idée jusqu'à la réalisation de vos projets sur la partie électrique : fourniture, distribution, étude, régie et coordination.
 
@@ -1575,7 +1597,7 @@ Et parce que l'électricité reste une affaire de sécurité, nos équipes suive
 
 - **Raison sociale** : DARK SIDE ENERGY
 - **Forme juridique** : SARL
-- **Siège** : Hauts-de-France
+- **Siège** : Carvin, Hauts-de-France
 - **Création** : 2016
 - **SIREN** : 879 105 377
 - **Activité** : Soutien au spectacle vivant
@@ -1806,15 +1828,17 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 > Électriciens habilités, rejoignez Dark Side Energy pour travailler dans l'événementiel et le culturel. Prestataires et loueurs, trouvez le technicien idéal pour votre prestation.
 
-Source : https://www.darkside-energy.com/news/repertoire-national-des-electros/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/news/repertoire-national-des-electros/ · Dark Side Energy · Mise à jour : 2026-10-28
 
-23 juin 2016 · 1 min de lecture · Mis à jour le 25 septembre 2026
+23 juin 2016 · 1 min de lecture · Mis à jour le 28 octobre 2026
 
 **Rejoignez le côté obscur de l'électricité !**
 
 Vous êtes électro, vous avez vos habilitations, vous cherchez du travail ? Faites-vous connaître auprès de Dark Side Energy et soyez contacté pour travailler avec des sociétés professionnelles de location et de prestation dans le milieu événementiel et culturel !
 
 Vous êtes prestataire ou loueur de matériel de distribution électrique et vous avez besoin d'électriciens ? [Contactez-nous](https://www.darkside-energy.com/contact/?objet=regie) pour trouver le technicien idéal pour votre prestation !
+
+Pour constituer vos équipes, voir aussi notre [régie technique](https://www.darkside-energy.com/regie-technique/).
 
 Candidatures ouvertes toute l'année.
 
@@ -1838,11 +1862,13 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 ---
 
-# The power of electricity, without the tension, fully amped.
+# Event power distribution
 
 > Event power distribution, technical management, general coordination and engineering office. Trade shows, concerts, sport and festivals, since 2016.
 
-Source: https://www.darkside-energy.com/en/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/ · Dark Side Energy · Updated: 2026-10-28
+
+The power of electricity, without the tension, fully amped.
 
 Power distribution, technical management, general coordination and engineering office: from Hauts-de-France, northern France, Dark Side Energy powers your events, from trade shows to stadiums, in France and internationally.
 
@@ -2200,11 +2226,13 @@ Technical direction, production management, coordination: let's talk about your 
 
 ---
 
-# Design shaped by field experience.
+# Event electrical engineering office
 
 > Event electrical engineering: grid connection, power assessment, single-line diagram, plans and calculation notes. Design shaped by field experience.
 
-Source: https://www.darkside-energy.com/en/engineering/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/engineering/ · Dark Side Energy · Updated: 2026-10-28
+
+Design shaped by field experience.
 
 Many events take place in venues that are well suited to them, but many also take place in venues that are less so. Our engineering office helps you calculate the energy you need and finds the right solutions for the event: generators, *compteurs forains* (temporary metered grid connections), grid connections.
 
@@ -2482,11 +2510,11 @@ Tell us what you need: we will study grid connection, hybrid power and right-siz
 
 ---
 
-# Power assessment.
+# Event power assessment.
 
 > Online power assessment: diversified power, current per phase, indicative rating and source. Free demo, full access reserved for our clients.
 
-Source: https://www.darkside-energy.com/en/power-assessment/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/power-assessment/ · Dark Side Energy · Updated: 2026-10-28
 
 List your equipment and enter its power and diversity factor: the tool calculates the power required, the current on each phase and an indicative connection rating.
 
@@ -2860,7 +2888,7 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > Colour, number of pins, earth position: how to tell the voltage and supply type of a P17 socket (IEC 60309 standard) at a glance.
 
-Source: https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/ · Dark Side Energy · Updated: 2026-10-27
+Source: https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/ · Dark Side Energy · Updated: 2026-10-28
 
 27 October 2026 · 2 min read
 
@@ -2896,6 +2924,8 @@ The [rating](https://www.darkside-energy.com/en/glossary/#calibre) (16, 32, 63 o
 
 > Blue means 230 V. Red means 400 V. And if the plug will not go in, this is not the time to force it.
 
+Sockets, distribution cabinets and boxes: that is our core business, [event power distribution](https://www.darkside-energy.com/en/power-distribution/).
+
 Which socket for your equipment? The calculator suggests the right socket and cable.
 
 [Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
@@ -2915,7 +2945,7 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > Leakage and inrush currents: why LEDs and electronics trip 30 mA RCDs, and how to split circuits to avoid it.
 
-Source: https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/ · Dark Side Energy · Updated: 2026-10-26
+Source: https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/ · Dark Side Energy · Updated: 2026-10-28
 
 26 October 2026 · 3 min read
 
@@ -2950,6 +2980,8 @@ Removing the RCD, or replacing it with a less sensitive one, is never the answer
 
 > An RCD that trips with LEDs is not faulty: it is adding up leakage. The answer is to split the circuits.
 
+Splitting circuits is part of our core business: [event power distribution](https://www.darkside-energy.com/en/power-distribution/).
+
 How many circuits do you need? List your equipment in the power assessment.
 
 [Open the power assessment](https://www.darkside-energy.com/en/power-assessment/)
@@ -2970,7 +3002,7 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > kW and kVA explained simply: active power, apparent power and cos φ. Why generators and grid connections are rated in kVA.
 
-Source: https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/ · Dark Side Energy · Updated: 2026-10-12
+Source: https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/ · Dark Side Energy · Updated: 2026-10-28
 
 12 October 2026 · 2 min read
 
@@ -3000,6 +3032,8 @@ To know what your equipment consumes, look at the kW. To choose cables, protecti
 
 > kW is what you consume. kVA is what you need to plan for.
 
+To size the power sources for your event, consult our [event electrical engineering office](https://www.darkside-energy.com/en/engineering/).
+
 Convert your kW into kVA and amps, in single-phase or three-phase.
 
 [Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
@@ -3020,7 +3054,7 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > The diversity factor explained simply: not all equipment runs at full power at the same time. How to apply it in a power assessment.
 
-Source: https://www.darkside-energy.com/en/did-you-know/diversity-factor/ · Dark Side Energy · Updated: 2026-10-12
+Source: https://www.darkside-energy.com/en/did-you-know/diversity-factor/ · Dark Side Energy · Updated: 2026-10-28
 
 12 October 2026 · 2 min read
 
@@ -3050,6 +3084,8 @@ To sum up, installed power tells you what you plug in, diversified power tells y
 
 > You do not size for everything that is plugged in, but for what runs at the same time.
 
+To apply diversity to your event, consult our [event electrical engineering office](https://www.darkside-energy.com/en/engineering/).
+
 List your equipment and apply a diversity factor to each line: the tool calculates the power required.
 
 [Run a power assessment](https://www.darkside-energy.com/en/power-assessment/)
@@ -3070,7 +3106,7 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > How many kVA behind a P17 socket? Reference figures from 16 A to 125 A and for a 400 A Powerlock, the margin to keep and why cable length matters.
 
-Source: https://www.darkside-energy.com/en/did-you-know/p17-socket-power/ · Dark Side Energy · Updated: 2026-10-12
+Source: https://www.darkside-energy.com/en/did-you-know/p17-socket-power/ · Dark Side Energy · Updated: 2026-10-28
 
 12 October 2026 · 2 min read
 
@@ -3110,6 +3146,8 @@ To sum up, the rating and the supply give the socket's maximum. The diversity fa
 
 > What a socket can give is not what you should ask of it.
 
+To choose the sockets and connections for your event, consult our [event electrical engineering office](https://www.darkside-energy.com/en/engineering/).
+
 Find the power behind each connector and convert kVA, kW and amps in an instant.
 
 [Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#reperes)
@@ -3130,7 +3168,7 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > Single-phase 230 V, three-phase 400 V: why spread loads over L1, L2 and L3, and how the most loaded phase sets the size of the source.
 
-Source: https://www.darkside-energy.com/en/did-you-know/balancing-phases/ · Dark Side Energy · Updated: 2026-10-12
+Source: https://www.darkside-energy.com/en/did-you-know/balancing-phases/ · Dark Side Energy · Updated: 2026-10-28
 
 12 October 2026 · 2 min read
 
@@ -3166,6 +3204,8 @@ To sum up, single-phase powers the equipment, three-phase powers the installatio
 
 > It is not the total power that sizes the source, it is the most loaded phase.
 
+Spreading loads across the phases is part of our core business: [event power distribution](https://www.darkside-energy.com/en/power-distribution/).
+
 List your equipment: the tool allocates single-phase lines across the three phases and calculates the current on each one.
 
 [Run a power assessment](https://www.darkside-energy.com/en/power-assessment/)
@@ -3186,15 +3226,15 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > Event power distribution: starting from the venue's supplies to distribute electricity safely. And why taking power from the next stand is banned.
 
-Source: https://www.darkside-energy.com/en/did-you-know/event-power-distribution/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/did-you-know/event-power-distribution/ · Dark Side Energy · Updated: 2026-10-28
 
-8 May 2017 · 2 min read · Updated 6 October 2026
+8 May 2017 · 2 min read · Updated 28 October 2026
 
 - Event power distribution starts from the venue's supplies and takes electricity wherever the organisers need it, in compliance with safety standards.
 - For live shows, the distribution cabinets sit behind the stage, ideally with one source per department.
 - At trade shows, every stand has its own distribution box with a 30 mA RCD: *ilotage* (sharing a supply between stands) is banned.
 
-Dark Side Energy specialises in event power distribution. Fine, but what exactly does that mean?
+Dark Side Energy specialises in [event power distribution](https://www.darkside-energy.com/en/power-distribution/). Fine, but what exactly does that mean?
 
 Every event is unique, and so is its configuration. Halls and venues designed for events are equipped with one or more main power supplies.
 
@@ -3238,9 +3278,9 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > Twin zero-interruption generator set: two synchronised generators, each carrying 50% of the load. If one fails, there is no interruption.
 
-Source: https://www.darkside-energy.com/en/did-you-know/twin-generators/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/did-you-know/twin-generators/ · Dark Side Energy · Updated: 2026-10-28
 
-8 May 2017 · 2 min read · Updated 6 October 2026
+8 May 2017 · 2 min read · Updated 28 October 2026
 
 - A Twin zero-interruption generator set is two synchronised generators, each supplying 50% of the load.
 - If one fails, the other takes over the whole load without any interruption.
@@ -3266,6 +3306,8 @@ Indeed, a computer that suffers even a micro-interruption may well end up with a
 
 **Bonus:** in certain more specific cases, you can even go up to 3 or 4 synchronised generators (tri-pack, quadri-pack).
 
+Twin generator sets are one of the solutions of our [event power distribution](https://www.darkside-energy.com/en/power-distribution/) service.
+
 Today we also offer Stage V generators in twin versions and battery packs, on their own or in hybrid setups.
 
 [See available power sources](https://www.darkside-energy.com/en/equipment/#energie)
@@ -3286,9 +3328,9 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > Why cable size depends on current but also on length: resistance, heating and voltage drop, explained simply.
 
-Source: https://www.darkside-energy.com/en/did-you-know/cable-size/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/did-you-know/cable-size/ · Dark Side Energy · Updated: 2026-10-28
 
-8 May 2017 · 1 min read · Updated 6 October 2026
+8 May 2017 · 1 min read · Updated 28 October 2026
 
 - A cable is a very good conductor, but it is also a resistance.
 - The longer it is, the more it heats up and the greater the voltage drop.
@@ -3307,6 +3349,8 @@ The length of a cable increases its heating and causes a **voltage drop**.
 Many devices have a fairly narrow acceptable voltage range: often 220 to 250 V. If a device receives less, it may not work properly, or may even fail.
 
 Choosing the cable size is therefore important when running long lengths. There are many charts that let you choose easily, and our calculator does it for you.
+
+To calculate the cable sizes for your event, consult our [event electrical engineering office](https://www.darkside-energy.com/en/engineering/).
 
 Calculate the voltage drop on your line: cable size, length, current, single-phase or three-phase.
 
@@ -3328,9 +3372,9 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > Why a distribution box “trips”: 30 mA RCD and circuit breaker explained simply. Faulty appliance or overloaded circuit?
 
-Source: https://www.darkside-energy.com/en/did-you-know/why-it-trips/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/did-you-know/why-it-trips/ · Dark Side Energy · Updated: 2026-10-28
 
-8 May 2017 · 1 min read · Updated 6 October 2026
+8 May 2017 · 1 min read · Updated 28 October 2026
 
 - The 30 mA RCD cuts the power when an appliance leaks current: it protects people.
 - The circuit breaker cuts the power in the event of an overload or a short circuit: it protects the installation.
@@ -3357,6 +3401,8 @@ Either you have one or more faulty appliances, or you have plugged too many appl
 
 > As for the box, it has either saved your life or saved your installation.
 
+Distribution boxes, RCDs and circuit breakers: that is our core business, [event power distribution](https://www.darkside-energy.com/en/power-distribution/).
+
 Check the power of your appliances before plugging them in.
 
 [Run a power assessment](https://www.darkside-energy.com/en/power-assessment/)
@@ -3376,7 +3422,7 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 > Dark Side Energy, an SARL based in northern France: people who have made event power distribution their profession since 2016. Join us.
 
-Source: https://www.darkside-energy.com/en/company/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/company/ · Dark Side Energy · Updated: 2026-10-28
 
 Since 2016, our aim has been to support you on the electrical side of your projects, from the initial idea through to delivery: supply, distribution, engineering, technical management and coordination.
 
@@ -3392,7 +3438,7 @@ And because electricity remains a matter of safety, our teams receive continuous
 
 - **Registered name**: DARK SIDE ENERGY
 - **Legal form**: SARL
-- **Head office**: Hauts-de-France, northern France
+- **Head office**: Carvin, Hauts-de-France, northern France
 - **Founded**: 2016
 - **SIREN**: 879 105 377
 - **Activity**: Support for the performing arts

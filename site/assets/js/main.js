@@ -128,7 +128,7 @@
 
   // Titres principaux : chaque mot est enveloppé pour monter l'un après l'autre
   if (!reduceMotion) {
-    document.querySelectorAll(".hero h1, .page-hero h1").forEach(function (h1) {
+    document.querySelectorAll(".hero__title, .page-hero h1:not(.eyebrow), .page-hero__title").forEach(function (h1) {
       var i = 0;
       (function wrap(node) {
         Array.prototype.slice.call(node.childNodes).forEach(function (child) {

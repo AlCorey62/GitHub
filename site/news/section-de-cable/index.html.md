@@ -2,9 +2,9 @@
 
 > Pourquoi la section d'un câble dépend de l'intensité mais aussi de la longueur : résistance, échauffement et chute de tension, simplement.
 
-Source : https://www.darkside-energy.com/news/section-de-cable/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/news/section-de-cable/ · Dark Side Energy · Mise à jour : 2026-10-28
 
-8 mai 2017 · 1 min de lecture · Mis à jour le 25 septembre 2026
+8 mai 2017 · 1 min de lecture · Mis à jour le 28 octobre 2026
 
 - Un câble est un très bon conducteur, mais aussi une résistance.
 - Plus il est long, plus il chauffe et plus la chute de tension augmente.
@@ -23,6 +23,8 @@ La longueur de câble amplifie l'échauffement de celui-ci et provoque une **chu
 Beaucoup d'appareils ont une plage de tension acceptable assez faible : on est souvent sur du 220 à 250 V. Si l'appareil reçoit moins, il risque de mal fonctionner, voire de tomber en panne.
 
 Le choix de la section est donc important lors du tirage de grandes longueurs. Il existe de nombreux abaques qui vous permettent de choisir facilement, et notre calculette le fait pour vous.
+
+Pour calculer les sections de câbles de votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude/).
 
 Calculez la chute de tension de votre ligne : section, longueur, intensité, monophasé ou triphasé.
 

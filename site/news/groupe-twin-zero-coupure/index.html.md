@@ -2,9 +2,9 @@
 
 > Groupe Twin zéro coupure : deux groupes électrogènes synchronisés, chacun à 50 % de la charge. Si l'un tombe en panne, aucune coupure.
 
-Source : https://www.darkside-energy.com/news/groupe-twin-zero-coupure/ · Dark Side Energy · Mise à jour : 2026-09-25
+Source : https://www.darkside-energy.com/news/groupe-twin-zero-coupure/ · Dark Side Energy · Mise à jour : 2026-10-28
 
-8 mai 2017 · 2 min de lecture · Mis à jour le 25 septembre 2026
+8 mai 2017 · 2 min de lecture · Mis à jour le 28 octobre 2026
 
 - Un groupe Twin zéro coupure, ce sont deux groupes électrogènes synchronisés qui fournissent chacun 50 % de la charge.
 - Si l'un tombe en panne, l'autre reprend toute la charge sans aucune coupure.
@@ -29,6 +29,8 @@ Si l'un des deux groupes tombe en panne, l'autre prend le relais des 50 % manqua
 En effet, un ordinateur qui subit même une micro-coupure peut très bien avoir un disque dur hors service à la suite de cette coupure. Certaines consoles lumière ou son fonctionnent sous un système d'exploitation qui a besoin de plusieurs secondes, voire de plusieurs minutes, pour redémarrer après une coupure de courant. Autant vous dire que certaines productions ne prennent pas ce risque et utilisent donc ce système.
 
 **Petit plus :** dans certains cas plus précis, on peut même monter à 3 ou 4 groupes synchronisés (tri-pack, quadri-pack).
+
+Le groupe Twin fait partie des solutions de notre [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
 
 Aujourd'hui, nous proposons aussi des groupes Stage V en version twin et des packs batteries, seuls ou en hybridation.
 

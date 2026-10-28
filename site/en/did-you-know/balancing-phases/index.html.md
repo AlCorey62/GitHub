@@ -2,7 +2,7 @@
 
 > Single-phase 230 V, three-phase 400 V: why spread loads over L1, L2 and L3, and how the most loaded phase sets the size of the source.
 
-Source: https://www.darkside-energy.com/en/did-you-know/balancing-phases/ · Dark Side Energy · Updated: 2026-10-12
+Source: https://www.darkside-energy.com/en/did-you-know/balancing-phases/ · Dark Side Energy · Updated: 2026-10-28
 
 12 October 2026 · 2 min read
 
@@ -37,6 +37,8 @@ That is why our [power assessment](https://www.darkside-energy.com/en/power-asse
 To sum up, single-phase powers the equipment, three-phase powers the installation, and the balance between the phases sets the size of the source.
 
 > It is not the total power that sizes the source, it is the most loaded phase.
+
+Spreading loads across the phases is part of our core business: [event power distribution](https://www.darkside-energy.com/en/power-distribution/).
 
 List your equipment: the tool allocates single-phase lines across the three phases and calculates the current on each one.
 

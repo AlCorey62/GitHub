@@ -2,9 +2,9 @@
 
 > Why cable size depends on current but also on length: resistance, heating and voltage drop, explained simply.
 
-Source: https://www.darkside-energy.com/en/did-you-know/cable-size/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/did-you-know/cable-size/ · Dark Side Energy · Updated: 2026-10-28
 
-8 May 2017 · 1 min read · Updated 6 October 2026
+8 May 2017 · 1 min read · Updated 28 October 2026
 
 - A cable is a very good conductor, but it is also a resistance.
 - The longer it is, the more it heats up and the greater the voltage drop.
@@ -23,6 +23,8 @@ The length of a cable increases its heating and causes a **voltage drop**.
 Many devices have a fairly narrow acceptable voltage range: often 220 to 250 V. If a device receives less, it may not work properly, or may even fail.
 
 Choosing the cable size is therefore important when running long lengths. There are many charts that let you choose easily, and our calculator does it for you.
+
+To calculate the cable sizes for your event, consult our [event electrical engineering office](https://www.darkside-energy.com/en/engineering/).
 
 Calculate the voltage drop on your line: cable size, length, current, single-phase or three-phase.
 

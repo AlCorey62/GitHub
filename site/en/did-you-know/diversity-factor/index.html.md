@@ -2,7 +2,7 @@
 
 > The diversity factor explained simply: not all equipment runs at full power at the same time. How to apply it in a power assessment.
 
-Source: https://www.darkside-energy.com/en/did-you-know/diversity-factor/ · Dark Side Energy · Updated: 2026-10-12
+Source: https://www.darkside-energy.com/en/did-you-know/diversity-factor/ · Dark Side Energy · Updated: 2026-10-28
 
 12 October 2026 · 2 min read
 
@@ -31,6 +31,8 @@ In the [power assessment](https://www.darkside-energy.com/en/glossary/#bilan-de-
 To sum up, installed power tells you what you plug in, diversified power tells you what actually runs at the same time. It is from the diversified power, converted into kVA with cos φ, that sources, cables and protection devices are sized.
 
 > You do not size for everything that is plugged in, but for what runs at the same time.
+
+To apply diversity to your event, consult our [event electrical engineering office](https://www.darkside-energy.com/en/engineering/).
 
 List your equipment and apply a diversity factor to each line: the tool calculates the power required.
 

@@ -1,8 +1,10 @@
-# Design shaped by field experience.
+# Event electrical engineering office
 
 > Event electrical engineering: grid connection, power assessment, single-line diagram, plans and calculation notes. Design shaped by field experience.
 
-Source: https://www.darkside-energy.com/en/engineering/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/engineering/ · Dark Side Energy · Updated: 2026-10-28
+
+Design shaped by field experience.
 
 Many events take place in venues that are well suited to them, but many also take place in venues that are less so. Our engineering office helps you calculate the energy you need and finds the right solutions for the event: generators, *compteurs forains* (temporary metered grid connections), grid connections.
 

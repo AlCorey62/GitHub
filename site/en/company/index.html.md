@@ -2,7 +2,7 @@
 
 > Dark Side Energy, an SARL based in northern France: people who have made event power distribution their profession since 2016. Join us.
 
-Source: https://www.darkside-energy.com/en/company/ · Dark Side Energy · Updated: 2026-10-06
+Source: https://www.darkside-energy.com/en/company/ · Dark Side Energy · Updated: 2026-10-28
 
 Since 2016, our aim has been to support you on the electrical side of your projects, from the initial idea through to delivery: supply, distribution, engineering, technical management and coordination.
 
@@ -18,7 +18,7 @@ And because electricity remains a matter of safety, our teams receive continuous
 
 - **Registered name**: DARK SIDE ENERGY
 - **Legal form**: SARL
-- **Head office**: Hauts-de-France, northern France
+- **Head office**: Carvin, Hauts-de-France, northern France
 - **Founded**: 2016
 - **SIREN**: 879 105 377
 - **Activity**: Support for the performing arts

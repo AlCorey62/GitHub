@@ -2,7 +2,7 @@
 
 > Leakage and inrush currents: why LEDs and electronics trip 30 mA RCDs, and how to split circuits to avoid it.
 
-Source: https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/ · Dark Side Energy · Updated: 2026-10-26
+Source: https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/ · Dark Side Energy · Updated: 2026-10-28
 
 26 October 2026 · 3 min read
 
@@ -36,6 +36,8 @@ When powered up, each LED driver charges its input capacitors and draws, for a v
 Removing the RCD, or replacing it with a less sensitive one, is never the answer: the 30 mA device is there to protect people.
 
 > An RCD that trips with LEDs is not faulty: it is adding up leakage. The answer is to split the circuits.
+
+Splitting circuits is part of our core business: [event power distribution](https://www.darkside-energy.com/en/power-distribution/).
 
 How many circuits do you need? List your equipment in the power assessment.
 

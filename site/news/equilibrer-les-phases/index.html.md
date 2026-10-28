@@ -2,7 +2,7 @@
 
 > Monophasé 230 V, triphasé 400 V : pourquoi répartir les charges sur L1, L2 et L3, et comment la phase la plus chargée fixe la taille de la source.
 
-Source : https://www.darkside-energy.com/news/equilibrer-les-phases/ · Dark Side Energy · Mise à jour : 2026-10-12
+Source : https://www.darkside-energy.com/news/equilibrer-les-phases/ · Dark Side Energy · Mise à jour : 2026-10-28
 
 12 octobre 2026 · 2 min de lecture
 
@@ -37,6 +37,8 @@ C'est pourquoi notre outil de [bilan de puissance](https://www.darkside-energy.c
 Pour résumer, le monophasé alimente les appareils, le triphasé alimente l'installation, et l'équilibre entre les phases fixe la taille de la source.
 
 > Ce n'est pas la puissance totale qui dimensionne la source, c'est la phase la plus chargée.
+
+Répartir les charges entre les phases fait partie de notre métier : la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
 
 Listez vos appareils : l'outil répartit les lignes monophasées sur les trois phases et calcule le courant de chacune.
 

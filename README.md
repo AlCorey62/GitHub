@@ -242,7 +242,7 @@ Les assistants IA trouvent l'information de deux façons : ce qu'ils ont appris 
 **À faire après la mise en ligne**
 
 1. Google Search Console : ajouter le site et déclarer `sitemap.xml`.
-2. Bing Webmaster Tools : importer le site depuis Search Console et déclarer `sitemap.xml`. Puis, après chaque mise en ligne : `node tools/indexnow.mjs`.
+2. Bing Webmaster Tools : importer le site depuis Search Console et déclarer `sitemap.xml`. IndexNow est ensuite prévenu automatiquement après chaque mise en ligne en production (module `netlify/plugins/indexnow`, pages nouvelles, modifiées ou retirées seulement) ; `node tools/indexnow.mjs` reste disponible pour un envoi à la main.
 3. Créer ou reprendre la fiche Google Business Profile avec exactement le même nom, la même adresse et le même téléphone ; ajouter son adresse dans `ENTITY.sameAs` (`tools/site.config.mjs`).
 4. Page entreprise LinkedIn : ajoutée dans `SITE.socials` (pied de page et données structurées `sameAs`). Y renseigner l'adresse du site.
 5. Harmoniser la fiche de l'entreprise sur les annuaires professionnels. Fiche du Label du Spectacle vérifiée le 14/10/2026 (nom, activité, lien vers le site) : la page Énergie responsable y renvoie, logo à l'appui (`site/assets/img/label-spectacle-*`). Prestadd et ISO 20121 ne sont plus affichés (démarches en cours, choix de Damien).
