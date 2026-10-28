@@ -22,8 +22,10 @@ test("semaines : jours, textes, visuels et liens", () => {
     for (const d of week.days) {
       const where = `${dir}, ${d.head}`;
       assert.ok(d.date >= dir && d.date <= addDays(dir, 6), `${where} : jour hors de la semaine`);
-      assert.ok(!dates.has(d.date), `${where} : deux sections pour le même jour`);
-      dates.add(d.date);
+      // Une section du programme par jour, plus au plus une section « Hors programme »
+      const key = d.extra ? `${d.date} hors programme` : d.date;
+      assert.ok(!dates.has(key), `${where} : deux sections ${d.extra ? "hors programme " : ""}pour le même jour`);
+      dates.add(key);
       assert.ok(d.linkedin, `${where} : texte LinkedIn manquant`);
       assert.ok(d.facebook, `${where} : texte Facebook manquant`);
       assert.ok(d.visual && existsSync(join(WEEKS, dir, d.visual)), `${where} : visuel manquant`);
@@ -35,7 +37,7 @@ test("semaines : jours, textes, visuels et liens", () => {
     }
     const journal = join(WEEKS, dir, "diffusion.json");
     if (existsSync(journal)) {
-      for (const date of Object.keys(JSON.parse(readFileSync(journal, "utf8")))) assert.ok(dates.has(date), `${dir}/diffusion.json : ${date} inconnu`);
+      for (const key of Object.keys(JSON.parse(readFileSync(journal, "utf8")))) assert.ok(dates.has(key), `${dir}/diffusion.json : ${key} inconnu`);
     }
   }
 });
@@ -44,9 +46,12 @@ test("diffusion : essai à blanc sur chaque jour, sans rien envoyer", () => {
   for (const dir of weeks) {
     for (const d of lireSemaine(join(WEEKS, dir)).days) {
       const env = { ...process.env, FACEBOOK_PAGE_ID: "", FACEBOOK_PAGE_TOKEN: "", DIFFUSION_RESUME: "" };
-      const run = spawnSync(process.execPath, [join(ROOT, "tools", "diffusion.mjs"), "--essai", "--date", d.date], { env, encoding: "utf8" });
+      const args = ["--essai", "--date", d.date, ...(d.extra ? ["--hors-programme"] : [])];
+      const run = spawnSync(process.execPath, [join(ROOT, "tools", "diffusion.mjs"), ...args], { env, encoding: "utf8" });
       assert.equal(run.status, 0, `${dir}, ${d.head} : ${run.stderr}`);
       assert.match(run.stdout, /Facebook \(essai|déjà envoyé|non validée/, `${dir}, ${d.head} : ${run.stdout}`);
+      // La bonne section est choisie (programme ou hors programme) : son visuel est celui annoncé
+      for (const m of run.stdout.matchAll(/^Visuel : (\S+)/gm)) assert.equal(m[1], d.visual, `${dir}, ${d.head} : mauvaise section envoyée`);
       assert.match(run.stdout, /LinkedIn (\(essai|: jusqu'au|: déjà envoyé)|non validée/, `${dir}, ${d.head} : ${run.stdout}`);
     }
   }

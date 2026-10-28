@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Diffusion de la publication du jour sur les réseaux sociaux :
-//   node tools/diffusion.mjs [--date AAAA-MM-JJ] [--pas-avant HH:MM] [--essai | --verifier]
+//   node tools/diffusion.mjs [--date AAAA-MM-JJ] [--pas-avant HH:MM] [--hors-programme] [--essai | --verifier]
 //
 // Lit editorial/semaines/<lundi>/publications.md et ne diffuse rien tant que la semaine n'est pas validée
 // par Damien (ligne « Statut : **validé… »). La section du jour donne le texte, le visuel et le lien :
@@ -12,6 +12,9 @@
 // Un réseau en échec n'empêche pas l'envoi sur l'autre ; la tâche finit alors en erreur.
 //
 // --pas-avant HH:MM  ne rien envoyer avant cette heure (heure de Paris), pour les passages programmés
+// --hors-programme   envoie la publication « Hors programme » du jour (section en plus, ajoutée et validée par
+//                    Damien), notée à part dans le journal ; elle part aussi sur LinkedIn avant le 9/11/2026,
+//                    car seules les publications du programme y sont programmées à la main
 // --essai            affiche ce qui serait envoyé, sans rien envoyer
 // --verifier         teste les accès sans rien publier (Facebook : photo non publiée, aussitôt supprimée ;
 //                    LinkedIn : lecture de la dernière publication de la page)
@@ -47,6 +50,7 @@ const today = opt("--date") || paris();
 if (!/^\d{4}-\d{2}-\d{2}$/.test(today)) throw new Error(`Date invalide : ${today}`);
 const essai = flag("--essai");
 const verifier = flag("--verifier");
+const horsProgramme = flag("--hors-programme");
 const notice = (msg) => console.log(process.env.GITHUB_ACTIONS ? `::notice::${msg}` : msg);
 const warning = (msg) => console.log(process.env.GITHUB_ACTIONS ? `::warning::${msg}` : msg);
 const error = (msg) => console.log(process.env.GITHUB_ACTIONS ? `::error::${msg}` : msg);
@@ -218,9 +222,9 @@ if (!existsSync(join(weekDir, "publications.md"))) {
   process.exit(0);
 }
 const week = lireSemaine(weekDir);
-const day = week.days.find((d) => d.date === today);
+const day = week.days.find((d) => d.date === today && d.extra === horsProgramme);
 if (!day) {
-  console.log(`Pas de publication prévue le ${today}.`);
+  console.log(`Pas de publication ${horsProgramme ? "hors programme " : ""}prévue le ${today}.`);
   process.exit(0);
 }
 if (!week.validated) {
@@ -230,8 +234,10 @@ if (!week.validated) {
 
 const journalFile = join(weekDir, "diffusion.json");
 const journal = existsSync(journalFile) ? JSON.parse(readFileSync(journalFile, "utf8")) : {};
+// Clé du journal : la date, ou « date hors programme » pour la publication en plus du jour
+const key = horsProgramme ? `${today} hors programme` : today;
 const note = (network, data) => {
-  journal[today] = { ...journal[today], [network]: { ...data, le: new Date().toISOString() } };
+  journal[key] = { ...journal[key], [network]: { ...data, le: new Date().toISOString() } };
   writeFileSync(journalFile, JSON.stringify(journal, null, 2) + "\n");
   if (process.env.DIFFUSION_RESUME) appendFileSync(process.env.DIFFUSION_RESUME, `- ${network} : ${day.head}\n`);
 };
@@ -246,14 +252,14 @@ const altText = v ? [v.titre, v.sousTitre].filter(Boolean).join(" ").replace(/\*
 
 // Ce qui reste à envoyer aujourd'hui, réseau par réseau
 const todo = [];
-if (journal[today]?.facebook) console.log(`Facebook : déjà envoyé le ${journal[today].facebook.le}.`);
+if (journal[key]?.facebook) console.log(`Facebook : déjà envoyé le ${journal[key].facebook.le}.`);
 else if (!day.facebook) warning(`Facebook : pas de texte pour ${day.head}.`);
 else if (essai) console.log(`Facebook (essai, rien n'est envoyé)\nVisuel : ${day.visual}\n\n${day.facebook}\n`);
 else if (!FB.page || !FB.token) notice("Facebook : accès non configuré (secrets FACEBOOK_PAGE_ID et FACEBOOK_PAGE_TOKEN), rien n'est envoyé.");
 else todo.push("facebook");
 
-if (today < LI_DEPUIS) console.log(`LinkedIn : jusqu'au 6/11/2026, les posts sont programmés à la main ; rien n'est envoyé.`);
-else if (journal[today]?.linkedin) console.log(`LinkedIn : déjà envoyé le ${journal[today].linkedin.le}.`);
+if (today < LI_DEPUIS && !horsProgramme) console.log(`LinkedIn : jusqu'au 6/11/2026, les posts sont programmés à la main ; rien n'est envoyé.`);
+else if (journal[key]?.linkedin) console.log(`LinkedIn : déjà envoyé le ${journal[key].linkedin.le}.`);
 else if (!day.linkedin) warning(`LinkedIn : pas de texte pour ${day.head}.`);
 else if (essai) console.log(`LinkedIn (essai, rien n'est envoyé)\nVisuel : ${day.visual}${altText ? ` (texte alternatif : ${altText})` : ""}\n\n${day.linkedin}\n`);
 else if (!liConfigured) notice("LinkedIn : accès non configuré (secrets LINKEDIN_ORG_ID et jeton), rien n'est envoyé.");

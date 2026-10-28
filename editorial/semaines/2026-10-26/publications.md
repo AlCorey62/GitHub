@@ -6,6 +6,7 @@ Statut : **validé par Damien le 19/10/2026**. Publication conseillée entre 8 h
 
 - Différentiel 30 mA : ne doit pas déclencher jusqu'à 15 mA, doit déclencher à 30 mA (IEC 61008). Retirés faute de source suffisante : la limite de 3,5 mA par appareil et la règle du « tiers de la sensibilité ».
 - Prises P17 (IEC 60309) : couleurs bleu 200 à 250 V, rouge 380 à 480 V, jaune 100 à 130 V, noir 500 à 690 V ; terre à 6 h pour les prises bleues 230 V et rouges 400 V. Retiré : « nos prises rouges sont en 5 broches » (parc de câbles encore à confirmer).
+- Publication hors programme du 28/10 (questionnaire de satisfaction) : quatre champs obligatoires (nom, structure, événement, note globale) et notes affichées selon les prestations cochées, relevés le 28/10/2026 dans `site/avis/index.html` et `site/assets/js/avis.js` ; lien vérifié en ligne.
 - Calcul du jeudi : 40 000 ÷ (√3 × 400 × 0,9) = 64,15 A, refait avec les formules de la calculette ; prise et câble proposés par la calculette (P17 125 A, 5G35, charge 51 %, chute de tension 0,51 % sur 30 m).
 
 ---
@@ -83,6 +84,32 @@ Statut : **validé par Damien le 19/10/2026**. Publication conseillée entre 8 h
 **Facebook**
 
 > ❓ Vrai ou faux : le différentiel 30 mA protège contre les surcharges ? Faux ! Il protège les personnes contre les fuites de courant. Les surcharges, c'est le disjoncteur. L'explication 👉 https://www.darkside-energy.com/news/pourquoi-ca-saute/
+
+---
+
+## Mercredi 28/10 · Hors programme · Questionnaire de satisfaction
+
+Publication en plus du programme, demandée et validée par Damien le 28/10/2026 pour une diffusion le jour même (tâche « Diffusion réseaux sociaux », mode « hors-programme »).
+
+**Visuel** : `2026-10-28-avis.png`
+**Lien** : https://www.darkside-energy.com/avis/
+
+**LinkedIn**
+
+> Vous avez travaillé avec nous cette année ? Votre avis nous intéresse.
+>
+> Nous avons mis en ligne un court questionnaire de satisfaction : ce qui a bien fonctionné, ce que nous pouvons améliorer. Les questions s'adaptent aux prestations concernées : distribution électrique, régie technique, coordination, bureau d'étude…
+>
+> Quatre champs obligatoires, le reste est facultatif. À la fin, vous pouvez aussi laisser un avis sur notre fiche Google, si vous le souhaitez.
+>
+> Merci à toutes les équipes avec qui nous avons travaillé :
+> https://www.darkside-energy.com/avis/
+>
+> #événementiel #distributionélectrique #régietechnique #avisclient
+
+**Facebook**
+
+> ⭐ Vous avez travaillé avec nous cette année ? Donnez-nous votre avis : un court questionnaire adapté à vos prestations, quatre champs obligatoires, le reste est facultatif 👉 https://www.darkside-energy.com/avis/
 
 ---
 
