@@ -2,6 +2,10 @@
 // prestations cochées, envoi à Netlify Forms sans changer de page, puis remerciement avec l'invitation à
 // laisser un avis Google.
 // L'invitation Google est montrée à tout le monde, quelle que soit la note : Google interdit de filtrer les avis.
+// Les boutons radio (étoiles, recommandation) n'ont pas de name dans la page : Netlify nommerait chaque groupe
+// d'après le libellé de son premier bouton (« 1 sur 5 », « Oui »), et les notes se confondraient dans l'e-mail.
+// Le script leur donne un name de travail (ui_…), jamais envoyé, et remplit les champs lisibles « notes »
+// (une ligne par critère) et « recommandation ».
 
 const form = document.querySelector("form[data-avis]");
 const merci = document.querySelector("[data-avis-merci]");
@@ -14,6 +18,8 @@ const T =
         failed: "Sending failed. Please try again in a moment or email us at ",
         copied: "Comment copied, all you have to do is paste it.",
         copyFailed: "Copying is not available here: select your comment below, copy it, then paste it on Google.",
+        sep: ": ",
+        notRated: "not rated",
       }
     : {
         required: "Merci de compléter les champs obligatoires signalés.",
@@ -21,9 +27,13 @@ const T =
         failed: "L'envoi n'a pas abouti. Réessayez dans un instant ou écrivez-nous à ",
         copied: "Commentaire copié, il ne vous reste qu'à le coller.",
         copyFailed: "La copie n'est pas possible ici : sélectionnez votre commentaire ci-dessous, copiez-le, puis collez-le sur Google.",
+        sep: "\u00a0: ",
+        notRated: "sans note",
       };
 
 if (form && merci) {
+  for (const r of form.querySelectorAll("input[data-groupe]")) r.name = `ui_${r.dataset.groupe}`;
+
   // Préremplissage : ?nom=…&structure=…&evt=… (les champs restent modifiables)
   const params = new URLSearchParams(window.location.search);
   for (const [param, name] of [["nom", "nom"], ["structure", "structure"], ["evt", "evenement"]]) {
@@ -80,9 +90,9 @@ if (form && merci) {
       field.setAttribute("aria-invalid", String(bad));
       if (bad) missing.push(field);
     }
-    const checked = form.querySelector("input[name='note_globale']:checked");
+    const checked = globale.querySelector("input:checked");
     globale.setAttribute("aria-invalid", String(!checked));
-    if (!checked) missing.push(form.querySelector("input[name='note_globale']"));
+    if (!checked) missing.push(globale.querySelector("input"));
     if (missing.length) {
       status.dataset.state = "error";
       status.textContent = T.required;
@@ -92,8 +102,12 @@ if (form && merci) {
 
     // Liste lisible des prestations cochées, pour la notification de Netlify
     form.elements.prestations.value = choix.filter((b) => b.checked).map((b) => b.dataset.prestaNom).join(", ");
-    const data = new FormData(form);
-    const commentaire = String(data.get("commentaire_public") || "").trim();
+    form.elements.notes.value = resumeNotes();
+    const reco = form.querySelector("input[data-groupe='recommandation']:checked");
+    form.elements.recommandation.value = reco ? reco.dataset.libelle : "";
+    // Les boutons radio (name ui_…) ne sont pas envoyés : leurs valeurs sont dans « notes » et « recommandation »
+    const data = [...new FormData(form)].filter(([name]) => !name.startsWith("ui_"));
+    const commentaire = String(new Map(data).get("commentaire_public") || "").trim();
     button.disabled = true;
     status.dataset.state = "";
     status.textContent = T.sending;
@@ -119,6 +133,23 @@ if (form && merci) {
         button.disabled = false;
       });
   });
+
+  // Une ligne par note affichée : « Note globale : 5/5 », « Distribution électrique (installation…) : 4/5 »
+  function resumeNotes() {
+    return [...form.querySelectorAll(".stars")]
+      .filter((groupe) => !groupe.closest("[hidden]"))
+      .map((groupe) => {
+        let titre = document.getElementById(groupe.getAttribute("aria-labelledby")).childNodes[0].textContent.trim();
+        const presta = groupe.closest("[data-presta]");
+        if (presta) {
+          const nom = form.querySelector(`[data-presta-choix="${presta.dataset.presta}"]`).dataset.prestaNom;
+          titre = `${nom} (${titre.charAt(0).toLowerCase()}${titre.slice(1)})`;
+        }
+        const note = groupe.querySelector("input:checked");
+        return `${titre}${T.sep}${note ? `${note.value}/5` : T.notRated}`;
+      })
+      .join("\n");
+  }
 }
 
 function remercier(commentaire) {
