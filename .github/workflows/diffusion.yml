@@ -37,6 +37,9 @@ jobs:
       FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
       LINKEDIN_ORG_ID: ${{ secrets.LINKEDIN_ORG_ID }}
       LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+      LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+      LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+      LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
       MODE: ${{ inputs.mode }}
     steps:
       - uses: actions/checkout@v4

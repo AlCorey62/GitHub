@@ -14,7 +14,7 @@ Depuis le 27/10/2026, c'est une tâche programmée Claude, du lundi au vendredi 
 | Réseau | État | Secrets GitHub |
 |---|---|---|
 | Facebook | Prêt, jeton de la page créé le 20/10/2026 | `FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_TOKEN` |
-| LinkedIn | Accès accordé le 27/10/2026, jeton à créer ; publication automatique à partir du 9/11/2026 | `LINKEDIN_ORG_ID`, `LINKEDIN_TOKEN` |
+| LinkedIn | Accès accordé le 27/10/2026, jeton vérifié le 28/10/2026 ; publication automatique à partir du 9/11/2026 | `LINKEDIN_ORG_ID`, `LINKEDIN_REFRESH_TOKEN`, `LINKEDIN_CLIENT_ID`, `LINKEDIN_CLIENT_SECRET`, `LINKEDIN_TOKEN` (secours) |
 
 Tant qu'un réseau n'a pas ses secrets, la tâche l'ignore sans erreur : on publie alors à la main (planification de la page LinkedIn, Meta Business Suite).
 
@@ -98,25 +98,32 @@ Prérequis :
 
 LinkedIn a donné son accord le 27/10/2026 : niveau *Development*, application n° 266645385.
 
-## LinkedIn : jeton d'accès (une fois, puis tous les deux mois, sur ordinateur)
+## LinkedIn : jetons d'accès (une fois par an, sur ordinateur)
 
-1. Aller sur https://www.linkedin.com/developers/apps, ouvrir l'application « Dark Side Energy Diffusion », onglet **Auth** : vérifier que `w_organization_social` et `r_organization_social` figurent dans les autorisations (*OAuth 2.0 scopes*).
+Le script obtient lui-même un jeton d'accès neuf à chaque passage grâce au jeton de renouvellement (*refresh token*), valable un an. Le jeton d'accès seul (`LINKEDIN_TOKEN`) dure 60 jours et ne sert plus que de secours.
+
+1. Aller sur https://www.linkedin.com/developers/apps, ouvrir l'application « Dark Side Energy Diffusion » (n° 266645385), onglet **Auth** :
+   - vérifier que `w_organization_social` et `r_organization_social` figurent dans les autorisations (*OAuth 2.0 scopes*) ;
+   - relever le **Client ID** et le **Primary Client Secret** (bouton pour l'afficher).
 2. Ouvrir l'outil **OAuth Token Generator** : https://www.linkedin.com/developers/tools/oauth/token-generator
    - choisir l'application « Dark Side Energy Diffusion » ;
+   - flux **Member authorization code (3-legged)** ;
    - cocher `w_organization_social` et `r_organization_social` ;
    - cliquer sur **Request access token**, se connecter avec le compte administrateur de la page et accepter ;
-   - copier le jeton affiché.
+   - LinkedIn affiche deux jetons : le jeton d'accès (*access token*) et le jeton de renouvellement (*refresh token*). Les garder sous la main jusqu'à l'étape 4.
 
-   Si LinkedIn affiche une erreur sur l'adresse de redirection (*redirect_uri*), me la signaler avant d'aller plus loin.
+   Chaque nouvelle création rend les jetons précédents invalides : ne créer qu'une seule fois, puis passer directement à l'étape 4.
 3. Numéro de la page : ouvrir la page LinkedIn Dark Side Energy en vue administrateur. L'adresse est de la forme `https://www.linkedin.com/company/123456789/admin/…` : le nombre est le numéro de la page.
-4. Sur GitHub, dépôt `AlCorey62/GitHub`, **Settings** > **Secrets and variables** > **Actions** :
-   - `LINKEDIN_TOKEN` : le jeton (s'il existe déjà, le remplacer avec **Update**) ;
+4. Sur GitHub, dépôt `AlCorey62/GitHub`, **Settings** > **Secrets and variables** > **Actions**, créer ou mettre à jour (**Update**) :
+   - `LINKEDIN_REFRESH_TOKEN` : le jeton de renouvellement ;
+   - `LINKEDIN_TOKEN` : le jeton d'accès (secours) ;
+   - `LINKEDIN_CLIENT_ID` et `LINKEDIN_CLIENT_SECRET` : relevés à l'étape 1 (une seule fois) ;
    - `LINKEDIN_ORG_ID` : le numéro de la page (une seule fois).
-5. Essai sans rien publier : onglet **Actions** > **Diffusion réseaux sociaux** > **Run workflow**, mode « verifier ». La tâche doit finir en vert et afficher le début de la dernière publication de la page Dark Side Energy.
+5. Essai sans rien publier : onglet **Actions** > **Diffusion réseaux sociaux** > **Run workflow**, mode « verifier ». La tâche doit finir en vert et afficher « jeton renouvelé automatiquement », le nombre de jours de validité restants du jeton de renouvellement et la dernière publication de la page Dark Side Energy.
 
-Le jeton dure 60 jours : le recréer une semaine avant son expiration (étapes 2, 4 et 5). Les jetons renouvelables automatiquement sont réservés aux partenaires agréés par LinkedIn.
+Un mois avant l'expiration du jeton de renouvellement, la tâche affiche un avertissement : refaire alors les étapes 2, 4 et 5.
 
-Jeton en place : pas encore.
+Jetons en place : jeton d'accès créé le 28/10/2026 ; renouvellement automatique à configurer (étape 4).
 
 À savoir :
 - Jusqu'au 6/11/2026, les posts LinkedIn sont programmés à la main depuis la page LinkedIn ; la tâche ne publie sur LinkedIn qu'à partir du 9/11/2026.
@@ -132,7 +139,8 @@ Jeton en place : pas encore.
 - Meta, mode développement et mode en ligne : https://developers.facebook.com/docs/development/build-and-test/app-modes
 - LinkedIn, demande d'accès Community Management API : https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review
 - LinkedIn, niveaux d'accès et autorisations : https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access
-- LinkedIn, durée des jetons : https://learn.microsoft.com/en-us/linkedin/shared/authentication/programmatic-refresh-tokens
+- LinkedIn, durée des jetons et renouvellement : https://learn.microsoft.com/en-us/linkedin/shared/authentication/programmatic-refresh-tokens
+- LinkedIn, jetons invalidés par une nouvelle création : https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow-native
 - LinkedIn, outil de création de jeton : https://learn.microsoft.com/en-us/linkedin/shared/authentication/developer-portal-tools
 - LinkedIn, publier sur une page (Posts API) : https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api
 - LinkedIn, envoi d'images (Images API) : https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/images-api
