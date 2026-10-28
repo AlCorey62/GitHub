@@ -123,7 +123,7 @@ Le script obtient lui-même un jeton d'accès neuf à chaque passage grâce au j
 
 Un mois avant l'expiration du jeton de renouvellement, la tâche affiche un avertissement : refaire alors les étapes 2, 4 et 5.
 
-Jetons en place : jeton d'accès créé le 28/10/2026 ; renouvellement automatique à configurer (étape 4).
+Jetons en place : renouvellement automatique vérifié le 28/10/2026 ; jeton de renouvellement valable jusque vers le 27/10/2027 (364 jours restants au 28/10/2026). Rappel programmé le 01/09/2027, avec la demande du niveau *Standard* et le changement de version de l'API.
 
 À savoir :
 - Jusqu'au 6/11/2026, les posts LinkedIn sont programmés à la main depuis la page LinkedIn ; la tâche ne publie sur LinkedIn qu'à partir du 9/11/2026.
