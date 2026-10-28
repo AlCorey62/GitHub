@@ -48,7 +48,7 @@ test("avis : formulaire Netlify « satisfaction » en dur, mêmes champs en FR e
     assert.match(form[1], new RegExp(`<input type="hidden" name="langue" value="${lang}">`), `${rel} : langue`);
     assert.match(form[1], /name="bot-field"/, `${rel} : champ piège`);
     for (const n of ["nom", "structure", "evenement"]) assert.match(form[1], new RegExp(`name="${n}"[^>]*required`), `${rel} : ${n} obligatoire`);
-    for (let v = 1; v <= 5; v++) assert.match(form[1], new RegExp(`name="note_globale" value="${v}"`), `${rel} : note ${v}`);
+    for (let v = 1; v <= 5; v++) assert.match(form[1], new RegExp(`data-groupe="note_globale" value="${v}"`), `${rel} : note ${v}`);
     names[lang] = [...new Set([...form[1].matchAll(/name="([^"]+)"/g)].map((m) => m[1]))].sort();
     assert.ok(!html.includes("—"), `${rel} : tiret cadratin`);
     assert.ok(!/\bDSE\b/.test(html), `${rel} : abréviation interdite`);
@@ -83,3 +83,30 @@ test("avis : une case par prestation, chaque note de prestation liée à sa case
   }
   assert.deepEqual(keys.fr, keys.en);
 });
+
+// Netlify nomme chaque champ de l'e-mail de notification d'après son libellé (bouton radio : celui du premier
+// bouton du groupe ; champ caché : son name). Deux champs au même libellé se confondent : c'est arrivé avec
+// toutes les notes nommées « 1 sur 5 ». Chaque champ envoyé doit donc avoir un libellé distinct et parlant.
+test("avis : chaque champ envoyé à Netlify a un libellé distinct, notes et recommandation en clair", () => {
+  for (const rel of Object.values(PAGES)) {
+    const form = read(rel).match(/<form [^>]*name="satisfaction"[^>]*>([\s\S]*?)<\/form>/)[1].replace(/<svg[\s\S]*?<\/svg>/g, "");
+    assert.ok(!/<input type="radio"[^>]*\sname=/.test(form), `${rel} : bouton radio avec name, Netlify le nommerait d'après son premier libellé`);
+    for (const n of ["notes", "recommandation"]) assert.match(form, new RegExp(`<input type="hidden" name="${n}" value="">`), `${rel} : champ ${n}`);
+    const libelles = new Map();
+    for (const m of form.matchAll(/<(?:input|textarea|select)\b[^>]*\sname="([^"]+)"[^>]*>/g)) {
+      if (libelles.has(m[1]) || ["form-name", "bot-field"].includes(m[1])) continue;
+      const id = m[0].match(/\sid="([^"]+)"/)?.[1];
+      const label = id && form.match(new RegExp(`<label for="${id}">([\\s\\S]*?)</label>`));
+      libelles.set(m[1], (label ? label[1].replace(/<[^>]+>/g, "") : m[1]).trim().toLowerCase());
+    }
+    const vus = new Map();
+    for (const [name, lib] of libelles) {
+      assert.ok(!vus.has(lib), `${rel} : « ${lib} » sert à la fois à ${vus.get(lib)} et à ${name}`);
+      vus.set(lib, name);
+    }
+  }
+  const js = read("assets/js/avis.js");
+  assert.match(js, /startsWith\("ui_"\)/, "les boutons radio (name ui_…) ne doivent pas être envoyés");
+  assert.match(js, /form\.elements\.notes\.value = resumeNotes\(\)/);
+});
+
