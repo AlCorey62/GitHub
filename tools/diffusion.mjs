@@ -16,7 +16,9 @@
 // --verifier         teste les accès sans rien publier (Facebook : photo non publiée, aussitôt supprimée ;
 //                    LinkedIn : lecture de la dernière publication de la page)
 //
-// Accès : secrets GitHub FACEBOOK_PAGE_ID et FACEBOOK_PAGE_TOKEN, LINKEDIN_ORG_ID et LINKEDIN_TOKEN.
+// Accès : secrets GitHub FACEBOOK_PAGE_ID et FACEBOOK_PAGE_TOKEN ; LINKEDIN_ORG_ID, et pour le jeton LinkedIn
+// soit LINKEDIN_REFRESH_TOKEN, LINKEDIN_CLIENT_ID et LINKEDIN_CLIENT_SECRET (jeton neuf obtenu à chaque passage,
+// jeton de renouvellement valable un an), soit LINKEDIN_TOKEN (60 jours), utilisé aussi en secours.
 // Un réseau sans ses secrets est ignoré. Voir editorial/RESEAUX.md.
 // Résumé écrit dans le fichier $DIFFUSION_RESUME s'il est défini (message du commit du journal).
 
@@ -28,6 +30,7 @@ import { lireSemaine, addDays, little } from "./publications.mjs";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const GRAPH = process.env.FACEBOOK_GRAPH_URL || "https://graph.facebook.com/v26.0"; // adresse modifiable pour les essais
 const LI_API = process.env.LINKEDIN_API_URL || "https://api.linkedin.com/rest"; // idem
+const LI_OAUTH = process.env.LINKEDIN_OAUTH_URL || "https://www.linkedin.com/oauth/v2/accessToken"; // idem
 // Version mensuelle de l'API LinkedIn, chacune maintenue au moins un an : à passer à une version récente chaque année.
 const LI_VERSION = process.env.LINKEDIN_VERSION || "202610";
 const LI_DEPUIS = process.env.LINKEDIN_DEPUIS || "2026-11-09"; // jusqu'au 6/11/2026, posts LinkedIn programmés à la main depuis la page
@@ -79,14 +82,47 @@ function photo(file, caption, published) {
 }
 
 // --- LinkedIn -----------------------------------------------------------------------------
-const LI = { org: secret("LINKEDIN_ORG_ID"), token: secret("LINKEDIN_TOKEN") };
+const LI = {
+  org: secret("LINKEDIN_ORG_ID"),
+  token: secret("LINKEDIN_TOKEN"),
+  refresh: secret("LINKEDIN_REFRESH_TOKEN"),
+  client: secret("LINKEDIN_CLIENT_ID"),
+  clientSecret: secret("LINKEDIN_CLIENT_SECRET"),
+};
+const liRenewable = LI.refresh && LI.client && LI.clientSecret;
+const liConfigured = LI.org && (LI.token || liRenewable);
 const author = () => `urn:li:organization:${LI.org}`;
 
+// Jeton d'accès LinkedIn : demandé une fois par passage avec le jeton de renouvellement (valable un an),
+// sinon le jeton LINKEDIN_TOKEN. Le jeton obtenu est masqué dans le journal de la tâche GitHub.
+let liAccess;
+const accessToken = () => (liAccess ||= renewToken());
+async function renewToken() {
+  if (!liRenewable) return { token: LI.token, source: "jeton LINKEDIN_TOKEN" };
+  const res = await fetch(LI_OAUTH, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ grant_type: "refresh_token", refresh_token: LI.refresh, client_id: LI.client, client_secret: LI.clientSecret }),
+  });
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok || !json.access_token) {
+    const msg = `renouvellement du jeton refusé (${res.status}) : ${json.error_description || json.error || "réponse illisible"}`;
+    if (!LI.token) throw new Error(`${msg}. Refaire l'autorisation (editorial/RESEAUX.md).`);
+    warning(`LinkedIn : ${msg} ; jeton LINKEDIN_TOKEN utilisé en secours.`);
+    return { token: LI.token, source: "jeton LINKEDIN_TOKEN (secours)" };
+  }
+  if (process.env.GITHUB_ACTIONS) console.log(`::add-mask::${json.access_token}`);
+  const days = Number.isFinite(json.refresh_token_expires_in) ? Math.floor(json.refresh_token_expires_in / 86400) : null;
+  if (days !== null && days < 30) warning(`LinkedIn : le jeton de renouvellement expire dans ${days} jours : refaire l'autorisation (editorial/RESEAUX.md).`);
+  return { token: json.access_token, source: `jeton renouvelé automatiquement${days !== null ? `, jeton de renouvellement valable encore ${days} jours` : ""}` };
+}
+
 async function linkedin(method, path, body, headers = {}) {
+  const { token } = await accessToken();
   const res = await fetch(`${LI_API}/${path}`, {
     method,
     headers: {
-      Authorization: `Bearer ${LI.token}`,
+      Authorization: `Bearer ${token}`,
       "Linkedin-Version": LI_VERSION,
       "X-Restli-Protocol-Version": "2.0.0",
       ...(body ? { "Content-Type": "application/json" } : {}),
@@ -96,7 +132,7 @@ async function linkedin(method, path, body, headers = {}) {
   });
   const json = await res.json().catch(() => ({}));
   if (!res.ok) {
-    const hint = res.status === 401 ? ` Jeton expiré ou invalide (${LI.token.length} caractères) : le recréer (editorial/RESEAUX.md).` : "";
+    const hint = res.status === 401 ? ` Jeton expiré ou invalide (${token.length} caractères) : le recréer (editorial/RESEAUX.md).` : "";
     throw new Error(`LinkedIn a refusé l'envoi (${res.status}) : ${json.message || "réponse illisible"}.${hint}`);
   }
   return { json, id: res.headers.get("x-restli-id") };
@@ -107,7 +143,7 @@ async function linkedinImage(file) {
   const { json } = await linkedin("POST", "images?action=initializeUpload", { initializeUploadRequest: { owner: author() } });
   const { uploadUrl, image } = json.value || {};
   if (!uploadUrl || !image) throw new Error("LinkedIn n'a pas donné d'adresse d'envoi pour le visuel.");
-  const up = await fetch(uploadUrl, { method: "PUT", headers: { Authorization: `Bearer ${LI.token}` }, body: readFileSync(file) });
+  const up = await fetch(uploadUrl, { method: "PUT", headers: { Authorization: `Bearer ${(await accessToken()).token}` }, body: readFileSync(file) });
   if (!up.ok) throw new Error(`LinkedIn a refusé le visuel (${up.status}).`);
   for (let i = 0; i < 15; i++) {
     const { json: img } = await linkedin("GET", `images/${encodeURIComponent(image)}`);
@@ -135,7 +171,7 @@ async function linkedinPost(text, file, altText) {
 
 // --- Vérification des accès ---------------------------------------------------------------
 if (verifier) {
-  if (!(FB.page && FB.token) && !(LI.org && LI.token)) throw new Error("Aucun accès configuré (secrets Facebook et LinkedIn absents) : voir editorial/RESEAUX.md.");
+  if (!(FB.page && FB.token) && !liConfigured) throw new Error("Aucun accès configuré (secrets Facebook et LinkedIn absents) : voir editorial/RESEAUX.md.");
   let failed = false;
   if (FB.page && FB.token) {
     try {
@@ -148,13 +184,18 @@ if (verifier) {
       error(`Facebook : ${e.message}`);
     }
   } else notice("Facebook : accès non configuré.");
-  if (LI.org && LI.token) {
+  if (liConfigured) {
     try {
       const { json } = await linkedin("GET", `posts?author=${encodeURIComponent(author())}&q=author&count=1&sortBy=CREATED`, null, { "X-RestLi-Method": "FINDER" });
       const last = json.elements?.[0];
       const when = last?.publishedAt ? new Date(last.publishedAt).toLocaleDateString("fr-FR", { timeZone: "Europe/Paris" }) : "";
       const start = (last?.commentary || "").replace(/\\(.)/g, "$1").replace(/\{hashtag\|.\|([^}]*)\}/g, "#$1").split("\n")[0].slice(0, 80);
-      console.log(`Accès LinkedIn vérifié : page n° ${LI.org}. ${last ? `Dernière publication${when ? ` du ${when}` : ""} : « ${start} ».` : "Aucune publication lue."}`);
+      const { source } = await accessToken();
+      console.log(`Accès LinkedIn vérifié (${source}) : page n° ${LI.org}. ${last ? `Dernière publication${when ? ` du ${when}` : ""} : « ${start} ».` : "Aucune publication lue."}`);
+      if (liRenewable && source.includes("secours")) {
+        failed = true;
+        error("LinkedIn : le renouvellement automatique du jeton ne fonctionne pas (voir l'avertissement ci-dessus).");
+      }
     } catch (e) {
       failed = true;
       error(`LinkedIn : ${e.message}`);
@@ -215,7 +256,7 @@ if (today < LI_DEPUIS) console.log(`LinkedIn : jusqu'au 6/11/2026, les posts son
 else if (journal[today]?.linkedin) console.log(`LinkedIn : déjà envoyé le ${journal[today].linkedin.le}.`);
 else if (!day.linkedin) warning(`LinkedIn : pas de texte pour ${day.head}.`);
 else if (essai) console.log(`LinkedIn (essai, rien n'est envoyé)\nVisuel : ${day.visual}${altText ? ` (texte alternatif : ${altText})` : ""}\n\n${day.linkedin}\n`);
-else if (!LI.org || !LI.token) notice("LinkedIn : accès non configuré (secrets LINKEDIN_ORG_ID et LINKEDIN_TOKEN), rien n'est envoyé.");
+else if (!liConfigured) notice("LinkedIn : accès non configuré (secrets LINKEDIN_ORG_ID et jeton), rien n'est envoyé.");
 else todo.push("linkedin");
 
 if (todo.length && day.link) {
