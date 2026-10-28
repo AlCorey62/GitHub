@@ -126,6 +126,8 @@ function remercier(commentaire) {
   const simple = merci.querySelector("[data-avis-google]");
   copie.hidden = !commentaire;
   simple.hidden = Boolean(commentaire);
+  // Consigne visible avant le clic : Google s'ouvre par-dessus et masque le message de copie
+  merci.querySelector("[data-avis-consigne]").hidden = !commentaire;
   // Le lien ouvre l'avis Google dans un nouvel onglet ; le clic copie d'abord le commentaire
   if (commentaire) copie.addEventListener("click", () => copier(commentaire));
   form.hidden = true;
