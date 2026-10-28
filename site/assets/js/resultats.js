@@ -349,7 +349,7 @@ if (racine) {
         clearInterval(minuteur);
         etat.textContent = "Lien invalide : la clé a peut-être changé. Demandez le lien à jour.";
       } else if (e.status === 503) {
-        etat.textContent = "La page n'est pas encore configurée sur Netlify (variables RESULTATS_CLE et RESULTATS_NETLIFY_TOKEN).";
+        etat.textContent = e.message;
       } else {
         etat.textContent = `Lecture des réponses impossible pour le moment (${e.message}). Nouvel essai automatique dans 2 minutes.`;
       }
