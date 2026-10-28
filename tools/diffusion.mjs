@@ -49,7 +49,9 @@ const warning = (msg) => console.log(process.env.GITHUB_ACTIONS ? `::warning::${
 const error = (msg) => console.log(process.env.GITHUB_ACTIONS ? `::error::${msg}` : msg);
 
 // --- Facebook -----------------------------------------------------------------------------
-const FB = { page: process.env.FACEBOOK_PAGE_ID, token: process.env.FACEBOOK_PAGE_TOKEN };
+// Accès lus dans les secrets, sans les espaces ni les retours à la ligne collés par erreur autour
+const secret = (name) => (process.env[name] || "").trim().replace(/^["']|["']$/g, "");
+const FB = { page: secret("FACEBOOK_PAGE_ID"), token: secret("FACEBOOK_PAGE_TOKEN") };
 
 async function graph(method, path, form) {
   const url = new URL(`${GRAPH}/${path}`);
@@ -77,7 +79,7 @@ function photo(file, caption, published) {
 }
 
 // --- LinkedIn -----------------------------------------------------------------------------
-const LI = { org: process.env.LINKEDIN_ORG_ID, token: process.env.LINKEDIN_TOKEN };
+const LI = { org: secret("LINKEDIN_ORG_ID"), token: secret("LINKEDIN_TOKEN") };
 const author = () => `urn:li:organization:${LI.org}`;
 
 async function linkedin(method, path, body, headers = {}) {
@@ -94,7 +96,7 @@ async function linkedin(method, path, body, headers = {}) {
   });
   const json = await res.json().catch(() => ({}));
   if (!res.ok) {
-    const hint = res.status === 401 ? " Jeton expiré ou invalide : le recréer (editorial/RESEAUX.md)." : "";
+    const hint = res.status === 401 ? ` Jeton expiré ou invalide (${LI.token.length} caractères) : le recréer (editorial/RESEAUX.md).` : "";
     throw new Error(`LinkedIn a refusé l'envoi (${res.status}) : ${json.message || "réponse illisible"}.${hint}`);
   }
   return { json, id: res.headers.get("x-restli-id") };
