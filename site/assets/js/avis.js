@@ -1,5 +1,6 @@
-// Questionnaire de satisfaction (/avis/ et /en/review/) : préremplissage par l'adresse, envoi à Netlify Forms
-// sans changer de page, puis remerciement avec l'invitation à laisser un avis Google.
+// Questionnaire de satisfaction (/avis/ et /en/review/) : préremplissage par l'adresse, notes adaptées aux
+// prestations cochées, envoi à Netlify Forms sans changer de page, puis remerciement avec l'invitation à
+// laisser un avis Google.
 // L'invitation Google est montrée à tout le monde, quelle que soit la note : Google interdit de filtrer les avis.
 
 const form = document.querySelector("form[data-avis]");
@@ -30,6 +31,23 @@ if (form && merci) {
     const field = form.elements[name];
     if (value && field && !field.value) field.value = value.slice(0, Number(field.maxLength) > 0 ? field.maxLength : 200);
   }
+
+  // Prestations : ?presta=distribution,bureau coche les cases ; seules les notes des prestations cochées
+  // s'affichent (toutes les notes restent dans la page pour que Netlify enregistre leurs champs)
+  const choix = [...form.querySelectorAll("[data-presta-choix]")];
+  const demandees = params.getAll("presta").flatMap((v) => v.split(",")).map((v) => v.trim());
+  for (const box of choix) if (demandees.includes(box.dataset.prestaChoix)) box.checked = true;
+  const adapter = () => {
+    const actives = new Set(choix.filter((b) => b.checked).map((b) => b.dataset.prestaChoix));
+    for (const note of form.querySelectorAll("[data-presta]")) {
+      const visible = actives.has(note.dataset.presta);
+      note.hidden = !visible;
+      // Une note masquée n'est pas envoyée
+      if (!visible) for (const r of note.querySelectorAll("input:checked")) r.checked = false;
+    }
+  };
+  for (const box of choix) box.addEventListener("change", adapter);
+  adapter();
 
   const status = form.querySelector(".form-status");
   const button = form.querySelector("[type='submit']");
@@ -72,6 +90,8 @@ if (form && merci) {
       return;
     }
 
+    // Liste lisible des prestations cochées, pour la notification de Netlify
+    form.elements.prestations.value = choix.filter((b) => b.checked).map((b) => b.dataset.prestaNom).join(", ");
     const data = new FormData(form);
     const commentaire = String(data.get("commentaire_public") || "").trim();
     button.disabled = true;

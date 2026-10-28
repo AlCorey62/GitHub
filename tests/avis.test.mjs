@@ -69,3 +69,17 @@ test("avis : invitation Google montrée à tous, quelle que soit la note", () =>
   assert.ok(remercier.length > 0 && !/note/.test(remercier), "le remerciement ne doit pas dépendre de la note");
   assert.match(js, /remercier\(commentaire\)/);
 });
+
+test("avis : une case par prestation, chaque note de prestation liée à sa case, mêmes clés en FR et en EN", () => {
+  const keys = {};
+  for (const [lang, rel] of Object.entries(PAGES)) {
+    const html = read(rel);
+    const cases = [...html.matchAll(/data-presta-choix="([^"]+)"/g)].map((m) => m[1]);
+    const notes = [...html.matchAll(/class="avis-note" data-presta="([^"]+)"/g)].map((m) => m[1]);
+    assert.deepEqual([...cases].sort(), [...notes].sort(), `${rel} : cases et notes de prestation différentes`);
+    assert.ok(cases.includes("regie-generale"), `${rel} : régie générale absente`);
+    assert.match(html, /<input type="hidden" name="prestations" value="">/, `${rel} : champ récapitulatif des prestations`);
+    keys[lang] = cases;
+  }
+  assert.deepEqual(keys.fr, keys.en);
+});

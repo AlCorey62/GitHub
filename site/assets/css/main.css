@@ -2813,6 +2813,35 @@ a.tag:hover {
 .avis-form .segmented {
   align-self: flex-start;
 }
+.avis-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.avis-chips input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.avis-chips label {
+  padding: 9px 14px;
+  border: 1px solid var(--c-line-2);
+  border-radius: 999px;
+  font-size: var(--fs-sm);
+  font-weight: 650;
+  color: var(--c-text-2);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.avis-chips input:checked + label {
+  border-color: var(--c-brand);
+  background: var(--c-brand);
+  color: #fff;
+}
+.avis-chips input:focus-visible + label {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
 .avis-optional {
   font-weight: 500;
   color: var(--c-text-3);
