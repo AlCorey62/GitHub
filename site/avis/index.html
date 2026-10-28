@@ -51,7 +51,7 @@
 <link rel="stylesheet" href="../assets/css/main.css?v=04cd7af3">
 <script>document.documentElement.classList.add("js")</script>
 <script src="../assets/js/main.js?v=eec9a1ef" defer></script>
-<script type="module" src="../assets/js/avis.js?v=62389c08"></script>
+<script type="module" src="../assets/js/avis.js?v=465eaebc"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://www.darkside-energy.com/avis/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.darkside-energy.com/"},{"@type":"ListItem","position":2,"name":"Votre avis","item":"https://www.darkside-energy.com/avis/"}]}</script>
 <!-- head:end -->
 </head>
@@ -91,6 +91,8 @@
       <form class="panel avis-form" name="satisfaction" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-avis novalidate>
         <input type="hidden" name="form-name" value="satisfaction">
         <input type="hidden" name="langue" value="fr">
+        <!-- Objet de l'e-mail de notification envoyé par Netlify -->
+        <input type="hidden" name="subject" value="Nouvel avis client (questionnaire de satisfaction)">
         <p class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="form-grid avis-qui">
           <div class="field full">
@@ -159,6 +161,7 @@
           <a class="btn" href="https://g.page/r/CcCzqeaJRRAwEBM/review" target="_blank" rel="noopener" data-avis-google-copie hidden>Copier mon commentaire et le publier sur Google<svg data-icon="external-link" class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg><span class="visually-hidden"> (nouvel onglet)</span></a>
           <a class="btn" href="https://g.page/r/CcCzqeaJRRAwEBM/review" target="_blank" rel="noopener" data-avis-google>Laisser un avis sur Google<svg data-icon="external-link" class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg><span class="visually-hidden"> (nouvel onglet)</span></a>
         </div>
+        <p class="hint" data-avis-consigne hidden>Sur Google, choisissez vos étoiles puis collez le commentaire dans la zone de texte (appui long puis « Coller » sur téléphone).</p>
         <p class="form-status" data-avis-copie role="status" aria-live="polite"></p>
         <textarea class="textarea" data-avis-texte rows="3" readonly hidden></textarea>
       </div>
