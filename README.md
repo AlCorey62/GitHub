@@ -21,6 +21,8 @@ site/                      Dossier publié (c'est lui qui est mis en ligne)
   compte/                  Espace client : activation du compte, connexion, mot de passe oublié (non indexé)
   calculette-electro/      Calculette installable (voir « Calculette électro ») et son manifest.webmanifest
   contact/                 Formulaire (Netlify Forms) et page de confirmation
+  avis/                    Questionnaire de satisfaction (Netlify Forms « satisfaction », non indexé, lien envoyé aux clients)
+  resultats/               Résultats du questionnaire, page privée ouverte avec un lien secret (voir « Résultats du questionnaire »)
   mentions-legales/        Mentions légales et confidentialité
   en/                      Version anglaise : mêmes pages, adresses en anglais (voir « Version anglaise »)
   404.html, robots.txt, sitemap.xml, site.webmanifest, favicon.ico
@@ -209,6 +211,21 @@ Les anciennes adresses Wix (`/test-externe`, `/single-post/...`, `/en/...`) sont
 Autre hébergeur : le dossier `site/` peut être publié tel quel sur n'importe quel hébergement statique. Il faudra alors reprendre les redirections et en-têtes de `netlify.toml` et remplacer Netlify Forms par un autre service de formulaire.
 
 Reconstruction dans Wix (au lieu de Netlify) : suivre `wix/README.md`.
+
+## Résultats du questionnaire de satisfaction
+
+La page privée https://www.darkside-energy.com/resultats/ affiche en direct les réponses du questionnaire (statistiques, synthèse des commentaires, réponses complètes). Elle ne s'ouvre qu'avec le lien secret `https://www.darkside-energy.com/resultats/#<clé>` ; la fin du lien (#…) n'est jamais envoyée au serveur. Les réponses sont lues à chaque ouverture par la fonction Netlify `netlify/functions/resultats/` : rien n'est copié ailleurs, et l'adresse IP et le navigateur des clients ne sont pas transmis. Page non indexée, sans mesure d'audience.
+
+Mise en place (une fois) :
+
+1. Netlify, **User settings** > **Applications** > **Personal access tokens** > **New access token** : nom « Résultats questionnaire », date d'expiration au choix. Copier le jeton.
+2. Netlify, site darkside-energy-site > **Site configuration** > **Environment variables** > **Add a variable**, portée **Functions** :
+   - `RESULTATS_NETLIFY_TOKEN` : le jeton de l'étape 1 ;
+   - `RESULTATS_CLE` : la clé du lien secret, 24 caractères au moins, lettres et chiffres seulement (par exemple 32 caractères tirés d'un générateur de mots de passe, ou `openssl rand -hex 16` dans le Terminal).
+3. **Deploys** > **Trigger deploy** > **Deploy site** : les variables ne sont prises en compte qu'après une mise en ligne.
+4. Ouvrir `https://www.darkside-energy.com/resultats/#<clé>` et partager ce lien en interne.
+
+Changer de lien : modifier `RESULTATS_CLE`, puis refaire l'étape 3 ; l'ancien lien ne fonctionne plus. À l'expiration du jeton Netlify, la page l'indique : refaire les étapes 1 et 3.
 
 ## Points à valider avant la mise en ligne
 

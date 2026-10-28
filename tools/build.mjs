@@ -142,8 +142,9 @@ function head(cfg, ctx) {
     cfg.noindex || cfg.absoluteRoot ? "" : `<link rel="alternate" type="text/markdown" href="index.html.md" title="${t.markdown}">`,
     `<link rel="alternate" type="application/rss+xml" href="${SITE.url}${FEEDS[ctx.lang].path}" title="${esc(FEEDS[ctx.lang].title)}">`,
     `<meta name="theme-color" content="${SITE.themeColor}">`,
-    // Mesure d'audience : identifiant lu par main.js (bandeau de consentement, Google Analytics après accord)
-    SITE.ga4 ? `<meta name="ga4" content="${SITE.ga4}">` : "",
+    // Mesure d'audience : identifiant lu par main.js (bandeau de consentement, Google Analytics après accord) ;
+    // absent des pages qui le demandent ("analytics": false, par exemple la page privée des résultats)
+    SITE.ga4 && cfg.analytics !== false ? `<meta name="ga4" content="${SITE.ga4}">` : "",
     `<meta name="color-scheme" content="dark">`,
     `<meta property="og:type" content="${cfg.type === "article" ? "article" : "website"}">`,
     `<meta property="og:site_name" content="${SITE.name}">`,
