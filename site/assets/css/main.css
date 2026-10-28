@@ -2780,6 +2780,118 @@ a.tag:hover {
   left: -9999px;
 }
 
+/* Questionnaire de satisfaction (/avis/, /en/review/) : pensé d'abord pour le téléphone */
+.avis-form {
+  display: grid;
+  gap: 22px;
+}
+.avis-form .form-status,
+.avis-form .hint {
+  margin: 0;
+}
+.avis-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+.avis-note .label,
+.avis-notes > .label {
+  margin: 0;
+  font-size: var(--fs-sm);
+  font-weight: 650;
+  color: var(--c-text);
+}
+.avis-notes {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-sm);
+}
+.avis-form .segmented {
+  align-self: flex-start;
+}
+.avis-optional {
+  font-weight: 500;
+  color: var(--c-text-3);
+}
+/* Éléments masqués du questionnaire (formulaire envoyé, bouton Google non concerné) : hidden prime sur .btn */
+.section--avis [hidden] {
+  display: none !important;
+}
+.avis-merci:focus {
+  outline: none;
+}
+.avis-merci .form-status {
+  margin-top: 16px;
+}
+
+/* Notes en étoiles : boutons radio (flèches du clavier pour changer de note), une étoile par point */
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  border-radius: 8px;
+}
+.stars input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.stars label {
+  --fill: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  color: var(--c-text-3);
+  cursor: pointer;
+}
+.stars svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--fill);
+  transition: color 0.15s var(--ease), fill 0.15s var(--ease);
+}
+.avis-note--globale .stars svg {
+  width: 34px;
+  height: 34px;
+}
+.stars input:focus-visible + label {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 1px;
+}
+.stars[aria-invalid="true"] {
+  outline: 1px solid var(--c-bad);
+  outline-offset: 2px;
+}
+/* Étoiles allumées jusqu'à la note choisie */
+.stars:has(input:nth-of-type(1):checked) label:nth-of-type(-n + 1),
+.stars:has(input:nth-of-type(2):checked) label:nth-of-type(-n + 2),
+.stars:has(input:nth-of-type(3):checked) label:nth-of-type(-n + 3),
+.stars:has(input:nth-of-type(4):checked) label:nth-of-type(-n + 4),
+.stars:has(input:nth-of-type(5):checked) label:nth-of-type(-n + 5) {
+  --fill: currentColor;
+  color: var(--c-accent);
+}
+/* Avec une souris : aperçu de la note survolée */
+@media (hover: hover) {
+  .stars:hover:has(label:hover) label:nth-of-type(n) {
+    --fill: none;
+    color: var(--c-text-3);
+  }
+  .stars:has(label:nth-of-type(1):hover) label:nth-of-type(-n + 1),
+  .stars:has(label:nth-of-type(2):hover) label:nth-of-type(-n + 2),
+  .stars:has(label:nth-of-type(3):hover) label:nth-of-type(-n + 3),
+  .stars:has(label:nth-of-type(4):hover) label:nth-of-type(-n + 4),
+  .stars:has(label:nth-of-type(5):hover) label:nth-of-type(-n + 5) {
+    --fill: currentColor;
+    color: var(--c-accent);
+  }
+}
+
 /* Panneaux d'outils */
 .tool {
   display: grid;

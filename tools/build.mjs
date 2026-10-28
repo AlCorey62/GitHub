@@ -117,9 +117,10 @@ function head(cfg, ctx) {
   const { root, url, v, t } = ctx;
   const isHome = url === "/" || url === "/en/";
   const title = isHome ? `${SITE.name} | ${t.homeTitle}` : `${cfg.title} | ${SITE.name}`;
-  // Correspondance entre les deux langues (hreflang), pour les pages indexées
+  // Correspondance entre les deux langues (hreflang), pour les pages indexées et les pages non indexées
+  // qui le demandent ("hreflang": true, par exemple le questionnaire de satisfaction)
   const alternates = [];
-  if (!cfg.noindex && !cfg.absoluteRoot && ctx.alt) {
+  if ((!cfg.noindex || cfg.hreflang) && !cfg.absoluteRoot && ctx.alt) {
     const fr = ctx.lang === "fr" ? url : ctx.alt;
     const en = ctx.lang === "en" ? url : ctx.alt;
     alternates.push(
@@ -135,7 +136,7 @@ function head(cfg, ctx) {
     `<meta name="viewport" content="width=device-width, initial-scale=1${cfg.manifest ? ", viewport-fit=cover" : ""}">`,
     `<title>${esc(title)}</title>`,
     `<meta name="description" content="${esc(cfg.description)}">`,
-    cfg.noindex ? `<meta name="robots" content="noindex, follow">` : `<link rel="canonical" href="${canonical}">`,
+    cfg.noindex ? `<meta name="robots" content="noindex, ${cfg.nofollow ? "nofollow" : "follow"}">` : `<link rel="canonical" href="${canonical}">`,
     cfg.noindex ? "" : `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">`,
     ...alternates,
     cfg.noindex || cfg.absoluteRoot ? "" : `<link rel="alternate" type="text/markdown" href="index.html.md" title="${t.markdown}">`,
