@@ -27,8 +27,15 @@ export default async (req, context) => {
   const cle = (process.env.RESULTATS_CLE || "").trim();
   const jeton = (process.env.RESULTATS_NETLIFY_TOKEN || "").trim();
   const site = context?.site?.id || process.env.SITE_ID;
-  if (cle.length < 24 || !jeton || !site) {
-    return repondre(503, { erreur: "Page de résultats non configurée : variables RESULTATS_CLE et RESULTATS_NETLIFY_TOKEN à créer sur Netlify." });
+  // Ce qui manque est nommé (jamais les valeurs), pour corriger la configuration sans deviner
+  const manque = [
+    !cle && "variable RESULTATS_CLE introuvable",
+    cle && cle.length < 24 && "clé RESULTATS_CLE trop courte (24 caractères au moins)",
+    !jeton && "variable RESULTATS_NETLIFY_TOKEN introuvable",
+    !site && "numéro du site Netlify introuvable",
+  ].filter(Boolean);
+  if (manque.length) {
+    return repondre(503, { erreur: `Page de résultats non configurée : ${manque.join(", ")}. Vérifier sur Netlify la portée Functions, le contexte Production, puis remettre le site en ligne.` });
   }
   const recue = (req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "").trim();
   if (!recue || !memeCle(recue, cle)) {
