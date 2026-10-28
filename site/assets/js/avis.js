@@ -5,7 +5,8 @@
 // Les boutons radio (étoiles, recommandation) n'ont pas de name dans la page : Netlify nommerait chaque groupe
 // d'après le libellé de son premier bouton (« 1 sur 5 », « Oui »), et les notes se confondraient dans l'e-mail.
 // Le script leur donne un name de travail (ui_…), jamais envoyé, et remplit les champs lisibles « notes »
-// (une ligne par critère) et « recommandation ».
+// (une ligne par critère) et « recommandation », ainsi que « valeurs » (les mêmes en chiffres, pour la page
+// privée des résultats : note_globale=4; note_reactivite=5; recommandation=oui).
 
 const form = document.querySelector("form[data-avis]");
 const merci = document.querySelector("[data-avis-merci]");
@@ -105,6 +106,7 @@ if (form && merci) {
     form.elements.notes.value = resumeNotes();
     const reco = form.querySelector("input[data-groupe='recommandation']:checked");
     form.elements.recommandation.value = reco ? reco.dataset.libelle : "";
+    form.elements.valeurs.value = [...valeursNotes(), ...(reco ? [`recommandation=${reco.value}`] : [])].join("; ");
     // Les boutons radio (name ui_…) ne sont pas envoyés : leurs valeurs sont dans « notes » et « recommandation »
     const data = [...new FormData(form)].filter(([name]) => !name.startsWith("ui_"));
     const commentaire = String(new Map(data).get("commentaire_public") || "").trim();
@@ -149,6 +151,15 @@ if (form && merci) {
         return `${titre}${T.sep}${note ? `${note.value}/5` : T.notRated}`;
       })
       .join("\n");
+  }
+
+  // Notes données, en chiffres : « note_globale=4 », « note_reactivite=5 »…
+  function valeursNotes() {
+    return [...form.querySelectorAll(".stars")]
+      .filter((groupe) => !groupe.closest("[hidden]"))
+      .map((groupe) => groupe.querySelector("input:checked"))
+      .filter(Boolean)
+      .map((note) => `${note.dataset.groupe}=${note.value}`);
   }
 }
 
