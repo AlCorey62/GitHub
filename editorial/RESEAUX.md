@@ -14,7 +14,7 @@ Depuis le 27/10/2026, c'est une tâche programmée Claude, du lundi au vendredi 
 | Réseau | État | Secrets GitHub |
 |---|---|---|
 | Facebook | Prêt, jeton de la page créé le 20/10/2026 | `FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_TOKEN` |
-| LinkedIn | Accès accordé le 27/10/2026, jeton vérifié le 28/10/2026 ; publication automatique à partir du 9/11/2026 | `LINKEDIN_ORG_ID`, `LINKEDIN_REFRESH_TOKEN`, `LINKEDIN_CLIENT_ID`, `LINKEDIN_CLIENT_SECRET`, `LINKEDIN_TOKEN` (secours) |
+| LinkedIn | Accès accordé le 27/10/2026, jeton vérifié le 28/10/2026 ; publication automatique à partir du 9/11/2026 | `LINKEDIN_REFRESH_TOKEN`, `LINKEDIN_CLIENT_ID`, `LINKEDIN_CLIENT_SECRET`, `LINKEDIN_TOKEN` (secours) ; page n° 11049000 en clair dans la tâche |
 
 Tant qu'un réseau n'a pas ses secrets, la tâche l'ignore sans erreur : on publie alors à la main (planification de la page LinkedIn, Meta Business Suite).
 
@@ -113,12 +113,11 @@ Le script obtient lui-même un jeton d'accès neuf à chaque passage grâce au j
    - LinkedIn affiche deux jetons : le jeton d'accès (*access token*) et le jeton de renouvellement (*refresh token*). Les garder sous la main jusqu'à l'étape 4.
 
    Chaque nouvelle création rend les jetons précédents invalides : ne créer qu'une seule fois, puis passer directement à l'étape 4.
-3. Numéro de la page : ouvrir la page LinkedIn Dark Side Energy en vue administrateur. L'adresse est de la forme `https://www.linkedin.com/company/123456789/admin/…` : le nombre est le numéro de la page.
+3. Numéro de la page : 11049000 (adresse d'administration https://www.linkedin.com/company/11049000/admin/). Il est public et écrit en clair dans `.github/workflows/diffusion.yml` : rien à faire.
 4. Sur GitHub, dépôt `AlCorey62/GitHub`, **Settings** > **Secrets and variables** > **Actions**, créer ou mettre à jour (**Update**) :
    - `LINKEDIN_REFRESH_TOKEN` : le jeton de renouvellement ;
    - `LINKEDIN_TOKEN` : le jeton d'accès (secours) ;
-   - `LINKEDIN_CLIENT_ID` et `LINKEDIN_CLIENT_SECRET` : relevés à l'étape 1 (une seule fois) ;
-   - `LINKEDIN_ORG_ID` : le numéro de la page (une seule fois).
+   - `LINKEDIN_CLIENT_ID` et `LINKEDIN_CLIENT_SECRET` : relevés à l'étape 1 (une seule fois).
 5. Essai sans rien publier : onglet **Actions** > **Diffusion réseaux sociaux** > **Run workflow**, mode « verifier ». La tâche doit finir en vert et afficher « jeton renouvelé automatiquement », le nombre de jours de validité restants du jeton de renouvellement et la dernière publication de la page Dark Side Energy.
 
 Un mois avant l'expiration du jeton de renouvellement, la tâche affiche un avertissement : refaire alors les étapes 2, 4 et 5.
