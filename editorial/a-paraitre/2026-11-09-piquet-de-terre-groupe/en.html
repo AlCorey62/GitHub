@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--page
+{
+  "path": "en/did-you-know/generator-earth-rod/",
+  "title": "The earth rod next to the generator: what is it for?",
+  "description": "Neutral reference in TN-S, fault current path in TT: the role of a generator's earth rod, the value to meet and how to measure it.",
+  "nav": "news",
+  "type": "article",
+  "article": {
+    "date": "2026-11-09",
+    "readingTime": "3 min",
+    "excerpt": "On a generator, the earth rod does not play the same role in every earthing system: a reference in TN-S, the fault current path in TT. Either way, it is measured.",
+    "kind": "Did you know?"
+  },
+  "breadcrumb": [
+    [
+      "Did you know?",
+      "did-you-know/"
+    ],
+    [
+      "The earth rod next to the generator: what is it for?"
+    ]
+  ],
+  "updated": "2026-11-09",
+  "lang": "en",
+  "alternate": "/news/piquet-de-terre-groupe/"
+}
+-->
+<!-- head:start -->
+<!-- head:end -->
+</head>
+<body>
+<!-- header:start -->
+<!-- header:end -->
+
+<main id="contenu">
+
+  <section class="page-hero">
+    <div class="container container--narrow">
+      <!-- breadcrumb:start -->
+<!-- breadcrumb:end -->
+      <p class="eyebrow">Did you know?</p>
+      <h1>The earth rod next to the generator: what is it for?</h1>
+      <p class="post-meta"><time datetime="2026-11-09">9 November 2026</time><span>3 min read</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <aside class="takeaways" aria-label="Key points">
+        <p class="eyebrow">Key points</p>
+        <ul class="check-list">
+          <li>The rod connects the installation supplied by the generator to the ground: its role depends on the earthing system chosen.</li>
+          <li>In TN-S, it is a reference and the fault current returns through the protective conductor. In TT, it is on the fault current path and its resistance must allow the RCD to trip.</li>
+          <li>An earth rod is measured, with an earth resistance tester.</li>
+        </ul>
+      </aside>
+      <article class="prose">
+<p>A <a href="../../glossary/#groupe-electrogene">generator</a> is a stand-alone source: nothing connects its neutral to the ground unless this is planned. Around it, at an event, metal structures, barriers or the installation of a nearby building are in contact with the ground. The <a href="../../glossary/#prise-de-terre">earth electrode</a>, made of one or more rods driven into the ground, gives the installation the same reference: the potential of the ground where the public and the crews stand.</p>
+<h2>Two roles, depending on the system</h2>
+<p>The earthing system is chosen at the design stage, and the rod does not play the same role in each.</p>
+<ul>
+<li><strong>In TN-S</strong>, the generator neutral is connected to its frame and to the protective conductor (PE), and the rod connects this point to the ground. According to the IET (Institution of Engineering and Technology, United Kingdom), this rod does not turn the installation into TT: it remains TN-S, with a neutral referenced to earth. In the event of a fault, the current returns to the generator through the protective conductor, not through the ground.</li>
+<li><strong>In TT</strong>, the exposed metal parts of the equipment are connected to their own earth electrode. The fault current flows through the ground back to the source: too weak to trip a circuit breaker, it is detected by the <a href="../../glossary/#differentiel-30-ma">RCD</a>. The earth electrode resistance must then stay low enough for the RCD to trip before a dangerous voltage appears on the metal parts.</li>
+</ul>
+<h2>What value to aim for?</h2>
+<p>In TT, the rule reads RA × IΔn ≤ 50 V: the earth electrode resistance (RA) multiplied by the RCD rated residual current (IΔn) must not exceed 50 V, the permitted touch voltage. In France, this is the rule of the NF C 15-100 standard. The Swiss Federal Inspectorate for Heavy Current Installations (ESTI) derives these maximum values from it:</p>
+<div class="table-wrap">
+<table class="table">
+<thead><tr><th scope="col">RCD rated residual current</th><th scope="col">30 mA</th><th scope="col">300 mA</th></tr></thead>
+<tbody><tr><th scope="row">Maximum earth resistance</th><td>1,650 Ω</td><td>165 Ω</td></tr></tbody>
+</table>
+</div>
+<p>In TN-S, the rod is not there to make a protective device trip: the IET states that its resistance should ideally stay below 200 Ω.</p>
+<h2>An earth rod is measured</h2>
+<p>The resistance of an earth electrode depends mainly on the ground: its nature, moisture and temperature. It is measured with an earth resistance tester; the IET points out that an earth fault loop impedance tester is not suitable for a reference earth.</p>
+<p>And when equipment supplied from different generators is used side by side, the IET recommends interconnecting the main earthing terminals of the generators.</p>
+<blockquote>An earth rod is not driven in for show: its role depends on the earthing system, and its value is measured.</blockquote>
+<p>The earthing system of an installation supplied by generators is decided upfront: this is the work of our <a href="../../engineering/">engineering office</a>.</p>
+      </article>
+      <div class="note note--info" style="margin-top:40px">
+        <svg data-icon="plug"></svg>
+        <div><p>A project running on generators? The power assessment works out the power to plan for from the list of your equipment.</p><p><a class="link-arrow" href="../../power-assessment/">Do a power assessment<svg data-icon="arrow-right"></svg></a></p></div>
+      </div>
+      <nav class="post-nav" aria-label="Articles"></nav>
+    </div>
+  </section>
+
+  <!-- cta:start -->
+<!-- cta:end -->
+
+</main>
+
+<!-- footer:start -->
+<!-- footer:end -->
+</body>
+</html>

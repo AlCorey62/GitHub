@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<!--page
+{
+  "path": "news/piquet-de-terre-groupe/",
+  "title": "Le piquet de terre près du groupe électrogène : à quoi sert-il ?",
+  "description": "Référence du neutre en TN-S, chemin du courant de défaut en TT : le rôle du piquet de terre d'un groupe électrogène, la valeur à respecter et sa mesure.",
+  "nav": "news",
+  "type": "article",
+  "article": {
+    "date": "2026-11-09",
+    "readingTime": "3 min",
+    "excerpt": "Sur un groupe électrogène, le piquet de terre n'a pas le même rôle selon le schéma : référence en TN-S, chemin du courant de défaut en TT. Et dans les deux cas, il se mesure.",
+    "kind": "Le sais-tu ?"
+  },
+  "breadcrumb": [
+    [
+      "Le sais-tu ?",
+      "news/"
+    ],
+    [
+      "Le piquet de terre près du groupe électrogène : à quoi sert-il ?"
+    ]
+  ],
+  "updated": "2026-11-09"
+}
+-->
+<!-- head:start -->
+<!-- head:end -->
+</head>
+<body>
+<!-- header:start -->
+<!-- header:end -->
+
+<main id="contenu">
+
+  <section class="page-hero">
+    <div class="container container--narrow">
+      <!-- breadcrumb:start -->
+<!-- breadcrumb:end -->
+      <p class="eyebrow">Le sais-tu ?</p>
+      <h1>Le piquet de terre près du groupe électrogène : à quoi sert-il ?</h1>
+      <p class="post-meta"><time datetime="2026-11-09">9 novembre 2026</time><span>3 min de lecture</span></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <aside class="takeaways" aria-label="À retenir">
+        <p class="eyebrow">À retenir</p>
+        <ul class="check-list">
+          <li>Le piquet relie au sol l'installation alimentée par le groupe : son rôle dépend du schéma de liaison à la terre choisi.</li>
+          <li>En TN-S, il sert de référence et le courant de défaut revient par le conducteur de protection. En TT, il est sur le chemin du courant de défaut et sa résistance doit permettre au différentiel de couper.</li>
+          <li>Un piquet de terre se mesure, avec un appareil de mesure de résistance de terre.</li>
+        </ul>
+      </aside>
+      <article class="prose">
+<p>Un <a href="../../lexique/#groupe-electrogene">groupe électrogène</a> est une source autonome : rien ne relie son neutre au sol, sauf si on le prévoit. Autour de lui, sur un événement, les structures métalliques, les barrières ou l'installation d'un bâtiment voisin sont en contact avec le sol. La <a href="../../lexique/#prise-de-terre">prise de terre</a>, réalisée par un ou plusieurs piquets enfoncés dans le sol, donne à l'installation la même référence : le potentiel du sol où se tiennent le public et les équipes.</p>
+<h2>Deux rôles selon le schéma</h2>
+<p>Le schéma de liaison à la terre se choisit à l'étude, et le piquet n'y joue pas le même rôle.</p>
+<ul>
+<li><strong>En TN-S</strong>, le neutre du groupe est relié à sa carcasse et au conducteur de protection (PE), et le piquet relie ce point au sol. Selon l'IET (Institution of Engineering and Technology, au Royaume-Uni), ce piquet ne fait pas passer l'installation en TT : elle reste en TN-S, avec un neutre référencé à la terre. En cas de défaut, le courant revient au groupe par le conducteur de protection, pas par le sol.</li>
+<li><strong>En TT</strong>, les masses des appareils sont reliées à leur propre prise de terre. Le courant de défaut traverse le sol pour revenir à la source : trop faible pour faire déclencher un disjoncteur, il est détecté par le <a href="../../lexique/#differentiel-30-ma">différentiel</a>. La résistance de la prise de terre doit alors rester assez basse pour que le différentiel coupe avant qu'une tension dangereuse n'apparaisse sur les masses.</li>
+</ul>
+<h2>Quelle valeur viser ?</h2>
+<p>En TT, la règle s'écrit RA × IΔn ≤ 50 V : la résistance de la prise de terre (RA) multipliée par la sensibilité du différentiel (IΔn) ne doit pas dépasser 50 V, la tension de contact admise. En France, c'est la règle de la NF C 15-100. L'inspection fédérale suisse des installations à courant fort (ESTI) en tire ces valeurs maximales :</p>
+<div class="table-wrap">
+<table class="table">
+<thead><tr><th scope="col">Sensibilité du différentiel</th><th scope="col">30 mA</th><th scope="col">300 mA</th></tr></thead>
+<tbody><tr><th scope="row">Résistance de terre maximale</th><td>1 650 Ω</td><td>165 Ω</td></tr></tbody>
+</table>
+</div>
+<p>En TN-S, le piquet ne sert pas à faire couper une protection : l'IET indique que sa résistance devrait idéalement rester sous 200 Ω.</p>
+<h2>Un piquet se mesure</h2>
+<p>La résistance d'une prise de terre dépend surtout du sol : sa nature, son humidité, sa température. Elle se mesure avec un appareil de mesure de résistance de terre ; l'IET précise qu'un appareil de mesure d'impédance de boucle ne convient pas pour une terre de référence.</p>
+<p>Et quand des appareils alimentés par des groupes différents sont utilisés côte à côte, l'IET recommande de relier entre elles les bornes principales de terre des groupes.</p>
+<blockquote>Un piquet de terre ne se plante pas pour la forme : son rôle dépend du schéma, et sa valeur se mesure.</blockquote>
+<p>Le schéma de liaison à la terre d'une installation sur groupe se décide en amont : c'est le travail de notre <a href="../../bureaudetude/">bureau d'étude</a>.</p>
+      </article>
+      <div class="note note--info" style="margin-top:40px">
+        <svg data-icon="plug"></svg>
+        <div><p>Un projet sur groupe électrogène ? Le bilan de puissance calcule la puissance à prévoir à partir de la liste de vos appareils.</p><p><a class="link-arrow" href="../../bilan-de-puissance/">Faire un bilan de puissance<svg data-icon="arrow-right"></svg></a></p></div>
+      </div>
+      <nav class="post-nav" aria-label="Articles"></nav>
+    </div>
+  </section>
+
+  <!-- cta:start -->
+<!-- cta:end -->
+
+</main>
+
+<!-- footer:start -->
+<!-- footer:end -->
+</body>
+</html>
