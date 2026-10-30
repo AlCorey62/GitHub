@@ -36,11 +36,11 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : à quoi il sert (RA × IΔn ≤ 50 V) **à vérifier** : TT ou TN-S selon la liaison du neutre du groupe (IET Wiring Matters 2011), pour ne pas contredire l'article « TT ou TN » (en attente) | prévu |
-| Mar 10/11 | Cas terrain n° 2 (site) | Selon `anecdotes.md` ; à défaut : Powerlock, pourquoi on branche la terre en premier **à valider** : ordre de connexion pratiqué par nos équipes | prévu |
+| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : référence en TN-S (IET Wiring Matters 2011), chemin du courant de défaut en TT (RA × IΔn ≤ 50 V, valeurs ESTI), mesure ; cohérent avec l'article « TT ou TN » en attente | rédigé |
+| Mar 10/11 | Le sais-tu ? (site, aucune anecdote disponible) | Powerlock : pourquoi brancher la terre en premier (terre, neutre, L1, L2, L3 ; débranchement dans l'ordre inverse) | rédigé |
 | Mer 11/11 | (férié) | Pas de publication | |
-| Jeu 12/11 | Calculette | Réseaux étrangers : les mêmes kilowatts ne font pas les mêmes ampères en 120/208 V | prévu |
-| Ven 13/11 | Coulisses | Parc de groupes électrogènes de nuit, mât d'éclairage | prévu |
+| Jeu 12/11 | Calculette | Réseaux étrangers : 30 kW triphasé, 48,11 A en 400 V, 92,52 A en 208 V | rédigé |
+| Ven 13/11 | Coulisses | Parc de groupes électrogènes de nuit, mât d'éclairage (photo floutée) | rédigé |
 
 ## Semaine du 16 novembre 2026
 
