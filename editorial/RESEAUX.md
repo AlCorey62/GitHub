@@ -10,6 +10,7 @@ Depuis le 27/10/2026, c'est une tâche programmée Claude, du lundi au vendredi 
 - Chaque envoi est noté dans `semaines/AAAA-MM-JJ/diffusion.json` : rien n'est publié deux fois, même avec les passages de secours.
 - Publication en plus du programme : section `## Jour JJ/MM · Hors programme · …` dans `publications.md` de la semaine (une seule par jour, ajoutée et validée par Damien), avec son visuel. Elle ne part qu'à la demande : onglet *Actions*, « Diffusion réseaux sociaux », *Run workflow*, mode « hors-programme ». Elle est publiée sur Facebook et sur LinkedIn, même avant le 9/11/2026, et notée à part dans le journal (« AAAA-MM-JJ hors programme »).
 - En cas d'échec, GitHub prévient par e-mail. La publication peut alors être relancée à la main (onglet *Actions*, « Diffusion réseaux sociaux », *Run workflow*, mode « publier »).
+- Rattrapage d'un jour passé (par exemple quand l'article n'était pas en ligne ce jour-là) : même lancement à la main, mode « publier », en indiquant la date du jour à rattraper (AAAA-MM-JJ) dans le champ « date ». Le journal empêche tout doublon.
 - Les accès sont rangés dans les secrets du dépôt GitHub. Ils ne sont jamais écrits dans le dépôt, ni envoyés par e-mail ou dans une conversation.
 
 | Réseau | État | Secrets GitHub |
