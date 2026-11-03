@@ -34,6 +34,8 @@ Pour résumer, le monophasé alimente les appareils, le triphasé alimente l'ins
 
 > Ce n'est pas la puissance totale qui dimensionne la source, c'est la phase la plus chargée.
 
+Répartir les charges entre les phases fait partie de notre métier : la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique).
+
 Listez vos appareils : l'outil répartit les lignes monophasées sur les trois phases et calcule le courant de chacune.
 
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance)

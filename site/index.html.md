@@ -154,23 +154,23 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
+Le sais-tu ? · 3 novembre 2026 · 3 min
+
+### [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
+
+Enroulé, un câble n'évacue plus sa chaleur : en trois couches sur son touret, un 3G2,5 ne tient plus les 16 A de sa prise.
+
+Le sais-tu ? · 2 novembre 2026 · 3 min
+
+### [Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
+
+Peu chargé, un groupe diesel reste froid, brûle mal son gasoil et s'encrasse : le remède se décide au bilan de puissance.
+
 Le sais-tu ? · 27 octobre 2026 · 2 min
 
 ### [Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/news/lire-une-prise-p17/)
 
 Couleur, broches et détrompeur : la tension et le réseau d'une prise P17 se lisent d'un coup d'œil.
-
-Le sais-tu ? · 26 octobre 2026 · 3 min
-
-### [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/news/led-et-differentiel/)
-
-Les fuites des drivers de LED s'additionnent sur un même différentiel. La parade : répartir les circuits.
-
-Le sais-tu ? · 2 min
-
-### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
-
-Puissance active, puissance apparente et cos φ : pourquoi les groupes et les raccordements se comptent en kVA.
 
 ## Un projet ? Parlons puissance.
 

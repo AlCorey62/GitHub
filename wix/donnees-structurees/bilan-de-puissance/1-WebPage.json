@@ -3,7 +3,7 @@
   "@type": "WebPage",
   "@id": "https://www.darkside-energy.com/bilan-de-puissance#webpage",
   "url": "https://www.darkside-energy.com/bilan-de-puissance",
-  "name": "Bilan de puissance en ligne",
+  "name": "Bilan de puissance événementiel en ligne",
   "description": "Bilan de puissance en ligne : puissance foisonnée, courant par phase, calibre et source indicatifs. Démo libre, accès complet réservé à nos clients.",
   "inLanguage": "fr-FR",
   "isPartOf": {
@@ -27,7 +27,7 @@
     "logo": "{{URL_WIX:logo-dark-side-energy.png}}"
   },
   "primaryImageOfPage": "{{URL_WIX:og-image.png}}",
-  "dateModified": "2026-09-25",
+  "dateModified": "2026-10-28",
   "breadcrumb": {
     "@id": "https://www.darkside-energy.com/bilan-de-puissance#breadcrumb"
   }

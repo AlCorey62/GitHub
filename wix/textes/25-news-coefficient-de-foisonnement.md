@@ -28,6 +28,8 @@ Pour résumer, la puissance installée dit ce que vous branchez, la puissance fo
 
 > On ne dimensionne pas pour tout ce qui est branché, mais pour ce qui fonctionne en même temps.
 
+Pour appliquer le foisonnement à votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude).
+
 Listez vos appareils et appliquez un foisonnement à chaque ligne : l'outil calcule la puissance à prévoir.
 
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance)

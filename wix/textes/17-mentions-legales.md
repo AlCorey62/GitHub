@@ -43,6 +43,8 @@ Les informations que Dark Side Energy est susceptible de réunir résultent de l
 
 **Comptes clients du bilan de puissance** : ouverts sur invitation de Dark Side Energy. L'adresse e-mail et le mot de passe du client, jamais stocké en clair, sont gérés par le service d'authentification de l'hébergeur du site (Netlify Identity), qui agit en qualité de sous-traitant. Finalité : donner accès à la version complète de l'outil. Conservation : tant que le compte est actif ; il est supprimé sur simple demande.
 
+**Questionnaire de satisfaction** : données collectées : nom, structure, événement, notes et commentaires. Finalité : améliorer nos prestations. Base légale : notre intérêt légitime à mesurer la satisfaction de nos clients. Destinataires et hébergement : comme pour le formulaire de contact (Netlify). Durée de conservation : le temps nécessaire à la réalisation de l'objectif de l'enquête, ou jusqu'à l'exercice de votre droit d'opposition, conformément au référentiel de la CNIL relatif à la gestion des activités commerciales.
+
 Conformément au règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité de vos données, du droit de retirer votre consentement à tout moment et du droit de définir des directives relatives au sort de vos données après votre décès. Pour exercer ces droits, il vous suffit de nous contacter par e-mail : [damien@darkside-energy.com](mailto:damien@darkside-energy.com). Vous pouvez également adresser une réclamation à la CNIL ([www.cnil.fr](https://www.cnil.fr/)).
 
 ## Cookies et stockage local

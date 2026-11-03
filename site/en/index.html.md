@@ -154,23 +154,23 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
+Did you know? · 3 November 2026 · 3 min
+
+### [Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
+
+Wound on a drum, a cable can no longer shed its heat: with three layers left, a 3G2.5 can no longer carry the 16 A of its socket.
+
+Did you know? · 2 November 2026 · 3 min
+
+### [Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
+
+Lightly loaded, a diesel generator stays cold, burns its fuel poorly and fouls up: the cure is decided at the power assessment stage.
+
 Did you know? · 27 October 2026 · 2 min
 
 ### [Blue, red, yellow: how do you read a P17 socket?](https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/)
 
 Colour, pins and keying: the voltage and supply type of a P17 socket can be read at a glance.
-
-Did you know? · 26 October 2026 · 3 min
-
-### [Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
-
-Leakage from LED drivers adds up on a single RCD. The fix: split the circuits.
-
-Did you know? · 2 min
-
-### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
-
-Active power, apparent power and cos φ: why generators and grid connections are rated in kVA.
 
 ## A project? Let's talk power.
 

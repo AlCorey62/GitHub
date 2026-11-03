@@ -28,6 +28,8 @@ Pour savoir ce que vos appareils consomment, regardez les kW. Pour choisir les c
 
 > Les kW, c'est ce que vous consommez. Les kVA, c'est ce que vous devez prévoir.
 
+Pour dimensionner les sources de votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude).
+
 Convertissez vos kW en kVA et en ampères, en monophasé ou en triphasé.
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro#conversion)

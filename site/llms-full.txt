@@ -2,7 +2,7 @@
 
 > Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.
 
-Site : https://www.darkside-energy.com/ · Généré le 2026-10-28
+Site : https://www.darkside-energy.com/ · Généré le 2026-11-03
 
 ---
 
@@ -162,23 +162,23 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
+Le sais-tu ? · 3 novembre 2026 · 3 min
+
+### [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
+
+Enroulé, un câble n'évacue plus sa chaleur : en trois couches sur son touret, un 3G2,5 ne tient plus les 16 A de sa prise.
+
+Le sais-tu ? · 2 novembre 2026 · 3 min
+
+### [Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
+
+Peu chargé, un groupe diesel reste froid, brûle mal son gasoil et s'encrasse : le remède se décide au bilan de puissance.
+
 Le sais-tu ? · 27 octobre 2026 · 2 min
 
 ### [Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/news/lire-une-prise-p17/)
 
 Couleur, broches et détrompeur : la tension et le réseau d'une prise P17 se lisent d'un coup d'œil.
-
-Le sais-tu ? · 26 octobre 2026 · 3 min
-
-### [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/news/led-et-differentiel/)
-
-Les fuites des drivers de LED s'additionnent sur un même différentiel. La parade : répartir les circuits.
-
-Le sais-tu ? · 2 min
-
-### [kVA ou kW : quelle différence ?](https://www.darkside-energy.com/news/kva-ou-kw/)
-
-Puissance active, puissance apparente et cos φ : pourquoi les groupes et les raccordements se comptent en kVA.
 
 ## Un projet ? Parlons puissance.
 
@@ -959,6 +959,18 @@ Beaucoup de calculs expliquent l'électricité, mais le but de ces articles est 
 
 ## Comprendre avant de brancher.
 
+Le sais-tu ? · 3 novembre 2026 · 3 min
+
+### [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
+
+Enroulé, un câble n'évacue plus sa chaleur : en trois couches sur son touret, un 3G2,5 ne tient plus les 16 A de sa prise.
+
+Le sais-tu ? · 2 novembre 2026 · 3 min
+
+### [Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
+
+Peu chargé, un groupe diesel reste froid, brûle mal son gasoil et s'encrasse : le remède se décide au bilan de puissance.
+
 Le sais-tu ? · 27 octobre 2026 · 2 min
 
 ### [Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/news/lire-une-prise-p17/)
@@ -1042,6 +1054,122 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 ---
 
+# Câble sur touret : pourquoi le dérouler entièrement ?
+
+> Enroulé, un câble n'évacue plus sa chaleur : coefficients de réduction selon le nombre de couches, exemple chiffré et bons réflexes sur un événement.
+
+Source : https://www.darkside-energy.com/news/cable-sur-touret/ · Dark Side Energy · Mise à jour : 2026-11-03
+
+3 novembre 2026 · 3 min de lecture
+
+- Un câble enroulé n'évacue plus sa chaleur : le point le plus chaud est au cœur du touret, invisible de l'extérieur.
+- Sur son touret, un câble perd une grande part de sa capacité : 20 % avec une seule couche, environ la moitié avec trois couches.
+- Dès que la puissance est importante, on déroule entièrement le câble : la protection de la prise ne protège pas un câble resté enroulé.
+
+Un câble qui transporte du courant chauffe toujours un peu : c'est l'effet Joule. Déroulé, il évacue cette chaleur dans l'air. Enroulé sur un touret ou un enrouleur, les spires se chauffent les unes les autres et la chaleur s'accumule. Le point le plus chaud se trouve à l'intérieur du tambour, entre les premières couches : là où on ne le voit pas.
+
+L'isolant peut alors ramollir, puis fondre : court-circuit, départ de feu, ou conducteur de protection mis sous tension. Et les dégâts n'apparaissent parfois qu'au déroulage.
+
+## Combien de capacité perdue ?
+
+La norme allemande DIN VDE 0298-4, reprise par les fabricants de câbles, donne le coefficient à appliquer à l'intensité admissible du câble déroulé :
+
+| Couches sur le touret | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- |
+| Coefficient | 0,80 | 0,61 | 0,49 | 0,42 | 0,38 |
+
+Tant qu'il reste une seule couche sur le tambour, le câble perd déjà 20 % de sa capacité.
+
+## Un exemple
+
+Un câble H07RN-F 3G2,5, la section de nos câbles 16 A, supporte 26 A déroulé, à l'air libre et à 30 °C. Laissé en trois couches sur son touret, il ne supporte plus que 26 × 0,49 ≈ 12,7 A : moins que les 16 A de la prise qui l'alimente. Un appareil qui tire 16 A ne fait pas déclencher le disjoncteur de 16 A, mais il fait chauffer ce câble au-delà de sa limite.
+
+Les fabricants le signalent : la fiche d'un enrouleur professionnel de 25 m en 3G2,5 indique 1 000 W câble enroulé, contre 3 500 W câble déroulé. Si l'enrouleur a une protection thermique et qu'elle déclenche, on ne réarme pas : on déroule.
+
+## Les bons réflexes
+
+- Dérouler entièrement le câble dès que la puissance est importante, et le poser de façon à ne faire trébucher personne.
+- Ne pas le laisser en tas serré : il chauffe pour la même raison.
+- Respecter les puissances indiquées par le fabricant sur l'enrouleur.
+- Un touret chaud ou une odeur de caoutchouc chauffé : on coupe, puis on déroule.
+
+> Un câble resté sur son touret ne tient pas l'intensité de sa prise : on le déroule avant de le charger.
+
+Dérouler les câbles avant de les charger fait partie de notre métier : la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique/).
+
+Quelle prise et quel câble pour votre appareil ? La calculette les indique, avec la chute de tension sur la longueur.
+
+[Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#conversion)
+
+[Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
+
+## Un projet ? Parlons puissance.
+
+Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
+
+[Demander un devis](https://www.darkside-energy.com/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
+# Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?
+
+> Peu chargé, un groupe diesel reste froid, brûle mal son gasoil et s'encrasse : ce qui se passe dans le moteur, à partir de quelle charge, et les remèdes.
+
+Source : https://www.darkside-energy.com/news/groupe-en-sous-charge/ · Dark Side Energy · Mise à jour : 2026-11-02
+
+2 novembre 2026 · 3 min de lecture
+
+- Un groupe diesel est conçu pour travailler chargé : longtemps presque à vide, il reste froid, brûle mal son gasoil et s'encrasse.
+- Le seuil dépend du constructeur : le plus souvent 30 % de la puissance du groupe, de 20 à 60 % selon les modèles.
+- Le meilleur remède se décide au bilan de puissance : un groupe à la bonne taille. Sinon, des groupes qu'on arrête selon la charge, une batterie ou un banc de charge.
+
+Sur un événement, la puissance appelée varie beaucoup : forte pendant le spectacle ou les heures d'ouverture, faible la nuit ou pendant le montage. Un [groupe électrogène](https://www.darkside-energy.com/lexique/#groupe-electrogene) diesel supporte mal ces longues heures presque à vide.
+
+## Ce qui se passe dans le moteur
+
+Peu chargé, le moteur reste trop froid : le gasoil ne brûle pas complètement. Du gasoil imbrûlé et de la suie se déposent dans l'échappement, puis suintent, noirs et huileux, aux raccords : c'est ce que les constructeurs appellent le « wet stacking ». Les dépôts encrassent aussi les soupapes, les pistons, le turbo et les injecteurs, le gasoil dilue l'huile et la consommation d'huile augmente. Dans les cas extrêmes, les parois des cylindres se lustrent.
+
+Ce n'est pas une panne immédiate, mais un signal : à la longue, le moteur s'use plus vite.
+
+## À partir de quelle charge ?
+
+Il n'y a pas de seuil unique. Le chiffre le plus cité par les constructeurs est 30 % de la puissance du groupe : en dessous, il ne faut pas tourner longtemps. Certains descendent à 20 % ; d'autres demandent plus de 60 % pour de petits groupes portables. Un constructeur indique que ses groupes de secours et de production sont conçus pour travailler entre 50 et 85 % de leur puissance.
+
+Exemple : un groupe de 160 kW qui ne débite que 24 kW la nuit tourne à 15 % de sa puissance, deux fois moins que les 30 % le plus souvent conseillés.
+
+Sur les groupes récents (Stage V) équipés d'un filtre à particules, c'est encore plus sensible : sans échappement chaud, le filtre ne se régénère pas et peut se boucher jusqu'à l'arrêt du groupe.
+
+## Les remèdes
+
+- **Dimensionner juste** : un groupe choisi pour la pointe, ou « au cas où », passe l'essentiel du temps très peu chargé. D'où l'intérêt d'un bilan de puissance réaliste, avec le [coefficient de foisonnement](https://www.darkside-energy.com/news/coefficient-de-foisonnement/).
+- **Plusieurs groupes** en parallèle, ou des [groupes jumelés](https://www.darkside-energy.com/news/groupe-twin-zero-coupure/), qu'on arrête selon la charge.
+- **Une batterie** qui prend la charge faible, la nuit par exemple, pendant que le groupe est arrêté.
+- **Un banc de charge**, qui ajoute une charge quand la consommation est trop faible.
+- **Arrêter le groupe** plutôt que le laisser tourner longtemps à vide.
+
+Après une longue période à faible charge, on remonte la charge progressivement, puis on fait tourner le groupe bien chargé un moment pour brûler les dépôts, selon les consignes du constructeur.
+
+> Un groupe trop gros pour sa charge ne s'use pas moins : il s'encrasse.
+
+Le juste dimensionnement des groupes fait partie de notre démarche d'[énergie responsable](https://www.darkside-energy.com/energie-responsable/).
+
+Dimensionner juste commence par le bilan de puissance : listez vos appareils, l'outil calcule la puissance à prévoir.
+
+[Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
+
+[Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
+[Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/news/lire-une-prise-p17/)
+
+## Un projet ? Parlons puissance.
+
+Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
+
+[Demander un devis](https://www.darkside-energy.com/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
 # Bleue, rouge, jaune : comment lire une prise P17 ?
 
 > Couleur, nombre de broches, position de la terre : comment reconnaître d'un coup d'œil la tension et le réseau d'une prise P17 (norme IEC 60309).
@@ -1088,6 +1216,7 @@ Quelle prise pour votre appareil ? La calculette propose la prise et le câble a
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#conversion)
 
+[Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
 [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/news/led-et-differentiel/)
 
 ## Un projet ? Parlons puissance.
@@ -2018,23 +2147,23 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
+Did you know? · 3 November 2026 · 3 min
+
+### [Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
+
+Wound on a drum, a cable can no longer shed its heat: with three layers left, a 3G2.5 can no longer carry the 16 A of its socket.
+
+Did you know? · 2 November 2026 · 3 min
+
+### [Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
+
+Lightly loaded, a diesel generator stays cold, burns its fuel poorly and fouls up: the cure is decided at the power assessment stage.
+
 Did you know? · 27 October 2026 · 2 min
 
 ### [Blue, red, yellow: how do you read a P17 socket?](https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/)
 
 Colour, pins and keying: the voltage and supply type of a P17 socket can be read at a glance.
-
-Did you know? · 26 October 2026 · 3 min
-
-### [Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
-
-Leakage from LED drivers adds up on a single RCD. The fix: split the circuits.
-
-Did you know? · 2 min
-
-### [kVA or kW: what's the difference?](https://www.darkside-energy.com/en/did-you-know/kva-vs-kw/)
-
-Active power, apparent power and cos φ: why generators and grid connections are rated in kVA.
 
 ## A project? Let's talk power.
 
@@ -2815,6 +2944,18 @@ Plenty of calculations explain electricity, but the aim of these articles is to 
 
 ## Understand before you plug in.
 
+Did you know? · 3 November 2026 · 3 min
+
+### [Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
+
+Wound on a drum, a cable can no longer shed its heat: with three layers left, a 3G2.5 can no longer carry the 16 A of its socket.
+
+Did you know? · 2 November 2026 · 3 min
+
+### [Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
+
+Lightly loaded, a diesel generator stays cold, burns its fuel poorly and fouls up: the cure is decided at the power assessment stage.
+
 Did you know? · 27 October 2026 · 2 min
 
 ### [Blue, red, yellow: how do you read a P17 socket?](https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/)
@@ -2884,6 +3025,122 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 ---
 
+# Cable on a drum: why unwind it fully?
+
+> Wound on a drum, a cable can no longer shed its heat: conversion factors by number of layers, a worked example and good practice at an event.
+
+Source: https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/ · Dark Side Energy · Updated: 2026-11-03
+
+3 November 2026 · 3 min read
+
+- A wound cable can no longer shed its heat: the hottest point is at the core of the drum, invisible from outside.
+- On its drum, a cable loses a large part of its capacity: 20% with a single layer, about half with three layers.
+- As soon as the load is significant, unwind the cable fully: the socket's protective device does not protect a cable left wound.
+
+A cable carrying current always heats up a little: this is the Joule effect. Unwound, it sheds this heat into the air. Wound on a drum or a cable reel, the turns heat each other and the heat builds up. The hottest point is inside the drum, between the first layers: where you cannot see it.
+
+The insulation can then soften, and melt: short circuit, fire, or a live protective conductor. And the damage sometimes only shows when the cable is unwound.
+
+## How much capacity is lost?
+
+The German standard DIN VDE 0298-4, used by cable manufacturers, gives the factor to apply to the current rating of the unwound cable:
+
+| Layers on the drum | 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | --- | --- |
+| Factor | 0.80 | 0.61 | 0.49 | 0.42 | 0.38 |
+
+As long as a single layer remains on the drum, the cable has already lost 20% of its capacity.
+
+## An example
+
+An H07RN-F 3G2.5 cable, the size of our 16 A cables, is rated at 26 A unwound, in free air at 30 °C. Left in three layers on its drum, it can only carry 26 × 0.49 ≈ 12.7 A: less than the 16 A of the socket supplying it. An appliance drawing 16 A will not trip the 16 A circuit breaker, but it will heat this cable beyond its limit.
+
+Manufacturers say so: the data sheet of a 25 m professional cable reel in 3G2.5 gives 1,000 W with the cable wound, against 3,500 W with the cable unwound. If the reel has a thermal cut-out and it trips, do not reset it: unwind the cable.
+
+## Good practice
+
+- Unwind the cable fully as soon as the load is significant, and lay it so that nobody trips over it.
+- Do not leave it in a tight heap: it heats up for the same reason.
+- Respect the power ratings given by the manufacturer on the reel.
+- A hot drum or a smell of hot rubber: switch off, then unwind.
+
+> A cable left on its drum cannot carry the current of its socket: unwind it before loading it.
+
+Unwinding cables before loading them is part of our core business: [event power distribution](https://www.darkside-energy.com/en/power-distribution/).
+
+Which socket and cable for your equipment? The calculator suggests them, with the voltage drop over the length.
+
+[Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
+
+[Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
+
+## A project? Let's talk power.
+
+Venue, dates, known requirements: tell us about your event and we will get back to you quickly.
+
+[Request a quote](https://www.darkside-energy.com/en/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
+# Why doesn't a generator like running almost unloaded?
+
+> Lightly loaded, a diesel generator stays cold, burns its fuel poorly and fouls up: what happens in the engine, from what load, and the cures.
+
+Source: https://www.darkside-energy.com/en/did-you-know/generator-light-load/ · Dark Side Energy · Updated: 2026-11-02
+
+2 November 2026 · 3 min read
+
+- A diesel generator is designed to work under load: run almost unloaded for long periods, it stays cold, burns its fuel poorly and fouls up.
+- The threshold depends on the manufacturer: most often 30% of the generator's rating, from 20 to 60% depending on the model.
+- The best cure is decided at the power assessment stage: a correctly sized generator. Otherwise, sets switched off according to the load, a battery or a load bank.
+
+At an event, the power demand varies a lot: high during the show or opening hours, low at night or during the build. A diesel [generator](https://www.darkside-energy.com/en/glossary/#groupe-electrogene) copes badly with these long hours almost unloaded.
+
+## What happens in the engine
+
+Lightly loaded, the engine stays too cold: the fuel does not burn completely. Unburnt fuel and soot build up in the exhaust, then seep, black and oily, from the joints: this is what manufacturers call “wet stacking”. The deposits also foul the valves, pistons, turbocharger and injectors, fuel dilutes the oil and oil consumption increases. In extreme cases, the cylinder liners become polished.
+
+It is not an immediate failure, but a warning sign: in the long run, the engine wears faster.
+
+## From what load?
+
+There is no single threshold. The figure most often given by manufacturers is 30% of the generator's rating: below it, the set should not run for long. Some go down to 20%; others require more than 60% for small portable generators. One manufacturer states that its standby and prime generator sets are designed to operate between 50 and 85% of their rating.
+
+Example: a 160 kW generator delivering only 24 kW at night runs at 15% of its rating, half the 30% most often recommended.
+
+On recent (Stage V) generators fitted with a diesel particulate filter, it matters even more: without a hot exhaust, the filter does not regenerate and can clog until the generator shuts down.
+
+## The cures
+
+- **Correct sizing**: a generator chosen for the peak, or “just in case”, spends most of its time very lightly loaded. Hence the value of a realistic power assessment, with the [diversity factor](https://www.darkside-energy.com/en/did-you-know/diversity-factor/).
+- **Several generators** in parallel, or [twin generators](https://www.darkside-energy.com/en/did-you-know/twin-generators/), switched off according to the load.
+- **A battery** that takes the low load, at night for example, while the generator is off.
+- **A load bank**, which adds load when consumption is too low.
+- **Switching the generator off** rather than leaving it running unloaded for long periods.
+
+After a long period at light load, the load is increased gradually, then the generator is run well loaded for a while to burn off the deposits, following the manufacturer's instructions.
+
+> A generator too big for its load does not wear less: it fouls up.
+
+Right-sizing generators is part of our [responsible energy](https://www.darkside-energy.com/en/responsible-energy/) approach.
+
+Correct sizing starts with the power assessment: list your equipment, the tool works out the power to plan for.
+
+[Do a power assessment](https://www.darkside-energy.com/en/power-assessment/)
+
+[Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
+[Blue, red, yellow: how do you read a P17 socket?](https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/)
+
+## A project? Let's talk power.
+
+Venue, dates, known requirements: tell us about your event and we will get back to you quickly.
+
+[Request a quote](https://www.darkside-energy.com/en/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
 # Blue, red, yellow: how do you read a P17 socket?
 
 > Colour, number of pins, earth position: how to tell the voltage and supply type of a P17 socket (IEC 60309 standard) at a glance.
@@ -2930,6 +3187,7 @@ Which socket for your equipment? The calculator suggests the right socket and ca
 
 [Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
 
+[Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
 [Why do LEDs trip RCDs?](https://www.darkside-energy.com/en/did-you-know/leds-and-rcds/)
 
 ## A project? Let's talk power.
