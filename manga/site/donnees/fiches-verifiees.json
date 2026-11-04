@@ -1,3 +1,129 @@
 {
+  "30003": {
+    "titre": "20th Century Boys",
+    "age": 14,
+    "resume": "En 1969, Kenji et ses amis d'enfance se retrouvent dans une base secrète. Ils y inventent une histoire de science-fiction où une organisation maléfique veut détruire l'humanité, et la consignent dans un « cahier des prédictions ». En 1997, Kenji, devenu gérant d'une supérette, élève sa nièce Kanna, encore bébé. Après la mort d'un ami d'enfance, il découvre qu'une secte menée par un mystérieux « Ami » réalise une à une les prédictions de leur enfance. Kenji et ses anciens camarades tentent d'empêcher la fin du monde annoncée pour le 31 décembre 2000.",
+    "themes": [
+      {
+        "titre": "Amitié d'enfance et nostalgie",
+        "texte": "Le critique Jason Thompson y voit une épopée de la nostalgie, de l'âge mûr et du rock, qu'il compare à Ça de Stephen King : des amis d'enfance se retrouvent adultes pour affronter ce qu'ils ont laissé derrière eux."
+      },
+      {
+        "titre": "Sectes et manipulation",
+        "texte": "La série aborde la propagande, la manipulation des foules, le pouvoir des sectes et les peurs de fin du monde (Wikipédia, français). Des critiques citent la secte Aum Shinrikyo comme source d'inspiration."
+      },
+      {
+        "titre": "Héroïsme ordinaire",
+        "texte": "Des gens ordinaires se retrouvent pris dans des événements qui les dépassent. Le Centre national de la littérature pour la jeunesse souligne l'héroïsme, l'émotion et une réflexion sur le monde contemporain et l'anonymat de l'individu."
+      },
+      {
+        "titre": "Terrorisme et armes biologiques",
+        "texte": "Les attentats et les attaques au virus sont au cœur de l'intrigue (Wikipédia). Le récit montre une organisation qui tire profit des catastrophes pour gagner en popularité et en pouvoir."
+      }
+    ],
+    "scenes": [
+      {
+        "categorie": "themes",
+        "titre": "Mort d'un ami d'enfance",
+        "texte": "Le point de départ est la mort d'un ami d'enfance, présentée comme un suicide (Wikipédia, anglais et français).",
+        "spoiler": false
+      },
+      {
+        "categorie": "violence",
+        "titre": "Attentats et attaques au virus",
+        "texte": "La secte réalise les prédictions : attentats à la bombe et attaques virales à San Francisco, à Londres et dans un grand aéroport japonais (Wikipédia, anglais).",
+        "spoiler": false
+      },
+      {
+        "categorie": "violence",
+        "titre": "Catastrophe de masse",
+        "texte": "Le virus est répandu à grande échelle le soir du Nouvel An 2000, puis une épidémie mondiale menace de tuer tous ceux qui ne sont pas vaccinés. Un plan prévoit d'éliminer presque toute l'humanité (Wikipédia, anglais).",
+        "spoiler": true
+      },
+      {
+        "categorie": "themes",
+        "titre": "Régime autoritaire",
+        "texte": "Dans la dernière partie, le Japon vit sous un régime qui exile les non-vaccinés et interdit les déplacements sous peine de mort ; une lycéenne subit un programme de lavage de cerveau (Wikipédia, anglais).",
+        "spoiler": true
+      },
+      {
+        "categorie": "violence",
+        "titre": "Meurtres et assassinats",
+        "texte": "Le récit comporte des meurtres, dont celui d'un mafieux par un policier corrompu, des tentatives d'assassinat et des mafias rivales (Wikipédia, anglais).",
+        "spoiler": true
+      },
+      {
+        "categorie": "sexe",
+        "titre": "Revues pornographiques",
+        "texte": "Enfants, les héros partagent dans leur base des mangas et des revues pornographiques volées (Wikipédia, anglais). Ils déchirent aussi l'affiche d'un film érotique (Wikipédia, français).",
+        "spoiler": false
+      },
+      {
+        "categorie": "peur",
+        "titre": "Suspense et horreur",
+        "texte": "Le critique Matthew Meylikhov (Paste) décrit une expérience mêlant horreur, science-fiction et futur post-apocalyptique. Le Centre national de la littérature pour la jeunesse parle d'un suspense permanent.",
+        "spoiler": false
+      }
+    ],
+    "vocabulaire": "Non renseigné par les sources consultées.",
+    "avis": "20th Century Boys est un thriller ambitieux et souvent émouvant, qui suit sur plusieurs décennies un groupe d'amis ordinaires face à une secte qui veut détruire le monde. Les sources consultées décrivent peu de scènes graphiques, mais les thèmes sont lourds : attentats, épidémies meurtrières, manipulation des foules, régime autoritaire. La narration, faite d'allers-retours entre les époques et d'un très grand nombre de personnages, demande de la maturité. L'édition française est classée seinen et l'éditeur américain la juge adaptée aux adolescents plus âgés et aux adultes. Mieux vaut avoir 14 ans pour découvrir cette série.",
+    "autres": [
+      {
+        "source": "Viz Media (éditeur américain du manga)",
+        "texte": "Classe la Perfect Edition « Teen Plus », catégorie que l'éditeur définit comme pouvant convenir aux adolescents plus âgés et aux adultes.",
+        "lien": "https://www.viz.com/read/manga/20th-century-boys-the-perfect-edition-volume-1/product/5630"
+      },
+      {
+        "source": "Centre national de la littérature pour la jeunesse (BnF), La Revue des livres pour enfants n° 325",
+        "texte": "Range la série en seinen et la retient dans son dossier manga (juin 2022) : « Héroïsme, émotion sont au rendez-vous », avec une réflexion sur le monde contemporain dans un suspense permanent. Pas d'âge indiqué.",
+        "lien": "https://cnlj.bnf.fr/sites/default/files/revues_document_joint/dossier_principales_series_325.pdf"
+      },
+      {
+        "source": "Jason Thompson, critique (cité par Wikipédia, anglais)",
+        "texte": "Bien que destinée à un public masculin, la série a conquis des lecteurs de tous âges grâce à son point de départ, sa narration et le mystère autour d'« Ami ».",
+        "lien": "https://en.wikipedia.org/wiki/20th_Century_Boys"
+      },
+      {
+        "source": "Panini (éditeur français, via ActuaLitté)",
+        "texte": "Présente la série comme un « thriller passionnant », récompensé notamment à Angoulême en 2004 ; genre indiqué : seinen. Aucun âge indiqué.",
+        "lien": "https://actualitte.com/livres/402511/extraits/20th-century-boys-perfect-edition-tome-11-naoki-urasawa-takashi-nagasaki-vincent-zouzoulkovsky-9782809499063"
+      }
+    ],
+    "sources": [
+      {
+        "titre": "VIZ | 20th Century Boys: The Perfect Edition, Vol. 1",
+        "lien": "https://www.viz.com/read/manga/20th-century-boys-the-perfect-edition-volume-1/product/5630"
+      },
+      {
+        "titre": "VIZ | Our Ratings",
+        "lien": "https://www.viz.com/ratings"
+      },
+      {
+        "titre": "20th Century Boys Perfect Edition Tome 11, ActuaLitté (fiche Panini France)",
+        "lien": "https://actualitte.com/livres/402511/extraits/20th-century-boys-perfect-edition-tome-11-naoki-urasawa-takashi-nagasaki-vincent-zouzoulkovsky-9782809499063"
+      },
+      {
+        "titre": "La Revue des livres pour enfants n° 325, juin 2022 : Mangas, la déferlante. Dossier : Les principales séries citées dans notre dossier (CNLJ, BnF)",
+        "lien": "https://cnlj.bnf.fr/sites/default/files/revues_document_joint/dossier_principales_series_325.pdf"
+      },
+      {
+        "titre": "20th Century Boys, Wikipédia (français)",
+        "lien": "https://fr.wikipedia.org/wiki/20th_Century_Boys"
+      },
+      {
+        "titre": "20th Century Boys, Wikipedia (anglais)",
+        "lien": "https://en.wikipedia.org/wiki/20th_Century_Boys"
+      }
+    ],
+    "date": "2026-11-04",
+    "redacteur": "Claude (assistant IA)",
+    "relecture": {
+      "par": [
+        "Pipo (ChatGPT)",
+        "Mario (Gemini)"
+      ],
+      "date": "2026-11-04"
+    }
+  },
   "_format": "Fiches rédigées à la main et vérifiées, prioritaires sur la fiche automatique. Voir manga/README.md, section « Rédiger une fiche vérifiée ». Clé : identifiant AniList du titre (nombre de l'adresse anilist.co/manga/<id>). Champs : age (6, 8, 10, 12, 14, 16 ou 18, obligatoire), sources (liste obligatoire de {titre, lien}), resume, themes [{titre, texte}], scenes [{categorie: violence | peur | sexe | themes | autre, titre, texte}], vocabulaire, avis, autres [{source, texte, lien}], redacteur, date (AAAA-MM-JJ). Les clés commençant par _ sont ignorées."
 }

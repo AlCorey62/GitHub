@@ -8,7 +8,7 @@ Les fiches des titres les plus lus sont rédigées à partir de sources citées,
 |---|---|
 | `fiches-a-relire.json` | Fiches en attente : texte complet, sources, points à vérifier en priorité (`notes_relecture`, jamais publiés) |
 | `dossier-relecture.md` | Les mêmes fiches en clair |
-| `lot-1.md` à `lot-5.md` | Les fiches en clair, 10 par lot : un lot par conversation avec chaque relecteur |
+| `lot-r2-1.md` à `lot-r2-5.md` | Les fiches à relire (révision actuelle), 10 par lot, avec pour chacune le relecteur attendu : un lot par conversation |
 | `consigne-relecteurs.md` | La consigne à donner à Pipo et à Mario, avec le format de réponse attendu |
 | `retour-pipo-<lot>.json`, `retour-mario-<lot>.json` | Les réponses des relecteurs (à enregistrer ici) |
 | `a-corriger.md` | Généré : fiches non publiées et remarques des relecteurs |
@@ -16,8 +16,8 @@ Les fiches des titres les plus lus sont rédigées à partir de sources citées,
 ## Déroulé
 
 1. Sur l'ordinateur, récupérer la branche du dépôt (`git pull`).
-2. Donner à Pipo puis à Mario `consigne-relecteurs.md` et un lot (`lot-1.md`, puis `lot-2.md`…), un lot par conversation pour qu'ils aient le temps d'ouvrir les sources. Recherche web activée.
-3. Enregistrer chaque réponse JSON dans ce dossier : `retour-pipo-1.json`, `retour-mario-1.json`, etc.
+2. Donner à Pipo puis à Mario `consigne-relecteurs.md` et un lot (`lot-r2-1.md`, puis `lot-r2-2.md`…), un lot par conversation pour qu'ils aient le temps d'ouvrir les sources. Recherche web activée. Chaque lot indique, fiche par fiche, qui doit la relire.
+3. Enregistrer chaque réponse JSON dans ce dossier sous le nom indiqué en tête du lot (`retour-pipo-r2-1.json`, `retour-mario-r2-1.json`…). Ne pas écraser les retours précédents.
 4. Intégrer : `node manga/outils/relecture.mjs integrer`. Les fiches validées par les deux passent dans `site/donnees/fiches-verifiees.json` avec la mention « relue par Pipo (ChatGPT) et Mario (Gemini) » ; les autres restent ici, avec les remarques dans `a-corriger.md`.
 5. Corriger les fiches signalées (Claude peut le faire à partir de `a-corriger.md`), puis les refaire relire. Une fiche corrigée passe à la révision suivante (« révision 2 » dans son titre) et liste la suite donnée à chaque remarque. Les retours portent le numéro de révision relu : une validation de la révision 1 ne vaut pas pour la révision 2. Enregistrer les nouveaux retours sous un autre nom, par exemple `retour-pipo-r2-1.json`.
 6. Régénérer le dossier après correction : `node manga/outils/relecture.mjs dossier`.

@@ -1,62 +1,23 @@
-# Lot 5 : 10 fiches à relire
+# Relecture r2, lot 5 : 9 fiches
 
-Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-5.json.
+Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r2-5.json, en recopiant le numéro de révision de chaque fiche.
 
----
-## Blue Lock (AniList 106130) : dès 12 ans
-
-Fiche AniList : https://anilist.co/manga/106130
-
-**Résumé.** Après l'élimination du Japon en huitièmes de finale de la Coupe du monde 2018, la fédération japonaise de football crée le « Blue Lock », un centre de formation qui réunit les 300 meilleurs attaquants lycéens du pays. Son entraîneur, Jinpachi Ego, veut en faire sortir un seul buteur, le plus individualiste et le plus fort de tous. Yoichi Isagi, joueur encore inconnu, accepte d'y entrer : les épreuves éliminent les joueurs les uns après les autres, et ceux qui échouent ne pourront plus jamais jouer pour l'équipe du Japon. La série est publiée chez Pika (35 tomes parus, série en cours).
-
-**Thèmes abordés**
-
-- *Ego et individualisme* : Le programme Blue Lock cherche un attaquant « hyper-individualiste ». Le jeu collectif n'y est qu'un moyen de gagner, et les joueurs progressent en assumant leur ego, à rebours des mangas de sport habituels centrés sur l'amitié et l'esprit d'équipe.
-- *Compétition sans pitié* : Le récit emprunte au jeu d'élimination (« battle royale ») : chaque épreuve peut mettre fin au rêve d'un joueur, et le suspense sur l'échec des personnages est permanent.
-- *Confiance en soi* : Isagi, passionné de football, gagne en assurance au fil des matchs. Common Sense Media note que ce message de confiance en ses capacités est largement éclipsé par l'éloge de l'ego.
-
-**Scènes difficiles**
-
-- [Violence] *Bousculades et accrochages* : Les tensions entre coéquipiers tournent à l'agressivité et aux bousculades. Un peu de sang apparaît quand un joueur tombe ou reçoit le ballon, sans que ce soit très cru (Common Sense Media, à propos de l'animé).
-- [Autre] *Images symboliques inquiétantes* : Un joueur s'imagine vainqueur, debout sur une pile de « cadavres » de joueurs battus ; un autre se représente son esprit de compétition comme un « monstre », une silhouette sombre (animé).
-- [Nudité et sexualité] *Nudité partielle au vestiaire* : Quelques scènes de vestiaire montrent les fesses nues d'un personnage (animé). Aucun autre contenu sexuel n'est signalé.
-- [Thèmes sensibles] *Pression de l'élimination* : Des lycéens sont placés dans un programme où une défaite peut leur interdire définitivement de jouer pour l'équipe nationale. L'échec n'a « rien d'anodin pour les perdants », souligne une critique du manga.
-
-**Vocabulaire.** Common Sense Media relève dans l'animé (version anglaise) des insultes et quelques grossièretés : « Bull---t », « goddamn », « damn », « stupid », « idiot ». Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
-
-**Avis.** Blue Lock renouvelle le manga de football en y mêlant la tension d'un jeu d'élimination. Le contenu reste modéré : quelques bousculades et un peu de sang, des insultes, une brève nudité de vestiaire. Le point qui mérite un accompagnement est le message : la série valorise l'ego et l'individualisme, ce qui peut ouvrir une discussion sur la différence entre confiance en soi et égoïsme. Mieux vaut avoir 12 ans pour découvrir cette série.
-
-**Ce que disent les autres**
-
-- Common Sense Media (animé) : Conseille dès 13 ans : « Soccer gets sinister in this battle royale sports anime. » Les avis de parents indiquent 8 ans (8 avis) et ceux des enfants 10 ans (17 avis). (https://www.commonsensemedia.org/tv-reviews/blue-lock)
-- Bibliothèques de la Ville de Paris (manga, tome 17) : La notice du tome 17 (Pika, 2023) indique « Âge de lecture : 12 - 14 ans ». (https://bibliotheques.paris.fr/doc/SYRACUSE/1390316)
-- ActuGaming (manga, tomes 1 et 2) : Recommande la série à tous les fans de football et de séries sportives japonaises, pour son mélange réussi de football et de « battle royale » et son suspense permanent. (https://www.actugaming.net/blue-lock-avis-manga-livre-pika-414079/)
-
-**Sources**
-
-- Blue Lock, page de la série, Pika Édition : https://www.pika.fr/livres-series-blue-lock/
-- Blue Lock T01, Pika Édition : https://www.pika.fr/livre/blue-lock-t01-9782811650254/
-- Blue Lock, Parents' Guide & TV Review, Common Sense Media : https://www.commonsensemedia.org/tv-reviews/blue-lock
-- Blue lock. 17, notice des Bibliothèques de la Ville de Paris : https://bibliotheques.paris.fr/doc/SYRACUSE/1390316
-- Blue Lock : Présentation et avis sur le manga de Pika, ActuGaming : https://www.actugaming.net/blue-lock-avis-manga-livre-pika-414079/
-- Blue Lock, Wikipédia (anglais) : https://en.wikipedia.org/wiki/Blue_Lock
-- Blue Lock, Wikipédia (français) : https://fr.wikipedia.org/wiki/Blue_Lock
-
-**Points à vérifier en priorité**
-
-- L'âge Common Sense Media (13 ans) et les scènes décrites concernent l'animé. Aucune critique détaillée du contenu du manga lui-même (35 tomes en France) n'a été consultée.
-- L'étiquette AniList « Suicide » (spoiler) n'est confirmée par aucune source consultée.
-- La notice des Bibliothèques de Paris a été lue via un outil de lecture automatisée (accès direct refusé) ; à revérifier.
-- Pika n'affiche pas d'âge sur la fiche du tome 1. La page de Kodansha USA (classement américain) a refusé l'accès.
-- 12 ans retenu, comme l'estimation automatique : appuyé par l'âge de lecture des Bibliothèques de Paris (12-14 ans), un an sous l'âge Common Sense Media de l'animé.
+- Spy x Family (AniList 108556), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Oshi no ko (AniList 117195), révision 1 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Frieren (AniList 118586), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Omniscient Reader's Viewpoint (AniList 119257), révision 1 : à relire par Mario (Gemini)
+- Kaiju N°8 (AniList 120760), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Sakamoto Days (AniList 125828), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Dandadan (AniList 132029), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Bloom (AniList 140475), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Adieu Eri (AniList 146983), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 
 ---
-
-## Spy x Family (AniList 108556) : dès 12 ans
+## Spy x Family (AniList 108556) : dès 12 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/108556
 
-**Résumé.** Dans un monde inspiré de la guerre froide, Twilight, le meilleur espion du pays de Westalis, doit approcher Donovan Desmond, un homme politique d'Ostania qui menace la paix. Pour cela, il doit inscrire un enfant dans la prestigieuse école Eden. Sous le nom de Loid Forger, il adopte Anya, une fillette qui lit dans les pensées, et épouse Yor, qui est en secret une tueuse à gages. Chacun cache son secret aux autres, ce qui multiplie les situations comiques. La série de Tatsuya Endō est publiée en France par Kurokawa depuis 2020.
+**Résumé.** Dans un monde inspiré de la guerre froide, Twilight, le meilleur espion du pays de Westalis, doit approcher Donovan Desmond, un homme politique d'Ostania qui menace la paix. Pour cela, il doit inscrire un enfant dans la prestigieuse école Eden. Sous le nom de Loid Forger, il adopte Anya, une fillette qui lit dans les pensées, et épouse Yor, qui est en secret une tueuse à gages. Loid et Yor ignorent la vraie identité l'un de l'autre ; Anya connaît leurs deux secrets grâce à son pouvoir, sans qu'ils sachent qu'elle lit dans les pensées, ce qui multiplie les situations comiques. La série de Tatsuya Endō est publiée en France par Kurokawa depuis 2020.
 
 **Thèmes abordés**
 
@@ -69,7 +30,8 @@ Fiche AniList : https://anilist.co/manga/108556
 
 - [Violence] *Espionnage et assassinats* : Yor exerce son métier de tueuse à gages et Loid mène des missions armées. Common Sense Media (animé) relève fusillades, bagarres, explosions de grenades et accidents de voiture mortels, avec du sang mais sans gore. L'éditeur japonais explique que la violence est volontairement contenue au profit de la comédie.
 - [Violence] *Complot terroriste* : Dans le tome 4, un groupe d'étudiants extrémistes prépare un attentat à la bombe avec des chiens issus d'expériences gouvernementales.
-- [Violence] [révèle l'intrigue] *Combats sur un paquebot* : Dans les tomes 8 et 9, Yor protège des passagers d'un paquebot contre une série d'assassins ; deux agents de son organisation en massacrent la plupart et des bombes sont cachées à bord.
+- [Violence] [révèle l'intrigue] *Combats sur un paquebot* : Dans les tomes 8 et 9, Yor protège des passagers d'un paquebot contre une série d'assassins ; avec son supérieur McMahon, membre de la même organisation, elle en tue la plupart. Des bombes sont aussi cachées à bord.
+- [Violence] [révèle l'intrigue] *Prise d'otages dans un bus* : Dans le tome 11, lors d'une sortie scolaire, le bus d'Anya et de ses camarades est détourné par des membres d'un groupe extrémiste. Les enfants sont retenus en otages, Anya et Damian se voient poser des colliers présentés comme explosifs, et les preneurs d'otages tentent de faire sauter une vraie bombe au moment de l'assaut des forces de sécurité.
 - [Thèmes sensibles] [révèle l'intrigue] *Souvenirs de guerre* : Des tomes plus avancés (10, 14 et 15) montrent en retour en arrière l'enfance de personnages pendant la guerre ; Loid y apparaît traumatisé par la mort de ses parents.
 - [Nudité et sexualité] *Romance et sous-entendus* : Loid et Yor jouent les amoureux, et Yor développe peut-être de vrais sentiments. Common Sense Media relève quelques sous-entendus dans l'animé ; rien d'explicite.
 
@@ -96,19 +58,33 @@ Fiche AniList : https://anilist.co/manga/108556
 - Wikipedia (anglais), Spy × Family : https://en.wikipedia.org/wiki/Spy_×_Family
 - Wikipedia (anglais), List of Spy × Family chapters : https://en.wikipedia.org/wiki/List_of_Spy_×_Family_chapters
 - Livres Hebdo, Spy × Family : l'espion qui venait du Japon : https://www.livreshebdo.fr/article/spy-family-lespion-qui-venait-du-japon
+- Catalogue BnF, notice Spy x family 2 (Kurokawa, 2020), avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb466549553
+- Catalogue BnF, notice Spy x family 4 (Kurokawa, 2021), résumé de l'éditeur et avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb46802952w
+- Catalogue BnF, notice Spy x family 8 (Kurokawa, 2022), résumé de l'éditeur et avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb471477780
+- Catalogue BnF, notice Spy x family 10 (Kurokawa, 2022), résumé de l'éditeur et avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb47159308d
+- Catalogue BnF, notice Spy x family 11 (Kurokawa, 2023), résumé de l'éditeur et avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb47362910g
 
 **Points à vérifier en priorité**
 
-- Âge retenu 12 ans, au-dessus de l'estimation automatique (10). Toutes les sources qui donnent un âge se situent entre 11 et 13 ans (CNLJ, Bibliothèques de Paris, Common Sense Media animé et film). Seul l'avis des enfants sur Common Sense Media descend à 10 ans.
-- Les numéros de tomes des arcs (4, 8, 9, 10, 14, 15) viennent de la liste des chapitres de Wikipédia anglais, qui suit l'édition japonaise. À vérifier sur l'édition Kurokawa.
+- Âge retenu 12 ans (confirmé par Pipo), au-dessus de l'estimation automatique (10). Toutes les sources qui donnent un âge se situent entre 11 et 13 ans (CNLJ, Bibliothèques de Paris, Common Sense Media animé et film). Seul l'avis des enfants sur Common Sense Media descend à 10 ans.
+- Ventilation des âges et appréciations du CNLJ revérifiée en révision 2 sur les notices BnF des tomes 1 à 15 (11 ans pour les tomes 1 et 4 à 15, 13 ans pour les tomes 2 et 3). Le tome 16 (2026) n'a pas encore d'avis du CNLJ. Notice des Bibliothèques de Paris (tome 2) rouverte : « 12 - 14 ans », « À partir de 13 ans », public Jeunesse.
+- Numéros de tomes des arcs : liste des chapitres de Wikipédia anglais (édition japonaise). Les résumés de Kurokawa repris dans les notices BnF confirment la même place en France pour les tomes 4 (menace d'attentat avec des chiens), 8 (croisière), 10 (souvenirs de guerre) et 11 (« drame » lors d'une sortie scolaire). Tomes 9, 14 et 15 non vérifiés sur l'édition française.
+- Scène « Prise d'otages dans un bus » (ajoutée en révision 2) : détail appuyé sur le seul résumé du tome 11 de Wikipédia anglais ; le résumé de Kurokawa ne parle que d'un « drame ».
 - Aucune critique Common Sense Media du manga : violence, romance et langage reposent sur l'animé et le film.
 - La phrase sur la violence « contenue au profit de la comédie » rapporte les propos de l'éditeur japonais Shihei Lin cités par Wikipédia anglais.
 - Wikipédia français mentionne une sélection au Festival d'Angoulême 2021 dans une catégorie « Jeunes Adultes 12-16 ans ». Non vérifié, non repris.
 - Page de l'éditeur Kurokawa inaccessible ; éditeur et dates confirmés par les notices BnF. Aucune critique sur filmspourenfants.net (recherches « spy x family » et « code white » sans résultat).
 
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [resume] « Chacun cache son secret aux autres » : Anya connaît les secrets de ses parents grâce à sa télépathie. → appliquee : Vérifié sur Wikipédia anglais (Spy × Family) : « Neither Loid nor Yor are aware of each other's true identities », et aucun des deux ne sait que le pouvoir d'Anya lui fait connaître leurs vrais métiers. Résumé corrigé : Loid et Yor s'ignorent mutuellement, Anya connaît leurs deux secrets sans qu'ils sachent qu'elle lit dans les pensées.
+- Pipo [scenes] Paquebot : les « deux agents » sont Yor et son supérieur McMahon, pas deux autres personnages. → appliquee : Vérifié sur la liste des chapitres de Wikipédia anglais (tome 8) : Yor y est accompagnée de « her supervisor, Mathew McMahon », et « The two Garden operatives massacre most of their foes ». Phrase corrigée : Yor, avec son supérieur McMahon, tue la plupart des assassins.
+- Pipo [scenes] Omission de la prise d'otages d'enfants dans un bus, avec colliers explosifs et vraie bombe. → appliquee : Vérifié sur la liste des chapitres de Wikipédia anglais (tome 11 : bus détourné par un groupe extrémiste, faux colliers explosifs posés sur Anya et Damian, tentative de faire exploser une vraie bombe lors de l'assaut) et sur le résumé de Kurokawa du tome 11 dans la notice BnF (« drame » lors d'une sortie scolaire). Scène ajoutée, marquée spoiler, sans révéler la nature des colliers ni le dénouement. Notice BnF du tome 11 ajoutée aux sources.
+- Pipo [autres] Ventilation des âges et appréciations du CNLJ sur quinze tomes non confirmée (notices inaccessibles pour Pipo). → non_appliquee : Notices revérifiées, rien à retirer. Notices BnF ouvertes : tome 1 « À partir de 11 ans », « Coup de coeur ! » ; tome 3 « À partir de 13 ans », « Bravo ! » ; tome 15 « À partir de 11 ans », « Coup de coeur ! » et « Un manga d'espionnage désopilant ! ». Les quinze notices, consultées via l'interface de recherche du catalogue BnF, confirment toute la ventilation (11 ans : tomes 1 et 4 à 15 ; 13 ans : tomes 2 et 3 ; « Bravo ! » : tomes 2, 3 et 5 ; « Coup de coeur ! » : les autres). Notice des Bibliothèques de Paris (tome 2) : « Âge de lecture : 12 - 14 ans », « À partir de 13 ans », public Jeunesse. Notices des tomes 2, 4, 8, 10 et 11 ajoutées aux sources.
+
 ---
 
-## Oshi no ko (AniList 117195) : dès 16 ans
+## Oshi no ko (AniList 117195) : dès 16 ans, révision 1
 
 Fiche AniList : https://anilist.co/manga/117195
 
@@ -162,7 +138,7 @@ Fiche AniList : https://anilist.co/manga/117195
 
 ---
 
-## Frieren (AniList 118586) : dès 12 ans
+## Frieren (AniList 118586) : dès 12 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/118586
 
@@ -180,12 +156,13 @@ Fiche AniList : https://anilist.co/manga/118586
 - [Violence] *Combats contre des démons* : Des combats à l'épée, à la hache et à la magie opposent les héros à des démons et des monstres, qui meurent souvent hors champ ou se dissolvent en poussière noire. Common Sense Media juge ces combats très modérés dans l'animé. Les tomes 2 et 3 contiennent un affrontement plus long contre une puissante démone et ses serviteurs. Lors de l'examen de mage (à partir du tome 5), des candidats s'affrontent.
 - [Violence] [révèle l'intrigue] *Décapitation* : Une démone qui contrôle ses adversaires comme des marionnettes pour les décapiter finit par se décapiter elle-même sur ordre de Frieren (arc des tomes 2 et 3). L'intensité graphique de la scène dans le manga n'est pas décrite par les sources.
 - [Thèmes sensibles] *Orphelins et deuil* : Fern est une orpheline de guerre, Stark est orphelin, et le village natal de Frieren a été attaqué par des démons. La mort, le plus souvent de vieillesse, est très présente dans le récit.
+- [Thèmes sensibles] *Une enfant au bord du suicide* : Selon Wikipédia (anglais), Fern, orpheline de guerre qui a perdu ses parents, s'apprêtait à se suicider en se jetant dans un ravin quand le prêtre Heiter l'a sauvée, avant de l'adopter. Les sources consultées ne précisent ni le tome concerné ni la façon dont la scène est représentée.
 - [Autre] *Alcool* : Le prêtre Heiter adore l'alcool au point d'avoir souvent la gueule de bois. Un autre prêtre aime l'alcool, la cigarette et les jeux d'argent. Des personnages boivent lors de fêtes.
 - [Nudité et sexualité] *Allusions légères* : Dans l'animé, un petit garçon soulève la jupe d'une femme (rien n'est montré) et une magicienne compare la taille de sa poitrine à celle de son apprentie. Pas de nudité signalée.
 
 **Vocabulaire.** Le vocabulaire du manga n'est pas renseigné par les sources consultées. Common Sense Media ne relève aucune grossièreté dans l'adaptation animée.
 
-**Avis.** Frieren est une fantasy contemplative et mélancolique, qui raconte « l'après » d'une grande aventure. La violence existe, contre des démons, mais reste modérée, avec une décapitation marquante dans les premiers tomes. Le rythme lent et les thèmes du deuil, du regret et du temps qui passe parleront davantage aux préadolescents et adolescents qu'aux plus jeunes. Une belle lecture sur l'amitié et la mémoire des disparus. Mieux vaut avoir 12 ans pour découvrir cette série.
+**Avis.** Frieren est une fantasy contemplative et mélancolique, qui raconte « l'après » d'une grande aventure. Les héros affrontent des démons dans des combats que Common Sense Media juge très modérés dans l'animé ; pour le manga, les critiques consultées ne couvrent que les cinq premiers tomes, qui contiennent une décapitation marquante, et ne renseignent pas la violence des tomes suivants. Le récit évoque aussi le passé de Fern, une orpheline de guerre que Heiter a sauvée alors qu'elle allait se suicider. Le rythme lent et les thèmes du deuil, du regret et du temps qui passe parleront davantage aux préadolescents et adolescents qu'aux plus jeunes, et la série offre une belle lecture sur l'amitié et la mémoire des disparus. Mieux vaut avoir 12 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -204,18 +181,25 @@ Fiche AniList : https://anilist.co/manga/118586
 - The Graphic Library : Frieren: Beyond Journey's End vol 5 by Kanehito Yamada : https://www.graphiclibrary.org/reviews/frieren-beyond-journeys-end-vol-5-by-kanehito-yamada
 - Wikipédia (français) : Frieren : https://fr.wikipedia.org/wiki/Frieren
 - Wikipedia (anglais) : Frieren : https://en.wikipedia.org/wiki/Frieren
+- Wikipedia (anglais) : Fern (Frieren) : https://en.wikipedia.org/wiki/Fern_(Frieren)
 
 **Points à vérifier en priorité**
 
-- Âge retenu 12 ans, au-dessus de l'âge automatique (10 ans, aucune étiquette en cause) : Common Sense Media conseille 13 ans pour l'animé et The Graphic Library place les tomes 1 à 5 au collège-lycée (« Grades 7-12 »). S'y ajoutent la décapitation des tomes 2-3 et des thèmes de deuil plus parlants pour des lecteurs un peu plus âgés.
+- Âge maintenu à 12 ans (confirmé par Pipo), au-dessus de l'âge automatique (10 ans) : Common Sense Media conseille 13 ans pour l'animé et The Graphic Library place les tomes 1 à 5 au collège-lycée (« Grades 7-12 »). S'y ajoutent la décapitation des tomes 2-3, le passé de Fern (projet de suicide) et des thèmes de deuil plus parlants pour des lecteurs un peu plus âgés.
+- Le projet de suicide de Fern ne repose que sur Wikipédia (anglais, article Fern), dans une section sans référence ; ni Common Sense Media ni les critiques de The Graphic Library n'en parlent. Le tome concerné, la façon dont la scène est dessinée et le choix de ne pas la marquer comme spoiler (passé du personnage) restent à vérifier.
 - La scène de décapitation repose sur Wikipédia français seul (fiche du personnage d'Aura).
-- Série en cours : la page Ki-oon liste 15 tomes en France (tome 15 paru le 2 avril 2026). Les sources consultées ne couvrent en détail que les premiers tomes (The Graphic Library : tomes 1 à 5) ; le contenu des tomes récents n'est pas vérifié.
+- Série en cours : la page Ki-oon liste 15 tomes en France (tome 15 paru le 2 avril 2026). Les sources consultées ne couvrent en détail que les premiers tomes (The Graphic Library : tomes 1 à 5) ; le contenu des tomes récents n'est pas vérifié. La violence des tomes suivants n'est caractérisée par aucune source consultée.
 - Les allusions sexuelles et l'absence de grossièretés sont documentées pour l'animé seulement (Common Sense Media).
 - filmspourenfants.net ne propose pas de fiche sur Frieren (vérifié dans le plan du site).
 
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [scenes] Omission : après la mort de ses parents, Fern allait se suicider en se jetant dans un ravin quand Heiter l'a recueillie. → appliquee : Vérifié sur Wikipedia (anglais), article Fern (Frieren) : orpheline de guerre, elle était sur le point de se suicider en sautant dans un ravin quand Heiter l'a sauvée. Cette section de l'article n'a pas de référence, et Common Sense Media comme The Graphic Library n'en parlent pas. Scène ajoutée (thèmes sensibles, non marquée spoiler car il s'agit du passé du personnage), mention dans l'avis, source ajoutée, réserve inscrite dans notes_relecture.
+- Pipo [avis] « La violence reste modérée » étend à tout le manga l'appréciation de Common Sense Media sur l'animé, alors que les critiques du manga ne couvrent que cinq tomes. → partielle : Vérifié : Common Sense Media ne porte que sur l'animé (combats « very mild ») et les critiques de The Graphic Library couvrent les tomes 1 à 5. Avis réécrit : modération attribuée à l'animé, décapitation des premiers tomes maintenue, absence de données sur les tomes suivants signalée. La formulation proposée, qui qualifiait aussi de modérés les combats des premiers tomes, n'est pas reprise telle quelle : les critiques de The Graphic Library ne décrivent pas l'intensité des combats et donnent seulement un niveau « Grades 7-12 ».
+
 ---
 
-## Omniscient Reader's Viewpoint (AniList 119257) : dès 14 ans
+## Omniscient Reader's Viewpoint (AniList 119257) : dès 14 ans, révision 1
 
 Fiche AniList : https://anilist.co/manga/119257
 
@@ -267,7 +251,7 @@ Fiche AniList : https://anilist.co/manga/119257
 
 ---
 
-## Kaiju N°8 (AniList 120760) : dès 14 ans
+## Kaiju N°8 (AniList 120760) : dès 14 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/120760
 
@@ -286,11 +270,11 @@ Fiche AniList : https://anilist.co/manga/120760
 - [Peur et horreur] *Monstres et transformation* : Kafka avale une minuscule créature qui le transforme en monstre. Le BBFC relève des éléments d'horreur dans un épisode de l'animé.
 - [Autre] *Cadavres de monstres* : Le métier de Kafka consiste à découper et ramasser des morceaux de chair de kaiju, des scènes qu'ActuGaming juge parfois « vomitives ».
 - [Nudité et sexualité] *Allusions ponctuelles* : Le BBFC relève des références sexuelles dans un épisode de la saison 1 de l'animé (classé 12). Aucune autre source consultée ne signale de contenu sexuel.
-- [Violence] [révèle l'intrigue] *Invasion finale* : Dans la dernière partie, une invasion de kaiju frappe tout le Japon et un monstre absorbe un personnage important de l'organisation.
+- [Violence] [révèle l'intrigue] *Absorption d'un dirigeant et invasion finale* : Dans la dernière partie, un kaiju absorbe un haut responsable des Forces de défense, puis s'échappe pour préparer une invasion. Des mois plus tard, une invasion de grande ampleur frappe le Japon.
 
-**Vocabulaire.** Non renseigné par les sources consultées pour le manga. Le BBFC mentionne seulement du « language » (langage) dans deux épisodes de l'animé classés PG.
+**Vocabulaire.** Le langage de la traduction française du manga n'est pas renseigné par les sources consultées. Pour la saison 1 de l'animé (édition Crunchyroll, en anglais), le BBFC relève des grossièretés dans 11 épisodes sur 12 : surtout des jurons légers (« crap », « damn », « hell »), mais aussi des insultes comme « bastard » et « asshole », et un « shit ». Une autre notice BBFC (Amazon, épisodes plus récents) signale aussi du langage, sans détail.
 
-**Avis.** Kaiju N°8 est un shōnen d'action efficace, porté par un héros de 32 ans attachant et un humour bien dosé. Les combats contre les monstres sont fréquents et souvent sanglants, surtout dans l'animé, que le BBFC classe 15. L'édition américaine du manga est classée pour adolescents. Les thèmes de la persévérance et de la seconde chance parlent à tous les âges. Mieux vaut avoir 14 ans pour découvrir cette série.
+**Avis.** Kaiju N°8 est un shōnen d'action efficace, porté par un héros de 32 ans attachant et un humour bien dosé. Les combats contre les monstres sont fréquents : le BBFC, qui classe l'animé 15, y relève une violence sanglante et des blessures détaillées, mais aucune source consultée ne décrit précisément le niveau de gore du manga. L'édition américaine du manga est classée pour adolescents. Les thèmes de la persévérance et de la seconde chance parlent à tous les âges. Mieux vaut avoir 14 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -318,14 +302,21 @@ Fiche AniList : https://anilist.co/manga/120760
 
 **Points à vérifier en priorité**
 
-- Âge retenu 14, identique à l'estimation automatique. Désaccord entre sources : le BBFC classe l'animé et le film 15 (violence sanglante, gore), tandis que Viz classe le manga « Teen » et Kazé le publie en shōnen. Aucune critique Common Sense Media ni filmspourenfants.net n'existe pour ce titre.
-- Le niveau de gore du manga lui-même n'est décrit par aucune source lue : seules les classifications BBFC de l'animé et la remarque d'ActuGaming sur les cadavres le documentent. Les étiquettes AniList « Gore » et « Body Horror » ne sont donc pas détaillées.
-- La scène « Invasion finale » repose sur Wikipédia (anglais) uniquement.
+- Âge retenu 14, identique à l'estimation automatique, maintenu par Pipo. Désaccord entre sources : le BBFC classe l'animé et le film 15 (violence sanglante, gore), tandis que Viz classe le manga « Teen » et Kazé le publie en shōnen. Aucune critique Common Sense Media ni filmspourenfants.net n'existe pour ce titre.
+- Le niveau de gore du manga lui-même n'est décrit par aucune source lue : seules les classifications BBFC de l'animé et la remarque d'ActuGaming sur les cadavres le documentent. Les étiquettes AniList « Gore » et « Body Horror » ne sont donc pas détaillées. L'avis ne compare plus l'animé et le manga (révision 2).
+- Vocabulaire (révision 2) : relevé d'après la notice BBFC de la saison 1 en anglais ; la traduction française du manga reste non documentée.
+- La scène « Absorption d'un dirigeant et invasion finale » repose sur Wikipédia (anglais) uniquement ; la chronologie a été corrigée en révision 2.
 - Le budget de recherche web a été épuisé pendant ce titre : il n'a pas été possible de chercher une critique jeunesse française ou une signalétique française de l'animé (Crunchyroll). Kazé n'indique aucun âge ; la série compte 16 tomes chez Kazé.
+
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [vocabulaire] La notice BBFC Crunchyroll détaille des grossièretés dans de nombreux épisodes (« bastard », « asshole », « shit ») : la fiche minimise. → appliquee : Vérifié sur la notice BBFC de la saison 1 (Crunchyroll) : du langage est détaillé pour 11 épisodes sur 12, surtout « crap », « damn », « hell », mais aussi « bastard » (épisodes 6, 7, 9), « asshole » (épisodes 7, 8) et « shit » (épisode 11). Rubrique réécrite en conservant la réserve sur la traduction française ; la mention vague de la notice Amazon est gardée sans le classement PG, qui n'a pas pu être relu.
+- Pipo [scenes] Chronologie brouillée : l'absorption d'un haut responsable précède les préparatifs puis le déclenchement de l'invasion. → appliquee : Vérifié sur Wikipédia (anglais) : le kaiju n°9 absorbe Isao Shinomiya, directeur général, puis s'échappe pour préparer l'invasion, qui commence des mois plus tard. Texte réordonné, titre de la scène ajusté, spoiler true conservé, sans nommer le personnage.
+- Pipo [avis] « Surtout dans l'animé » compare manga et animé sans appui des sources. → appliquee : Vérifié : la notice BBFC ne porte que sur l'animé et aucune source consultée ne décrit le gore du manga (déjà signalé dans notes_relecture). La phrase dit désormais que le BBFC relève une violence sanglante et des blessures détaillées dans l'animé, et qu'aucune source ne décrit précisément le niveau de gore du manga.
 
 ---
 
-## Sakamoto Days (AniList 125828) : dès 14 ans
+## Sakamoto Days (AniList 125828) : dès 16 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/125828
 
@@ -349,12 +340,12 @@ Fiche AniList : https://anilist.co/manga/125828
 
 **Vocabulaire.** Pour l'animé (version anglaise), Common Sense Media relève un langage fréquent et cru : « s--t », « f----r », « damn », « bastard », « hell », « dumba-- », des menaces de mort répétées et des insultes sur le poids de Sakamoto. Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
 
-**Avis.** Sakamoto Days mêle action spectaculaire et comédie autour d'un héros attachant, ancien tueur devenu père de famille qui s'interdit de tuer. Le fond est positif : la famille, la seconde chance, le refus de tuer. Mais les combats sont nombreux et sanglants, les méchants tuent sans pitié et l'animé ajoute un langage cru. Glénat vise un large public et des magazines jeunesse l'ont salué, tandis que Common Sense Media réserve l'animé aux 16 ans et plus. Mieux vaut avoir 14 ans pour découvrir cette série.
+**Avis.** Sakamoto Days mêle action spectaculaire et comédie autour d'un héros attachant, ancien tueur devenu père de famille qui s'interdit de tuer. Le fond est positif : la famille, la seconde chance, le refus de tuer. Mais les combats sont nombreux et sanglants, les méchants tuent sans pitié, et Common Sense Media relève un langage cru dans la version anglaise de l'animé (celui de la traduction française du manga n'est pas renseigné). Glénat vise un large public et des magazines jeunesse l'ont salué, mais l'éditeur américain Viz classe le manga « Teen Plus » (adolescents plus âgés et adultes) et Common Sense Media réserve l'animé aux 16 ans et plus. Mieux vaut avoir 16 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
 - Common Sense Media (animé) : Conseille dès 16 ans : beaucoup de gore, des jurons et des moqueries sur le poids dans une comédie d'action, avec un message positif sur la seconde chance. Parents (6 avis) : 9 ans ; enfants (4 avis) : 13 ans. (https://www.commonsensemedia.org/tv-reviews/sakamoto-days)
-- Viz Media (manga, éditeur américain) : Classe le manga « Teen Plus », catégorie que l'éditeur décrit comme pouvant convenir aux adolescents plus âgés et aux adultes ; la mention imprimée précise « violence and gore » (relevée par The Manga Critic). (https://www.viz.com/manga-books/manga/sakamoto-days-volume-5-0/product/7295)
+- Viz Media (manga, éditeur américain) : Classe le manga « Teen Plus », catégorie que l'éditeur décrit comme pouvant convenir aux adolescents plus âgés et aux adultes, sans donner d'âge chiffré ; la mention imprimée précise « violence and gore » (relevée par The Manga Critic). Le résumé du volume 5 annonce une bataille dans un casino contre une triade chinoise. (https://www.viz.com/manga-books/manga/sakamoto-days-volume-5-0/product/7295)
 - Glénat (éditeur français) : Promet « action, émotion et fous rires » pour « tous les lecteurs, les plus jeunes comme les plus assidus ». La page cite Le Monde des Ados et Picsou Magazine, qui saluent l'enchaînement de l'action et des gags. Aucune mention d'âge. (https://www.glenat.com/glenat-manga/sakamoto-days-tome-01-9782344050989/)
 - The Manga Critic (manga, tome 1) : Recommande le tome 1 pour ses combats inventifs et ses gags visuels, mais regrette les blagues répétées sur le poids du héros. (https://mangabookshelf.com/2022/05/19/sakamoto-days-vol-1/)
 
@@ -362,6 +353,7 @@ Fiche AniList : https://anilist.co/manga/125828
 
 - Glénat : « Sakamoto Days - Tome 01 » : https://www.glenat.com/glenat-manga/sakamoto-days-tome-01-9782344050989/
 - Glénat : fiche série « Sakamoto Days » : https://www.glenat.com/glenat-manga/series-sakamoto-days/
+- Glénat : « Sakamoto Days - Tome 05 » : https://www.glenat.com/glenat-manga/sakamoto-days-tome-05-9782344054185/
 - Common Sense Media : « Sakamoto Days » (TV review, Danae Stahlnecker) : https://www.commonsensemedia.org/tv-reviews/sakamoto-days
 - Viz Media : « Sakamoto Days, Vol. 5 » (fiche produit) : https://www.viz.com/manga-books/manga/sakamoto-days-volume-5-0/product/7295
 - Viz Media : « Ratings » (définition des catégories d'âge) : https://www.viz.com/ratings
@@ -370,15 +362,22 @@ Fiche AniList : https://anilist.co/manga/125828
 
 **Points à vérifier en priorité**
 
-- Âge retenu 14 ans, conforme à l'estimation automatique. Écart avec Common Sense Media (16 ans pour l'animé, dont le doublage anglais est cru) et Viz « Teen Plus » (adolescents plus âgés). À l'inverse, Glénat vise aussi les plus jeunes et cite des magazines jeunesse (Le Monde des Ados, Picsou Magazine). 16 ans reste défendable si l'on suit Common Sense Media.
+- Âge porté de 14 à 16 ans en révision 2, comme le propose Pipo (seul relecteur à avoir rendu son avis) : les deux seules indications d'âge précises vont dans ce sens, Viz « Teen Plus » (adolescents plus âgés et adultes, sans âge chiffré) pour le manga et Common Sense Media 16 ans pour l'animé. La promesse de Glénat (« tous les lecteurs ») et les citations du Monde des Ados et de Picsou Magazine relèvent de la promotion et ne donnent pas d'âge. 16 ans est le seuil retenu par Mangâge, pas une classification officielle française. 14 ans reste défendable si les relecteurs jugent la violence du manga moins crue que celle décrite pour l'animé.
 - Les scènes détaillées (décapitations, références au suicide, alcool, blagues sexuelles) et le vocabulaire viennent de la critique de l'animé : non vérifiés dans le manga. Aucune critique du manga consultée ne décrit précisément le niveau de sang.
-- Série en cours : la page Glénat liste le tome 23 (7 octobre 2026) et annonce le tome 24 pour le 6 janvier 2027 ; Wikipedia (en) compte 29 volumes au Japon en novembre 2026 et signale une « bataille finale » en cours. Le contenu des derniers arcs (étiquette AniList Gambling marquée spoiler) n'est pas documenté par les sources consultées.
+- Série en cours : la page Glénat liste le tome 23 (7 octobre 2026) et annonce le tome 24 pour le 6 janvier 2027 ; Wikipedia (en) compte 29 volumes au Japon en novembre 2026 et signale une « bataille finale » en cours. Le contenu des derniers arcs n'est pas documenté par les sources consultées.
+- Jeu d'argent (étiquette AniList Gambling, marquée spoiler) : le casino apparaît dès le tome 5, où Glénat annonce un « duel sous haute tension » au casino contre « Wutang, le mafieux chinois » et Viz une bataille de casino contre une triade chinoise. Aucun des deux résumés ne dit si des jeux d'argent sont montrés ni comment : à vérifier dans le tome 5 et dans les arcs suivants.
 - Aucune mention d'âge sur les pages Glénat consultées. Les citations du Monde des Ados et de Picsou Magazine ont été lues sur la page Glénat, pas dans les magazines. Le classement Viz a été lu sur la fiche du volume 5.
 - filmspourenfants.net n'a pas de fiche pour ce titre (recherche sur le site sans résultat).
 
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [age] 14 ans insuffisamment justifié face à Viz (Teen Plus) et Common Sense Media (16 ans) ; propose 16 ans (age_propose : 16), en précisant que c'est le seuil de Mangâge. → appliquee : Vérifié : la fiche Viz du volume 5 indique « Teen Plus », défini sur la page des classements de Viz comme « May be suitable for older teens and adults », sans âge chiffré, avec une violence pouvant être intense ou gore ; Common Sense Media conseille 16 ans pour l'animé. Les pages Glénat ne donnent aucun âge. Mario n'ayant pas rendu d'avis, j'ai tranché pour 16 ans, ces deux indications étant les seules précises. Âge, dernière phrase de l'avis, texte Viz dans « autres » (sans âge chiffré) et notes de relecture mis à jour.
+- Pipo [avis] « L'animé ajoute un langage cru » suppose une comparaison avec le manga que rien n'établit. → appliquee : Vérifié sur Common Sense Media : le langage cru (« s--t », « f----r », « bastard »...) est relevé pour l'animé, sans aucune comparaison avec le manga. Phrase reformulée : Common Sense Media relève un langage cru dans la version anglaise de l'animé, et celui de la traduction française du manga n'est pas renseigné.
+- Pipo [sources] Le jeu d'argent n'est pas réservé aux derniers arcs : la fiche Viz du tome 5 annonce un affrontement dans un casino. → partielle : Vérifié : Viz (volume 5) parle d'une « casino battle » entre l'équipe de Sakamoto et la triade chinoise, et Glénat (tome 05) d'un « duel sous haute tension » au casino contre « Wutang, le mafieux chinois ». Le casino est donc présent dès le tome 5 : note de relecture corrigée, mention ajoutée au texte Viz dans « autres » et page Glénat du tome 05 ajoutée aux sources. En revanche, aucun des deux résumés ne dit que des jeux d'argent sont montrés : cette affirmation n'a pas été ajoutée et reste à vérifier.
+
 ---
 
-## Dandadan (AniList 132029) : dès 16 ans
+## Dandadan (AniList 132029) : dès 16 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/132029
 
@@ -393,13 +392,14 @@ Fiche AniList : https://anilist.co/manga/132029
 
 **Scènes difficiles**
 
-- [Nudité et sexualité] *Menace d'agression sexuelle dès le début* : Dès le début de l'histoire, des extraterrestres immobilisent Momo, lui écartent les jambes et menacent de la violer avec un instrument métallique (Common Sense Media, animé). Une bibliothécaire scolaire décrit la même scène dans le tome 1 du manga : Momo est agressée par des aliens qui tentent de « la sonder ». La scène n'est pas explicite mais elle est perturbante.
+- [Nudité et sexualité] *Menace d'agression sexuelle dès le début* : Dès le début de l'histoire, des extraterrestres immobilisent Momo, lui écartent de force les jambes et menacent de la violer avec un instrument métallique (Common Sense Media, animé). Une bibliothécaire scolaire décrit la même scène dans le tome 1 du manga : Momo est agressée par des aliens qui tentent de « la sonder ». La menace de viol est explicite et la contrainte physique montrée ; les sources décrivent une tentative, pas un viol accompli.
 - [Nudité et sexualité] *Humour sexuel récurrent* : Un fantôme, Mamie Turbo, vole les organes génitaux de ses victimes, et la quête des testicules perdus d'Okarun sert de fil rouge à une grande partie de la série (Wikipédia, Common Sense Media). The Graphic Library relève une première blague déplacée dans les vingt premières pages du tome 1.
 - [Nudité et sexualité] *Tenues légères* : Un personnage apparaît en soutien-gorge et culotte, avec une poitrine exagérée (Common Sense Media, animé). L'éditeur américain présente les aliens et les esprits comme « bizarrement obsédés ».
 - [Peur et horreur] *Créatures cauchemardesques* : Fantômes et extraterrestres sont décrits comme particulièrement dérangeants, cauchemardesques et psychédéliques (Common Sense Media). La RTBF note des planches plus réalistes au style horrifique.
 - [Violence] *Combats intenses* : La violence est fréquente et intense : personnages roués de coups de batte jusqu'au sang, un personnage qui prend feu, explosions, armes et attaques de créatures (Common Sense Media, animé).
-- [Thèmes sensibles] [révèle l'intrigue] *Passé tragique d'un esprit* : Un yokai rencontré tôt dans la série était, de son vivant, une mère seule contrainte à la prostitution ; après l'enlèvement de sa fille et une agression violente, elle s'est donné la mort (Wikipédia, anglais). Cet arc couvre les tomes 2 et 3 selon Wikipédia (français).
+- [Thèmes sensibles] [révèle l'intrigue] *Passé tragique d'un esprit* : Un yokai rencontré tôt dans la série était, de son vivant, une mère seule contrainte à la prostitution ; après l'enlèvement de sa fille et une agression violente, elle s'est donné la mort (Wikipédia, anglais). Selon Wikipédia (français), cet arc couvre les tomes 2 et 3 ; d'après la liste des chapitres de Wikipédia (anglais), l'esprit apparaît à la fin du tome 2 et son passé est découvert dans le tome 3.
 - [Thèmes sensibles] [révèle l'intrigue] *Sacrifices d'enfants et suicides* : Dans un arc ultérieur, une famille sacrifiait des enfants à une créature, dont l'un est devenu un esprit vengeur ; ces entités poussent leurs victimes à la folie ou au suicide (Wikipédia, anglais et français). L'arc concerné couvre les tomes 4 à 8 selon Wikipédia (français).
+- [Thèmes sensibles] [révèle l'intrigue] *Deuils familiaux de Zuma* : Dans le tome 18 (numérotation japonaise), un retour en arrière raconte le passé de Zuma, un lycéen délinquant : après la mort de son père et l'accumulation des dettes, son petit frère se noie, puis sa mère se suicide en se jetant sous une rame de métro (liste des chapitres de Wikipédia, anglais).
 
 **Vocabulaire.** Common Sense Media (animé, version anglaise) juge le langage peu fréquent : « moron », « lame », « pissed », « crap », « scumbag ». Wikipédia (anglais) décrit Mamie Turbo comme une vieille femme cruelle et grossière. Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
 
@@ -424,19 +424,27 @@ Fiche AniList : https://anilist.co/manga/132029
 - DanDaDan, Wikipédia (français) : https://fr.wikipedia.org/wiki/Dandadan
 - Dandadan, Wikipedia (anglais) : https://en.wikipedia.org/wiki/Dandadan
 - List of Dandadan characters, Wikipedia (anglais) : https://en.wikipedia.org/wiki/List_of_Dandadan_characters
+- List of Dandadan chapters, Wikipedia (anglais) : https://en.wikipedia.org/wiki/List_of_Dandadan_chapters
 
 **Points à vérifier en priorité**
 
-- Âge : 16 égal à l'estimation automatique. Common Sense Media conseille 15 ans (animé), Viz classe le manga « Mature » (adultes) et The Graphic Library le juge pour adultes. Si l'on suit Viz, 18 serait envisageable : à trancher.
+- Âge : 16, égal à l'estimation automatique et confirmé par Pipo. Common Sense Media conseille 15 ans (animé), Viz classe le manga « Mature » (adultes) et The Graphic Library le juge pour adultes (« Suitability Level: Adult », revérifié en révision 2). Si l'on suit Viz, 18 serait envisageable : à trancher.
 - La plupart des détails de contenu viennent de Common Sense Media, donc de l'animé. Pour le manga, la scène des aliens et Mamie Turbo sont confirmées dans le tome 1 par The Graphic Library.
-- Les scènes marquées spoiler (passé d'un yokai, sacrifices d'enfants) ne s'appuient que sur les listes de personnages de Wikipédia. Les numéros de tomes viennent de la liste des arcs de Wikipédia (français), marquée « référence nécessaire ».
+- Les scènes marquées spoiler (passé d'un yokai, sacrifices d'enfants, deuils de Zuma) s'appuient sur les listes de personnages et de chapitres de Wikipédia anglais. Les numéros de tomes viennent de la liste des chapitres de Wikipédia anglais (édition japonaise) ou de la liste des arcs de Wikipédia (français), marquée « référence nécessaire » : à vérifier sur l'édition française.
+- Passé de l'esprit Acrobatic Silky : Pipo le situait au tome 2 (chapitres 9 à 16). La liste des chapitres de Wikipédia anglais donne les chapitres 6 à 14 pour le tome 2 et place la découverte de son histoire familiale dans le tome 3 (chapitres 15 à 23). À confirmer sur un exemplaire.
 - Éditeur français : la fiche du tome 1 sur Harpercollins.Kaze.fr indique « Kazé » et le 05.10.2022, alors que Wikipédia (français) dit que la série fut la première publiée sous le label Crunchyroll. Libellé de l'éditeur à vérifier. Tome 23 paru le 01.07.2026 selon ce site ; 26 tomes au Japon au 4 novembre 2026 selon Wikipédia (anglais). Série en cours.
 - Le champ « Âge recommandé » de la fiche Kazé est vide.
 - Étiquettes AniList « Cannibalism » et « Terrorism » : non confirmées par les sources consultées, donc non reprises. Le harcèlement d'Okarun est confirmé par Wikipédia (anglais) mais traité en thème plutôt qu'en scène.
 
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [scenes] Omission du passé de Zuma : noyade de son petit frère et suicide de sa mère devant un train. → appliquee : Vérifié sur la liste des chapitres de Wikipédia anglais (tome 18) : le petit frère de Zuma « drowns trying to retrieve a beloved umbrella » et sa mère meurt « by leaping in front of a subway train ». Scène « Deuils familiaux de Zuma » ajoutée (catégorie thèmes, spoiler) ; la page est ajoutée aux sources.
+- Pipo [scenes] Passé de l'esprit (Acrobatic Silky) : « tomes 2 et 3 » imprécis, il serait raconté dès le tome 2 (chapitres 9 à 16). → partielle : La source citée contredit la correction proposée : selon la liste des chapitres de Wikipédia anglais, le tome 2 contient les chapitres 6 à 14 ; l'esprit n'y apparaît qu'à la fin, et c'est le résumé du tome 3 (chapitres 15 à 23) qui mentionne la découverte des « tragic family histories ». « Tome 2 » n'est donc pas repris. La demande de précision est en revanche retenue : la scène indique désormais que l'arc couvre les tomes 2 et 3 et que le passé de l'esprit est découvert dans le tome 3.
+- Pipo [scenes] « La scène n'est pas explicite » minimise une menace de viol décrite explicitement, avec contrainte physique. → appliquee : Vérifié : Common Sense Media (animé) écrit que des aliens « forcibly spread a teen girl's legs and threaten to rape her using a scary metal device » ; The Graphic Library (tome 1) : « Momo is assaulted by aliens and they attempt to probe her ». Aucune des deux ne qualifie la scène de non explicite. Formule supprimée : la fiche dit maintenant que la menace est explicite et la contrainte montrée, et que les sources décrivent une tentative, pas un viol accompli. La précision « sans pénétration montrée » n'est pas reprise, faute de source décrivant le dessin à ce niveau.
+
 ---
 
-## Bloom (AniList 140475) : dès 12 ans
+## Bloom (AniList 140475) : dès 12 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/140475
 
@@ -455,11 +463,11 @@ Fiche AniList : https://anilist.co/manga/140475
 - [Violence] *Bagarres et petites blessures* : Rintarô refuse de se battre mais est blessé en s'interposant dans des bagarres. Common Sense Media note (pour l'animé) un peu de sang après des coups de poing ou de pied, sans gravité.
 - [Thèmes sensibles] *Harcèlement* : Kaoruko est harcelée par des délinquants et Rintarô lui vient en aide. Dans l'animé, des lycéennes sont aussi coincées la nuit par des inconnus qui les importunent. Subaru, l'amie de Kaoruko, a été harcelée par des garçons dans son enfance, ce qui explique sa peur d'eux.
 - [Autre] *Gestes contre soi-même* : Common Sense Media relève, dans l'animé, des adolescents qui se pincent, se giflent ou se frappent légèrement pour se sortir d'une mauvaise humeur.
-- [Nudité et sexualité] [révèle l'intrigue] *Romance sans contenu sexuel* : Les adolescents parlent de leurs béguins et de déclarations. Rintarô se déclare dans le tome 6 et les deux héros commencent à sortir ensemble. Aucune scène sexuelle n'est mentionnée par les sources.
+- [Nudité et sexualité] [révèle l'intrigue] *Romance sans scène sexuelle signalée* : Les adolescents parlent de leurs béguins et de déclarations. Rintarô se déclare dans le tome 6 et les deux héros commencent à sortir ensemble. Aucune scène sexuelle n'est mentionnée par les sources.
 
-**Vocabulaire.** Langage modéré selon Common Sense Media (animé, version anglaise) : « crétin », « idiot », « je m'en fiche » et des variantes de « stupide » (mots traduits de l'anglais). Le lycée Chidori est souvent appelé « le lycée des idiots ». Rien de précis n'est renseigné pour la traduction française du manga.
+**Vocabulaire.** Langage modéré selon Common Sense Media, qui porte sur l'animé en version anglaise : « jerk », « give a damn », « idiot » et des variantes de « stupid ». Le lycée Chidori y est souvent appelé « stupid kids' school ». Ces exemples ne viennent pas de l'édition française du manga, dont le langage n'est pas renseigné par les sources consultées.
 
-**Avis.** Une comédie romantique douce et positive, centrée sur l'amitié, les préjugés et un premier amour qui prend son temps. Les sources ne signalent qu'une violence légère, quelques scènes de harcèlement et un langage modéré, sans aucun contenu sexuel. Common Sense Media juge l'animé adapté dès 10 ans, tandis que l'éditeur anglais vise les 13 ans et que l'éditeur français range la série dans sa collection pour lecteurs plus âgés. Les préoccupations des personnages, lycéens de 16 ans, parleront surtout aux préadolescents et aux adolescents. Mieux vaut avoir 12 ans pour découvrir cette série.
+**Avis.** Une comédie romantique douce et positive, centrée sur l'amitié, les préjugés et un premier amour qui prend son temps. Les sources signalent une violence légère, quelques scènes de harcèlement et un langage modéré ; elles ne relèvent aucune scène sexuelle dans l'animé ni dans les tomes du manga qu'elles couvrent (jusqu'au tome 7). Common Sense Media juge l'animé adapté dès 10 ans, tandis que l'éditeur anglais vise les 13 ans et que l'éditeur français range la série dans sa collection pour lecteurs plus âgés. Les préoccupations des personnages, lycéens de 16 ans, parleront surtout aux préadolescents et aux adolescents. Mieux vaut avoir 12 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -481,19 +489,24 @@ Fiche AniList : https://anilist.co/manga/140475
 
 **Points à vérifier en priorité**
 
-- Âge retenu 12, au-dessus de l'estimation automatique (10) et de Common Sense Media (10 ans). Raisons : la critique Common Sense Media ne couvre que l'animé, qui s'arrête vers le tome 6 selon Anime UK News, alors que la série compte 12 tomes en France et 24 au Japon ; l'édition anglaise est classée 13+ et nobi nobi ! la range dans sa collection pour lecteurs plus âgés. Un relecteur peut juger 10 ans défendable.
-- Le contenu des tomes au-delà du tome 7 n'est renseigné par aucune source consultée.
+- Âge retenu 12, au-dessus de l'estimation automatique (10) et de Common Sense Media (10 ans). Raisons : la critique Common Sense Media ne couvre que l'animé, qui s'arrête vers le tome 6 selon Anime UK News, alors que la série compte 12 tomes en France et 24 au Japon ; l'édition anglaise est classée 13+ et nobi nobi ! la range dans sa collection pour lecteurs plus âgés. Un relecteur peut juger 10 ans défendable. Pipo confirme 12 ans.
+- Le contenu des tomes au-delà du tome 7 n'est renseigné par aucune source consultée. L'absence de scène sexuelle n'est donc établie que pour l'animé et les tomes 1 à 7 ; Common Sense Media relève seulement des béguins et des garçons qui plaisantent sur leur envie d'avoir une petite amie.
 - Les scènes de violence, de gestes contre soi-même et d'importunités nocturnes viennent uniquement de Common Sense Media et concernent l'animé.
-- Les mots cités par Common Sense Media viennent du doublage anglais et ont été traduits par mes soins.
+- Les mots cités par Common Sense Media sont laissés en anglais (version anglaise de l'animé) ; le langage de la traduction française du manga n'est renseigné par aucune source consultée.
 - Pas de fiche filmspourenfants.net trouvée pour l'animé.
+
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [vocabulaire] « Je m'en fiche » adoucit « give a damn » : garder les exemples anglais de Common Sense Media et préciser qu'ils ne viennent pas de l'édition française. → appliquee : Vérifié : la rubrique Language de Common Sense Media (animé) cite « jerk », « give a damn » et « idiot », et sa synthèse pour les parents des variantes de « idiot » et « stupid ». Rubrique réécrite avec les mots anglais d'origine, en précisant qu'ils viennent de la version anglaise de l'animé et non de l'édition française du manga ; note de relecture sur la traduction mise à jour.
+- Pipo [avis] « Sans aucun contenu sexuel » est trop général : Common Sense Media couvre l'animé et les critiques du manga s'arrêtent au tome 7. → appliquee : Vérifié : Common Sense Media porte sur l'animé, que la critique d'Anime UK News des tomes 6 et 7 situe avant le tome 7 ; cette critique ne mentionne aucun contenu sexuel. Avis reformulé : aucune scène sexuelle relevée dans l'animé ni dans les tomes couverts (jusqu'au tome 7). Titre de la scène « Romance » ajusté dans le même sens.
 
 ---
 
-## Adieu Eri (AniList 146983) : dès 14 ans
+## Adieu Eri (AniList 146983) : dès 14 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/146983
 
-**Résumé.** Pour son anniversaire, Yûta reçoit un smartphone. Sa mère, gravement malade, lui demande de la filmer jusqu'à sa mort. Le film qu'il en tire est moqué par ses camarades de lycée. Désespéré, il s'apprête à en finir quand il rencontre Eri, une jeune fille passionnée de cinéma qui a aimé son film et le pousse à en réaliser un nouveau. Ce récit complet en un tome d'environ 200 pages joue sans cesse sur la frontière entre ce qui est filmé et la réalité.
+**Résumé.** Pour son anniversaire, Yûta reçoit un smartphone. Sa mère, gravement malade, lui demande de la filmer jusqu'à sa mort. Le film qu'il en tire est moqué par ses camarades de collège. Désespéré, il s'apprête à en finir quand il rencontre Eri, une jeune fille passionnée de cinéma qui a aimé son film et le pousse à en réaliser un nouveau. Ce récit complet en un tome d'environ 200 pages joue sans cesse sur la frontière entre ce qui est filmé et la réalité.
 
 **Thèmes abordés**
 
@@ -512,7 +525,7 @@ Fiche AniList : https://anilist.co/manga/146983
 
 **Vocabulaire.** Non renseigné par les sources consultées.
 
-**Avis.** Adieu Eri est un récit complet, court et inventif, signé par l'auteur de Chainsaw Man. Il est beaucoup moins violent et choquant que ses autres œuvres, selon The Graphic Library. Mais il aborde de front le deuil, la maladie, une mère maltraitante et deux tentatives ou projets de suicide du héros. Son jeu sur le vrai et le faux demande un lecteur capable de prendre du recul et d'en parler avec un adulte. Mieux vaut avoir 14 ans pour découvrir cette série.
+**Avis.** Adieu Eri est un récit complet, court et inventif, signé par l'auteur de Chainsaw Man. Il est beaucoup moins violent et choquant que ses autres œuvres, selon The Graphic Library. Mais il aborde de front le deuil, la maladie, une mère maltraitante et deux tentatives ou projets de suicide du héros. Son jeu sur le vrai et le faux demande un lecteur capable de prendre du recul et d'en parler avec un adulte. Mieux vaut avoir 14 ans pour découvrir ce récit.
 
 **Ce que disent les autres**
 
@@ -526,14 +539,23 @@ Fiche AniList : https://anilist.co/manga/146983
 - Wikipédia (français) : Adieu Eri : https://fr.wikipedia.org/wiki/Adieu_Eri
 - Wikipedia (anglais) : Goodbye, Eri : https://en.wikipedia.org/wiki/Goodbye,_Eri
 - Anime Corner : Review: Goodbye, Eri, A Peculiar Coming-of-Age Story Filled With Loss : https://animecorner.me/review-goodbye-eri-a-peculiar-coming-of-age-story-filled-with-loss/
+- Chainsaw Man Artist Tatsuki Fujimoto Reveals Cover for "Goodbye, Eri" Manga (article de Crunchyroll News du 19 juin 2022, republié sur leviseven.blogspot.com) : https://leviseven.blogspot.com/2022/06/chainsaw-man-artist-tatsuki-fujimoto.html
+- From Cover to Cover : « … So Film Me Until My Dying Breath. » Goodbye, Eri by Tatsuki Fujimoto (Scott Cederlund, 24 juillet 2023) : https://www.fromcovertocover.com/goodbye-eri-by-tatsuki-fujimoto-review/
 
 **Points à vérifier en priorité**
 
-- Âge retenu 14 ans, au-dessus de l'âge automatique (12 ans) : The Graphic Library réserve l'œuvre au lycée (« Grades 9-12 ») à cause du deuil et des idées suicidaires, et le héros envisage deux fois le suicide. C'est la seule source qui donne un âge : à confirmer.
+- Âge retenu 14 ans, au-dessus de l'âge automatique (12 ans), maintenu par Pipo : The Graphic Library réserve l'œuvre au lycée (« Grades 9-12 ») à cause du deuil et des idées suicidaires, et le héros envisage deux fois le suicide. C'est la seule source de la fiche qui donne un âge : à confirmer.
+- Révision 2 : la fiche VIZ de Goodbye, Eri indique le classement « Teen Plus » (grands adolescents et adultes selon VIZ). Indication non intégrée à la fiche faute de remarque la concernant ; à prendre en compte si l'âge est rediscuté.
+- Niveau scolaire (révision 2) : Yûta est collégien au début du récit selon l'article de Crunchyroll News (« a middle-school boy », lu sur une republication, la page Crunchyroll n'affichant aucun texte) et la critique de From Cover to Cover. ActuaLitté dit seulement « adolescent » et Wikipédia « son école ».
 - Page de l'éditeur français introuvable : le site de Kazé (kazemanga.fr) ne liste plus le titre et Crunchyroll refuse l'accès. Éditeur, date (18/01/2023), 208 pages et traducteur (Sébastien Ludmann) viennent de la notice ActuaLitté (ORB). Wikipédia français indique Crunchyroll comme éditeur : Kazé est devenu Crunchyroll, à harmoniser.
 - La notice ActuaLitté classe le titre en « Seinen/Homme », alors que Wikipédia le rattache au shōnen (publication sur Shōnen Jump+).
 - Le titre français s'écrit « Adieu Eri » sans virgule sur ActuaLitté et Wikipédia ; AniList indique « Adieu, Eri ».
 - Pas de critique Common Sense Media ni filmspourenfants.net (aucune adaptation animée, vérifié dans le plan du site de filmspourenfants.net). Le vocabulaire n'est documenté par aucune source.
 - Recherche web interrompue (quota atteint) avant d'avoir trouvé une critique jeunesse française.
+
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [resume] Yûta est collégien et non lycéen au début du récit. → appliquee : Vérifié : l'article de Crunchyroll News du 19 juin 2022 (lu sur une republication, la page Crunchyroll ne renvoyant aucun texte) présente Yûta comme « a middle-school boy », et la critique de From Cover to Cover écrit qu'il entre au collège (« just starting middle school »). Aucune source de la fiche ne parlait de lycée (ActuaLitté : « adolescent » ; Wikipédia : « son école »). « Lycée » remplacé par « collège » ; sources ajoutées.
+- Pipo [avis] Récit complet en un volume, pas une série : écrire « ce récit ». → appliquee : Vérifié sur Wikipédia (anglais) : one-shot d'environ 200 pages, publié en un volume ; le résumé de la fiche le disait déjà. Dernière phrase changée en « Mieux vaut avoir 14 ans pour découvrir ce récit. »
 
 ---

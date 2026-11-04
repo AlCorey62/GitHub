@@ -1,13 +1,24 @@
-# Lot 1 : 10 fiches à relire
+# Relecture r2, lot 1 : 10 fiches
 
-Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-1.json.
+Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r2-1.json, en recopiant le numéro de révision de chaque fiche.
+
+- Monster (AniList 30001), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Berserk (AniList 30002), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Naruto (AniList 30011), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Bleach (AniList 30012), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- One Piece (AniList 30013), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Death Note (AniList 30021), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Fullmetal Alchemist (AniList 30025), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Hunter X Hunter (AniList 30026), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Spirale (AniList 30436), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Vinland Saga (AniList 30642), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 
 ---
-## Monster (AniList 30001) : dès 16 ans
+## Monster (AniList 30001) : dès 16 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/30001
 
-**Résumé.** En 1986, à Düsseldorf, le brillant neurochirurgien japonais Kenzo Tenma choisit d'opérer un petit garçon blessé par balle plutôt que le maire de la ville. Ce choix lui coûte sa carrière et ses fiançailles. Neuf ans plus tard, une série de meurtres frappe l'Allemagne, et Tenma comprend que l'enfant qu'il a sauvé, Johan, pourrait en être l'auteur. Soupçonné par la police, il part sur ses traces pour l'arrêter.
+**Résumé.** En 1986, à Düsseldorf, le brillant neurochirurgien japonais Kenzo Tenma choisit d'opérer un petit garçon blessé par balle plutôt que le maire de la ville. Ce choix lui vaut une rétrogradation et la rupture de ses fiançailles. Neuf ans plus tard, une série de meurtres frappe l'Allemagne, et Tenma comprend que l'enfant qu'il a sauvé, Johan, pourrait en être l'auteur. Soupçonné par la police, il part sur ses traces pour l'arrêter.
 
 **Thèmes abordés**
 
@@ -28,14 +39,13 @@ Fiche AniList : https://anilist.co/manga/30001
 
 **Vocabulaire.** Common Sense Media (animé, version anglaise) relève un langage modéré : « damn », « hell », « bastard », « ass », « bitch ». Aucune source consultée ne décrit le langage de l'édition française du manga.
 
-**Avis.** Monster est un thriller psychologique très réputé, récompensé notamment par le prix culturel Osamu Tezuka. La traque est haletante mais très sombre : meurtres en série, suicide, maltraitance et manipulation d'enfants, héritage du nazisme et de la RDA. La violence est fréquente et sanglante, sans gore détaillé, et la peur vient surtout de l'atmosphère. La série est longue (18 tomes, ou 9 dans l'édition Intégrale Deluxe de Kana) et Kana souligne son intérêt pour les cours d'histoire du lycée. Mieux vaut avoir 16 ans pour découvrir cette série.
+**Avis.** Monster est un thriller psychologique très réputé, récompensé notamment par le prix culturel Osamu Tezuka. La traque est haletante mais très sombre : meurtres en série, suicide, maltraitance et manipulation d'enfants, héritage du nazisme et de la RDA. Les sources décrivent une œuvre violente et sombre ; pour l'animé, Common Sense Media relève beaucoup de sang mais pas de gore détaillé, et une peur qui vient surtout de l'atmosphère. La série est longue (18 tomes, ou 9 dans l'édition Intégrale Deluxe de Kana) et Kana souligne son intérêt pour les cours d'histoire du lycée. Mieux vaut avoir 16 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
 - Common Sense Media (animé) : Conseille dès 15 ans : thriller psychologique sombre et sanglant, avec meurtres, armes et tentatives de suicide, mais sans gore détaillé. Conclusion : « not for younger viewers ». (https://www.commonsensemedia.org/tv-reviews/monster)
 - Viz Media (édition américaine du manga) : Classe la série « Teen Plus », catégorie que l'éditeur décrit comme pouvant convenir aux grands adolescents et aux adultes (violence intense ou sanglante, contenu sexuel, langage grossier fréquent). (https://www.viz.com/manga-books/manga/monster-volume-1-0/product/3451)
 - Kana (éditeur français) : Le « mot du prof » rappelle que les thèmes de la série (eugénisme, expériences nazies, RDA) sont évoqués en cours d'histoire au lycée. Aucun âge indiqué. (https://www.kana.fr/series/monster-integrale-deluxe/)
-- Wikipédia (français), animé : L'infobox indique « Interdit aux moins de 12 ans » pour la diffusion française de l'animé (Canal+ en 2006, France 4 en 2014), sans source précise. (https://fr.wikipedia.org/wiki/Monster_(manga))
 
 **Sources**
 
@@ -50,14 +60,23 @@ Fiche AniList : https://anilist.co/manga/30001
 
 - Âge retenu 16 au lieu de 14 (estimation automatique) : Common Sense Media donne 15 ans pour l'animé, Viz classe le manga « Teen Plus » (grands adolescents), la série est publiée en seinen (collection Big Kana) et Kana la rattache au programme d'histoire du lycée. 14 ans reste défendable pour un lecteur mûr.
 - Les détails de violence, suicide, nudité, alcool et langage viennent de la critique Common Sense Media de l'animé, pas du manga. À vérifier sur le manga si possible.
-- La mention « Interdit aux moins de 12 ans » n'a été lue que dans l'infobox de Wikipédia (français), sans source directe ; la référence citée par l'article évoque des « séries d'animation pour adultes » sur France 4. À confirmer avant de la citer.
+- Révision 2 : la mention « Interdit aux moins de 12 ans » (infobox de Wikipédia en français, sans référence) a été retirée de « Ce que disent les autres ». La note de l'article ne donne qu'un titre (« Monster et Archer : deux séries d'animation pour adultes prochainement sur France 4 », 18 mars 2014), non lu. Une source de diffusion ou de classification (France 4, Canal+, Arcom) reste à trouver.
+- Résumé : Wikipédia (français) parle d'une rétrogradation et de fiançailles rompues, et précise que Tenma devient plus tard chef du service de chirurgie ; Wikipedia (anglais) dit seulement que sa carrière stagne.
+- L'absence de gore détaillé n'est établie que pour l'animé (Common Sense Media). Aucune source consultée ne décrit le niveau de détail graphique du manga.
 - L'étiquette AniList « Torture » (marquée spoiler) n'est confirmée par aucune source consultée ; elle n'apparaît donc pas dans la fiche.
 - La scène « Expériences sur des enfants » repose sur Wikipédia (anglais) et sur le « mot du prof » de Kana (pratiques eugénistes) : une seule source décrit l'orphelinat.
 - Manga-News, Nautiljon et Anime News Network ont refusé l'accès (blocage des robots) ; aucune critique jeunesse française n'a été trouvée pour ce titre seinen.
 
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [resume] « Lui coûte sa carrière » est excessif : Tenma est rétrogradé, puis devient chef de service. → appliquee : Wikipédia (français) vérifié : « Le Dr Tenma est alors rétrogradé par le directeur de l'hôpital, et sa fiancée le quitte » ; il devient plus tard chef du service de chirurgie. Phrase remplacée par « Ce choix lui vaut une rétrogradation et la rupture de ses fiançailles. »
+- Pipo [avis] L'absence de gore détaillé, documentée pour l'animé, est étendue au manga. → appliquee : Common Sense Media vérifié : « a lot of blood, but there is no graphic or detailed gore » figure dans la critique de la série animée. L'avis attribue désormais ce constat à l'animé et parle d'une œuvre violente et sombre pour le reste. Point ajouté aux notes de relecture.
+- Pipo [autres] Supprimer la mention « Interdit aux moins de 12 ans » tirée de l'infobox Wikipédia, non sourcée. → appliquee : Wikipédia (français) vérifié : la mention figure dans l'infobox sans référence, et la note de l'article ne donne que le titre d'un article sur des « séries d'animation pour adultes » sur France 4. Entrée retirée de « Ce que disent les autres » ; le point reste dans les notes de relecture.
+- Mario [autres] Retirer la mention « Interdit aux moins de 12 ans » ou la remplacer par la diffusion sur France 4 dans une case pour adultes. → appliquee : Même vérification sur Wikipédia (français). Entrée retirée plutôt que reformulée : l'article cité en référence n'a pu être vu que par son titre, ce qui ne suffit pas à décrire une case de diffusion.
+
 ---
 
-## Berserk (AniList 30002) : adultes
+## Berserk (AniList 30002) : adultes, révision 2
 
 Fiche AniList : https://anilist.co/manga/30002
 
@@ -74,8 +93,8 @@ Fiche AniList : https://anilist.co/manga/30002
 
 - [Violence] *Violence extrême et gore* : Violence omniprésente et très graphique : démembrements, décapitations, éviscérations, exécutions, morts grotesques. ActuaLitté parle de combats extrêmement brutaux et de gore, et Glénat met en avant la violence de la série.
 - [Violence] [révèle l'intrigue] *Torture* : Des scènes de torture sont montrées, et un personnage subit de longues tortures (Common Sense Media pour l'animé de 1997, Wikipédia pour le manga).
-- [Nudité et sexualité] [révèle l'intrigue] *Viol montré à l'écran* : Un moment clé de la série montre un viol commis sous les yeux du compagnon de la victime. Common Sense Media le décrit comme très perturbant dans l'animé ; Wikipédia confirme la scène dans le manga.
-- [Nudité et sexualité] *Abus sur un enfant* : Common Sense Media signale une scène d'agression sexuelle sur un enfant dans l'animé de 1997, liée au passé d'un personnage.
+- [Nudité et sexualité] [révèle l'intrigue] *Scène de viol* : Lors d'un moment clé du manga, une héroïne de la série est violée sous les yeux de son compagnon, grièvement blessé en tentant de la protéger (Wikipédia, français et anglais). Common Sense Media décrit cette scène comme très perturbante dans l'animé de 1997.
+- [Nudité et sexualité] [révèle l'intrigue] *Viol d'un enfant* : Dans le manga, Guts, encore enfant, est violé par un mercenaire à qui son père adoptif l'a « vendu » (Wikipédia, article consacré à Guts). Common Sense Media signale aussi des abus sexuels sur un enfant dans l'animé de 1997, sans préciser la scène.
 - [Nudité et sexualité] *Nudité et scène de sexe* : Nudité masculine et féminine à plusieurs reprises et au moins une scène de sexe (Common Sense Media, animé de 1997).
 - [Peur et horreur] *Créatures cauchemardesques* : Démons et créatures cauchemardesques, ambiance de désespoir et de folie (ActuaLitté). Glénat classe la série dans le genre horreur.
 - [Thèmes sensibles] [révèle l'intrigue] *Tentative de suicide* : Un personnage tente de se trancher la gorge (Common Sense Media, animé de 1997).
@@ -88,7 +107,6 @@ Fiche AniList : https://anilist.co/manga/30002
 
 - Glénat (éditeur français) : Mentions « public averti » et « Dès 18 ans » sur la fiche du tome 1 (nouvelle édition). (https://www.glenat.com/glenat-manga/berserk-tome-01-nouvelle-edition-9782344020685/)
 - Common Sense Media (animé de 1997) : Conseille dès 17 ans : dark fantasy au contenu graphique et sexuel extrême, réservée à un public mature. (https://www.commonsensemedia.org/tv-reviews/berserk)
-- Wikipédia (fr), à propos de l'animé de 1997 : Indique que la série animée de 1997 était interdite aux moins de 16 ans à la télévision et en DVD. (https://fr.wikipedia.org/wiki/Berserk_(manga))
 - Manga Librarian (bibliothécaire de lycée) : Range Berserk « firmly in the adult category » parmi les titres qu'elle n'achète pas pour un lycée (réponse à un commentaire). (https://mangalibrarian.com/2022/04/24/manga-for-middle-grades-a-delicate-balance/)
 
 **Sources**
@@ -99,72 +117,28 @@ Fiche AniList : https://anilist.co/manga/30002
 - Berserk (manga), Wikipédia (fr) : https://fr.wikipedia.org/wiki/Berserk_(manga)
 - Berserk Tome 1, chronique ActuaLitté : https://actualitte.com/article/123683/michroniques/berserk-tome-1-kentaro-miura-david-deleule-9782344020685
 - Manga for Middle Grades: A Delicate Balance, Manga Librarian : https://mangalibrarian.com/2022/04/24/manga-for-middle-grades-a-delicate-balance/
+- Berserk (manga), Wikipedia (anglais) : https://en.wikipedia.org/wiki/Berserk_(manga)
+- Guts (Berserk), Wikipédia (fr) : https://fr.wikipedia.org/wiki/Guts_(Berserk)
 
 **Points à vérifier en priorité**
 
 - Âge retenu 18 = âge automatique, en accord avec la mention « Dès 18 ans » de Glénat (lue sur la fiche du tome 1, nouvelle édition). Common Sense Media indique 17 ans pour l'animé de 1997.
-- Les détails de scènes (viol, abus sur enfant, tentative de suicide, nudité) viennent de la critique Common Sense Media de l'animé de 1997, qui n'adapte qu'une partie du manga (tomes 3 à 13 selon Wikipédia). Le contenu des arcs suivants n'est détaillé par aucune source parentale consultée.
-- Classement « interdit aux moins de 16 ans » de l'animé de 1997 : seule source Wikipédia, sans référence vérifiée.
+- Les détails sur les abus sexuels sur enfant, la tentative de suicide et la nudité viennent de la critique Common Sense Media de l'animé de 1997, qui n'adapte qu'une partie du manga (tomes 3 à 13 selon Wikipédia). Le viol de Casca et celui de Guts enfant sont confirmés pour le manga par Wikipédia (articles Berserk en français et en anglais, article Guts en français), sans description du niveau de détail des images. Le contenu des arcs suivants n'est détaillé par aucune source parentale consultée.
+- L'avis parle de « violences sexuelles explicites » : aucune source consultée ne décrit le degré de représentation de ces scènes dans le manga (Common Sense Media le fait pour l'animé). D'où le titre de scène neutre « Scène de viol ».
+- La mention « interdit aux moins de 16 ans » de l'animé de 1997 a été retirée de « Ce que disent les autres » : Wikipédia (fr) l'appuie sur une page Canal+ et une page Fnac, qui ont toutes deux refusé l'accès. Elle reste donc non vérifiée.
 - Nombre de tomes : 43 au Japon selon Wikipédia (fr) ; la page série de Glénat liste des tomes jusqu'au 43. Une édition prestige existe aussi depuis 2025.
 - L'avis de Manga Librarian est une réponse à un commentaire, pas une critique complète.
 
----
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
 
-## 20th Century Boys (AniList 30003) : dès 14 ans
-
-Fiche AniList : https://anilist.co/manga/30003
-
-**Résumé.** En 1969, Kenji et ses amis d'enfance se retrouvent dans une base secrète. Ils y inventent une histoire de science-fiction où une organisation maléfique veut détruire l'humanité, et la consignent dans un « cahier des prédictions ». En 1997, Kenji, devenu gérant d'une supérette, élève sa nièce Kanna, encore bébé. Après la mort d'un ami d'enfance, il découvre qu'une secte menée par un mystérieux « Ami » réalise une à une les prédictions de leur enfance. Kenji et ses anciens camarades tentent d'empêcher la fin du monde annoncée pour le 31 décembre 2000.
-
-**Thèmes abordés**
-
-- *Amitié d'enfance et nostalgie* : Le critique Jason Thompson y voit une épopée de la nostalgie, de l'âge mûr et du rock, qu'il compare à Ça de Stephen King : des amis d'enfance se retrouvent adultes pour affronter ce qu'ils ont laissé derrière eux.
-- *Sectes et manipulation* : La série aborde la propagande, la manipulation des foules, le pouvoir des sectes et les peurs de fin du monde (Wikipédia, français). Des critiques citent la secte Aum Shinrikyo comme source d'inspiration.
-- *Héroïsme ordinaire* : Des gens ordinaires se retrouvent pris dans des événements qui les dépassent. Le Centre national de la littérature pour la jeunesse souligne l'héroïsme, l'émotion et une réflexion sur le monde contemporain et l'anonymat de l'individu.
-- *Terrorisme et armes biologiques* : Les attentats et les attaques au virus sont au cœur de l'intrigue (Wikipédia). Le récit montre une organisation qui tire profit des catastrophes pour gagner en popularité et en pouvoir.
-
-**Scènes difficiles**
-
-- [Thèmes sensibles] *Mort d'un ami d'enfance* : Le point de départ est la mort d'un ami d'enfance, présentée comme un suicide (Wikipédia, anglais et français).
-- [Violence] *Attentats et attaques au virus* : La secte réalise les prédictions : attentats à la bombe et attaques virales à San Francisco, à Londres et dans un grand aéroport japonais (Wikipédia, anglais).
-- [Violence] [révèle l'intrigue] *Catastrophe de masse* : Le virus est répandu à grande échelle le soir du Nouvel An 2000, puis une épidémie mondiale menace de tuer tous ceux qui ne sont pas vaccinés. Un plan prévoit d'éliminer presque toute l'humanité (Wikipédia, anglais).
-- [Thèmes sensibles] [révèle l'intrigue] *Régime autoritaire* : Dans la dernière partie, le Japon vit sous un régime qui exile les non-vaccinés et interdit les déplacements sous peine de mort ; une lycéenne subit un programme de lavage de cerveau (Wikipédia, anglais).
-- [Violence] [révèle l'intrigue] *Meurtres et assassinats* : Le récit comporte des meurtres, dont celui d'un mafieux par un policier corrompu, des tentatives d'assassinat et des mafias rivales (Wikipédia, anglais).
-- [Nudité et sexualité] *Revues pornographiques* : Enfants, les héros partagent dans leur base des mangas et des revues pornographiques volées (Wikipédia, anglais). Ils déchirent aussi l'affiche d'un film érotique (Wikipédia, français).
-- [Peur et horreur] *Suspense et horreur* : Le critique Matthew Meylikhov (Paste) décrit une expérience mêlant horreur, science-fiction et futur post-apocalyptique. Le Centre national de la littérature pour la jeunesse parle d'un suspense permanent.
-
-**Vocabulaire.** Non renseigné par les sources consultées.
-
-**Avis.** 20th Century Boys est un thriller ambitieux et souvent émouvant, qui suit sur plusieurs décennies un groupe d'amis ordinaires face à une secte qui veut détruire le monde. Les sources consultées décrivent peu de scènes graphiques, mais les thèmes sont lourds : attentats, épidémies meurtrières, manipulation des foules, régime autoritaire. La narration, faite d'allers-retours entre les époques et d'un très grand nombre de personnages, demande de la maturité. L'édition française est classée seinen et l'éditeur américain la juge adaptée aux adolescents plus âgés et aux adultes. Mieux vaut avoir 14 ans pour découvrir cette série.
-
-**Ce que disent les autres**
-
-- Viz Media (éditeur américain du manga) : Classe la Perfect Edition « Teen Plus », catégorie que l'éditeur définit comme pouvant convenir aux adolescents plus âgés et aux adultes. (https://www.viz.com/read/manga/20th-century-boys-the-perfect-edition-volume-1/product/5630)
-- Centre national de la littérature pour la jeunesse (BnF), La Revue des livres pour enfants n° 325 : Range la série en seinen et la retient dans son dossier manga (juin 2022) : « Héroïsme, émotion sont au rendez-vous », avec une réflexion sur le monde contemporain dans un suspense permanent. Pas d'âge indiqué. (https://cnlj.bnf.fr/sites/default/files/revues_document_joint/dossier_principales_series_325.pdf)
-- Jason Thompson, critique (cité par Wikipédia, anglais) : Bien que destinée à un public masculin, la série a conquis des lecteurs de tous âges grâce à son point de départ, sa narration et le mystère autour d'« Ami ». (https://en.wikipedia.org/wiki/20th_Century_Boys)
-- Panini (éditeur français, via ActuaLitté) : Présente la série comme un « thriller passionnant », récompensé notamment à Angoulême en 2004 ; genre indiqué : seinen. Aucun âge indiqué. (https://actualitte.com/livres/402511/extraits/20th-century-boys-perfect-edition-tome-11-naoki-urasawa-takashi-nagasaki-vincent-zouzoulkovsky-9782809499063)
-
-**Sources**
-
-- VIZ | 20th Century Boys: The Perfect Edition, Vol. 1 : https://www.viz.com/read/manga/20th-century-boys-the-perfect-edition-volume-1/product/5630
-- VIZ | Our Ratings : https://www.viz.com/ratings
-- 20th Century Boys Perfect Edition Tome 11, ActuaLitté (fiche Panini France) : https://actualitte.com/livres/402511/extraits/20th-century-boys-perfect-edition-tome-11-naoki-urasawa-takashi-nagasaki-vincent-zouzoulkovsky-9782809499063
-- La Revue des livres pour enfants n° 325, juin 2022 : Mangas, la déferlante. Dossier : Les principales séries citées dans notre dossier (CNLJ, BnF) : https://cnlj.bnf.fr/sites/default/files/revues_document_joint/dossier_principales_series_325.pdf
-- 20th Century Boys, Wikipédia (français) : https://fr.wikipedia.org/wiki/20th_Century_Boys
-- 20th Century Boys, Wikipedia (anglais) : https://en.wikipedia.org/wiki/20th_Century_Boys
-
-**Points à vérifier en priorité**
-
-- Âge 14 au lieu de 12 (estimation automatique) : édition française classée seinen, classement « Teen Plus » de Viz, thèmes lourds (terrorisme biologique, morts de masse, secte, régime autoritaire) et récit complexe. Écart à confirmer.
-- Aucune source ne donne d'âge chiffré : pas de fiche Common Sense Media (adresses testées introuvables) ni filmspourenfants.net trouvée.
-- Aucune source ne détaille l'intensité visuelle de la violence ni la nudité (étiquette AniList « Nudity ») : la rubrique sexe se limite aux revues pornographiques et à l'affiche mentionnées par Wikipédia.
-- Les scènes marquées spoiler s'appuient uniquement sur le résumé de Wikipédia (anglais).
-- Page officielle Panini non consultée (recherche web épuisée) : informations éditeur reprises de la fiche ActuaLitté du tome 11 de la Perfect Edition (paru le 12/01/2022, 418 pages) et du dossier du CNLJ (première édition Génération Comics-Panini, 22 tomes, 2002-2007 ; réédition à partir de 2020). L'histoire se conclut dans 21st Century Boys (2 tomes). Selon Panini, la Perfect Edition comporte « une fin inédite » reprise de l'adaptation au cinéma.
-- Angoulême 2004 : ActuaLitté (texte éditeur) parle du « prix du meilleur scénario », Wikipédia (anglais) du prix de la série. Formulation laissée générale dans la fiche.
+- Pipo [scenes] Le titre « Viol montré à l'écran » ne convient pas à un manga ; proposer « Viol représenté explicitement » et ajouter la source anglophone. → partielle : « À l'écran » retiré : la scène s'intitule désormais « Scène de viol » (spoiler conservé). Wikipédia anglais (Berserk) confirme que Femto viole Casca pendant que Guts perd un œil et un bras en tentant de la protéger ; l'article est ajouté aux sources et cité dans la scène. « Représenté explicitement » non retenu : ni Wikipédia (fr, en) ni aucune autre source consultée ne décrit le niveau de détail de la scène dans le manga.
+- Pipo [scenes] Common Sense Media ne relie pas l'abus sur enfant au passé d'un personnage ; documenter pour le manga le viol de Guts enfant, en spoiler. → appliquee : Vérifié : Common Sense Media mentionne seulement « child molestation ». L'article Wikipédia (fr) consacré à Guts indique que son père adoptif Gambino le « vend » à un mercenaire, Donovan, qui le viole. Scène réécrite pour le manga (titre « Viol d'un enfant », spoiler: true), Common Sense Media cité à part pour l'animé ; article Guts ajouté aux sources.
+- Pipo [sources] Wikipédia (fr) ne confirmerait pas en détail le viol ; ajouter Wikipédia (en) et le rattacher à la scène. → partielle : L'article français confirme bien la scène (synopsis : « Il viole alors abjectement Casca sous les yeux de Guts ») : il est conservé. L'article anglais, qui la confirme aussi, est ajouté aux sources et cité dans la scène.
+- Mario [autres] Supprimer la mention Wikipédia d'une interdiction aux moins de 16 ans de l'animé de 1997, non vérifiée. → appliquee : Ligne supprimée. Nuance : Wikipédia (fr) donne deux références (une page Canal+ et la page Fnac du coffret DVD), mais les deux sites ont refusé l'accès. L'affirmation reste invérifiable, elle est donc retirée ; point noté dans notes_relecture.
 
 ---
 
-## Naruto (AniList 30011) : dès 12 ans
+## Naruto (AniList 30011) : dès 12 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/30011
 
@@ -181,17 +155,17 @@ Fiche AniList : https://anilist.co/manga/30011
 **Scènes difficiles**
 
 - [Violence] *Combats de plus en plus durs* : Les combats, avec ou sans armes, rythment toute la série. filmspourenfants.net (série animée) note que les premiers épisodes sont plutôt bon enfant mais que la série devient de plus en plus dure, avec du sang et des blessures marquantes. Pour la première série animée, Common Sense Media juge ces combats fréquents mais peu sanglants.
-- [Violence] *Massacre d'un clan et passés tragiques* : Sasuke est le seul rescapé du massacre de son clan, et Common Sense Media précise qu'un personnage principal a vu sa famille assassinée sous ses yeux. Plusieurs autres personnages ont un passé traumatisant. L'animé montre aussi de la torture physique et psychologique, sans images crues.
+- [Violence] *Massacre d'un clan et passés tragiques* : Sasuke a survécu au massacre de son clan, et Common Sense Media précise qu'un personnage principal a vu sa famille assassinée sous ses yeux. Plusieurs autres personnages ont un passé traumatisant. L'animé montre aussi de la torture physique et psychologique, sans images crues.
 - [Violence] [révèle l'intrigue] *Morts de personnages appréciés* : Plusieurs personnages importants, dont un mentor du héros, meurent au fil de l'histoire, parfois en se sacrifiant. filmspourenfants.net cite le « meurtre de personnages appréciés » parmi les scènes difficiles.
 - [Violence] [révèle l'intrigue] *Une guerre à grande échelle (seconde partie)* : La seconde partie, qui commence au tome 28 et a été adaptée en animé sous le titre Naruto Shippûden, culmine avec une guerre entre des dizaines de milliers de combattants. Pour Shippûden, Common Sense Media évoque des cadavres, de brèves images de charniers et des villages rasés ; filmspourenfants.net parle de scènes « franchement gores ».
 - [Peur et horreur] *Monstres et méchants inquiétants* : Common Sense Media (animé) liste des créatures qui peuvent effrayer : cadavres ramenés à la vie, serpent à trois têtes, nuées d'insectes, démons. filmspourenfants.net cite l'allure de certains méchants, comme Orochimaru et sa longue langue.
 - [Nudité et sexualité] *Humour à connotation sexuelle* : Naruto utilise une « technique sexy » qui le transforme en femme nue, l'essentiel étant caché par des nuages ou des objets. Son maître Jiraiya, « l'ermite pervers », épie les femmes aux bains. Common Sense Media regrette que ce comportement soit traité comme un gag et que ce personnage soit présenté comme un modèle.
-- [Thèmes sensibles] *Alcool, tabac et tentatives de suicide (animé)* : Common Sense Media (animé) relève que l'ivresse sert de ressort comique, qu'un professeur fume en permanence et que des personnages secondaires tentent de se suicider avant d'être arrêtés par les héros. Les sources consultées ne disent pas si toutes ces scènes figurent dans le manga.
+- [Thèmes sensibles] *Alcool, tabac et tentatives de suicide (animé)* : Common Sense Media (animé) relève que l'ivresse sert de ressort comique, qu'un professeur fume en permanence et que des personnages secondaires tentent de se suicider avant d'être arrêtés par les héros. Ces observations portent sur la série animée, dont une partie des épisodes n'existe pas dans le manga (Wikipédia) ; les sources consultées ne disent pas si ces scènes figurent dans le manga.
 - [Autre] *Stéréotypes sexistes et moqueries sur le poids* : Common Sense Media signale des clichés sexistes non remis en cause (personnages féminins moins forts, souvent à sauver) et des moqueries répétées sur le poids d'un personnage.
 
 **Vocabulaire.** Selon Common Sense Media (animé, version anglaise), la première série ne contient pas de jurons mais beaucoup d'insultes comme « idiot » ou « loser » et des moqueries sur le poids ou la poitrine ; Naruto Shippûden ajoute de rares « hell », « damn », « crap » ou « bastard ». Pour la version française de l'animé, filmspourenfants.net parle d'un vocabulaire « parfois bien expressif (grossier, à consonance sexuelle) ». Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
 
-**Avis.** Naruto est une grande saga d'aventure et d'apprentissage, portée par des messages forts sur la persévérance, l'amitié et le refus d'abandonner. Le ton, d'abord léger et comique, s'assombrit nettement à partir de la seconde partie (tome 28), avec des combats plus violents, des morts marquantes et une guerre. L'humour à connotation sexuelle autour de la « technique sexy » et de Jiraiya mérite d'en parler avec les plus jeunes. Les âges proposés vont de 11 ans (Common Sense Media) à 12 ou 13 ans (filmspourenfants.net). Mieux vaut avoir 12 ans pour découvrir cette série.
+**Avis.** Naruto est une grande saga d'aventure et d'apprentissage, portée par des messages forts sur la persévérance, l'amitié et le refus d'abandonner. Le ton, d'abord léger et comique, s'assombrit nettement à partir de la seconde partie (tome 28), avec des combats plus violents, des morts marquantes et une guerre. L'humour à connotation sexuelle autour de la « technique sexy » et de Jiraiya mérite d'en parler avec les plus jeunes. Common Sense Media conseille les deux séries animées dès 11 ans ; filmspourenfants.net indique 13 ans pour Naruto, le déconseille avant 12 ans et situe Naruto Shippûden plutôt vers 15 ans. Mieux vaut avoir 12 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -214,15 +188,23 @@ Fiche AniList : https://anilist.co/manga/30011
 
 **Points à vérifier en priorité**
 
-- Âge retenu 12 ans, au-dessus de l'estimation automatique (10) : filmspourenfants.net indique « à partir de 13 ans » et déconseille avant 12 ans, Viz classe le manga « Teen ». Common Sense Media dit 11 ans (parents 9, enfants 10). La seconde partie est jugée plus dure (filmspourenfants.net : plutôt 15 ans pour Shippûden) ; 14 ans reste défendable si l'on pèse surtout la fin de la série.
-- Toutes les rubriques de contenu (sang, torture, tentatives de suicide, alcool, monstres) viennent de critiques de la série animée, qui contient des épisodes absents du manga. À vérifier dans le manga, en priorité les tentatives de suicide de personnages secondaires.
-- Correspondance « seconde partie = à partir du tome 28 » : Wikipédia (fr) situe la fin de la première partie au chapitre 238, dans le tome 27.
+- Âge maintenu à 12 ans (accord des deux relecteurs), au-dessus de l'estimation automatique (10) : filmspourenfants.net indique « À partir de 13 ans » et déconseille avant 12 ans, Viz classe le manga « Teen ». Common Sense Media dit 11 ans pour les deux séries animées (parents 9 et 12 ans, enfants 10 et 11 ans). La seconde partie est jugée plus dure (filmspourenfants.net : plutôt 15 ans pour Shippûden) ; 14 ans reste défendable si l'on pèse surtout la fin de la série.
+- Tentatives de suicide de personnages secondaires : documentées par Common Sense Media pour l'animé seulement. Mario les attribue à des épisodes de remplissage, mais ni Wikipédia (fr, en) ni Common Sense Media ne le disent, et une recherche web n'a rien donné. À vérifier : épisode concerné et présence ou non dans le manga.
+- Les autres rubriques de contenu (sang, torture, alcool, tabac, monstres) viennent aussi de critiques de la série animée, qui contient des épisodes absents du manga.
+- Massacre du clan : la fiche dit désormais que Sasuke « a survécu » (Wikipedia en : Itachi a détruit le clan à condition que Sasuke soit épargné). Le fait d'avoir vu sa famille tuée sous ses yeux reste appuyé par la seule formule de Common Sense Media, qui ne nomme pas le personnage.
+- Correspondance « seconde partie = à partir du tome 28 » : Wikipédia (fr) situe la fin de la première partie au chapitre 238, dans le tome 27 ; Mario confirme le début de la seconde partie au tome 28.
 - Aucune mention d'âge sur la page Kana consultée. Le classement Viz a été lu sur la fiche du volume 15 seulement. La fiche Manga-News refuse l'accès automatisé : non consultée.
 - Les remarques sur la solitude, la rivalité avec Sasuke et le cycle de la haine reprennent des analyses universitaires et critiques citées par Wikipedia (en), pas des sources lues directement.
 
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [scenes] « Sasuke est le seul rescapé du massacre de son clan » est une affirmation absolue inexacte ; proposer « a survécu au massacre et a vu ses parents assassinés ». → partielle : Wikipedia (en) ne dit pas « seul rescapé » : elle indique qu'Itachi a détruit le clan à condition que Sasuke soit épargné, et d'autres Uchiwa réapparaissent vivants (Obito). Remplacé par « Sasuke a survécu au massacre de son clan ». L'ajout « a vu ses parents assassinés » n'est pas repris : aucune source consultée ne le dit de Sasuke nommément ; la formule de Common Sense Media (un personnage principal dont la famille a été tuée sous ses yeux) est conservée.
+- Pipo [avis] La fourchette d'âges de l'avis omet les 15 ans conseillés par filmspourenfants.net pour Shippûden. → appliquee : Vérifié sur filmspourenfants.net (« À partir de 13 ans », déconseillé aux moins de 12 ans, Shippûden « plutôt pour les 15 ans ») et sur Common Sense Media (11 ans pour Naruto et pour Naruto Shippuden). Phrase de l'avis réécrite avec ces trois repères.
+- Mario [scenes] Les tentatives de suicide viennent d'épisodes de remplissage de l'animé : les retirer ou préciser qu'il s'agit d'ajouts propres à l'animé. → partielle : La source citée (Wikipédia fr) ne parle ni de tentatives de suicide ni de leur origine ; Wikipedia (en) et Common Sense Media non plus, et une recherche web n'a rien trouvé. La mention n'est donc ni supprimée (Common Sense Media la documente) ni présentée comme un ajout de l'animé. Ajout vérifié : ces observations portent sur la série animée, dont une partie des épisodes n'existe pas dans le manga (Wikipédia fr : épisodes 136 à 220, histoires parallèles ; Wikipedia en : 85 épisodes originaux).
+
 ---
 
-## Bleach (AniList 30012) : dès 14 ans
+## Bleach (AniList 30012) : dès 14 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/30012
 
@@ -239,8 +221,9 @@ Fiche AniList : https://anilist.co/manga/30012
 
 - [Violence] *Combats au sabre sanglants* : Les combats au sabre et aux pouvoirs spirituels sont constants. Common Sense Media relève des scènes sanglantes avec des lames dans le premier animé, et juge l'adaptation du dernier arc (« Thousand-Year Blood War ») plus sombre et plus violente : nombreux coups d'épée sanglants, violence gore, une décapitation.
 - [Violence] *Bagarres entre père et fils* : Ichigo et son père en viennent souvent aux poings. Même sans effusion de sang, Common Sense Media trouve difficile de voir un adolescent et son père échanger des coups (animé).
-- [Peur et horreur] *Monstres et fantômes* : Les hollows, âmes perdues devenues monstrueuses, s'attaquent aux vivants comme aux morts, et leur apparence est effrayante. Dans les premiers tomes, une jeune fille voit son frère mort revenir sous forme de hollow et l'attaquer. Le film de 2018 montre aussi des fantômes ensanglantés et une poursuite par une araignée géante.
-- [Thèmes sensibles] *Mort d'une mère* : La mort de la mère d'Ichigo pèse sur toute la famille. Dans le film de 2018, un retour en arrière montre ses blessures sanglantes.
+- [Peur et horreur] *Monstres et fantômes* : Les hollows, âmes perdues devenues monstrueuses, s'attaquent aux vivants comme aux morts, et leur apparence est effrayante. Dans les premiers tomes, une jeune fille voit son frère mort revenir sous forme de hollow et l'attaquer.
+- [Peur et horreur] [révèle l'intrigue] *Combattants changés en morts-vivants* : Dans le dernier arc, une ennemie transforme les combattants touchés par son sang en morts-vivants soumis à ses ordres. Plusieurs personnages connus subissent cette transformation (Wikipédia anglais, liste des personnages).
+- [Thèmes sensibles] *Mort d'une mère* : La mort de la mère d'Ichigo pèse sur toute la famille.
 - [Nudité et sexualité] *Personnages féminins aux formes exagérées* : Rien d'explicitement sexuel, mais certains personnages féminins ont une poitrine très exagérée, toujours couverte (Common Sense Media, adaptation du dernier arc).
 
 **Vocabulaire.** Langage jugé assez léger par Common Sense Media dans les animés (version anglaise) : « ugly bastard », « what the hell is that? », « hell », « bastard ». filmspourenfants.net ne relève que le vocabulaire propre à la série dans le film de 2018. Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
@@ -249,9 +232,9 @@ Fiche AniList : https://anilist.co/manga/30012
 
 **Ce que disent les autres**
 
-- Common Sense Media (animé Bleach, 2006) : Conseille dès 16 ans : « Mature anime series is spooky and violent. » Les avis de parents (31) et d'enfants (193) indiquent 12 ans. (https://www.commonsensemedia.org/tv-reviews/bleach)
-- Common Sense Media (animé Bleach: Thousand-Year Blood War, 2022) : Conseille dès 14 ans : suite plus sombre et plus violente que la série d'origine. Les avis de parents indiquent 11 ans (5 avis). (https://www.commonsensemedia.org/tv-reviews/bleach-thousand-year-blood-war)
-- filmspourenfants.net (film en prises de vue réelles, 2018) : Conseille « à partir de 13 ans » et le déconseille aux moins de 12 ans : un film sur la mort avec un thème intéressant autour du deuil, mais surtout de grands combats. (https://www.filmspourenfants.net/bleach-the-soul-reaper-agent-arc-2/)
+- Common Sense Media (animé Bleach, 2006) : Conseille dès 16 ans : « Mature anime series is spooky and violent. » Les avis de parents et d'enfants indiquent 12 ans (31 et 193 avis au 4 novembre 2026). (https://www.commonsensemedia.org/tv-reviews/bleach)
+- Common Sense Media (animé Bleach: Thousand-Year Blood War, 2022) : Conseille dès 14 ans : suite plus sombre et plus violente que la série d'origine. Les avis de parents indiquent 11 ans (5 avis au 4 novembre 2026). (https://www.commonsensemedia.org/tv-reviews/bleach-thousand-year-blood-war)
+- filmspourenfants.net (film en prises de vue réelles, 2018) : Conseille « à partir de 13 ans » et le déconseille aux moins de 12 ans : un film sur la mort avec un thème intéressant autour du deuil, mais surtout de grands combats. Relève des fantômes ensanglantés, une poursuite par une araignée géante et, dans un retour en arrière, les blessures sanglantes de la mère d'Ichigo. Observations propres au film, non vérifiées dans le manga. (https://www.filmspourenfants.net/bleach-the-soul-reaper-agent-arc-2/)
 - Viz Media (éditeur américain, manga) : Classe le tome 1 « Teen » (adolescents). (https://www.viz.com/manga-books/manga/bleach-volume-1-0/product/167)
 
 **Sources**
@@ -264,18 +247,26 @@ Fiche AniList : https://anilist.co/manga/30012
 - Bleach, Vol. 1, Viz Media : https://www.viz.com/manga-books/manga/bleach-volume-1-0/product/167
 - Bleach (manga), Wikipédia (français) : https://fr.wikipedia.org/wiki/Bleach_(manga)
 - Bleach (manga), Wikipédia (anglais) : https://en.wikipedia.org/wiki/Bleach_(manga)
+- List of Bleach characters, Wikipédia (anglais) : https://en.wikipedia.org/wiki/List_of_Bleach_characters
 
 **Points à vérifier en priorité**
 
 - Désaccord entre sources : Common Sense Media 16 ans (premier animé, diffusé dans la programmation Adult Swim de Cartoon Network) et 14 ans (animé du dernier arc) ; avis de parents et d'enfants sur Common Sense Media autour de 11-12 ans ; filmspourenfants.net 13 ans pour le film ; Viz Media « Teen ». 14 ans retenu, comme l'estimation automatique.
-- Les scènes décrites viennent des animés, du film de 2018 et de Wikipédia ; aucune critique détaillée du manga lui-même n'a été consultée.
-- Les étiquettes AniList « Zombie » (spoiler) et « Body Horror » ne sont confirmées par aucune source consultée.
+- Les scènes décrites viennent des animés et de Wikipédia ; aucune critique détaillée du manga lui-même n'a été consultée. Les détails propres au film de 2018 (araignée géante, fantômes ensanglantés, blessures de la mère) ont été retirés des scènes et ne figurent plus que dans « Ce que disent les autres », avec une réserve.
+- L'étiquette AniList « Zombie » est désormais confirmée pour le dernier arc (Wikipédia anglais, liste des personnages : pouvoir de Giselle Gewelle). « Body Horror » n'est confirmée par aucune source consultée.
 - Glénat n'affiche pas d'âge sur les fiches consultées (tomes 72 à 74, Deluxe tomes 1 et 2).
-- Le film de 2018 analysé par filmspourenfants.net est en prises de vue réelles : ses détails (araignée géante, fantômes ensanglantés, blessures de la mère) ne sont pas forcément identiques dans le manga.
+- Nombres d'avis Common Sense Media relevés le 4 novembre 2026 : 5 avis de parents pour Thousand-Year Blood War (un relecteur en comptait 4). Ces compteurs évoluent.
+
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [scenes] Ajouter la transformation de combattants en zombies soumis dans le dernier arc (spoiler). → appliquee : Confirmé par Wikipédia anglais (List of Bleach characters) : Giselle Gewelle change les êtres touchés par son sang en esclaves semblables à des cadavres ; Bambietta, Hitsugaya, Rangiku, Rose et Kensei en sont victimes. Scène « Combattants changés en morts-vivants » ajoutée (spoiler), source ajoutée, note sur l'étiquette « Zombie » mise à jour.
+- Pipo [scenes] Retirer des scènes du manga les détails propres au film de 2018 (fantômes ensanglantés, araignée, blessures de la mère) ou les signaler comme non vérifiés. → appliquee : filmspourenfants.net confirme que ces détails concernent le film en prises de vue réelles de 2018. Retirés des scènes « Monstres et fantômes » et « Mort d'une mère » ; rapportés seulement dans « Ce que disent les autres » avec la mention « Observations propres au film, non vérifiées dans le manga ».
+- Pipo [autres] La page Thousand-Year Blood War afficherait 4 avis de parents et non 5 ; supprimer le compteur ou le dater. → partielle : Page Common Sense Media consultée le 4 novembre 2026 : « Based on 5 parent reviews », le chiffre de 5 était donc exact. Compteur conservé mais daté (consultation du 4 novembre 2026), comme celui de la critique de l'animé de 2006.
+- Mario [scenes] Retirer la phrase sur les détails visuels du film de 2018 dans les scènes du manga. → appliquee : Même vérification que pour la remarque de Pipo (filmspourenfants.net : film en prises de vue réelles de 2018). Phrase retirée des scènes ; détails conservés uniquement dans la rubrique « Ce que disent les autres », attribués au film.
 
 ---
 
-## One Piece (AniList 30013) : dès 12 ans
+## One Piece (AniList 30013) : dès 12 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/30013
 
@@ -291,7 +282,7 @@ Fiche AniList : https://anilist.co/manga/30013
 **Scènes difficiles**
 
 - [Violence] *Combats nombreux et parfois brutaux* : Les combats vont du burlesque au brutal, avec épées, armes à feu et pouvoirs surnaturels. Le sang est facilement visible et certains personnages perdent un bras ou la vie, même si les morts restent rares à l'écran (animé, filmspourenfants.net et Common Sense Media).
-- [Thèmes sensibles] *Maltraitance et esclavage* : Des enfants et des captifs sont maltraités, des personnages sont réduits en esclavage ou tatoués de force (adaptation Netflix, filmspourenfants.net). Dans le tome 113, des enfants sont pris en otage (résumé de Glénat).
+- [Thèmes sensibles] *Maltraitance et esclavage* : Le résumé du tome 113 (Glénat) mentionne des enfants pris en otage. L'analyse de l'adaptation Netflix (saison 1) par filmspourenfants.net signale en outre des enfants et des captifs maltraités, des personnages réduits en esclavage et un tatouage forcé ; ces situations n'ont pas été vérifiées ici dans le manga.
 - [Nudité et sexualité] *Violences et harcèlement sexuels* : Common Sense Media signale dans l'animé une scène où un méchant invisible immobilise une femme sous la douche, une femme forcée à une relation avec un méchant, et du harcèlement sexuel traité sur le ton de la comédie.
 - [Nudité et sexualité] *Personnages féminins sexualisés* : Les personnages féminins sont de plus en plus sexualisés au fil des épisodes : décolletés exagérés, hommes qui reluquent les femmes, nudité suggérée sous la douche (filmspourenfants.net et Common Sense Media, animé).
 - [Peur et horreur] *Deuils et morts de personnages appréciés* : Des personnages appréciés peuvent mourir, et des retours en arrière montrent des deuils d'enfance et des adieux déchirants (filmspourenfants.net).
@@ -299,7 +290,7 @@ Fiche AniList : https://anilist.co/manga/30013
 
 **Vocabulaire.** Filmspourenfants.net juge le vocabulaire de l'animé classique, avec beaucoup de termes propres à la série (Escargophone, Log Pose…). Common Sense Media relève en revanche des jurons forts occasionnels dans la version anglaise de l'animé (« f--k », « s--t », « bitch »). Le langage de l'édition française du manga n'est pas renseigné par les sources consultées.
 
-**Avis.** Grande aventure de pirates pleine d'humour, portée par des messages forts sur l'amitié, la liberté et la poursuite de ses rêves. Les combats sont nombreux et parfois sanglants, la série aborde l'esclavage et la maltraitance, et les personnages féminins sont souvent sexualisés. L'éditeur l'indique dès 10 ans, mais les guides parentaux consultés placent l'animé à 12 ou 13 ans, et le manga montre certaines scènes plus crûment que l'animé. Mieux vaut avoir 12 ans pour découvrir cette série.
+**Avis.** Grande aventure de pirates pleine d'humour, portée par des messages forts sur l'amitié, la liberté et la poursuite de ses rêves. Les combats sont nombreux et parfois sanglants, l'adaptation Netflix montre esclavage et maltraitance, et les personnages féminins sont souvent sexualisés. L'éditeur indique le manga dès 10 ans, mais les guides parentaux consultés placent l'animé à 12 ou 13 ans, et Wikipédia relève que la série animée japonaise adoucit quelques scènes violentes du manga. Mieux vaut avoir 12 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -321,19 +312,25 @@ Fiche AniList : https://anilist.co/manga/30013
 
 **Points à vérifier en priorité**
 
-- Écart avec l'âge automatique (10 ans) et avec l'indication de Glénat (« Dès 10 ans », lue sur la fiche du tome 113) : 12 ans retenu car filmspourenfants.net conseille l'animé dès 12 ans, Common Sense Media dès 13 ans, et Wikipédia (section « Différences avec le manga ») indique que la plupart des scènes de l'animé sont censurées pour la télévision, le manga étant donc parfois plus cru. Les relecteurs peuvent préférer 10 ans en suivant l'éditeur.
+- Écart avec l'âge automatique (10 ans) et avec l'indication de Glénat (« Dès 10 ans », lue sur la fiche du tome 113) : 12 ans retenu, et confirmé par les deux relecteurs, car filmspourenfants.net conseille l'animé dès 12 ans et Common Sense Media dès 13 ans. Les relecteurs peuvent préférer 10 ans en suivant l'éditeur.
+- Comparaison manga et animé : Wikipédia (fr, section « Différences avec le manga ») ne documente que deux scènes adoucies dans la série animée japonaise (la jambe que Zeff mange pour survivre dans le manga et s'arrache avec une chaîne dans l'animé ; le coup porté au visage de Barbe Blanche, déplacé au ventre dans l'animé). La phrase « La plupart des scènes sont censurées pour pouvoir passer à la télévision » n'est rattachée à aucune version précise ni sourcée : elle n'est plus utilisée.
 - Les scènes de violence et de harcèlement sexuels viennent d'une seule source (Common Sense Media, animé) ; les arcs concernés ne sont pas précisés.
-- La rubrique « Maltraitance et esclavage » s'appuie sur l'analyse de l'adaptation Netflix (saison 1) et sur le résumé du tome 113 ; aucune source parentale ne porte sur le manga lui-même.
+- La rubrique « Maltraitance et esclavage » distingue désormais le manga (résumé du tome 113 : enfants pris en otage) et l'adaptation Netflix (saison 1). Aucune source parentale ne porte sur le manga lui-même ; la présence de l'esclavage et du tatouage forcé dans le manga reste à confirmer par une source.
 - Nombre de tomes : Wikipédia (fr) indique 112 tomes français (avril 2026) ; la page Glénat liste le tome 113, paru le 23/09/2026, et le tome 114 à paraître le 02/12/2026.
 - Étiquette AniList « Drugs » non confirmée par les sources consultées.
 
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [avis] La comparaison générale « le manga montre certaines scènes plus crûment que l'animé » dépasse ce que dit Wikipédia ; la supprimer ou préciser l'adaptation et les scènes. → appliquee : Vérifié sur Wikipédia (fr), section « Différences avec le manga » : seules deux scènes adoucies dans la série animée japonaise y sont décrites (la jambe de Zeff, le coup porté à Barbe Blanche) ; la phrase sur la censure de « la plupart des scènes » n'est rattachée à aucune version, et la censure « de toute part » vise la version américaine de 4Kids. L'avis dit désormais que « Wikipédia relève que la série animée japonaise adoucit quelques scènes violentes du manga » ; la note de relecture sur l'âge est corrigée dans le même sens.
+- Pipo [scenes] Scène « Maltraitance et esclavage » : distinguer ce qui est établi pour le manga (tome 113 : enfants pris en otage) des observations portant sur l'adaptation Netflix. → appliquee : Vérifié : le résumé Glénat du tome 113 mentionne seulement des enfants pris en otage par les chevaliers divins ; l'analyse filmspourenfants.net de la série Netflix (saison 1) décrit captifs enchaînés, servitude, esclavage passé des hommes-poissons et tatouage forcé (épisode 8). Le texte de la scène sépare maintenant les deux et précise que ces situations n'ont pas été vérifiées dans le manga ; l'avis attribue aussi l'esclavage et la maltraitance à l'adaptation Netflix.
+
 ---
 
-## Death Note (AniList 30021) : dès 14 ans
+## Death Note (AniList 30021) : dès 14 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/30021
 
-**Résumé.** Light Yagami, lycéen brillant de 17 ans et fils de policier, ramasse un cahier abandonné par Ryuk, un dieu de la mort. Toute personne dont le nom est écrit dans ce Death Note meurt dans les 40 secondes. Light décide de s'en servir pour éliminer les criminels et bâtir un monde qu'il juge parfait, sous le surnom de « Kira ». Le mystérieux détective L, mandaté par Interpol, se lance à sa poursuite, et un long duel d'intelligence s'engage entre eux.
+**Résumé.** Light Yagami, lycéen brillant de 17 ans et fils de policier, ramasse un cahier abandonné par Ryuk, un dieu de la mort. Ce Death Note tue toute personne dont l'utilisateur y écrit le nom en connaissant son visage : elle meurt dans les 40 secondes, d'une crise cardiaque si aucune autre cause n'est précisée. Light décide de s'en servir pour éliminer les criminels et bâtir un monde qu'il juge parfait, sous le surnom de « Kira ». Le mystérieux détective L, mandaté par Interpol, se lance à sa poursuite, et un long duel d'intelligence s'engage entre eux. La série, terminée, compte 13 tomes chez Kana : l'histoire tient en 12 tomes, et le 13e présente les personnages et apporte des informations complémentaires.
 
 **Thèmes abordés**
 
@@ -347,7 +344,7 @@ Fiche AniList : https://anilist.co/manga/30021
 - [Violence] *Meurtres en série* : Les morts sont très nombreuses dans toute la série. La plupart des victimes du cahier meurent subitement d'une crise cardiaque, sans images sanglantes. Common Sense Media (animé) juge les morts fréquentes mais rarement graphiques, avec quelques scènes plus marquantes (une victime percutée par un camion, des prises d'otages). The Graphic Library signale des morts montrées dans les pages du premier volume de l'édition double (tomes 1 et 2).
 - [Violence] *Torture et violences envers des femmes* : Common Sense Media (animé) signale des scènes de torture et relève que des femmes apparaissent ligotées et torturées, ou harcelées par des hommes (sifflements, filatures).
 - [Thèmes sensibles] *Suicides provoqués par le cahier* : Dans les premiers tomes, Light utilise déjà le cahier pour provoquer des suicides. The Graphic Library estime que cela peut être trop dur pour de jeunes lecteurs. Common Sense Media (animé) mentionne aussi qu'un personnage meurt par suicide.
-- [Peur et horreur] *Ryuk, le dieu de la mort* : Ryuk accompagne Light tout au long de l'histoire. Il n'est pas violent, mais son apparence volontairement inquiétante (dents pointues, yeux exorbités) peut effrayer certains lecteurs, selon Common Sense Media et The Graphic Library.
+- [Peur et horreur] *Ryuk, le dieu de la mort* : Ryuk accompagne Light tout au long de l'histoire. Son apparence volontairement inquiétante (dents pointues, yeux exorbités) peut effrayer certains lecteurs, selon Common Sense Media et The Graphic Library.
 - [Nudité et sexualité] *Sous-entendus et tentative d'agression* : Common Sense Media (animé) décrit surtout des sous-entendus : une femme sous la douche dont on devine la poitrine, un adolescent qui regarde des photos de femmes en sous-vêtements. Un des premiers épisodes montre une tentative d'agression sexuelle. Les sources consultées ne précisent pas si ces scènes sont identiques dans le manga.
 - [Autre] *Imitations dans des écoles* : Selon Wikipédia, des écoles de Shenyang (Chine) ont interdit le manga en 2005 après que des élèves ont fabriqué des cahiers imitant le Death Note pour y écrire les noms de camarades et d'enseignants. Le titre a aussi suscité des mises en garde à Taïwan et une demande d'interdiction dans des écoles américaines, rejetée en 2010.
 
@@ -371,23 +368,32 @@ Fiche AniList : https://anilist.co/manga/30021
 - The Graphic Library : « Death note vol 1 by Tsugumi Ohba » (Sara Campbell, 29 décembre 2021) : https://www.graphiclibrary.org/reviews/death-note-vol-1-by-tsugumi-ohba
 - Viz Media : « Death Note, Vol. 10 » (fiche produit) : https://www.viz.com/manga-books/manga/death-note-volume-10-0/product/1091
 - Viz Media : « Ratings » (définition des catégories d'âge) : https://www.viz.com/ratings
+- Wikipedia (anglais) : « Death Note » : https://en.wikipedia.org/wiki/Death_Note
 
 **Points à vérifier en priorité**
 
 - Âge retenu 14 ans, au-dessus de l'estimation automatique (12) : Common Sense Media conseille 15 ans pour l'animé, Viz classe le manga « Teen Plus » et The Graphic Library le situe au niveau lycée. Les avis de parents (13 ans) et d'enfants (12 ans) sur Common Sense Media sont plus bas. 16 ans reste défendable si l'on privilégie Viz et The Graphic Library.
 - Les scènes de torture, de violences envers des femmes, de douche et de tentative d'agression sexuelle, ainsi que le vocabulaire, viennent de la critique Common Sense Media de la série animée. À vérifier dans le manga.
 - Common Sense Media n'a pas de critique du manga (pages « book-reviews » introuvables). filmspourenfants.net n'a pas de fiche Death Note (recherche sur le site sans résultat).
-- Aucune mention d'âge sur les pages Kana consultées. Kana affiche 13 tomes parus : selon Wikipédia, l'histoire tient en 12 volumes et le 13e est un tome de présentation des personnages (AniList indique 12).
+- Aucune mention d'âge sur les pages Kana consultées. Kana affiche 13 tomes parus et la série « Terminée » ; selon Wikipédia (français), l'histoire tient en 12 volumes et le 13e décrit les personnages (AniList indique 12). La fiche série Kana ne donne pas de sous-titre au tome 13.
+- Règle du cahier (visage à connaître, mort dans les 40 secondes, crise cardiaque par défaut) reprise de Wikipédia (français) ; l'article ne détaille pas comment le délai s'articule avec une cause de mort précisée.
+- Ryuk : l'affirmation « il n'est pas violent » a été retirée en révision 2. Selon Wikipédia (anglais), il écrit lui-même un nom dans son Death Note à la fin de l'histoire ; ce détail n'est pas repris dans la fiche pour ne pas dévoiler la fin.
 - The Graphic Library est un site personnel (Sara Campbell) destiné aux bibliothécaires scolaires et aux enseignants ; la critique porte sur la Black Edition américaine (volume double). Le classement Viz a été lu sur la fiche du volume 10 seulement.
 - Les épisodes d'interdiction (Chine, Taïwan, États-Unis) ne s'appuient que sur Wikipédia (fr).
 
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [resume] La règle des 40 secondes est présentée comme inconditionnelle : il faut connaître le visage, et la crise cardiaque n'est que la cause par défaut. → appliquee : Confirmé par Wikipédia (français) : l'utilisateur « ne peut tuer une personne que s'il connaît son visage », la cause par défaut est la crise cardiaque et le mode d'emploi indique une mort dans les 40 secondes. Phrase du résumé réécrite en ce sens.
+- Pipo [scenes] « Il n'est pas violent » est trompeur : Ryuk tue lui aussi avec un Death Note. → appliquee : Wikipédia (anglais) indique qu'à la fin Ryuk écrit le nom d'un personnage dans son propre Death Note, ce qui entraîne sa mort. Mention « Il n'est pas violent » supprimée ; la scène ne garde que l'apparence inquiétante. Le détail de la fin n'est pas ajouté (spoiler). Wikipédia (anglais) ajouté aux sources.
+- Mario [resume] Ajouter le nombre de tomes et l'éditeur français (12 tomes chez Kana et un 13e tome encyclopédique). → appliquee : Reformulé d'après les sources : la fiche série Kana affiche 13 tomes et la série « Terminée » ; Wikipédia (français) précise que l'histoire tient en 12 volumes et que le 13e décrit les personnages. Phrase ajoutée à la fin du résumé (« 13 tomes chez Kana : l'histoire tient en 12 tomes… »), sans le terme « encyclopédique » que les sources n'emploient pas.
+
 ---
 
-## Fullmetal Alchemist (AniList 30025) : dès 14 ans
+## Fullmetal Alchemist (AniList 30025) : dès 14 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/30025
 
-**Résumé.** Dans le pays d'Amestris, où l'alchimie est une science courante, les frères Edward et Alphonse Elric perdent leur mère. Ils tentent de la ramener à la vie par l'alchimie, en bravant l'interdit de la transmutation humaine. L'expérience échoue : Edward perd une jambe et Alphonse tout son corps, et Edward sacrifie son bras pour fixer l'âme de son frère dans une armure. Devenu Alchimiste d'État, Edward part avec Alphonse à la recherche de la pierre philosophale pour retrouver leurs corps. Série complète en 27 tomes chez Kurokawa depuis 2005, rééditée notamment en édition « Perfect » de 18 tomes.
+**Résumé.** Dans le pays d'Amestris, où l'alchimie est une science courante, les frères Edward et Alphonse Elric perdent leur mère. Ils tentent de la ramener à la vie par l'alchimie, en bravant l'interdit de la transmutation humaine. L'expérience échoue : Edward perd une jambe et Alphonse tout son corps, et Edward sacrifie son bras pour fixer l'âme de son frère dans une armure. Devenu Alchimiste d'État, Edward part avec Alphonse à la recherche de la pierre philosophale pour retrouver leurs corps. Publiée en France par Kurokawa de 2005 à 2011, la série est complète en 27 tomes ; elle existe aussi en édition « Perfect » de 18 tomes, parue à partir de 2020.
 
 **Thèmes abordés**
 
@@ -402,7 +408,8 @@ Fiche AniList : https://anilist.co/manga/30025
 - [Peur et horreur] *La transmutation ratée* : La tentative de résurrection de la mère produit une créature cadavérique, qui revient en souvenirs. Common Sense Media souligne que l'horreur est un élément important, avec de nombreux personnages grotesques.
 - [Violence] *Combats et morts violentes* : Common Sense Media (animé fidèle au manga) relève de la violence fantastique et des scènes sanglantes dans la plupart des épisodes, avec des morts et des blessures violentes. Un personnage fait de son propre sang une arme qui poignarde Edward.
 - [Violence] *Un père et sa fille assassinés* : Dans l'animé, une fillette et son père sont assassinés et montrés gisant dans une mare de sang, selon Common Sense Media.
-- [Thèmes sensibles] *Massacre d'Ishbal* : Le génocide d'Ishbal, déclenché selon Wikipédia après qu'un soldat a tué un enfant ishbal, pèse sur plusieurs personnages, dont un officier qui y a participé et un survivant devenu tueur d'alchimistes.
+- [Thèmes sensibles] [révèle l'intrigue] *Une enfant transformée en chimère* : Pour garder son titre d'Alchimiste d'État, un alchimiste fusionne sa petite fille et le chien de la famille en une seule chimère. Un autre personnage tue ensuite le père, puis la chimère, après lui avoir dit que la transformation est irréversible (Wikipedia anglais, liste des personnages).
+- [Thèmes sensibles] [révèle l'intrigue] *Massacre d'Ishbal* : Le génocide d'Ishbal, déclenché selon Wikipedia (anglais) après qu'un soldat a tué un enfant ishbal, pèse sur plusieurs personnages, dont un officier qui y a participé et un survivant devenu tueur d'alchimistes.
 - [Peur et horreur] *Cannibalisme suggéré* : Common Sense Media signale une créature dont le cannibalisme est suggéré.
 - [Nudité et sexualité] *Tenue suggestive* : Un personnage féminin nommé Lust porte des vêtements très légers. Common Sense Media ne signale pas d'autre contenu sexuel.
 
@@ -423,18 +430,27 @@ Fiche AniList : https://anilist.co/manga/30025
 - Common Sense Media : Fullmetal Alchemist (film, 2018) : https://www.commonsensemedia.org/movie-reviews/fullmetal-alchemist
 - Wikipédia (français) : Fullmetal Alchemist : https://fr.wikipedia.org/wiki/Fullmetal_Alchemist
 - Wikipedia (anglais) : Fullmetal Alchemist : https://en.wikipedia.org/wiki/Fullmetal_Alchemist
+- Wikipedia (anglais) : List of Fullmetal Alchemist characters : https://en.wikipedia.org/wiki/List_of_Fullmetal_Alchemist_characters
 
 **Points à vérifier en priorité**
 
 - Âge retenu 14, au-dessus de l'estimation automatique (12). Common Sense Media conseille 13 ans pour Brotherhood, l'adaptation fidèle au manga, en notant une violence importante et du gore ; l'échelle du site n'ayant pas de palier à 13, j'ai arrondi au-dessus. Un relecteur peut juger 12 ans défendable (les avis d'enfants sur Common Sense Media donnent 12 ans).
 - Toutes les scènes difficiles viennent de critiques des adaptations animées (surtout Brotherhood, qualifiée de fidèle au manga par Wikipédia). Aucune source consultée ne décrit le contenu du manga tome par tome.
-- La page de l'éditeur Kurokawa n'a pas pu être consultée (l'ancien site redirige vers lisez.com, où la série n'a pas été trouvée). Les faits d'édition française (27 tomes depuis 2005, édition Perfect de 18 tomes depuis mars 2020) viennent de Wikipédia en français uniquement.
+- Révision 2 : scène « Une enfant transformée en chimère » ajoutée (spoiler) d'après la liste des personnages de Wikipedia (anglais), qui renvoie au chapitre 5 : l'épisode intervient donc tôt, mais il dévoile un retournement. La page ne dit pas si la chimère pense ou parle ; ce point n'a pas été écrit. La scène « Un père et sa fille assassinés » (Common Sense Media, animé) correspond probablement au même épisode, sans que la critique le précise.
+- Révision 2 : scène « Massacre d'Ishbal » marquée spoiler. Son déclenchement (un soldat tue un enfant ishbal) vient de Wikipedia (anglais) seulement ; Wikipédia (français) confirme le rôle de Roy Mustang et de Scar mais pas l'origine du conflit. Aucune source ne situe ces révélations dans un tome précis.
+- Faits d'édition française : Wikipédia (français) donne 27 volumes parus du 8 septembre 2005 au 7 juillet 2011, et une édition Perfect en 18 volumes dont le premier est sorti le 12 mars 2020. La page de l'éditeur Kurokawa n'a pas pu être consultée (l'ancien site redirige vers lisez.com, où la série n'a pas été trouvée).
 - Pas de fiche filmspourenfants.net trouvée (recherche « fullmetal » sans résultat).
 - Les mots anglais cités par Common Sense Media viennent du doublage anglais ; leur équivalent français est une approximation de ma part.
 
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [resume] « 27 tomes chez Kurokawa depuis 2005 » laisse croire que tout était paru dès 2005. → appliquee : Wikipédia (français) vérifié : 27 volumes parus entre le 8 septembre 2005 et le 7 juillet 2011 ; édition Perfect en 18 volumes, premier tome le 12 mars 2020. Phrase reformulée : « Publiée en France par Kurokawa de 2005 à 2011, la série est complète en 27 tomes ; elle existe aussi en édition « Perfect » de 18 tomes, parue à partir de 2020. »
+- Pipo [scenes] Ajouter, avec spoiler, la fillette fusionnée avec son chien en chimère par son père, puis tuée. → partielle : Wikipedia (anglais), liste des personnages, vérifiée : Shou Tucker fusionne sa fille Nina avec son chien Alexander pour garder son statut d'Alchimiste d'État ; Scar le tue, puis euthanasie la chimère. Scène ajoutée avec spoiler, source ajoutée. Non repris : le mot « consciente », la page ne disant pas si cette chimère pense ou parle (la chimère qui parle est celle créée à partir de l'épouse de Tucker).
+- Pipo [scenes] La scène du massacre d'Ishbal dévoile l'origine du conflit et le rôle de personnages importants sans spoiler. → appliquee : Wikipedia (anglais) vérifié pour l'origine (génocide déclenché après qu'un soldat amestrien a tué un enfant ishbal) ; Wikipédia (français) vérifié pour Roy Mustang, exécutant du génocide, et Scar, devenu tueur d'alchimistes d'État. Scène marquée spoiler ; la présence du génocide reste signalée sans spoiler dans les thèmes et l'avis. Attribution précisée : Wikipedia en anglais, la version française ne donnant pas l'origine du conflit.
+
 ---
 
-## Hunter X Hunter (AniList 30026) : dès 14 ans
+## Hunter X Hunter (AniList 30026) : dès 14 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/30026
 
@@ -455,7 +471,7 @@ Fiche AniList : https://anilist.co/manga/30026
 - [Violence] [révèle l'intrigue] *Massacre et vengeance* : Lors de l'arc de Yorknew City, Kurapika affronte la bande qui a exterminé son clan et tue deux de ses membres (Wikipédia, anglais).
 - [Peur et horreur] [révèle l'intrigue] *Fourmis-chimères mangeuses d'hommes* : Dans un arc ultérieur, des fourmis géantes dévorent des humains, renversent un État et commettent un véritable massacre ; leur roi mange ses victimes. Un personnage se sacrifie avec une bombe et Gon, poussé par la vengeance, finit grièvement blessé (Wikipédia, anglais et français).
 - [Violence] [révèle l'intrigue] *Lutte à mort pour un trône* : Dans l'arc le plus récent, des princes doivent s'affronter à mort pour la succession d'un royaume, et un prince est assassiné par l'un de ses gardes (Wikipédia, anglais et français).
-- [Nudité et sexualité] *Sous-entendus* : Common Sense Media (animé) relève par moments de forts sous-entendus sexuels et la poitrine d'un personnage féminin mise en avant, souvent objet de l'attention des hommes.
+- [Nudité et sexualité] *Sous-entendus* : Common Sense Media (animé) relève par moments de forts sous-entendus sexuels et la poitrine d'un personnage féminin mise en avant, souvent objet de l'attention des hommes. Dans le manga, Hisoka, combattant cruel présent dès l'examen, prend plaisir à affronter les adversaires qu'il juge forts, au point d'en éprouver une excitation sexuelle (chapitres 5 et 61 selon la liste des personnages de Wikipédia, anglais). Il s'intéresse à Gon et à ses amis, qu'il laisse en vie pour qu'ils deviennent des adversaires à sa mesure.
 
 **Vocabulaire.** Common Sense Media (animé, version anglaise) signale des jurons comme « sh-t », audibles par moments. Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
 
@@ -478,6 +494,7 @@ Fiche AniList : https://anilist.co/manga/30026
 - Hunter × Hunter, Wikipédia (français) : https://fr.wikipedia.org/wiki/Hunter_%C3%97_Hunter
 - Hunter × Hunter, Wikipedia (anglais) : https://en.wikipedia.org/wiki/Hunter_%C3%97_Hunter
 - La Revue des livres pour enfants n° 325, juin 2022 : Mangas, la déferlante. Dossier : Les principales séries citées dans notre dossier (CNLJ, BnF) : https://cnlj.bnf.fr/sites/default/files/revues_document_joint/dossier_principales_series_325.pdf
+- List of Hunter × Hunter characters, Wikipedia (anglais) : https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_characters
 
 **Points à vérifier en priorité**
 
@@ -487,10 +504,17 @@ Fiche AniList : https://anilist.co/manga/30026
 - Les avis de parents et d'enfants de Common Sense Media sont des résumés générés automatiquement sur la page : à citer avec prudence.
 - Nombre de tomes : 38 parus chez Kana d'après la page série (série en cours) ; 39 au Japon d'après Wikipédia (français). Tome 1 français : 18 mars 2000 selon Kana, 1er mars 2000 selon Wikipédia.
 - Pas de fiche filmspourenfants.net trouvée. Étiquette AniList « Cannibalism » : seule la dévoration d'humains par les fourmis-chimères est confirmée.
+- Hisoka : la liste des personnages de Wikipédia (anglais) confirme son excitation sexuelle face aux adversaires forts (chapitres 5 et 61) et son intérêt pour Gon et ses amis (chapitre 28), mais ne dit pas que cette excitation vise Gon en particulier. Pipo l'affirme : à vérifier dans le chapitre 61.
+- Résumé : la formule sur la licence (« autorisée à presque tout ») reprend Wikipédia (français), qui écrit « autorisés à faire quasiment tout ce qu'ils souhaitent sur simple présentation de leur licence ». Wikipédia (anglais) parle plus sobrement d'accès à des lieux interdits au commun des mortels. Pipo la juge excessive : conservée faute de source contraire.
+
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [scenes] Ajouter l'excitation sexuelle de Hisoka face au combat, notamment contre Gon, et signaler des sous-entendus sexuels impliquant un mineur. → partielle : Vérifié dans la liste des personnages (Wikipédia, anglais) : Hisoka aime affronter des adversaires forts « to the point of sexual arousal » (chapitres 5 et 61) et épargne Gon et ses amis pour en faire de futurs adversaires (chapitre 28). Ajouté à la scène « Sous-entendus », source ajoutée. Non repris : que cette excitation vise Gon en particulier et la formule « sous-entendus sexuels impliquant un mineur », que la source ne formule pas. Point signalé dans notes_relecture.
+- Pipo [resume] « Une élite autorisée à presque tout » est trop large ; parler plutôt d'accès à des lieux interdits et de privilèges. → non_appliquee : Wikipédia (français), source de la fiche, écrit que les Hunters sont « autorisés à faire quasiment tout ce qu'ils souhaitent sur simple présentation de leur licence ». Wikipédia (anglais) mentionne l'accès à des lieux interdits sans contredire ce point, et aucune source consultée ne parle d'un règlement de l'association qui limiterait ces droits. Formule conservée, signalée dans notes_relecture.
 
 ---
 
-## Spirale (AniList 30436) : dès 16 ans
+## Spirale (AniList 30436) : dès 16 ans, révision 2
 
 Fiche AniList : https://anilist.co/manga/30436
 
@@ -507,9 +531,9 @@ Fiche AniList : https://anilist.co/manga/30436
 
 - [Peur et horreur] *Corps déformés* : Toute la série repose sur l'horreur corporelle. Dès la première histoire, un homme est retrouvé mort, le corps tordu en forme de spirale. D'autres personnages se transforment en créatures ou voient leur corps se déformer. Common Sense Media note pour l'animé des moments crus et sanglants.
 - [Thèmes sensibles] *Automutilation* : Au début de la série, une mère hantée par la mort de son mari est poussée à se mutiler, ce qui entraîne sa mort. Common Sense Media signale pour l'animé des scènes d'automutilation macabres, parfois mortelles.
-- [Thèmes sensibles] *Harcèlement* : Dans l'adaptation animée, des lycéens harcèlent un camarade, l'insultent et le déshabillent avant de le pousser nu dans un couloir bondé (selon Common Sense Media). Non vérifié dans le manga par les sources consultées.
+- [Thèmes sensibles] *Harcèlement* : Dans l'adaptation animée, Common Sense Media signale des lycéens qui harcèlent un camarade, l'insultent et le déshabillent avant de le pousser nu dans un couloir bondé.
 - [Violence] [révèle l'intrigue] *Enfants brûlés* : Dans l'une des histoires, le phare hanté de la ville brûle plusieurs enfants. Kirie s'en échappe de justesse avec des brûlures.
-- [Peur et horreur] [révèle l'intrigue] *Hôpital cauchemardesque* : Au milieu de la série, des femmes enceintes deviennent des sortes de moustiques qui vident les autres patients de leur sang. Un médecin devenu fou tente de remettre des nouveau-nés dans le ventre de leur mère.
+- [Peur et horreur] [révèle l'intrigue] *Hôpital cauchemardesque* : Au milieu de la série, à l'hôpital, des femmes enceintes sont piquées par des moustiques puis se mettent à pomper le sang des autres patients. Un médecin devenu fou tente de remettre des nouveau-nés dans le ventre de leur mère.
 - [Violence] [révèle l'intrigue] *Famine et cannibalisme* : Dans la dernière partie, la ville ravagée est livrée à des bandes et à la faim. Des survivants se mettent à manger les escargots géants, alors que le récit a montré des habitants transformés en escargots.
 - [Nudité et sexualité] *Nudité sans érotisme* : Selon The Graphic Library, une histoire comporte de la nudité, sans aucune dimension sexuelle : elle participe à l'horreur corporelle. Dans l'animé, Common Sense Media relève quelques corps nus, surtout de dos.
 
@@ -534,12 +558,84 @@ Fiche AniList : https://anilist.co/manga/30436
 
 **Points à vérifier en priorité**
 
-- Âge retenu 16 ans, conforme à l'âge automatique. Common Sense Media conseille 15 ans pour l'animé (4 épisodes) ; l'échelle du site n'a pas de palier à 15 et The Graphic Library réserve le manga au lycée (« Grades 10-12 »). 14 ans serait défendable pour un lecteur amateur d'horreur.
+- Âge retenu 16 ans, conforme à l'âge automatique et confirmé par les deux relecteurs. Common Sense Media conseille 15 ans pour l'animé (4 épisodes) ; l'échelle du site n'a pas de palier à 15 et The Graphic Library réserve le manga au lycée (« Grades 10-12 »). 14 ans serait défendable pour un lecteur amateur d'horreur.
 - Date de parution à vérifier : la page Delcourt indique « Paru le 19 octobre 2011 » pour l'intégrale, Wikipédia français mentionne une réédition intégrale le 3 mars 2021. Première édition française chez Tonkam en 3 tomes (2002) selon Wikipédia.
-- Scène « Harcèlement » documentée uniquement pour l'animé (Common Sense Media).
-- Scène « Famine et cannibalisme » : Wikipédia français dit séparément que des habitants se changent en escargots et que des survivants mangent les escargots géants. Le lien entre les deux est une lecture du résumé, à vérifier.
-- Les scènes « Enfants brûlés », « Hôpital cauchemardesque » et « Famine et cannibalisme » reposent sur le seul résumé de Wikipédia français.
+- Scène « Harcèlement » documentée uniquement pour l'animé (Common Sense Media, qui ne nomme pas la victime). Mario la rattache au garçon qui se transforme en escargot : ni Wikipédia (fr) ni Wikipedia (en) ne le disent, donc non repris. Présence de la scène dans le manga à vérifier.
+- Scène « Hôpital cauchemardesque » corrigée d'après Wikipédia (fr) : femmes enceintes piquées par des moustiques venus de l'étang, puis qui pompent le sang d'autres patients. Wikipedia (en) dit qu'elles se comportent comme des moustiques et utilisent des chignoles (résumé de l'animé). Le détail « moustiques géants » proposé par Mario n'est confirmé par aucune des deux.
+- Scène « Famine et cannibalisme » : Wikipédia français dit séparément que des habitants se changent en escargots et que des survivants mangent les escargots géants. Wikipedia (en), dans le résumé de l'épisode 4 de l'animé, mentionne une bande qui cuisine des « snail people », ce qui appuie le lien ; Mario le juge exact dans le manga.
+- Les scènes « Enfants brûlés », « Hôpital cauchemardesque » et « Famine et cannibalisme » reposent pour le manga sur le seul résumé de Wikipédia français.
 - L'étiquette AniList « Suicide » n'est pas confirmée explicitement par les sources consultées et n'a pas été reprise telle quelle.
 - filmspourenfants.net ne propose pas de fiche sur Spirale ou Uzumaki (vérifié dans le plan du site).
+
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Mario [scenes] Scène « Harcèlement » : retirer la note de brouillon « Non vérifié dans le manga », soit en rattachant la scène au garçon qui devient escargot, soit en s'en tenant à l'animé. → appliquee : Seconde option appliquée : la phrase s'en tient à l'adaptation animée d'après Common Sense Media, sans note de brouillon ; l'incertitude passe dans notes_relecture. La première option n'est pas reprise : Wikipédia (fr), source citée, ne parle pas de harcèlement du garçon changé en escargot, et Common Sense Media ne nomme pas la victime.
+- Mario [scenes] Hôpital : les femmes enceintes ne deviennent pas des moustiques, elles sont piquées par des moustiques géants puis attaquent les patients pour boire leur sang. → partielle : Wikipédia (fr) confirme : des femmes enceintes sont attaquées par des moustiques issus de l'étang, et les personnes piquées pompent le sang des autres patients. Phrase corrigée en ce sens. L'adjectif « géants » n'est pas repris : ni Wikipédia (fr) ni Wikipedia (en) ne le disent.
+
+---
+
+## Vinland Saga (AniList 30642) : dès 14 ans, révision 2
+
+Fiche AniList : https://anilist.co/manga/30642
+
+**Résumé.** Au début du XIe siècle, le jeune Thorfinn voit son père, le guerrier Thors, tué par Askeladd, chef d'une bande de mercenaires vikings. Encore enfant, il suit partout l'assassin de son père dans le but de se venger. Le récit l'accompagne à travers l'invasion danoise de l'Angleterre, puis dans une longue quête de sens loin des champs de bataille. Librement inspirée des sagas islandaises, la série de Makoto Yukimura est terminée en 29 tomes, publiés en France par Kurokawa.
+
+**Thèmes abordés**
+
+- *Vengeance* : Thorfinn grandit uniquement pour se venger. Le CNLJ note que, « vivant pour la vengeance, il ne sait pas faire face à la paix ». Common Sense Media relève que la vengeance est montrée comme un moteur qui corrompt.
+- *Renoncer à la violence* : Makoto Yukimura dit avoir créé la série pour montrer que la violence ne mène à rien de bon. Dans la deuxième partie, le héros renonce aux armes et cherche une autre façon de vivre.
+- *Esclavage* : Une longue partie se déroule dans une ferme où travaillent des esclaves. Le CNLJ salue une réflexion sur la condition d'esclave et sur la dureté des conditions de vie.
+- *Guerre et pouvoir* : La série montre la guerre sans héroïsme : le CNLJ note que « la notion de bien et de mal dans la guerre est brouillée » et que la trahison est partout. Elle s'intéresse aussi à Knut, prince puis roi, que le CNLJ décrit comme un « conquérant pacifiste ».
+- *Coexistence* : Dans les derniers tomes, Thorfinn fonde une colonie au Vinland et tente d'instaurer une coexistence avec les populations autochtones.
+
+**Scènes difficiles**
+
+- [Violence] *Batailles et massacres* : Les tomes 1 à 8 racontent l'invasion danoise de l'Angleterre : batailles, massacre des habitants d'un village, cadavres. Common Sense Media (animé) décrit des scènes de combat graphiques avec sang, démembrements et décapitations. Le CNLJ parle d'un « vrai manga d'action réaliste ».
+- [Violence] *Un enfant dans la guerre* : Thorfinn assiste enfant au meurtre de son père, puis combat lui-même très jeune aux côtés de mercenaires. Common Sense Media note que des enfants sont témoins de la guerre et que certains y participent.
+- [Thèmes sensibles] [révèle l'intrigue] *Esclaves maltraités* : Dans la deuxième partie (environ tomes 8 à 14), le héros devient esclave dans une ferme. Des personnes sont vendues comme esclaves et brutalisées. Le tome 12 suit l'histoire « terriblement émouvante » d'un couple d'esclaves (CNLJ).
+- [Violence] [révèle l'intrigue] *Esclave battue à mort* : Dans la deuxième partie, le maître de la ferme, pris de rage, frappe une esclave jusqu'à lui faire perdre connaissance ; elle en meurt (Wikipédia anglais et français). Dans un entretien, l'auteur dit avoir jugé cette scène nécessaire au récit.
+- [Thèmes sensibles] *Violence sexuelle suggérée* : Selon Common Sense Media (animé), des soldats laissent entendre des violences sexuelles dans leur façon de parler des femmes et des enfants pendant les batailles.
+- [Thèmes sensibles] *Pensées suicidaires* : Selon Common Sense Media (animé), des personnages parlent de se tuer pour échapper à une situation désespérée.
+- [Nudité et sexualité] *Nudité brève* : Selon Common Sense Media (animé), les fesses d'un enfant sont montrées dans une scène, des fesses d'adultes lors de bains, et une brève nudité de face est censurée.
+- [Autre] *Alcool et champignon dopant* : Selon Common Sense Media (animé), des personnages boivent du vin et de la bière, et un guerrier mange un champignon qui décuple sa force.
+
+**Vocabulaire.** Common Sense Media relève dans l'animé (version anglaise) des grossièretés comme « s--t » et « hell », des menaces verbales et des termes méprisants envers d'autres peuples (« scum »). Le langage de l'édition française du manga n'est pas renseigné par les sources consultées.
+
+**Avis.** Vinland Saga est une grande saga historique qui part d'un récit de vengeance très violent pour devenir une réflexion sur la paix, l'esclavage et le sens d'une vie. Le CNLJ la juge « d'un remarquable réalisme et empreint d'humanité » et lui a décerné plusieurs « Coup de cœur ! ». Les premiers tomes sont durs : batailles sanglantes, massacres, enfants pris dans la guerre. La suite fait davantage de place à la reconstruction du héros, mais comporte encore des violences graves contre des esclaves. Mieux vaut avoir 14 ans pour découvrir cette série.
+
+**Ce que disent les autres**
+
+- Centre national de la littérature pour la jeunesse (BnF), manga : « À partir de 9 ans » pour les tomes 1 et 2 (2009), « À partir de 11 ans » pour les tomes 7 à 10, puis « À partir de 13 ans » pour les tomes 11 à 16 et 21 à 27. Avis « Coup de cœur ! » ou « Bravo ! » sur la plupart des tomes. Critique du tome 12 : « D'un remarquable réalisme et empreint d'humanité, ce manga oscille entre désespoir et émotion ». (https://catalogue.bnf.fr/ark:/12148/cb43719577f)
+- Common Sense Media (animé) : Conseille dès 16 ans : « Violent Viking drama about revenge has graphic war imagery. » Souligne que la série remet en cause la violence et défend la paix. Avis des parents et des enfants : 14 ans et plus. (https://www.commonsensemedia.org/tv-reviews/vinland-saga)
+
+**Sources**
+
+- Catalogue BnF, notice Vinland saga 1 (Kurokawa, 2009), avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb41404031j
+- Catalogue BnF, notice Vinland saga 5 (Kurokawa, 2009), avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb42105549v
+- Catalogue BnF, notice Vinland saga 10 (Kurokawa, 2011), avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb42558423b
+- Catalogue BnF, notice Vinland saga 12 (Kurokawa, 2013), avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb43719577f
+- Catalogue BnF, notice Vinland saga 25 (Kurokawa, 2022), avis du CNLJ : https://catalogue.bnf.fr/ark:/12148/cb46960145b
+- Catalogue BnF, notice Vinland saga 29 (Kurokawa, 2026) : https://catalogue.bnf.fr/ark:/12148/cb48816815v
+- Common Sense Media, Parents' Guide to Vinland Saga (série animée) : https://www.commonsensemedia.org/tv-reviews/vinland-saga
+- Wikipédia (français), Vinland Saga : https://fr.wikipedia.org/wiki/Vinland_Saga
+- Wikipedia (anglais), Vinland Saga (manga) : https://en.wikipedia.org/wiki/Vinland_Saga_(manga)
+- « Every Inch of My Imagination »: Mangaka Makoto Yukimura on writing women and slavery in Vinland Saga, Anime Feminist (30 octobre 2024) : https://www.animefeminist.com/yukimura-makoto-interview/
+
+**Points à vérifier en priorité**
+
+- Âge maintenu à 14 ans (estimation automatique) malgré la proposition de 16 ans d'un relecteur ; l'autre relecteur valide 14 ans. Le CNLJ, seule source d'âge portant sur le manga, indique 13 ans pour les tomes 11 à 27 (vérifié sur les notices des tomes 12 et 25), y compris pour l'arc de l'esclavage ; Common Sense Media conseille 16 ans pour l'animé, mais ses avis de parents et d'enfants indiquent 14 ans. Incohérence interne du CNLJ à signaler : 9 puis 11 ans pour les premiers tomes, pourtant les plus violents.
+- La notice BnF du tome 10 indique aussi un public « Adolescents - À partir de 15 ans », distinct de l'avis du CNLJ (11 ans) : à prendre en compte si l'âge est réexaminé.
+- Mort de l'esclave : Wikipédia anglais (tuée par son maître dans un accès de rage), Wikipédia français (frappée jusqu'à perdre connaissance, puis mention de sa mort) et entretien de l'auteur sur Anime Feminist ; aucune source ne donne le tome exact.
+- Nudité, violence sexuelle suggérée, pensées suicidaires, alcool et langage reposent uniquement sur Common Sense Media (animé) : non vérifiés sur le manga.
+- Découpage des arcs (guerre tomes 1 à 8, esclavage 8 à 14) d'après Wikipédia français, confirmé en relecture.
+- Fin de la série : Wikipédia anglais (dernier chapitre en juillet 2025, 29 tomes) et notice BnF du tome 29 (Kurokawa, 2026, résumé éditeur « Dernier tome ! »).
+- Page de l'éditeur Kurokawa inaccessible ; éditeur et dates confirmés par les notices BnF.
+- Correction hors remarques : la citation « D'un remarquable réalisme et empreint d'humanité » figure sur la notice BnF du tome 12 (lien cité), et non dans une critique des tomes 13 et 14 comme l'indiquait la révision 1.
+
+**Suite donnée aux remarques de la relecture précédente (révision 1)**
+
+- Pipo [scenes] La fiche minimise la violence de l'arc de l'esclavage : ajouter qu'une esclave est battue par son maître et en meurt (spoiler). → appliquee : L'entretien Anime Feminist (30 octobre 2024) confirme la violence du maître contre l'esclave et sa mort, sans préciser que les coups la tuent ; Wikipédia anglais (Vinland Saga, manga) indique qu'elle est tuée par son maître dans un accès de rage, Wikipédia français qu'il la frappe jusqu'à lui faire perdre connaissance. Scène « Esclave battue à mort » ajoutée (spoiler), entretien ajouté aux sources.
+- Pipo [avis] « La suite est plus calme » est trop rassurant au vu de la mort de l'esclave. → appliquee : Fait confirmé par les mêmes sources (Wikipédia anglais et français, entretien Anime Feminist). Phrase remplacée par : « La suite fait davantage de place à la reconstruction du héros, mais comporte encore des violences graves contre des esclaves. »
+- Pipo [age] Propose 16 ans (violences documentées dans le manga et 16 ans de Common Sense Media pour l'animé) ; Mario valide 14 ans. → non_appliquee : Désaccord tranché en faveur de 14 ans. Le CNLJ, seule source d'âge sur le manga lui-même, indique « À partir de 13 ans » pour les tomes 11 à 27, dont l'arc de l'esclavage (notices BnF des tomes 12 et 25 vérifiées ; le tome 12 porte justement sur le couple d'esclaves concerné). Common Sense Media conseille 16 ans pour l'animé, mais ses avis de parents (9) et d'enfants (12) indiquent 14 ans. La mort de l'esclave est désormais signalée dans les scènes et dans l'avis. Point laissé ouvert dans notes_relecture.
 
 ---

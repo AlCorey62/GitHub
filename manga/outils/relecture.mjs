@@ -145,21 +145,31 @@ function dossier() {
   ];
   writeFileSync(join(DOSSIER, 'dossier-relecture.md'), entete.join('\n') + ids.map((id) => texteFiche(id, brouillons[id])).join('\n'));
   console.log(`relecture/dossier-relecture.md : ${ids.length} fiches`);
-  // Lots de 10 fiches, un par conversation avec chaque relecteur.
-  for (const f of readdirSync(DOSSIER).filter((x) => /^lot-\d+\.md$/.test(x))) rmSync(join(DOSSIER, f));
-  for (let i = 0; i * 10 < ids.length; i++) {
-    const lot = ids.slice(i * 10, i * 10 + 10);
+  // Lots de relecture : seulement les fiches qu'un relecteur n'a pas encore relues dans leur révision actuelle.
+  const retours = Object.fromEntries(Object.keys(RELECTEURS).map((n) => [n, lireRetours(n)]));
+  const aRelire = [];
+  for (const id of ids) {
+    const rev = Number(brouillons[id].revision) || 1;
+    const qui = Object.keys(RELECTEURS).filter((n) => !(retours[n][id] || []).some((a) => (Number(a.revision) || 1) === rev));
+    if (qui.length) aRelire.push({ id, rev, qui });
+  }
+  for (const f of readdirSync(DOSSIER).filter((x) => /^lot-.*\.md$/.test(x))) rmSync(join(DOSSIER, f));
+  const tour = `r${Math.max(1, ...aRelire.map((x) => x.rev))}`;
+  for (let i = 0; i * 10 < aRelire.length; i++) {
+    const lot = aRelire.slice(i * 10, i * 10 + 10);
     const texte = [
-      `# Lot ${i + 1} : ${lot.length} fiches à relire`,
+      `# Relecture ${tour}, lot ${i + 1} : ${lot.length} fiches`,
       '',
-      'Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-' + (i + 1) + '.json.',
+      `Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-${tour}-${i + 1}.json, en recopiant le numéro de révision de chaque fiche.`,
+      '',
+      ...lot.map((x) => `- ${brouillons[x.id].titre} (AniList ${x.id}), révision ${x.rev} : à relire par ${x.qui.map((n) => RELECTEURS[n]).join(' et ')}`),
       '',
       '---',
       '',
-    ].join('\n') + lot.map((id) => texteFiche(id, brouillons[id])).join('\n');
-    writeFileSync(join(DOSSIER, `lot-${i + 1}.md`), texte);
+    ].join('\n') + lot.map((x) => texteFiche(x.id, brouillons[x.id])).join('\n');
+    writeFileSync(join(DOSSIER, `lot-${tour}-${i + 1}.md`), texte);
   }
-  console.log(`relecture/lot-1.md à lot-${Math.ceil(ids.length / 10)}.md : 10 fiches par lot`);
+  console.log(`${aRelire.length} fiches à relire : relecture/lot-${tour}-1.md à lot-${tour}-${Math.ceil(aRelire.length / 10)}.md`);
 }
 
 function integrer() {
