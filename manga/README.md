@@ -25,6 +25,8 @@ manga/
     polices/              Atkinson Hyperlegible et Dela Gothic One, auto-hébergées (licence OFL)
     favicon.svg
   outils/serve.mjs        Serveur local de prévisualisation
+  outils/relecture.mjs    Dossier de relecture et publication des fiches validées par les relecteurs
+  relecture/              Fiches en attente de relecture, consigne des relecteurs, retours (voir relecture/LISEZMOI.md)
   tests/                  Tests du calcul de l'âge et des textes (lancés aussi par « npm test » à la racine du dépôt)
   netlify.toml            Configuration Netlify propre à ce site (sécurité, cache)
 ```
@@ -96,7 +98,11 @@ Ajouter une entrée dans `site/donnees/fiches-verifiees.json`. La clé est l'ide
 }
 ```
 
-Catégories de scènes : `violence`, `peur`, `sexe`, `themes`, `autre`. La fiche vérifiée remplace la fiche automatique, porte la mention « Fiche vérifiée » et liste ses sources ; l'estimation automatique reste visible dans « Comment cet âge est calculé ».
+Champs complémentaires : `titre` (titre en France), `spoiler: true` sur une scène qui dévoile l'intrigue (masquée par défaut), `relecture` (`{ "par": [...], "date": "AAAA-MM-JJ" }`, ajouté automatiquement à la publication).
+
+Catégories de scènes : `violence`, `peur`, `sexe`, `themes`, `autre`.
+
+**Circuit de relecture.** Les fiches des 50 titres les plus lus sont rédigées à partir de sources citées, déposées dans `relecture/fiches-a-relire.json`, puis relues par Pipo (ChatGPT) et Mario (Gemini). Seules celles validées par les deux passent dans `site/donnees/fiches-verifiees.json` (`node manga/outils/relecture.mjs integrer`). Détail dans `relecture/LISEZMOI.md`. La fiche vérifiée remplace la fiche automatique, porte la mention « Fiche vérifiée » et liste ses sources ; l'estimation automatique reste visible dans « Comment cet âge est calculé ».
 
 ## Données et conditions d'utilisation d'AniList
 

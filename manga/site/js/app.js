@@ -67,6 +67,7 @@ const nombre = (n) => n.toLocaleString('fr-FR');
 const pluriel = (n, mot) => `${nombre(n)} ${mot}${n > 1 ? 's' : ''}`;
 const attendre = (ms) => new Promise((r) => setTimeout(r, ms));
 const comparateur = new Intl.Collator('fr', { sensitivity: 'base' });
+const dateFr = (iso) => esc(new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }));
 
 const etat = {
   filtres: { q: '', age: 0, public: '', genres: new Set(), pays: '', statut: '', longueur: '', periode: '', fiabilite: '' },
@@ -434,10 +435,25 @@ function sectionThemes(m, fv) {
 }
 
 function sectionScenes(e, fv) {
-  if (fv?.scenes?.length) {
+  if (fv) {
+    const ordre = [...Object.keys(CATEGORIES), 'autre'];
+    const scenes = fv.scenes || [];
+    const nbMasquees = scenes.filter((x) => x.spoiler).length;
+    const groupes = ordre.map((cat) => {
+      const liste = scenes.filter((x) => (ordre.includes(x.categorie) ? x.categorie : 'autre') === cat);
+      if (!liste.length) return '';
+      const visibles = liste.filter((x) => !x.spoiler).map((x) => bloc(x.titre, x.texte));
+      const caches = liste.filter((x) => x.spoiler);
+      if (caches.length) {
+        visibles.push(`<p class="spoiler-resume">${caches.length === 1 ? 'Une scène masquée' : `${caches.length} scènes masquées`} : elle${caches.length > 1 ? 's dévoilent' : ' dévoile'} l'intrigue.</p>`);
+        visibles.push(...caches.map((x) => bloc(x.titre, x.texte, '', 'spoiler')));
+      }
+      return `<div class="scenes-cat"><div class="scenes-tete"><h4>${esc(CATEGORIES[cat] || 'Autres points')}</h4></div>${visibles.join('')}</div>`;
+    }).join('');
     return `<section class="fiche-section" aria-labelledby="t-scenes">
       <h3 id="t-scenes">Scènes difficiles</h3>
-      <div class="blocs">${fv.scenes.map((x) => bloc(x.titre, x.texte, CATEGORIES[x.categorie] || '')).join('')}</div>
+      ${groupes || '<p class="resume-etat">Aucune scène difficile relevée par les sources consultées.</p>'}
+      ${nbMasquees ? '<p class="base-calcul"><button type="button" class="spoiler-bouton" id="devoiler">Afficher les scènes masquées</button> (elles peuvent dévoiler l\'histoire)</p>' : ''}
     </section>`;
   }
   const parCat = scenesDifficiles(e);
@@ -470,7 +486,8 @@ function sectionScenes(e, fv) {
 
 function sectionAvis(m, e, fv) {
   const contenu = fv?.avis
-    ? `<p class="avis">${esc(fv.avis)}</p><p class="bloc-pied">Avis rédigé${fv.redacteur ? ` par ${esc(fv.redacteur)}` : ''}${fv.date ? ` le ${esc(new Date(`${fv.date}T12:00:00`).toLocaleDateString('fr-FR'))}` : ''}.</p>`
+    ? `<p class="avis">${esc(fv.avis)}</p><p class="bloc-pied">Avis rédigé${fv.redacteur ? ` par ${esc(fv.redacteur)}` : ''}${fv.date ? ` le ${dateFr(fv.date)}` : ''}${
+      fv.relecture?.par?.length ? `, relu par ${esc(fv.relecture.par.join(' et '))}` : ''}, à partir des sources citées.</p>`
     : `<p class="avis">${synthese(m, e, GENRES_FR).map(esc).join(' ')}</p><p class="bloc-pied">Synthèse rédigée automatiquement à partir des données AniList, sans relecture humaine.</p>`;
   return `<section class="fiche-section avis-section" aria-labelledby="t-avis"><h3 id="t-avis">En résumé</h3>${contenu}</section>`;
 }
@@ -514,6 +531,7 @@ function htmlFiche(m) {
   const e = m.eval;
   const fv = etat.fiches[m.id];
   const infos = [];
+  if (fv?.titre && fv.titre.toLowerCase() !== m.titre.toLowerCase()) infos.push(['Titre en France', fv.titre]);
   if (m.auteurs.length) infos.push(['Auteurs', m.auteurs.join(', ')]);
   if (m.annee) infos.push(['Début', String(m.annee)]);
   const parution = [STATUTS_FR[m.statut], m.volumes ? pluriel(m.volumes, 'tome') : '', m.chapitres ? pluriel(m.chapitres, 'chapitre') : '']
@@ -530,8 +548,10 @@ function htmlFiche(m) {
   const etatAge = e.verifie
     ? '<span class="etiquette-etat fiab-elevee">Fiche vérifiée</span>'
     : '<span class="etiquette-etat">Estimation</span>';
+  const relecture = fv?.relecture?.par?.length
+    ? `, relue par ${fv.relecture.par.join(' et ')}${fv.relecture.date ? ` le ${dateFr(fv.relecture.date)}` : ''}` : '';
   const explication = e.verifie
-    ? `Âge vérifié à partir des sources citées en bas de fiche. L'estimation automatique était de ${e.estimation} ans.`
+    ? `Fiche rédigée à partir des sources citées en bas de page${relecture}. L'estimation automatique était de ${e.estimation} ans.`
     : `Estimation calculée d'après le public visé et les étiquettes de contenu AniList. ${TEXTE_FIABILITE[e.fiabilite]}`;
   const sources = fv?.sources?.length
     ? `<section class="fiche-section"><h3>Sources de cette fiche</h3><ul class="autres-avis">${fv.sources.map((x) => `<li>${x.lien ? `<a href="${esc(x.lien)}" target="_blank" rel="noopener">${esc(x.titre)}</a>` : esc(x.titre)}</li>`).join('')}</ul></section>`
