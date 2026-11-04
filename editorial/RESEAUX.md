@@ -8,7 +8,7 @@ Depuis le 27/10/2026, c'est une tâche programmée Claude, du lundi au vendredi 
 - Elle prend le texte, le visuel et le lien du jour, et vérifie d'abord que le lien répond sur le site.
 - Elle vérifie aussi que le jeton donne accès à la page Dark Side Energy et pas à une autre page gérée par le même compte. Sinon, elle n'envoie rien.
 - Chaque envoi est noté dans `semaines/AAAA-MM-JJ/diffusion.json` : rien n'est publié deux fois, même avec les passages de secours.
-- Publication en plus du programme : section `## Jour JJ/MM · Hors programme · …` dans `publications.md` de la semaine (une seule par jour, ajoutée et validée par Damien), avec son visuel. Elle ne part qu'à la demande : onglet *Actions*, « Diffusion réseaux sociaux », *Run workflow*, mode « hors-programme ». Elle est publiée sur Facebook et sur LinkedIn, même avant le 9/11/2026, et notée à part dans le journal (« AAAA-MM-JJ hors programme »).
+- Publication en plus du programme : section `## Jour JJ/MM · Hors programme · …` dans `publications.md` de la semaine (une seule par jour, ajoutée et validée par Damien), avec son visuel. Elle ne part qu'à la demande : onglet *Actions*, « Diffusion réseaux sociaux », *Run workflow*, mode « hors-programme ». Elle est publiée sur Facebook et sur LinkedIn, et notée à part dans le journal (« AAAA-MM-JJ hors programme »).
 - En cas d'échec, GitHub prévient par e-mail. La publication peut alors être relancée à la main (onglet *Actions*, « Diffusion réseaux sociaux », *Run workflow*, mode « publier »).
 - Rattrapage d'un jour passé (par exemple quand l'article n'était pas en ligne ce jour-là) : même lancement à la main, mode « publier », en indiquant la date du jour à rattraper (AAAA-MM-JJ) dans le champ « date ». Le journal empêche tout doublon.
 - Les accès sont rangés dans les secrets du dépôt GitHub. Ils ne sont jamais écrits dans le dépôt, ni envoyés par e-mail ou dans une conversation.
@@ -16,7 +16,7 @@ Depuis le 27/10/2026, c'est une tâche programmée Claude, du lundi au vendredi 
 | Réseau | État | Secrets GitHub |
 |---|---|---|
 | Facebook | Prêt, jeton de la page créé le 20/10/2026 | `FACEBOOK_PAGE_ID`, `FACEBOOK_PAGE_TOKEN` |
-| LinkedIn | Accès accordé le 27/10/2026, jeton vérifié le 28/10/2026 ; publication automatique à partir du 9/11/2026 | `LINKEDIN_REFRESH_TOKEN`, `LINKEDIN_CLIENT_ID`, `LINKEDIN_CLIENT_SECRET`, `LINKEDIN_TOKEN` (secours) ; page n° 11049000 en clair dans la tâche |
+| LinkedIn | Accès accordé le 27/10/2026, jeton vérifié le 28/10/2026 ; publication automatique depuis le 4/11/2026 | `LINKEDIN_REFRESH_TOKEN`, `LINKEDIN_CLIENT_ID`, `LINKEDIN_CLIENT_SECRET`, `LINKEDIN_TOKEN` (secours) ; page n° 11049000 en clair dans la tâche |
 
 Tant qu'un réseau n'a pas ses secrets, la tâche l'ignore sans erreur : on publie alors à la main (planification de la page LinkedIn, Meta Business Suite).
 
@@ -127,7 +127,7 @@ Un mois avant l'expiration du jeton de renouvellement, la tâche affiche un aver
 Jetons en place : renouvellement automatique vérifié le 28/10/2026 ; jeton de renouvellement valable jusque vers le 27/10/2027 (364 jours restants au 28/10/2026). Rappel programmé le 01/09/2027, avec la demande du niveau *Standard* et le changement de version de l'API.
 
 À savoir :
-- Jusqu'au 6/11/2026, les posts LinkedIn sont programmés à la main depuis la page LinkedIn ; la tâche ne publie sur LinkedIn qu'à partir du 9/11/2026.
+- Jusqu'au 3/11/2026, les posts LinkedIn étaient programmés à la main depuis la page LinkedIn ; la tâche publie sur LinkedIn depuis le 4/11/2026, à la demande de Damien (avancé du 9/11/2026). Les publications de la semaine du 2/11 peuvent être rattrapées sur LinkedIn avec le champ « date ».
 - Ce qui est publié : le texte LinkedIn du jour et son visuel, avec un texte alternatif repris du titre du visuel. Le texte est converti au format de l'API (caractères réservés échappés, mots-clés reconnus).
 - Le niveau *Development* limite l'application à 500 appels par jour ; une publication en utilise environ cinq. LinkedIn demande de passer au niveau *Standard* dans les 12 mois suivant l'accord, donc avant fin octobre 2027, avec une vidéo de démonstration de moins de 5 minutes. Sans cette demande, LinkedIn retire l'accès.
 - L'API LinkedIn change de version chaque mois et chaque version est maintenue au moins un an. Le script utilise la version 202610 (octobre 2026) : à remplacer par une version récente avant octobre 2027.

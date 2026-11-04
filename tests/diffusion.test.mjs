@@ -52,7 +52,7 @@ test("diffusion : essai à blanc sur chaque jour, sans rien envoyer", () => {
       assert.match(run.stdout, /Facebook \(essai|déjà envoyé|non validée/, `${dir}, ${d.head} : ${run.stdout}`);
       // La bonne section est choisie (programme ou hors programme) : son visuel est celui annoncé
       for (const m of run.stdout.matchAll(/^Visuel : (\S+)/gm)) assert.equal(m[1], d.visual, `${dir}, ${d.head} : mauvaise section envoyée`);
-      assert.match(run.stdout, /LinkedIn (\(essai|: jusqu'au|: déjà envoyé)|non validée/, `${dir}, ${d.head} : ${run.stdout}`);
+      assert.match(run.stdout, /LinkedIn (\(essai|: avant le|: déjà envoyé)|non validée/, `${dir}, ${d.head} : ${run.stdout}`);
     }
   }
 });
