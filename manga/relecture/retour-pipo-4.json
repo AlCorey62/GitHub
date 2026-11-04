@@ -1,0 +1,320 @@
+{
+  "relecteur": "Pipo",
+  "date": "2026-11-04",
+  "fiches": {
+    "97553": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 14 ans pour découvrir cette série.",
+          "probleme": "Je recommande un seuil plus prudent compte tenu du classement du manga lui-même chez Yen Press et du sujet central. La définition publiée par Yen Press associe OT à des contenus potentiellement inappropriés avant 16 ans. Ce classement constitue une recommandation éditoriale, pas une interdiction.",
+          "correction": "Conseiller 16 ans et préciser que Yen Press classe le manga OT, catégorie correspondant aux grands adolescents, avec un seuil indicatif de 16 ans.",
+          "source": "https://edelweiss-assets.abovethetreeline.com/TW/pdfs/Yen_Panels_July-August_2009.pdf"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Les sources consultées ne décrivent aucune scène précise sur ce thème dans le manga.",
+          "probleme": "La vérification du suicide dans le manga reste explicitement inachevée. La critique du roman établit seulement la mission de surveillance de Miyagi ; elle ne permet pas de décrire l'étendue du traitement du suicide dans l'adaptation.",
+          "correction": "Indiquer que le traitement précis du suicide dans le manga reste à vérifier avant publication. Conserver la mention issue du roman en l'attribuant exclusivement à celui-ci.",
+          "source": "https://animeuknews.net/2020/11/three-days-of-happiness-review/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.editions-delcourt.fr/mangas/series/serie-le-prix-du-reste-de-ma-vie/album-le-prix-du-reste-de-ma-vie-t01",
+        "https://www.planetebd.com/manga/delcourt-tonkam/le-prix-du-reste-de-ma-vie/-/41143.html",
+        "https://www.planetebd.com/manga/delcourt-tonkam/le-prix-du-reste-de-ma-vie/-/44610.html",
+        "https://yenpress.com/titles/9798855429053-three-days-of-happiness-the-complete-omnibus",
+        "https://animeuknews.net/2020/11/three-days-of-happiness-review/",
+        "https://www.theouterhaven.net/manga-review-three-days-of-happiness/",
+        "https://en.wikipedia.org/wiki/Three_Days_of_Happiness"
+      ],
+      "commentaire": "Le passé de Miyagi est bien rapporté par The Outerhaven. La fiche doit rester en attente tant que son point prioritaire sur le suicide dans le manga n'est pas résolu."
+    },
+    "97852": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Des brutes menacent aussi d'autres élèves.",
+          "probleme": "Oubli d'un épisode difficile attesté directement pour le manga : dans le tome 2, Yamai enlève Tadano, le ligote et le menace par jalousie envers sa relation avec Komi. Cette séquestration mérite une entrée propre.",
+          "correction": "Ajouter une scène « Enlèvement et séquestration » : dans le tome 2, une camarade obsédée par Komi enlève et attache Tadano. Signaler le traitement comique d'un comportement menaçant.",
+          "source": "https://en.wikipedia.org/wiki/List_of_Komi_Can%27t_Communicate_chapters"
+        },
+        {
+          "rubrique": "vocabulaire",
+          "extrait": "Aucune source consultée ne décrit le langage de l'édition française du manga.",
+          "probleme": "Cette réserve est correcte, mais la fiche ne mentionne aucune observation sur le langage du manga alors qu'une critique du tome 2 signale un langage fort dans l'édition qu'elle examine. Il faut distinguer cette information de la traduction française, toujours non vérifiée.",
+          "correction": "Ajouter qu'une critique du tome 2 signale du langage fort dans l'édition examinée, ainsi que des sous-entendus et des images suggestives ; maintenir la réserve sur la traduction française.",
+          "source": "https://www.catcher.reviews/manga-reviews/komi-cant-communicate-volume-2"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.pika.fr/serie/komi-cherche-ses-mots",
+        "https://www.pika.fr/actualite/komi-cherche-ses-mots-de-tomohito-oda-en-librairie-le-6-juillet-2022/",
+        "https://www.commonsensemedia.org/tv-reviews/komi-cant-communicate",
+        "https://www.bbfc.co.uk/release/komi-cant-communicate-q29sbgvjdglvbjpwwc0xmdawmde5",
+        "https://www.viz.com/ratings",
+        "https://en.wikipedia.org/wiki/Komi_Can%27t_Communicate",
+        "https://en.wikipedia.org/wiki/List_of_Komi_Can%27t_Communicate_chapters",
+        "https://www.graphiclibrary.org/reviews/komi-cant-communicate-vol-2-by-tomohito-oda",
+        "https://www.catcher.reviews/manga-reviews/komi-cant-communicate-volume-2"
+      ],
+      "commentaire": "12 ans reste défendable. L'enlèvement du tome 2 est un avertissement plus directement pertinent pour cette fiche manga que plusieurs observations provenant uniquement de l'animé."
+    },
+    "98263": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Le passé maltraité d'un adulte",
+          "probleme": "La fiche omet un autre passé traumatique majeur : Luluci et son amie ont subi une agression sexuelle lorsqu'elles étaient jeunes. Leur maître a minimisé les faits et protégé l'agresseur.",
+          "correction": "Ajouter une entrée sur les violences sexuelles subies dans l'enfance et la minimisation de la parole des victimes. Si Luluci et son histoire sont nommées, marquer cette entrée avec \"spoiler\": true.",
+          "source": "https://en.wikipedia.org/wiki/List_of_Witch_Hat_Atelier_characters"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Dessiner des sorts directement sur le corps humain est interdit, et un groupe de sorciers dissidents utilise cette magie interdite.",
+          "probleme": "La formulation réduit l'interdit à l'endroit où le sort est dessiné. L'interdit concerne plus largement la magie qui modifie le corps, indépendamment du support du dessin.",
+          "correction": "Écrire : « La magie qui modifie le corps humain est interdite ; certains sorciers dissidents la pratiquent néanmoins. »",
+          "source": "https://en.wikipedia.org/wiki/Witch_Hat_Atelier"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.pika.fr/livres-series-latelier-des-sorciers/",
+        "https://www.pika.fr/livre/latelier-des-sorciers-t01-9782811638771/",
+        "https://www.commonsensemedia.org/tv-reviews/witch-hat-atelier",
+        "https://animeuknews.net/2021/05/witch-hat-atelier-volume-7-review/",
+        "https://animeuknews.net/2026/04/witch-hat-atelier-volume-14-review/",
+        "https://en.wikipedia.org/wiki/Witch_Hat_Atelier",
+        "https://en.wikipedia.org/wiki/List_of_Witch_Hat_Atelier_characters"
+      ],
+      "commentaire": "Les scènes des tomes 7 et 14 sont confirmées. L'omission des violences sexuelles empêche la validation ; 12 ans demeure une proposition éditoriale possible avec un avertissement complet."
+    },
+    "98416": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "themes",
+          "extrait": "Tsukasa, qui refuse de restaurer l'ancien monde et veut une société fondée sur la force.",
+          "probleme": "La motivation de Tsukasa est simplifiée de façon trompeuse. Il veut notamment empêcher le retour des adultes qu'il considère comme corrompus et ne réveiller que des jeunes jugés purs.",
+          "correction": "Écrire : « Tsukasa refuse de restaurer l'ancien ordre et veut sélectionner les personnes réveillées, en privilégiant les jeunes qu'il considère comme purs. »",
+          "source": "https://www.graphiclibrary.org/reviews/dr-stone-vol-1-by-riichiro-inagaki"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "La violence est bien présente (statues brisées, tentative de meurtre, guerre entre deux camps) mais reste peu sanglante selon les sources.",
+          "probleme": "Cette appréciation générale du manga repose sur une critique de son premier tome et sur l'animé. Elle ne vérifie pas l'intensité graphique des combats tardifs, réserve pourtant reconnue dans les points à vérifier.",
+          "correction": "Limiter l'appréciation : « La critique du premier tome décrit une violence sans sang ni gore. L'intensité graphique de l'ensemble des affrontements ultérieurs du manga n'est pas établie par les sources examinées. »",
+          "source": "https://www.graphiclibrary.org/reviews/dr-stone-vol-1-by-riichiro-inagaki"
+        },
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 10 ans pour découvrir cette série.",
+          "probleme": "10 ans correspond bien à Glénat, mais je propose 12 ans pour la recommandation parentale de l'ensemble, compte tenu des meurtres, des affrontements et de l'évaluation du manga dès le niveau scolaire américain Grade 7 par The Graphic Library.",
+          "correction": "Conseiller 12 ans tout en conservant explicitement l'indication « Dès 10 ans » de Glénat parmi les avis extérieurs.",
+          "source": "https://www.graphiclibrary.org/reviews/dr-stone-vol-1-by-riichiro-inagaki"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/dr-stone-tome-05-9782344034354/",
+        "https://www.commonsensemedia.org/tv-reviews/dr-stone",
+        "https://www.graphiclibrary.org/reviews/dr-stone-vol-1-by-riichiro-inagaki",
+        "https://en.wikipedia.org/wiki/Dr._Stone"
+      ],
+      "commentaire": "La mention de Glénat dès 10 ans est exacte. Le relèvement proposé est un choix de prudence, tandis que la présentation de Tsukasa et la généralisation sur le sang demandent une correction."
+    },
+    "100994": {
+      "verdict": "a_corriger",
+      "age_propose": 18,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Sexualité et nudité (signalées pour l'animé)",
+          "probleme": "Le contenu sexuel n'est pas limité à des observations sur l'animé. La critique du tome 4 du manga décrit une menace d'exploitation sexuelle de Mei et les suites sanglantes d'une scène sexuelle impliquant les Tensen.",
+          "correction": "Ajouter une entrée manga sur la sexualité et les menaces de rapports imposés, attestées au tome 4. Marquer \"spoiler\": true si les personnages et le fonctionnement de cet entraînement sont détaillés.",
+          "source": "https://animeuknews.net/2020/09/hells-paradise-jigokuraku-volume-4-review/"
+        },
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 16 ans pour découvrir cette série.",
+          "probleme": "La vérification au-delà du premier tome apporte un motif supplémentaire pour retenir 18 ans : Anime UK News classe explicitement le tome 4 à 18+ et décrit un contenu sexuel inquiétant, possiblement non consenti. Cela rejoint le classement Mature de VIZ.",
+          "correction": "Conseiller 18 ans en s'appuyant sur la violence extrême et le contenu sexuel documentés dans le manga, et actualiser l'avis en conséquence.",
+          "source": "https://animeuknews.net/2020/09/hells-paradise-jigokuraku-volume-4-review/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/hells-paradise",
+        "https://www.viz.com/manga-books/manga/hell-s-paradise-jigokuraku-volume-1-0/product/6210",
+        "https://www.viz.com/ratings",
+        "https://animeuknews.net/2020/03/hells-paradise-jigokuraku-volume-1-review/",
+        "https://animeuknews.net/2020/09/hells-paradise-jigokuraku-volume-4-review/",
+        "https://leclaireur.fnac.com/article/cp45238-le-manga-du-mois-hells-paradise-le-conseil-de-luccass-tv/"
+      ],
+      "commentaire": "L'avertissement sexuel du manga est incomplet. La critique du tome 4 permet de résoudre ce point prioritaire et motive ma proposition de réserver la série aux adultes."
+    },
+    "101517": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "themes",
+          "extrait": "des combattants appréciés meurent au fil des affrontements, y compris une compagne de route du héros (Gameblog).",
+          "probleme": "L'allusion à Nobara reprend comme définitive une information de juillet 2024 dépassée par la suite du manga. Nobara survit et revient au chapitre 267. Cette affirmation dévoile également un événement majeur sans signalement de spoiler.",
+          "correction": "Supprimer l'affirmation de sa mort définitive. Garder une formulation générale sur les deuils ; réserver les détails sur les personnages à une entrée portant \"spoiler\": true.",
+          "source": "https://en.wikipedia.org/wiki/Nobara_Kugisaki"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "plusieurs personnages importants, dont une proche du héros, n'y survivent pas.",
+          "probleme": "Même erreur concernant Nobara : sa blessure à Shibuya ne constitue pas une mort définitive.",
+          "correction": "Écrire : « Plusieurs personnages importants sont tués ou grièvement blessés durant cet affrontement. » Conserver \"spoiler\": true.",
+          "source": "https://en.wikipedia.org/wiki/Nobara_Kugisaki"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Common Sense Media parle de violence et de démembrements constants dès la première saison animée",
+          "probleme": "La page professionnelle consultée parle de sang, de violence fantastique et de créatures inquiétantes. Elle ne qualifie pas les démembrements de constants. Cette intensification ne doit pas lui être attribuée.",
+          "correction": "Écrire : « Common Sense Media signale du sang, de la violence fantastique et des créatures visuellement inquiétantes dans l'animé. »",
+          "source": "https://www.commonsensemedia.org/tv-reviews/jujutsu-kaisen"
+        },
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 14 ans pour découvrir cette série.",
+          "probleme": "Je propose 16 ans : une source directement consacrée au manga, The Graphic Library, recommande les niveaux Grades 10-12 ; VIZ classe le manga Teen Plus, pour grands adolescents et adultes.",
+          "correction": "Conseiller 16 ans et ajouter les évaluations du manga par VIZ et The Graphic Library aux avis extérieurs.",
+          "source": "https://www.graphiclibrary.org/reviews/jujutsu-kaisen-vol-1-by-gege-akutami"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/jujutsu-kaisen",
+        "https://www.commonsensemedia.org/es/resenas-pelicula/jujutsu-kaisen-0-la-pelicula",
+        "https://www.commonsensemedia.org/movie-reviews/jujutsu-kaisen-execution",
+        "https://www.cnc.fr/professionnels/visas-et-classification/159088",
+        "https://www.gameblog.fr/geek/ed/news/jujutsu-kaisen-jjk-nanami-nobara-mort-confirmee-582941",
+        "https://fr.wikipedia.org/wiki/Jujutsu_Kaisen",
+        "https://en.wikipedia.org/wiki/Nobara_Kugisaki",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "L'erreur sur Nobara est importante et apparaît deux fois. Une source ancienne annonçant sa mort ne doit pas prévaloir sur le dénouement publié."
+    },
+    "101583": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "avis",
+          "extrait": "le fan service est fréquent, avec des tenues suggestives, des scènes d'essayage et de nombreuses allusions sexuelles, sans scène de sexe.",
+          "probleme": "L'absence de scène sexuelle est formulée pour toute la série manga, alors que Common Sense Media décrit l'animé et que la critique du manga examinée ne couvre que le premier tome.",
+          "correction": "Préciser : « Common Sense Media ne signale pas de relation sexuelle dans l'adaptation animée examinée. La critique du premier tome du manga décrit du fan service et une nudité masquée. » Ne pas garantir cette absence pour les quinze tomes sans vérification complémentaire.",
+          "source": "https://animeuknews.net/2020/05/my-dress-up-darling-volume-1-review/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/sexy-cosplay-doll/",
+        "https://www.kana.fr/produit/sexy-cosplay-doll-t1/",
+        "https://www.commonsensemedia.org/tv-reviews/my-dress-up-darling",
+        "https://animeuknews.net/2020/05/my-dress-up-darling-volume-1-review/",
+        "https://en.wikipedia.org/wiki/My_Dress-Up_Darling"
+      ],
+      "commentaire": "16 ans est cohérent avec les évaluations consultées. La distinction entre manga et animé est généralement bien faite, mais disparaît dans la conclusion sur l'absence de scène sexuelle."
+    },
+    "102988": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 14 ans pour découvrir cette série.",
+          "probleme": "Je recommande 16 ans au regard de la combinaison documentée de suicides, torture, maltraitance et violences sexuelles. Common Sense Media recommande déjà 15 ans pour l'animé ; arrondir à 14 minimise cet avertissement sur l'échelle disponible.",
+          "correction": "Conseiller 16 ans en explicitant que la recommandation tient à l'accumulation des violences et des thèmes sensibles.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/tokyo-revengers"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Common Sense Media (animé) signale une scène où la petite amie d'un membre de gang subit des violences sexuelles, sans images explicites.",
+          "probleme": "L'attribution à l'animé est correcte, mais la présence et le traitement de cette violence sexuelle dans le manga restent non vérifiés. C'est un point majeur pour une fiche destinée à orienter l'achat du manga.",
+          "correction": "Conserver l'avertissement comme information sur l'adaptation, mais faire vérifier son équivalent dans le manga avant validation et ajouter une source portant directement sur celui-ci.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/tokyo-revengers"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/tokyo-revengers",
+        "https://en.wikipedia.org/wiki/Tokyo_Revengers",
+        "https://www.rtbf.be/article/voyages-dans-le-temps-amitie-et-gangs-le-cocktail-explosif-du-palpitant-manga-tokyo-revengers-11301439",
+        "https://www.schoollibraryjournal.com/review/tokyo-revengers-omnibus-vol-12",
+        "https://sevenseasentertainment.com/series/tokyo-revengers-omnibus/"
+      ],
+      "commentaire": "Les avertissements attribués à Common Sense Media correspondent à sa page. La vérification directe du manga reste nécessaire pour les violences sexuelles, et je retiens 16 ans par prudence."
+    },
+    "105398": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "autres",
+          "extrait": "Niveau conseillé « Grades 10-12 » (fin du lycée aux États-Unis)",
+          "probleme": "Les Grades 10-12 correspondent approximativement aux trois dernières années du secondaire américain, généralement vers 15-18 ans. « Fin du lycée » peut laisser croire que seuls les lecteurs en dernière année sont concernés.",
+          "correction": "Écrire : « Niveau conseillé Grades 10-12, soit approximativement 15-18 ans. »",
+          "source": "https://www.graphiclibrary.org/reviews/solo-leveling-vol-1-by-chugong"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Le premier tome est très sanglant, avec de nombreux personnages tués à l'écran (The Graphic Library).",
+          "probleme": "La critique porte sur un livre et dit que les morts sont représentées sur les pages, pas à l'écran. La même confusion revient dans l'avis.",
+          "correction": "Remplacer « à l'écran » par « dans les pages » dans la scène et dans l'avis.",
+          "source": "https://www.graphiclibrary.org/reviews/solo-leveling-vol-1-by-chugong"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "Toutes les sources qui donnent un âge, pour le webtoon comme pour l'animé, le destinent aux grands adolescents.",
+          "probleme": "Cette généralisation contredit les avis de parents et d'enfants à 13 ans mentionnés dans la fiche elle-même.",
+          "correction": "Écrire : « Les évaluations professionnelles citées orientent vers les grands adolescents ; les avis d'utilisateurs peuvent proposer un âge inférieur. »",
+          "source": "https://www.commonsensemedia.org/tv-reviews/solo-leveling"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/solo-leveling",
+        "https://yenpress.com/titles/9781975319434-solo-leveling-vol-1-comic",
+        "https://www.graphiclibrary.org/reviews/solo-leveling-vol-1-by-chugong",
+        "https://actualitte.com/article/111601/michroniques/solo-leveling-tome-1"
+      ],
+      "commentaire": "16 ans est bien étayé par les évaluations professionnelles. Les corrections concernent surtout la précision des attributions et la distinction entre livre et écran."
+    },
+    "105778": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Obsession sexuelle et situations ambiguës",
+          "probleme": "L'avertissement omet un contenu sexuel nettement plus explicite de la seconde partie du manga. Au chapitre 167, Yoru embrasse Denji en gardant la main dans son pantalon ; la scène se termine par une éjaculation. Cela dépasse les seules allusions et la nudité partielle décrites.",
+          "correction": "Ajouter une entrée sur les gestes sexuels explicites et les questions de consentement dans la seconde partie. Marquer \"spoiler\": true si les personnages et le déroulement sont détaillés.",
+          "source": "https://www.escapistmagazine.com/chainsaw-man-chapter-167-recap-spoilers/"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "La sexualité est très présente à travers l'obsession du héros adolescent, avec de la nudité partielle et des situations ambiguës entre adultes et mineur.",
+          "probleme": "Cette synthèse reste limitée au contenu des adaptations et ne rend pas compte du degré d'explicitation sexuelle atteint dans le manga.",
+          "correction": "Ajouter que le manga comporte aussi des gestes sexuels explicites et des situations soulevant des questions de consentement ; ne pas limiter son avertissement à la nudité partielle et aux situations ambiguës.",
+          "source": "https://www.escapistmagazine.com/chainsaw-man-chapter-167-recap-spoilers/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/chainsaw-man",
+        "https://www.commonsensemedia.org/es/resenas-pelicula/chainsaw-man-la-pelicula-arco-de-reze",
+        "https://www.cnc.fr/professionnels/visas-et-classification/165880",
+        "https://mangalibrarian.com/2022/10/11/manga-review-chainsaw-man/",
+        "https://fr.wikipedia.org/wiki/Chainsaw_Man",
+        "https://en.wikipedia.org/wiki/Chainsaw_Man",
+        "https://www.escapistmagazine.com/chainsaw-man-chapter-167-recap-spoilers/",
+        "https://www.sne.fr/sne_adherents/viz-media-europe/"
+      ],
+      "commentaire": "Les 24 tomes japonais et la fin en 2026 sont confirmés. Je conserve 16 ans, mais l'avertissement sur la sexualité du manga doit intégrer la seconde partie."
+    }
+  }
+}
