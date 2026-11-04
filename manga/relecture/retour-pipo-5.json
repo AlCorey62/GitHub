@@ -1,0 +1,305 @@
+{
+  "relecteur": "Pipo",
+  "date": "2026-11-04",
+  "fiches": {
+    "106130": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Le contenu reste modéré : quelques bousculades et un peu de sang, des insultes, une brève nudité de vestiaire.",
+          "probleme": "Cette synthèse omet des contenus sensibles des tomes avancés. Le passé de Kaiser comporte des violences parentales, et celui de Snuffy comprend le suicide de son meilleur ami, Mick Moon. La description des premiers épisodes de l'animé ne couvre donc pas toute la série.",
+          "correction": "Ajouter deux avertissements avec spoiler : maltraitance physique et psychologique subie par un enfant ; suicide d'un proche d'un personnage. Nuancer l'avis pour préciser que des passages ultérieurs abordent ces sujets.",
+          "source": "https://it.wikipedia.org/wiki/Personaggi_di_Blue_Lock"
+        },
+        {
+          "rubrique": "autres",
+          "extrait": "La notice du tome 17 (Pika, 2023) indique « Âge de lecture : 12 - 14 ans ».",
+          "probleme": "La notice n'a pas pu être relue : l'accès a échoué et les recherches n'ont pas permis de retrouver cette indication. Il s'agit d'une attribution non revérifiée, pas d'une erreur démontrée.",
+          "correction": "Faire confirmer cette indication sur la notice avant publication, ou retirer provisoirement cette attribution. Le maintien à 12 ans reste un choix éditorial, à réexaminer avec les avertissements manquants.",
+          "source": "https://bibliotheques.paris.fr/doc/SYRACUSE/1390316"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.pika.fr/livres-series-blue-lock/",
+        "https://www.pika.fr/livre/blue-lock-t01-9782811650254/",
+        "https://www.commonsensemedia.org/tv-reviews/blue-lock",
+        "https://www.actugaming.net/blue-lock-avis-manga-livre-pika-414079/",
+        "https://en.wikipedia.org/wiki/Blue_Lock",
+        "https://fr.wikipedia.org/wiki/Blue_Lock",
+        "https://en.wikipedia.org/wiki/List_of_Blue_Lock_characters",
+        "https://it.wikipedia.org/wiki/Personaggi_di_Blue_Lock"
+      ],
+      "commentaire": "Les 35 tomes français sont confirmés au 4 novembre 2026. Les omissions concernant les tomes avancés empêchent la validation."
+    },
+    "108556": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Chacun cache son secret aux autres",
+          "probleme": "Anya connaît les identités secrètes de ses deux parents grâce à sa télépathie. La formulation laisse croire à une ignorance réciproque.",
+          "correction": "Loid et Yor ignorent leurs activités respectives ; Anya connaît leurs secrets grâce à sa télépathie, mais cache son propre pouvoir.",
+          "source": "https://en.wikipedia.org/wiki/Spy_%C3%97_Family"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Dans les tomes 8 et 9, Yor protège des passagers d'un paquebot contre une série d'assassins ; deux agents de son organisation en massacrent la plupart",
+          "probleme": "Les deux agents désignent Yor elle-même et son supérieur McMahon. La phrase peut faire croire à l'intervention de deux autres agents.",
+          "correction": "Yor et son supérieur McMahon tuent une grande partie des assassins qui les attaquent.",
+          "source": "https://en.wikipedia.org/wiki/List_of_Spy_%C3%97_Family_chapters"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Complot terroriste",
+          "probleme": "Omission d'une autre séquence importante : des enfants, dont Anya, sont pris en otage dans un bus. Anya et Damian portent des colliers présentés comme explosifs ; une véritable bombe menace aussi les otages.",
+          "correction": "Ajouter un avertissement sur la prise d'otages d'enfants, les menaces de mort et les explosifs. Mettre spoiler à true si la nature factice des colliers ou le dénouement sont révélés.",
+          "source": "https://en.wikipedia.org/wiki/List_of_Spy_%C3%97_Family_chapters"
+        },
+        {
+          "rubrique": "autres",
+          "extrait": "« À partir de 11 ans » pour les tomes 1 et 4 à 15, « À partir de 13 ans » pour les tomes 2 et 3.",
+          "probleme": "Les notices BnF citées et celle des Bibliothèques de Paris sont restées inaccessibles lors de cette relecture. La répartition détaillée des âges et des appréciations pour quinze tomes n'a donc pas pu être confirmée.",
+          "correction": "Faire vérifier les notices correspondantes avant de conserver cette ventilation exhaustive ; à défaut, retirer provisoirement les âges et appréciations non revérifiés.",
+          "source": "https://catalogue.bnf.fr/ark:/12148/cb48630034j"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/spy-x-family",
+        "https://www.commonsensemedia.org/movie-reviews/spy-x-family-code-white",
+        "https://en.wikipedia.org/wiki/Spy_%C3%97_Family",
+        "https://fr.wikipedia.org/wiki/Spy_%C3%97_Family",
+        "https://en.wikipedia.org/wiki/List_of_Spy_%C3%97_Family_chapters",
+        "https://www.livreshebdo.fr/article/spy-family-lespion-qui-venait-du-japon"
+      ],
+      "commentaire": "12 ans reste défendable comme conseil éditorial. Il faut compléter les avertissements et clarifier les secrets familiaux."
+    },
+    "118586": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Fern est une orpheline de guerre",
+          "probleme": "Omission importante : après la mort de ses parents, Fern envisage de se suicider en se jetant dans un ravin ; Heiter intervient et la recueille.",
+          "correction": "Ajouter un avertissement sur le projet de suicide d'une enfant endeuillée, interrompu par Heiter. Ce passé peut être décrit sans révéler un retournement majeur.",
+          "source": "https://en.wikipedia.org/wiki/Fern_(Frieren)"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "La violence existe, contre des démons, mais reste modérée",
+          "probleme": "La formulation généralise à tout le manga l'appréciation de Common Sense Media sur l'animé. Les critiques détaillées du manga citées ne couvrent que les cinq premiers tomes.",
+          "correction": "Les sources consultées décrivent des combats généralement modérés dans l'animé et les premiers tomes, avec notamment une décapitation marquante. Elles ne permettent pas de caractériser toute la violence des tomes suivants.",
+          "source": "https://www.graphiclibrary.org/reviews/frieren-beyond-journeys-end-vol-5-by-kanehito-yamada"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://ki-oon.com/9791032710838-frieren-edition-simple-volume-1",
+        "https://www.commonsensemedia.org/tv-reviews/frieren-beyond-journeys-end",
+        "https://www.graphiclibrary.org/reviews/frieren-beyond-journeys-end-vol-1-by-kanehito-yamada",
+        "https://www.graphiclibrary.org/reviews/frieren-beyond-journeys-end-vol-2-by-kanehito-yamada",
+        "https://www.graphiclibrary.org/reviews/frieren-beyond-journeys-end-vol-3-by-kanehito-yamada",
+        "https://www.graphiclibrary.org/reviews/frieren-beyond-journeys-end-vol-4-by-kanehito-yamada",
+        "https://www.graphiclibrary.org/reviews/frieren-beyond-journeys-end-vol-5-by-kanehito-yamada",
+        "https://fr.wikipedia.org/wiki/Frieren",
+        "https://en.wikipedia.org/wiki/Frieren",
+        "https://en.wikipedia.org/wiki/Fern_(Frieren)"
+      ],
+      "commentaire": "La décapitation et les recommandations citées sont confirmées. L'omission du projet de suicide de Fern doit être corrigée ; 12 ans reste cohérent avec les critiques du manga."
+    },
+    "119257": {
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.pika.fr/livres-series-omniscient-readers-viewpoint/",
+        "https://www.pika.fr/livre/omniscient-readers-viewpoint-t01-9782811689094/",
+        "https://www.webtoons.com/fr/fantasy/omniscient-reader/list?title_no=2175",
+        "https://yenpress.com/titles/9798400901065-omniscient-reader-s-viewpoint-vol-1",
+        "https://www.graphiclibrary.org/reviews/omniscient-readers-viewpoint-vol-1-by-singnsong",
+        "https://animeuknews.net/2024/02/omniscient-readers-viewpoint-volume-1-review/",
+        "https://animeuknews.net/2025/10/omniscient-readers-viewpoint-volumes-4-and-5-review/",
+        "https://gonkbonk.com/articles/omniscient-readers-viewpoint-vol-1-review",
+        "https://en.wikipedia.org/wiki/Omniscient_Reader%27s_Viewpoint"
+      ],
+      "commentaire": "Les 11 tomes français, les classements et les descriptions de violence sont confirmés ; les attaques de zombies sont bien mentionnées par Gonkbonk. Les sources détaillées couvrent surtout les tomes 1, 4 et 5, sans permettre de confirmer les étiquettes sensibles signalées pour la suite."
+    },
+    "120760": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "vocabulaire",
+          "extrait": "Le BBFC mentionne seulement du « language » (langage) dans deux épisodes de l'animé classés PG.",
+          "probleme": "La notice BBFC Crunchyroll détaille des grossièretés dans de nombreux épisodes, dont « bastard », « asshole » et « shit ». La formulation minimise et décrit incorrectement cette source.",
+          "correction": "Pour l'animé en anglais, le BBFC relève plusieurs grossièretés et insultes, notamment « bastard », « asshole » et « shit ». Le vocabulaire de la traduction française du manga reste non documenté.",
+          "source": "https://www.bbfc.co.uk/release/kaiju-no-8-q29sbgvjdglvbjpwwc0xmdmyndg2"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Dans la dernière partie, une invasion de kaiju frappe tout le Japon et un monstre absorbe un personnage important de l'organisation.",
+          "probleme": "Le regroupement brouille la chronologie : l'absorption d'Isao Shinomiya précède les préparatifs puis le déclenchement de l'invasion nationale.",
+          "correction": "Un kaiju absorbe un haut responsable des Forces de défense. Plus tard, une invasion de grande ampleur frappe le Japon. Conserver spoiler à true.",
+          "source": "https://en.wikipedia.org/wiki/Kaiju_No._8"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "Les combats contre les monstres sont fréquents et souvent sanglants, surtout dans l'animé",
+          "probleme": "« Surtout » établit une comparaison entre manga et animé que les sources citées ne démontrent pas.",
+          "correction": "Les combats contre les monstres sont fréquents. Le BBFC décrit une violence sanglante et des blessures détaillées dans l'animé ; les sources consultées ne permettent pas de comparer précisément son intensité graphique à celle du manga.",
+          "source": "https://www.bbfc.co.uk/release/kaiju-no-8-q29sbgvjdglvbjpwwc0xmdmyndg2"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.bbfc.co.uk/release/kaiju-no-8-q29sbgvjdglvbjpwwc0xmdmyndg2",
+        "https://www.bbfc.co.uk/release/kaiju-no-8-mission-recon-q29sbgvjdglvbjpwwc0xmdi4ota1",
+        "https://www.viz.com/manga-books/manga/kaiju-no-8-volume-1-0/product/6891",
+        "https://www.viz.com/ratings",
+        "https://leclaireur.fnac.com/article/42880-kaiju-n8-du-deja-vu-savamment-orchestre/",
+        "https://www.journaldugeek.com/2021/10/07/kaiju-n8-le-manga-au-succes-monstre-arrive-en-france/",
+        "https://www.rtbf.be/article/kaiju-n-8-5-choses-a-retenir-des-deux-premiers-episodes-11363447",
+        "https://fr.wikipedia.org/wiki/Kaiju_No._8",
+        "https://en.wikipedia.org/wiki/Kaiju_No._8"
+      ],
+      "commentaire": "14 ans reste défendable pour le manga classé Teen par VIZ. Les pages Kazé et la critique ActuGaming n'ont pas pu être relues."
+    },
+    "125828": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 14 ans pour découvrir cette série.",
+          "probleme": "Le seuil de 14 ans est insuffisamment justifié face aux sources explicites : VIZ classe le manga Teen Plus et Common Sense Media recommande 16 ans pour l'animé. Les citations promotionnelles de Glénat et de magazines jeunesse ne constituent pas une recommandation d'âge précise.",
+          "correction": "Proposer 16 ans par prudence éditoriale, en raison de la violence sanglante et du classement Teen Plus du manga. Préciser que ce seuil est celui de Mangâge, et que VIZ ne donne pas ici un âge numérique.",
+          "source": "https://www.viz.com/manga-books/manga/sakamoto-days-volume-5-0/product/7295"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "l'animé ajoute un langage cru",
+          "probleme": "« Ajoute » suppose que le manga en serait dépourvu ou que l'adaptation aurait renforcé son langage. Aucune comparaison des traductions ne l'établit.",
+          "correction": "Common Sense Media signale un langage cru dans la version anglaise de l'animé ; le langage de la traduction française du manga n'a pas été vérifié.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/sakamoto-days"
+        },
+        {
+          "rubrique": "sources",
+          "extrait": "Le contenu des derniers arcs (étiquette AniList Gambling marquée spoiler) n'est pas documenté par les sources consultées.",
+          "probleme": "Le classement du jeu d'argent parmi les seuls derniers arcs à vérifier est trompeur : la fiche VIZ du tome 5, déjà citée, annonce explicitement une confrontation dans un casino.",
+          "correction": "Signaler que le tome 5 comporte un affrontement dans un casino et que le jeu d'argent est présent dès cette partie de la série. Vérifier séparément son traitement dans les arcs ultérieurs.",
+          "source": "https://www.viz.com/manga-books/manga/sakamoto-days-volume-5-0/product/7295"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/sakamoto-days-tome-01-9782344050989/",
+        "https://www.glenat.com/glenat-manga/series-sakamoto-days/",
+        "https://www.commonsensemedia.org/tv-reviews/sakamoto-days",
+        "https://www.viz.com/manga-books/manga/sakamoto-days-volume-5-0/product/7295",
+        "https://www.viz.com/ratings",
+        "https://mangabookshelf.com/2022/05/19/sakamoto-days-vol-1/",
+        "https://en.wikipedia.org/wiki/Sakamoto_Days"
+      ],
+      "commentaire": "Les descriptions attribuées à Common Sense Media et la mention violence et gore du manga sont confirmées. Je recommande 16 ans, sans présenter ce choix comme une classification française officielle."
+    },
+    "132029": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Sacrifices d'enfants et suicides",
+          "probleme": "Les avertissements se limitent aux premiers arcs et omettent un autre passage majeur : le passé de Zuma comporte la noyade de son petit frère et le suicide de sa mère devant un train.",
+          "correction": "Ajouter un avertissement distinct sur les deuils familiaux de Zuma, comprenant la mort d'un enfant par noyade et le suicide de sa mère devant un train. Mettre spoiler à true.",
+          "source": "https://en.wikipedia.org/wiki/List_of_Dandadan_chapters"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Cet arc couvre les tomes 2 et 3 selon Wikipédia (français).",
+          "probleme": "Le passé d'Acro-soyeuse est déjà raconté au tome 2, qui contient les chapitres 9 à 16. La mention des tomes 2 et 3 manque de précision pour localiser cette scène.",
+          "correction": "Le passé tragique d'Acro-soyeuse est révélé dans le tome 2.",
+          "source": "https://en.wikipedia.org/wiki/List_of_Dandadan_chapters"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "La scène n'est pas explicite mais elle est perturbante.",
+          "probleme": "La formulation peut minimiser la menace de viol : la contrainte physique et les jambes écartées sont décrites explicitement par la source. L'absence d'acte sexuel accompli ne rend pas la menace implicite.",
+          "correction": "La scène montre une menace explicite de viol et une immobilisation forcée, sans pénétration montrée.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/dan-da-dan"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/dan-da-dan",
+        "https://kazemanga.fr/products/dandadan-t01",
+        "https://www.viz.com/read/manga/dandadan-volume-1/product/7222",
+        "https://www.viz.com/ratings",
+        "https://www.rtbf.be/article/apres-neuf-tomes-reussis-le-manga-dandadan-poursuit-sa-course-delirante-11332642",
+        "https://fr.wikipedia.org/wiki/Dandadan",
+        "https://en.wikipedia.org/wiki/Dandadan",
+        "https://en.wikipedia.org/wiki/List_of_Dandadan_characters",
+        "https://en.wikipedia.org/wiki/List_of_Dandadan_chapters"
+      ],
+      "commentaire": "16 ans reste un conseil éditorial défendable, à distinguer du classement adulte de VIZ. La critique The Graphic Library a été retrouvée dans les résultats de recherche, mais son ouverture directe a échoué."
+    },
+    "140475": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "vocabulaire",
+          "extrait": "« crétin », « idiot », « je m'en fiche » et des variantes de « stupide »",
+          "probleme": "« Je m'en fiche » efface la grossièreté de « give a damn ». Cette traduction personnelle adoucit le vocabulaire de la source et peut être prise pour un relevé de la traduction française.",
+          "correction": "Conserver les exemples anglais de Common Sense Media, notamment « jerk », « give a damn » et « idiot », en précisant qu'ils ne proviennent pas de l'édition française du manga.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/the-fragrant-flower-blooms-with-dignity"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "sans aucun contenu sexuel",
+          "probleme": "L'absence absolue de contenu sexuel dans toute la série n'est pas établie. La source Common Sense Media porte sur l'animé et les critiques du manga citées s'arrêtent au tome 7.",
+          "correction": "Les sources consultées ne signalent pas de scène sexuelle dans l'animé ni dans les tomes du manga qu'elles couvrent.",
+          "source": "https://animeuknews.net/2026/01/the-fragrant-flower-blooms-with-dignity-volumes-6-7-review/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.nobi-nobi.fr/livres-series-bloom/",
+        "https://www.nobi-nobi.fr/livre/bloom-t01-9782373499759/",
+        "https://www.nobi-nobi.fr/livres-genki/",
+        "https://www.commonsensemedia.org/tv-reviews/the-fragrant-flower-blooms-with-dignity",
+        "https://fr.wikipedia.org/wiki/Bloom_(manga)",
+        "https://en.wikipedia.org/wiki/The_Fragrant_Flower_Blooms_with_Dignity",
+        "https://animeuknews.net/2025/05/the-fragrant-flower-blooms-with-dignity-volumes-2-and-3-review/",
+        "https://animeuknews.net/2025/10/the-fragrant-flower-blooms-with-dignity-volumes-4-and-5-review/",
+        "https://animeuknews.net/2026/01/the-fragrant-flower-blooms-with-dignity-volumes-6-7-review/"
+      ],
+      "commentaire": "Les 12 tomes français et la déclaration du tome 6 sont confirmés. 12 ans reste cohérent ; les corrections portent sur le vocabulaire et une garantie d'absence trop générale."
+    },
+    "146983": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Le film qu'il en tire est moqué par ses camarades de lycée.",
+          "probleme": "Yûta est collégien au début du récit, et non lycéen. Plusieurs critiques anglophones citées emploient à tort ou approximativement le terme high school.",
+          "correction": "Le film qu'il en tire est moqué par ses camarades de collège.",
+          "source": "https://www.crunchyroll.com/news/latest/2022/6/19/chainsaw-man-artist-tatsuki-fujimoto-reveals-cover-for-goodbye-eri-manga"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "Mieux vaut avoir 14 ans pour découvrir cette série.",
+          "probleme": "Il s'agit d'un récit complet en un volume, pas d'une série.",
+          "correction": "Mieux vaut avoir 14 ans pour découvrir ce récit.",
+          "source": "https://en.wikipedia.org/wiki/Goodbye,_Eri"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.graphiclibrary.org/reviews/goodbye-eri-by-tatsuki-fujimoto",
+        "https://fr.wikipedia.org/wiki/Adieu_Eri",
+        "https://en.wikipedia.org/wiki/Goodbye,_Eri",
+        "https://animecorner.me/review-goodbye-eri-a-peculiar-coming-of-age-story-filled-with-loss/",
+        "https://www.crunchyroll.com/news/latest/2022/6/19/chainsaw-man-artist-tatsuki-fujimoto-reveals-cover-for-goodbye-eri-manga"
+      ],
+      "commentaire": "Les principaux avertissements, les spoilers et le conseil de 14 ans sont cohérents. L'article Crunchyroll était lisible dans les résultats de recherche ; son ouverture directe n'a renvoyé aucun texte, et la notice ActuaLitté est restée inaccessible."
+    }
+  }
+}

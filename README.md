@@ -62,6 +62,8 @@ netlify.toml               Hébergement Netlify : build, redirections des ancien
 .github/workflows/publication.yml  Publication programmée quotidienne des articles validés (voir editorial/README.md)
 .github/workflows/diffusion.yml    Diffusion quotidienne sur les réseaux sociaux des semaines validées (voir editorial/RESEAUX.md)
 app.html                   Ancien prototype « Calculateur d'Énergie Stand » (non publié, conservé)
+manga/                     Site Mangâge (recherche de mangas avec âge conseillé), indépendant de ce site et publié à part
+                           (voir manga/README.md)
 ```
 
 ## Prévisualiser en local

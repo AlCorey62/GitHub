@@ -1,0 +1,174 @@
+{
+  "relecteur": "Mario",
+  "date": "2026-11-04",
+  "fiches": {
+    "74489": {
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/series-lere-des-cristaux/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-01-9782344011713/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-04-9782344014875/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-06-9782344020005/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-07-9782344023983/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-12-9782344058640/",
+        "https://en.wikipedia.org/wiki/Land_of_the_Lustrous",
+        "https://animeuknews.net/2017/06/land-of-the-lustrous-volume-1-review/",
+        "https://animeuknews.net/2019/05/land-of-the-lustrous-review/"
+      ],
+      "commentaire": "Fiche précise, complète et bien sourcée. Le palier de 14 ans est pertinent au vu de l'évolution dramatique de la série et de la recommandation dès 13 ans de Glénat."
+    },
+    "85135": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Des années plus tard, devenu un lycéen isolé et rongé par la culpabilité, il apprend la langue des signes et cherche à revoir Shoko pour lui demander pardon.",
+          "probleme": "Le résumé omet le nom de l'autrice (Yoshitoki Oima), le nombre de tomes (7 tomes) et l'éditeur français (Ki-oon).",
+          "correction": "Des années plus tard, devenu un lycéen isolé et rongé par la culpabilité, il apprend la langue des signes et cherche à revoir Shoko pour lui demander pardon. Écrit et dessiné par Yoshitoki Oima, le manga est complet en 7 tomes chez Ki-oon.",
+          "source": "https://ki-oon.com/series/a-silent-voice"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://ki-oon.com/series/a-silent-voice",
+        "https://www.commonsensemedia.org/movie-reviews/a-silent-voice-the-movie",
+        "https://www.filmspourenfants.net/silent-voice/",
+        "https://e-enfance.org/a-silent-voice-manga-harcelement-scolaire/",
+        "https://leclaireur.fnac.com/article/cp25949-a-silent-voice-un-manga-qui-laisse-sans-voix/",
+        "https://fr.wikipedia.org/wiki/A_Silent_Voice",
+        "https://en.wikipedia.org/wiki/A_Silent_Voice_(manga)"
+      ],
+      "commentaire": "Très bonne fiche dont toutes les scènes mentionnées pour le film figurent bien dans le manga. Il manque seulement la mention de l'autrice, du nombre de tomes (7) et de l'éditeur (Ki-oon) dans le résumé."
+    },
+    "85143": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "[Violence] *Combats armés et morts (animé, saison 1)* : Selon Common Sense Media, les épreuves donnent lieu à de nombreux combats à l'épée, à la lance ou au fusil, où des personnages s'entretuent, avec du sang et du gore.",
+          "probleme": "La rubrique ne couvre que la saison 1 de l'animé et omet la trahison finale de la saison 1 ainsi que la coercition exercée par l'organisation criminelle FUG dès la saison 2, pourtant documentées par Wikipédia et Ototo.",
+          "correction": "Ajouter une entrée [Thèmes sensibles] [révèle l'intrigue] *Trahison et chantage d'une organisation criminelle* : À la fin de la première saison, le héros est trahi par une proche qui tente de l'éliminer. Dans la saison 2, une organisation criminelle (FUG) le contraint à combattre sous une nouvelle identité en menaçant la vie de ses anciens compagnons (Wikipédia, Ototo).",
+          "source": "https://en.wikipedia.org/wiki/Tower_of_God"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.ototo.fr/Serie-97-tower-of-god",
+        "https://www.ototo.fr/Serie-118-tower-of-god-saison-2",
+        "https://www.commonsensemedia.org/tv-reviews/tower-of-god",
+        "https://en.wikipedia.org/wiki/Tower_of_God"
+      ],
+      "commentaire": "L'âge de 14 ans est cohérent avec la recommandation dès 13 ans de Common Sense Media. Il convient toutefois de compléter les scènes difficiles au-delà de la saison 1 grâce aux résumés d'Ototo et de Wikipédia déjà cités en sources."
+    },
+    "85486": {
+      "verdict": "valide",
+      "age_propose": 12,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://ki-oon.com/series/my-hero-academia",
+        "https://ki-oon.com/actualites/my-hero-academia-l-int-egrale",
+        "https://fr.wikipedia.org/wiki/My_Hero_Academia",
+        "https://en.wikipedia.org/wiki/My_Hero_Academia",
+        "https://www.commonsensemedia.org/tv-reviews/my-hero-academia",
+        "https://www.filmspourenfants.net/my-hero-academia-world-heroes-mission/",
+        "https://bibliotheques.paris.fr/doc/SYRACUSE/1053029",
+        "https://www.viz.com/manga-books/manga/my-hero-academia-volume-1-0/product/3767"
+      ],
+      "commentaire": "Fiche complète et équilibrée qui rend bien compte du contraste entre le ton shônen positif des débuts et l'assombrissement des derniers arcs. L'âge de 12 ans est bien justifié."
+    },
+    "85611": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Le CCG, l'organisation gouvernementale qui les combat, crée l'escouade Quinx, composée de sujets expérimentaux ayant reçu par chirurgie des capacités de goule.",
+          "probleme": "Dans la traduction française officielle de Glénat, l'unité est appelée les « Quinckes » (et non « Quinx », qui est la graphie anglaise).",
+          "correction": "Le CCG, l'organisation gouvernementale qui les combat, crée l'escouade des Quinckes (Quinx en version anglaise), composée de sujets expérimentaux ayant reçu par chirurgie des capacités de goule.",
+          "source": "https://www.glenat.com/shonen/tokyo-ghoul-re-tome-01-9782344012642/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/shonen/tokyo-ghoul-re-tome-01-9782344012642/",
+        "https://www.commonsensemedia.org/tv-reviews/tokyo-ghoul",
+        "https://en.wikipedia.org/wiki/Tokyo_Ghoul",
+        "https://fr.wikipedia.org/wiki/Tokyo_Ghoul",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Ghoul_characters"
+      ],
+      "commentaire": "L'âge de 16 ans est tout à fait adapté à la dureté de la série. Signalement mineur sur le nom français officiel de l'escouade (« Quinckes » chez Glénat)."
+    },
+    "86123": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Les deux amis rivaux rejoignent chacun un escadron de Chevaliers-Mages pour atteindre leur but.",
+          "probleme": "Le résumé ne mentionne ni l'auteur (Yûki Tabata), ni le nombre de tomes (38 tomes), ni l'éditeur français (Kazé puis Crunchyroll).",
+          "correction": "Les deux amis rivaux rejoignent chacun un escadron de Chevaliers-Mages pour atteindre leur but. Écrite et dessinée par Yûki Tabata, la série compte 38 tomes et est publiée en France par Kazé puis Crunchyroll.",
+          "source": "https://fr.wikipedia.org/wiki/Black_Clover"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/black-clover",
+        "https://kazemanga.fr/products/black-clover-t01",
+        "https://kazemanga.fr/products/black-clover-t37",
+        "https://www.viz.com/manga-books/manga/black-clover-volume-1-0/product/4795",
+        "https://fr.wikipedia.org/wiki/Black_Clover",
+        "https://en.wikipedia.org/wiki/Black_Clover"
+      ],
+      "commentaire": "Bonne synthèse fidèle aux sources. Il manque seulement la mention de l'auteur, du nombre de tomes et de l'éditeur français dans le résumé."
+    },
+    "86635": {
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.pika.fr/livres-series-kaguya-sama-love-war/",
+        "https://www.pika.fr/livre/kaguya-sama-love-war-t01-9782811662912/",
+        "https://www.pika.fr/livre/kaguya-sama-love-war-t28-9782811697907/",
+        "https://www.commonsensemedia.org/tv-reviews/kaguya-sama-love-is-war",
+        "https://www.viz.com/manga-books/manga/kaguya-sama-love-is-war-volume-1-0/product/5449",
+        "https://en.wikipedia.org/wiki/Kaguya-sama:_Love_Is_War",
+        "https://en.wikipedia.org/wiki/List_of_Kaguya-sama:_Love_Is_War_characters"
+      ],
+      "commentaire": "Fiche exacte et bien documentée, y compris sur les arcs de la seconde moitié du manga vérifiés via Wikipédia. L'âge de 14 ans est cohérent avec la collection Pika Seinen et l'évolution des thèmes."
+    },
+    "87216": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "autres",
+          "extrait": "Common Sense Media (film Infinity Castle, début de l'arc final) : Conseille dès 14 ans",
+          "probleme": "Le titre français officiel du film sorti en 2025 est « La Forteresse infinie » ; il est préférable de le préciser à côté du titre anglais.",
+          "correction": "Common Sense Media (film La Forteresse infinie / Infinity Castle, début de l'arc final) : Conseille dès 14 ans",
+          "source": "https://fr.wikipedia.org/wiki/Demon_Slayer"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/Demon_Slayer",
+        "https://www.commonsensemedia.org/tv-reviews/demon-slayer",
+        "https://www.commonsensemedia.org/movie-reviews/demon-slayer-kimetsu-no-yaiba-infinity-castle",
+        "https://www.filmspourenfants.net/demon-slayer-kimetsu-no-yaiba-le-train-de-linfini/",
+        "https://bibliotheques.paris.fr/doc/SYRACUSE/1236668",
+        "https://www.viz.com/manga-books/manga/demon-slayer-kimetsu-no-yaiba-volume-1-0/product/5547"
+      ],
+      "commentaire": "Excellente fiche dont l'âge conseillé de 14 ans fait consensus entre Common Sense Media et filmspourenfants.net. Simple ajout du titre français du film de 2025."
+    },
+    "87423": {
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/the-promised-neverland",
+        "https://fr.wikipedia.org/wiki/The_Promised_Neverland",
+        "https://en.wikipedia.org/wiki/The_Promised_Neverland",
+        "https://en.wikipedia.org/wiki/List_of_The_Promised_Neverland_chapters"
+      ],
+      "commentaire": "Fiche rigoureuse et bien construite, qui croise efficacement les avis du CNLJ, de Common Sense Media et les résumés par tome. L'âge de 14 ans est un bon compromis face à la tension psychologique dès le premier tome."
+    }
+  }
+}
