@@ -53,3 +53,16 @@ test('un verdict « valide » avec des erreurs listées bloque la publication', 
   const { publiables } = trier({ 9: fiche() }, { pipo: { 9: valide }, mario: { 9: r } });
   assert.deepEqual(publiables, {});
 });
+
+test('un retour ne vaut que pour la révision qu\'il a relue', () => {
+  const corrigee = fiche({ revision: 2, journal_corrections: [{ relecteur: 'Pipo', decision: 'appliquee' }] });
+  const ancien = { ...valide };                     // sans numéro : révision 1
+  const nouveau = { ...valide, revision: 2 };
+  let r = trier({ 5: corrigee }, { pipo: { 5: [ancien] }, mario: { 5: [ancien] } });
+  assert.deepEqual(r.publiables, {});
+  assert.deepEqual(r.aCorriger[5].manquants, ['pipo', 'mario']);
+  r = trier({ 5: corrigee }, { pipo: { 5: [ancien, nouveau] }, mario: { 5: [nouveau] } });
+  assert.deepEqual(Object.keys(r.publiables), ['5']);
+  assert.equal(r.publiables[5].journal_corrections, undefined);
+  assert.equal(r.publiables[5].revision, undefined);
+});

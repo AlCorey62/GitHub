@@ -42,13 +42,18 @@ export function controlerFiche(f) {
   return pb;
 }
 
-/** Lit les retours d'un relecteur (relecture/retour-<nom>*.json) et les fusionne. */
+/**
+ * Lit les retours d'un relecteur (relecture/retour-<nom>*.json) : pour chaque fiche, la liste de ses retours.
+ * Un retour sans numéro de révision porte sur la révision 1.
+ */
 export function lireRetours(nom, dossier = DOSSIER) {
   const fiches = {};
   if (!existsSync(dossier)) return fiches;
   for (const f of readdirSync(dossier).filter((x) => x.startsWith(`retour-${nom}`) && x.endsWith('.json')).sort()) {
     const r = lireJson(join(dossier, f));
-    for (const [id, v] of Object.entries(r.fiches || {})) fiches[id] = { ...v, date: v.date || r.date || '', fichier: f };
+    for (const [id, v] of Object.entries(r.fiches || {})) {
+      (fiches[id] ||= []).push({ ...v, revision: Number(v.revision) || 1, date: v.date || r.date || '', fichier: f });
+    }
   }
   return fiches;
 }
@@ -63,7 +68,13 @@ export function trier(brouillons, retours) {
   const aCorriger = {};
   for (const [id, fiche] of Object.entries(brouillons)) {
     if (id.startsWith('_')) continue;
-    const avis = Object.fromEntries(Object.keys(RELECTEURS).map((n) => [n, retours[n]?.[id]]));
+    // Seul compte le dernier retour qui porte sur la révision actuelle de la fiche.
+    const revision = Number(fiche.revision) || 1;
+    const pourRevision = (liste) => {
+      const l = Array.isArray(liste) ? liste : liste ? [liste] : [];
+      return l.filter((a) => (Number(a.revision) || 1) === revision).at(-1);
+    };
+    const avis = Object.fromEntries(Object.keys(RELECTEURS).map((n) => [n, pourRevision(retours[n]?.[id])]));
     const manquants = Object.keys(avis).filter((n) => !avis[n]);
     const invalides = Object.entries(avis).filter(([, a]) => a && !VERDICTS.includes(a.verdict)).map(([n]) => n);
     const forme = controlerFiche(fiche);
@@ -72,7 +83,7 @@ export function trier(brouillons, retours) {
     const ageConteste = Object.values(avis).some((a) => a?.age_propose && a.age_propose !== fiche.age);
     if (tousValides && !forme.length && !ageConteste) {
       const dates = Object.values(avis).map((a) => a.date).filter(Boolean).sort();
-      const { notes_relecture, ...publique } = fiche;
+      const { notes_relecture, journal_corrections, revision: _r, ...publique } = fiche;
       publiables[id] = {
         ...publique,
         redacteur: publique.redacteur || 'Claude (assistant IA)',
@@ -87,7 +98,7 @@ export function trier(brouillons, retours) {
 
 function texteFiche(id, f) {
   const l = [];
-  l.push(`## ${f.titre || id} (AniList ${id}) : ${f.age >= 18 ? 'adultes' : `dès ${f.age} ans`}`);
+  l.push(`## ${f.titre || id} (AniList ${id}) : ${f.age >= 18 ? 'adultes' : `dès ${f.age} ans`}, révision ${Number(f.revision) || 1}`);
   l.push('', `Fiche AniList : https://anilist.co/manga/${id}`, '', `**Résumé.** ${f.resume || '(absent)'}`, '');
   if (f.themes?.length) {
     l.push('**Thèmes abordés**', '');
@@ -108,6 +119,12 @@ function texteFiche(id, f) {
   if (f.notes_relecture?.length) {
     l.push('', '**Points à vérifier en priorité**', '');
     for (const n of f.notes_relecture) l.push(`- ${n}`);
+  }
+  if (f.journal_corrections?.length) {
+    l.push('', `**Suite donnée aux remarques de la relecture précédente (révision ${(Number(f.revision) || 1) - 1})**`, '');
+    for (const j of f.journal_corrections) {
+      l.push(`- ${j.relecteur || '?'} [${j.rubrique || '?'}] ${j.remarque || ''} → ${j.decision || '?'} : ${j.explication || ''}`);
+    }
   }
   const forme = controlerFiche(f);
   if (forme.length) l.push('', `**Contrôle de forme : ${forme.join(' ; ')}**`);
