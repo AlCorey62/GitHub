@@ -1,0 +1,3 @@
+{
+  "_format": "Fiches rédigées à la main et vérifiées, prioritaires sur la fiche automatique. Voir manga/README.md, section « Rédiger une fiche vérifiée ». Clé : identifiant AniList du titre (nombre de l'adresse anilist.co/manga/<id>). Champs : age (6, 8, 10, 12, 14, 16 ou 18, obligatoire), sources (liste obligatoire de {titre, lien}), resume, themes [{titre, texte}], scenes [{categorie: violence | peur | sexe | themes | autre, titre, texte}], vocabulaire, avis, autres [{source, texte, lien}], redacteur, date (AAAA-MM-JJ). Les clés commençant par _ sont ignorées."
+}

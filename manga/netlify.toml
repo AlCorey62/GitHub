@@ -14,7 +14,7 @@
     X-Content-Type-Options = "nosniff"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Âges vérifiés à la main (donnees/ajustements.json) : mis en cache une heure.
+# Fiches vérifiées à la main (donnees/fiches-verifiees.json) : mises en cache une heure.
 [[headers]]
   for = "/donnees/*"
   [headers.values]

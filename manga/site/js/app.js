@@ -8,6 +8,7 @@ import {
 import {
   ErreurAniList, REQUETE_ETIQUETTES, REQUETE_FICHE, REQUETE_LISTE, REQUETE_RESUME, reduireMedia, requeteAniList,
 } from './anilist.js';
+import { TEXTE_VOCABULAIRE, scenesDifficiles, synthese, themes } from './textes.js';
 
 const GENRES_FR = {
   Action: 'Action', Adventure: 'Aventure', Comedy: 'Comédie', Drama: 'Drame', Ecchi: 'Ecchi', Fantasy: 'Fantasy',
@@ -72,7 +73,8 @@ const etat = {
   tri: 'popularite',
   triChoisi: false,
   flou: true,
-  ajustements: {},
+  ajustements: {},       // âges vérifiés (id → {age, source})
+  fiches: {},            // fiches vérifiées complètes (id → fiche)
   etiquettesAdultes: null,
   vus: new Map(),         // fiches déjà reçues pendant la visite (id → manga)
   reponses: new Map(),    // pages déjà reçues pendant la visite (variables → page)
@@ -109,12 +111,17 @@ function completer(m) {
   return m;
 }
 
-async function chargerAjustements() {
+// Fiches vérifiées : retenues seulement si l'âge est sur l'échelle et si au moins une source est citée.
+async function chargerFichesVerifiees() {
   try {
-    const r = await fetch('donnees/ajustements.json');
+    const r = await fetch('donnees/fiches-verifiees.json');
     if (!r.ok) return;
-    for (const [cle, v] of Object.entries(await r.json())) if (!cle.startsWith('_')) etat.ajustements[cle] = v;
-  } catch { /* pas d'âges vérifiés */ }
+    for (const [cle, f] of Object.entries(await r.json())) {
+      if (cle.startsWith('_') || !AGES.includes(f?.age) || !Array.isArray(f.sources) || !f.sources.length) continue;
+      etat.fiches[cle] = f;
+      etat.ajustements[cle] = { age: f.age, source: f.sources.map((x) => x.titre).join(', ') };
+    }
+  } catch { /* pas de fiche vérifiée */ }
 }
 
 // Liste des étiquettes réservées aux adultes : sert à écarter ces titres dès la requête.
@@ -404,58 +411,108 @@ function majEchelle() {
   }
 }
 
-// ---------- Fiche détaillée ----------
+// ---------- Fiche détaillée (modèle : fiches de filmspourenfants.net) ----------
 function jauge(age) {
   const niveaux = { aucune: 0, légère: 1, modérée: 2, marquée: 3, forte: 4 };
   const n = niveaux[intensite(age)];
   return `<span class="jauge" role="img" aria-label="Intensité ${intensite(age)}">${[1, 2, 3, 4].map((i) => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span>`;
 }
 
-function blocContenus(e) {
-  const nbSpoilers = e.raisons.filter((r) => r.spoiler).length;
-  const lignes = Object.entries(CATEGORIES).map(([cat, nom]) => {
-    // regroupe les raisons de même libellé (étiquettes réservées aux adultes notamment)
-    const parLibelle = new Map();
-    for (const r of e.raisons.filter((x) => x.cat === cat)) {
-      const cle = `${r.spoiler ? 's' : 'v'}:${r.fr}`;
-      const prec = parLibelle.get(cle);
-      if (!prec || r.age > prec.age || (r.age === prec.age && (r.rang || 0) > (prec.rang || 0))) parLibelle.set(cle, r);
-    }
-    const raisons = [...parLibelle.values()];
-    const caches = raisons.filter((r) => r.spoiler);
-    const item = (r) => {
-      const pct = r.source === 'genre' ? 'genre' : `${r.rang} %`;
-      return `<li${r.spoiler ? ' class="spoiler" hidden' : ''}>${esc(r.fr)} <span class="pct">${pct}</span> → ${r.age} ans</li>`;
-    };
-    const items = raisons.filter((r) => !r.spoiler).map(item);
+function bloc(titre, texte, pied = '', classe = '') {
+  return `<div class="bloc${classe ? ` ${classe}` : ''}"${classe.includes('spoiler') ? ' hidden' : ''}><h4>${esc(titre)}</h4>${
+    texte ? `<p>${esc(texte)}</p>` : ''}${pied ? `<p class="bloc-pied">${esc(pied)}</p>` : ''}</div>`;
+}
+
+function sectionThemes(m, fv) {
+  const liste = fv?.themes?.length
+    ? fv.themes.map((t) => bloc(t.titre, t.texte))
+    : themes(m, 60).slice(0, 6).map((t) => bloc(t.titre, t.texte, `Thème retenu par ${t.rang} % des contributeurs AniList.`));
+  return `<section class="fiche-section" aria-labelledby="t-themes">
+    <h3 id="t-themes">Thèmes abordés</h3>
+    ${liste.length ? `<div class="blocs">${liste.join('')}</div>` : '<p class="resume-etat">Aucun thème principal renseigné sur AniList.</p>'}
+  </section>`;
+}
+
+function sectionScenes(e, fv) {
+  if (fv?.scenes?.length) {
+    return `<section class="fiche-section" aria-labelledby="t-scenes">
+      <h3 id="t-scenes">Scènes difficiles</h3>
+      <div class="blocs">${fv.scenes.map((x) => bloc(x.titre, x.texte, CATEGORIES[x.categorie] || '')).join('')}</div>
+    </section>`;
+  }
+  const parCat = scenesDifficiles(e);
+  const nbSpoilers = Object.values(parCat).reduce((n, c) => n + c.scenes.filter((x) => x.spoiler).length, 0);
+  const cats = Object.values(parCat).map((c) => {
+    const visibles = c.scenes.filter((x) => !x.spoiler);
+    const caches = c.scenes.filter((x) => x.spoiler);
+    const pied = (x) => (x.rang === null ? `Genre du titre : dès ${x.age} ans.` : `Signalé par ${x.rang} % des contributeurs : dès ${x.age} ans.`);
+    const blocs = visibles.map((x) => bloc(x.titre, x.texte, pied(x)));
     if (caches.length) {
-      const max = Math.max(...caches.map((r) => r.age));
-      items.push(`<li class="spoiler-resume">${caches.length === 1 ? 'Un élément d\'intrigue masqué' : `${caches.length} éléments d'intrigue masqués`} (jusqu'à ${max} ans)</li>`);
-      items.push(...caches.map(item));
+      const max = Math.max(...caches.map((x) => x.age));
+      blocs.push(`<p class="spoiler-resume">${caches.length === 1 ? 'Un élément d\'intrigue masqué' : `${caches.length} éléments d'intrigue masqués`} (jusqu'à ${max} ans).</p>`);
+      blocs.push(...caches.map((x) => bloc(x.titre, x.texte, pied(x), 'spoiler')));
     }
-    const age = e.categories[cat];
-    return `<div class="contenu">
-      <span class="contenu-nom">${esc(nom)}</span>${jauge(age)}
-      <div class="contenu-detail">${age ? `<span class="vers">${intensite(age)}</span><ul>${items.join('')}</ul>` : 'aucun élément signalé'}</div>
+    return `<div class="scenes-cat">
+      <div class="scenes-tete"><h4>${esc(c.titre)}</h4>${jauge(c.age)}<span class="vers">${c.age ? intensite(c.age) : 'rien de signalé'}</span></div>
+      ${blocs.join('')}
     </div>`;
   });
-  const notes = [`Point de départ : ${esc(e.public.fr)}, ${e.public.age} ans.`];
-  if (e.douceur) notes.push(`Contenu doux : ${esc(e.douceur.fr.toLowerCase())} (${e.douceur.rang} %), aucun élément sensible.`);
-  if (e.prudence) notes.push(`${esc(e.prudence)} : ${e.estimation} ans.`);
   const devoiler = nbSpoilers
     ? '<p class="base-calcul"><button type="button" class="spoiler-bouton" id="devoiler">Afficher les éléments d\'intrigue masqués</button> (ils peuvent dévoiler l\'histoire)</p>'
     : '';
-  return `<section class="contenus" aria-labelledby="t-contenus">
-    <h3 id="t-contenus">Ce qui détermine l'âge</h3>
-    ${notes.map((n) => `<p class="base-calcul">${n}</p>`).join('')}
-    ${lignes.join('')}
+  return `<section class="fiche-section" aria-labelledby="t-scenes">
+    <h3 id="t-scenes">Scènes difficiles</h3>
+    ${cats.join('')}
     ${devoiler}
-    <p class="base-calcul">Pourcentage : part des contributeurs AniList qui jugent l'étiquette pertinente. <a href="#guide">Voir le barème</a></p>
+    <p class="base-calcul">Descriptions tirées des définitions des étiquettes AniList. Le pourcentage indique la part des contributeurs qui jugent l'étiquette justifiée pour ce titre. Les informations portent sur l'ensemble de la série.</p>
   </section>`;
+}
+
+function sectionAvis(m, e, fv) {
+  const contenu = fv?.avis
+    ? `<p class="avis">${esc(fv.avis)}</p><p class="bloc-pied">Avis rédigé${fv.redacteur ? ` par ${esc(fv.redacteur)}` : ''}${fv.date ? ` le ${esc(new Date(`${fv.date}T12:00:00`).toLocaleDateString('fr-FR'))}` : ''}.</p>`
+    : `<p class="avis">${synthese(m, e, GENRES_FR).map(esc).join(' ')}</p><p class="bloc-pied">Synthèse rédigée automatiquement à partir des données AniList, sans relecture humaine.</p>`;
+  return `<section class="fiche-section avis-section" aria-labelledby="t-avis"><h3 id="t-avis">En résumé</h3>${contenu}</section>`;
+}
+
+function sectionAutres(m, fv) {
+  const items = [];
+  for (const a of fv?.autres || []) {
+    items.push(`<li><strong>${esc(a.source)}</strong>${a.texte ? ` : ${esc(a.texte)}` : ''}${a.lien ? ` <a href="${esc(a.lien)}" target="_blank" rel="noopener">Lire</a>` : ''}</li>`);
+  }
+  if (m.note) items.push(`<li><strong>Lecteurs AniList</strong> : note moyenne de ${m.note}/100, ${pluriel(m.popularite, 'membre')} suivent ce titre.</li>`);
+  const recherche = encodeURIComponent(m.anglais || m.romaji);
+  const liens = [
+    `<a href="https://anilist.co/manga/${m.id}" target="_blank" rel="noopener">Fiche AniList</a>`,
+    m.idMal ? `<a href="https://myanimelist.net/manga/${m.idMal}" target="_blank" rel="noopener">Fiche MyAnimeList</a>` : '',
+    `<a href="https://www.filmspourenfants.net/?s=${recherche}" target="_blank" rel="noopener">Chercher une critique d'adaptation sur filmspourenfants.net</a>`,
+    `<a href="https://www.commonsensemedia.org/search/${recherche}" target="_blank" rel="noopener">Chercher sur Common Sense Media (en anglais)</a>`,
+  ].filter(Boolean);
+  return `<section class="fiche-section" aria-labelledby="t-autres">
+    <h3 id="t-autres">Ce que disent les autres</h3>
+    ${items.length ? `<ul class="autres-avis">${items.join('')}</ul>` : ''}
+    <div class="liens">${liens.join('')}</div>
+    <p class="base-calcul">Les recherches s'ouvrent sur les sites concernés : leurs résultats n'engagent qu'eux.</p>
+  </section>`;
+}
+
+function sectionCalcul(e) {
+  const notes = [`Point de départ : ${esc(e.public.fr)}, ${e.public.age} ans.`];
+  if (e.douceur) notes.push(`Contenu doux : ${esc(e.douceur.fr.toLowerCase())} (${e.douceur.rang} %), aucun élément sensible : âge ramené à ${e.public.age} ans.`);
+  const max = e.raisons.length ? Math.max(...e.raisons.map((r) => r.age)) : 0;
+  if (max > e.public.age) notes.push(`Élément le plus sensible : dès ${max} ans (voir « Scènes difficiles »).`);
+  if (e.prudence) notes.push(`${esc(e.prudence)} : ${e.estimation} ans.`);
+  notes.push(`Âge estimé : ${e.estimation} ans. ${esc(LIBELLES_FIABILITE[e.fiabilite])} (nombre d'étiquettes et de lecteurs).`);
+  if (e.verifie) notes.push(`Âge retenu après vérification : ${e.age} ans.`);
+  return `<details class="calcul"><summary>Comment cet âge est calculé</summary>
+    ${notes.map((n) => `<p class="base-calcul">${n}</p>`).join('')}
+    <p class="base-calcul"><a href="#guide">Voir le barème complet</a></p>
+  </details>`;
 }
 
 function htmlFiche(m) {
   const e = m.eval;
+  const fv = etat.fiches[m.id];
   const infos = [];
   if (m.auteurs.length) infos.push(['Auteurs', m.auteurs.join(', ')]);
   if (m.annee) infos.push(['Début', String(m.annee)]);
@@ -465,19 +522,20 @@ function htmlFiche(m) {
   if (m.format === 'ONE_SHOT') infos.push(['Format', 'Histoire courte (one-shot)']);
   if (m.pays) infos.push(['Origine', PAYS_FR[m.pays] || m.pays]);
   infos.push(['Public visé', e.public.cle ? PUBLICS[e.public.cle].fr : 'Non précisé']);
-  if (m.note) infos.push(['Note AniList', `${m.note}/100, ${pluriel(m.popularite, 'membre')} le suivent`]);
-  else if (m.popularite) infos.push(['Suivi par', pluriel(m.popularite, 'membre AniList')]);
+  if (m.genres.length) infos.push(['Genres', m.genres.map((g) => GENRES_FR[g] || g).join(', ')]);
+  const th = themes(m, 50).slice(0, 8).map((t) => t.titre);
+  if (th.length) infos.push(['Thèmes', th.join(', ')]);
 
   const autres = m.synonymes.slice(0, 6);
   const etatAge = e.verifie
-    ? '<span class="etiquette-etat fiab-elevee">Vérifié</span>'
+    ? '<span class="etiquette-etat fiab-elevee">Fiche vérifiée</span>'
     : '<span class="etiquette-etat">Estimation</span>';
   const explication = e.verifie
-    ? `Âge vérifié${e.source ? ` (source : ${esc(e.source)})` : ''}.${e.note ? ` ${esc(e.note)}` : ''} L'estimation calculée était de ${e.estimation} ans.`
+    ? `Âge vérifié à partir des sources citées en bas de fiche. L'estimation automatique était de ${e.estimation} ans.`
     : `Estimation calculée d'après le public visé et les étiquettes de contenu AniList. ${TEXTE_FIABILITE[e.fiabilite]}`;
-
-  const liens = [`<a href="https://anilist.co/manga/${m.id}" target="_blank" rel="noopener">Fiche AniList</a>`];
-  if (m.idMal) liens.push(`<a href="https://myanimelist.net/manga/${m.idMal}" target="_blank" rel="noopener">Fiche MyAnimeList</a>`);
+  const sources = fv?.sources?.length
+    ? `<section class="fiche-section"><h3>Sources de cette fiche</h3><ul class="autres-avis">${fv.sources.map((x) => `<li>${x.lien ? `<a href="${esc(x.lien)}" target="_blank" rel="noopener">${esc(x.titre)}</a>` : esc(x.titre)}</li>`).join('')}</ul></section>`
+    : '';
 
   return `<div class="fiche-entete">
     ${couverture(m)}
@@ -491,18 +549,25 @@ function htmlFiche(m) {
   <section class="verdict" aria-label="Âge conseillé">
     ${gommette(e.age)}
     <div>
-      <h3>${esc(LIBELLES_AGE[e.age])}</h3>
+      <h3>${e.age >= 18 ? 'Réservé aux adultes' : `À partir de ${e.age} ans`}</h3>
       <p>${etatAge}<span class="etiquette-etat fiab-${e.fiabilite}">${esc(LIBELLES_FIABILITE[e.fiabilite])}</span></p>
       <p>${explication}</p>
     </div>
   </section>
-  ${blocContenus(e)}
-  ${m.genres.length ? `<section class="fiche-section"><h3>Genres</h3><ul class="genres-liste">${m.genres.map((g) => `<li>${esc(GENRES_FR[g] || g)}</li>`).join('')}</ul></section>` : ''}
   <section class="fiche-section" aria-labelledby="t-resume">
-    <h3 id="t-resume">Résumé (en anglais, source AniList)</h3>
-    <div id="resume"><p class="resume-etat">Chargement du résumé…</p></div>
+    <h3 id="t-resume">${fv?.resume ? 'Résumé' : 'Résumé (en anglais, source AniList)'}</h3>
+    <div id="resume">${fv?.resume ? `<p class="resume">${esc(fv.resume)}</p>` : '<p class="resume-etat">Chargement du résumé…</p>'}</div>
   </section>
-  <section class="fiche-section"><h3>En savoir plus</h3><div class="liens">${liens.join('')}</div></section>`;
+  ${sectionThemes(m, fv)}
+  ${sectionScenes(e, fv)}
+  <section class="fiche-section" aria-labelledby="t-vocabulaire">
+    <h3 id="t-vocabulaire">Vocabulaire</h3>
+    <p class="${fv?.vocabulaire ? 'resume' : 'resume-etat'}">${esc(fv?.vocabulaire || TEXTE_VOCABULAIRE)}</p>
+  </section>
+  ${sectionAvis(m, e, fv)}
+  ${sectionAutres(m, fv)}
+  ${sources}
+  ${sectionCalcul(e)}`;
 }
 
 function texteDepuisHtml(html) {
@@ -512,7 +577,7 @@ function texteDepuisHtml(html) {
 
 async function chargerResume(m) {
   const zone = $('#resume');
-  if (!zone) return;
+  if (!zone || etat.fiches[m.id]?.resume) return;
   const afficher = (texte) => {
     if (etat.ficheId !== m.id) return;
     zone.innerHTML = texte ? '<p class="resume"></p>' : '<p class="resume-etat">Pas de résumé sur AniList pour ce titre.</p>';
@@ -604,7 +669,7 @@ function construireGuide() {
 
 function majSourcesVerifiees() {
   const n = Object.keys(etat.ajustements).length;
-  if (n) $('#g-source-verifies').textContent = `${pluriel(n, 'âge')} vérifié${n > 1 ? 's' : ''} à la main ; les autres sont des estimations.`;
+  if (n) $('#g-source-verifies').textContent = `${pluriel(n, 'fiche')} vérifiée${n > 1 ? 's' : ''} à la main, avec leurs sources ; les autres fiches sont rédigées automatiquement.`;
 }
 
 // ---------- Navigation ----------
@@ -696,8 +761,8 @@ function lierControles() {
   dialogue.addEventListener('click', (e) => {
     if (e.target === dialogue) fermerFiche();
     if (e.target.closest('#devoiler')) {
-      for (const li of dialogue.querySelectorAll('li.spoiler')) li.hidden = false;
-      for (const li of dialogue.querySelectorAll('li.spoiler-resume')) li.remove();
+      for (const el of dialogue.querySelectorAll('.spoiler')) el.hidden = false;
+      for (const el of dialogue.querySelectorAll('.spoiler-resume')) el.remove();
       e.target.closest('p').remove();
     }
   });
@@ -734,7 +799,7 @@ async function demarrer() {
   construireGuide();
   lierControles();
   majEchelle();
-  await chargerAjustements();
+  await chargerFichesVerifiees();
   majSourcesVerifiees();
   router();
   nouvelleRecherche();

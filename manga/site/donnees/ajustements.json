@@ -1,3 +1,0 @@
-{
-  "_format": "Âges vérifiés à la main, prioritaires sur l'estimation calculée. Clé : identifiant AniList du titre (nombre visible dans l'adresse anilist.co/manga/<id>). Valeur : {\"age\": 6, 8, 10, 12, 14, 16 ou 18, \"source\": \"origine de l'âge (indication de l'éditeur français, lecture du titre...)\", \"note\": \"précision facultative\"}. Les clés commençant par _ sont ignorées."
-}

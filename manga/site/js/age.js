@@ -6,7 +6,7 @@
 //   2. chaque genre ou étiquette de contenu sensible, selon sa pertinence (0 à 100 %) votée par les contributeurs AniList,
 //   3. une règle de prudence quand les données sont trop peu nombreuses.
 // Les orientations amoureuses (Boys' Love, Yuri, thèmes LGBTQ+) ne modifient jamais l'âge : seul le degré
-// d'explicitation compte. Une recommandation vérifiée (ajustements.json) remplace toujours l'estimation.
+// d'explicitation compte. Une fiche vérifiée (donnees/fiches-verifiees.json) remplace toujours l'estimation.
 
 export const AGES = [6, 8, 10, 12, 14, 16, 18];
 

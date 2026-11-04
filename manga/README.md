@@ -4,7 +4,7 @@ Site de recherche de mangas (ainsi que manhwas et manhuas) avec un **âge consei
 
 - Toute la base AniList est accessible (plusieurs dizaines de milliers de titres), interrogée **en direct** depuis le navigateur du visiteur.
 - Filtre principal : l'âge du lecteur (6, 8, 10, 12, 14, 16 ans, adulte). Filtres complémentaires : public visé au Japon, genres, origine, parution, longueur, période, fiabilité.
-- Chaque fiche explique l'âge : public de départ, éléments en cause par catégorie (violence, nudité et sexualité, peur, thèmes sensibles), pourcentage de pertinence, indice de fiabilité. Les éléments qui dévoilent l'intrigue sont masqués par défaut.
+- Chaque fiche suit la présentation de [filmspourenfants.net](https://www.filmspourenfants.net) : âge conseillé, thèmes, résumé, thèmes abordés, scènes difficiles par catégorie, vocabulaire, synthèse, ce que disent les autres. Les éléments qui dévoilent l'intrigue sont masqués par défaut. Voir « Contenu des fiches ».
 - Page « Guide des âges » : les sept repères, le calcul pas à pas, le barème complet, les limites.
 - Couvertures des titres pour adultes floutées par défaut.
 
@@ -19,12 +19,13 @@ manga/
     css/style.css         Charte graphique (thèmes clair et sombre)
     js/age.js             Calcul de l'âge conseillé : barème et règles (seul fichier à modifier pour ajuster le barème)
     js/anilist.js         Requêtes à l'API AniList et mise en forme des fiches
+    js/textes.js          Textes des fiches : définitions françaises des étiquettes, thèmes, synthèse
     js/app.js             Interface : recherche, filtres, fiche, guide, formulaire de correction
-    donnees/ajustements.json  Âges vérifiés à la main (prioritaires sur l'estimation)
+    donnees/fiches-verifiees.json  Fiches rédigées à la main avec leurs sources (prioritaires)
     polices/              Atkinson Hyperlegible et Dela Gothic One, auto-hébergées (licence OFL)
     favicon.svg
   outils/serve.mjs        Serveur local de prévisualisation
-  tests/age.test.mjs      Tests du calcul de l'âge (lancés aussi par « npm test » à la racine du dépôt)
+  tests/                  Tests du calcul de l'âge et des textes (lancés aussi par « npm test » à la racine du dépôt)
   netlify.toml            Configuration Netlify propre à ce site (sécurité, cache)
 ```
 
@@ -58,17 +59,44 @@ Indice de fiabilité : élevée (12 étiquettes ou plus et 3 000 membres ou plus
 
 Les seuils ont été ajustés en contrôlant le résultat sur une quarantaine de titres connus (résultats au 04/11/2026 : One Piece et Naruto 10 ans, Death Note 12 ans, L'Attaque des Titans et Demon Slayer 14 ans, Tokyo Ghoul et Chainsaw Man 16 ans, Berserk adultes, Doraemon 6 ans). Ces ajustements sont des choix éditoriaux, à valider ou à revoir dans `age.js` ; les tests (`tests/age.test.mjs`) vérifient le comportement des règles. Les résultats évoluent avec les votes des contributeurs AniList.
 
-## Vérifier un âge à la main
+## Contenu des fiches
 
-Ajouter une entrée dans `site/donnees/ajustements.json`. La clé est l'identifiant AniList du titre, visible dans l'adresse de sa fiche (`anilist.co/manga/<identifiant>`) ou dans le champ « manga » d'une proposition reçue par le formulaire. Format :
+Chaque fiche reprend les rubriques de filmspourenfants.net. Règle de rédaction : **aucune phrase sans donnée réelle derrière**.
+
+| Rubrique | Fiche automatique (tous les titres) | Fiche vérifiée |
+|---|---|---|
+| À partir de X ans | Âge calculé (voir ci-dessus) | Âge retenu par le rédacteur |
+| Résumé | Résumé AniList, en anglais | Résumé en français |
+| Thèmes abordés | Étiquettes de thème retenues par 60 % des contributeurs ou plus, avec leur définition traduite d'AniList | Thèmes et messages rédigés |
+| Scènes difficiles | Étiquettes sensibles par catégorie, définition traduite d'AniList, pourcentage, âge imposé | Scènes décrites précisément |
+| Vocabulaire | « Non renseigné » (AniList ne décrit pas le langage) | Langage relevé à la lecture |
+| En résumé | Synthèse générée à partir des mêmes données, signalée comme automatique | Avis rédigé, signé et daté |
+| Ce que disent les autres | Note AniList, liens de recherche filmspourenfants.net et Common Sense Media | Avis extérieurs cités avec lien |
+
+Limite : une fiche automatique ne décrit pas de scène précise, et elle porte sur l'ensemble de la série. Seule une lecture des tomes (ou une source qui les décrit) permet d'écrire les rubriques d'une fiche vérifiée.
+
+## Rédiger une fiche vérifiée
+
+Ajouter une entrée dans `site/donnees/fiches-verifiees.json`. La clé est l'identifiant AniList du titre, visible dans l'adresse de sa fiche (`anilist.co/manga/<identifiant>`) ou dans le champ « manga » d'une proposition reçue par le formulaire. Une fiche sans `age` valide ou sans `sources` est ignorée. Structure (les valeurs sont à remplacer) :
 
 ```json
 {
-  "<identifiant AniList>": { "age": 12, "source": "Indication de l'éditeur français", "note": "Précision facultative" }
+  "<identifiant AniList>": {
+    "age": 12,
+    "resume": "Résumé en français.",
+    "themes": [{ "titre": "Amitié", "texte": "Ce que le récit dit de l'amitié." }],
+    "scenes": [{ "categorie": "violence", "titre": "Combats", "texte": "Description des scènes, tomes concernés." }],
+    "vocabulaire": "Langage relevé.",
+    "avis": "Avis final, avec l'âge conseillé.",
+    "autres": [{ "source": "Nom du site", "texte": "Ce qu'il conseille.", "lien": "https://..." }],
+    "sources": [{ "titre": "Tomes 1 à 5, édition française", "lien": "" }],
+    "redacteur": "Nom",
+    "date": "AAAA-MM-JJ"
+  }
 }
 ```
 
-L'âge vérifié remplace l'estimation, avec la mention « Vérifié » et sa source sur la fiche. L'estimation calculée reste affichée pour comparaison.
+Catégories de scènes : `violence`, `peur`, `sexe`, `themes`, `autre`. La fiche vérifiée remplace la fiche automatique, porte la mention « Fiche vérifiée » et liste ses sources ; l'estimation automatique reste visible dans « Comment cet âge est calculé ».
 
 ## Données et conditions d'utilisation d'AniList
 
