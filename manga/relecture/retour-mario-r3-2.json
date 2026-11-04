@@ -1,0 +1,133 @@
+{
+  "relecteur": "Mario",
+  "date": "2026-11-04",
+  "fiches": {
+    "30656": {
+      "revision": 3,
+      "verdict": "valide",
+      "age_propose": 16,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/Vagabond_(manga)",
+        "https://en.wikipedia.org/wiki/Vagabond_(manga)",
+        "https://catalogue.bnf.fr/ark:/12148/cb37136205v"
+      ],
+      "commentaire": "Les corrections des révisions 2 et 3 sont bien appliquées, avec un signalement sobre et sourcé des violences sexuelles et un âge de 16 ans cohérent."
+    },
+    "31133": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 18,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/Dorohedoro",
+        "https://en.wikipedia.org/wiki/Dorohedoro",
+        "https://www.viz.com/manga-books/manga/dorohedoro-volume-1-0/product/2321"
+      ],
+      "commentaire": "Le passage à un classement réservé aux adultes (18 ans) est pleinement justifié par les sources américaines (VIZ Mature, The Graphic Library Adult) et les précisions ajoutées au résumé sont exactes."
+    },
+    "31706": {
+      "revision": 3,
+      "verdict": "valide",
+      "age_propose": 16,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://en.wikipedia.org/wiki/Steel_Ball_Run",
+        "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t01",
+        "https://www.viz.com/manga-books/manga/jojo-s-bizarre-adventure-part-7-steel-ball-run-volume-1/product/8330/hardcover"
+      ],
+      "commentaire": "Fiche complète et rigoureuse : le passage à 16 ans, l'ajout des informations éditoriales dans le résumé et la formulation sobre de la scène du tome 16 répondent parfaitement aux attentes."
+    },
+    "34632": {
+      "revision": 3,
+      "verdict": "valide",
+      "age_propose": 18,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/bonne-nuit-punpun/",
+        "https://en.wikipedia.org/wiki/Goodnight_Punpun",
+        "https://fr.wikipedia.org/wiki/Bonne_nuit_Punpun"
+      ],
+      "commentaire": "Toutes les remarques ont été prises en compte avec exactitude, y compris l'ajout de l'auteur Inio Asano et la reformulation sobre de la scène du tome 5."
+    },
+    "53390": {
+      "revision": 3,
+      "verdict": "valide",
+      "age_propose": 16,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/L%27Attaque_des_Titans",
+        "https://www.filmspourenfants.net/lattaque-des-titans/",
+        "https://www.pika.fr/livre/lattaque-des-titans-t01-9782811611699/"
+      ],
+      "commentaire": "L'ajout de l'auteur Hajime Isayama et les clarifications sur les seuils d'âge de filmspourenfants.net ainsi que sur la description des Titans rendent la fiche tout à fait valide."
+    },
+    "63327": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 16,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/Tokyo_Ghoul",
+        "https://www.glenat.com/glenat-manga/tokyo-ghoul-tome-07-9782344001844/",
+        "https://www.viz.com/manga-books/manga/tokyo-ghoul-volume-1-0/product/3689"
+      ],
+      "commentaire": "Les ajouts concernant l'auteur Sui Ishida et la scène de torture du tome 7 (sourcée via Glénat et The Outer Haven), ainsi que les précisions d'attribution, sont impeccables."
+    },
+    "65243": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 10,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/Haiky%C5%AB!!",
+        "https://catalogue.bnf.fr/ark:/12148/cb43492011k",
+        "https://www.viz.com/manga-books/manga/haikyu-volume-1-0/product/4823"
+      ],
+      "commentaire": "L'ajout de l'auteur Haruichi Furudate, du classement VIZ et des nuances sur la portée des sources dans l'avis rend la fiche prête à la publication."
+    },
+    "72451": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 12,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.nobi-nobi.fr/livres-series-horimiya/",
+        "https://fr.wikipedia.org/wiki/Horimiya",
+        "https://en.wikipedia.org/wiki/Horimiya"
+      ],
+      "commentaire": "Les auteurs HERO et Daisuke Hagiwara, le titre exact du tome 17, la relation intime suggérée et les avis du CNLJ et de Manga Librarian ont été judicieusement intégrés."
+    },
+    "74347": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 12,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/One-Punch_Man",
+        "https://en.wikipedia.org/wiki/One-Punch_Man",
+        "https://catalogue.bnf.fr/ark:/12148/cb44498514k"
+      ],
+      "commentaire": "Les précisions sur le nombre de tomes au Japon, l'évaluation du CNLJ et la scène des héros tués avant le retour dans le temps sont fidèles aux sources consultées."
+    },
+    "74489": {
+      "revision": 2,
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Série complète en 13 tomes chez Glénat (collection Seinen), parus de 2016 à 2025.",
+          "probleme": "Le nom de l'autrice, Haruko Ichikawa, n'apparaît nulle part dans la fiche.",
+          "correction": "Écrite et dessinée par Haruko Ichikawa, la série est complète en 13 tomes chez Glénat (collection Seinen), parus de 2016 à 2025.",
+          "source": "https://en.wikipedia.org/wiki/Land_of_the_Lustrous"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://en.wikipedia.org/wiki/Land_of_the_Lustrous",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-01-9782344011713/"
+      ],
+      "commentaire": "Les corrections sur les tomes 3 et 7 ont bien été appliquées, mais il manque le nom de l'autrice Haruko Ichikawa dans le résumé."
+    }
+  }
+}
