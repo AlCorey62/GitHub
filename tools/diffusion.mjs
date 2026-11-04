@@ -6,15 +6,15 @@
 // par Damien (ligne « Statut : **validé… »). La section du jour donne le texte, le visuel et le lien :
 //   Facebook : photo et légende sur la page (API Graph de Meta, POST /<page>/photos).
 //   LinkedIn : visuel et texte sur la page (API Community Management : /rest/images puis /rest/posts),
-//              à partir du 9/11/2026 ; avant, les posts LinkedIn sont programmés à la main.
+//              depuis la semaine du 2/11/2026 (mis en route le 4/11/2026 à la demande de Damien) ;
+//              avant, les posts LinkedIn étaient programmés à la main.
 // Avant l'envoi, le lien doit répondre sur le site (l'article du jour doit être en ligne).
 // Chaque envoi est noté dans editorial/semaines/<lundi>/diffusion.json : rien n'est jamais envoyé deux fois.
 // Un réseau en échec n'empêche pas l'envoi sur l'autre ; la tâche finit alors en erreur.
 //
 // --pas-avant HH:MM  ne rien envoyer avant cette heure (heure de Paris), pour les passages programmés
 // --hors-programme   envoie la publication « Hors programme » du jour (section en plus, ajoutée et validée par
-//                    Damien), notée à part dans le journal ; elle part aussi sur LinkedIn avant le 9/11/2026,
-//                    car seules les publications du programme y sont programmées à la main
+//                    Damien), notée à part dans le journal, sur Facebook et LinkedIn
 // --essai            affiche ce qui serait envoyé, sans rien envoyer
 // --verifier         teste les accès sans rien publier (Facebook : photo non publiée, aussitôt supprimée ;
 //                    LinkedIn : lecture de la dernière publication de la page)
@@ -36,7 +36,7 @@ const LI_API = process.env.LINKEDIN_API_URL || "https://api.linkedin.com/rest"; 
 const LI_OAUTH = process.env.LINKEDIN_OAUTH_URL || "https://www.linkedin.com/oauth/v2/accessToken"; // idem
 // Version mensuelle de l'API LinkedIn, chacune maintenue au moins un an : à passer à une version récente chaque année.
 const LI_VERSION = process.env.LINKEDIN_VERSION || "202610";
-const LI_DEPUIS = process.env.LINKEDIN_DEPUIS || "2026-11-09"; // jusqu'au 6/11/2026, posts LinkedIn programmés à la main depuis la page
+const LI_DEPUIS = process.env.LINKEDIN_DEPUIS || "2026-11-02"; // avant, posts LinkedIn programmés à la main depuis la page
 
 const opt = (name) => {
   const i = process.argv.indexOf(name);
@@ -258,7 +258,7 @@ else if (essai) console.log(`Facebook (essai, rien n'est envoyé)\nVisuel : ${da
 else if (!FB.page || !FB.token) notice("Facebook : accès non configuré (secrets FACEBOOK_PAGE_ID et FACEBOOK_PAGE_TOKEN), rien n'est envoyé.");
 else todo.push("facebook");
 
-if (today < LI_DEPUIS && !horsProgramme) console.log(`LinkedIn : jusqu'au 6/11/2026, les posts sont programmés à la main ; rien n'est envoyé.`);
+if (today < LI_DEPUIS && !horsProgramme) console.log(`LinkedIn : avant le ${LI_DEPUIS}, les posts étaient programmés à la main ; rien n'est envoyé.`);
 else if (journal[key]?.linkedin) console.log(`LinkedIn : déjà envoyé le ${journal[key].linkedin.le}.`);
 else if (!day.linkedin) warning(`LinkedIn : pas de texte pour ${day.head}.`);
 else if (essai) console.log(`LinkedIn (essai, rien n'est envoyé)\nVisuel : ${day.visual}${altText ? ` (texte alternatif : ${altText})` : ""}\n\n${day.linkedin}\n`);
