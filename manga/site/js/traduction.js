@@ -5,12 +5,18 @@
 
 const LANGUES = { sourceLanguage: 'en', targetLanguage: 'fr' };
 const DELAI_MS = 15000;
+// Certains navigateurs exposent l'API sans la faire fonctionner (réponse qui n'arrive jamais) :
+// sans réponse rapide, le traducteur est considéré comme absent pour toute la visite.
+const DELAI_DISPONIBILITE_MS = 3000;
 
 let promesse = null;
+let horsService = false;
 
-/** Vrai si le navigateur propose un traducteur intégré. */
+const avecDelai = (p, ms) => Promise.race([p, new Promise((resoudre) => { setTimeout(() => resoudre('delai'), ms); })]);
+
+/** Vrai si le navigateur propose un traducteur intégré utilisable. */
 export function traducteurDisponible() {
-  return typeof globalThis.Translator?.create === 'function';
+  return !horsService && typeof globalThis.Translator?.create === 'function';
 }
 
 /**
@@ -22,8 +28,11 @@ export function preparerTraducteur() {
   if (!traducteurDisponible()) return Promise.resolve(null);
   if (!promesse) {
     promesse = (async () => {
-      const dispo = await globalThis.Translator.availability(LANGUES);
-      if (dispo === 'unavailable') return null;
+      const dispo = await avecDelai(globalThis.Translator.availability(LANGUES), DELAI_DISPONIBILITE_MS);
+      if (dispo === 'delai' || dispo === 'unavailable') {
+        horsService = true;
+        return null;
+      }
       return globalThis.Translator.create(LANGUES);
     })().catch(() => {
       promesse = null; // nouvel essai au prochain clic
@@ -44,9 +53,9 @@ export async function traduireEnFrancais(texte) {
     for (const p of paragraphes) sortie.push(p.trim() ? await traducteur.translate(p) : p);
     return sortie.join('\n\n').trim() || null;
   })();
-  const delai = new Promise((resoudre) => { setTimeout(() => resoudre(null), DELAI_MS); });
   try {
-    return await Promise.race([travail, delai]);
+    const resultat = await avecDelai(travail, DELAI_MS);
+    return resultat === 'delai' ? null : resultat;
   } catch {
     return null;
   }
