@@ -1,0 +1,257 @@
+{
+  "relecteur": "Mario",
+  "date": "2026-11-04",
+  "fiches": {
+    "30642": {
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://catalogue.bnf.fr/ark:/12148/cb43719577f",
+        "https://catalogue.bnf.fr/ark:/12148/cb48816815v",
+        "https://www.commonsensemedia.org/tv-reviews/vinland-saga",
+        "https://fr.wikipedia.org/wiki/Vinland_Saga",
+        "https://en.wikipedia.org/wiki/Vinland_Saga_(manga)"
+      ],
+      "commentaire": "Fiche complète, exacte et bien sourcée. Le découpage des arcs (tomes 1 à 8 puis 8 à 14), la fin en 29 tomes chez Kurokawa et l'âge conseillé de 14 ans sont parfaitement cohérents avec les sources."
+    },
+    "30656": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "[Nudité et sexualité] *Nudité et scènes de lit* : Otaku USA mentionne quelques scènes de lit suggestives ; Manga Librarian signale nudité et contenu sexuel. Les sources consultées ne précisent ni leur fréquence ni les tomes concernés.",
+          "probleme": "La fiche reste trop vague et omet la prostitution et les violences ou menaces sexuelles présentes dans le manga (qui expliquent l'étiquette Rape sur AniList) : Matahachi couche avec Okō dès le tome 1 (chapitre 6), Okō et sa fille Akemi se prostituent à Kyoto pour survivre, et toutes deux subissent des agressions et tentatives de viol (notamment face aux brigands Tsujikaze et dans l'entourage des Yoshioka).",
+          "correction": "[Nudité et sexualité] *Sexualité, prostitution et agressions sexuelles* : Otaku USA et Manga Librarian signalent de la nudité et des scènes sexuelles (notamment entre Matahachi et Okō dès le tome 1). Le récit aborde aussi la prostitution et montre des tentatives de viol et l'exploitation sexuelle subies par des personnages féminins comme Okō et sa fille Akemi.",
+          "source": "https://fr.wikipedia.org/wiki/Vagabond_(manga)"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://catalogue.bnf.fr/ark:/12148/cb42222149m",
+        "https://www.viz.com/manga-books/manga/vagabond-definitive-edition-volume-6-0/product/8965",
+        "https://otakuusamagazine.com/vagabond-is-a-provocative-fictional-biography-of-swordsman-miyamoto-musashi-from-slam-dunk-creator/",
+        "https://mangalibrarian.com/2025/05/18/vagabond-definitive-edition-manga-review/",
+        "https://fr.wikipedia.org/wiki/Vagabond_(manga)",
+        "https://en.wikipedia.org/wiki/Vagabond_(manga)"
+      ],
+      "commentaire": "L'âge de 16 ans est bien justifié face au classement Mature de VIZ et Adult de Manga Librarian. Il faut toutefois préciser les enjeux de prostitution et de violences sexuelles autour des personnages d'Okō et d'Akemi."
+    },
+    "31133": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "La rumeur d'un homme-lézard qui tue des mages attire l'attention d'En, le puissant chef des mages, qui envoie ses « nettoyeurs » à ses trousses.",
+          "probleme": "Le résumé omet l'autrice (Q Hayashida), le nombre de tomes (23 tomes pour l'édition classique, ou 12 tomes doubles en Chaos Edition) et l'éditeur français (Soleil Manga).",
+          "correction": "La rumeur d'un homme-lézard qui tue des mages attire l'attention d'En, le puissant chef des mages, qui envoie ses « nettoyeurs » à ses trousses. Écrite et dessinée par Q Hayashida, la série est complète en 23 tomes chez Soleil Manga (rééditée en 12 tomes doubles dans la Chaos Edition).",
+          "source": "https://fr.wikipedia.org/wiki/Dorohedoro"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/dorohedoro",
+        "https://www.graphiclibrary.org/reviews/dorohedoro-vol-1-by-q-hayashida",
+        "https://fr.wikipedia.org/wiki/Dorohedoro",
+        "https://en.wikipedia.org/wiki/Dorohedoro",
+        "https://www.julsa.fr/avis-manga-dorohedoro-tome-1/",
+        "https://catalogue.bnf.fr/ark:/12148/cb414650102"
+      ],
+      "commentaire": "Les thèmes et scènes difficiles sont bien décrits et l'âge de 16 ans convient grâce au ton décalé et comique qui tempère le gore, mais il manque l'autrice, l'éditeur français et le nombre de tomes dans le résumé."
+    },
+    "31706": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Pour percer le secret de sa technique, il s'inscrit à son tour dans la course.",
+          "probleme": "Le résumé ne mentionne ni l'auteur (Hirohiko Araki), ni le fait qu'il s'agit de la septième partie de JoJo's Bizarre Adventure, ni le nombre de tomes (24 tomes), ni l'éditeur français (Delcourt/Tonkam).",
+          "correction": "Pour percer le secret de sa technique, il s'inscrit à son tour dans la course. Septième partie de JoJo's Bizarre Adventure, écrite et dessinée par Hirohiko Araki, la série compte 24 tomes publiés en France par Delcourt/Tonkam.",
+          "source": "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t24"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "[Nudité et sexualité] *Nudité comique* : Dans le tome 1, le chemisier d'une femme se déchire et dévoile sa poitrine, pour un effet comique (critique du blog Yattatachi). Common Sense Media ne relève aucun contenu sexuel dans l'animé.",
+          "probleme": "Oubli majeur d'une scène difficile dans la seconde moitié du manga (non encore couverte par l'animé de 2026) : aux chapitres 61 et 62 (tome 16), l'antagoniste principal Funny Valentine tente de violer Lucy Steel, une adolescente de 14 ans déguisée en son épouse Scarlet, avant qu'elle ne se défende avec un couteau ; elle subit ensuite une grossesse surnaturelle forcée liée au Cadavre sacré.",
+          "correction": "[Nudité et sexualité] [révèle l'intrigue] *Nudité et tentative de viol sur mineure* : Dans le tome 1, le chemisier d'une femme se déchire pour un effet comique (Yattatachi). Plus loin dans le manga (tome 16), l'antagoniste principal tente de violer Lucy Steel, âgée de 14 ans, qui parvient à le poignarder pour s'échapper, puis subit une grossesse surnaturelle forcée liée au Cadavre sacré.",
+          "source": "https://en.wikipedia.org/wiki/Steel_Ball_Run"
+        },
+        {
+          "rubrique": "age",
+          "extrait": "Jojo's - Steel Ball Run (AniList 31706) : dès 14 ans",
+          "probleme": "L'âge de 14 ans repose sur les tout premiers épisodes de l'animé évalués par Common Sense Media, alors que le manga bascule dans le magazine seinen Ultra Jump et contient du gore, de l'horreur corporelle et une tentative de viol sur une adolescente de 14 ans, ce qui correspond mieux à 16 ans (cohérent avec le classement 15 du BBFC et Teen Plus de VIZ).",
+          "correction": "Jojo's - Steel Ball Run (AniList 31706) : dès 16 ans",
+          "source": "https://www.bbfc.co.uk/release/steel-ball-run-jojos-bizarre-adventure-q29sbgvjdglvbjpwwc0xmtezntm4"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t01",
+        "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t24",
+        "https://www.commonsensemedia.org/tv-reviews/steel-ball-run-jojos-bizarre-adventure",
+        "https://www.bbfc.co.uk/release/steel-ball-run-jojos-bizarre-adventure-q29sbgvjdglvbjpwwc0xmtezntm4",
+        "https://www.viz.com/manga-books/manga/jojo-s-bizarre-adventure-part-7-steel-ball-run-volume-1/product/8330/hardcover",
+        "https://yattatachi.com/jojos-bizarre-adventure-part-7-run-vol-1-review",
+        "https://en.wikipedia.org/wiki/Steel_Ball_Run"
+      ],
+      "commentaire": "Les critiques de l'animé ne couvrant que le début de l'histoire, la fiche omet la tentative de viol de Lucy Steel (14 ans) par Funny Valentine dans le tome 16 ainsi que l'auteur et le nombre de tomes dans le résumé. Un passage à 16 ans s'impose."
+    },
+    "34632": {
+      "verdict": "a_corriger",
+      "age_propose": 18,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "La série en 13 tomes, publiée par Kana, le suit de l'enfance au début de l'âge adulte.",
+          "probleme": "L'auteur du manga, Inio Asano, n'est pas mentionné dans le résumé.",
+          "correction": "La série d'Inio Asano en 13 tomes, publiée par Kana, le suit de l'enfance au début de l'âge adulte.",
+          "source": "https://www.kana.fr/series/bonne-nuit-punpun/"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "[Nudité et sexualité] [révèle l'intrigue] *Agression sexuelle d'un adolescent* : Au tome 5, alors que Punpun entre au lycée, une femme adulte proche de la famille abuse de lui sexuellement.",
+          "probleme": "Au tome 5, Punpun est encore au collège (il n'entre au lycée qu'au tome 6). C'est lorsqu'il est collégien que Midori, la compagne de son oncle Yuichi, abuse de lui sexuellement.",
+          "correction": "[Nudité et sexualité] [révèle l'intrigue] *Agression sexuelle d'un adolescent* : Au tome 5, alors que Punpun est au collège, une femme adulte proche de la famille (la compagne de son oncle) abuse de lui sexuellement.",
+          "source": "https://en.wikipedia.org/wiki/Goodnight_Punpun"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/bonne-nuit-punpun/",
+        "https://www.kana.fr/produit/bonne-nuit-punpun-t1/",
+        "https://www.kana.fr/produit/bonne-nuit-punpun-t13/",
+        "https://en.wikipedia.org/wiki/Goodnight_Punpun",
+        "https://fr.wikipedia.org/wiki/Bonne_nuit_Punpun",
+        "https://www.viz.com/manga-books/manga/goodnight-punpun-volume-1-0/product/3798",
+        "https://leclaireur.fnac.com/article/137874-portrait-inio-asano-le-maitre-de-la-tranche-de-vie/",
+        "https://bibliotheques.paris.fr/doc/SYRACUSE/850068"
+      ],
+      "commentaire": "Le classement « adultes » (18 ans) est pleinement justifié par la noirceur psychologique, les suicides et les violences sexuelles. Il faut simplement corriger l'âge scolaire de Punpun au tome 5 (collège et non lycée) et ajouter le nom d'Inio Asano dans le résumé."
+    },
+    "53390": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "La série compte 34 tomes, publiés en France par Pika.",
+          "probleme": "Le nom de l'auteur, Hajime Isayama, n'apparaît nulle part dans la fiche.",
+          "correction": "Écrite et dessinée par Hajime Isayama, la série compte 34 tomes, publiés en France par Pika.",
+          "source": "https://www.pika.fr/livre/lattaque-des-titans-t01-9782811611699/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.pika.fr/livre/lattaque-des-titans-t01-9782811611699/",
+        "https://fr.wikipedia.org/wiki/L%27Attaque_des_Titans",
+        "https://www.commonsensemedia.org/tv-reviews/attack-on-titan",
+        "https://www.filmspourenfants.net/lattaque-des-titans/",
+        "https://bibliotheques.paris.fr/doc/SYRACUSE/1458882"
+      ],
+      "commentaire": "Très bonne fiche, bien équilibrée et justement conseillée dès 16 ans. Seul oubli à corriger : l'auteur Hajime Isayama n'est jamais cité."
+    },
+    "63327": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "La série compte 14 tomes chez Glénat ; une suite, Tokyo Ghoul:re, en compte 16.",
+          "probleme": "Le nom de l'auteur, Sui Ishida, est absent du résumé (il n'apparaît que dans le titre d'un article en source).",
+          "correction": "Écrite et dessinée par Sui Ishida, la série compte 14 tomes chez Glénat ; une suite, Tokyo Ghoul:re, en compte 16.",
+          "source": "https://www.glenat.com/glenat-manga/tokyo-ghoul-tome-01-9782723495615/"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "[Violence] *Torture* : Common Sense Media signale des scènes de torture dérangeantes dans l'animé, sans préciser lesquelles.",
+          "probleme": "La scène de torture de Ken Kaneki par Yamori (surnommé Jason) aux tomes 7 et 8 (chapitres 61 à 68) est l'un des passages les plus durs et connus du manga : le héros a les doigts et orteils sectionnés à répétition (qui repoussent grâce à sa régénération) et un scolopendre introduit dans l'oreille.",
+          "correction": "[Violence] [révèle l'intrigue] *Torture prolongée* : Common Sense Media signale des scènes de torture dérangeantes. Dans les tomes 7 et 8 du manga, le héros est longuement torturé par une goule sadique (doigts et orteils sectionnés à répétition malgré sa régénération, scolopendre introduit dans l'oreille).",
+          "source": "https://fr.wikipedia.org/wiki/Tokyo_Ghoul"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/tokyo-ghoul-tome-01-9782723495615/",
+        "https://fr.wikipedia.org/wiki/Tokyo_Ghoul",
+        "https://www.commonsensemedia.org/tv-reviews/tokyo-ghoul",
+        "https://leclaireur.fnac.com/article/cp46260-tokyo-ghoul-de-sui-ishida-ca-raconte-quoi/",
+        "https://www.viz.com/manga-books/manga/tokyo-ghoul-volume-1-0/product/3689"
+      ],
+      "commentaire": "L'âge de 16 ans est tout à fait pertinent. Il convient d'ajouter l'auteur Sui Ishida dans le résumé et de préciser la scène centrale de torture des tomes 7 et 8."
+    },
+    "65243": {
+      "verdict": "a_corriger",
+      "age_propose": 10,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "La série est complète en 45 tomes ; l'édition française de Kazé est parue de 2014 à 2022.",
+          "probleme": "L'auteur du manga, Haruichi Furudate, n'est mentionné nulle part dans la fiche.",
+          "correction": "Écrite et dessinée par Haruichi Furudate, la série est complète en 45 tomes ; l'édition française de Kazé est parue de 2014 à 2022.",
+          "source": "https://catalogue.bnf.fr/ark:/12148/cb43492011k"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://catalogue.bnf.fr/ark:/12148/cb43492011k",
+        "https://www.commonsensemedia.org/tv-reviews/haikyu",
+        "https://www.filmspourenfants.net/haikyu-la-guerre-des-poubelles/",
+        "https://fr.wikipedia.org/wiki/Haiky%C5%AB!!"
+      ],
+      "commentaire": "Fiche claire et fidèle aux sources, avec un âge de 10 ans bien adapté. Il manque uniquement le nom de l'auteur Haruichi Furudate dans le résumé."
+    },
+    "72451": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Cette comédie romantique est publiée en France par nobi nobi! (collection Genki), en 16 tomes complétés par un tome 17 de chapitres supplémentaires.",
+          "probleme": "Les auteurs du manga, HERO (scénario) et Daisuke Hagiwara (dessin), ne sont cités nulle part dans la fiche.",
+          "correction": "Écrite par HERO et dessinée par Daisuke Hagiwara, cette comédie romantique est publiée en France par nobi nobi! (collection Genki), en 16 tomes complétés par un tome 17 de chapitres supplémentaires.",
+          "source": "https://www.nobi-nobi.fr/livres-series-horimiya/"
+        },
+        {
+          "rubrique": "sources",
+          "extrait": "Horimiya Tome 17 Piece memories, nobi nobi! : https://www.nobi-nobi.fr/livre/horimiya-tome-17-piece-memories-9782384962846/",
+          "probleme": "Le sous-titre officiel du tome 17 chez nobi nobi! est « A piece of memories » et non « Piece memories ».",
+          "correction": "Horimiya Tome 17 A piece of memories, nobi nobi! : https://www.nobi-nobi.fr/livre/horimiya-tome-17-piece-memories-9782384962846/",
+          "source": "https://www.nobi-nobi.fr/livre/horimiya-tome-17-piece-memories-9782384962846/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.nobi-nobi.fr/livres-series-horimiya/",
+        "https://www.nobi-nobi.fr/livre/horimiya-tome-17-piece-memories-9782384962846/",
+        "https://bibliotheques.paris.fr/doc/SYRACUSE/1311572",
+        "https://www.commonsensemedia.org/tv-reviews/horimiya",
+        "https://yenpress.com/titles/9780316342032-horimiya-vol-1",
+        "https://fr.wikipedia.org/wiki/Horimiya"
+      ],
+      "commentaire": "L'âge de 12 ans est bien choisi et conforme aux recommandations des bibliothèques de Paris et de Common Sense Media. Il faut ajouter les auteurs HERO et Daisuke Hagiwara dans le résumé et corriger le titre du tome 17 dans les sources."
+    },
+    "74347": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Tirée d'un webcomic de ONE et dessinée par Yusuke Murata, la série est publiée en France par Kurokawa depuis 2016.",
+          "probleme": "Le résumé n'indique pas le nombre de tomes parus (34 tomes parus en France chez Kurokawa, série en cours).",
+          "correction": "Tirée d'un webcomic de ONE et dessinée par Yusuke Murata, la série est publiée en France par Kurokawa depuis 2016 (34 tomes parus, série en cours).",
+          "source": "https://fr.wikipedia.org/wiki/One-Punch_Man"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "[Violence] [révèle l'intrigue] *Héros massacrés et ville en ruines* : Dans des arcs plus avancés, un antagoniste humain s'attaque aux héros et en met hors de combat un grand nombre, dont un personnage principal. Une organisation de monstres enlève un enfant, et un affrontement final réduit une grande partie d'une ville en ruines.",
+          "probleme": "À la fin de l'arc de l'Association des monstres (tome 34), les radiations cosmiques émises par Garo tuent les héros présents ainsi que l'enfant Tareo, avant que Saitama ne remonte le temps pour annuler ces morts : ce point mérite d'être précisé.",
+          "correction": "[Violence] [révèle l'intrigue] *Héros massacrés et ville en ruines* : Dans des arcs plus avancés, un antagoniste humain s'attaque aux héros et en met hors de combat un grand nombre. Une organisation de monstres enlève un enfant, un affrontement réduit une ville en ruines et des radiations mortelles tuent temporairement plusieurs héros ainsi que l'enfant avant un retour dans le temps.",
+          "source": "https://en.wikipedia.org/wiki/One-Punch_Man"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://catalogue.bnf.fr/ark:/12148/cb44498514k",
+        "https://catalogue.bnf.fr/ark:/12148/cb48633617b",
+        "https://www.commonsensemedia.org/tv-reviews/one-punch-man",
+        "https://fr.wikipedia.org/wiki/One-Punch_Man",
+        "https://en.wikipedia.org/wiki/One-Punch_Man"
+      ],
+      "commentaire": "L'âge de 12 ans est cohérent avec les avis constants du CNLJ (dès 11 ans jusqu'au tome 32) et le ton parodique. Il manque le nombre de tomes dans le résumé et une précision sur la mort temporaire de l'enfant Tareo à la fin de l'arc de l'Association des monstres."
+    }
+  }
+}
