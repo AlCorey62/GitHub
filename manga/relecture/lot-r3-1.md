@@ -2,16 +2,16 @@
 
 Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r3-1.json, en recopiant le numéro de révision de chaque fiche.
 
-- Monster (AniList 30001), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Monster (AniList 30001), révision 2 : à relire par Pipo (ChatGPT)
 - Berserk (AniList 30002), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Naruto (AniList 30011), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Bleach (AniList 30012), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- One Piece (AniList 30013), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Death Note (AniList 30021), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Fullmetal Alchemist (AniList 30025), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Hunter X Hunter (AniList 30026), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Spirale (AniList 30436), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Vinland Saga (AniList 30642), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Naruto (AniList 30011), révision 2 : à relire par Pipo (ChatGPT)
+- Bleach (AniList 30012), révision 2 : à relire par Pipo (ChatGPT)
+- One Piece (AniList 30013), révision 2 : à relire par Pipo (ChatGPT)
+- Death Note (AniList 30021), révision 2 : à relire par Pipo (ChatGPT)
+- Fullmetal Alchemist (AniList 30025), révision 2 : à relire par Pipo (ChatGPT)
+- Hunter X Hunter (AniList 30026), révision 2 : à relire par Pipo (ChatGPT)
+- Spirale (AniList 30436), révision 2 : à relire par Pipo (ChatGPT)
+- Vinland Saga (AniList 30642), révision 2 : à relire par Pipo (ChatGPT)
 
 ---
 ## Monster (AniList 30001) : dès 16 ans, révision 2
