@@ -9,6 +9,7 @@ import {
   ErreurAniList, REQUETE_ETIQUETTES, REQUETE_FICHE, REQUETE_LISTE, REQUETE_RESUME, reduireMedia, requeteAniList,
 } from './anilist.js';
 import { TEXTE_VOCABULAIRE, scenesDifficiles, synthese, themes } from './textes.js';
+import { preparerTraducteur, traducteurDisponible, traduireEnFrancais } from './traduction.js';
 
 const GENRES_FR = {
   Action: 'Action', Adventure: 'Aventure', Comedy: 'Comédie', Drama: 'Drame', Ecchi: 'Ecchi', Fantasy: 'Fantasy',
@@ -575,7 +576,7 @@ function htmlFiche(m) {
     </div>
   </section>
   <section class="fiche-section" aria-labelledby="t-resume">
-    <h3 id="t-resume">${fv?.resume ? 'Résumé' : 'Résumé (en anglais, source AniList)'}</h3>
+    <h3 id="t-resume">${fv?.resume ? 'Résumé' : 'Résumé (source AniList)'}</h3>
     <div id="resume">${fv?.resume ? `<p class="resume">${esc(fv.resume)}</p>` : '<p class="resume-etat">Chargement du résumé…</p>'}</div>
   </section>
   ${sectionThemes(m, fv)}
@@ -598,17 +599,35 @@ function texteDepuisHtml(html) {
 async function chargerResume(m) {
   const zone = $('#resume');
   if (!zone || etat.fiches[m.id]?.resume) return;
-  const afficher = (texte) => {
+  const afficher = ({ texte, fr }) => {
     if (etat.ficheId !== m.id) return;
-    zone.innerHTML = texte ? '<p class="resume"></p>' : '<p class="resume-etat">Pas de résumé sur AniList pour ce titre.</p>';
-    if (texte) zone.firstChild.textContent = texte;
+    const titre = $('#t-resume');
+    if (!texte) {
+      zone.innerHTML = '<p class="resume-etat">Pas de résumé sur AniList pour ce titre.</p>';
+      return;
+    }
+    if (fr) {
+      // Traduction automatique, avec le texte d'origine consultable.
+      titre.textContent = 'Résumé (traduit automatiquement de l\'anglais, source AniList)';
+      zone.innerHTML = '<p class="resume"></p><details class="resume-original"><summary>Texte original en anglais</summary><p class="resume" lang="en"></p></details>';
+      zone.querySelector('.resume').textContent = fr;
+      zone.querySelector('.resume-original .resume').textContent = texte;
+    } else {
+      titre.textContent = 'Résumé (en anglais, source AniList)';
+      zone.innerHTML = '<p class="resume" lang="en"></p>';
+      zone.firstChild.textContent = texte;
+    }
   };
   if (etat.resumes.has(m.id)) return afficher(etat.resumes.get(m.id));
   try {
     const data = await requeteAniList(REQUETE_RESUME, { id: m.id });
     const texte = texteDepuisHtml(data.Media?.description);
-    etat.resumes.set(m.id, texte);
-    afficher(texte);
+    if (texte && traducteurDisponible() && etat.ficheId === m.id) {
+      zone.innerHTML = '<p class="resume-etat">Traduction du résumé en français…</p>';
+    }
+    const resume = { texte, fr: traducteurDisponible() ? await traduireEnFrancais(texte) : null };
+    etat.resumes.set(m.id, resume);
+    afficher(resume);
   } catch (e) {
     if (etat.ficheId === m.id) {
       zone.innerHTML = `<p class="resume-etat">Résumé indisponible (${esc(e.message || 'AniList ne répond pas')}). Le lien vers la fiche AniList reste utilisable.</p>`;
@@ -626,6 +645,7 @@ async function ouvrirFiche(id) {
   const dialogue = $('#fiche');
   const contenu = $('#fiche-contenu');
   etat.ficheId = id;
+  preparerTraducteur(); // tout de suite, tant que le clic du visiteur autorise le téléchargement du modèle
   let m = null;
   let erreur = null;
   if (!etat.vus.has(id)) {

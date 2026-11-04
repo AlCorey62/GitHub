@@ -20,6 +20,7 @@ manga/
     js/age.js             Calcul de l'âge conseillé : barème et règles (seul fichier à modifier pour ajuster le barème)
     js/anilist.js         Requêtes à l'API AniList et mise en forme des fiches
     js/textes.js          Textes des fiches : définitions françaises des étiquettes, thèmes, synthèse
+    js/traduction.js      Traduction automatique des résumés AniList en français, sur l'appareil du visiteur (traducteur intégré au navigateur)
     js/app.js             Interface : recherche, filtres, fiche, guide, formulaire de correction
     donnees/fiches-verifiees.json  Fiches rédigées à la main avec leurs sources (prioritaires)
     polices/              Atkinson Hyperlegible et Dela Gothic One, auto-hébergées (licence OFL)

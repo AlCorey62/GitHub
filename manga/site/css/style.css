@@ -372,6 +372,9 @@ select:hover, textarea:hover { border-color: var(--encre-2); }
 .calcul .base-calcul { margin-top: 8px; }
 .resume { white-space: pre-line; font-size: var(--t-s); max-width: 68ch; margin: 0; }
 .resume-etat { font-size: var(--t-s); color: var(--encre-2); margin: 0; }
+.resume-original { margin-top: 0.6rem; font-size: var(--t-s); }
+.resume-original summary { cursor: pointer; color: var(--encre-2); }
+.resume-original .resume { margin-top: 0.4rem; color: var(--encre-2); }
 .genres-liste { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
 .genres-liste li { font-size: var(--t-xs); padding: 3px 10px; border-radius: 999px; background: var(--accent-doux); }
 .liens { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: var(--t-s); font-weight: 700; }
