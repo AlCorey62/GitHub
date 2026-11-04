@@ -1,13 +1,13 @@
-# Relecture r2, lot 3 : 10 fiches
+# Relecture r3, lot 3 : 10 fiches
 
-Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r2-3.json, en recopiant le numéro de révision de chaque fiche.
+Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r3-3.json, en recopiant le numéro de révision de chaque fiche.
 
 - A Silent Voice (AniList 85135), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Tower of God (AniList 85143), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - My Hero Academia (AniList 85486), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Tokyo Ghoul:re (AniList 85611), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Black Clover (AniList 86123), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Kaguya-sama: Love is War (AniList 86635), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Kaguya-sama: Love is War (AniList 86635), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Fire Punch (AniList 87170), révision 1 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Demon Slayer (AniList 87216), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - The Promised Neverland (AniList 87423), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
@@ -322,7 +322,7 @@ Fiche AniList : https://anilist.co/manga/86123
 
 ---
 
-## Kaguya-sama: Love is War (AniList 86635) : dès 14 ans, révision 2
+## Kaguya-sama: Love is War (AniList 86635) : dès 14 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/86635
 
@@ -338,7 +338,7 @@ Fiche AniList : https://anilist.co/manga/86635
 **Scènes difficiles**
 
 - [Nudité et sexualité] *Sous-entendus et situations gênantes* : Dans l'animé, la romance passe par des sous-entendus et des quiproquos plutôt que par du contenu explicite : plaisanteries sur l'apparence et le corps, maillots de bain, une scène de bain, deux personnages qui partagent un lit par accident (Common Sense Media). Sur la nudité, la critique se contredit : elle évoque quelques scènes de nudité partielle, puis affirme qu'il n'y a pas de nudité, y compris dans la scène de bain.
-- [Nudité et sexualité] [révèle l'intrigue] *Sexualité des lycéens évoquée plus directement* : À partir du milieu de la série, une élève parle à Kaguya de sa propre expérience sexuelle, et une autre s'offre à Ishigami par pitié, ce qu'il refuse (d'après la liste des personnages sur Wikipédia). Au tome 22, Kaguya et Miyuki, désormais en couple, passent la nuit ensemble et ont leur première relation sexuelle (chapitre 220 selon Wikipédia). Le niveau de détail des images n'est pas précisé par les sources consultées.
+- [Nudité et sexualité] [révèle l'intrigue] *Sexualité des lycéens évoquée plus directement* : À partir du milieu de la série, la sexualité est évoquée plus franchement entre les lycéens, dans des conversations et des propositions (d'après la liste des personnages sur Wikipédia). Au tome 22, Kaguya et Miyuki, désormais en couple, ont leur première relation sexuelle (chapitre 220 selon Wikipédia). Le niveau de détail des images n'est pas précisé par les sources consultées.
 - [Violence] *Violence burlesque* : Chamailleries et coups exagérés pour faire rire : Chika frappe parfois Ishigami quand il fait des remarques déplacées. Common Sense Media ne relève aucune image effrayante.
 - [Thèmes sensibles] [révèle l'intrigue] *Le passé d'Ishigami* : Un retour sur le passé d'Ishigami révèle qu'au collège, il a voulu protéger une camarade de son petit ami potentiellement violent, a été exclu temporairement puis rejeté par sa classe. Le conseil des élèves l'aide à surmonter ce traumatisme (chapitres 85 à 90 selon Wikipédia).
 - [Thèmes sensibles] [révèle l'intrigue] *Drame familial* : Dans les derniers tomes, l'intrigue aborde les secrets de la naissance de Kaguya, un projet de mariage arrangé et les manipulations d'un de ses frères aînés.
@@ -376,11 +376,12 @@ Fiche AniList : https://anilist.co/manga/86635
 - La fiche Pika du tome 1 classique indique une sortie le 31 mars 2021 ; la date de début de publication en France n'a pas été vérifiée et n'est pas reprise dans la fiche.
 - Tome 22 : le chapitre 220 est dans le volume 22 japonais (chapitres 212 à 221 selon la liste des chapitres de Wikipédia) ; la correspondance avec le tome 22 de Pika est supposée, pas vérifiée.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Ajouter la première relation sexuelle de Kaguya et Miyuki (chapitre 220, tome 22). → appliquee : Wikipédia (anglais, article Kaguya Shinomiya) : « They later have sex for the first time when Kaguya spends the night at the Shirogane family apartment » (chapitre 220). La liste des chapitres place le chapitre 220 dans le volume 22. Scène complétée (spoiler), sources ajoutées ; le niveau de détail des images n'étant décrit nulle part, la fiche le précise.
 - Pipo [avis] « Sans scène explicite » laisse croire que la série se limite aux sous-entendus et omet la relation sexuelle racontée. → appliquee : « Sans scène explicite » retiré (Common Sense Media ne couvre que l'animé) ; l'humour repose désormais « largement » sur les sous-entendus, et l'avis mentionne la première relation sexuelle des héros dans les tomes avancés (même source que la remarque précédente).
 - Pipo [scenes] Common Sense Media se contredit sur la nudité ; ne pas garantir l'absence de nudité dans la scène de bain. → appliquee : Vérifié : la critique parle de « some instances of partial nudity » dans « Parents Need to Know », puis de « There is no nudity » et « A bathing scene is depicted, no nudity » dans la rubrique Sex. La scène signale désormais cette contradiction et précise qu'elle concerne l'animé.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -400,7 +401,7 @@ Fiche AniList : https://anilist.co/manga/87170
 
 - [Violence] *Corps brûlés, mutilés et décapités* : Dès le premier tome, des villageois sont brûlés vifs, Agni se fait couper les membres à répétition et des massacres ont lieu. Le libraire de la Fnac parle de « scènes choquantes, à la limite du supportable ». Une décapitation survient dans le tome 2. Gore, démembrements et sang reviennent tout au long de la série.
 - [Thèmes sensibles] *Cannibalisme* : Le cannibalisme est au cœur du point de départ : les villageois survivent en mangeant la chair des membres d'Agni, qui repoussent. Le sujet est présent dès les premières pages.
-- [Nudité et sexualité] *Violences sexuelles suggérées, y compris envers des enfants* : Une ville esclavagiste où des enfants sont achetés et vendus pour le sexe est décrite dans le premier tome. Les tomes 1 et 2 contiennent des tentatives d'agression sexuelle sur des enfants et un viol suggéré mais non montré. Agni se promène nu, couvert de flammes.
+- [Nudité et sexualité] *Violences sexuelles, y compris envers des enfants* : Le premier tome décrit une ville esclavagiste où des enfants sont victimes de trafic sexuel. Les tomes 1 et 2 comportent des tentatives d'agression sexuelle, y compris sur des enfants, et un viol suggéré. Agni se promène nu, couvert de flammes.
 - [Violence] *Esclavage et torture* : Dans la ville de Behemdorg, la population est réduite en esclavage et des habitants sont torturés. Des scènes de torture apparaissent dans le tome 2.
 - [Thèmes sensibles] [révèle l'intrigue] *Suicide et meurtres d'enfants* : Plus loin dans la série, le héros tue des enfants dans un état second, puis tente de mettre fin à ses jours. D'autres personnages tentent de se suicider ou demandent qu'on les tue.
 - [Thèmes sensibles] [révèle l'intrigue] *Relation amoureuse troublante* : Le héros noue une relation amoureuse avec une jeune femme amnésique qui ressemble à sa sœur morte, à qui il a donné le prénom de celle-ci et qui finit par comprendre qu'il n'est pas son frère.
@@ -432,7 +433,7 @@ Fiche AniList : https://anilist.co/manga/87170
 
 - Âge 18 retenu au lieu de 16 (estimation automatique) : violences sexuelles suggérées dont des tentatives d'agression sur des enfants, trafic sexuel d'enfants évoqué, cannibalisme, torture, meurtres d'enfants et suicide, classification « M (Mature) » de VIZ. 16 reste défendable : la seule indication française trouvée est l'étiquette « Public averti » d'un article Fnac.
 - Aucune source consultée ne donne d'âge chiffré. Aucune mention d'âge trouvée chez l'éditeur français (Kazé puis Crunchyroll) ; Manga-News bloque l'accès automatique et sa fiche n'a pas pu être lue.
-- Tentatives d'agression sexuelle sur des enfants, viol suggéré, tentative de zoophilie et torture du tome 2 : une seule source, le blog Jo Writes Fantasy (avertissements des tomes 1 et 2). Le trafic sexuel d'enfants et la torture à Behemdorg sont confirmés par The Outer Haven.
+- Tentatives d'agression sexuelle sur des enfants, viol suggéré, autres contenus sexuels et torture du tome 2 : une seule source, le blog Jo Writes Fantasy (avertissements des tomes 1 et 2). Le trafic sexuel d'enfants et la torture à Behemdorg sont confirmés par The Outer Haven.
 - Désaccord entre sources : Comic Bastards estime que violence et sexe sont évoqués plus que montrés, alors que The Outer Haven parle de scènes graphiques et le libraire de la Fnac de scènes à la limite du supportable.
 - Inceste (étiquette spoiler AniList) non confirmé par les sources lues : Wikipédia (anglais) évoque seulement la relation amoureuse avec une jeune femme qui ressemble à la sœur du héros et qu'il a renommée Luna. Scène rédigée a minima, à vérifier.
 - Suicide, meurtres d'enfants et relation amoureuse troublante : appuyés sur le seul résumé de Wikipédia (anglais).

@@ -1,12 +1,12 @@
-# Relecture r2, lot 2 : 10 fiches
+# Relecture r3, lot 2 : 10 fiches
 
-Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r2-2.json, en recopiant le numéro de révision de chaque fiche.
+Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r3-2.json, en recopiant le numéro de révision de chaque fiche.
 
-- Vagabond (AniList 30656), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Vagabond (AniList 30656), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Dorohedoro (AniList 31133), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Jojo's - Steel Ball Run (AniList 31706), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Bonne nuit Punpun (AniList 34632), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- L'Attaque des Titans (AniList 53390), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Jojo's - Steel Ball Run (AniList 31706), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Bonne nuit Punpun (AniList 34632), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- L'Attaque des Titans (AniList 53390), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Tokyo Ghoul (AniList 63327), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Haikyu !! Les as du volley (AniList 65243), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Horimiya (AniList 72451), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
@@ -14,7 +14,7 @@ Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/re
 - L'Ère des Cristaux (AniList 74489), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 
 ---
-## Vagabond (AniList 30656) : dès 16 ans, révision 2
+## Vagabond (AniList 30656) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/30656
 
@@ -32,8 +32,8 @@ Fiche AniList : https://anilist.co/manga/30656
 - [Violence] *Duels réalistes et sanglants* : Les combats au sabre sont nombreux dès le premier tome. Otaku USA décrit une ambiance « dark, violent and provocative » et beaucoup de sang ; Manga Librarian signale violence et gore. Un critique cité par Wikipédia salue une violence montrée de façon réaliste.
 - [Violence] *Morts et mutilations* : Lors de son premier défi à l'école Yoshioka, Musashi tue plusieurs élèves. Au temple Hōzōin, un combattant tranche les poignets d'un moine (Wikipédia en français).
 - [Violence] [révèle l'intrigue] *Combat contre soixante-dix hommes* : Dans un arc avancé, Musashi affronte seul soixante-dix combattants de l'école Yoshioka et les tue tous. Il en sort gravement blessé à la jambe, blessure qui pèse sur les tomes suivants (31 et 32 selon les résumés de la BnF).
-- [Nudité et sexualité] *Sexualité, prostitution et menace de viol* : Otaku USA signale quelques scènes de lit suggestives dans le volume qui regroupe les tomes 1 à 3, sans préciser leur répartition ; Manga Librarian signale nudité et contenu sexuel. Selon le blog Otaku Orbit, le tome 1 montre des relations sexuelles entre Matahachi et Okō, jugées explicites, et un chef de brigands y ordonne à ses hommes de violer Akemi, la fille d'Okō. Plus tard, Okō devient prostituée à Kyoto et Akemi se prostitue à son tour (Wikipédia en français).
-- [Nudité et sexualité] [révèle l'intrigue] *Viol et meurtre dans le passé d'un personnage* : Selon Honey's Anime, Inshun, le jeune moine prodige du temple Hōzōin, a assisté enfant au viol de sa mère, puis au meurtre de ses deux parents par le violeur. La source ne précise ni le tome ni la façon dont la scène est montrée.
+- [Nudité et sexualité] *Sexualité, prostitution et menace de viol* : Otaku USA signale quelques scènes de lit suggestives dans le volume qui regroupe les tomes 1 à 3, sans préciser leur répartition ; Manga Librarian signale nudité et contenu sexuel. Selon le blog Otaku Orbit, le tome 1 montre des relations sexuelles explicites entre Matahachi et Okō, et une menace de viol visant Akemi, la fille d'Okō. Plus tard, Okō devient prostituée à Kyoto et Akemi se prostitue à son tour (Wikipédia en français).
+- [Nudité et sexualité] [révèle l'intrigue] *Viol et meurtre dans le passé d'un personnage* : Selon Honey's Anime, Inshun, le jeune moine prodige du temple Hōzōin, a été témoin enfant de violences sexuelles sur sa mère, puis du meurtre de ses deux parents. La source ne précise ni le tome ni la façon dont la scène est montrée.
 
 **Vocabulaire.** Non renseigné par les sources consultées.
 
@@ -63,8 +63,8 @@ Fiche AniList : https://anilist.co/manga/30656
 **Points à vérifier en priorité**
 
 - Âge retenu 16 ans, au-dessus de l'estimation automatique (14), et confirmé par les deux relecteurs. Raisons : classification « Mature » de VIZ, avis « Adult » de Manga Librarian, nudité, contenu sexuel et violences sexuelles signalés. Désaccord : le CNLJ recommande les tomes 26, 31 et 32 dès 13 ans, mais n'a pas évalué les premiers tomes.
-- Étiquette AniList « Rape » (spoiler) : désormais en partie expliquée, par deux sources secondaires seulement (Honey's Anime pour le passé d'Inshun, Otaku Orbit pour l'ordre de violer Akemi dans le tome 1). Les tentatives de viol sur Okō et les agressions dans l'entourage des Yoshioka signalées par un relecteur ne sont confirmées ni par Wikipédia ni par une autre source trouvée : non reprises. À vérifier sur les tomes.
-- Le viol de la mère d'Inshun et le meurtre de ses parents ne reposent que sur Honey's Anime (site de fans spécialisé, 2018) ; tome et mise en scène non précisés.
+- Étiquette AniList « Rape » (spoiler) : désormais en partie expliquée, par deux sources secondaires seulement (Honey's Anime pour le passé d'Inshun, Otaku Orbit pour la menace visant Akemi dans le tome 1). Les autres agressions signalées par un relecteur ne sont confirmées ni par Wikipédia ni par une autre source trouvée : non reprises. À vérifier sur les tomes.
+- Les violences sur la mère d'Inshun et le meurtre de ses parents ne reposent que sur Honey's Anime (site de fans spécialisé, 2018) ; tome et mise en scène non précisés.
 - L'issue de l'attaque contre Akemi dans le tome 1 n'est pas précisée par Otaku Orbit (blog de critique amateur), qui laisse seulement entendre que les héros interviennent.
 - Caractère explicite des scènes sexuelles : Otaku USA parle de scènes « suggestive » (tomes 1 à 3), Otaku Orbit de sexe « graphic » (tome 1). Fréquence et tomes suivants non documentés.
 - Prostitution d'Okō et d'Akemi : tirée des fiches de personnages de Wikipédia (français), sans numéros de tomes.
@@ -73,12 +73,13 @@ Fiche AniList : https://anilist.co/manga/30656
 - Aucune critique Common Sense Media ni filmspourenfants.net trouvée. Page de l'éditeur Delcourt/Tonkam introuvable ; éditeur et nombre de tomes confirmés par la BnF (tome 37, Tonkam, 2014) et Wikipédia.
 - Le lien entre le combat contre soixante-dix hommes et la blessure à la jambe vient de Wikipédia anglais ; les tomes 31 et 32 viennent des résumés Electre des notices BnF.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] Ajouter une scène avec spoiler : enfant, Inshun assiste au viol de sa mère puis au meurtre de ses parents. → appliquee : Vérifié sur la source citée (Honey's Anime, « Top 10 Badass Vagabond Manga Characters », 2018) : Inshun « witnessed his mother being raped, and then the rapist killed both his parents ». Scène ajoutée (catégorie sexe, spoiler), attribuée à cette source ; source ajoutée. Aucune autre source trouvée ne mentionne le viol : signalé dans notes_relecture.
+- Pipo [scenes] Ajouter une scène avec spoiler : enfant, Inshun est témoin de violences sexuelles sur sa mère, puis du meurtre de ses parents. → appliquee : Vérifié sur la source citée (Honey's Anime, « Top 10 Badass Vagabond Manga Characters », 2018). Scène ajoutée (catégorie sexe, spoiler), attribuée à cette source ; source ajoutée. Aucune autre source trouvée ne le mentionne : signalé dans notes_relecture.
 - Pipo [scenes] La critique d'Otaku USA porte sur l'édition regroupant les trois premiers tomes : y situer les scènes de lit suggestives. → appliquee : Vérifié : Otaku USA indique « This book contains the first three manga volumes » et mentionne « a few suggestive bedroom scenes ». La scène, la rubrique « Ce que disent les autres » et le titre de la source précisent désormais les tomes 1 à 3.
 - Pipo [scenes] Retirer les poignets tranchés d'un moine au temple Hōzōin, non confirmés par les sources consultables. → non_appliquee : La scène est confirmée par Wikipédia (français), déjà dans les sources : Toji Gion « alla au temple Hozoin pour traquer Musashi et s'illustra en tranchant les poignets d'un des moines ». Wikipédia anglais, seul ouvert par le relecteur, ne la mentionne pas. Affirmation maintenue, avec l'attribution « (Wikipédia en français) » ajoutée.
-- Mario [scenes] Scène sexuelle trop vague : ajouter la relation Matahachi et Okō dès le tome 1, la prostitution d'Okō et d'Akemi, et les agressions et tentatives de viol qu'elles subissent (brigands Tsujikaze, entourage des Yoshioka). → partielle : Wikipédia (français), source citée, confirme seulement qu'Okō devient la maîtresse de Matahachi et prostituée à Kyoto, et qu'Akemi se prostitue ; il ne dit rien de viols ni du chapitre 6. La critique du tome 1 par Otaku Orbit confirme des relations sexuelles explicites entre Matahachi et Okō et l'ordre donné par Tenma, chef des brigands Tsujikaze, de violer Akemi (source ajoutée). Ajoutés : relations sexuelles du tome 1, prostitution, menace de viol sur Akemi. Non repris, faute de source : agressions sur Okō, tentatives de viol dans l'entourage des Yoshioka, numéro de chapitre.
+- Mario [scenes] Scène sexuelle trop vague : ajouter la relation entre Matahachi et Okō dès le tome 1, la prostitution d'Okō et d'Akemi, et les violences sexuelles qu'elles subissent. → partielle : Wikipédia (français), source citée, confirme seulement qu'Okō devient la maîtresse de Matahachi et prostituée à Kyoto, et qu'Akemi se prostitue. La critique du tome 1 par Otaku Orbit confirme des relations sexuelles explicites entre Matahachi et Okō et une menace de viol visant Akemi (source ajoutée). Ajoutés : relations sexuelles du tome 1, prostitution, menace de viol. Non repris, faute de source : les autres agressions signalées et le numéro de chapitre.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -147,7 +148,7 @@ Fiche AniList : https://anilist.co/manga/31133
 
 ---
 
-## Jojo's - Steel Ball Run (AniList 31706) : dès 16 ans, révision 2
+## Jojo's - Steel Ball Run (AniList 31706) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/31706
 
@@ -165,14 +166,14 @@ Fiche AniList : https://anilist.co/manga/31706
 - [Violence] *Armes à feu et pouvoirs* : Les concurrents se menacent et s'attaquent avec des armes à feu et des pouvoirs surnaturels. Dans l'animé, Common Sense Media relève des blessures par balle sanglantes, des dents cassées et des cris de douleur. Le BBFC classe l'animé 15 pour violence, menace et blessures détaillées.
 - [Thèmes sensibles] *Maltraitance et automutilation* : De brèves scènes montrent une tentative de meurtre, des mauvais traitements et de l'automutilation, et un personnage plaisante sur le suicide (Common Sense Media, animé).
 - [Nudité et sexualité] *Nudité comique* : Dans le tome 1, le chemisier d'une femme se déchire et dévoile sa poitrine, pour un effet comique (critique du blog Yattatachi). Common Sense Media ne relève aucun contenu sexuel dans l'animé, dont seuls les premiers épisodes sont sortis.
-- [Nudité et sexualité] [révèle l'intrigue] *Tentative de viol sur une adolescente* : Dans le tome 16, l'antagoniste principal s'enferme avec Lucy Steel, une adolescente de 14 ans qui a pris l'apparence de son épouse, et l'agresse ; elle le poignarde à la gorge pour se défendre (JoJo Wiki, chapitre 61). Une critique parle de « tentative de viol » et de plusieurs formes de prédation sexuelle visant ce personnage (Nature's Corrupted). Lucy découvre ensuite qu'elle porte en elle, de façon surnaturelle, la tête du cadavre sacré (Wikipedia anglais).
+- [Nudité et sexualité] [révèle l'intrigue] *Agression sexuelle d'une adolescente* : Dans le tome 16, Lucy Steel, une adolescente de 14 ans, subit une tentative d'agression sexuelle de la part de l'antagoniste principal et se défend (JoJo Wiki, chapitre 61 ; critique Nature's Corrupted). Lucy découvre ensuite qu'elle porte en elle, de façon surnaturelle, la tête du cadavre sacré (Wikipedia anglais).
 - [Autre] *Stéréotypes* : Common Sense Media relève des stéréotypes raciaux, par exemple un jeune homme noir présenté comme paresseux. Le blog Yattatachi juge problématique la représentation d'une tribu amérindienne violente aux visages déformés.
 - [Autre] *Mort d'animaux* : Le blog Yattatachi signale la mort sous-entendue d'un animal dans le tome 1.
 - [Violence] [révèle l'intrigue] *Morts de personnages principaux* : La course sert de couverture à une conspiration autour des fragments d'un cadavre sacré, et plusieurs personnages importants meurent au fil de l'histoire.
 
 **Vocabulaire.** Common Sense Media (animé, version anglaise) relève beaucoup de jurons : « bastard », « hell », « shit », « damn », « a--hole », « goddamn », et des insultes comme « mouthy brat » ou « little s--t ». Aucune source consultée ne décrit le langage de l'édition française du manga.
 
-**Avis.** Steel Ball Run transpose l'univers de Jojo's dans une folle course de chevaux à travers l'Amérique de 1890, une aventure inventive saluée pour son dessin, ses personnages et l'amitié entre ses deux héros. La violence par armes à feu et pouvoirs surnaturels est fréquente et sanglante, et la seconde moitié du manga contient une tentative de viol sur une adolescente de 14 ans. Les critiques relèvent aussi des stéréotypes raciaux et une représentation discutée du handicap ; l'animé emploie en anglais un langage souvent grossier, et celui de la traduction française du manga n'est pas documenté. Common Sense Media conseille l'animé dès 14 ans, mais seuls ses premiers épisodes sont sortis, et l'édition américaine du manga vise les grands adolescents. Mieux vaut avoir 16 ans pour découvrir cette série.
+**Avis.** Steel Ball Run transpose l'univers de Jojo's dans une folle course de chevaux à travers l'Amérique de 1890, une aventure inventive saluée pour son dessin, ses personnages et l'amitié entre ses deux héros. La violence par armes à feu et pouvoirs surnaturels est fréquente et sanglante, et la seconde moitié du manga contient une tentative d'agression sexuelle sur une adolescente. Les critiques relèvent aussi des stéréotypes raciaux et une représentation discutée du handicap ; l'animé emploie en anglais un langage souvent grossier, et celui de la traduction française du manga n'est pas documenté. Common Sense Media conseille l'animé dès 14 ans, mais seuls ses premiers épisodes sont sortis, et l'édition américaine du manga vise les grands adolescents. Mieux vaut avoir 16 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -197,25 +198,26 @@ Fiche AniList : https://anilist.co/manga/31706
 
 **Points à vérifier en priorité**
 
-- Âge relevé de 14 à 16 ans en révision 2, à la demande concordante de Pipo et Mario : tentative de viol sur une adolescente de 14 ans dans le tome 16, classement « Teen Plus » de Viz pour le manga (vérifié), classement 15 du BBFC pour l'animé (vérifié sur les deux saisons classées en 2026), passage en 2005 dans le magazine seinen Ultra Jump. Common Sense Media (14 ans) ne couvre que le début de l'animé.
-- La scène « Tentative de viol sur une adolescente » repose sur un wiki de fans (JoJo Wiki : résumé du chapitre 61 et fiche de Lucy Steel) et sur une lettre d'information personnelle (Nature's Corrupted). Wikipedia (anglais) confirme l'âge de Lucy et la grossesse surnaturelle du tome 16, mais ne mentionne pas l'agression. À confirmer par une source plus solide (critique publiée, éditeur).
+- Âge relevé de 14 à 16 ans en révision 2, à la demande concordante de Pipo et Mario : tentative d'agression sexuelle sur une adolescente dans le tome 16, classement « Teen Plus » de Viz pour le manga (vérifié), classement 15 du BBFC pour l'animé (vérifié sur les deux saisons classées en 2026), passage en 2005 dans le magazine seinen Ultra Jump. Common Sense Media (14 ans) ne couvre que le début de l'animé.
+- La scène « Agression sexuelle d'une adolescente » repose sur un wiki de fans (JoJo Wiki : résumé du chapitre 61 et fiche de Lucy Steel) et sur une lettre d'information personnelle (Nature's Corrupted). Wikipedia (anglais) confirme l'âge de Lucy et la grossesse surnaturelle du tome 16, mais ne mentionne pas l'agression. À confirmer par une source plus solide (critique publiée, éditeur).
 - Le BBFC a classé 7 épisodes de l'animé (mars et septembre 2026) ; Common Sense Media ne précise pas les épisodes évalués. Le contenu des tomes suivants reste peu documenté : les étiquettes AniList « Gore », « Body Horror » et « Nudity » ne sont confirmées par aucune source lue. La critique d'Anime News Network sur les tomes 1 à 5 n'a pas pu être consultée (captcha).
 - Les scènes « Nudité comique » et « Mort d'animaux » reposent sur une seule source, le blog Yattatachi (tome 1 américain).
 - La scène « Morts de personnages principaux » repose sur Wikipédia (anglais) uniquement.
 - Steel Ball Run est la septième partie de Jojo's Bizarre Adventure (Delcourt parle de « septième saison ») ; aucune source lue ne précise si elle se lit indépendamment. Delcourt : 24 tomes, du 23 janvier 2013 au 5 octobre 2016, collection Shonen. Les pages Delcourt consultées ne mentionnent pas Tonkam et ne nomment Hirohiko Araki que comme scénariste ; Wikipedia (anglais) le dit auteur et dessinateur.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] La fiche omet les violences sexuelles visant Lucy Steel (14 ans), dont une tentative de viol par le président. → appliquee : Source citée vérifiée (Nature's Corrupted, 25 décembre 2022) : Lucy a 14 ans et subit une « attempted rape by the President », ainsi que plusieurs formes de prédation sexuelle. Confirmé par JoJo Wiki (chapitre 61, tome 16). Scène ajoutée avec spoiler ; l'avis la mentionne et la scène de nudité comique précise qu'elle ne concerne que le tome 1 et le début de l'animé. Sources ajoutées.
+- Pipo [scenes] La fiche omet les violences sexuelles visant Lucy Steel, adolescente. → appliquee : Source citée vérifiée (Nature's Corrupted, 25 décembre 2022) : elle confirme l'âge de Lucy et une tentative d'agression sexuelle par l'antagoniste. Confirmé par JoJo Wiki (chapitre 61, tome 16). Scène ajoutée avec spoiler ; l'avis la mentionne et la scène de nudité comique précise qu'elle ne concerne que le tome 1 et le début de l'animé. Sources ajoutées.
 - Pipo [age] Proposer 16 ans au lieu de 14 (violences sexuelles des tomes ultérieurs, classement Teen Plus du manga). → appliquee : Viz vérifié (« Teen Plus »), BBFC vérifié (15 pour les deux saisons de l'animé), scène du tome 16 vérifiée. Les deux relecteurs proposent 16 ans avec des arguments sourcés : âge porté à 16 ans et dernière phrase de l'avis mise à jour.
 - Pipo [avis] « Langage souvent grossier » est tiré de la version anglaise de l'animé mais présenté comme valant pour le manga. → appliquee : Common Sense Media vérifié : la liste de jurons porte sur la version anglaise de l'animé. L'avis attribue désormais ce langage à l'animé et précise que celui de la traduction française du manga n'est pas documenté.
 - Mario [resume] Ajouter l'auteur (Hirohiko Araki), la septième partie de Jojo's, les 24 tomes et l'éditeur Delcourt/Tonkam. → partielle : Delcourt vérifié (tomes 1 et 24) : Hirohiko Araki, collection Shonen, tome 1 paru le 23 janvier 2013, tome 24 « dernier tome » paru le 5 octobre 2016, « septième saison » de la saga. Wikipedia (anglais) : écrit et dessiné par Araki, 24 volumes. Phrase ajoutée au résumé. « Tonkam » non repris : les pages Delcourt consultées ne le mentionnent pas.
-- Mario [scenes] Ajouter la tentative de viol de Lucy Steel (14 ans) par l'antagoniste dans le tome 16, puis sa grossesse surnaturelle forcée. → partielle : Source citée (Wikipedia anglais) vérifiée : elle confirme l'âge de Lucy et la grossesse surnaturelle liée au cadavre sacré (tome 16), mais ne parle pas de la tentative de viol. Celle-ci est confirmée par JoJo Wiki (chapitre 61, tome 16 : agression, coup de couteau à la gorge) et par Nature's Corrupted. Scène ajoutée avec spoiler. Non repris : le mot « forcée » (aucune source) et la fusion avec la nudité comique du tome 1, gardée dans une scène séparée sans spoiler.
-- Mario [age] Passer de 14 à 16 ans (magazine seinen, gore, tentative de viol sur une adolescente, BBFC 15, Viz Teen Plus). → appliquee : Accord avec Pipo, arguments vérifiés : BBFC 15 (animé), Viz « Teen Plus », passage dans Ultra Jump (Wikipedia anglais), scène du tome 16. Âge porté à 16 ans. Le gore et l'horreur corporelle cités par Mario ne sont confirmés par aucune source lue et n'ont pas été ajoutés.
+- Mario [scenes] Ajouter la tentative d'agression sexuelle visant Lucy Steel dans le tome 16, puis sa grossesse surnaturelle. → partielle : Source citée (Wikipedia anglais) vérifiée : elle confirme l'âge de Lucy et la grossesse surnaturelle liée au cadavre sacré (tome 16), mais ne parle pas de l'agression. Celle-ci est confirmée par JoJo Wiki (chapitre 61, tome 16) et par Nature's Corrupted. Scène ajoutée avec spoiler. Non repris : le mot « forcée » (aucune source) et la fusion avec la nudité comique du tome 1, gardée dans une scène séparée sans spoiler.
+- Mario [age] Passer de 14 à 16 ans (magazine seinen, gore, agression sexuelle sur une adolescente, BBFC 15, Viz Teen Plus). → appliquee : Accord avec Pipo, arguments vérifiés : BBFC 15 (animé), Viz « Teen Plus », passage dans Ultra Jump (Wikipedia anglais), scène du tome 16. Âge porté à 16 ans. Le gore et l'horreur corporelle cités par Mario ne sont confirmés par aucune source lue et n'ont pas été ajoutés.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## Bonne nuit Punpun (AniList 34632) : adultes, révision 2
+## Bonne nuit Punpun (AniList 34632) : adultes, révision 3
 
 Fiche AniList : https://anilist.co/manga/34632
 
@@ -234,7 +236,7 @@ Fiche AniList : https://anilist.co/manga/34632
 - [Violence] *Violence conjugale* : Dès le premier tome, Punpun découvre ce qui ressemble aux suites des coups portés par son père à sa mère, qui est hospitalisée ; le père va en prison (Kana, Wikipédia).
 - [Nudité et sexualité] *Découverte de la sexualité* : Dès l'école primaire, Punpun et ses copains cherchent de la pornographie, regardent une cassette et découvrent « les mystères de la sexualité » (Kana, VIZ, Wikipédia).
 - [Thèmes sensibles] *Secte et maltraitance* : La mère d'Aiko, membre d'une secte, est cruelle et maltraitante envers elle. Plus tard, un ami de Punpun rejoint une autre secte (Wikipédia, VIZ).
-- [Nudité et sexualité] [révèle l'intrigue] *Agression sexuelle d'un adolescent* : Au tome 5, alors que Punpun entre au lycée, une femme adulte proche de la famille, la compagne de son oncle, abuse de lui sexuellement. Plus tard, Punpun tente d'embrasser une fille de force, puis de forcer une relation sexuelle avant de s'arrêter à sa demande (Wikipédia).
+- [Nudité et sexualité] [révèle l'intrigue] *Agression sexuelle d'un adolescent* : Au tome 5, alors que Punpun est encore adolescent, une femme adulte de son entourage, la compagne de son oncle, commet sur lui une agression sexuelle. Plus tard, Punpun tente lui-même d'imposer des gestes sexuels à une jeune fille, puis s'arrête à sa demande (Wikipédia).
 - [Nudité et sexualité] [révèle l'intrigue] *Relations sexuelles* : Devenu jeune adulte, Punpun a des relations sexuelles avec deux jeunes femmes, aux tomes 8 et 10 selon Wikipédia. Le niveau de détail des images n'est pas précisé par les sources consultées.
 - [Thèmes sensibles] [révèle l'intrigue] *Suicide* : Les tentatives de suicide jalonnent la série, dès le tome 2 avec la mère de Punpun. Dans le dernier tome, un personnage principal se donne la mort par pendaison, le héros tente de se suicider et une secte commet un suicide collectif (Wikipédia).
 - [Violence] [révèle l'intrigue] *Meurtre et fuite* : Dans les derniers tomes, les deux héros sont impliqués dans la mort violente d'une mère, puis fuient la police à travers le Japon, entre rancœur, blessures et idées suicidaires (Kana, Wikipédia). Leur relation devient violente : Aiko blesse légèrement Punpun en tentant de lui crever un œil avec une fourchette (tome 11), puis Punpun projette de l'étrangler avant de se tuer, projet dont elle le dissuade (tome 12, Wikipédia anglais).
@@ -272,15 +274,16 @@ Fiche AniList : https://anilist.co/manga/34632
 - La notice des bibliothèques de Paris pour le tome 1 porte un résumé qui semble décrire le début du tome 2.
 - Moment de l'agression (tome 5) : Mario la situe au collège. Wikipédia (anglais) ouvre le résumé du tome 5 par l'entrée de Punpun au lycée, avant l'agression, et la fiche Kana du tome 5 le montre au collège seulement pour lire les résultats d'admission au lycée. Formule « alors que Punpun entre au lycée » conservée.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Compléter « Meurtre et fuite » : violence dans le couple pendant la fuite (Aiko attaque Punpun à l'œil, Punpun prépare une strangulation suivie de son suicide, elle l'en dissuade). → appliquee : Confirmé par Wikipédia (anglais) : au tome 11, Aiko tente de crever l'œil de Punpun avec une fourchette et ne le blesse que légèrement ; au tome 12, Punpun décide de l'étrangler avant de se tuer, et elle l'en dissuade. Scène complétée avec les tomes, spoiler conservé.
 - Mario [resume] Ajouter le nom de l'auteur, Inio Asano. → appliquee : La page série de Kana nomme Inio Asano (scénario et dessin). Nom ajouté au résumé.
 - Mario [scenes] Au tome 5, Punpun serait encore au collège (lycée au tome 6) ; préciser que l'agresseuse est la compagne de son oncle. → partielle : Précision appliquée : selon Wikipédia (anglais), Midori, compagne puis épouse de Yūichi, viole Punpun au tome 5. Correction « collège » non appliquée : le résumé du tome 5 sur Wikipédia (anglais) commence par « Having studied hard, Punpun enters high school », avant l'agression, et celui du tome 6 ne parle pas d'entrée au lycée ; la fiche Kana du tome 5 (ajoutée aux sources) montre Punpun au collège seulement pour lire les résultats d'admission au lycée.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## L'Attaque des Titans (AniList 53390) : dès 16 ans, révision 2
+## L'Attaque des Titans (AniList 53390) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/53390
 
@@ -299,7 +302,7 @@ Fiche AniList : https://anilist.co/manga/53390
 - [Violence] *Humains dévorés par les Titans* : Dès le premier tome, les Titans dévorent des humains, civils compris. Eren et Mikasa assistent à la mort de la mère d'Eren, coincée sous les décombres puis dévorée. Ces scènes reviennent tout au long de la série (Wikipédia, Common Sense Media, filmspourenfants.net).
 - [Violence] *Combats sanglants et mutilations* : Les batailles sont très graphiques : membres et têtes arrachés, passages à tabac, beaucoup de sang (Common Sense Media, à propos de l'animé). Des personnages principaux sont mutilés et de nombreux soldats meurent à chaque bataille.
 - [Peur et horreur] *Titans effrayants* : Les Titans sont des géants d'apparence humaine, nus et sans organes sexuels ; certains n'ont pas de peau. filmspourenfants.net décrit leur sourire forcé et leurs dents pointues, et signale des effets de peur soudaine et des images de cauchemar sanglantes ; Wikipédia relève des visages aux expressions parfois inquiétantes ou monstrueuses. Leur nudité n'a rien de sexuel.
-- [Violence] *Enfants face à la violence* : Enfant, Mikasa voit ses parents tués devant elle puis est enlevée ; filmspourenfants.net précise qu'elle devait servir d'« objet sexuel ». La même source note qu'on peut voir des enfants tuer.
+- [Violence] *Enfants face à la violence* : Enfant, Mikasa voit ses parents tués devant elle puis est enlevée ; filmspourenfants.net indique que ses ravisseurs voulaient l'exploiter sexuellement. La même source note qu'on peut voir des enfants tuer.
 - [Thèmes sensibles] *Désespoir et idées de suicide* : Des soldats envisagent de se suicider plutôt que d'être dévorés vivants, et un personnage se sent responsable de la mort de ses camarades (filmspourenfants.net, animé). La mort est omniprésente.
 - [Thèmes sensibles] [révèle l'intrigue] *Guerre et extermination de masse* : Dans la dernière partie, le récit devient une guerre entre peuples. Un personnage central déclenche une attaque destinée à exterminer la population du reste du monde, que Wikipédia qualifie de « marche génocidaire ». Des critiques ont rapproché la persécution d'un peuple dans la série de celle des Juifs sous le nazisme, ce que d'autres contestent.
 
@@ -331,15 +334,16 @@ Fiche AniList : https://anilist.co/manga/53390
 - Aucune mention d'âge sur la fiche Pika du tome 1. Les âges de Common Sense Media et filmspourenfants.net portent sur l'animé ; Common Sense Media ne précise pas les saisons couvertes.
 - Description des Titans : sourire forcé et dents pointues viennent de filmspourenfants.net, qui les présente comme un trait général ; Wikipédia parle d'expressions variées, parfois inquiétantes ou monstrueuses. Chaque élément est désormais attribué à sa source.
 - Désaccord : filmspourenfants.net signale des personnages qui s'alcoolisent, Common Sense Media indique l'alcool et les drogues comme absents. Point non retenu dans les scènes.
-- L'enlèvement de Mikasa « pour servir d'objet sexuel », les enfants qui tuent et les idées de suicide ne sont décrits que par filmspourenfants.net (animé).
+- L'enlèvement de Mikasa en vue de son exploitation sexuelle, les enfants qui tuent et les idées de suicide ne sont décrits que par filmspourenfants.net (animé).
 - La scène « Guerre et extermination de masse » repose sur Wikipédia (fr) seule ; les tomes concernés ne sont pas précisés.
 - Le manga est prépublié au Japon dans un magazine shōnen mais publié en France dans la collection Pika Seinen ; Wikipédia cite le directeur éditorial de Pika, pour qui le manga « ne répondait pas beaucoup aux styles shōnen ».
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [avis] filmspourenfants.net recommande 16 ans et déconseille avant 15 ans ; l'avis et « Ce que disent les autres » confondent les deux seuils. → appliquee : Vérifié sur filmspourenfants.net : bandeau « À partir de 16 ans », « Déconseillé aux moins de : 15 ans ». Common Sense Media confirme 15 ans. Avis, entrée filmspourenfants.net de « autres » et notes_relecture corrigés.
 - Pipo [scenes] « Au sourire figé et aux dents pointues » généralise à tous les Titans un trait que les sources ne justifient pas. → partielle : La source existe : filmspourenfants.net décrit les géants « avec un sourire forcé, une apparence humaine, mais des dents pointues ». Wikipédia (fr), citée par Pipo, parle en revanche d'expressions très marquées, « parfois » inquiétantes ou monstrueuses. Le trait n'est pas supprimé mais attribué à filmspourenfants.net, et la description de Wikipédia est ajoutée ; « apparence humaine » est repris de la proposition.
 - Mario [resume] Le nom de l'auteur, Hajime Isayama, n'apparaît pas dans la fiche. → appliquee : Vérifié : la fiche Pika du tome 1 nomme Hajime Isayama, et Wikipédia (fr) précise que le manga est « écrit et dessiné par Hajime Isayama ». Ajouté dans la dernière phrase du résumé ; les deux sources figuraient déjà dans sources.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 

@@ -1,6 +1,6 @@
-# Relecture r2, lot 5 : 9 fiches
+# Relecture r3, lot 5 : 9 fiches
 
-Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r2-5.json, en recopiant le numéro de révision de chaque fiche.
+Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r3-5.json, en recopiant le numéro de révision de chaque fiche.
 
 - Spy x Family (AniList 108556), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Oshi no ko (AniList 117195), révision 1 : à relire par Pipo (ChatGPT) et Mario (Gemini)
@@ -8,7 +8,7 @@ Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/re
 - Omniscient Reader's Viewpoint (AniList 119257), révision 1 : à relire par Mario (Gemini)
 - Kaiju N°8 (AniList 120760), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Sakamoto Days (AniList 125828), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Dandadan (AniList 132029), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Dandadan (AniList 132029), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Bloom (AniList 140475), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Adieu Eri (AniList 146983), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 
@@ -103,7 +103,7 @@ Fiche AniList : https://anilist.co/manga/117195
 - [Violence] *Meurtres commis par un fan obsessionnel* : Dès le début de la série, un fan obsessionnel tue deux personnages, dont la mère des jumeaux sous leurs yeux. Le BBFC classe l'épisode 1 de l'animé 15 pour « strong violence » (poignardage mortel suivi d'images très sanglantes).
 - [Thèmes sensibles] *Tentative de suicide après un cyberharcèlement* : Une adolescente harcelée en ligne tente de se suicider ; un autre personnage intervient. Wikipédia (français) signale que cet épisode de l'animé a été critiqué pour sa ressemblance avec le suicide réel de la lutteuse Hana Kimura.
 - [Thèmes sensibles] *Maladie grave et deuil* : Des scènes montrent un personnage atteint d'une maladie incurable, ainsi que le deuil (Common Sense Media et BBFC, animé).
-- [Nudité et sexualité] *Grossesse adolescente et allusions* : Une adolescente accouche hors champ et élève seule ses enfants. Des lycéens ont des béguins et s'embrassent brièvement. Le BBFC relève quelques allusions sexuelles dans l'animé (moqueries sur la poitrine d'une lycéenne, remarque « perv », un homme traité de « lolicon » pour son obsession envers une jeune idole) et un homme dénudé dont le sexe reste caché.
+- [Nudité et sexualité] *Grossesse adolescente et allusions* : Une adolescente accouche hors champ et élève seule ses enfants. Des lycéens ont des béguins et s'embrassent brièvement. Le BBFC relève quelques allusions sexuelles dans l'animé, dont des moqueries sur le physique d'une lycéenne et un homme à l'attirance malsaine pour une jeune idole, ainsi qu'un homme dénudé dont le sexe reste caché.
 - [Violence] [révèle l'intrigue] *Dénouement très violent* : La fin de la série comprend un meurtre suivi d'un suicide impliquant un personnage principal, selon Wikipédia.
 - [Autre] *Tabac et alcool* : Des adultes fument sur un plateau de tournage et certains personnages boivent de l'alcool (Common Sense Media, animé).
 
@@ -377,7 +377,7 @@ Fiche AniList : https://anilist.co/manga/125828
 
 ---
 
-## Dandadan (AniList 132029) : dès 16 ans, révision 2
+## Dandadan (AniList 132029) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/132029
 
@@ -392,7 +392,7 @@ Fiche AniList : https://anilist.co/manga/132029
 
 **Scènes difficiles**
 
-- [Nudité et sexualité] *Menace d'agression sexuelle dès le début* : Dès le début de l'histoire, des extraterrestres immobilisent Momo, lui écartent de force les jambes et menacent de la violer avec un instrument métallique (Common Sense Media, animé). Une bibliothécaire scolaire décrit la même scène dans le tome 1 du manga : Momo est agressée par des aliens qui tentent de « la sonder ». La menace de viol est explicite et la contrainte physique montrée ; les sources décrivent une tentative, pas un viol accompli.
+- [Nudité et sexualité] *Menace d'agression sexuelle dès le début* : Dès le tome 1, des extraterrestres immobilisent Momo, une lycéenne, et menacent de l'agresser sexuellement ; la contrainte physique est montrée (Common Sense Media pour l'animé, The Graphic Library pour le manga). Les sources décrivent une tentative, pas une agression accomplie.
 - [Nudité et sexualité] *Humour sexuel récurrent* : Un fantôme, Mamie Turbo, vole les organes génitaux de ses victimes, et la quête des testicules perdus d'Okarun sert de fil rouge à une grande partie de la série (Wikipédia, Common Sense Media). The Graphic Library relève une première blague déplacée dans les vingt premières pages du tome 1.
 - [Nudité et sexualité] *Tenues légères* : Un personnage apparaît en soutien-gorge et culotte, avec une poitrine exagérée (Common Sense Media, animé). L'éditeur américain présente les aliens et les esprits comme « bizarrement obsédés ».
 - [Peur et horreur] *Créatures cauchemardesques* : Fantômes et extraterrestres sont décrits comme particulièrement dérangeants, cauchemardesques et psychédéliques (Common Sense Media). La RTBF note des planches plus réalistes au style horrifique.
@@ -403,7 +403,7 @@ Fiche AniList : https://anilist.co/manga/132029
 
 **Vocabulaire.** Common Sense Media (animé, version anglaise) juge le langage peu fréquent : « moron », « lame », « pissed », « crap », « scumbag ». Wikipédia (anglais) décrit Mamie Turbo comme une vieille femme cruelle et grossière. Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
 
-**Avis.** Dandadan est un manga d'action survolté et souvent drôle, qui mêle fantômes, extraterrestres, folklore japonais et romance adolescente, avec de belles valeurs d'amitié. Mais son humour repose largement sur des blagues sexuelles, et une menace de viol par des extraterrestres ouvre la série. Les créatures sont cauchemardesques, les combats violents, et certains arcs abordent la prostitution forcée, le suicide ou des sacrifices d'enfants. L'éditeur américain le réserve aux adultes et Common Sense Media conseille l'animé dès 15 ans. Mieux vaut avoir 16 ans pour découvrir cette série.
+**Avis.** Dandadan est un manga d'action survolté et souvent drôle, qui mêle fantômes, extraterrestres, folklore japonais et romance adolescente, avec de belles valeurs d'amitié. Mais son humour repose largement sur des blagues sexuelles, et une menace d'agression sexuelle par des extraterrestres ouvre la série. Les créatures sont cauchemardesques, les combats violents, et certains arcs abordent la prostitution forcée, le suicide ou des sacrifices d'enfants. L'éditeur américain le réserve aux adultes et Common Sense Media conseille l'animé dès 15 ans. Mieux vaut avoir 16 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -436,11 +436,12 @@ Fiche AniList : https://anilist.co/manga/132029
 - Le champ « Âge recommandé » de la fiche Kazé est vide.
 - Étiquettes AniList « Cannibalism » et « Terrorism » : non confirmées par les sources consultées, donc non reprises. Le harcèlement d'Okarun est confirmé par Wikipédia (anglais) mais traité en thème plutôt qu'en scène.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Omission du passé de Zuma : noyade de son petit frère et suicide de sa mère devant un train. → appliquee : Vérifié sur la liste des chapitres de Wikipédia anglais (tome 18) : le petit frère de Zuma « drowns trying to retrieve a beloved umbrella » et sa mère meurt « by leaping in front of a subway train ». Scène « Deuils familiaux de Zuma » ajoutée (catégorie thèmes, spoiler) ; la page est ajoutée aux sources.
 - Pipo [scenes] Passé de l'esprit (Acrobatic Silky) : « tomes 2 et 3 » imprécis, il serait raconté dès le tome 2 (chapitres 9 à 16). → partielle : La source citée contredit la correction proposée : selon la liste des chapitres de Wikipédia anglais, le tome 2 contient les chapitres 6 à 14 ; l'esprit n'y apparaît qu'à la fin, et c'est le résumé du tome 3 (chapitres 15 à 23) qui mentionne la découverte des « tragic family histories ». « Tome 2 » n'est donc pas repris. La demande de précision est en revanche retenue : la scène indique désormais que l'arc couvre les tomes 2 et 3 et que le passé de l'esprit est découvert dans le tome 3.
-- Pipo [scenes] « La scène n'est pas explicite » minimise une menace de viol décrite explicitement, avec contrainte physique. → appliquee : Vérifié : Common Sense Media (animé) écrit que des aliens « forcibly spread a teen girl's legs and threaten to rape her using a scary metal device » ; The Graphic Library (tome 1) : « Momo is assaulted by aliens and they attempt to probe her ». Aucune des deux ne qualifie la scène de non explicite. Formule supprimée : la fiche dit maintenant que la menace est explicite et la contrainte montrée, et que les sources décrivent une tentative, pas un viol accompli. La précision « sans pénétration montrée » n'est pas reprise, faute de source décrivant le dessin à ce niveau.
+- Pipo [scenes] « La scène n'est pas explicite » minimise une menace d'agression sexuelle explicite, avec contrainte physique. → appliquee : Vérifié sur Common Sense Media (animé) et The Graphic Library (tome 1) : aucune des deux ne qualifie la scène de non explicite. Formule supprimée : la fiche dit maintenant que la menace est explicite et la contrainte montrée, et que les sources décrivent une tentative, pas une agression accomplie.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 

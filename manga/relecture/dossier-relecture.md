@@ -65,7 +65,7 @@ Fiche AniList : https://anilist.co/manga/30001
 
 ---
 
-## Berserk (AniList 30002) : adultes, révision 2
+## Berserk (AniList 30002) : adultes, révision 3
 
 Fiche AniList : https://anilist.co/manga/30002
 
@@ -83,7 +83,7 @@ Fiche AniList : https://anilist.co/manga/30002
 - [Violence] *Violence extrême et gore* : Violence omniprésente et très graphique : démembrements, décapitations, éviscérations, exécutions, morts grotesques. ActuaLitté parle de combats extrêmement brutaux et de gore, et Glénat met en avant la violence de la série.
 - [Violence] [révèle l'intrigue] *Torture* : Des scènes de torture sont montrées, et un personnage subit de longues tortures (Common Sense Media pour l'animé de 1997, Wikipédia pour le manga).
 - [Nudité et sexualité] [révèle l'intrigue] *Scène de viol* : Lors d'un moment clé du manga, une héroïne de la série est violée sous les yeux de son compagnon, grièvement blessé en tentant de la protéger (Wikipédia, français et anglais). Common Sense Media décrit cette scène comme très perturbante dans l'animé de 1997.
-- [Nudité et sexualité] [révèle l'intrigue] *Viol d'un enfant* : Dans le manga, Guts, encore enfant, est violé par un mercenaire à qui son père adoptif l'a « vendu » (Wikipédia, article consacré à Guts). Common Sense Media signale aussi des abus sexuels sur un enfant dans l'animé de 1997, sans préciser la scène.
+- [Nudité et sexualité] [révèle l'intrigue] *Violences sexuelles sur un enfant* : Le passé de Guts comporte une agression sexuelle subie enfant (Wikipédia, article consacré à Guts). Common Sense Media signale aussi des abus sexuels sur un enfant dans l'animé de 1997, sans préciser la scène.
 - [Nudité et sexualité] *Nudité et scène de sexe* : Nudité masculine et féminine à plusieurs reprises et au moins une scène de sexe (Common Sense Media, animé de 1997).
 - [Peur et horreur] *Créatures cauchemardesques* : Démons et créatures cauchemardesques, ambiance de désespoir et de folie (ActuaLitté). Glénat classe la série dans le genre horreur.
 - [Thèmes sensibles] [révèle l'intrigue] *Tentative de suicide* : Un personnage tente de se trancher la gorge (Common Sense Media, animé de 1997).
@@ -118,12 +118,13 @@ Fiche AniList : https://anilist.co/manga/30002
 - Nombre de tomes : 43 au Japon selon Wikipédia (fr) ; la page série de Glénat liste des tomes jusqu'au 43. Une édition prestige existe aussi depuis 2025.
 - L'avis de Manga Librarian est une réponse à un commentaire, pas une critique complète.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Le titre « Viol montré à l'écran » ne convient pas à un manga ; proposer « Viol représenté explicitement » et ajouter la source anglophone. → partielle : « À l'écran » retiré : la scène s'intitule désormais « Scène de viol » (spoiler conservé). Wikipédia anglais (Berserk) confirme que Femto viole Casca pendant que Guts perd un œil et un bras en tentant de la protéger ; l'article est ajouté aux sources et cité dans la scène. « Représenté explicitement » non retenu : ni Wikipédia (fr, en) ni aucune autre source consultée ne décrit le niveau de détail de la scène dans le manga.
-- Pipo [scenes] Common Sense Media ne relie pas l'abus sur enfant au passé d'un personnage ; documenter pour le manga le viol de Guts enfant, en spoiler. → appliquee : Vérifié : Common Sense Media mentionne seulement « child molestation ». L'article Wikipédia (fr) consacré à Guts indique que son père adoptif Gambino le « vend » à un mercenaire, Donovan, qui le viole. Scène réécrite pour le manga (titre « Viol d'un enfant », spoiler: true), Common Sense Media cité à part pour l'animé ; article Guts ajouté aux sources.
+- Pipo [scenes] Common Sense Media ne relie pas l'abus sur enfant au passé d'un personnage ; documenter pour le manga l'agression subie par Guts enfant, en spoiler. → appliquee : Vérifié : Common Sense Media mentionne seulement « child molestation ». L'article Wikipédia (fr) consacré à Guts confirme l'agression sexuelle qu'il a subie enfant. Scène réécrite pour le manga (spoiler: true), Common Sense Media cité à part pour l'animé ; article Guts ajouté aux sources.
 - Pipo [sources] Wikipédia (fr) ne confirmerait pas en détail le viol ; ajouter Wikipédia (en) et le rattacher à la scène. → partielle : L'article français confirme bien la scène (synopsis : « Il viole alors abjectement Casca sous les yeux de Guts ») : il est conservé. L'article anglais, qui la confirme aussi, est ajouté aux sources et cité dans la scène.
 - Mario [autres] Supprimer la mention Wikipédia d'une interdiction aux moins de 16 ans de l'animé de 1997, non vérifiée. → appliquee : Ligne supprimée. Nuance : Wikipédia (fr) donne deux références (une page Canal+ et la page Fnac du coffret DVD), mais les deux sites ont refusé l'accès. L'affirmation reste invérifiable, elle est donc retirée ; point noté dans notes_relecture.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -629,7 +630,7 @@ Fiche AniList : https://anilist.co/manga/30642
 
 ---
 
-## Vagabond (AniList 30656) : dès 16 ans, révision 2
+## Vagabond (AniList 30656) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/30656
 
@@ -647,8 +648,8 @@ Fiche AniList : https://anilist.co/manga/30656
 - [Violence] *Duels réalistes et sanglants* : Les combats au sabre sont nombreux dès le premier tome. Otaku USA décrit une ambiance « dark, violent and provocative » et beaucoup de sang ; Manga Librarian signale violence et gore. Un critique cité par Wikipédia salue une violence montrée de façon réaliste.
 - [Violence] *Morts et mutilations* : Lors de son premier défi à l'école Yoshioka, Musashi tue plusieurs élèves. Au temple Hōzōin, un combattant tranche les poignets d'un moine (Wikipédia en français).
 - [Violence] [révèle l'intrigue] *Combat contre soixante-dix hommes* : Dans un arc avancé, Musashi affronte seul soixante-dix combattants de l'école Yoshioka et les tue tous. Il en sort gravement blessé à la jambe, blessure qui pèse sur les tomes suivants (31 et 32 selon les résumés de la BnF).
-- [Nudité et sexualité] *Sexualité, prostitution et menace de viol* : Otaku USA signale quelques scènes de lit suggestives dans le volume qui regroupe les tomes 1 à 3, sans préciser leur répartition ; Manga Librarian signale nudité et contenu sexuel. Selon le blog Otaku Orbit, le tome 1 montre des relations sexuelles entre Matahachi et Okō, jugées explicites, et un chef de brigands y ordonne à ses hommes de violer Akemi, la fille d'Okō. Plus tard, Okō devient prostituée à Kyoto et Akemi se prostitue à son tour (Wikipédia en français).
-- [Nudité et sexualité] [révèle l'intrigue] *Viol et meurtre dans le passé d'un personnage* : Selon Honey's Anime, Inshun, le jeune moine prodige du temple Hōzōin, a assisté enfant au viol de sa mère, puis au meurtre de ses deux parents par le violeur. La source ne précise ni le tome ni la façon dont la scène est montrée.
+- [Nudité et sexualité] *Sexualité, prostitution et menace de viol* : Otaku USA signale quelques scènes de lit suggestives dans le volume qui regroupe les tomes 1 à 3, sans préciser leur répartition ; Manga Librarian signale nudité et contenu sexuel. Selon le blog Otaku Orbit, le tome 1 montre des relations sexuelles explicites entre Matahachi et Okō, et une menace de viol visant Akemi, la fille d'Okō. Plus tard, Okō devient prostituée à Kyoto et Akemi se prostitue à son tour (Wikipédia en français).
+- [Nudité et sexualité] [révèle l'intrigue] *Viol et meurtre dans le passé d'un personnage* : Selon Honey's Anime, Inshun, le jeune moine prodige du temple Hōzōin, a été témoin enfant de violences sexuelles sur sa mère, puis du meurtre de ses deux parents. La source ne précise ni le tome ni la façon dont la scène est montrée.
 
 **Vocabulaire.** Non renseigné par les sources consultées.
 
@@ -678,8 +679,8 @@ Fiche AniList : https://anilist.co/manga/30656
 **Points à vérifier en priorité**
 
 - Âge retenu 16 ans, au-dessus de l'estimation automatique (14), et confirmé par les deux relecteurs. Raisons : classification « Mature » de VIZ, avis « Adult » de Manga Librarian, nudité, contenu sexuel et violences sexuelles signalés. Désaccord : le CNLJ recommande les tomes 26, 31 et 32 dès 13 ans, mais n'a pas évalué les premiers tomes.
-- Étiquette AniList « Rape » (spoiler) : désormais en partie expliquée, par deux sources secondaires seulement (Honey's Anime pour le passé d'Inshun, Otaku Orbit pour l'ordre de violer Akemi dans le tome 1). Les tentatives de viol sur Okō et les agressions dans l'entourage des Yoshioka signalées par un relecteur ne sont confirmées ni par Wikipédia ni par une autre source trouvée : non reprises. À vérifier sur les tomes.
-- Le viol de la mère d'Inshun et le meurtre de ses parents ne reposent que sur Honey's Anime (site de fans spécialisé, 2018) ; tome et mise en scène non précisés.
+- Étiquette AniList « Rape » (spoiler) : désormais en partie expliquée, par deux sources secondaires seulement (Honey's Anime pour le passé d'Inshun, Otaku Orbit pour la menace visant Akemi dans le tome 1). Les autres agressions signalées par un relecteur ne sont confirmées ni par Wikipédia ni par une autre source trouvée : non reprises. À vérifier sur les tomes.
+- Les violences sur la mère d'Inshun et le meurtre de ses parents ne reposent que sur Honey's Anime (site de fans spécialisé, 2018) ; tome et mise en scène non précisés.
 - L'issue de l'attaque contre Akemi dans le tome 1 n'est pas précisée par Otaku Orbit (blog de critique amateur), qui laisse seulement entendre que les héros interviennent.
 - Caractère explicite des scènes sexuelles : Otaku USA parle de scènes « suggestive » (tomes 1 à 3), Otaku Orbit de sexe « graphic » (tome 1). Fréquence et tomes suivants non documentés.
 - Prostitution d'Okō et d'Akemi : tirée des fiches de personnages de Wikipédia (français), sans numéros de tomes.
@@ -688,12 +689,13 @@ Fiche AniList : https://anilist.co/manga/30656
 - Aucune critique Common Sense Media ni filmspourenfants.net trouvée. Page de l'éditeur Delcourt/Tonkam introuvable ; éditeur et nombre de tomes confirmés par la BnF (tome 37, Tonkam, 2014) et Wikipédia.
 - Le lien entre le combat contre soixante-dix hommes et la blessure à la jambe vient de Wikipédia anglais ; les tomes 31 et 32 viennent des résumés Electre des notices BnF.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] Ajouter une scène avec spoiler : enfant, Inshun assiste au viol de sa mère puis au meurtre de ses parents. → appliquee : Vérifié sur la source citée (Honey's Anime, « Top 10 Badass Vagabond Manga Characters », 2018) : Inshun « witnessed his mother being raped, and then the rapist killed both his parents ». Scène ajoutée (catégorie sexe, spoiler), attribuée à cette source ; source ajoutée. Aucune autre source trouvée ne mentionne le viol : signalé dans notes_relecture.
+- Pipo [scenes] Ajouter une scène avec spoiler : enfant, Inshun est témoin de violences sexuelles sur sa mère, puis du meurtre de ses parents. → appliquee : Vérifié sur la source citée (Honey's Anime, « Top 10 Badass Vagabond Manga Characters », 2018). Scène ajoutée (catégorie sexe, spoiler), attribuée à cette source ; source ajoutée. Aucune autre source trouvée ne le mentionne : signalé dans notes_relecture.
 - Pipo [scenes] La critique d'Otaku USA porte sur l'édition regroupant les trois premiers tomes : y situer les scènes de lit suggestives. → appliquee : Vérifié : Otaku USA indique « This book contains the first three manga volumes » et mentionne « a few suggestive bedroom scenes ». La scène, la rubrique « Ce que disent les autres » et le titre de la source précisent désormais les tomes 1 à 3.
 - Pipo [scenes] Retirer les poignets tranchés d'un moine au temple Hōzōin, non confirmés par les sources consultables. → non_appliquee : La scène est confirmée par Wikipédia (français), déjà dans les sources : Toji Gion « alla au temple Hozoin pour traquer Musashi et s'illustra en tranchant les poignets d'un des moines ». Wikipédia anglais, seul ouvert par le relecteur, ne la mentionne pas. Affirmation maintenue, avec l'attribution « (Wikipédia en français) » ajoutée.
-- Mario [scenes] Scène sexuelle trop vague : ajouter la relation Matahachi et Okō dès le tome 1, la prostitution d'Okō et d'Akemi, et les agressions et tentatives de viol qu'elles subissent (brigands Tsujikaze, entourage des Yoshioka). → partielle : Wikipédia (français), source citée, confirme seulement qu'Okō devient la maîtresse de Matahachi et prostituée à Kyoto, et qu'Akemi se prostitue ; il ne dit rien de viols ni du chapitre 6. La critique du tome 1 par Otaku Orbit confirme des relations sexuelles explicites entre Matahachi et Okō et l'ordre donné par Tenma, chef des brigands Tsujikaze, de violer Akemi (source ajoutée). Ajoutés : relations sexuelles du tome 1, prostitution, menace de viol sur Akemi. Non repris, faute de source : agressions sur Okō, tentatives de viol dans l'entourage des Yoshioka, numéro de chapitre.
+- Mario [scenes] Scène sexuelle trop vague : ajouter la relation entre Matahachi et Okō dès le tome 1, la prostitution d'Okō et d'Akemi, et les violences sexuelles qu'elles subissent. → partielle : Wikipédia (français), source citée, confirme seulement qu'Okō devient la maîtresse de Matahachi et prostituée à Kyoto, et qu'Akemi se prostitue. La critique du tome 1 par Otaku Orbit confirme des relations sexuelles explicites entre Matahachi et Okō et une menace de viol visant Akemi (source ajoutée). Ajoutés : relations sexuelles du tome 1, prostitution, menace de viol. Non repris, faute de source : les autres agressions signalées et le numéro de chapitre.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -762,7 +764,7 @@ Fiche AniList : https://anilist.co/manga/31133
 
 ---
 
-## Jojo's - Steel Ball Run (AniList 31706) : dès 16 ans, révision 2
+## Jojo's - Steel Ball Run (AniList 31706) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/31706
 
@@ -780,14 +782,14 @@ Fiche AniList : https://anilist.co/manga/31706
 - [Violence] *Armes à feu et pouvoirs* : Les concurrents se menacent et s'attaquent avec des armes à feu et des pouvoirs surnaturels. Dans l'animé, Common Sense Media relève des blessures par balle sanglantes, des dents cassées et des cris de douleur. Le BBFC classe l'animé 15 pour violence, menace et blessures détaillées.
 - [Thèmes sensibles] *Maltraitance et automutilation* : De brèves scènes montrent une tentative de meurtre, des mauvais traitements et de l'automutilation, et un personnage plaisante sur le suicide (Common Sense Media, animé).
 - [Nudité et sexualité] *Nudité comique* : Dans le tome 1, le chemisier d'une femme se déchire et dévoile sa poitrine, pour un effet comique (critique du blog Yattatachi). Common Sense Media ne relève aucun contenu sexuel dans l'animé, dont seuls les premiers épisodes sont sortis.
-- [Nudité et sexualité] [révèle l'intrigue] *Tentative de viol sur une adolescente* : Dans le tome 16, l'antagoniste principal s'enferme avec Lucy Steel, une adolescente de 14 ans qui a pris l'apparence de son épouse, et l'agresse ; elle le poignarde à la gorge pour se défendre (JoJo Wiki, chapitre 61). Une critique parle de « tentative de viol » et de plusieurs formes de prédation sexuelle visant ce personnage (Nature's Corrupted). Lucy découvre ensuite qu'elle porte en elle, de façon surnaturelle, la tête du cadavre sacré (Wikipedia anglais).
+- [Nudité et sexualité] [révèle l'intrigue] *Agression sexuelle d'une adolescente* : Dans le tome 16, Lucy Steel, une adolescente de 14 ans, subit une tentative d'agression sexuelle de la part de l'antagoniste principal et se défend (JoJo Wiki, chapitre 61 ; critique Nature's Corrupted). Lucy découvre ensuite qu'elle porte en elle, de façon surnaturelle, la tête du cadavre sacré (Wikipedia anglais).
 - [Autre] *Stéréotypes* : Common Sense Media relève des stéréotypes raciaux, par exemple un jeune homme noir présenté comme paresseux. Le blog Yattatachi juge problématique la représentation d'une tribu amérindienne violente aux visages déformés.
 - [Autre] *Mort d'animaux* : Le blog Yattatachi signale la mort sous-entendue d'un animal dans le tome 1.
 - [Violence] [révèle l'intrigue] *Morts de personnages principaux* : La course sert de couverture à une conspiration autour des fragments d'un cadavre sacré, et plusieurs personnages importants meurent au fil de l'histoire.
 
 **Vocabulaire.** Common Sense Media (animé, version anglaise) relève beaucoup de jurons : « bastard », « hell », « shit », « damn », « a--hole », « goddamn », et des insultes comme « mouthy brat » ou « little s--t ». Aucune source consultée ne décrit le langage de l'édition française du manga.
 
-**Avis.** Steel Ball Run transpose l'univers de Jojo's dans une folle course de chevaux à travers l'Amérique de 1890, une aventure inventive saluée pour son dessin, ses personnages et l'amitié entre ses deux héros. La violence par armes à feu et pouvoirs surnaturels est fréquente et sanglante, et la seconde moitié du manga contient une tentative de viol sur une adolescente de 14 ans. Les critiques relèvent aussi des stéréotypes raciaux et une représentation discutée du handicap ; l'animé emploie en anglais un langage souvent grossier, et celui de la traduction française du manga n'est pas documenté. Common Sense Media conseille l'animé dès 14 ans, mais seuls ses premiers épisodes sont sortis, et l'édition américaine du manga vise les grands adolescents. Mieux vaut avoir 16 ans pour découvrir cette série.
+**Avis.** Steel Ball Run transpose l'univers de Jojo's dans une folle course de chevaux à travers l'Amérique de 1890, une aventure inventive saluée pour son dessin, ses personnages et l'amitié entre ses deux héros. La violence par armes à feu et pouvoirs surnaturels est fréquente et sanglante, et la seconde moitié du manga contient une tentative d'agression sexuelle sur une adolescente. Les critiques relèvent aussi des stéréotypes raciaux et une représentation discutée du handicap ; l'animé emploie en anglais un langage souvent grossier, et celui de la traduction française du manga n'est pas documenté. Common Sense Media conseille l'animé dès 14 ans, mais seuls ses premiers épisodes sont sortis, et l'édition américaine du manga vise les grands adolescents. Mieux vaut avoir 16 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -812,25 +814,26 @@ Fiche AniList : https://anilist.co/manga/31706
 
 **Points à vérifier en priorité**
 
-- Âge relevé de 14 à 16 ans en révision 2, à la demande concordante de Pipo et Mario : tentative de viol sur une adolescente de 14 ans dans le tome 16, classement « Teen Plus » de Viz pour le manga (vérifié), classement 15 du BBFC pour l'animé (vérifié sur les deux saisons classées en 2026), passage en 2005 dans le magazine seinen Ultra Jump. Common Sense Media (14 ans) ne couvre que le début de l'animé.
-- La scène « Tentative de viol sur une adolescente » repose sur un wiki de fans (JoJo Wiki : résumé du chapitre 61 et fiche de Lucy Steel) et sur une lettre d'information personnelle (Nature's Corrupted). Wikipedia (anglais) confirme l'âge de Lucy et la grossesse surnaturelle du tome 16, mais ne mentionne pas l'agression. À confirmer par une source plus solide (critique publiée, éditeur).
+- Âge relevé de 14 à 16 ans en révision 2, à la demande concordante de Pipo et Mario : tentative d'agression sexuelle sur une adolescente dans le tome 16, classement « Teen Plus » de Viz pour le manga (vérifié), classement 15 du BBFC pour l'animé (vérifié sur les deux saisons classées en 2026), passage en 2005 dans le magazine seinen Ultra Jump. Common Sense Media (14 ans) ne couvre que le début de l'animé.
+- La scène « Agression sexuelle d'une adolescente » repose sur un wiki de fans (JoJo Wiki : résumé du chapitre 61 et fiche de Lucy Steel) et sur une lettre d'information personnelle (Nature's Corrupted). Wikipedia (anglais) confirme l'âge de Lucy et la grossesse surnaturelle du tome 16, mais ne mentionne pas l'agression. À confirmer par une source plus solide (critique publiée, éditeur).
 - Le BBFC a classé 7 épisodes de l'animé (mars et septembre 2026) ; Common Sense Media ne précise pas les épisodes évalués. Le contenu des tomes suivants reste peu documenté : les étiquettes AniList « Gore », « Body Horror » et « Nudity » ne sont confirmées par aucune source lue. La critique d'Anime News Network sur les tomes 1 à 5 n'a pas pu être consultée (captcha).
 - Les scènes « Nudité comique » et « Mort d'animaux » reposent sur une seule source, le blog Yattatachi (tome 1 américain).
 - La scène « Morts de personnages principaux » repose sur Wikipédia (anglais) uniquement.
 - Steel Ball Run est la septième partie de Jojo's Bizarre Adventure (Delcourt parle de « septième saison ») ; aucune source lue ne précise si elle se lit indépendamment. Delcourt : 24 tomes, du 23 janvier 2013 au 5 octobre 2016, collection Shonen. Les pages Delcourt consultées ne mentionnent pas Tonkam et ne nomment Hirohiko Araki que comme scénariste ; Wikipedia (anglais) le dit auteur et dessinateur.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] La fiche omet les violences sexuelles visant Lucy Steel (14 ans), dont une tentative de viol par le président. → appliquee : Source citée vérifiée (Nature's Corrupted, 25 décembre 2022) : Lucy a 14 ans et subit une « attempted rape by the President », ainsi que plusieurs formes de prédation sexuelle. Confirmé par JoJo Wiki (chapitre 61, tome 16). Scène ajoutée avec spoiler ; l'avis la mentionne et la scène de nudité comique précise qu'elle ne concerne que le tome 1 et le début de l'animé. Sources ajoutées.
+- Pipo [scenes] La fiche omet les violences sexuelles visant Lucy Steel, adolescente. → appliquee : Source citée vérifiée (Nature's Corrupted, 25 décembre 2022) : elle confirme l'âge de Lucy et une tentative d'agression sexuelle par l'antagoniste. Confirmé par JoJo Wiki (chapitre 61, tome 16). Scène ajoutée avec spoiler ; l'avis la mentionne et la scène de nudité comique précise qu'elle ne concerne que le tome 1 et le début de l'animé. Sources ajoutées.
 - Pipo [age] Proposer 16 ans au lieu de 14 (violences sexuelles des tomes ultérieurs, classement Teen Plus du manga). → appliquee : Viz vérifié (« Teen Plus »), BBFC vérifié (15 pour les deux saisons de l'animé), scène du tome 16 vérifiée. Les deux relecteurs proposent 16 ans avec des arguments sourcés : âge porté à 16 ans et dernière phrase de l'avis mise à jour.
 - Pipo [avis] « Langage souvent grossier » est tiré de la version anglaise de l'animé mais présenté comme valant pour le manga. → appliquee : Common Sense Media vérifié : la liste de jurons porte sur la version anglaise de l'animé. L'avis attribue désormais ce langage à l'animé et précise que celui de la traduction française du manga n'est pas documenté.
 - Mario [resume] Ajouter l'auteur (Hirohiko Araki), la septième partie de Jojo's, les 24 tomes et l'éditeur Delcourt/Tonkam. → partielle : Delcourt vérifié (tomes 1 et 24) : Hirohiko Araki, collection Shonen, tome 1 paru le 23 janvier 2013, tome 24 « dernier tome » paru le 5 octobre 2016, « septième saison » de la saga. Wikipedia (anglais) : écrit et dessiné par Araki, 24 volumes. Phrase ajoutée au résumé. « Tonkam » non repris : les pages Delcourt consultées ne le mentionnent pas.
-- Mario [scenes] Ajouter la tentative de viol de Lucy Steel (14 ans) par l'antagoniste dans le tome 16, puis sa grossesse surnaturelle forcée. → partielle : Source citée (Wikipedia anglais) vérifiée : elle confirme l'âge de Lucy et la grossesse surnaturelle liée au cadavre sacré (tome 16), mais ne parle pas de la tentative de viol. Celle-ci est confirmée par JoJo Wiki (chapitre 61, tome 16 : agression, coup de couteau à la gorge) et par Nature's Corrupted. Scène ajoutée avec spoiler. Non repris : le mot « forcée » (aucune source) et la fusion avec la nudité comique du tome 1, gardée dans une scène séparée sans spoiler.
-- Mario [age] Passer de 14 à 16 ans (magazine seinen, gore, tentative de viol sur une adolescente, BBFC 15, Viz Teen Plus). → appliquee : Accord avec Pipo, arguments vérifiés : BBFC 15 (animé), Viz « Teen Plus », passage dans Ultra Jump (Wikipedia anglais), scène du tome 16. Âge porté à 16 ans. Le gore et l'horreur corporelle cités par Mario ne sont confirmés par aucune source lue et n'ont pas été ajoutés.
+- Mario [scenes] Ajouter la tentative d'agression sexuelle visant Lucy Steel dans le tome 16, puis sa grossesse surnaturelle. → partielle : Source citée (Wikipedia anglais) vérifiée : elle confirme l'âge de Lucy et la grossesse surnaturelle liée au cadavre sacré (tome 16), mais ne parle pas de l'agression. Celle-ci est confirmée par JoJo Wiki (chapitre 61, tome 16) et par Nature's Corrupted. Scène ajoutée avec spoiler. Non repris : le mot « forcée » (aucune source) et la fusion avec la nudité comique du tome 1, gardée dans une scène séparée sans spoiler.
+- Mario [age] Passer de 14 à 16 ans (magazine seinen, gore, agression sexuelle sur une adolescente, BBFC 15, Viz Teen Plus). → appliquee : Accord avec Pipo, arguments vérifiés : BBFC 15 (animé), Viz « Teen Plus », passage dans Ultra Jump (Wikipedia anglais), scène du tome 16. Âge porté à 16 ans. Le gore et l'horreur corporelle cités par Mario ne sont confirmés par aucune source lue et n'ont pas été ajoutés.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## Bonne nuit Punpun (AniList 34632) : adultes, révision 2
+## Bonne nuit Punpun (AniList 34632) : adultes, révision 3
 
 Fiche AniList : https://anilist.co/manga/34632
 
@@ -849,7 +852,7 @@ Fiche AniList : https://anilist.co/manga/34632
 - [Violence] *Violence conjugale* : Dès le premier tome, Punpun découvre ce qui ressemble aux suites des coups portés par son père à sa mère, qui est hospitalisée ; le père va en prison (Kana, Wikipédia).
 - [Nudité et sexualité] *Découverte de la sexualité* : Dès l'école primaire, Punpun et ses copains cherchent de la pornographie, regardent une cassette et découvrent « les mystères de la sexualité » (Kana, VIZ, Wikipédia).
 - [Thèmes sensibles] *Secte et maltraitance* : La mère d'Aiko, membre d'une secte, est cruelle et maltraitante envers elle. Plus tard, un ami de Punpun rejoint une autre secte (Wikipédia, VIZ).
-- [Nudité et sexualité] [révèle l'intrigue] *Agression sexuelle d'un adolescent* : Au tome 5, alors que Punpun entre au lycée, une femme adulte proche de la famille, la compagne de son oncle, abuse de lui sexuellement. Plus tard, Punpun tente d'embrasser une fille de force, puis de forcer une relation sexuelle avant de s'arrêter à sa demande (Wikipédia).
+- [Nudité et sexualité] [révèle l'intrigue] *Agression sexuelle d'un adolescent* : Au tome 5, alors que Punpun est encore adolescent, une femme adulte de son entourage, la compagne de son oncle, commet sur lui une agression sexuelle. Plus tard, Punpun tente lui-même d'imposer des gestes sexuels à une jeune fille, puis s'arrête à sa demande (Wikipédia).
 - [Nudité et sexualité] [révèle l'intrigue] *Relations sexuelles* : Devenu jeune adulte, Punpun a des relations sexuelles avec deux jeunes femmes, aux tomes 8 et 10 selon Wikipédia. Le niveau de détail des images n'est pas précisé par les sources consultées.
 - [Thèmes sensibles] [révèle l'intrigue] *Suicide* : Les tentatives de suicide jalonnent la série, dès le tome 2 avec la mère de Punpun. Dans le dernier tome, un personnage principal se donne la mort par pendaison, le héros tente de se suicider et une secte commet un suicide collectif (Wikipédia).
 - [Violence] [révèle l'intrigue] *Meurtre et fuite* : Dans les derniers tomes, les deux héros sont impliqués dans la mort violente d'une mère, puis fuient la police à travers le Japon, entre rancœur, blessures et idées suicidaires (Kana, Wikipédia). Leur relation devient violente : Aiko blesse légèrement Punpun en tentant de lui crever un œil avec une fourchette (tome 11), puis Punpun projette de l'étrangler avant de se tuer, projet dont elle le dissuade (tome 12, Wikipédia anglais).
@@ -887,15 +890,16 @@ Fiche AniList : https://anilist.co/manga/34632
 - La notice des bibliothèques de Paris pour le tome 1 porte un résumé qui semble décrire le début du tome 2.
 - Moment de l'agression (tome 5) : Mario la situe au collège. Wikipédia (anglais) ouvre le résumé du tome 5 par l'entrée de Punpun au lycée, avant l'agression, et la fiche Kana du tome 5 le montre au collège seulement pour lire les résultats d'admission au lycée. Formule « alors que Punpun entre au lycée » conservée.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Compléter « Meurtre et fuite » : violence dans le couple pendant la fuite (Aiko attaque Punpun à l'œil, Punpun prépare une strangulation suivie de son suicide, elle l'en dissuade). → appliquee : Confirmé par Wikipédia (anglais) : au tome 11, Aiko tente de crever l'œil de Punpun avec une fourchette et ne le blesse que légèrement ; au tome 12, Punpun décide de l'étrangler avant de se tuer, et elle l'en dissuade. Scène complétée avec les tomes, spoiler conservé.
 - Mario [resume] Ajouter le nom de l'auteur, Inio Asano. → appliquee : La page série de Kana nomme Inio Asano (scénario et dessin). Nom ajouté au résumé.
 - Mario [scenes] Au tome 5, Punpun serait encore au collège (lycée au tome 6) ; préciser que l'agresseuse est la compagne de son oncle. → partielle : Précision appliquée : selon Wikipédia (anglais), Midori, compagne puis épouse de Yūichi, viole Punpun au tome 5. Correction « collège » non appliquée : le résumé du tome 5 sur Wikipédia (anglais) commence par « Having studied hard, Punpun enters high school », avant l'agression, et celui du tome 6 ne parle pas d'entrée au lycée ; la fiche Kana du tome 5 (ajoutée aux sources) montre Punpun au collège seulement pour lire les résultats d'admission au lycée.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## L'Attaque des Titans (AniList 53390) : dès 16 ans, révision 2
+## L'Attaque des Titans (AniList 53390) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/53390
 
@@ -914,7 +918,7 @@ Fiche AniList : https://anilist.co/manga/53390
 - [Violence] *Humains dévorés par les Titans* : Dès le premier tome, les Titans dévorent des humains, civils compris. Eren et Mikasa assistent à la mort de la mère d'Eren, coincée sous les décombres puis dévorée. Ces scènes reviennent tout au long de la série (Wikipédia, Common Sense Media, filmspourenfants.net).
 - [Violence] *Combats sanglants et mutilations* : Les batailles sont très graphiques : membres et têtes arrachés, passages à tabac, beaucoup de sang (Common Sense Media, à propos de l'animé). Des personnages principaux sont mutilés et de nombreux soldats meurent à chaque bataille.
 - [Peur et horreur] *Titans effrayants* : Les Titans sont des géants d'apparence humaine, nus et sans organes sexuels ; certains n'ont pas de peau. filmspourenfants.net décrit leur sourire forcé et leurs dents pointues, et signale des effets de peur soudaine et des images de cauchemar sanglantes ; Wikipédia relève des visages aux expressions parfois inquiétantes ou monstrueuses. Leur nudité n'a rien de sexuel.
-- [Violence] *Enfants face à la violence* : Enfant, Mikasa voit ses parents tués devant elle puis est enlevée ; filmspourenfants.net précise qu'elle devait servir d'« objet sexuel ». La même source note qu'on peut voir des enfants tuer.
+- [Violence] *Enfants face à la violence* : Enfant, Mikasa voit ses parents tués devant elle puis est enlevée ; filmspourenfants.net indique que ses ravisseurs voulaient l'exploiter sexuellement. La même source note qu'on peut voir des enfants tuer.
 - [Thèmes sensibles] *Désespoir et idées de suicide* : Des soldats envisagent de se suicider plutôt que d'être dévorés vivants, et un personnage se sent responsable de la mort de ses camarades (filmspourenfants.net, animé). La mort est omniprésente.
 - [Thèmes sensibles] [révèle l'intrigue] *Guerre et extermination de masse* : Dans la dernière partie, le récit devient une guerre entre peuples. Un personnage central déclenche une attaque destinée à exterminer la population du reste du monde, que Wikipédia qualifie de « marche génocidaire ». Des critiques ont rapproché la persécution d'un peuple dans la série de celle des Juifs sous le nazisme, ce que d'autres contestent.
 
@@ -946,15 +950,16 @@ Fiche AniList : https://anilist.co/manga/53390
 - Aucune mention d'âge sur la fiche Pika du tome 1. Les âges de Common Sense Media et filmspourenfants.net portent sur l'animé ; Common Sense Media ne précise pas les saisons couvertes.
 - Description des Titans : sourire forcé et dents pointues viennent de filmspourenfants.net, qui les présente comme un trait général ; Wikipédia parle d'expressions variées, parfois inquiétantes ou monstrueuses. Chaque élément est désormais attribué à sa source.
 - Désaccord : filmspourenfants.net signale des personnages qui s'alcoolisent, Common Sense Media indique l'alcool et les drogues comme absents. Point non retenu dans les scènes.
-- L'enlèvement de Mikasa « pour servir d'objet sexuel », les enfants qui tuent et les idées de suicide ne sont décrits que par filmspourenfants.net (animé).
+- L'enlèvement de Mikasa en vue de son exploitation sexuelle, les enfants qui tuent et les idées de suicide ne sont décrits que par filmspourenfants.net (animé).
 - La scène « Guerre et extermination de masse » repose sur Wikipédia (fr) seule ; les tomes concernés ne sont pas précisés.
 - Le manga est prépublié au Japon dans un magazine shōnen mais publié en France dans la collection Pika Seinen ; Wikipédia cite le directeur éditorial de Pika, pour qui le manga « ne répondait pas beaucoup aux styles shōnen ».
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [avis] filmspourenfants.net recommande 16 ans et déconseille avant 15 ans ; l'avis et « Ce que disent les autres » confondent les deux seuils. → appliquee : Vérifié sur filmspourenfants.net : bandeau « À partir de 16 ans », « Déconseillé aux moins de : 15 ans ». Common Sense Media confirme 15 ans. Avis, entrée filmspourenfants.net de « autres » et notes_relecture corrigés.
 - Pipo [scenes] « Au sourire figé et aux dents pointues » généralise à tous les Titans un trait que les sources ne justifient pas. → partielle : La source existe : filmspourenfants.net décrit les géants « avec un sourire forcé, une apparence humaine, mais des dents pointues ». Wikipédia (fr), citée par Pipo, parle en revanche d'expressions très marquées, « parfois » inquiétantes ou monstrueuses. Le trait n'est pas supprimé mais attribué à filmspourenfants.net, et la description de Wikipédia est ajoutée ; « apparence humaine » est repris de la proposition.
 - Mario [resume] Le nom de l'auteur, Hajime Isayama, n'apparaît pas dans la fiche. → appliquee : Vérifié : la fiche Pika du tome 1 nomme Hajime Isayama, et Wikipédia (fr) précise que le manga est « écrit et dessiné par Hajime Isayama ». Ajouté dans la dernière phrase du résumé ; les deux sources figuraient déjà dans sources.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -1577,7 +1582,7 @@ Fiche AniList : https://anilist.co/manga/86123
 
 ---
 
-## Kaguya-sama: Love is War (AniList 86635) : dès 14 ans, révision 2
+## Kaguya-sama: Love is War (AniList 86635) : dès 14 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/86635
 
@@ -1593,7 +1598,7 @@ Fiche AniList : https://anilist.co/manga/86635
 **Scènes difficiles**
 
 - [Nudité et sexualité] *Sous-entendus et situations gênantes* : Dans l'animé, la romance passe par des sous-entendus et des quiproquos plutôt que par du contenu explicite : plaisanteries sur l'apparence et le corps, maillots de bain, une scène de bain, deux personnages qui partagent un lit par accident (Common Sense Media). Sur la nudité, la critique se contredit : elle évoque quelques scènes de nudité partielle, puis affirme qu'il n'y a pas de nudité, y compris dans la scène de bain.
-- [Nudité et sexualité] [révèle l'intrigue] *Sexualité des lycéens évoquée plus directement* : À partir du milieu de la série, une élève parle à Kaguya de sa propre expérience sexuelle, et une autre s'offre à Ishigami par pitié, ce qu'il refuse (d'après la liste des personnages sur Wikipédia). Au tome 22, Kaguya et Miyuki, désormais en couple, passent la nuit ensemble et ont leur première relation sexuelle (chapitre 220 selon Wikipédia). Le niveau de détail des images n'est pas précisé par les sources consultées.
+- [Nudité et sexualité] [révèle l'intrigue] *Sexualité des lycéens évoquée plus directement* : À partir du milieu de la série, la sexualité est évoquée plus franchement entre les lycéens, dans des conversations et des propositions (d'après la liste des personnages sur Wikipédia). Au tome 22, Kaguya et Miyuki, désormais en couple, ont leur première relation sexuelle (chapitre 220 selon Wikipédia). Le niveau de détail des images n'est pas précisé par les sources consultées.
 - [Violence] *Violence burlesque* : Chamailleries et coups exagérés pour faire rire : Chika frappe parfois Ishigami quand il fait des remarques déplacées. Common Sense Media ne relève aucune image effrayante.
 - [Thèmes sensibles] [révèle l'intrigue] *Le passé d'Ishigami* : Un retour sur le passé d'Ishigami révèle qu'au collège, il a voulu protéger une camarade de son petit ami potentiellement violent, a été exclu temporairement puis rejeté par sa classe. Le conseil des élèves l'aide à surmonter ce traumatisme (chapitres 85 à 90 selon Wikipédia).
 - [Thèmes sensibles] [révèle l'intrigue] *Drame familial* : Dans les derniers tomes, l'intrigue aborde les secrets de la naissance de Kaguya, un projet de mariage arrangé et les manipulations d'un de ses frères aînés.
@@ -1631,11 +1636,12 @@ Fiche AniList : https://anilist.co/manga/86635
 - La fiche Pika du tome 1 classique indique une sortie le 31 mars 2021 ; la date de début de publication en France n'a pas été vérifiée et n'est pas reprise dans la fiche.
 - Tome 22 : le chapitre 220 est dans le volume 22 japonais (chapitres 212 à 221 selon la liste des chapitres de Wikipédia) ; la correspondance avec le tome 22 de Pika est supposée, pas vérifiée.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Ajouter la première relation sexuelle de Kaguya et Miyuki (chapitre 220, tome 22). → appliquee : Wikipédia (anglais, article Kaguya Shinomiya) : « They later have sex for the first time when Kaguya spends the night at the Shirogane family apartment » (chapitre 220). La liste des chapitres place le chapitre 220 dans le volume 22. Scène complétée (spoiler), sources ajoutées ; le niveau de détail des images n'étant décrit nulle part, la fiche le précise.
 - Pipo [avis] « Sans scène explicite » laisse croire que la série se limite aux sous-entendus et omet la relation sexuelle racontée. → appliquee : « Sans scène explicite » retiré (Common Sense Media ne couvre que l'animé) ; l'humour repose désormais « largement » sur les sous-entendus, et l'avis mentionne la première relation sexuelle des héros dans les tomes avancés (même source que la remarque précédente).
 - Pipo [scenes] Common Sense Media se contredit sur la nudité ; ne pas garantir l'absence de nudité dans la scène de bain. → appliquee : Vérifié : la critique parle de « some instances of partial nudity » dans « Parents Need to Know », puis de « There is no nudity » et « A bathing scene is depicted, no nudity » dans la rubrique Sex. La scène signale désormais cette contradiction et précise qu'elle concerne l'animé.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -1655,7 +1661,7 @@ Fiche AniList : https://anilist.co/manga/87170
 
 - [Violence] *Corps brûlés, mutilés et décapités* : Dès le premier tome, des villageois sont brûlés vifs, Agni se fait couper les membres à répétition et des massacres ont lieu. Le libraire de la Fnac parle de « scènes choquantes, à la limite du supportable ». Une décapitation survient dans le tome 2. Gore, démembrements et sang reviennent tout au long de la série.
 - [Thèmes sensibles] *Cannibalisme* : Le cannibalisme est au cœur du point de départ : les villageois survivent en mangeant la chair des membres d'Agni, qui repoussent. Le sujet est présent dès les premières pages.
-- [Nudité et sexualité] *Violences sexuelles suggérées, y compris envers des enfants* : Une ville esclavagiste où des enfants sont achetés et vendus pour le sexe est décrite dans le premier tome. Les tomes 1 et 2 contiennent des tentatives d'agression sexuelle sur des enfants et un viol suggéré mais non montré. Agni se promène nu, couvert de flammes.
+- [Nudité et sexualité] *Violences sexuelles, y compris envers des enfants* : Le premier tome décrit une ville esclavagiste où des enfants sont victimes de trafic sexuel. Les tomes 1 et 2 comportent des tentatives d'agression sexuelle, y compris sur des enfants, et un viol suggéré. Agni se promène nu, couvert de flammes.
 - [Violence] *Esclavage et torture* : Dans la ville de Behemdorg, la population est réduite en esclavage et des habitants sont torturés. Des scènes de torture apparaissent dans le tome 2.
 - [Thèmes sensibles] [révèle l'intrigue] *Suicide et meurtres d'enfants* : Plus loin dans la série, le héros tue des enfants dans un état second, puis tente de mettre fin à ses jours. D'autres personnages tentent de se suicider ou demandent qu'on les tue.
 - [Thèmes sensibles] [révèle l'intrigue] *Relation amoureuse troublante* : Le héros noue une relation amoureuse avec une jeune femme amnésique qui ressemble à sa sœur morte, à qui il a donné le prénom de celle-ci et qui finit par comprendre qu'il n'est pas son frère.
@@ -1687,7 +1693,7 @@ Fiche AniList : https://anilist.co/manga/87170
 
 - Âge 18 retenu au lieu de 16 (estimation automatique) : violences sexuelles suggérées dont des tentatives d'agression sur des enfants, trafic sexuel d'enfants évoqué, cannibalisme, torture, meurtres d'enfants et suicide, classification « M (Mature) » de VIZ. 16 reste défendable : la seule indication française trouvée est l'étiquette « Public averti » d'un article Fnac.
 - Aucune source consultée ne donne d'âge chiffré. Aucune mention d'âge trouvée chez l'éditeur français (Kazé puis Crunchyroll) ; Manga-News bloque l'accès automatique et sa fiche n'a pas pu être lue.
-- Tentatives d'agression sexuelle sur des enfants, viol suggéré, tentative de zoophilie et torture du tome 2 : une seule source, le blog Jo Writes Fantasy (avertissements des tomes 1 et 2). Le trafic sexuel d'enfants et la torture à Behemdorg sont confirmés par The Outer Haven.
+- Tentatives d'agression sexuelle sur des enfants, viol suggéré, autres contenus sexuels et torture du tome 2 : une seule source, le blog Jo Writes Fantasy (avertissements des tomes 1 et 2). Le trafic sexuel d'enfants et la torture à Behemdorg sont confirmés par The Outer Haven.
 - Désaccord entre sources : Comic Bastards estime que violence et sexe sont évoqués plus que montrés, alors que The Outer Haven parle de scènes graphiques et le libraire de la Fnac de scènes à la limite du supportable.
 - Inceste (étiquette spoiler AniList) non confirmé par les sources lues : Wikipédia (anglais) évoque seulement la relation amoureuse avec une jeune femme qui ressemble à la sœur du héros et qu'il a renommée Luna. Scène rédigée a minima, à vérifier.
 - Suicide, meurtres d'enfants et relation amoureuse troublante : appuyés sur le seul résumé de Wikipédia (anglais).
@@ -1886,7 +1892,7 @@ Fiche AniList : https://anilist.co/manga/97553
 
 ---
 
-## Komi cherche ses mots (AniList 97852) : dès 12 ans, révision 2
+## Komi cherche ses mots (AniList 97852) : dès 12 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/97852
 
@@ -1901,7 +1907,7 @@ Fiche AniList : https://anilist.co/manga/97852
 
 **Scènes difficiles**
 
-- [Nudité et sexualité] *Fan service et humour grivois* : Dans l'animé, Common Sense Media relève de nombreux plans sur les cuisses des lycéennes en jupe courte et des remarques grivoises sur l'excitation sexuelle, plus crues dans les sous-titres anglais que dans le doublage. Un critique cité par Wikipédia (The Fandom Post) note aussi « a bit of fanservice ».
+- [Nudité et sexualité] *Fan service et humour grivois* : Dans l'animé, Common Sense Media relève de nombreux plans insistants sur les lycéennes et des remarques grivoises, plus crues dans les sous-titres anglais que dans le doublage. Un critique cité par Wikipédia (The Fandom Post) note aussi « a bit of fanservice ».
 - [Violence] *Agression interrompue* : Dans l'animé, un personnage que Common Sense Media présente comme transgenre subit une tentative d'agression sexuelle ; une lycéenne intervient avant qu'il ne se passe quoi que ce soit. Des brutes menacent aussi d'autres élèves.
 - [Violence] *Enlèvement et séquestration* : Dans le tome 2 du manga, Yamai, une camarade de classe qui traque Komi et voit en Tadano un rival, l'enlève, le menace et le garde ligoté dans un placard chez elle. Une critique anglophone du tome 2 (Catcher Reviews) juge ce passage « very intense » (très intense) et peut-être trop mûr pour les plus jeunes lecteurs ; les personnages en sortent physiquement indemnes.
 - [Thèmes sensibles] *Plaisanteries sur le genre* : Une critique d'Anime News Network, citée par Wikipédia, reproche à la série des blagues sur la fluidité de genre du personnage de Najimi.
@@ -1942,14 +1948,15 @@ Fiche AniList : https://anilist.co/manga/97852
 - La critique sur les blagues liées au genre de Najimi (Anime News Network) n'est connue que par Wikipédia ; la page d'Anime News Network n'a pas pu être consultée (captcha).
 - Pika n'indique aucun âge sur ses pages. Série terminée au Japon (37 tomes) ; en France, 27 tomes parus au 4 novembre 2026 selon Pika (tome 28 annoncé le 2 décembre 2026).
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Ajouter l'enlèvement et la séquestration de Tadano par Yamai (tome 2), en signalant le traitement comique d'un comportement menaçant. → partielle : Vérifié : la liste des chapitres de Wikipédia (anglais) indique pour le tome 2 que Yamai enlève et menace Tadano, qu'elle voit comme un rival, et qu'il est retrouvé ligoté dans son placard ; Catcher Reviews (tome 2) confirme l'enlèvement et la traque de Komi. Scène « Enlèvement et séquestration » ajoutée (spoiler false, tome 2) et avis nuancé en conséquence. Le traitement comique n'a pas été repris : aucune source ne le mentionne et Catcher Reviews qualifie le passage de « very intense ».
 - Pipo [vocabulaire] Ajouter qu'une critique du tome 2 signale du langage fort, des sous-entendus et des images suggestives, en maintenant la réserve sur la traduction française. → appliquee : Vérifié sur Catcher Reviews : « There are a few suggestive images, innuendos, and strong language. » Phrase ajoutée en précisant qu'il s'agit d'une critique anglophone qui ne cite aucun mot ; la réserve sur l'édition française est conservée. Source ajoutée.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## L'Atelier des Sorciers (AniList 98263) : dès 12 ans, révision 2
+## L'Atelier des Sorciers (AniList 98263) : dès 12 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/98263
 
@@ -1969,7 +1976,7 @@ Fiche AniList : https://anilist.co/manga/98263
 - [Peur et horreur] *Dangers, monstres et sorciers masqués* : Dans l'animé, les apprenties affrontent des situations dangereuses, des créatures fantastiques (dragons) et des sorciers masqués aux tenues inquiétantes. Common Sense Media note des ambiances sombres et tendues mais très peu de sang.
 - [Thèmes sensibles] *Magie interdite sur le corps* : Il est interdit de lancer des sorts ou de dessiner des signes magiques directement sur le corps humain, et la magie qui transforme le corps fait partie des magies interdites. Un groupe de sorciers dissidents pratique pourtant ces magies. C'est un ressort important de l'intrigue.
 - [Violence] [révèle l'intrigue] *Le passé maltraité d'un adulte* : Le tome 7 révèle l'enfance d'un personnage adulte, victime de sorciers qui lui ont arraché un œil et l'ont enterré vivant. Anime UK News évoque des moments « de pure horreur ».
-- [Thèmes sensibles] [révèle l'intrigue] *Agression sexuelle dans le passé d'un personnage (tome 9)* : Un chapitre revient sur l'enfance d'une sorcière adulte : avec sa meilleure amie, elle a été victime d'une agression sexuelle commise par un seigneur local, et son maître, ami de l'agresseur, a minimisé les faits ; ce maître a plus tard été arrêté (Wikipédia, liste des personnages). Selon la critique de The Anti-Social Geniuses, l'édition américaine du tome 9 fait précéder ce chapitre d'un avertissement sur les violences sexuelles et la culpabilisation des victimes.
+- [Thèmes sensibles] [révèle l'intrigue] *Agression sexuelle dans le passé d'un personnage (tome 9)* : Un chapitre revient sur l'enfance d'une sorcière adulte : elle et sa meilleure amie ont été victimes d'une agression sexuelle, que leur maître a minimisée ; ce maître a plus tard été arrêté (Wikipédia, liste des personnages). Selon la critique de The Anti-Social Geniuses, l'édition américaine du tome 9 fait précéder ce chapitre d'un avertissement sur les violences sexuelles et la culpabilisation des victimes.
 - [Violence] [révèle l'intrigue] *Attaque sur la ville (tome 14)* : Une créature géante qui se nourrit de sang attaque la ville et un chevalier perd la raison et frappe ses propres alliés. Coco est blessée. Anime UK News parle du chapitre le plus sombre de la série.
 
 **Vocabulaire.** Langage très léger selon Common Sense Media (animé, version anglaise) : les enfants se disputent et se disent des paroles dures, avec quelques insultes légères (« mouchard », « étrangère », traduits de l'anglais). Aucune grossièreté signalée. Rien de précis n'est renseigné pour la traduction française du manga.
@@ -2004,10 +2011,11 @@ Fiche AniList : https://anilist.co/manga/98263
 - Les insultes citées par Common Sense Media viennent du doublage anglais de l'animé et ont été traduites par mes soins.
 - Pas de fiche filmspourenfants.net trouvée pour l'animé. Les critiques de Manga-News n'ont pas pu être consultées (accès refusé).
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] La fiche omet les violences sexuelles subies enfant par un personnage (Luluci) et son amie, minimisées par son maître. → appliquee : Vérifié sur Wikipédia (anglais), liste des personnages : enfant, Luluci et sa meilleure amie ont été victimes d'une agression sexuelle par un seigneur local ; son maître, ami de l'agresseur, n'a pas pris l'affaire au sérieux et a plus tard été arrêté. La critique du tome 9 de The Anti-Social Geniuses situe ce chapitre dans le tome 9 et signale l'avertissement de l'édition américaine (violences sexuelles, culpabilisation des victimes). Ajout d'une scène (catégorie themes, spoiler), sans nommer le personnage, et mention dans l'avis. La formule « protégé l'agresseur » n'est pas reprise : la source dit seulement que le maître était ami de l'agresseur et a minimisé les faits. Deux sources ajoutées.
+- Pipo [scenes] La fiche omet l'agression sexuelle subie enfant par un personnage et son amie, minimisée par son maître. → appliquee : Vérifié sur Wikipédia (anglais), liste des personnages, et sur la critique du tome 9 de The Anti-Social Geniuses, qui situe ce chapitre dans le tome 9 et signale l'avertissement de l'édition américaine (violences sexuelles, culpabilisation des victimes). Ajout d'une scène (catégorie themes, spoiler), sans nommer le personnage, et mention dans l'avis. La formule « protégé l'agresseur » n'est pas reprise : la source dit seulement que le maître était ami de l'agresseur et a minimisé les faits. Deux sources ajoutées.
 - Pipo [scenes] L'interdit ne concerne pas seulement le fait de dessiner sur le corps mais la magie qui modifie le corps : réécrire la phrase. → partielle : L'article Wikipédia cité par Pipo mentionne justement l'interdiction de lancer des sorts ou de dessiner des signes magiques directement sur le corps humain : la formulation initiale était donc fondée. La liste des personnages de Wikipédia range en outre la magie de transformation du corps et les tatouages magiques parmi les magies interdites des sorciers dissidents. Le texte a été élargi pour inclure les deux interdits, au lieu de remplacer le premier comme le proposait Pipo.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -2072,7 +2080,7 @@ Fiche AniList : https://anilist.co/manga/98416
 
 ---
 
-## Hell's Paradise (AniList 100994) : adultes, révision 2
+## Hell's Paradise (AniList 100994) : adultes, révision 3
 
 Fiche AniList : https://anilist.co/manga/100994
 
@@ -2091,7 +2099,7 @@ Fiche AniList : https://anilist.co/manga/100994
 - [Violence] *Combats très sanglants* : Les critiques du premier tome parlent d'un « bain de sang » : élimination sanglante d'une partie des candidats, gorge arrachée avec les dents, gore jugé « viscéral » par CBR. Pour l'animé, Common Sense Media décrit une violence constante et graphique, avec membres tranchés, exécutions, torture, cadavres et squelettes en grand nombre.
 - [Peur et horreur] *Horreur corporelle* : L'île abrite des créatures issues d'expériences et des plantes prédatrices. Dès le début, le seul survivant d'une expédition revient avec des champignons qui lui poussent sur le corps (Anime UK News, Wikipédia). Publishers Weekly, cité par Wikipédia, compare le dessin aux mangas d'horreur de Junji Ito.
 - [Nudité et sexualité] *Sexualité et nudité (signalées pour l'animé)* : Common Sense Media (animé) signale des images sexuelles, dont des dessins érotiques anciens, des personnages ayant des rapports sexuels à l'écran et des discussions sur le sexe comme moyen d'entraînement. Gabimaru apparaît nu sans que rien d'intime soit montré. Les critiques du premier tome du manga consultées n'en parlent pas ; pour le tome 4, voir la scène suivante.
-- [Nudité et sexualité] [révèle l'intrigue] *Sexualité non consentie dans le manga (tome 4)* : Selon Anime UK News, le tome 4 révèle que la principale méthode d'ascèse des Tensen exige une « union intime ». Mei, qui vient de prendre l'apparence d'une adolescente, a été chassée de leur palais et n'avait le choix qu'entre mourir et servir de « partenaire d'entraînement » ; les Tensen veulent l'utiliser à cette fin. Le critique souligne que ces rapports ne sont pas consentis et que l'on voit les suites, très sanglantes, d'une de ces scènes sexuelles. Il juge ce contenu « assez extrême » et pénible à regarder.
+- [Nudité et sexualité] [révèle l'intrigue] *Sexualité non consentie dans le manga (tome 4)* : Selon Anime UK News, le tome 4 révèle que la méthode d'ascèse des Tensen repose sur des rapports sexuels imposés, auxquels ils veulent contraindre Mei, qui a désormais l'apparence d'une adolescente. Le critique souligne l'absence de consentement, signale que l'on voit les suites très sanglantes de l'une de ces scènes et juge ce contenu « assez extrême ».
 
 **Vocabulaire.** Pour l'animé (version anglaise), Common Sense Media note que les jurons sont rares (« sh--ty » de temps en temps) mais que les dialogues abordent souvent la violence et le sexe de façon adulte. Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
 
@@ -2127,14 +2135,15 @@ Fiche AniList : https://anilist.co/manga/100994
 - La fiche Kazé du tome 1 comporte un champ « Âge recommandé » laissé vide. La critique d'Anime News Network (tome 1) n'a pas pu être ouverte (accès refusé) : elle n'est citée que via Wikipédia, comme celle de Publishers Weekly.
 - filmspourenfants.net n'a pas de fiche pour ce titre (recherche sur le site sans résultat).
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] Le contenu sexuel n'est pas limité à l'animé : ajouter une entrée manga sur la sexualité et les rapports imposés décrits au tome 4. → appliquee : Vérifié dans la critique du tome 4 d'Anime UK News : méthode d'ascèse des Tensen fondée sur l'union sexuelle, Mei menacée de servir de « partenaire d'entraînement », rapports décrits comme non consentis, suites très sanglantes d'une scène sexuelle montrées. Nouvelle scène ajoutée (marquée spoiler), renvoi ajouté dans la scène sur l'animé, entrée ajoutée dans « autres », critique ajoutée aux sources.
+- Pipo [scenes] Le contenu sexuel n'est pas limité à l'animé : ajouter une entrée manga sur la sexualité et les rapports imposés décrits au tome 4. → appliquee : Vérifié dans la critique du tome 4 d'Anime UK News : méthode d'ascèse des Tensen fondée sur des rapports sexuels imposés, Mei menacée d'y être contrainte, suites très sanglantes d'une scène montrées. Nouvelle scène ajoutée (marquée spoiler), renvoi ajouté dans la scène sur l'animé, entrée ajoutée dans « autres », critique ajoutée aux sources.
 - Pipo [age] Passer à 18 ans : Anime UK News classe le tome 4 18+, contenu sexuel non consenti dans le manga, classement Mature de Viz. → appliquee : Vérifié : Anime UK News indique 18+ et « pour lecteurs adultes uniquement » pour le tome 4 ; la fiche Viz du tome 1 indique « Mature », défini sur viz.com/ratings comme réservé aux adultes. Toutes les indications portant sur le manga vont vers les adultes ; seul Common Sense Media (16 ans) porte sur l'animé, et Kazé ne donne pas d'âge. Âge porté à 18, avis réécrit et terminé par « Réservé aux adultes. »
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## Jujutsu Kaisen (AniList 101517) : dès 16 ans, révision 2
+## Jujutsu Kaisen (AniList 101517) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/101517
 
@@ -2153,7 +2162,7 @@ Fiche AniList : https://anilist.co/manga/101517
 - [Peur et horreur] *Malédictions effrayantes* : Les malédictions sont des monstres inquiétants, parfois très dérangeants visuellement. Dans le film Jujutsu Kaisen 0, une enfant morte devient un monstre, des personnages sont poignardés jusque dans les yeux et un visage est arraché ; le CNC avertit que des images peuvent être angoissantes pour un jeune public.
 - [Violence] [révèle l'intrigue] *Un arc particulièrement impitoyable* : Vers le milieu de la série, un long affrontement à Shibuya est décrit par Gameblog comme « particulièrement impitoyable » : plusieurs personnages importants y sont tués ou grièvement blessés.
 - [Thèmes sensibles] [révèle l'intrigue] *Jeu de survie imposé* : Dans la seconde moitié de la série, des participants sont contraints de survivre à un jeu de combat mortel dans des zones fermées (Wikipédia).
-- [Nudité et sexualité] *Gestes déplacés* : Contenu sexuel limité. Dans l'animé, des démons tripotent la poitrine d'une combattante pendant un combat, et quelques images montrent une femme en bikini. Dans le film Jujutsu Kaisen 0, un monstre se frotte à une adolescente, qui le vit comme une agression.
+- [Nudité et sexualité] *Gestes déplacés* : Contenu sexuel limité. Dans l'animé, des démons ont des gestes déplacés envers une combattante pendant un combat, et quelques images montrent une femme en bikini. Dans le film Jujutsu Kaisen 0, une adolescente subit le contact non désiré d'un monstre, qu'elle vit comme une agression.
 - [Thèmes sensibles] *Idées suicidaires* : Dans Jujutsu Kaisen 0, film préquelle de la série, le héros Yuta évoque plusieurs fois le suicide comme une issue possible (Common Sense Media, film).
 
 **Vocabulaire.** Langage plutôt modéré. Common Sense Media relève surtout « hell » et « damn » dans la première saison animée, quelques jurons plus forts (« s--t », « bastard ») dans le film Execution et une insulte très grossière masquée dans Jujutsu Kaisen 0 (versions anglaises). Le langage de l'édition française du manga n'est pas renseigné par les sources consultées.
@@ -2193,16 +2202,17 @@ Fiche AniList : https://anilist.co/manga/101517
 - Nombre de tomes : la page Ki-oon indique 30 tomes et une série terminée ; Wikipédia (fr) ne listait que 29 tomes français datés. À vérifier.
 - Le classement Teen Plus de VIZ, seulement entrevu en révision 1, a été lu directement sur la fiche du tome 1 chez VIZ en révision 2.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [themes] Supprimer la mort définitive d'une compagne de route du héros : information de 2024 dépassée, le personnage survit (chapitre 267). → appliquee : Vérifié sur Wikipédia (anglais, Nobara Kugisaki) : le personnage semble mourir à Shibuya mais survit et revient au chapitre 267. L'article Gameblog de juillet 2024 annonçait bien sa mort à partir d'une note de l'auteur. Le thème « La perte » est reformulé de façon générale (morts ou blessures graves, citation exacte de Gameblog « n'est pas tendre avec ses personnages »), sans détail sur un personnage. Source Wikipédia ajoutée.
 - Pipo [scenes] Arc de Shibuya : ne pas écrire qu'une proche du héros n'y survit pas ; écrire que plusieurs personnages sont tués ou grièvement blessés. → appliquee : Vérifié sur Wikipédia (anglais, Nobara Kugisaki) : blessure grave mais survie. Texte remplacé par « plusieurs personnages importants y sont tués ou grièvement blessés » ; spoiler true conservé.
 - Pipo [scenes] Common Sense Media ne qualifierait pas les démembrements de constants. → non_appliquee : Non confirmé : la critique Common Sense Media de la série écrit dans sa partie « Is It Any Good? » : « Constant violence and dismemberment make this a show more suitable watch for older teens ». La formulation de la fiche est exacte ; la citation anglaise a été ajoutée pour faciliter la vérification.
 - Pipo [age] Proposition d'âge : 16 ans au lieu de 14 (VIZ Teen Plus, The Graphic Library Grades 10-12), avec ajout de ces deux évaluations aux avis extérieurs. → appliquee : Vérifié : la fiche VIZ du tome 1 indique « Teen Plus », défini par VIZ comme « May be suitable for older teens and adults » ; The Graphic Library indique « Suitability Rating: Grades 10-12 ». Ce sont les seules indications portant sur le manga, et Common Sense Media (15 ans pour la série) se situe entre 14 et 16. Âge passé à 16, dernière phrase de l'avis mise à jour, deux avis ajoutés dans « autres » et sources ajoutées. Cette entrée couvre aussi le champ age_propose (16) de Pipo ; Mario n'a pas rendu d'avis.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## Sexy Cosplay Doll (AniList 101583) : dès 16 ans, révision 2
+## Sexy Cosplay Doll (AniList 101583) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/101583
 
@@ -2218,7 +2228,7 @@ Fiche AniList : https://anilist.co/manga/101583
 **Scènes difficiles**
 
 - [Nudité et sexualité] *Fan service et nudité partielle (manga)* : Dès le tome 1 : page couleur de l'héroïne en lingerie, uniforme assez court pour dévoiler ses fesses, scène de prise de mesures très gênante pour Wakana. Selon Anime UK News, rien n'est jamais entièrement montré, du moins dans ce premier tome. Kana classe la série dans le genre « Erotique ».
-- [Nudité et sexualité] *Allusions et sujets sexuels* : Le premier costume vient d'un jeu pour adultes au titre très suggestif. Dans l'animé, Common Sense Media relève de nombreuses allusions, des érections et fantasmes suggérés, et l'évocation de la pornographie, des love hotels et de pratiques comme le BDSM, sans relation sexuelle.
+- [Nudité et sexualité] *Allusions et sujets sexuels* : Le premier costume vient d'un jeu pour adultes au titre très suggestif. Dans l'animé, Common Sense Media relève de nombreuses allusions sexuelles autour de ces lycéens, dont l'évocation de la pornographie, des love hotels et du BDSM, sans relation sexuelle.
 - [Peur et horreur] *Cosplay d'un jeu d'horreur (animé)* : Les personnages se costument d'après un jeu vidéo d'horreur qui évoque le cannibalisme et l'agression sexuelle. Les images (faux sang, yeux en plastique) ne sont pas réalistes.
 - [Thèmes sensibles] *Phrases à tonalité suicidaire (animé)* : Des adolescents disent « je veux mourir » ou « ce serait mieux si je n'étais pas là ». Le plus souvent pour plaisanter, mais parfois par réelle tristesse ou manque de confiance.
 
@@ -2247,9 +2257,10 @@ Fiche AniList : https://anilist.co/manga/101583
 - La page Kana indique « Au Japon : En cours » et « Déjà paru 16 », mais liste 15 tomes ; Wikipédia (anglais) indique 15 tomes et une fin de publication en mars 2025. Le 16e élément est probablement le coffret collector.
 - Kana écrit « Marine » ; l'animé et Wikipédia écrivent « Marin ».
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [avis] L'avis affirme l'absence de scène de sexe pour toute la série, alors que Common Sense Media porte sur l'animé et la critique du manga sur le seul tome 1. → appliquee : Vérifié : Common Sense Media (animé) parle d'allusions « without any actual sex » ; Anime UK News (tome 1) écrit que rien n'est entièrement exposé « at least in this first volume ». L'avis attribue désormais chaque constat à sa source et précise que les tomes suivants du manga n'ont pas été vérifiés. Note de relecture mise à jour. Âge inchangé (Pipo propose aussi 16).
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -2377,7 +2388,7 @@ Fiche AniList : https://anilist.co/manga/105398
 
 ---
 
-## Chainsaw Man (AniList 105778) : dès 16 ans, révision 2
+## Chainsaw Man (AniList 105778) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/105778
 
@@ -2395,15 +2406,15 @@ Fiche AniList : https://anilist.co/manga/105778
 - [Violence] *Gore et démembrements omniprésents* : Combats extrêmement sanglants tout au long de la série : décapitations, démembrements, éviscérations, personnages dévorés, sang qui gicle. Common Sense Media classe la violence de l'animé au niveau le plus élevé, et la critique de Manga Librarian décrit un manga violent, horrible et dérangeant.
 - [Violence] *Torture et cruauté* : Filmspourenfants.net relève des tortures pendant un entraînement (épisode 10 de l'animé) et des héros qui s'acharnent sur les parties intimes d'un ennemi pour se venger. Dans le film qui adapte la suite, un homme est torturé et un chasseur agonisant supplie qu'on l'achève.
 - [Peur et horreur] *Horreur corporelle et démons repoussants* : Démons inquiétants, carcasses dégoûtantes et transformation du héros en démon sanguinaire. Les sources parlent d'horreur corporelle et d'une ambiance oppressante, notamment à la fin de la première saison animée (épisodes 9 à 12).
-- [Nudité et sexualité] *Obsession sexuelle et situations ambiguës* : Magazines pornographiques, attouchements, nudité partielle dans l'animé. Une adulte ivre et à moitié dévêtue propose de coucher avec Denji, qui a 16 ans. Le film montre une baignade nue brève, des fantasmes du héros et des personnages féminins très sexualisés. Manga Librarian signale aussi des allusions sexuelles et des attouchements dans le manga.
-- [Nudité et sexualité] [révèle l'intrigue] *Scène sexuelle explicite (seconde partie)* : Dans la seconde partie du manga (chapitre 167, tome 19 au Japon), un baiser entre Denji et Yoru, le démon de la Guerre qui habite le corps de la lycéenne Asa, s'accompagne d'attouchements sexuels explicites jusqu'à l'éjaculation de Denji. La scène survient juste après une lutte où Yoru le menace avec un couteau ; Asa reprend ensuite le contrôle de son corps (résumé de The Escapist).
+- [Nudité et sexualité] *Obsession sexuelle et situations ambiguës* : Magazines pornographiques, gestes déplacés et nudité partielle dans l'animé. Une adulte ivre fait des avances sexuelles à Denji, qui a 16 ans. Le film montre une baignade nue brève, des fantasmes du héros et des personnages féminins très sexualisés. Manga Librarian signale aussi des allusions et des gestes sexuels dans le manga.
+- [Nudité et sexualité] [révèle l'intrigue] *Scène sexuelle explicite entre adolescents (seconde partie)* : Dans la seconde partie du manga (chapitre 167, tome 19 au Japon), une scène sexuelle explicite implique Denji et Yoru, le démon qui habite le corps de la lycéenne Asa, juste après une menace au couteau (résumé de The Escapist).
 - [Thèmes sensibles] [révèle l'intrigue] *Suicide et cannibalisme* : Common Sense Media signale, dans l'animé, un personnage dont la mort est présentée comme un suicide. Manga Librarian cite le suicide et le cannibalisme parmi les avertissements du manga.
 - [Violence] [révèle l'intrigue] *Morts de personnages importants* : Plusieurs personnages proches du héros meurent, souvent brutalement, dès la première saison animée. Le film dérivé se termine lui aussi de façon triste.
 - [Autre] *Alcool et tabac* : Un personnage fume et en influence un autre. Un concours de boisson est montré, lié à une situation à caractère sexuel (animé, saison 1).
 
 **Vocabulaire.** Langage très grossier dans l'animé. Common Sense Media relève des jurons forts et fréquents en version anglaise (« f--k », « s--t », « a--hole »). Filmspourenfants.net note des insultes, des jurons, des expressions sexuelles crues et des menaces de mort. Le langage de l'édition française du manga n'est pas renseigné par les sources consultées.
 
-**Avis.** Série d'action et d'horreur très violente, où le gore et l'horreur corporelle sont constants. La sexualité est très présente à travers l'obsession du héros adolescent : nudité partielle, situations ambiguës entre adultes et mineur et, dans la seconde partie du manga, une scène d'attouchements sexuels explicites. Les morts de personnages, la manipulation et la noirceur générale peuvent marquer durablement. Les critiques saluent l'humour et l'émotion du récit, mais toutes les sources consultées le destinent aux grands adolescents et aux adultes. Mieux vaut avoir 16 ans pour découvrir cette série.
+**Avis.** Série d'action et d'horreur très violente, où le gore et l'horreur corporelle sont constants. La sexualité est très présente à travers l'obsession du héros adolescent : nudité partielle, situations ambiguës entre adultes et mineur et, dans la seconde partie du manga, une scène sexuelle explicite. Les morts de personnages, la manipulation et la noirceur générale peuvent marquer durablement. Les critiques saluent l'humour et l'émotion du récit, mais toutes les sources consultées le destinent aux grands adolescents et aux adultes. Mieux vaut avoir 16 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -2438,10 +2449,11 @@ Fiche AniList : https://anilist.co/manga/105778
 - Cannibalisme : cité par une seule source (Manga Librarian), sans précision de tome.
 - Éditeur : ActuaLitté indique Kazé pour le tome 1 (2020) ; Wikipédia (fr) mentionne un passage de l'édition sous le label Crunchyroll. Nombre de tomes parus en France non vérifié (Manga-News inaccessible).
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] Ajouter une entrée sur les gestes sexuels explicites du chapitre 167 (seconde partie) et les questions de consentement, en spoiler. → partielle : Vérifié sur le résumé de The Escapist (chapitre 167) : le baiser entre Yoru et Denji s'accompagne d'attouchements sexuels et se termine par l'éjaculation de Denji, juste après que Yoru, dans le corps d'Asa, l'a menacé avec un couteau. Wikipédia (anglais) situe le chapitre dans le tome 19. Scène ajoutée avec spoiler true. La notion de consentement n'a pas été ajoutée telle quelle : le résumé ne qualifie pas la scène de non consentie ; seuls les faits rapportés figurent dans la fiche.
-- Pipo [avis] L'avis doit indiquer que le manga comporte aussi des gestes sexuels explicites, au-delà de la nudité partielle et des situations ambiguës. → partielle : Vérifié sur The Escapist (chapitre 167). La phrase sur la sexualité mentionne désormais, pour la seconde partie du manga, une scène d'attouchements sexuels explicites. La mention de questions de consentement n'a pas été reprise, faute de source qui les formule.
+- Pipo [scenes] Ajouter une entrée sur la scène sexuelle explicite du chapitre 167 (seconde partie) et les questions de consentement, en spoiler. → partielle : Vérifié sur le résumé de The Escapist (chapitre 167) : scène sexuelle explicite entre Denji et Yoru, dans le corps d'Asa, juste après une menace au couteau. Wikipédia (anglais) situe le chapitre dans le tome 19. Scène ajoutée avec spoiler true. La notion de consentement n'a pas été ajoutée telle quelle : le résumé ne qualifie pas la scène de non consentie ; seuls les faits rapportés figurent dans la fiche.
+- Pipo [avis] L'avis doit indiquer que le manga comporte aussi une scène sexuelle explicite, au-delà de la nudité partielle et des situations ambiguës. → partielle : Vérifié sur The Escapist (chapitre 167). La phrase sur la sexualité mentionne désormais, pour la seconde partie du manga, une scène sexuelle explicite. La mention de questions de consentement n'a pas été reprise, faute de source qui les formule.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -2594,7 +2606,7 @@ Fiche AniList : https://anilist.co/manga/117195
 - [Violence] *Meurtres commis par un fan obsessionnel* : Dès le début de la série, un fan obsessionnel tue deux personnages, dont la mère des jumeaux sous leurs yeux. Le BBFC classe l'épisode 1 de l'animé 15 pour « strong violence » (poignardage mortel suivi d'images très sanglantes).
 - [Thèmes sensibles] *Tentative de suicide après un cyberharcèlement* : Une adolescente harcelée en ligne tente de se suicider ; un autre personnage intervient. Wikipédia (français) signale que cet épisode de l'animé a été critiqué pour sa ressemblance avec le suicide réel de la lutteuse Hana Kimura.
 - [Thèmes sensibles] *Maladie grave et deuil* : Des scènes montrent un personnage atteint d'une maladie incurable, ainsi que le deuil (Common Sense Media et BBFC, animé).
-- [Nudité et sexualité] *Grossesse adolescente et allusions* : Une adolescente accouche hors champ et élève seule ses enfants. Des lycéens ont des béguins et s'embrassent brièvement. Le BBFC relève quelques allusions sexuelles dans l'animé (moqueries sur la poitrine d'une lycéenne, remarque « perv », un homme traité de « lolicon » pour son obsession envers une jeune idole) et un homme dénudé dont le sexe reste caché.
+- [Nudité et sexualité] *Grossesse adolescente et allusions* : Une adolescente accouche hors champ et élève seule ses enfants. Des lycéens ont des béguins et s'embrassent brièvement. Le BBFC relève quelques allusions sexuelles dans l'animé, dont des moqueries sur le physique d'une lycéenne et un homme à l'attirance malsaine pour une jeune idole, ainsi qu'un homme dénudé dont le sexe reste caché.
 - [Violence] [révèle l'intrigue] *Dénouement très violent* : La fin de la série comprend un meurtre suivi d'un suicide impliquant un personnage principal, selon Wikipédia.
 - [Autre] *Tabac et alcool* : Des adultes fument sur un plateau de tournage et certains personnages boivent de l'alcool (Common Sense Media, animé).
 
@@ -2868,7 +2880,7 @@ Fiche AniList : https://anilist.co/manga/125828
 
 ---
 
-## Dandadan (AniList 132029) : dès 16 ans, révision 2
+## Dandadan (AniList 132029) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/132029
 
@@ -2883,7 +2895,7 @@ Fiche AniList : https://anilist.co/manga/132029
 
 **Scènes difficiles**
 
-- [Nudité et sexualité] *Menace d'agression sexuelle dès le début* : Dès le début de l'histoire, des extraterrestres immobilisent Momo, lui écartent de force les jambes et menacent de la violer avec un instrument métallique (Common Sense Media, animé). Une bibliothécaire scolaire décrit la même scène dans le tome 1 du manga : Momo est agressée par des aliens qui tentent de « la sonder ». La menace de viol est explicite et la contrainte physique montrée ; les sources décrivent une tentative, pas un viol accompli.
+- [Nudité et sexualité] *Menace d'agression sexuelle dès le début* : Dès le tome 1, des extraterrestres immobilisent Momo, une lycéenne, et menacent de l'agresser sexuellement ; la contrainte physique est montrée (Common Sense Media pour l'animé, The Graphic Library pour le manga). Les sources décrivent une tentative, pas une agression accomplie.
 - [Nudité et sexualité] *Humour sexuel récurrent* : Un fantôme, Mamie Turbo, vole les organes génitaux de ses victimes, et la quête des testicules perdus d'Okarun sert de fil rouge à une grande partie de la série (Wikipédia, Common Sense Media). The Graphic Library relève une première blague déplacée dans les vingt premières pages du tome 1.
 - [Nudité et sexualité] *Tenues légères* : Un personnage apparaît en soutien-gorge et culotte, avec une poitrine exagérée (Common Sense Media, animé). L'éditeur américain présente les aliens et les esprits comme « bizarrement obsédés ».
 - [Peur et horreur] *Créatures cauchemardesques* : Fantômes et extraterrestres sont décrits comme particulièrement dérangeants, cauchemardesques et psychédéliques (Common Sense Media). La RTBF note des planches plus réalistes au style horrifique.
@@ -2894,7 +2906,7 @@ Fiche AniList : https://anilist.co/manga/132029
 
 **Vocabulaire.** Common Sense Media (animé, version anglaise) juge le langage peu fréquent : « moron », « lame », « pissed », « crap », « scumbag ». Wikipédia (anglais) décrit Mamie Turbo comme une vieille femme cruelle et grossière. Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
 
-**Avis.** Dandadan est un manga d'action survolté et souvent drôle, qui mêle fantômes, extraterrestres, folklore japonais et romance adolescente, avec de belles valeurs d'amitié. Mais son humour repose largement sur des blagues sexuelles, et une menace de viol par des extraterrestres ouvre la série. Les créatures sont cauchemardesques, les combats violents, et certains arcs abordent la prostitution forcée, le suicide ou des sacrifices d'enfants. L'éditeur américain le réserve aux adultes et Common Sense Media conseille l'animé dès 15 ans. Mieux vaut avoir 16 ans pour découvrir cette série.
+**Avis.** Dandadan est un manga d'action survolté et souvent drôle, qui mêle fantômes, extraterrestres, folklore japonais et romance adolescente, avec de belles valeurs d'amitié. Mais son humour repose largement sur des blagues sexuelles, et une menace d'agression sexuelle par des extraterrestres ouvre la série. Les créatures sont cauchemardesques, les combats violents, et certains arcs abordent la prostitution forcée, le suicide ou des sacrifices d'enfants. L'éditeur américain le réserve aux adultes et Common Sense Media conseille l'animé dès 15 ans. Mieux vaut avoir 16 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -2927,11 +2939,12 @@ Fiche AniList : https://anilist.co/manga/132029
 - Le champ « Âge recommandé » de la fiche Kazé est vide.
 - Étiquettes AniList « Cannibalism » et « Terrorism » : non confirmées par les sources consultées, donc non reprises. Le harcèlement d'Okarun est confirmé par Wikipédia (anglais) mais traité en thème plutôt qu'en scène.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Omission du passé de Zuma : noyade de son petit frère et suicide de sa mère devant un train. → appliquee : Vérifié sur la liste des chapitres de Wikipédia anglais (tome 18) : le petit frère de Zuma « drowns trying to retrieve a beloved umbrella » et sa mère meurt « by leaping in front of a subway train ». Scène « Deuils familiaux de Zuma » ajoutée (catégorie thèmes, spoiler) ; la page est ajoutée aux sources.
 - Pipo [scenes] Passé de l'esprit (Acrobatic Silky) : « tomes 2 et 3 » imprécis, il serait raconté dès le tome 2 (chapitres 9 à 16). → partielle : La source citée contredit la correction proposée : selon la liste des chapitres de Wikipédia anglais, le tome 2 contient les chapitres 6 à 14 ; l'esprit n'y apparaît qu'à la fin, et c'est le résumé du tome 3 (chapitres 15 à 23) qui mentionne la découverte des « tragic family histories ». « Tome 2 » n'est donc pas repris. La demande de précision est en revanche retenue : la scène indique désormais que l'arc couvre les tomes 2 et 3 et que le passé de l'esprit est découvert dans le tome 3.
-- Pipo [scenes] « La scène n'est pas explicite » minimise une menace de viol décrite explicitement, avec contrainte physique. → appliquee : Vérifié : Common Sense Media (animé) écrit que des aliens « forcibly spread a teen girl's legs and threaten to rape her using a scary metal device » ; The Graphic Library (tome 1) : « Momo is assaulted by aliens and they attempt to probe her ». Aucune des deux ne qualifie la scène de non explicite. Formule supprimée : la fiche dit maintenant que la menace est explicite et la contrainte montrée, et que les sources décrivent une tentative, pas un viol accompli. La précision « sans pénétration montrée » n'est pas reprise, faute de source décrivant le dessin à ce niveau.
+- Pipo [scenes] « La scène n'est pas explicite » minimise une menace d'agression sexuelle explicite, avec contrainte physique. → appliquee : Vérifié sur Common Sense Media (animé) et The Graphic Library (tome 1) : aucune des deux ne qualifie la scène de non explicite. Formule supprimée : la fiche dit maintenant que la menace est explicite et la contrainte montrée, et que les sources décrivent une tentative, pas une agression accomplie.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 

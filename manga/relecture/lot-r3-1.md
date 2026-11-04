@@ -1,9 +1,9 @@
-# Relecture r2, lot 1 : 10 fiches
+# Relecture r3, lot 1 : 10 fiches
 
-Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r2-1.json, en recopiant le numéro de révision de chaque fiche.
+Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r3-1.json, en recopiant le numéro de révision de chaque fiche.
 
 - Monster (AniList 30001), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Berserk (AniList 30002), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Berserk (AniList 30002), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Naruto (AniList 30011), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Bleach (AniList 30012), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - One Piece (AniList 30013), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
@@ -76,7 +76,7 @@ Fiche AniList : https://anilist.co/manga/30001
 
 ---
 
-## Berserk (AniList 30002) : adultes, révision 2
+## Berserk (AniList 30002) : adultes, révision 3
 
 Fiche AniList : https://anilist.co/manga/30002
 
@@ -94,7 +94,7 @@ Fiche AniList : https://anilist.co/manga/30002
 - [Violence] *Violence extrême et gore* : Violence omniprésente et très graphique : démembrements, décapitations, éviscérations, exécutions, morts grotesques. ActuaLitté parle de combats extrêmement brutaux et de gore, et Glénat met en avant la violence de la série.
 - [Violence] [révèle l'intrigue] *Torture* : Des scènes de torture sont montrées, et un personnage subit de longues tortures (Common Sense Media pour l'animé de 1997, Wikipédia pour le manga).
 - [Nudité et sexualité] [révèle l'intrigue] *Scène de viol* : Lors d'un moment clé du manga, une héroïne de la série est violée sous les yeux de son compagnon, grièvement blessé en tentant de la protéger (Wikipédia, français et anglais). Common Sense Media décrit cette scène comme très perturbante dans l'animé de 1997.
-- [Nudité et sexualité] [révèle l'intrigue] *Viol d'un enfant* : Dans le manga, Guts, encore enfant, est violé par un mercenaire à qui son père adoptif l'a « vendu » (Wikipédia, article consacré à Guts). Common Sense Media signale aussi des abus sexuels sur un enfant dans l'animé de 1997, sans préciser la scène.
+- [Nudité et sexualité] [révèle l'intrigue] *Violences sexuelles sur un enfant* : Le passé de Guts comporte une agression sexuelle subie enfant (Wikipédia, article consacré à Guts). Common Sense Media signale aussi des abus sexuels sur un enfant dans l'animé de 1997, sans préciser la scène.
 - [Nudité et sexualité] *Nudité et scène de sexe* : Nudité masculine et féminine à plusieurs reprises et au moins une scène de sexe (Common Sense Media, animé de 1997).
 - [Peur et horreur] *Créatures cauchemardesques* : Démons et créatures cauchemardesques, ambiance de désespoir et de folie (ActuaLitté). Glénat classe la série dans le genre horreur.
 - [Thèmes sensibles] [révèle l'intrigue] *Tentative de suicide* : Un personnage tente de se trancher la gorge (Common Sense Media, animé de 1997).
@@ -129,12 +129,13 @@ Fiche AniList : https://anilist.co/manga/30002
 - Nombre de tomes : 43 au Japon selon Wikipédia (fr) ; la page série de Glénat liste des tomes jusqu'au 43. Une édition prestige existe aussi depuis 2025.
 - L'avis de Manga Librarian est une réponse à un commentaire, pas une critique complète.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Le titre « Viol montré à l'écran » ne convient pas à un manga ; proposer « Viol représenté explicitement » et ajouter la source anglophone. → partielle : « À l'écran » retiré : la scène s'intitule désormais « Scène de viol » (spoiler conservé). Wikipédia anglais (Berserk) confirme que Femto viole Casca pendant que Guts perd un œil et un bras en tentant de la protéger ; l'article est ajouté aux sources et cité dans la scène. « Représenté explicitement » non retenu : ni Wikipédia (fr, en) ni aucune autre source consultée ne décrit le niveau de détail de la scène dans le manga.
-- Pipo [scenes] Common Sense Media ne relie pas l'abus sur enfant au passé d'un personnage ; documenter pour le manga le viol de Guts enfant, en spoiler. → appliquee : Vérifié : Common Sense Media mentionne seulement « child molestation ». L'article Wikipédia (fr) consacré à Guts indique que son père adoptif Gambino le « vend » à un mercenaire, Donovan, qui le viole. Scène réécrite pour le manga (titre « Viol d'un enfant », spoiler: true), Common Sense Media cité à part pour l'animé ; article Guts ajouté aux sources.
+- Pipo [scenes] Common Sense Media ne relie pas l'abus sur enfant au passé d'un personnage ; documenter pour le manga l'agression subie par Guts enfant, en spoiler. → appliquee : Vérifié : Common Sense Media mentionne seulement « child molestation ». L'article Wikipédia (fr) consacré à Guts confirme l'agression sexuelle qu'il a subie enfant. Scène réécrite pour le manga (spoiler: true), Common Sense Media cité à part pour l'animé ; article Guts ajouté aux sources.
 - Pipo [sources] Wikipédia (fr) ne confirmerait pas en détail le viol ; ajouter Wikipédia (en) et le rattacher à la scène. → partielle : L'article français confirme bien la scène (synopsis : « Il viole alors abjectement Casca sous les yeux de Guts ») : il est conservé. L'article anglais, qui la confirme aussi, est ajouté aux sources et cité dans la scène.
 - Mario [autres] Supprimer la mention Wikipédia d'une interdiction aux moins de 16 ans de l'animé de 1997, non vérifiée. → appliquee : Ligne supprimée. Nuance : Wikipédia (fr) donne deux références (une page Canal+ et la page Fnac du coffret DVD), mais les deux sites ont refusé l'accès. L'affirmation reste invérifiable, elle est donc retirée ; point noté dans notes_relecture.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 

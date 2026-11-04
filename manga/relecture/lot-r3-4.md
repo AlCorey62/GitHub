@@ -1,20 +1,20 @@
-# Relecture r2, lot 4 : 10 fiches
+# Relecture r3, lot 4 : 10 fiches
 
-Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r2-4.json, en recopiant le numéro de révision de chaque fiche.
+Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-r3-4.json, en recopiant le numéro de révision de chaque fiche.
 
-- Komi cherche ses mots (AniList 97852), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- L'Atelier des Sorciers (AniList 98263), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Komi cherche ses mots (AniList 97852), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- L'Atelier des Sorciers (AniList 98263), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Dr. Stone (AniList 98416), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Hell's Paradise (AniList 100994), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Jujutsu Kaisen (AniList 101517), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Sexy Cosplay Doll (AniList 101583), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Hell's Paradise (AniList 100994), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Jujutsu Kaisen (AniList 101517), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Sexy Cosplay Doll (AniList 101583), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Tokyo Revengers (AniList 102988), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Solo Leveling (AniList 105398), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
-- Chainsaw Man (AniList 105778), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
+- Chainsaw Man (AniList 105778), révision 3 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 - Blue Lock (AniList 106130), révision 2 : à relire par Pipo (ChatGPT) et Mario (Gemini)
 
 ---
-## Komi cherche ses mots (AniList 97852) : dès 12 ans, révision 2
+## Komi cherche ses mots (AniList 97852) : dès 12 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/97852
 
@@ -29,7 +29,7 @@ Fiche AniList : https://anilist.co/manga/97852
 
 **Scènes difficiles**
 
-- [Nudité et sexualité] *Fan service et humour grivois* : Dans l'animé, Common Sense Media relève de nombreux plans sur les cuisses des lycéennes en jupe courte et des remarques grivoises sur l'excitation sexuelle, plus crues dans les sous-titres anglais que dans le doublage. Un critique cité par Wikipédia (The Fandom Post) note aussi « a bit of fanservice ».
+- [Nudité et sexualité] *Fan service et humour grivois* : Dans l'animé, Common Sense Media relève de nombreux plans insistants sur les lycéennes et des remarques grivoises, plus crues dans les sous-titres anglais que dans le doublage. Un critique cité par Wikipédia (The Fandom Post) note aussi « a bit of fanservice ».
 - [Violence] *Agression interrompue* : Dans l'animé, un personnage que Common Sense Media présente comme transgenre subit une tentative d'agression sexuelle ; une lycéenne intervient avant qu'il ne se passe quoi que ce soit. Des brutes menacent aussi d'autres élèves.
 - [Violence] *Enlèvement et séquestration* : Dans le tome 2 du manga, Yamai, une camarade de classe qui traque Komi et voit en Tadano un rival, l'enlève, le menace et le garde ligoté dans un placard chez elle. Une critique anglophone du tome 2 (Catcher Reviews) juge ce passage « very intense » (très intense) et peut-être trop mûr pour les plus jeunes lecteurs ; les personnages en sortent physiquement indemnes.
 - [Thèmes sensibles] *Plaisanteries sur le genre* : Une critique d'Anime News Network, citée par Wikipédia, reproche à la série des blagues sur la fluidité de genre du personnage de Najimi.
@@ -70,14 +70,15 @@ Fiche AniList : https://anilist.co/manga/97852
 - La critique sur les blagues liées au genre de Najimi (Anime News Network) n'est connue que par Wikipédia ; la page d'Anime News Network n'a pas pu être consultée (captcha).
 - Pika n'indique aucun âge sur ses pages. Série terminée au Japon (37 tomes) ; en France, 27 tomes parus au 4 novembre 2026 selon Pika (tome 28 annoncé le 2 décembre 2026).
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [scenes] Ajouter l'enlèvement et la séquestration de Tadano par Yamai (tome 2), en signalant le traitement comique d'un comportement menaçant. → partielle : Vérifié : la liste des chapitres de Wikipédia (anglais) indique pour le tome 2 que Yamai enlève et menace Tadano, qu'elle voit comme un rival, et qu'il est retrouvé ligoté dans son placard ; Catcher Reviews (tome 2) confirme l'enlèvement et la traque de Komi. Scène « Enlèvement et séquestration » ajoutée (spoiler false, tome 2) et avis nuancé en conséquence. Le traitement comique n'a pas été repris : aucune source ne le mentionne et Catcher Reviews qualifie le passage de « very intense ».
 - Pipo [vocabulaire] Ajouter qu'une critique du tome 2 signale du langage fort, des sous-entendus et des images suggestives, en maintenant la réserve sur la traduction française. → appliquee : Vérifié sur Catcher Reviews : « There are a few suggestive images, innuendos, and strong language. » Phrase ajoutée en précisant qu'il s'agit d'une critique anglophone qui ne cite aucun mot ; la réserve sur l'édition française est conservée. Source ajoutée.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## L'Atelier des Sorciers (AniList 98263) : dès 12 ans, révision 2
+## L'Atelier des Sorciers (AniList 98263) : dès 12 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/98263
 
@@ -97,7 +98,7 @@ Fiche AniList : https://anilist.co/manga/98263
 - [Peur et horreur] *Dangers, monstres et sorciers masqués* : Dans l'animé, les apprenties affrontent des situations dangereuses, des créatures fantastiques (dragons) et des sorciers masqués aux tenues inquiétantes. Common Sense Media note des ambiances sombres et tendues mais très peu de sang.
 - [Thèmes sensibles] *Magie interdite sur le corps* : Il est interdit de lancer des sorts ou de dessiner des signes magiques directement sur le corps humain, et la magie qui transforme le corps fait partie des magies interdites. Un groupe de sorciers dissidents pratique pourtant ces magies. C'est un ressort important de l'intrigue.
 - [Violence] [révèle l'intrigue] *Le passé maltraité d'un adulte* : Le tome 7 révèle l'enfance d'un personnage adulte, victime de sorciers qui lui ont arraché un œil et l'ont enterré vivant. Anime UK News évoque des moments « de pure horreur ».
-- [Thèmes sensibles] [révèle l'intrigue] *Agression sexuelle dans le passé d'un personnage (tome 9)* : Un chapitre revient sur l'enfance d'une sorcière adulte : avec sa meilleure amie, elle a été victime d'une agression sexuelle commise par un seigneur local, et son maître, ami de l'agresseur, a minimisé les faits ; ce maître a plus tard été arrêté (Wikipédia, liste des personnages). Selon la critique de The Anti-Social Geniuses, l'édition américaine du tome 9 fait précéder ce chapitre d'un avertissement sur les violences sexuelles et la culpabilisation des victimes.
+- [Thèmes sensibles] [révèle l'intrigue] *Agression sexuelle dans le passé d'un personnage (tome 9)* : Un chapitre revient sur l'enfance d'une sorcière adulte : elle et sa meilleure amie ont été victimes d'une agression sexuelle, que leur maître a minimisée ; ce maître a plus tard été arrêté (Wikipédia, liste des personnages). Selon la critique de The Anti-Social Geniuses, l'édition américaine du tome 9 fait précéder ce chapitre d'un avertissement sur les violences sexuelles et la culpabilisation des victimes.
 - [Violence] [révèle l'intrigue] *Attaque sur la ville (tome 14)* : Une créature géante qui se nourrit de sang attaque la ville et un chevalier perd la raison et frappe ses propres alliés. Coco est blessée. Anime UK News parle du chapitre le plus sombre de la série.
 
 **Vocabulaire.** Langage très léger selon Common Sense Media (animé, version anglaise) : les enfants se disputent et se disent des paroles dures, avec quelques insultes légères (« mouchard », « étrangère », traduits de l'anglais). Aucune grossièreté signalée. Rien de précis n'est renseigné pour la traduction française du manga.
@@ -132,10 +133,11 @@ Fiche AniList : https://anilist.co/manga/98263
 - Les insultes citées par Common Sense Media viennent du doublage anglais de l'animé et ont été traduites par mes soins.
 - Pas de fiche filmspourenfants.net trouvée pour l'animé. Les critiques de Manga-News n'ont pas pu être consultées (accès refusé).
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] La fiche omet les violences sexuelles subies enfant par un personnage (Luluci) et son amie, minimisées par son maître. → appliquee : Vérifié sur Wikipédia (anglais), liste des personnages : enfant, Luluci et sa meilleure amie ont été victimes d'une agression sexuelle par un seigneur local ; son maître, ami de l'agresseur, n'a pas pris l'affaire au sérieux et a plus tard été arrêté. La critique du tome 9 de The Anti-Social Geniuses situe ce chapitre dans le tome 9 et signale l'avertissement de l'édition américaine (violences sexuelles, culpabilisation des victimes). Ajout d'une scène (catégorie themes, spoiler), sans nommer le personnage, et mention dans l'avis. La formule « protégé l'agresseur » n'est pas reprise : la source dit seulement que le maître était ami de l'agresseur et a minimisé les faits. Deux sources ajoutées.
+- Pipo [scenes] La fiche omet l'agression sexuelle subie enfant par un personnage et son amie, minimisée par son maître. → appliquee : Vérifié sur Wikipédia (anglais), liste des personnages, et sur la critique du tome 9 de The Anti-Social Geniuses, qui situe ce chapitre dans le tome 9 et signale l'avertissement de l'édition américaine (violences sexuelles, culpabilisation des victimes). Ajout d'une scène (catégorie themes, spoiler), sans nommer le personnage, et mention dans l'avis. La formule « protégé l'agresseur » n'est pas reprise : la source dit seulement que le maître était ami de l'agresseur et a minimisé les faits. Deux sources ajoutées.
 - Pipo [scenes] L'interdit ne concerne pas seulement le fait de dessiner sur le corps mais la magie qui modifie le corps : réécrire la phrase. → partielle : L'article Wikipédia cité par Pipo mentionne justement l'interdiction de lancer des sorts ou de dessiner des signes magiques directement sur le corps humain : la formulation initiale était donc fondée. La liste des personnages de Wikipédia range en outre la magie de transformation du corps et les tatouages magiques parmi les magies interdites des sorciers dissidents. Le texte a été élargi pour inclure les deux interdits, au lieu de remplacer le premier comme le proposait Pipo.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -200,7 +202,7 @@ Fiche AniList : https://anilist.co/manga/98416
 
 ---
 
-## Hell's Paradise (AniList 100994) : adultes, révision 2
+## Hell's Paradise (AniList 100994) : adultes, révision 3
 
 Fiche AniList : https://anilist.co/manga/100994
 
@@ -219,7 +221,7 @@ Fiche AniList : https://anilist.co/manga/100994
 - [Violence] *Combats très sanglants* : Les critiques du premier tome parlent d'un « bain de sang » : élimination sanglante d'une partie des candidats, gorge arrachée avec les dents, gore jugé « viscéral » par CBR. Pour l'animé, Common Sense Media décrit une violence constante et graphique, avec membres tranchés, exécutions, torture, cadavres et squelettes en grand nombre.
 - [Peur et horreur] *Horreur corporelle* : L'île abrite des créatures issues d'expériences et des plantes prédatrices. Dès le début, le seul survivant d'une expédition revient avec des champignons qui lui poussent sur le corps (Anime UK News, Wikipédia). Publishers Weekly, cité par Wikipédia, compare le dessin aux mangas d'horreur de Junji Ito.
 - [Nudité et sexualité] *Sexualité et nudité (signalées pour l'animé)* : Common Sense Media (animé) signale des images sexuelles, dont des dessins érotiques anciens, des personnages ayant des rapports sexuels à l'écran et des discussions sur le sexe comme moyen d'entraînement. Gabimaru apparaît nu sans que rien d'intime soit montré. Les critiques du premier tome du manga consultées n'en parlent pas ; pour le tome 4, voir la scène suivante.
-- [Nudité et sexualité] [révèle l'intrigue] *Sexualité non consentie dans le manga (tome 4)* : Selon Anime UK News, le tome 4 révèle que la principale méthode d'ascèse des Tensen exige une « union intime ». Mei, qui vient de prendre l'apparence d'une adolescente, a été chassée de leur palais et n'avait le choix qu'entre mourir et servir de « partenaire d'entraînement » ; les Tensen veulent l'utiliser à cette fin. Le critique souligne que ces rapports ne sont pas consentis et que l'on voit les suites, très sanglantes, d'une de ces scènes sexuelles. Il juge ce contenu « assez extrême » et pénible à regarder.
+- [Nudité et sexualité] [révèle l'intrigue] *Sexualité non consentie dans le manga (tome 4)* : Selon Anime UK News, le tome 4 révèle que la méthode d'ascèse des Tensen repose sur des rapports sexuels imposés, auxquels ils veulent contraindre Mei, qui a désormais l'apparence d'une adolescente. Le critique souligne l'absence de consentement, signale que l'on voit les suites très sanglantes de l'une de ces scènes et juge ce contenu « assez extrême ».
 
 **Vocabulaire.** Pour l'animé (version anglaise), Common Sense Media note que les jurons sont rares (« sh--ty » de temps en temps) mais que les dialogues abordent souvent la violence et le sexe de façon adulte. Le langage de la traduction française du manga n'est pas renseigné par les sources consultées.
 
@@ -255,14 +257,15 @@ Fiche AniList : https://anilist.co/manga/100994
 - La fiche Kazé du tome 1 comporte un champ « Âge recommandé » laissé vide. La critique d'Anime News Network (tome 1) n'a pas pu être ouverte (accès refusé) : elle n'est citée que via Wikipédia, comme celle de Publishers Weekly.
 - filmspourenfants.net n'a pas de fiche pour ce titre (recherche sur le site sans résultat).
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] Le contenu sexuel n'est pas limité à l'animé : ajouter une entrée manga sur la sexualité et les rapports imposés décrits au tome 4. → appliquee : Vérifié dans la critique du tome 4 d'Anime UK News : méthode d'ascèse des Tensen fondée sur l'union sexuelle, Mei menacée de servir de « partenaire d'entraînement », rapports décrits comme non consentis, suites très sanglantes d'une scène sexuelle montrées. Nouvelle scène ajoutée (marquée spoiler), renvoi ajouté dans la scène sur l'animé, entrée ajoutée dans « autres », critique ajoutée aux sources.
+- Pipo [scenes] Le contenu sexuel n'est pas limité à l'animé : ajouter une entrée manga sur la sexualité et les rapports imposés décrits au tome 4. → appliquee : Vérifié dans la critique du tome 4 d'Anime UK News : méthode d'ascèse des Tensen fondée sur des rapports sexuels imposés, Mei menacée d'y être contrainte, suites très sanglantes d'une scène montrées. Nouvelle scène ajoutée (marquée spoiler), renvoi ajouté dans la scène sur l'animé, entrée ajoutée dans « autres », critique ajoutée aux sources.
 - Pipo [age] Passer à 18 ans : Anime UK News classe le tome 4 18+, contenu sexuel non consenti dans le manga, classement Mature de Viz. → appliquee : Vérifié : Anime UK News indique 18+ et « pour lecteurs adultes uniquement » pour le tome 4 ; la fiche Viz du tome 1 indique « Mature », défini sur viz.com/ratings comme réservé aux adultes. Toutes les indications portant sur le manga vont vers les adultes ; seul Common Sense Media (16 ans) porte sur l'animé, et Kazé ne donne pas d'âge. Âge porté à 18, avis réécrit et terminé par « Réservé aux adultes. »
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## Jujutsu Kaisen (AniList 101517) : dès 16 ans, révision 2
+## Jujutsu Kaisen (AniList 101517) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/101517
 
@@ -281,7 +284,7 @@ Fiche AniList : https://anilist.co/manga/101517
 - [Peur et horreur] *Malédictions effrayantes* : Les malédictions sont des monstres inquiétants, parfois très dérangeants visuellement. Dans le film Jujutsu Kaisen 0, une enfant morte devient un monstre, des personnages sont poignardés jusque dans les yeux et un visage est arraché ; le CNC avertit que des images peuvent être angoissantes pour un jeune public.
 - [Violence] [révèle l'intrigue] *Un arc particulièrement impitoyable* : Vers le milieu de la série, un long affrontement à Shibuya est décrit par Gameblog comme « particulièrement impitoyable » : plusieurs personnages importants y sont tués ou grièvement blessés.
 - [Thèmes sensibles] [révèle l'intrigue] *Jeu de survie imposé* : Dans la seconde moitié de la série, des participants sont contraints de survivre à un jeu de combat mortel dans des zones fermées (Wikipédia).
-- [Nudité et sexualité] *Gestes déplacés* : Contenu sexuel limité. Dans l'animé, des démons tripotent la poitrine d'une combattante pendant un combat, et quelques images montrent une femme en bikini. Dans le film Jujutsu Kaisen 0, un monstre se frotte à une adolescente, qui le vit comme une agression.
+- [Nudité et sexualité] *Gestes déplacés* : Contenu sexuel limité. Dans l'animé, des démons ont des gestes déplacés envers une combattante pendant un combat, et quelques images montrent une femme en bikini. Dans le film Jujutsu Kaisen 0, une adolescente subit le contact non désiré d'un monstre, qu'elle vit comme une agression.
 - [Thèmes sensibles] *Idées suicidaires* : Dans Jujutsu Kaisen 0, film préquelle de la série, le héros Yuta évoque plusieurs fois le suicide comme une issue possible (Common Sense Media, film).
 
 **Vocabulaire.** Langage plutôt modéré. Common Sense Media relève surtout « hell » et « damn » dans la première saison animée, quelques jurons plus forts (« s--t », « bastard ») dans le film Execution et une insulte très grossière masquée dans Jujutsu Kaisen 0 (versions anglaises). Le langage de l'édition française du manga n'est pas renseigné par les sources consultées.
@@ -321,16 +324,17 @@ Fiche AniList : https://anilist.co/manga/101517
 - Nombre de tomes : la page Ki-oon indique 30 tomes et une série terminée ; Wikipédia (fr) ne listait que 29 tomes français datés. À vérifier.
 - Le classement Teen Plus de VIZ, seulement entrevu en révision 1, a été lu directement sur la fiche du tome 1 chez VIZ en révision 2.
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [themes] Supprimer la mort définitive d'une compagne de route du héros : information de 2024 dépassée, le personnage survit (chapitre 267). → appliquee : Vérifié sur Wikipédia (anglais, Nobara Kugisaki) : le personnage semble mourir à Shibuya mais survit et revient au chapitre 267. L'article Gameblog de juillet 2024 annonçait bien sa mort à partir d'une note de l'auteur. Le thème « La perte » est reformulé de façon générale (morts ou blessures graves, citation exacte de Gameblog « n'est pas tendre avec ses personnages »), sans détail sur un personnage. Source Wikipédia ajoutée.
 - Pipo [scenes] Arc de Shibuya : ne pas écrire qu'une proche du héros n'y survit pas ; écrire que plusieurs personnages sont tués ou grièvement blessés. → appliquee : Vérifié sur Wikipédia (anglais, Nobara Kugisaki) : blessure grave mais survie. Texte remplacé par « plusieurs personnages importants y sont tués ou grièvement blessés » ; spoiler true conservé.
 - Pipo [scenes] Common Sense Media ne qualifierait pas les démembrements de constants. → non_appliquee : Non confirmé : la critique Common Sense Media de la série écrit dans sa partie « Is It Any Good? » : « Constant violence and dismemberment make this a show more suitable watch for older teens ». La formulation de la fiche est exacte ; la citation anglaise a été ajoutée pour faciliter la vérification.
 - Pipo [age] Proposition d'âge : 16 ans au lieu de 14 (VIZ Teen Plus, The Graphic Library Grades 10-12), avec ajout de ces deux évaluations aux avis extérieurs. → appliquee : Vérifié : la fiche VIZ du tome 1 indique « Teen Plus », défini par VIZ comme « May be suitable for older teens and adults » ; The Graphic Library indique « Suitability Rating: Grades 10-12 ». Ce sont les seules indications portant sur le manga, et Common Sense Media (15 ans pour la série) se situe entre 14 et 16. Âge passé à 16, dernière phrase de l'avis mise à jour, deux avis ajoutés dans « autres » et sources ajoutées. Cette entrée couvre aussi le champ age_propose (16) de Pipo ; Mario n'a pas rendu d'avis.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
-## Sexy Cosplay Doll (AniList 101583) : dès 16 ans, révision 2
+## Sexy Cosplay Doll (AniList 101583) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/101583
 
@@ -346,7 +350,7 @@ Fiche AniList : https://anilist.co/manga/101583
 **Scènes difficiles**
 
 - [Nudité et sexualité] *Fan service et nudité partielle (manga)* : Dès le tome 1 : page couleur de l'héroïne en lingerie, uniforme assez court pour dévoiler ses fesses, scène de prise de mesures très gênante pour Wakana. Selon Anime UK News, rien n'est jamais entièrement montré, du moins dans ce premier tome. Kana classe la série dans le genre « Erotique ».
-- [Nudité et sexualité] *Allusions et sujets sexuels* : Le premier costume vient d'un jeu pour adultes au titre très suggestif. Dans l'animé, Common Sense Media relève de nombreuses allusions, des érections et fantasmes suggérés, et l'évocation de la pornographie, des love hotels et de pratiques comme le BDSM, sans relation sexuelle.
+- [Nudité et sexualité] *Allusions et sujets sexuels* : Le premier costume vient d'un jeu pour adultes au titre très suggestif. Dans l'animé, Common Sense Media relève de nombreuses allusions sexuelles autour de ces lycéens, dont l'évocation de la pornographie, des love hotels et du BDSM, sans relation sexuelle.
 - [Peur et horreur] *Cosplay d'un jeu d'horreur (animé)* : Les personnages se costument d'après un jeu vidéo d'horreur qui évoque le cannibalisme et l'agression sexuelle. Les images (faux sang, yeux en plastique) ne sont pas réalistes.
 - [Thèmes sensibles] *Phrases à tonalité suicidaire (animé)* : Des adolescents disent « je veux mourir » ou « ce serait mieux si je n'étais pas là ». Le plus souvent pour plaisanter, mais parfois par réelle tristesse ou manque de confiance.
 
@@ -375,9 +379,10 @@ Fiche AniList : https://anilist.co/manga/101583
 - La page Kana indique « Au Japon : En cours » et « Déjà paru 16 », mais liste 15 tomes ; Wikipédia (anglais) indique 15 tomes et une fin de publication en mars 2025. Le 16e élément est probablement le coffret collector.
 - Kana écrit « Marine » ; l'animé et Wikipédia écrivent « Marin ».
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
 - Pipo [avis] L'avis affirme l'absence de scène de sexe pour toute la série, alors que Common Sense Media porte sur l'animé et la critique du manga sur le seul tome 1. → appliquee : Vérifié : Common Sense Media (animé) parle d'allusions « without any actual sex » ; Anime UK News (tome 1) écrit que rien n'est entièrement exposé « at least in this first volume ». L'avis attribue désormais chaque constat à sa source et précise que les tomes suivants du manga n'ont pas été vérifiés. Note de relecture mise à jour. Âge inchangé (Pipo propose aussi 16).
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
@@ -505,7 +510,7 @@ Fiche AniList : https://anilist.co/manga/105398
 
 ---
 
-## Chainsaw Man (AniList 105778) : dès 16 ans, révision 2
+## Chainsaw Man (AniList 105778) : dès 16 ans, révision 3
 
 Fiche AniList : https://anilist.co/manga/105778
 
@@ -523,15 +528,15 @@ Fiche AniList : https://anilist.co/manga/105778
 - [Violence] *Gore et démembrements omniprésents* : Combats extrêmement sanglants tout au long de la série : décapitations, démembrements, éviscérations, personnages dévorés, sang qui gicle. Common Sense Media classe la violence de l'animé au niveau le plus élevé, et la critique de Manga Librarian décrit un manga violent, horrible et dérangeant.
 - [Violence] *Torture et cruauté* : Filmspourenfants.net relève des tortures pendant un entraînement (épisode 10 de l'animé) et des héros qui s'acharnent sur les parties intimes d'un ennemi pour se venger. Dans le film qui adapte la suite, un homme est torturé et un chasseur agonisant supplie qu'on l'achève.
 - [Peur et horreur] *Horreur corporelle et démons repoussants* : Démons inquiétants, carcasses dégoûtantes et transformation du héros en démon sanguinaire. Les sources parlent d'horreur corporelle et d'une ambiance oppressante, notamment à la fin de la première saison animée (épisodes 9 à 12).
-- [Nudité et sexualité] *Obsession sexuelle et situations ambiguës* : Magazines pornographiques, attouchements, nudité partielle dans l'animé. Une adulte ivre et à moitié dévêtue propose de coucher avec Denji, qui a 16 ans. Le film montre une baignade nue brève, des fantasmes du héros et des personnages féminins très sexualisés. Manga Librarian signale aussi des allusions sexuelles et des attouchements dans le manga.
-- [Nudité et sexualité] [révèle l'intrigue] *Scène sexuelle explicite (seconde partie)* : Dans la seconde partie du manga (chapitre 167, tome 19 au Japon), un baiser entre Denji et Yoru, le démon de la Guerre qui habite le corps de la lycéenne Asa, s'accompagne d'attouchements sexuels explicites jusqu'à l'éjaculation de Denji. La scène survient juste après une lutte où Yoru le menace avec un couteau ; Asa reprend ensuite le contrôle de son corps (résumé de The Escapist).
+- [Nudité et sexualité] *Obsession sexuelle et situations ambiguës* : Magazines pornographiques, gestes déplacés et nudité partielle dans l'animé. Une adulte ivre fait des avances sexuelles à Denji, qui a 16 ans. Le film montre une baignade nue brève, des fantasmes du héros et des personnages féminins très sexualisés. Manga Librarian signale aussi des allusions et des gestes sexuels dans le manga.
+- [Nudité et sexualité] [révèle l'intrigue] *Scène sexuelle explicite entre adolescents (seconde partie)* : Dans la seconde partie du manga (chapitre 167, tome 19 au Japon), une scène sexuelle explicite implique Denji et Yoru, le démon qui habite le corps de la lycéenne Asa, juste après une menace au couteau (résumé de The Escapist).
 - [Thèmes sensibles] [révèle l'intrigue] *Suicide et cannibalisme* : Common Sense Media signale, dans l'animé, un personnage dont la mort est présentée comme un suicide. Manga Librarian cite le suicide et le cannibalisme parmi les avertissements du manga.
 - [Violence] [révèle l'intrigue] *Morts de personnages importants* : Plusieurs personnages proches du héros meurent, souvent brutalement, dès la première saison animée. Le film dérivé se termine lui aussi de façon triste.
 - [Autre] *Alcool et tabac* : Un personnage fume et en influence un autre. Un concours de boisson est montré, lié à une situation à caractère sexuel (animé, saison 1).
 
 **Vocabulaire.** Langage très grossier dans l'animé. Common Sense Media relève des jurons forts et fréquents en version anglaise (« f--k », « s--t », « a--hole »). Filmspourenfants.net note des insultes, des jurons, des expressions sexuelles crues et des menaces de mort. Le langage de l'édition française du manga n'est pas renseigné par les sources consultées.
 
-**Avis.** Série d'action et d'horreur très violente, où le gore et l'horreur corporelle sont constants. La sexualité est très présente à travers l'obsession du héros adolescent : nudité partielle, situations ambiguës entre adultes et mineur et, dans la seconde partie du manga, une scène d'attouchements sexuels explicites. Les morts de personnages, la manipulation et la noirceur générale peuvent marquer durablement. Les critiques saluent l'humour et l'émotion du récit, mais toutes les sources consultées le destinent aux grands adolescents et aux adultes. Mieux vaut avoir 16 ans pour découvrir cette série.
+**Avis.** Série d'action et d'horreur très violente, où le gore et l'horreur corporelle sont constants. La sexualité est très présente à travers l'obsession du héros adolescent : nudité partielle, situations ambiguës entre adultes et mineur et, dans la seconde partie du manga, une scène sexuelle explicite. Les morts de personnages, la manipulation et la noirceur générale peuvent marquer durablement. Les critiques saluent l'humour et l'émotion du récit, mais toutes les sources consultées le destinent aux grands adolescents et aux adultes. Mieux vaut avoir 16 ans pour découvrir cette série.
 
 **Ce que disent les autres**
 
@@ -566,10 +571,11 @@ Fiche AniList : https://anilist.co/manga/105778
 - Cannibalisme : cité par une seule source (Manga Librarian), sans précision de tome.
 - Éditeur : ActuaLitté indique Kazé pour le tome 1 (2020) ; Wikipédia (fr) mentionne un passage de l'édition sous le label Crunchyroll. Nombre de tomes parus en France non vérifié (Manga-News inaccessible).
 
-**Suite donnée aux remarques de la relecture précédente (révision 1)**
+**Suite donnée aux remarques de la relecture précédente (révision 2)**
 
-- Pipo [scenes] Ajouter une entrée sur les gestes sexuels explicites du chapitre 167 (seconde partie) et les questions de consentement, en spoiler. → partielle : Vérifié sur le résumé de The Escapist (chapitre 167) : le baiser entre Yoru et Denji s'accompagne d'attouchements sexuels et se termine par l'éjaculation de Denji, juste après que Yoru, dans le corps d'Asa, l'a menacé avec un couteau. Wikipédia (anglais) situe le chapitre dans le tome 19. Scène ajoutée avec spoiler true. La notion de consentement n'a pas été ajoutée telle quelle : le résumé ne qualifie pas la scène de non consentie ; seuls les faits rapportés figurent dans la fiche.
-- Pipo [avis] L'avis doit indiquer que le manga comporte aussi des gestes sexuels explicites, au-delà de la nudité partielle et des situations ambiguës. → partielle : Vérifié sur The Escapist (chapitre 167). La phrase sur la sexualité mentionne désormais, pour la seconde partie du manga, une scène d'attouchements sexuels explicites. La mention de questions de consentement n'a pas été reprise, faute de source qui les formule.
+- Pipo [scenes] Ajouter une entrée sur la scène sexuelle explicite du chapitre 167 (seconde partie) et les questions de consentement, en spoiler. → partielle : Vérifié sur le résumé de The Escapist (chapitre 167) : scène sexuelle explicite entre Denji et Yoru, dans le corps d'Asa, juste après une menace au couteau. Wikipédia (anglais) situe le chapitre dans le tome 19. Scène ajoutée avec spoiler true. La notion de consentement n'a pas été ajoutée telle quelle : le résumé ne qualifie pas la scène de non consentie ; seuls les faits rapportés figurent dans la fiche.
+- Pipo [avis] L'avis doit indiquer que le manga comporte aussi une scène sexuelle explicite, au-delà de la nudité partielle et des situations ambiguës. → partielle : Vérifié sur The Escapist (chapitre 167). La phrase sur la sexualité mentionne désormais, pour la seconde partie du manga, une scène sexuelle explicite. La mention de questions de consentement n'a pas été reprise, faute de source qui les formule.
+- Claude [scenes] Demande du responsable du site : ramener toute scène à caractère sexuel impliquant un mineur à une alerte sobre, sans description. → appliquee : Révision 3 : scènes, avis, notes et journal reformulés sans détail ; faits signalés, tomes, sources et âge inchangés. Les autres remarques de ce journal portent sur la révision 1.
 
 ---
 
