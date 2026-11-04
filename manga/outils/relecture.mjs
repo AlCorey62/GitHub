@@ -8,7 +8,7 @@
 //
 // Une fiche n'est publiée que si chaque relecteur attendu a rendu le verdict « valide » sans erreur signalée.
 
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -128,6 +128,21 @@ function dossier() {
   ];
   writeFileSync(join(DOSSIER, 'dossier-relecture.md'), entete.join('\n') + ids.map((id) => texteFiche(id, brouillons[id])).join('\n'));
   console.log(`relecture/dossier-relecture.md : ${ids.length} fiches`);
+  // Lots de 10 fiches, un par conversation avec chaque relecteur.
+  for (const f of readdirSync(DOSSIER).filter((x) => /^lot-\d+\.md$/.test(x))) rmSync(join(DOSSIER, f));
+  for (let i = 0; i * 10 < ids.length; i++) {
+    const lot = ids.slice(i * 10, i * 10 + 10);
+    const texte = [
+      `# Lot ${i + 1} : ${lot.length} fiches à relire`,
+      '',
+      'Consigne : relecture/consigne-relecteurs.md. Répondre en JSON dans relecture/retour-<pipo|mario>-' + (i + 1) + '.json.',
+      '',
+      '---',
+      '',
+    ].join('\n') + lot.map((id) => texteFiche(id, brouillons[id])).join('\n');
+    writeFileSync(join(DOSSIER, `lot-${i + 1}.md`), texte);
+  }
+  console.log(`relecture/lot-1.md à lot-${Math.ceil(ids.length / 10)}.md : 10 fiches par lot`);
 }
 
 function integrer() {
