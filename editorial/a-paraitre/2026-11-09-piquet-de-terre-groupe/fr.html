@@ -5,7 +5,7 @@
 {
   "path": "news/piquet-de-terre-groupe/",
   "title": "Le piquet de terre près du groupe électrogène : à quoi sert-il ?",
-  "description": "Référence du neutre en TN-S, chemin du courant de défaut en TT : le rôle du piquet de terre d'un groupe électrogène, la valeur à respecter et sa mesure.",
+  "description": "Référence du neutre en TN-S, chemin du courant de défaut en TT : le rôle du piquet de terre d'un groupe électrogène, la règle de la NF C 15-100 et sa mesure.",
   "nav": "news",
   "type": "article",
   "article": {
@@ -51,7 +51,7 @@
         <p class="eyebrow">À retenir</p>
         <ul class="check-list">
           <li>Le piquet relie au sol l'installation alimentée par le groupe : son rôle dépend du schéma de liaison à la terre choisi.</li>
-          <li>En TN-S, il sert de référence et le courant de défaut revient par le conducteur de protection. En TT, il est sur le chemin du courant de défaut et sa résistance doit permettre au différentiel de couper.</li>
+          <li>En TN-S, il sert de référence et le courant de défaut revient par le conducteur de protection. En TT, il est sur le chemin du courant de défaut : la NF C 15-100 impose RA × IΔn ≤ UL pour que le différentiel coupe.</li>
           <li>Un piquet de terre se mesure, avec un appareil de mesure de résistance de terre.</li>
         </ul>
       </aside>
@@ -60,21 +60,16 @@
 <h2>Deux rôles selon le schéma</h2>
 <p>Le schéma de liaison à la terre se choisit à l'étude, et le piquet n'y joue pas le même rôle.</p>
 <ul>
-<li><strong>En TN-S</strong>, le neutre du groupe est relié à sa carcasse et au conducteur de protection (PE), et le piquet relie ce point au sol. Selon l'IET (Institution of Engineering and Technology, au Royaume-Uni), ce piquet ne fait pas passer l'installation en TT : elle reste en TN-S, avec un neutre référencé à la terre. En cas de défaut, le courant revient au groupe par le conducteur de protection, pas par le sol.</li>
+<li><strong>En TN-S</strong>, le neutre du groupe est relié à sa carcasse et au conducteur de protection (PE), et le piquet relie ce point au sol. L'installation reste en TN-S : ses masses sont reliées au neutre du groupe par le conducteur de protection, et c'est ce qui définit le schéma TN. En cas de défaut, le courant revient au groupe par le conducteur de protection, pas par le sol.</li>
 <li><strong>En TT</strong>, les masses des appareils sont reliées à leur propre prise de terre. Le courant de défaut traverse le sol pour revenir à la source : trop faible pour faire déclencher un disjoncteur, il est détecté par le <a href="../../lexique/#differentiel-30-ma">différentiel</a>. La résistance de la prise de terre doit alors rester assez basse pour que le différentiel coupe avant qu'une tension dangereuse n'apparaisse sur les masses.</li>
 </ul>
-<h2>Quelle valeur viser ?</h2>
-<p>En TT, la règle s'écrit RA × IΔn ≤ 50 V : la résistance de la prise de terre (RA) multipliée par la sensibilité du différentiel (IΔn) ne doit pas dépasser 50 V, la tension de contact admise. En France, c'est la règle de la NF C 15-100. L'inspection fédérale suisse des installations à courant fort (ESTI) en tire ces valeurs maximales :</p>
-<div class="table-wrap">
-<table class="table">
-<thead><tr><th scope="col">Sensibilité du différentiel</th><th scope="col">30 mA</th><th scope="col">300 mA</th></tr></thead>
-<tbody><tr><th scope="row">Résistance de terre maximale</th><td>1 650 Ω</td><td>165 Ω</td></tr></tbody>
-</table>
-</div>
-<p>En TN-S, le piquet ne sert pas à faire couper une protection : l'IET indique que sa résistance devrait idéalement rester sous 200 Ω.</p>
+<h2>Quelle règle en France ?</h2>
+<p>En TT, la NF C 15-100 pose la règle RA × IΔn ≤ UL : la résistance de la prise de terre (RA) multipliée par la sensibilité du différentiel (IΔn) ne doit pas dépasser la tension limite conventionnelle de contact (UL). Plus le différentiel est sensible, plus la résistance admise est élevée : la prise de terre et le différentiel se choisissent ensemble.</p>
+<p>La tension limite à retenir dépend des conditions de l'installation : c'est l'étude qui la fixe, et la valeur maximale de la prise de terre en découle.</p>
+<p>En TN-S, ce n'est pas le piquet qui fait couper la protection : le courant de défaut revient par le conducteur de protection.</p>
 <h2>Un piquet se mesure</h2>
-<p>La résistance d'une prise de terre dépend surtout du sol : sa nature, son humidité, sa température. Elle se mesure avec un appareil de mesure de résistance de terre ; l'IET précise qu'un appareil de mesure d'impédance de boucle ne convient pas pour une terre de référence.</p>
-<p>Et quand des appareils alimentés par des groupes différents sont utilisés côte à côte, l'IET recommande de relier entre elles les bornes principales de terre des groupes.</p>
+<p>La résistance d'une prise de terre dépend surtout du sol : sa nature, son humidité, sa température. Elle se mesure sur place, une fois le piquet planté, avec un appareil de mesure de résistance de terre.</p>
+<p>Et quand des appareils alimentés par des groupes différents sont utilisés côte à côte, la NF C 15-100 pose le principe : des masses accessibles en même temps doivent être reliées à une même prise de terre. Les terres des groupes se relient donc entre elles.</p>
 <blockquote>Un piquet de terre ne se plante pas pour la forme : son rôle dépend du schéma, et sa valeur se mesure.</blockquote>
 <p>Le schéma de liaison à la terre d'une installation sur groupe se décide en amont : c'est le travail de notre <a href="../../bureaudetude/">bureau d'étude</a>.</p>
       </article>

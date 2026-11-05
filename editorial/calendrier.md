@@ -38,21 +38,21 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : référence en TN-S (IET Wiring Matters 2011), chemin du courant de défaut en TT (RA × IΔn ≤ 50 V, valeurs ESTI), mesure ; cohérent avec l'article « TT ou TN » en attente | rédigé |
-| Mar 10/11 | Le sais-tu ? (site, aucune anecdote disponible) | Powerlock : pourquoi brancher la terre en premier (terre, neutre, L1, L2, L3 ; débranchement dans l'ordre inverse) | rédigé |
+| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : référence en TN-S, chemin du courant de défaut en TT (RA × IΔn ≤ UL, NF C 15-100), masses reliées à une même terre, mesure ; réécrit selon les règles françaises d'abord ; cohérent avec l'article « TT ou TN » en attente | validé |
+| Mar 10/11 | Le sais-tu ? (site, aucune anecdote disponible) | Powerlock : pourquoi brancher la terre en premier (terre, neutre, L1, L2, L3 ; débranchement dans l'ordre inverse) | validé |
 | Mer 11/11 | (férié) | Pas de publication | |
-| Jeu 12/11 | Calculette | Réseaux étrangers : 30 kW triphasé, 48,11 A en 400 V, 92,52 A en 208 V | rédigé |
-| Ven 13/11 | Coulisses | Parc de groupes électrogènes de nuit, mât d'éclairage (photo floutée) | rédigé |
+| Jeu 12/11 | Calculette | Réseaux étrangers : 30 kW triphasé, 48,11 A en 400 V, 92,52 A en 208 V | validé |
+| Ven 13/11 | Coulisses | Parc de groupes électrogènes de nuit, mât d'éclairage (photo floutée) | validé |
 
 ## Semaine du 16 novembre 2026
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 16/11 | Le sais-tu ? (site) et vidéo | HVO : le gazole XTL en France (arrêté du 26/06/2024, NF EN 15940), moteur compatible selon son constructeur, 77 à 82 % d'émissions en moins sur le cycle de vie (Base Carbone de l'ADEME) ; **à valider** : formulation « groupes au HVO », aucun modèle cité | rédigé |
-| Mar 17/11 | Le sais-tu ? (site, aucune anecdote disponible) | Bilan de puissance : les cinq informations à réunir avant de demander une étude ; exemple du foisonnement (P17 63 A ou 32 A) | rédigé |
-| Mer 18/11 | En vidéo | Groupe Twin zéro coupure : deux groupes synchronisés, chacun à 50 % ; si l'un tombe en panne, l'autre reprend tout (lien vers l'article en ligne) | rédigé |
-| Jeu 19/11 | Calculette | 25 kW en monophasé : 120,77 A, une P17 32 A ne suffit pas ; en triphasé, 40,09 A et une P17 63 A | rédigé |
-| Ven 20/11 | Coulisses | Câbles au pied des conteneurs (photo floutée) **à valider** : droits sur la photo pour les réseaux sociaux | rédigé |
+| Lun 16/11 | Le sais-tu ? (site) et vidéo | HVO : le gazole XTL en France (arrêté du 26/06/2024, NF EN 15940), moteur compatible selon son constructeur, 77 à 82 % d'émissions en moins sur le cycle de vie (Base Carbone de l'ADEME) ; formulation « groupes au HVO » validée, aucun modèle cité | validé |
+| Mar 17/11 | Le sais-tu ? (site, aucune anecdote disponible) | Bilan de puissance : les cinq informations à réunir avant de demander une étude ; exemple du foisonnement (P17 63 A ou 32 A) | validé |
+| Mer 18/11 | En vidéo | Groupe Twin zéro coupure : deux groupes synchronisés, chacun à 50 % ; si l'un tombe en panne, l'autre reprend tout (lien vers l'article en ligne) | validé |
+| Jeu 19/11 | Calculette | 25 kW en monophasé : 120,77 A, une P17 32 A ne suffit pas ; en triphasé, 40,09 A et une P17 63 A | validé |
+| Ven 20/11 | Coulisses | Câbles au pied des conteneurs (photo floutée) droits sur la photo validés | validé |
 
 ## Réserve de sujets
 
