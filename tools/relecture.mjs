@@ -78,6 +78,13 @@ const cards = days.map((d, i) => {
       img = `<img class="visual" src="${esc(name)}" width="1200" height="1200" alt="Visuel de la publication du ${esc(when)}" loading="${i < 2 ? "eager" : "lazy"}">`;
     }
   }
+  // Vidéo du jour : affichée à la place du visuel, qui sert d'image d'attente (et de visuel de secours à la diffusion)
+  if (d.video && existsSync(join(week, d.video))) {
+    copyFileSync(join(week, d.video), join(out, d.video));
+    files[d.video] = d.video;
+    const poster = d.visual && files[d.visual] ? ` poster="${esc(d.visual)}"` : "";
+    img = `<video class="visual" src="${esc(d.video)}"${poster} width="1080" height="1080" controls muted playsinline preload="metadata" aria-label="Vidéo de la publication du ${esc(when)}"></video>`;
+  }
   const block = (label, text, id) =>
     text
       ? `<section class="post" aria-label="${label}">

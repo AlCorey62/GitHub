@@ -11,11 +11,12 @@ editorial/
   RESEAUX.md           Diffusion automatique sur Facebook et LinkedIn : fonctionnement et mise en place des accès
   calendrier.md        Sujets prévus semaine par semaine, avec leur statut
   anecdotes.md         Anecdotes de terrain fournies par Damien : matière des « cas terrain »
-  modeles/             Pages modèles d'un article (français et anglais)
+  modeles/             Pages modèles d'un article (français et anglais) et du visuel
+  videos/              Animations des vidéos (nom.html, gabarit commun _base.css et _base.js), réutilisables d'une semaine à l'autre
   a-paraitre/          Articles validés en attente de leur date de publication
     AAAA-MM-JJ-nom/      fr.html (obligatoire), en.html (facultatif)
   semaines/            Publications réseaux sociaux de chaque semaine
-    AAAA-MM-JJ/          publications.md (textes LinkedIn et Facebook), visuels PNG et diffusion.json (journal des envois)
+    AAAA-MM-JJ/          publications.md (textes LinkedIn et Facebook), visuels PNG, vidéos MP4 et diffusion.json (journal des envois)
   brouillons/          Articles rédigés en attente de validation, sans date de parution (jamais publiés tels quels)
 ```
 
@@ -23,9 +24,9 @@ editorial/
 
 | Jour | Format | Site | Réseaux |
 |---|---|---|---|
-| Lundi | Le sais-tu ? technique | Article FR et EN | Oui |
+| Lundi | Le sais-tu ? technique, avec sa vidéo | Article FR et EN | Oui, en vidéo |
 | Mardi | Cas terrain anonymisé (à défaut, second « Le sais-tu ? ») | Article FR et EN | Oui |
-| Mercredi | Vrai ou faux | Non | Oui |
+| Mercredi | En vidéo : un schéma animé (zéro coupure, inverseur normal/secours, ASI…) ; à défaut, vrai ou faux | Non (lien vers un article ou une page du site) | Oui, en vidéo |
 | Jeudi | La calculette en situation | Non (lien vers la calculette) | Oui |
 | Vendredi | Coulisses et métiers | Non | Oui |
 
@@ -53,6 +54,17 @@ node tools/relecture.mjs editorial/semaines/2026-10-26 <dossier de sortie>
 ```
 
 Rassemble sur une page, jour par jour : visuel, textes LinkedIn et Facebook (bouton Copier), lien et texte complet des articles du site. La page est republiée à la même adresse chaque semaine.
+
+## Vidéos
+
+Deux vidéos par semaine, le lundi et le mercredi (demande de Damien du 05/11/2026). Dans `publications.md`, la ligne `**Vidéo** : \`nom.mp4\`` s'ajoute au-dessus de `**Visuel**`, qui reste le visuel de secours. L'animation est dans `editorial/videos/nom.html` :
+
+```bash
+node tools/videos.mjs editorial/semaines/2026-11-16              # fabrique les MP4 de la semaine
+node tools/videos.mjs editorial/semaines/2026-11-16 --images 2,10  # images de contrôle à 2 s et 10 s
+```
+
+MP4 H.264 carré 1080 × 1080, sans son (légendes à l'écran), 30 images par seconde (Chromium, Playwright et ffmpeg nécessaires).
 
 ## Visuels
 

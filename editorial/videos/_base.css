@@ -1,0 +1,29 @@
+/* Gabarit commun des vidéos (1080 × 1080, sans son) : fond, logo, rubrique, légendes, pied de page.
+   Chaque vidéo (editorial/videos/<nom>.html) l'inclut, place son schéma et définit DURATION, CAPS et scene(t). */
+@font-face { font-family: Archivo; src: url("../../site/assets/fonts/archivo-latin-wdth-normal.woff2") format("woff2"); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: Archivo; src: url("../../site/assets/fonts/archivo-latin-ext-wdth-normal.woff2") format("woff2"); font-weight: 100 900; font-stretch: 62% 125%; unicode-range: U+0100-024F, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+html, body { margin: 0; }
+body { width: 1080px; height: 1080px; overflow: hidden; font-family: Archivo, sans-serif; color: #f3f3f4; position: relative;
+  background: radial-gradient(60% 55% at 90% 12%, rgba(195,0,0,.38), transparent 62%), radial-gradient(45% 45% at 0% 100%, rgba(195,0,0,.16), transparent 70%), #09090a; }
+.grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 60px 60px; }
+.logo { position: absolute; left: 72px; top: 64px; width: 260px; color: #c30000; }
+.kicker { position: absolute; left: 72px; top: 160px; display: flex; align-items: center; gap: 18px; font-size: 26px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #ff4a3d; margin: 0; }
+.kicker::before { content: ""; width: 60px; height: 4px; background: #c30000; }
+.title { position: absolute; left: 72px; right: 72px; top: 330px; margin: 0; font-size: 92px; line-height: 1.02; font-weight: 800; font-stretch: 110%; letter-spacing: -.025em; }
+.title em, .cap em, .outro h2 em { font-style: normal; color: #ff4a3d; }
+.cap { position: absolute; left: 72px; right: 72px; bottom: 118px; margin: 0; font-size: 44px; line-height: 1.2; font-weight: 700; min-height: 106px; }
+.foot { position: absolute; left: 72px; right: 72px; bottom: 52px; display: flex; justify-content: space-between; font-size: 24px; color: #b4b4bb; }
+.foot b { color: #fff; }
+svg.diag { position: absolute; left: 0; top: 230px; width: 1080px; height: 600px; }
+.box { fill: #151518; stroke: #3a3a40; stroke-width: 3; }
+.lbl { font-family: Archivo, sans-serif; font-size: 30px; font-weight: 700; fill: #f3f3f4; }
+.small { font-family: Archivo, sans-serif; font-size: 24px; font-weight: 600; fill: #b4b4bb; }
+.pct { font-family: Archivo, sans-serif; font-size: 46px; font-weight: 800; fill: #ff4a3d; }
+.wire { stroke: #3a3a40; stroke-width: 10; fill: none; stroke-linecap: round; }
+.flow { stroke: #ff4a3d; stroke-width: 10; fill: none; stroke-linecap: round; stroke-dasharray: 26 22; }
+.badge rect { fill: #ff4a3d; }
+.badge text { font-family: Archivo, sans-serif; font-size: 30px; font-weight: 800; fill: #09090a; letter-spacing: .04em; }
+.outro { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 72px; opacity: 0; }
+.outro .kicker { position: static; margin-bottom: 34px; }
+.outro h2 { margin: 0; font-size: 84px; line-height: 1.04; font-weight: 800; font-stretch: 110%; letter-spacing: -.02em; }
+.outro p { margin: 36px 0 0; font-size: 36px; color: #d2d2d7; }

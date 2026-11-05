@@ -47,6 +47,8 @@ tools/
   og-image.html            Modèle de l'image de partage réseaux sociaux
   publier.mjs              Publication programmée des articles en attente (voir editorial/README.md)
   visuels.mjs              Visuels des publications réseaux sociaux (Playwright)
+  videos.mjs               Vidéos des publications (animations editorial/videos/, Playwright et ffmpeg)
+  essai-video.mp4          Vidéo de test du mode « verifier » de la diffusion
   relecture.mjs            Page de relecture d'une semaine éditoriale (visuels, textes, articles)
   publications.mjs         Lecture des publications.md d'une semaine (relecture et diffusion)
   diffusion.mjs            Diffusion de la publication du jour sur les réseaux sociaux (voir editorial/RESEAUX.md)

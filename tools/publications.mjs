@@ -2,7 +2,8 @@
 // Utilisé par la page de relecture (tools/relecture.mjs) et la diffusion sur les réseaux (tools/diffusion.mjs).
 //
 // Renvoie { monday, title, status, validated, notes, days } ; chaque jour porte sa date (AAAA-MM-JJ),
-// son titre, le nom du visuel, le lien et les textes LinkedIn et Facebook (citations « > » du fichier).
+// son titre, le nom du visuel, celui de la vidéo s'il y en a une, le lien et les textes LinkedIn et Facebook
+// (citations « > » du fichier).
 // Une section dont le titre contient « Hors programme » est une publication en plus de celle du jour (extra: true),
 // envoyée seulement à la demande (tools/diffusion.mjs --hors-programme) ; une seule par jour.
 
@@ -44,11 +45,15 @@ export function lireSemaine(week) {
       return m ? m[1].split("\n").map((l) => l.replace(/^> ?/, "")).join("\n").trim() : "";
     };
     const visual = body.match(/\*\*Visuel\*\* : `([^`]+)`/)?.[1] || "";
+    // Vidéo facultative (MP4 du dossier de la semaine, fabriquée par tools/videos.mjs) : envoyée à la place du visuel,
+    // qui reste le visuel de secours si l'envoi de la vidéo échoue.
+    const video = body.match(/\*\*Vidéo\*\* : `([^`]+\.mp4)`/)?.[1] || "";
     days.push({
       head,
       date: addDays(monday, DAYS[dayName]),
       extra: /hors programme/i.test(head),
       visual,
+      video,
       link: body.match(/\*\*Lien\*\*[^:]*: (\S+)/)?.[1] || "",
       linkedin: quote("LinkedIn"),
       facebook: quote("Facebook"),

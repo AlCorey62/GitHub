@@ -1,5 +1,7 @@
 # Calendrier éditorial
 
+Vidéos le lundi et le mercredi depuis la semaine du 16/11/2026 (demande de Damien du 05/11/2026).
+
 Statuts : `prévu` (sujet retenu), `rédigé` (en attente de validation), `validé` (programmé), `publié`, `reporté`.
 Les sujets marqués **à valider** reposent sur des valeurs que Damien confirme avant publication.
 
@@ -46,13 +48,17 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 16/11 | Le sais-tu ? (site) | HVO : le gazole XTL en France (arrêté du 26/06/2024, NF EN 15940), moteur compatible selon son constructeur, 77 à 82 % d'émissions en moins sur le cycle de vie (Base Carbone de l'ADEME) ; **à valider** : formulation « groupes au HVO », aucun modèle cité | rédigé |
+| Lun 16/11 | Le sais-tu ? (site) et vidéo | HVO : le gazole XTL en France (arrêté du 26/06/2024, NF EN 15940), moteur compatible selon son constructeur, 77 à 82 % d'émissions en moins sur le cycle de vie (Base Carbone de l'ADEME) ; **à valider** : formulation « groupes au HVO », aucun modèle cité | rédigé |
 | Mar 17/11 | Le sais-tu ? (site, aucune anecdote disponible) | Bilan de puissance : les cinq informations à réunir avant de demander une étude ; exemple du foisonnement (P17 63 A ou 32 A) | rédigé |
-| Mer 18/11 | Vrai ou faux | « À intensité égale, plus le câble est long, plus sa section doit être grosse. » Vrai (32 A en triphasé, 5G6 : 2,37 % sur 50 m, 7,12 % sur 150 m) | rédigé |
+| Mer 18/11 | En vidéo | Groupe Twin zéro coupure : deux groupes synchronisés, chacun à 50 % ; si l'un tombe en panne, l'autre reprend tout (lien vers l'article en ligne) | rédigé |
 | Jeu 19/11 | Calculette | 25 kW en monophasé : 120,77 A, une P17 32 A ne suffit pas ; en triphasé, 40,09 A et une P17 63 A | rédigé |
 | Ven 20/11 | Coulisses | Câbles au pied des conteneurs (photo floutée) **à valider** : droits sur la photo pour les réseaux sociaux | rédigé |
 
 ## Réserve de sujets
+
+- Vrai ou faux : « À intensité égale, plus le câble est long, plus sa section doit être grosse. » Vrai (rédigé pour le 18/11, remplacé par la vidéo du groupe Twin)
+- En vidéo : l'inverseur normal/secours (règles françaises à vérifier)
+- En vidéo : l'ASI (onduleur, UPS) en événementiel (règles françaises à vérifier)
 
 - Le différentiel : pourquoi on le teste avec le bouton « T »
 - Habilitations électriques : que veulent dire B2V, BR, BC, H0 (norme NF C 18-510)

@@ -42,6 +42,7 @@
 | Vrai ou faux | 60 à 120 mots | Affirmation, réponse, explication en 2 ou 3 phrases, lien vers l'article qui développe |
 | Calculette en situation | 60 à 120 mots | Cas chiffré, résultat de la calculette, conclusion pratique, lien vers la calculette |
 | Coulisses et métiers | 40 à 100 mots | Photo de terrain, ce qu'on y voit, le savoir-faire derrière |
+| Vidéo (lundi et mercredi) | 20 à 30 s, carré 1080 × 1080, sans son | Schéma animé, une idée par écran, légendes courtes ; chiffres et règles vérifiés comme le reste ; fin sur la phrase à retenir et le site. Animation dans `editorial/videos/`, visuel fixe de secours |
 
 ## Réseaux sociaux
 

@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- Vidéo « HVO : que change-t-il pour un groupe ? » (24 s). Sources : arrêté du 26 juin 2024 (gazole XTL, NF EN 15940,
+     véhicules compatibles) et Base Carbone de l'ADEME (éléments 13990, 34920 et 34921) ; détail dans publications.md. -->
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<style>
+.card { position: absolute; left: 72px; right: 72px; top: 330px; opacity: 0; }
+.card .big { margin: 0; font-size: 84px; line-height: 1.04; font-weight: 800; font-stretch: 110%; letter-spacing: -.02em; }
+.card .big em { font-style: normal; color: #ff4a3d; }
+.card .tag { display: inline-block; margin-top: 30px; padding: 12px 24px; border: 3px solid #3a3a40; border-radius: 14px; font-size: 34px; font-weight: 700; color: #d2d2d7; }
+.chart { position: absolute; left: 72px; right: 72px; top: 270px; opacity: 0; }
+.chart .unit { margin: 0 0 26px; font-size: 26px; font-weight: 600; color: #b4b4bb; }
+.row { margin-bottom: 30px; }
+.row .name { font-size: 30px; font-weight: 700; margin-bottom: 10px; }
+.row .bar { display: flex; align-items: center; gap: 18px; }
+.row .fill { height: 34px; border-radius: 4px; background: #ff4a3d; }
+.row.ref .fill { background: #5a5a62; }
+.row .val { font-size: 34px; font-weight: 800; white-space: nowrap; }
+.row .val small { font-size: 28px; color: #ff4a3d; margin-left: 10px; }
+.chart .src { margin: 6px 0 0; font-size: 24px; color: #b4b4bb; }
+</style>
+</head>
+<body>
+<h1 class="title" id="title">HVO : que<br>change&#8209;t&#8209;il<br><em>pour un groupe</em> ?</h1>
+<div class="card" id="c1"><p class="big">En France, le HVO s'appelle <em>« gazole XTL »</em>.</p><span class="tag">Norme NF EN 15940</span></div>
+<div class="card" id="c2"><p class="big">Seulement dans un <em>moteur compatible</em>.</p><span class="tag">Règle française : arrêté du 26 juin 2024</span></div>
+<div class="chart" id="chart">
+  <p class="unit">Émissions sur le cycle de vie, en kg CO₂e par GJ</p>
+  <div class="row ref"><div class="name">Gazole non routier</div><div class="bar"><div class="fill" id="b0"></div><span class="val" id="v0">89,4</span></div></div>
+  <div class="row"><div class="name">HVO 100, huiles alimentaires usagées</div><div class="bar"><div class="fill" id="b1"></div><span class="val" id="v1">15,8<small>− 82 %</small></span></div></div>
+  <div class="row"><div class="name">HVO 100, graisses animales</div><div class="bar"><div class="fill" id="b2"></div><span class="val" id="v2">20,7<small>− 77 %</small></span></div></div>
+  <p class="src">Source : Base Carbone de l'ADEME, sans changement d'affectation des sols.</p>
+</div>
+<div class="outro" id="outro"><p class="kicker">Le sais-tu ?</p><h2>Le HVO prend la place du gazole,<br><em>dans un moteur qui l'accepte</em>.</h2><p>Toute l'explication sur darkside-energy.com</p></div>
+<script>
+window.VIDEO = {
+  duration: 24,
+  caps: [
+    [3.6, 8.0, "Un gazole obtenu par <em>hydrotraitement</em> d'huiles et de graisses."],
+    [8.0, 12.2, "Pour un groupe, c'est <em>l'accord du constructeur</em> du moteur qui compte."],
+    [12.2, 20.6, "Sur son cycle de vie : de <em>77 à 82 %</em> d'émissions en moins."],
+  ],
+  scene(t, { ease, win }) {
+    const $ = (id) => document.getElementById(id);
+    $("title").style.opacity = win(t, 0.2, 3.4, 0.5);
+    $("title").style.transform = `translateY(${(1 - ease((t - 0.2) / 0.6)) * 30}px)`;
+    $("c1").style.opacity = win(t, 3.6, 7.9, 0.4);
+    $("c2").style.opacity = win(t, 8.1, 12.1, 0.4);
+    $("chart").style.opacity = win(t, 12.3, 20.7, 0.5);
+    // Barres proportionnelles aux valeurs (89,4 = pleine largeur utile), puis chiffres
+    const W = 700;
+    [[89.4, 12.6], [15.8, 13.4], [20.7, 14.0]].forEach(([v, start], i) => {
+      $(`b${i}`).style.width = `${(W * v / 89.4) * ease((t - start) / 0.9)}px`;
+      $(`v${i}`).style.opacity = ease((t - start - 0.7) / 0.4);
+    });
+    const o = ease((t - 20.8) / 0.7);
+    $("outro").style.opacity = o;
+    $("kicker").style.opacity = 1 - o;
+  },
+};
+</script>
+<script src="_base.js"></script>
+</body></html>

@@ -10,7 +10,8 @@ Règles françaises d'abord (demande de Damien du 04/11/2026) : textes et bases 
 - Lundi, émissions (Base Carbone de l'ADEME, jeu de données ouvert « Base carbone® » sur data.ademe.fr, lu le 05/11/2026, éléments au statut « Valide générique ») : gazole non routier 89,4 kg CO2e/GJ PCI (élément 13990) et 3,16 kg CO2e/litre (élément 14015) ; HVO 100 à base d'huiles alimentaires usagées, sans changement d'affectation des sols, 15,8 kg CO2e/GJ PCI (élément 34920) et 0,544 kg CO2e/litre (élément 37112) ; HVO 100 à base de graisses animales, sans changement d'affectation des sols, 20,7 kg CO2e/GJ PCI (élément 34921) et 0,712 kg CO2e/litre (élément 37113). Écarts calculés à énergie égale : 1 − 15,8 ÷ 89,4 = 82,3 %, arrondi à 82 % ; 1 − 20,7 ÷ 89,4 = 76,8 %, arrondi à 77 % (calcul). Le chiffre de 83 % annoncé par un distributeur (comparaison par litre avec le gazole routier B7 à 3,1 kg CO2e/litre) et son « jusqu'à 90 % » ne sont pas repris. Retirés faute de vérification : comparaison de masse volumique et de consommation avec le gazole, avis de constructeurs.
 - Lundi, offre de Dark Side Energy : groupes HVO et cuve HVO (pages Énergie responsable et Matériel du site). **À valider par Damien** : formulation « groupes au HVO » dans la phrase de liaison ; aucun modèle de groupe compatible n'est cité.
 - Mardi, bilan de puissance : informations demandées par le bilan en ligne (désignation, zone, quantité, puissance unitaire en W, type mono ou tri, phase, cos φ, foisonnement, réseau disponible triphasé 400 V ou monophasé 230 V, réserve de puissance) et mentions « plaque signalétique ou fiche technique », « données terrain accumulées depuis 2016 », « conditions de pose, sélectivité, régimes de fonctionnement et criticité des charges restent à vérifier » (site/bilan-de-puissance/). Exemple calculé avec powerBalance de site/assets/js/elec.js, réserve de 20 % (valeur par défaut du bilan), cos φ 1 retenu pour l'exemple : 10 × 1 000 W, foisonnement 1 : 10 kVA, 43,48 A, 52,17 A avec la réserve, calibre 63 A, P17 63 A monophasé, source 12 kVA ; foisonnement 0,6 : 6 kVA, 26,09 A, 31,30 A avec la réserve, calibre 32 A, P17 32 A monophasé, source 7,2 kVA.
-- Mercredi, calcul avec recommendLine de site/assets/js/elec.js, 32 A en triphasé 400 V, cos φ 0,9 : câble 5G6, 2,37 % sur 50 m, 7,12 % sur 150 m (371,7 V en bout de ligne) ; section minimale sur 150 m : 10 mm² (4,30 %) ; câble du parc qui convient : 5G16 (2,71 %). Limite de 5 % pour les usages autres que l'éclairage, installation alimentée par le réseau public basse tension (NF C 15-100, d'après le Guide de l'installation électrique Schneider, page « Limite maximale de la chute de tension », vérifié le 22/10/2026 pour la publication du 5/11).
+- Mercredi, vidéo du groupe Twin : textes repris de l'article en ligne « groupe Twin zéro coupure » (/news/groupe-twin-zero-coupure/) et du lexique (« Groupe Twin zéro coupure ») : deux groupes synchronisés, chacun 50 % de la charge, chacun dimensionné pour la reprendre seul, reprise sans coupure par le groupe déjà en route, ordinateurs et consoles son et lumière qui restent alimentés. Le vrai ou faux sur la longueur des câbles passe en réserve (calendrier).
+- Vidéos : animations sans son (légendes à l'écran), 24 s, 1080 × 1080, fabriquées par tools/videos.mjs ; la vidéo du lundi reprend les valeurs du lundi ci-dessus (arrêté du 26/06/2024, Base Carbone de l'ADEME).
 - Jeudi, calcul avec convert et recommendLine de site/assets/js/elec.js, cos φ 0,9 par défaut : 25 kW en monophasé 230 V : 27,78 kVA, 120,77 A ; 120,77 ÷ 32 = 3,77 (calcul) ; message de la calculette au-delà de 32 A en monophasé : « pas de câble monophasé dans notre parc, passez en triphasé » (site/assets/js/calculette.js) ; 25 kW en triphasé 400 V : 40,09 A, P17 63 A triphasé, câble 5G16, 63,6 % du calibre.
 - Vendredi : photo des câbles au pied des conteneurs (site/assets/img/conteneurs-cables-1600.jpg, publiée sur la page d'accueil depuis le 12/10/2026 ; plaque du pick-up et étiquettes à droite déjà floutées). Nouvelles zones floutées pour le visuel : logo du pick-up, étiquettes des bouteilles d'eau, deux autocollants sur le conteneur sombre. Visibles sur la photo : câbles sortant des conteneurs sous des protections grises, posés au sol en faisceaux parallèles. **À valider par Damien** : droits sur la photo pour les réseaux sociaux (calendrier).
 
@@ -18,7 +19,8 @@ Règles françaises d'abord (demande de Damien du 04/11/2026) : textes et bases 
 
 ## Lundi 16/11 · Le sais-tu ? (article du site)
 
-**Visuel** : `2026-11-16-lundi.png`
+**Vidéo** : `hvo-emissions.mp4` (24 s, animation `editorial/videos/hvo-emissions.html`)
+**Visuel** : `2026-11-16-lundi.png` (visuel de secours)
 **Lien** : https://www.darkside-energy.com/news/hvo-groupe-electrogene/
 
 **LinkedIn**
@@ -64,27 +66,26 @@ Règles françaises d'abord (demande de Damien du 04/11/2026) : textes et bases 
 
 ---
 
-## Mercredi 18/11 · Vrai ou faux
+## Mercredi 18/11 · En vidéo
 
-**Visuel** : `2026-11-18-mercredi.png`
-**Lien** : https://www.darkside-energy.com/news/section-de-cable/
+**Vidéo** : `groupe-twin-zero-coupure.mp4` (24 s, animation `editorial/videos/groupe-twin-zero-coupure.html`)
+**Visuel** : `2026-11-18-mercredi.png` (visuel de secours)
+**Lien** : https://www.darkside-energy.com/news/groupe-twin-zero-coupure/
 
 **LinkedIn**
 
-> Vrai ou faux : à intensité égale, plus le câble est long, plus sa section doit être grosse.
+> Groupe Twin zéro coupure : comment passe-t-on d'un groupe à l'autre sans coupure ?
 >
-> Réponse : vrai.
+> Deux groupes électrogènes synchronisés fournissent chacun 50 % de la charge, et chacun est dimensionné pour la reprendre seul. Si l'un tombe en panne, l'autre, déjà en route, reprend toute la charge : ordinateurs et consoles son et lumière restent alimentés.
 >
-> La chute de tension augmente avec la longueur. Exemple avec la calculette, 32 A en triphasé 400 V et un cos φ de 0,9 : un câble 5G6 perd 2,37 % sur 50 m, mais 7,12 % sur 150 m. C'est au-delà des 5 % de la NF C 15-100 pour les usages autres que l'éclairage, sur une installation alimentée par le réseau public. Sur 150 m, il faut au moins 10 mm².
+> Toute l'explication dans notre « Le sais-tu ? » :
+> https://www.darkside-energy.com/news/groupe-twin-zero-coupure/
 >
-> La section dépend de l'intensité, mais aussi de la longueur :
-> https://www.darkside-energy.com/news/section-de-cable/
->
-> #événementiel #distributionélectrique #câbles
+> #événementiel #groupeélectrogène #distributionélectrique
 
 **Facebook**
 
-> ❓ Vrai ou faux : à intensité égale, plus le câble est long, plus sa section doit être grosse ? Vrai ! 32 A sur 150 m en 5G6 : 7,12 % de chute de tension 👉 https://www.darkside-energy.com/news/section-de-cable/
+> 🎬 Deux groupes synchronisés, chacun à 50 % de la charge : si l'un tombe en panne, l'autre reprend tout, sans coupure 👉 https://www.darkside-energy.com/news/groupe-twin-zero-coupure/
 
 ---
 
