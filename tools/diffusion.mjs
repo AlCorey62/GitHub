@@ -8,6 +8,9 @@
 //   LinkedIn : visuel et texte sur la page (API Community Management : /rest/images puis /rest/posts),
 //              depuis la semaine du 2/11/2026 (mis en route le 4/11/2026 à la demande de Damien) ;
 //              avant, les posts LinkedIn étaient programmés à la main.
+// Vidéo : si le jour porte une ligne « **Vidéo** » (MP4 fabriqué par tools/videos.mjs), elle est envoyée à la place
+// du visuel (Facebook : POST /<page>/videos ; LinkedIn : /rest/videos puis /rest/posts). Si le réseau refuse la vidéo
+// avant toute publication, le visuel est envoyé à la place, avec un avertissement dans le journal de la tâche.
 // Avant l'envoi, le lien doit répondre sur le site (l'article du jour doit être en ligne).
 // Chaque envoi est noté dans editorial/semaines/<lundi>/diffusion.json : rien n'est jamais envoyé deux fois.
 // Un réseau en échec n'empêche pas l'envoi sur l'autre ; la tâche finit alors en erreur.
@@ -16,8 +19,8 @@
 // --hors-programme   envoie la publication « Hors programme » du jour (section en plus, ajoutée et validée par
 //                    Damien), notée à part dans le journal, sur Facebook et LinkedIn
 // --essai            affiche ce qui serait envoyé, sans rien envoyer
-// --verifier         teste les accès sans rien publier (Facebook : photo non publiée, aussitôt supprimée ;
-//                    LinkedIn : lecture de la dernière publication de la page)
+// --verifier         teste les accès sans rien publier (Facebook : photo et vidéo non publiées, aussitôt supprimées ;
+//                    LinkedIn : lecture de la dernière publication de la page et envoi d'une vidéo de test, sans publication)
 //
 // Accès : secrets GitHub FACEBOOK_PAGE_ID et FACEBOOK_PAGE_TOKEN ; LINKEDIN_ORG_ID, et pour le jeton LinkedIn
 // soit LINKEDIN_REFRESH_TOKEN, LINKEDIN_CLIENT_ID et LINKEDIN_CLIENT_SECRET (jeton neuf obtenu à chaque passage,
@@ -32,6 +35,11 @@ import { lireSemaine, addDays, little } from "./publications.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const GRAPH = process.env.FACEBOOK_GRAPH_URL || "https://graph.facebook.com/v26.0"; // adresse modifiable pour les essais
+// Les vidéos s'envoient sur l'adresse dédiée de l'API Graph
+const GRAPH_VIDEO = process.env.FACEBOOK_GRAPH_VIDEO_URL || GRAPH.replace("://graph.facebook.com", "://graph-video.facebook.com");
+// Dossier des semaines (modifiable pour les tests) et vidéo de test du mode --verifier
+const SEMAINES = process.env.DIFFUSION_SEMAINES || join(ROOT, "editorial", "semaines");
+const VIDEO_TEST = join(ROOT, "tools", "essai-video.mp4");
 const LI_API = process.env.LINKEDIN_API_URL || "https://api.linkedin.com/rest"; // idem
 const LI_OAUTH = process.env.LINKEDIN_OAUTH_URL || "https://www.linkedin.com/oauth/v2/accessToken"; // idem
 // Version mensuelle de l'API LinkedIn, chacune maintenue au moins un an : à passer à une version récente chaque année.
@@ -60,13 +68,13 @@ const error = (msg) => console.log(process.env.GITHUB_ACTIONS ? `::error::${msg}
 const secret = (name) => (process.env[name] || "").trim().replace(/^["']|["']$/g, "");
 const FB = { page: secret("FACEBOOK_PAGE_ID"), token: secret("FACEBOOK_PAGE_TOKEN") };
 
-async function graph(method, path, form) {
-  const url = new URL(`${GRAPH}/${path}`);
+async function graph(method, path, form, base = GRAPH) {
+  const url = new URL(`${base}/${path}`);
   if (form) form.append("access_token", FB.token);
   else url.searchParams.set("access_token", FB.token);
   const res = await fetch(url, { method, body: form });
   const json = await res.json().catch(() => ({}));
-  if (!res.ok || json.error) throw new Error(`Facebook a refusé l'envoi (${res.status}) : ${json.error?.message || "réponse illisible"}`);
+  if (!res.ok || json.error) throw Object.assign(new Error(`Facebook a refusé l'envoi (${res.status}) : ${json.error?.message || "réponse illisible"}`), { refus: true });
   return json;
 }
 
@@ -83,6 +91,14 @@ function photo(file, caption, published) {
   if (caption) form.append("caption", caption);
   form.append("published", String(published));
   return graph("POST", `${FB.page}/photos`, form);
+}
+
+function video(file, description, published) {
+  const form = new FormData();
+  form.append("source", new Blob([readFileSync(file)], { type: "video/mp4" }), "video.mp4");
+  if (description) form.append("description", description);
+  form.append("published", String(published));
+  return graph("POST", `${FB.page}/videos`, form, GRAPH_VIDEO);
 }
 
 // --- LinkedIn -----------------------------------------------------------------------------
@@ -158,14 +174,45 @@ async function linkedinImage(file) {
   throw new Error("Visuel toujours en traitement chez LinkedIn après 30 s : rien n'est publié.");
 }
 
-async function linkedinPost(text, file, altText) {
-  const image = await linkedinImage(file);
+// Envoi d'une vidéo : déclaration (taille du fichier), envoi des morceaux indiqués par LinkedIn, finalisation avec
+// les identifiants (ETag) des morceaux, puis attente de la fin du traitement. Rien n'est publié à cette étape.
+async function linkedinVideo(file) {
+  const data = readFileSync(file);
+  const { json } = await linkedin("POST", "videos?action=initializeUpload", {
+    initializeUploadRequest: { owner: author(), fileSizeBytes: data.length, uploadCaptions: false, uploadThumbnail: false },
+  });
+  const { video, uploadInstructions = [], uploadToken = "" } = json.value || {};
+  if (!video || !uploadInstructions.length) throw new Error("LinkedIn n'a pas donné d'adresse d'envoi pour la vidéo.");
+  const parts = [];
+  for (const { uploadUrl, firstByte, lastByte } of uploadInstructions) {
+    const up = await fetch(uploadUrl, {
+      method: "PUT",
+      headers: { Authorization: `Bearer ${(await accessToken()).token}`, "Content-Type": "application/octet-stream" },
+      body: data.subarray(firstByte, lastByte + 1),
+    });
+    const etag = up.headers.get("etag");
+    if (!up.ok || !etag) throw new Error(`LinkedIn a refusé la vidéo (${up.status}).`);
+    parts.push(etag);
+  }
+  await linkedin("POST", "videos?action=finalizeUpload", { finalizeUploadRequest: { video, uploadToken, uploadedPartIds: parts } });
+  for (let i = 0; i < 60; i++) {
+    const { json: v } = await linkedin("GET", `videos/${encodeURIComponent(video)}`);
+    if (v.status === "AVAILABLE") return video;
+    if (v.status === "PROCESSING_FAILED") throw new Error("LinkedIn n'a pas pu traiter la vidéo.");
+    await wait(Number(process.env.LINKEDIN_ATTENTE_MS || 5000));
+  }
+  throw new Error("Vidéo toujours en traitement chez LinkedIn après 5 min.");
+}
+
+// Publication avec une vidéo (media.title) ou un visuel (media.altText) déjà envoyés.
+async function linkedinPost(text, media, altText) {
+  const content = media.startsWith("urn:li:video:") ? { media: { id: media, ...(altText ? { title: altText } : {}) } } : { media: { id: media, ...(altText ? { altText } : {}) } };
   const { id } = await linkedin("POST", "posts", {
     author: author(),
     commentary: little(text),
     visibility: "PUBLIC",
     distribution: { feedDistribution: "MAIN_FEED", targetEntities: [], thirdPartyDistributionChannels: [] },
-    content: { media: { id: image, ...(altText ? { altText } : {}) } },
+    content,
     lifecycleState: "PUBLISHED",
     isReshareDisabledByAuthor: false,
   });
@@ -187,6 +234,14 @@ if (verifier) {
       failed = true;
       error(`Facebook : ${e.message}`);
     }
+    try {
+      const test = await video(VIDEO_TEST, "", false);
+      await graph("DELETE", test.id);
+      console.log("Envoi de vidéo Facebook vérifié : vidéo de test non publiée, envoyée puis supprimée.");
+    } catch (e) {
+      failed = true;
+      error(`Facebook, vidéo : ${e.message}`);
+    }
   } else notice("Facebook : accès non configuré.");
   if (liConfigured) {
     try {
@@ -204,6 +259,13 @@ if (verifier) {
       failed = true;
       error(`LinkedIn : ${e.message}`);
     }
+    try {
+      await linkedinVideo(VIDEO_TEST);
+      console.log("Envoi de vidéo LinkedIn vérifié : vidéo de test envoyée et traitée, sans publication.");
+    } catch (e) {
+      failed = true;
+      error(`LinkedIn, vidéo : ${e.message}`);
+    }
   } else notice("LinkedIn : accès non configuré.");
   process.exit(failed ? 1 : 0);
 }
@@ -216,7 +278,7 @@ if (pasAvant && !opt("--date") && paris({ hour: "2-digit", minute: "2-digit" }) 
 }
 
 const weekday = (new Date(`${today}T12:00:00Z`).getUTCDay() + 6) % 7;
-const weekDir = join(ROOT, "editorial", "semaines", addDays(today, -weekday));
+const weekDir = join(SEMAINES, addDays(today, -weekday));
 if (!existsSync(join(weekDir, "publications.md"))) {
   notice(`Aucune semaine préparée pour le ${today} : rien n'est envoyé.`);
   process.exit(0);
@@ -244,6 +306,13 @@ const note = (network, data) => {
 
 const visual = join(weekDir, day.visual);
 if (!day.visual || !existsSync(visual)) throw new Error(`Visuel introuvable pour ${day.head} : ${day.visual || "non indiqué"}`);
+// Vidéo du jour (facultative) ; le visuel reste le visuel de secours
+let videoFile = day.video ? join(weekDir, day.video) : "";
+if (videoFile && !existsSync(videoFile)) {
+  warning(`Vidéo introuvable pour ${day.head} : ${day.video} ; le visuel est envoyé à la place.`);
+  videoFile = "";
+}
+const support = (n) => (videoFile ? `Visuel : ${day.visual}\nVidéo : ${day.video}` : `Visuel : ${day.visual}${n}`);
 
 // Texte alternatif du visuel (titre et sous-titre de visuels.json), pour LinkedIn
 const visuels = existsSync(join(weekDir, "visuels.json")) ? JSON.parse(readFileSync(join(weekDir, "visuels.json"), "utf8")) : [];
@@ -254,14 +323,14 @@ const altText = v ? [v.titre, v.sousTitre].filter(Boolean).join(" ").replace(/\*
 const todo = [];
 if (journal[key]?.facebook) console.log(`Facebook : déjà envoyé le ${journal[key].facebook.le}.`);
 else if (!day.facebook) warning(`Facebook : pas de texte pour ${day.head}.`);
-else if (essai) console.log(`Facebook (essai, rien n'est envoyé)\nVisuel : ${day.visual}\n\n${day.facebook}\n`);
+else if (essai) console.log(`Facebook (essai, rien n'est envoyé)\n${support("")}\n\n${day.facebook}\n`);
 else if (!FB.page || !FB.token) notice("Facebook : accès non configuré (secrets FACEBOOK_PAGE_ID et FACEBOOK_PAGE_TOKEN), rien n'est envoyé.");
 else todo.push("facebook");
 
 if (today < LI_DEPUIS && !horsProgramme) console.log(`LinkedIn : avant le ${LI_DEPUIS}, les posts étaient programmés à la main ; rien n'est envoyé.`);
 else if (journal[key]?.linkedin) console.log(`LinkedIn : déjà envoyé le ${journal[key].linkedin.le}.`);
 else if (!day.linkedin) warning(`LinkedIn : pas de texte pour ${day.head}.`);
-else if (essai) console.log(`LinkedIn (essai, rien n'est envoyé)\nVisuel : ${day.visual}${altText ? ` (texte alternatif : ${altText})` : ""}\n\n${day.linkedin}\n`);
+else if (essai) console.log(`LinkedIn (essai, rien n'est envoyé)\n${support(altText ? ` (texte alternatif : ${altText})` : "")}\n\n${day.linkedin}\n`);
 else if (!liConfigured) notice("LinkedIn : accès non configuré (secrets LINKEDIN_ORG_ID et jeton), rien n'est envoyé.");
 else todo.push("linkedin");
 
@@ -275,13 +344,36 @@ for (const network of todo) {
   try {
     if (network === "facebook") {
       await pageName();
-      const sent = await photo(visual, day.facebook, true);
-      note("facebook", { id: sent.id, post: sent.post_id });
-      console.log(`Facebook : publié (${sent.post_id}).`);
+      let sent = null;
+      if (videoFile) {
+        try {
+          const v = await video(videoFile, day.facebook, true);
+          sent = { id: v.id, video: day.video };
+          console.log(`Facebook : vidéo publiée (${v.id}).`);
+        } catch (e) {
+          // Visuel de secours seulement si Facebook a refusé la vidéo : sans réponse, elle a pu être publiée
+          if (!e.refus) throw e;
+          warning(`Facebook : vidéo refusée (${e.message}) ; le visuel est envoyé à la place.`);
+        }
+      }
+      if (!sent) {
+        const p = await photo(visual, day.facebook, true);
+        sent = { id: p.id, post: p.post_id };
+        console.log(`Facebook : publié (${p.post_id}).`);
+      }
+      note("facebook", sent);
     } else {
-      const post = await linkedinPost(day.linkedin, visual, altText);
-      note("linkedin", { post });
-      console.log(`LinkedIn : publié (${post}).`);
+      let media = null;
+      if (videoFile) {
+        try {
+          media = await linkedinVideo(videoFile);
+        } catch (e) {
+          warning(`LinkedIn : vidéo refusée (${e.message}) ; le visuel est envoyé à la place.`);
+        }
+      }
+      const post = await linkedinPost(day.linkedin, media || (await linkedinImage(visual)), altText);
+      note("linkedin", { post, ...(media ? { video: day.video } : {}) });
+      console.log(`LinkedIn : publié${media ? " avec la vidéo" : ""} (${post}).`);
     }
   } catch (e) {
     failed = true;

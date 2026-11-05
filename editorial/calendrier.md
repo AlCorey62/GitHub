@@ -1,5 +1,7 @@
 # Calendrier éditorial
 
+Vidéos le lundi et le mercredi depuis la semaine du 16/11/2026 (demande de Damien du 05/11/2026).
+
 Statuts : `prévu` (sujet retenu), `rédigé` (en attente de validation), `validé` (programmé), `publié`, `reporté`.
 Les sujets marqués **à valider** reposent sur des valeurs que Damien confirme avant publication.
 
@@ -36,23 +38,27 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : à quoi il sert (RA × IΔn ≤ 50 V) **à vérifier** : TT ou TN-S selon la liaison du neutre du groupe (IET Wiring Matters 2011), pour ne pas contredire l'article « TT ou TN » (en attente) | prévu |
-| Mar 10/11 | Cas terrain n° 2 (site) | Selon `anecdotes.md` ; à défaut : Powerlock, pourquoi on branche la terre en premier **à valider** : ordre de connexion pratiqué par nos équipes | prévu |
+| Lun 9/11 | Le sais-tu ? (site) | Le piquet de terre près du groupe : référence en TN-S, chemin du courant de défaut en TT (RA × IΔn ≤ UL, NF C 15-100), masses reliées à une même terre, mesure ; réécrit selon les règles françaises d'abord ; cohérent avec l'article « TT ou TN » en attente | validé |
+| Mar 10/11 | Le sais-tu ? (site, aucune anecdote disponible) | Powerlock : pourquoi brancher la terre en premier (terre, neutre, L1, L2, L3 ; débranchement dans l'ordre inverse) | validé |
 | Mer 11/11 | (férié) | Pas de publication | |
-| Jeu 12/11 | Calculette | Réseaux étrangers : les mêmes kilowatts ne font pas les mêmes ampères en 120/208 V | prévu |
-| Ven 13/11 | Coulisses | Parc de groupes électrogènes de nuit, mât d'éclairage | prévu |
+| Jeu 12/11 | Calculette | Réseaux étrangers : 30 kW triphasé, 48,11 A en 400 V, 92,52 A en 208 V | validé |
+| Ven 13/11 | Coulisses | Parc de groupes électrogènes de nuit, mât d'éclairage (photo floutée) | validé |
 
 ## Semaine du 16 novembre 2026
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 16/11 | Le sais-tu ? (site) | HVO : le carburant renouvelable de nos groupes **à valider** : groupes compatibles et chiffres retenus | prévu |
-| Mar 17/11 | Cas terrain n° 3 (site) | Selon `anecdotes.md` ; à défaut : bilan de puissance, les cinq informations à réunir avant de demander une étude | prévu |
-| Mer 18/11 | Vrai ou faux | « À intensité égale, plus le câble est long, plus sa section doit être grosse. » Vrai | prévu |
-| Jeu 19/11 | Calculette | 25 kW en monophasé : pourquoi une P17 32 A ne suffit pas | prévu |
-| Ven 20/11 | Coulisses | Câbles au pied des conteneurs **à valider** : droits sur la photo | prévu |
+| Lun 16/11 | Le sais-tu ? (site) et vidéo | HVO : le gazole XTL en France (arrêté du 26/06/2024, NF EN 15940), moteur compatible selon son constructeur, 77 à 82 % d'émissions en moins sur le cycle de vie (Base Carbone de l'ADEME) ; formulation « groupes au HVO » validée, aucun modèle cité | validé |
+| Mar 17/11 | Le sais-tu ? (site, aucune anecdote disponible) | Bilan de puissance : les cinq informations à réunir avant de demander une étude ; exemple du foisonnement (P17 63 A ou 32 A) | validé |
+| Mer 18/11 | En vidéo | Groupe Twin zéro coupure : deux groupes synchronisés, chacun à 50 % ; si l'un tombe en panne, l'autre reprend tout (lien vers l'article en ligne) | validé |
+| Jeu 19/11 | Calculette | 25 kW en monophasé : 120,77 A, une P17 32 A ne suffit pas ; en triphasé, 40,09 A et une P17 63 A | validé |
+| Ven 20/11 | Coulisses | Câbles au pied des conteneurs (photo floutée) droits sur la photo validés | validé |
 
 ## Réserve de sujets
+
+- Vrai ou faux : « À intensité égale, plus le câble est long, plus sa section doit être grosse. » Vrai (rédigé pour le 18/11, remplacé par la vidéo du groupe Twin)
+- En vidéo : l'inverseur normal/secours (règles françaises à vérifier)
+- En vidéo : l'ASI (onduleur, UPS) en événementiel (règles françaises à vérifier)
 
 - Le différentiel : pourquoi on le teste avec le bouton « T »
 - Habilitations électriques : que veulent dire B2V, BR, BC, H0 (norme NF C 18-510)

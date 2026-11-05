@@ -6,6 +6,7 @@ Depuis le 27/10/2026, c'est une tâche programmée Claude, du lundi au vendredi 
 
 - Elle ne publie que les semaines validées : ligne `Statut : **validé par Damien le JJ/MM/AAAA**` dans `semaines/AAAA-MM-JJ/publications.md`.
 - Elle prend le texte, le visuel et le lien du jour, et vérifie d'abord que le lien répond sur le site.
+- Vidéo (lundi et mercredi) : quand le jour porte une ligne `**Vidéo**`, la vidéo part à la place du visuel, sur Facebook et sur LinkedIn. Si un réseau la refuse avant toute publication, le visuel part à la place et le journal de la tâche le signale. Le mode « verifier » teste aussi l'envoi d'une vidéo (Facebook : vidéo non publiée, aussitôt supprimée ; LinkedIn : vidéo envoyée sans publication).
 - Elle vérifie aussi que le jeton donne accès à la page Dark Side Energy et pas à une autre page gérée par le même compte. Sinon, elle n'envoie rien.
 - Chaque envoi est noté dans `semaines/AAAA-MM-JJ/diffusion.json` : rien n'est publié deux fois, même avec les passages de secours.
 - Publication en plus du programme : section `## Jour JJ/MM · Hors programme · …` dans `publications.md` de la semaine (une seule par jour, ajoutée et validée par Damien), avec son visuel. Elle ne part qu'à la demande : onglet *Actions*, « Diffusion réseaux sociaux », *Run workflow*, mode « hors-programme ». Elle est publiée sur Facebook et sur LinkedIn, et notée à part dans le journal (« AAAA-MM-JJ hors programme »).

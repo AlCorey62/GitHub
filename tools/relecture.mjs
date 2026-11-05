@@ -78,6 +78,13 @@ const cards = days.map((d, i) => {
       img = `<img class="visual" src="${esc(name)}" width="1200" height="1200" alt="Visuel de la publication du ${esc(when)}" loading="${i < 2 ? "eager" : "lazy"}">`;
     }
   }
+  // Vidéo du jour : affichée à la place du visuel, qui sert d'image d'attente (et de visuel de secours à la diffusion)
+  if (d.video && existsSync(join(week, d.video))) {
+    copyFileSync(join(week, d.video), join(out, d.video));
+    files[d.video] = d.video;
+    const poster = d.visual && files[d.visual] ? ` poster="${esc(d.visual)}"` : "";
+    img = `<video class="visual" src="${esc(d.video)}"${poster} width="1080" height="1080" controls muted playsinline preload="metadata" aria-label="Vidéo de la publication du ${esc(when)}"></video>`;
+  }
   const block = (label, text, id) =>
     text
       ? `<section class="post" aria-label="${label}">
@@ -194,7 +201,7 @@ ${siteDiagramCss()}` : ""}
   </header>
   <div class="how">
     <p><strong>Pour valider</strong> : répondez « ok » à Claude dans la conversation, ou indiquez ce qu'il faut changer, jour par jour.</p>
-    <p>Une fois validés, les articles sont mis en ligne automatiquement le jour prévu. Les publications LinkedIn et Facebook se programment avec les textes ci-dessous (bouton Copier) et les visuels.</p>
+    <p>Une fois la semaine validée, les articles sont mis en ligne et les publications partent sur Facebook et LinkedIn automatiquement, le jour prévu. Les textes restent copiables (bouton Copier).</p>
   </div>
   ${notes
     .map(

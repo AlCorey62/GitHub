@@ -29,6 +29,11 @@ test("semaines : jours, textes, visuels et liens", () => {
       assert.ok(d.linkedin, `${where} : texte LinkedIn manquant`);
       assert.ok(d.facebook, `${where} : texte Facebook manquant`);
       assert.ok(d.visual && existsSync(join(WEEKS, dir, d.visual)), `${where} : visuel manquant`);
+      // Vidéo facultative : MP4 dans le dossier de la semaine et son animation dans editorial/videos
+      if (d.video) {
+        assert.ok(existsSync(join(WEEKS, dir, d.video)), `${where} : vidéo ${d.video} manquante (node tools/videos.mjs)`);
+        assert.ok(existsSync(join(ROOT, "editorial", "videos", d.video.replace(/\.mp4$/, ".html"))), `${where} : animation de ${d.video} manquante`);
+      }
       assert.match(d.link, /^https:\/\/www\.darkside-energy\.com\//, `${where} : lien vers le site attendu`);
       for (const text of [d.linkedin, d.facebook]) {
         assert.ok(!text.includes("\u2014"), `${where} : tiret cadratin`);
