@@ -14,6 +14,7 @@
 - Ne jamais inventer une donnée : chiffres, normes, valeurs, durées, retours d'expérience.
 - Vérifier soi-même chaque valeur chiffrée ou normative avant de l'écrire (sources, calculs) et lister ces vérifications dans la section « Valeurs vérifiées » de `publications.md`. Ce qui ne peut pas être vérifié est retiré, pas renvoyé à Damien.
 - Normes et valeurs : citer la référence (NF C 15-100, NF C 18-510, IEC 60309…) et rester aux valeurs établies. Les calculs sont faits avec `site/assets/js/elec.js` (mêmes formules que la calculette) et le détail est donné.
+- Règles françaises d'abord (demande de Damien du 04/11/2026) : s'appuyer en priorité sur les règles applicables en France (NF C 15-100, textes réglementaires, guides et organismes français). Une recommandation étrangère (Suisse, Royaume-Uni ou autre) n'est citée que si elle est plus stricte que la règle française, en le disant. Une valeur française impossible à vérifier (norme payante non lue) n'est jamais remplacée par une valeur étrangère : elle est retirée ou soumise à Damien.
 - Hypothèses signalées comme telles (« cos φ de 0,9 retenu par défaut »).
 - Les cas terrain viennent uniquement de `anecdotes.md` : pas d'anecdote inventée.
 

@@ -194,7 +194,7 @@ ${siteDiagramCss()}` : ""}
   </header>
   <div class="how">
     <p><strong>Pour valider</strong> : répondez « ok » à Claude dans la conversation, ou indiquez ce qu'il faut changer, jour par jour.</p>
-    <p>Une fois validés, les articles sont mis en ligne automatiquement le jour prévu. Les publications LinkedIn et Facebook se programment avec les textes ci-dessous (bouton Copier) et les visuels.</p>
+    <p>Une fois la semaine validée, les articles sont mis en ligne et les publications partent sur Facebook et LinkedIn automatiquement, le jour prévu. Les textes restent copiables (bouton Copier).</p>
   </div>
   ${notes
     .map(

@@ -46,11 +46,11 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 
 | Jour | Format | Sujet | Statut |
 |---|---|---|---|
-| Lun 16/11 | Le sais-tu ? (site) | HVO : le carburant renouvelable de nos groupes **à valider** : groupes compatibles et chiffres retenus | prévu |
-| Mar 17/11 | Cas terrain n° 3 (site) | Selon `anecdotes.md` ; à défaut : bilan de puissance, les cinq informations à réunir avant de demander une étude | prévu |
-| Mer 18/11 | Vrai ou faux | « À intensité égale, plus le câble est long, plus sa section doit être grosse. » Vrai | prévu |
-| Jeu 19/11 | Calculette | 25 kW en monophasé : pourquoi une P17 32 A ne suffit pas | prévu |
-| Ven 20/11 | Coulisses | Câbles au pied des conteneurs **à valider** : droits sur la photo | prévu |
+| Lun 16/11 | Le sais-tu ? (site) | HVO : le gazole XTL en France (arrêté du 26/06/2024, NF EN 15940), moteur compatible selon son constructeur, 77 à 82 % d'émissions en moins sur le cycle de vie (Base Carbone de l'ADEME) ; **à valider** : formulation « groupes au HVO », aucun modèle cité | rédigé |
+| Mar 17/11 | Le sais-tu ? (site, aucune anecdote disponible) | Bilan de puissance : les cinq informations à réunir avant de demander une étude ; exemple du foisonnement (P17 63 A ou 32 A) | rédigé |
+| Mer 18/11 | Vrai ou faux | « À intensité égale, plus le câble est long, plus sa section doit être grosse. » Vrai (32 A en triphasé, 5G6 : 2,37 % sur 50 m, 7,12 % sur 150 m) | rédigé |
+| Jeu 19/11 | Calculette | 25 kW en monophasé : 120,77 A, une P17 32 A ne suffit pas ; en triphasé, 40,09 A et une P17 63 A | rédigé |
+| Ven 20/11 | Coulisses | Câbles au pied des conteneurs (photo floutée) **à valider** : droits sur la photo pour les réseaux sociaux | rédigé |
 
 ## Réserve de sujets
 
