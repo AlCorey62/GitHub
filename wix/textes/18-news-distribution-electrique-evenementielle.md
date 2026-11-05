@@ -1,12 +1,12 @@
 # Qu'est-ce que la distribution électrique événementielle ?
 
-8 mai 2017 · 2 min de lecture · Mis à jour le 25 septembre 2026
+8 mai 2017 · 2 min de lecture · Mis à jour le 28 octobre 2026
 
 - La distribution électrique événementielle part des alimentations du lieu pour amener l'électricité là où l'organisation en a besoin, en respectant les normes de sécurité.
 - En spectacle, les armoires sont placées derrière la scène, idéalement avec une source par corps de métier.
 - En salon, chaque stand a son coffret avec différentiel 30 mA : l'ilotage est interdit.
 
-Dark Side Energy est spécialisé dans la distribution électrique événementielle, ok, mais c'est quoi au juste ?
+Dark Side Energy est spécialisé dans la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique), ok, mais c'est quoi au juste ?
 
 Chaque événement est unique, et donc sa configuration également. Les salles et lieux prévus pour les événements sont équipés d'une ou plusieurs alimentations électriques générales.
 

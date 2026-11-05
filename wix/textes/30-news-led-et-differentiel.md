@@ -33,6 +33,8 @@ Retirer le différentiel, ou le remplacer par un modèle moins sensible, n'est j
 
 > Un différentiel qui saute avec des LED n'est pas en panne : il additionne des fuites. La réponse, c'est la répartition.
 
+Répartir les circuits fait partie de notre métier : la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique).
+
 Combien de circuits prévoir ? Listez vos appareils dans le bilan de puissance.
 
 [Ouvrir le bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance)

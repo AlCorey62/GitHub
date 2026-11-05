@@ -8,6 +8,18 @@ Beaucoup de calculs expliquent l'électricité, mais le but de ces articles est 
 
 ## Comprendre avant de brancher.
 
+Le sais-tu ? · 3 novembre 2026 · 3 min
+
+### [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
+
+Enroulé, un câble n'évacue plus sa chaleur : en trois couches sur son touret, un 3G2,5 ne tient plus les 16 A de sa prise.
+
+Le sais-tu ? · 2 novembre 2026 · 3 min
+
+### [Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
+
+Peu chargé, un groupe diesel reste froid, brûle mal son gasoil et s'encrasse : le remède se décide au bilan de puissance.
+
 Le sais-tu ? · 27 octobre 2026 · 2 min
 
 ### [Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/news/lire-une-prise-p17/)

@@ -1,4 +1,4 @@
-# Bilan de puissance.
+# Bilan de puissance événementiel.
 
 Listez vos appareils, indiquez leur puissance et leur coefficient de foisonnement : l'outil calcule la puissance à prévoir, le courant sur chaque phase et un calibre de raccordement indicatif.
 

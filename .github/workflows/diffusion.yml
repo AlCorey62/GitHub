@@ -1,9 +1,11 @@
 # Diffusion de la publication du jour sur les réseaux sociaux (voir tools/diffusion.mjs et editorial/RESEAUX.md).
 # Du lundi au vendredi, la publication du jour d'une semaine validée par Damien est envoyée sur la page Facebook
-# et, à partir du 9/11/2026, sur la page LinkedIn, puis notée dans editorial/semaines/<lundi>/diffusion.json, poussé sur main : rien n'est envoyé deux fois.
+# et, depuis le 4/11/2026, sur la page LinkedIn, puis notée dans editorial/semaines/<lundi>/diffusion.json, poussé sur main : rien n'est envoyé deux fois.
 # Lancement à la main (onglet Actions) : « verifier » teste l'accès sans rien publier, « publier » envoie
 # tout de suite la publication du jour, « hors-programme » envoie la publication en plus du jour (section
 # « Hors programme » de publications.md, ajoutée et validée par Damien), sur Facebook et LinkedIn.
+# Le champ « date » (facultatif, AAAA-MM-JJ) rattrape la publication d'un jour passé, par exemple quand
+# l'article n'était pas en ligne ce jour-là ; le journal empêche toujours de l'envoyer deux fois.
 # Mise en place avec l'accord de Damien (20/10/2026) ; LinkedIn ajouté après l'accord de LinkedIn (27/10/2026).
 name: Diffusion réseaux sociaux
 
@@ -21,6 +23,11 @@ on:
         type: choice
         options: [verifier, publier, hors-programme]
         default: verifier
+      date:
+        description: "Facultatif, AAAA-MM-JJ : rattrape la publication de ce jour (vide : la publication du jour)"
+        type: string
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -43,6 +50,7 @@ jobs:
       LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
       LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
       MODE: ${{ inputs.mode }}
+      DATE: ${{ inputs.date }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -57,8 +65,8 @@ jobs:
         run: |
           case "$MODE" in
             verifier) node tools/diffusion.mjs --verifier ;;
-            publier) node tools/diffusion.mjs ;;
-            hors-programme) node tools/diffusion.mjs --hors-programme ;;
+            publier) node tools/diffusion.mjs ${DATE:+--date "$DATE"} ;;
+            hors-programme) node tools/diffusion.mjs --hors-programme ${DATE:+--date "$DATE"} ;;
             *) node tools/diffusion.mjs --pas-avant 08:30 ;;
           esac
 

@@ -38,6 +38,8 @@ Pour résumer, le calibre et le réseau donnent le maximum de la prise. Le foiso
 
 > Ce qu'une prise peut donner n'est pas ce qu'il faut lui demander.
 
+Pour choisir les prises et les raccordements de votre événement, consultez notre [bureau d'étude électrique événementiel](https://www.darkside-energy.com/bureaudetude).
+
 Retrouvez la puissance de chaque connecteur et convertissez kVA, kW et ampères en un instant.
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro#reperes)

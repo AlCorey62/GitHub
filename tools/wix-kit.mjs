@@ -55,6 +55,8 @@ const SKIP = {
   "/contact/merci/": "Pas de page : message de confirmation du formulaire Wix",
   "/compte/": "Pas de page : l'espace client accompagne le bilan de puissance hébergé hors de Wix (Netlify Identity)",
   "/404.html": "Pas de page : page 404 de Wix (personnalisation facultative)",
+  "/avis/": "Pas de page : le questionnaire de satisfaction repose sur Netlify Forms et alimente la page des résultats",
+  "/resultats/": "Pas de page : page privée des résultats du questionnaire, servie par une fonction Netlify",
 };
 
 const decode = (s) =>

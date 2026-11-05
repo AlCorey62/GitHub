@@ -44,6 +44,7 @@ Quelle prise pour votre appareil ? La calculette propose la prise et le câble a
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#conversion)
 
+[Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
 [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/news/led-et-differentiel/)
 
 ## Un projet ? Parlons puissance.

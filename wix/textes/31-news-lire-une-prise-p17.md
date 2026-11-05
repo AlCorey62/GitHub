@@ -34,10 +34,13 @@ Le [calibre](https://www.darkside-energy.com/lexique#calibre) (16, 32, 63 ou 125
 
 > Bleu, c'est du 230 V. Rouge, c'est du 400 V. Et si la fiche ne rentre pas, ce n'est pas le moment de forcer.
 
+Prises, armoires et coffrets : c'est notre métier, la [distribution électrique événementielle](https://www.darkside-energy.com/distribution-electrique).
+
 Quelle prise pour votre appareil ? La calculette propose la prise et le câble adaptés.
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro#conversion)
 
+[Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/post/groupe-en-sous-charge)
 [Pourquoi les LED font-elles sauter les différentiels ?](https://www.darkside-energy.com/post/led-et-differentiel)
 
 ## Un projet ? Parlons puissance.
