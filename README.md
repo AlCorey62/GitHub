@@ -54,6 +54,7 @@ tools/
   diffusion.mjs            Diffusion de la publication du jour sur les réseaux sociaux (voir editorial/RESEAUX.md)
 editorial/                 Programme éditorial « Le sais-tu ? » : règles, calendrier, anecdotes, modèles,
                            articles en attente (a-paraitre/) et publications de la semaine (semaines/)
+outils/reperage-tdah/      Questionnaire personnel de repérage TDAH, hors site (non publié, voir son README.md)
 wix/                       Passation pour reconstruire le site dans Wix : note, plan des pages, textes,
                            données structurées (voir wix/README.md)
 tests/elec.test.mjs        Tests des formules électriques (conversions, chute de tension, réseaux, parc)
