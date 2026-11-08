@@ -188,7 +188,8 @@ input[type=number]:focus-visible{outline:3px solid var(--mark);outline-offset:1p
 .steps-list{margin:0;padding-left:1.3rem;display:grid;gap:.6rem}
 .steps-list li::marker{font-family:var(--f-mono);color:var(--muted)}
 .summary{width:100%;min-height:17rem;font-family:var(--f-mono);font-size:.78rem;line-height:1.55;padding:.8rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);resize:vertical}
-.copy-row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.copy-row,.actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.btn:disabled{opacity:.6;cursor:progress}
 details.block>summary{cursor:pointer;font-family:var(--f-display);font-size:1.22rem;list-style-position:outside}
 details.block[open]>summary{margin-bottom:.4rem}
 .table-wrap{overflow-x:auto}
@@ -381,6 +382,7 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script id="tdah-scoring">
 /* Données et calculs : fonctions pures, testées par scoring.test.mjs */
 (function (root) {
@@ -673,7 +675,10 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
   var reduceMotion = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   function $(sel, el) { return (el || document).querySelector(sel); }
   function $$(sel, el) { return Array.prototype.slice.call((el || document).querySelectorAll(sel)); }
-  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; })
+      .replace(/« /g, "«\u00A0").replace(/ »/g, "\u00A0»").replace(/ ([:;?!])/g, "\u00A0$1");
+  }
 
   function blank() { return { age: "", answers: {}, traits: {}, onset: null, duration: null, contexts: [], impact: {}, flags: [] }; }
   function load() {
@@ -872,6 +877,7 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
     else if (b.dataset.action === "example") showExample();
     else if (b.dataset.action === "own") { exitExample(); goTo(state.age === "" ? 0 : 1); }
     else if (b.dataset.action === "copy") copySummary(b);
+    else if (b.dataset.action === "pdf") exportPdf(b);
     else if (b.dataset.action === "reset") resetAnswers(b);
   });
 
@@ -906,8 +912,7 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
 
   function blockVerdict(r) {
     var v = T.VERDICTS[r.verdict];
-    var extra = (r.verdict === "tres-evocateur" || r.verdict === "evocateur" || r.verdict === "contexte-non")
-      ? '<p class="small muted">Un repérage positif signifie que cela mérite d\'être creusé, pas que le diagnostic est posé.</p>' : "";
+    var extra = isPositive(r) ? '<p class="small muted">' + esc(POSITIVE_NOTE) + "</p>" : "";
     return '<div class="verdict t-' + v.tone + '"><span class="pill">' + esc(v.tag) + "</span><h3>" + esc(v.title) + "</h3><p>" + esc(verdictText(r)) + "</p>" + extra + "</div>";
   }
 
@@ -925,15 +930,60 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
       "</div></section>";
   }
 
+  /* Contenus partagés entre la page et le PDF */
+  var LEVEL_RULE = "Calcul de l'outil, pas une règle officielle : sévère dès 4 symptômes au-delà du seuil, 6 cotés « Très souvent » ou 2 domaines en gêne majeure ; léger si au plus 1 symptôme au-delà du seuil, 2 cotés « Très souvent », aucun domaine en gêne majeure et 1 au plus en gêne nette ; moyen dans les autres cas.";
+  var POSITIVE_NOTE = "Un repérage positif signifie que cela mérite d'être creusé, pas que le diagnostic est posé.";
+  var PROFILE_NOTE = "Lecture inspirée des six fonctions exécutives du modèle de Thomas E. Brown, cité par TDAH France, complétée par l'agitation. Elle décrit comment les difficultés se manifestent chez vous et oriente les aménagements, elle ne sert pas au diagnostic.";
+  var FLAGS_NOTE = "Ces troubles peuvent imiter un TDAH ou s'y ajouter. Chez l'adulte, jusqu'à 80 % des personnes avec un TDAH ont au moins un trouble associé (TDAH France).";
+  var NO_FLAG = "Aucune situation cochée. Le médecin posera quand même la question : ces troubles sont fréquents, seuls ou associés au TDAH.";
+  function isPositive(r) { return r.verdict === "tres-evocateur" || r.verdict === "evocateur" || r.verdict === "contexte-non"; }
+  function sortedFlags(r) { return r.flagged.slice().sort(function (a, b) { return (b.prio ? 1 : 0) - (a.prio ? 1 : 0); }); }
+
+  function presentationInfo(r) {
+    if (r.presentation) return T.PRESENTATIONS[r.presentation];
+    var tend = { inattention: "l'inattention domine", hyperactivite: "l'hyperactivité-impulsivité domine", equilibre: "les deux dimensions sont à égalité" }[r.tendency];
+    return { name: "Pas de présentation", text: "Aucune dimension n'atteint le seuil. Tendance : " + tend + "." };
+  }
+
+  function criteriaDetail(r) {
+    var onset = T.ONSET.filter(function (o) { return o.id === state.onset; })[0];
+    var dur = T.DURATION.filter(function (o) { return o.id === state.duration; })[0];
+    return {
+      A: r.counts.IA + "/9 en inattention, " + r.counts.HI + "/9 en hyperactivité-impulsivité, seuil à " + r.threshold + ".",
+      duree: dur ? dur.label + "." : "Non renseigné.",
+      B: (onset ? onset.label + "." : "Non renseigné.") + (r.status.B !== "oui" ? " Bulletins scolaires et souvenirs d'un parent aident à trancher." : ""),
+      C: r.contexts.length ? r.contexts.map(function (c) { return c.label; }).join(", ") + "." : "Aucun contexte coché.",
+      D: r.status.D === "inconnu" ? "Non renseigné." : "Gêne la plus forte : " + T.IMPACT_SCALE[r.maxImpact].toLowerCase() + ".",
+      E: r.flagged.length ? r.flagged.length + (r.flagged.length > 1 ? " pistes signalées, détaillées plus bas." : " piste signalée, détaillée plus bas.") : "Aucune piste cochée. Le médecin vérifiera quand même."
+    };
+  }
+
+  function clusterNotes(r) {
+    var notes = [];
+    var emo = r.clusters.filter(function (c) { return c.id === "emotion"; })[0];
+    if (emo && emo.avg !== null && emo.avg >= 2) notes.push("La dysrégulation émotionnelle est fréquente dans le TDAH à tout âge et pèse lourd dans le retentissement (Shaw et al., 2014). Elle n'est pas spécifique pour autant : anxiété, dépression ou trouble bipolaire peuvent la produire.");
+    if (r.hyperfocus !== null && r.hyperfocus >= 2) notes.push("Hyperfocalisation : « " + T.SCALE[r.hyperfocus].toLowerCase() + " ». Beaucoup d'adultes avec un TDAH décrivent cette capacité à s'absorber dans ce qui les passionne (Hupfeld et al., 2019). Elle reste peu étudiée et ne fait pas partie des critères.");
+    return notes;
+  }
+
+  function nextStepItems(r) {
+    if (r.age !== null && r.age < 17) return [
+      "Consultez le médecin traitant ou le pédiatre. Le repérage s'appuie sur des questionnaires remplis par les parents et les enseignants (SNAP-IV par exemple).",
+      "Avant 12 ans, il peut orienter vers une plateforme de coordination et d'orientation (PCO), qui organise le bilan.",
+      "Le diagnostic est posé par un médecin formé au TDAH, après des entretiens avec l'enfant et ses parents et un examen clinique (recommandations HAS, 2024)."
+    ];
+    return [
+      "Prenez rendez-vous avec votre médecin traitant et montrez-lui ces résultats. Il peut vous faire remplir l'ASRS, le questionnaire de repérage de l'OMS, et vous orienter.",
+      "Le diagnostic est posé par un médecin formé au TDAH : psychiatre, neurologue, ou généraliste ou addictologue formé. Comptez plusieurs consultations, souvent avec un entretien structuré (DIVA-5 ou ACE+, environ 1 h 30).",
+      "Rassemblez ce qui documente l'enfance : bulletins scolaires, comptes rendus de bilans, et si possible un parent, un frère ou une sœur pour préciser les souvenirs.",
+      "Un examen clinique écarte les autres causes (vue, audition, sommeil, autre maladie). Des bilans complémentaires ne sont demandés qu'en cas de besoin.",
+      "Ressources : l'association HyperSupers TDAH France (tdah-france.fr). Des Centres Ressources TDAH se déploient à partir de 2026 pour les situations complexes."
+    ];
+  }
+
   function blockPresentation(r) {
-    var pres;
-    if (r.presentation) {
-      var p = T.PRESENTATIONS[r.presentation];
-      pres = "<h3>" + esc(p.name) + "</h3><p>" + esc(p.text) + "</p>";
-    } else {
-      var tend = { inattention: "l'inattention domine", hyperactivite: "l'hyperactivité-impulsivité domine", equilibre: "les deux dimensions sont à égalité" }[r.tendency];
-      pres = "<h3>Pas de présentation</h3><p>Aucune dimension n'atteint le seuil. Tendance : " + tend + ".</p>";
-    }
+    var p = presentationInfo(r);
+    var pres = "<h3>" + esc(p.name) + "</h3><p>" + esc(p.text) + "</p>";
     var lvl;
     if (r.level) {
       var L = T.LEVELS[r.level];
@@ -942,7 +992,7 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
         ["leger", "moyen", "severe"].map(function (k) { return '<span class="' + (k === r.level ? "on" : "") + '">' + T.LEVELS[k].name + "</span>"; }).join("") + "</div>" +
         '<p class="small"><b>Définition du DSM-5 :</b> ' + esc(L.dsm) + "</p>" +
         '<dl class="facts"><div><dt>Symptômes au-delà du seuil</dt><dd>' + r.excess + "</dd></div><div><dt>Cotés « Très souvent »</dt><dd>" + r.intense + "</dd></div><div><dt>Domaines en gêne nette ou plus</dt><dd>" + r.netDomains + "</dd></div><div><dt>Domaines en gêne majeure</dt><dd>" + r.majorDomains + "</dd></div></dl>" +
-        '<p class="small muted">Calcul de l\'outil, pas une règle officielle : sévère dès 4 symptômes au-delà du seuil, 6 cotés « Très souvent » ou 2 domaines en gêne majeure ; léger si au plus 1 symptôme au-delà du seuil, 2 cotés « Très souvent », aucun domaine en gêne majeure et 1 au plus en gêne nette ; moyen dans les autres cas.</p>';
+        '<p class="small muted">' + esc(LEVEL_RULE) + "</p>";
     } else {
       lvl = "<h3>Niveau : sans objet</h3><p>Le DSM-5 ne précise un niveau (léger, moyen ou sévère) que lorsque le seuil de symptômes est atteint.</p>";
     }
@@ -950,16 +1000,7 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
   }
 
   function blockCriteria(r) {
-    var onset = T.ONSET.filter(function (o) { return o.id === state.onset; })[0];
-    var dur = T.DURATION.filter(function (o) { return o.id === state.duration; })[0];
-    var detail = {
-      A: r.counts.IA + "/9 en inattention, " + r.counts.HI + "/9 en hyperactivité-impulsivité, seuil à " + r.threshold + ".",
-      duree: dur ? dur.label + "." : "Non renseigné.",
-      B: (onset ? onset.label + "." : "Non renseigné.") + (r.status.B !== "oui" ? " Bulletins scolaires et souvenirs d'un parent aident à trancher." : ""),
-      C: r.contexts.length ? r.contexts.map(function (c) { return c.label; }).join(", ") + "." : "Aucun contexte coché.",
-      D: r.status.D === "inconnu" ? "Non renseigné." : "Gêne la plus forte : " + T.IMPACT_SCALE[r.maxImpact].toLowerCase() + ".",
-      E: r.flagged.length ? r.flagged.length + (r.flagged.length > 1 ? " pistes signalées, détaillées plus bas." : " piste signalée, détaillée plus bas.") : "Aucune piste cochée. Le médecin vérifiera quand même."
-    };
+    var detail = criteriaDetail(r);
     return '<section class="block"><div class="block-head"><h3>Critères du DSM-5</h3><p class="small muted">Le critère E ne peut pas être tranché par un questionnaire : c\'est le rôle de l\'examen médical.</p></div><ul class="crit">' +
       T.CRITERIA.map(function (c) {
         return '<li><span class="code">' + c.code + "</span><span>" + esc(c.label) + "</span>" + pill(r.status[c.id]) + '<span class="d">' + esc(detail[c.id]) + "</span></li>";
@@ -970,12 +1011,8 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
     var rows = r.clusters.map(function (c) {
       return '<div class="bar-row"><div class="bar-name"><b>' + esc(c.name) + '</b><span class="muted">' + esc(c.desc) + '</span></div><div class="bar" aria-hidden="true"><span style="width:' + c.pct + '%"></span></div><span class="bar-val' + (c.avg !== null && c.avg >= 3 ? " hi" : "") + '">' + esc(c.label) + "</span></div>";
     }).join("");
-    var notes = [];
-    var emo = r.clusters.filter(function (c) { return c.id === "emotion"; })[0];
-    if (emo && emo.avg !== null && emo.avg >= 2) notes.push("La dysrégulation émotionnelle est fréquente dans le TDAH à tout âge et pèse lourd dans le retentissement (Shaw et al., 2014). Elle n'est pas spécifique pour autant : anxiété, dépression ou trouble bipolaire peuvent la produire.");
-    if (r.hyperfocus !== null && r.hyperfocus >= 2) notes.push("Hyperfocalisation : « " + T.SCALE[r.hyperfocus].toLowerCase() + " ». Beaucoup d'adultes avec un TDAH décrivent cette capacité à s'absorber dans ce qui les passionne (Hupfeld et al., 2019). Elle reste peu étudiée et ne fait pas partie des critères.");
-    return '<section class="block"><div class="block-head"><h3>Profil de fonctionnement</h3><p class="small muted">Lecture inspirée des six fonctions exécutives du modèle de Thomas E. Brown, cité par TDAH France, complétée par l\'agitation. Elle décrit comment les difficultés se manifestent chez vous et oriente les aménagements, elle ne sert pas au diagnostic.</p></div><div class="bars">' + rows + "</div>" +
-      notes.map(function (n) { return '<p class="small">' + esc(n) + "</p>"; }).join("") + "</section>";
+    return '<section class="block"><div class="block-head"><h3>Profil de fonctionnement</h3><p class="small muted">' + esc(PROFILE_NOTE) + '</p></div><div class="bars">' + rows + "</div>" +
+      clusterNotes(r).map(function (n) { return '<p class="small">' + esc(n) + "</p>"; }).join("") + "</section>";
   }
 
   function blockImpact(r) {
@@ -987,34 +1024,23 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
   }
 
   function blockFlags(r) {
-    var intro = '<p class="small muted">Ces troubles peuvent imiter un TDAH ou s\'y ajouter. Chez l\'adulte, jusqu\'à 80 % des personnes avec un TDAH ont au moins un trouble associé (TDAH France).</p>';
+    var intro = '<p class="small muted">' + esc(FLAGS_NOTE) + "</p>";
     var body = r.flagged.length
-      ? '<div class="flags">' + r.flagged.slice().sort(function (a, b) { return (b.prio ? 1 : 0) - (a.prio ? 1 : 0); }).map(function (f) {
+      ? '<div class="flags">' + sortedFlags(r).map(function (f) {
           return '<div class="flag' + (f.prio ? " prio" : "") + '"><b>' + esc(f.piste) + "</b><span class=\"small\">" + esc(f.why) + "</span></div>";
         }).join("") + "</div>"
-      : "<p>Aucune situation cochée. Le médecin posera quand même la question : ces troubles sont fréquents, seuls ou associés au TDAH.</p>";
+      : "<p>" + esc(NO_FLAG) + "</p>";
     return '<section class="block"><div class="block-head"><h3>Pistes à aborder avec le médecin</h3>' + intro + "</div>" + body + "</section>";
   }
 
   function blockNext(r) {
-    var minor = r.age !== null && r.age < 17;
-    var items = minor ? [
-      "Consultez le médecin traitant ou le pédiatre. Le repérage s'appuie sur des questionnaires remplis par les parents et les enseignants (SNAP-IV par exemple).",
-      "Avant 12 ans, il peut orienter vers une plateforme de coordination et d'orientation (PCO), qui organise le bilan.",
-      "Le diagnostic est posé par un médecin formé au TDAH, après des entretiens avec l'enfant et ses parents et un examen clinique (recommandations HAS, 2024)."
-    ] : [
-      "Prenez rendez-vous avec votre médecin traitant et montrez-lui le résumé ci-dessous. Il peut vous faire remplir l'ASRS, le questionnaire de repérage de l'OMS, et vous orienter.",
-      "Le diagnostic est posé par un médecin formé au TDAH : psychiatre, neurologue, ou généraliste ou addictologue formé. Comptez plusieurs consultations, souvent avec un entretien structuré (DIVA-5 ou ACE+, environ 1 h 30).",
-      "Rassemblez ce qui documente l'enfance : bulletins scolaires, comptes rendus de bilans, et si possible un parent, un frère ou une sœur pour préciser les souvenirs.",
-      "Un examen clinique écarte les autres causes (vue, audition, sommeil, autre maladie). Des bilans complémentaires ne sont demandés qu'en cas de besoin.",
-      "Ressources : l'association HyperSupers TDAH France (tdah-france.fr). Des Centres Ressources TDAH se déploient à partir de 2026 pour les situations complexes."
-    ];
+    var items = nextStepItems(r);
     return '<section class="block"><h3>Prochaines étapes</h3><ol class="steps-list">' + items.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol></section>";
   }
 
   function blockSummary(r) {
     var date = new Date().toLocaleDateString("fr-FR");
-    return '<section class="block"><div class="block-head"><h3>Résumé pour le médecin</h3><p class="small muted">À copier dans un mail, une note ou à imprimer depuis votre messagerie.</p></div>' +
+    return '<section class="block"><div class="block-head"><h3>Résumé pour le médecin</h3><p class="small muted">Version texte, à coller dans un mail ou une note. Pour un document à imprimer ou à joindre, utilisez « Exporter en PDF » en haut des résultats.</p></div>' +
       '<label for="summary" class="small muted">Texte du résumé</label><textarea id="summary" class="summary" readonly>' + esc(T.summary(state, r, date)) + "</textarea>" +
       '<div class="copy-row"><button type="button" class="btn" data-action="copy">Copier le résumé</button><span id="copyStatus" class="small muted" aria-live="polite"></span></div></section>';
   }
@@ -1058,6 +1084,281 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
       "</ol></div></div></details>";
   }
 
+  /* ---------- Export PDF ---------- */
+  // Dans la visionneuse claude.ai : enregistrement par la capacité « downloads ». Fichier ouvert en local : téléchargement direct.
+  var pdfMode = window.claude && typeof window.claude.use === "function" ? "pending" : "local";
+  var downloadsReady = Promise.resolve(null);
+  function refreshPdfButtons() { $$('[data-action="pdf"]').forEach(function (b) { b.hidden = pdfMode === "none"; }); }
+  if (pdfMode === "pending") {
+    downloadsReady = window.claude.use("downloads").then(function (d) {
+      pdfMode = d ? "viewer" : "none"; refreshPdfButtons(); return d;
+    }, function () { pdfMode = "none"; refreshPdfButtons(); return null; });
+  }
+
+  function blockActions() {
+    if (pdfMode === "none") return "";
+    return '<div class="actions"><button type="button" class="btn" data-action="pdf">Exporter en PDF</button><span id="pdfStatus" class="small muted" aria-live="polite"></span></div>';
+  }
+
+  function isoDate() {
+    var d = new Date(), p = function (n) { return (n < 10 ? "0" : "") + n; };
+    return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
+  }
+
+  function exportPdf(btn) {
+    var status = $("#pdfStatus");
+    function say(t) { if (status) status.textContent = t; }
+    if (!window.jspdf || !window.jspdf.jsPDF) { say("Le module PDF n'a pas pu se charger. Vérifiez la connexion, puis rechargez la page."); return; }
+    var doc;
+    try { doc = buildPdf(T.evaluate(state)); } catch (err) { say("La création du PDF a échoué."); return; }
+    var name = "reperage-tdah-" + isoDate() + (exampleMode ? "-exemple" : "") + ".pdf";
+    if (pdfMode === "local") { doc.save(name); say("PDF téléchargé."); return; }
+    btn.disabled = true;
+    say("Préparation du PDF…");
+    downloadsReady.then(function (dl) {
+      if (!dl) { say("L'export PDF n'est pas disponible dans cette vue."); return; }
+      return dl.save({ filename: name, data: doc.output("blob") }).then(function () { say("PDF enregistré."); }, function (err) {
+        var code = err && err.code;
+        if (code === "declined") say("Enregistrement annulé.");
+        else if (code === "rate_limited") say("Une demande d'enregistrement est déjà ouverte. Réessayez dans un instant.");
+        else { say("L'export PDF n'est pas disponible dans cette vue."); pdfMode = "none"; refreshPdfButtons(); }
+      });
+    }).then(function () { btn.disabled = false; });
+  }
+
+  function buildPdf(r) {
+    var doc = new window.jspdf.jsPDF({ unit: "mm", format: "a4" });
+    var PW = 210, PH = 297, M = 16, W = PW - 2 * M, BOTTOM = PH - 22, y = M;
+    var C = {
+      ink: [26, 35, 32], muted: [86, 99, 94], line: [211, 219, 215], bg: [242, 244, 243], sunk: [226, 231, 228],
+      accent: [35, 80, 142], accentSoft: [226, 234, 245], mark: [233, 195, 63], markSoft: [251, 241, 199],
+      ok: [44, 118, 80], okSoft: [225, 240, 231], warn: [154, 95, 10], warnSoft: [248, 234, 211], crit: [174, 59, 42], white: [255, 255, 255]
+    };
+    var STATUS_COLOR = { oui: C.ok, partiel: C.warn, non: C.crit, inconnu: C.muted, medecin: C.accent };
+    doc.setLineHeightFactor(1.3);
+    doc.setProperties({ title: "Repérage TDAH : résultats", subject: "Auto-questionnaire de repérage du TDAH (critères DSM-5)", creator: "Repérage TDAH" });
+
+    // Les polices standard du PDF couvrent le Latin-1 : on remplace les rares signes hors de cette table
+    function clean(s) { return String(s).replace(/œ/g, "oe").replace(/Œ/g, "OE").replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/…/g, "...").replace(/[–—]/g, "-").replace(/\u202F/g, " ").replace(/« /g, "«\u00A0").replace(/ »/g, "\u00A0»").replace(/ ([:;?!])/g, "\u00A0$1"); }
+    function lh(size) { return size * 0.3528 * 1.3; }
+    function base(size) { return size * 0.3528 * 0.85; }
+    function fill(c) { doc.setFillColor(c[0], c[1], c[2]); }
+    function stroke(c) { doc.setDrawColor(c[0], c[1], c[2]); }
+    function font(size, style, color) { doc.setFont("helvetica", style || "normal"); doc.setFontSize(size); doc.setTextColor(color[0], color[1], color[2]); }
+    function split(text, size, style, w) { font(size, style, C.ink); return doc.splitTextToSize(clean(text), w); }
+    function write(ls, x, size, style, color, yy) { font(size, style, color); doc.text(ls, x, (yy === undefined ? y : yy) + base(size)); }
+    function ensure(h) { if (y + h > BOTTOM) { doc.addPage(); y = M; } }
+    function para(text, o) {
+      o = o || {};
+      var size = o.size || 10, x = o.x || M, w = o.w || W, ls = split(text, size, o.style, w), h = ls.length * lh(size);
+      ensure(h);
+      write(ls, x, size, o.style, o.color || C.ink);
+      y += h + (o.after === undefined ? 1.8 : o.after);
+    }
+    function heading(text, keep) {
+      ensure(keep || 22);
+      y += 4;
+      write([clean(text)], M, 12.5, "bold", C.ink);
+      y += lh(12.5) + 0.6;
+      stroke(C.line); doc.setLineWidth(0.3); doc.line(M, y, M + W, y);
+      y += 3.2;
+    }
+
+    // En-tête
+    write(["Repérage TDAH"], M, 21, "bold", C.ink);
+    y += lh(21);
+    para("Résultats de l'auto-questionnaire, édités le " + new Date().toLocaleDateString("fr-FR") + ". Âge : " + (r.age !== null ? r.age + " ans" : "non renseigné") + ". Seuil appliqué : " + r.threshold + " symptômes sur 9.", { size: 9.5, color: C.muted, after: 4 });
+    if (exampleMode) {
+      fill(C.accentSoft); doc.rect(M, y, W, 9, "F");
+      write([clean("EXEMPLE FICTIF : ces réponses ne sont celles de personne.")], M + 4, 9.5, "bold", C.accent, y + 2.6);
+      y += 13;
+    }
+
+    // Lecture d'ensemble
+    var v = T.VERDICTS[r.verdict];
+    var tone = { strong: [C.markSoft, C.mark], warn: [C.warnSoft, C.warn], info: [C.accentSoft, C.accent], ok: [C.okSoft, C.ok] }[v.tone];
+    var pad = 5.5, iw = W - 2 * pad;
+    var tl = split(v.title, 14.5, "bold", iw), xl = split(verdictText(r), 10, "normal", iw), el = isPositive(r) ? split(POSITIVE_NOTE, 8.8, "italic", iw) : [];
+    var bh = pad + lh(8.2) + 1.2 + tl.length * lh(14.5) + 1.2 + xl.length * lh(10) + (el.length ? 1.5 + el.length * lh(8.8) : 0) + pad;
+    ensure(bh);
+    fill(tone[0]); stroke(tone[1]); doc.setLineWidth(0.4); doc.roundedRect(M, y, W, bh, 2.5, 2.5, "FD");
+    var by = y + pad;
+    write([clean(v.tag.toUpperCase())], M + pad, 8.2, "bold", C.muted, by); by += lh(8.2) + 1.2;
+    write(tl, M + pad, 14.5, "bold", C.ink, by); by += tl.length * lh(14.5) + 1.2;
+    write(xl, M + pad, 10, "normal", C.ink, by); by += xl.length * lh(10);
+    if (el.length) write(el, M + pad, 8.8, "italic", C.muted, by + 1.5);
+    y += bh + 2;
+
+    if (r.verdict === "incomplet") {
+      para("Le résultat se calcule sur les 18 questions de symptômes. Complétez le questionnaire avant d'exporter un résultat exploitable.", { size: 10 });
+    } else {
+      // Symptômes comptés
+      heading("Symptômes comptés");
+      para("Seuil du DSM-5 " + (r.threshold > 5 ? "avant 17 ans : 6" : "à partir de 17 ans : 5") + " symptômes sur 9 dans au moins une dimension. Un symptôme compte s'il est présent « souvent » ou « très souvent ». Les cases pleines sont les symptômes retenus.", { size: 8.8, color: C.muted, after: 3 });
+      ensure(30);
+      var ia = T.SYMPTOMS.filter(function (q) { return q.dim === "IA"; });
+      var hi = T.SYMPTOMS.filter(function (q) { return q.dim !== "IA"; });
+      var colW = W / 2 - 4;
+      var dimCol = function (x, name, n, met, items, present, sub, gapAfter) {
+        write([clean(name)], x, 10.5, "bold", C.ink);
+        font(17, "bold", C.ink); doc.text(String(n), x + colW - 6, y + base(17), { align: "right" });
+        font(9, "normal", C.muted); doc.text("/9", x + colW, y + base(9) + 2.6, { align: "right" });
+        var tag = met ? "Seuil atteint" : "Sous le seuil", tw;
+        font(8, "bold", C.ink); tw = doc.getTextWidth(tag) + 4;
+        if (met) { fill(C.mark); doc.roundedRect(x, y + 6, tw, 4.6, 2.3, 2.3, "F"); } else { stroke(C.muted); doc.setLineWidth(0.3); doc.roundedRect(x, y + 6, tw, 4.6, 2.3, 2.3, "S"); }
+        write([tag], x + 2, 8, "bold", met ? C.ink : C.muted, y + 6.9);
+        var s = 6.4, gap = 1.3, cx = x;
+        items.forEach(function (q, i) {
+          var on = present.indexOf(q.id) !== -1, cy = y + 13.5;
+          if (on) { fill(C.accent); doc.rect(cx, cy, s, s, "F"); } else { stroke(C.line); doc.setLineWidth(0.35); doc.rect(cx, cy, s, s, "S"); }
+          font(7.5, "bold", on ? C.white : C.muted); doc.text(q.code.slice(-1), cx + s / 2, cy + s / 2 + 1.1, { align: "center" });
+          cx += s + gap + (gapAfter !== undefined && i === gapAfter ? 2.6 : 0);
+        });
+        if (sub) write([clean(sub)], x, 8, "normal", C.muted, y + 21.6);
+      };
+      dimCol(M, "Inattention", r.counts.IA, r.metIA, ia, r.presentIA, null);
+      dimCol(M + W / 2 + 4, "Hyperactivité-impulsivité", r.counts.HI, r.metHI, hi, r.presentHI, "Hyperactivité " + r.counts.HY + "/6, impulsivité " + r.counts.IM + "/3", 5);
+      y += 27;
+      var named = function (ids) { return ids.length ? ids.map(function (id) { var q = T.SYMPTOMS.filter(function (s) { return s.id === id; })[0]; return q.code + " " + q.short.toLowerCase(); }).join(" ; ") : "aucun"; };
+      para("Inattention retenue : " + named(r.presentIA) + ".", { size: 8.8, after: 1 });
+      para("Hyperactivité-impulsivité retenue : " + named(r.presentHI) + ".", { size: 8.8 });
+
+      // Présentation et niveau
+      heading("Présentation et niveau");
+      var p = presentationInfo(r);
+      para(p.name, { size: 11, style: "bold", after: 0.8 });
+      para(p.text, { size: 10, after: 3 });
+      if (r.level) {
+        var L = T.LEVELS[r.level];
+        para("Niveau indicatif : " + L.name.toLowerCase(), { size: 11, style: "bold", after: 1.5 });
+        ensure(10);
+        ["leger", "moyen", "severe"].forEach(function (k, i) {
+          var on = k === r.level, bx = M + i * 31;
+          fill(on ? C.ink : C.sunk); doc.roundedRect(bx, y, 30, 6.6, 1.5, 1.5, "F");
+          font(9, on ? "bold" : "normal", on ? C.white : C.muted); doc.text(T.LEVELS[k].name, bx + 15, y + 4.4, { align: "center" });
+        });
+        y += 9.5;
+        para("Définition du DSM-5 : " + L.dsm, { size: 9.5 });
+        para("Symptômes au-delà du seuil : " + r.excess + ". Cotés « Très souvent » : " + r.intense + ". Domaines en gêne nette ou plus : " + r.netDomains + ". Domaines en gêne majeure : " + r.majorDomains + ".", { size: 9.5 });
+        para(LEVEL_RULE, { size: 8.5, style: "italic", color: C.muted });
+      } else {
+        para("Niveau : sans objet. Le DSM-5 ne précise un niveau (léger, moyen ou sévère) que lorsque le seuil de symptômes est atteint.", { size: 10 });
+      }
+
+      // Critères
+      heading("Critères du DSM-5", 76);
+      var det = criteriaDetail(r), lw = W - 10 - 34;
+      T.CRITERIA.forEach(function (c) {
+        var st = r.status[c.id], lab = split(c.label, 10, "bold", lw), d = split(det[c.id], 8.8, "normal", lw);
+        var h = lab.length * lh(10) + d.length * lh(8.8) + 3.4;
+        ensure(h);
+        write([c.code], M, 10, "bold", C.muted);
+        write(lab, M + 10, 10, "bold", C.ink);
+        font(8.6, "bold", STATUS_COLOR[st]); doc.text(clean(T.STATUS_LABELS[st]), M + W, y + base(8.6), { align: "right" });
+        y += lab.length * lh(10);
+        write(d, M + 10, 8.8, "normal", C.muted);
+        y += d.length * lh(8.8) + 1.7;
+        stroke(C.line); doc.setLineWidth(0.25); doc.line(M, y, M + W, y);
+        y += 1.7;
+      });
+      para("Le critère E ne peut pas être tranché par un questionnaire : c'est le rôle de l'examen médical.", { size: 8.5, style: "italic", color: C.muted });
+
+      // Profil
+      heading("Profil de fonctionnement");
+      para(PROFILE_NOTE, { size: 8.8, color: C.muted, after: 3 });
+      r.clusters.forEach(function (c) {
+        var nameW = 78, barX = M + nameW + 6, barW = W - nameW - 6 - 26;
+        var d = split(c.desc, 8.3, "normal", nameW), h = lh(10) + d.length * lh(8.3) + 2.6;
+        ensure(h);
+        write([clean(c.name)], M, 10, "bold", C.ink);
+        fill(C.sunk); doc.rect(barX, y + 1.4, barW, 2.6, "F");
+        if (c.pct > 0) { fill(C.accent); doc.rect(barX, y + 1.4, barW * c.pct / 100, 2.6, "F"); }
+        font(9, c.avg !== null && c.avg >= 3 ? "bold" : "normal", C.ink); doc.text(clean(c.label), M + W, y + base(9), { align: "right" });
+        y += lh(10);
+        write(d, M, 8.3, "normal", C.muted);
+        y += d.length * lh(8.3) + 2.6;
+      });
+      clusterNotes(r).forEach(function (n) { para(n, { size: 9 }); });
+
+      // Retentissement
+      heading("Retentissement");
+      r.impacts.forEach(function (i) {
+        var nameW = W - 34 - 18, ls = split(i.name, 9.8, "normal", nameW), h = ls.length * lh(9.8) + 2;
+        ensure(h);
+        write(ls, M, 9.8, "normal", C.ink);
+        for (var k = 0; k < 3; k++) {
+          fill(i.level === 3 ? C.crit : k < (i.level || 0) ? C.warn : C.sunk);
+          doc.rect(M + nameW + 2 + k * 4.6, y + 0.9, 3.6, 3.6, "F");
+        }
+        font(9, "normal", C.muted); doc.text(clean(i.level === null ? "Non renseigné" : T.IMPACT_SCALE[i.level]), M + W, y + base(9), { align: "right" });
+        y += h;
+      });
+
+      // Pistes
+      heading("Pistes à aborder avec le médecin");
+      para(FLAGS_NOTE, { size: 8.8, color: C.muted, after: 2.5 });
+      if (!r.flagged.length) para(NO_FLAG, { size: 9.8 });
+      sortedFlags(r).forEach(function (f) {
+        var t = split(f.piste, 10, "bold", W - 8), wl = split(f.why, 9, "normal", W - 8);
+        var h = 3 + t.length * lh(10) + wl.length * lh(9) + 3;
+        ensure(h + 2);
+        fill(f.prio ? C.warnSoft : C.bg); doc.roundedRect(M, y, W, h, 1.8, 1.8, "F");
+        write(t, M + 4, 10, "bold", C.ink, y + 3);
+        write(wl, M + 4, 9, "normal", C.ink, y + 3 + t.length * lh(10));
+        y += h + 2;
+      });
+
+      // Prochaines étapes
+      heading("Prochaines étapes");
+      nextStepItems(r).forEach(function (t, i) {
+        var ls = split(t, 9.8, "normal", W - 7), h = ls.length * lh(9.8) + 2;
+        ensure(h);
+        write([String(i + 1) + "."], M, 9.8, "bold", C.muted);
+        write(ls, M + 7, 9.8, "normal", C.ink);
+        y += h;
+      });
+
+      // Détail des réponses
+      heading("Détail des réponses");
+      para("Colonnes surlignées : fréquences comptées comme symptôme (6 derniers mois).", { size: 8.5, color: C.muted, after: 2 });
+      var cw = 17, fw = W - 5 * cw, rh = 6.4;
+      ensure(rh * 3);
+      font(7.8, "bold", C.muted);
+      doc.text("Symptôme (DSM-5)", M, y + 4.2);
+      T.SCALE.forEach(function (s, i) { doc.text(clean(s), M + fw + i * cw + cw / 2, y + 4.2, { align: "center" }); });
+      y += rh;
+      stroke(C.line); doc.setLineWidth(0.3); doc.line(M, y, M + W, y);
+      T.SYMPTOMS.forEach(function (q) {
+        ensure(rh);
+        fill(C.markSoft); doc.rect(M + fw + T.PRESENT_FROM * cw, y, (T.SCALE.length - T.PRESENT_FROM) * cw, rh, "F");
+        font(8.2, "bold", C.muted); doc.text(q.code, M, y + 4.3);
+        font(8.6, "normal", C.ink); doc.text(clean(q.short), M + 10, y + 4.3);
+        var a = state.answers[q.id];
+        if (a !== undefined) { fill(C.accent); doc.circle(M + fw + a * cw + cw / 2, y + rh / 2, 1.35, "F"); }
+        y += rh;
+        stroke(C.line); doc.setLineWidth(0.2); doc.line(M, y, M + W, y);
+      });
+      y += 2;
+    }
+
+    // Méthode et sources
+    heading("Méthode et limites");
+    para("Questions rédigées pour cet outil d'après les critères du DSM-5, non validées scientifiquement. Un symptôme est compté à partir de « Souvent ». Le niveau traduit en chiffres la définition du DSM-5 (calcul de l'outil). Le profil est la moyenne sur 4 des réponses rattachées à chaque fonction. Ce document ne constitue pas un diagnostic : seul un médecin formé au TDAH peut le poser.", { size: 8.8 });
+    para("Sources : HyperSupers TDAH France, « Comprendre le TDAH », « Le diagnostic des adultes TDAH », « Comment savoir si c'est un TDAH ? » (2026). American Psychiatric Association, DSM-5 et DSM-5-TR. Haute Autorité de Santé, recommandations TDAH de l'enfant et de l'adolescent (2024). Kessler et al., ASRS (2005). Shaw et al., dysrégulation émotionnelle (2014). Hupfeld et al., hyperfocalisation (2019).", { size: 8.2, color: C.muted });
+
+    // Pied de page
+    var n = doc.getNumberOfPages();
+    for (var i = 1; i <= n; i++) {
+      doc.setPage(i);
+      stroke(C.line); doc.setLineWidth(0.3); doc.line(M, PH - 15, M + W, PH - 15);
+      font(7.6, "normal", C.muted);
+      doc.text(clean("Repérage TDAH : auto-questionnaire non validé, il ne remplace pas un diagnostic médical."), M, PH - 10.5);
+      doc.text(clean("En cas de détresse ou d'idées suicidaires : 3114, gratuit, 24 h sur 24."), M, PH - 6.8);
+      doc.text("Page " + i + " / " + n, M + W, PH - 10.5, { align: "right" });
+    }
+    return doc;
+  }
+
   function renderResults() {
     $('[data-action="reset"]').hidden = exampleMode;
     var r = T.evaluate(state);
@@ -1073,7 +1374,7 @@ footer b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
       $("#results").innerHTML = out.join("");
       return;
     }
-    out.push(blockVerdict(r), blockDims(r), blockPresentation(r), blockCriteria(r), blockClusters(r), blockImpact(r), blockFlags(r), blockNext(r), blockSummary(r), blockAnswers(), blockMethod());
+    out.push(blockVerdict(r), blockActions(), blockDims(r), blockPresentation(r), blockCriteria(r), blockClusters(r), blockImpact(r), blockFlags(r), blockNext(r), blockSummary(r), blockAnswers(), blockMethod());
     $("#results").innerHTML = out.join("");
   }
 

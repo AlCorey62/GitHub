@@ -12,6 +12,7 @@ Ouvrir `index.html` dans un navigateur suffit. Les réponses restent dans le nav
 - Vérification des critères B (avant 12 ans), C (deux contextes), D (retentissement) et durée ; le critère E reste au médecin.
 - Profil de fonctionnement inspiré du modèle de Thomas E. Brown (activation, focalisation, effort, émotion, mémoire, action), plus l'agitation.
 - Pistes à aborder avec le médecin (troubles qui imitent un TDAH ou s'y ajoutent) et résumé à copier.
+- Export PDF des résultats (A4, texte sélectionnable) : bouton « Exporter en PDF » en haut des résultats. Le PDF est généré dans le navigateur avec jsPDF 2.5.1 (chargé depuis cdnjs). Fichier ouvert en local : téléchargement direct ; page publiée sur claude.ai : enregistrement par la capacité `downloads`, que la publication doit déclarer.
 
 ## Règles de calcul
 
