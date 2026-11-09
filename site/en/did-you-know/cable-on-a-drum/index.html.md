@@ -45,6 +45,7 @@ Which socket and cable for your equipment? The calculator suggests them, with th
 
 [Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
 
+[The earth rod next to the generator: what is it for?](https://www.darkside-energy.com/en/did-you-know/generator-earth-rod/)
 [Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
 
 ## A project? Let's talk power.

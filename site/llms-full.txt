@@ -2,7 +2,7 @@
 
 > Dark Side Energy est une entreprise française de distribution électrique événementielle, créée en 2016 et basée dans les Hauts-de-France. Ses équipes interviennent en France et à l'international en distribution électrique, régie technique, coordination générale, bureau d'étude et consulting, pour des salons, concerts, événements sportifs, festivals et cérémonies. Elle fournit aussi le matériel de distribution électrique, en location clé en main : installé et exploité par ses équipes, sans location sèche.
 
-Site : https://www.darkside-energy.com/ · Généré le 2026-11-03
+Site : https://www.darkside-energy.com/ · Généré le 2026-11-09
 
 ---
 
@@ -162,6 +162,12 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
+Le sais-tu ? · 9 novembre 2026 · 3 min
+
+### [Le piquet de terre près du groupe électrogène : à quoi sert-il ?](https://www.darkside-energy.com/news/piquet-de-terre-groupe/)
+
+Sur un groupe électrogène, le piquet de terre n'a pas le même rôle selon le schéma : référence en TN-S, chemin du courant de défaut en TT. Et dans les deux cas, il se mesure.
+
 Le sais-tu ? · 3 novembre 2026 · 3 min
 
 ### [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
@@ -173,12 +179,6 @@ Le sais-tu ? · 2 novembre 2026 · 3 min
 ### [Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
 
 Peu chargé, un groupe diesel reste froid, brûle mal son gasoil et s'encrasse : le remède se décide au bilan de puissance.
-
-Le sais-tu ? · 27 octobre 2026 · 2 min
-
-### [Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/news/lire-une-prise-p17/)
-
-Couleur, broches et détrompeur : la tension et le réseau d'une prise P17 se lisent d'un coup d'œil.
 
 ## Un projet ? Parlons puissance.
 
@@ -959,6 +959,12 @@ Beaucoup de calculs expliquent l'électricité, mais le but de ces articles est 
 
 ## Comprendre avant de brancher.
 
+Le sais-tu ? · 9 novembre 2026 · 3 min
+
+### [Le piquet de terre près du groupe électrogène : à quoi sert-il ?](https://www.darkside-energy.com/news/piquet-de-terre-groupe/)
+
+Sur un groupe électrogène, le piquet de terre n'a pas le même rôle selon le schéma : référence en TN-S, chemin du courant de défaut en TT. Et dans les deux cas, il se mesure.
+
 Le sais-tu ? · 3 novembre 2026 · 3 min
 
 ### [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
@@ -1054,6 +1060,60 @@ Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons ve
 
 ---
 
+# Le piquet de terre près du groupe électrogène : à quoi sert-il ?
+
+> Référence du neutre en TN-S, chemin du courant de défaut en TT : le rôle du piquet de terre d'un groupe électrogène, la règle de la NF C 15-100 et sa mesure.
+
+Source : https://www.darkside-energy.com/news/piquet-de-terre-groupe/ · Dark Side Energy · Mise à jour : 2026-11-09
+
+9 novembre 2026 · 3 min de lecture
+
+- Le piquet relie au sol l'installation alimentée par le groupe : son rôle dépend du schéma de liaison à la terre choisi.
+- En TN-S, il sert de référence et le courant de défaut revient par le conducteur de protection. En TT, il est sur le chemin du courant de défaut : la NF C 15-100 impose RA × IΔn ≤ UL pour que le différentiel coupe.
+- Un piquet de terre se mesure, avec un appareil de mesure de résistance de terre.
+
+Un [groupe électrogène](https://www.darkside-energy.com/lexique/#groupe-electrogene) est une source autonome : rien ne relie son neutre au sol, sauf si on le prévoit. Autour de lui, sur un événement, les structures métalliques, les barrières ou l'installation d'un bâtiment voisin sont en contact avec le sol. La [prise de terre](https://www.darkside-energy.com/lexique/#prise-de-terre), réalisée par un ou plusieurs piquets enfoncés dans le sol, donne à l'installation la même référence : le potentiel du sol où se tiennent le public et les équipes.
+
+## Deux rôles selon le schéma
+
+Le schéma de liaison à la terre se choisit à l'étude, et le piquet n'y joue pas le même rôle.
+
+- **En TN-S**, le neutre du groupe est relié à sa carcasse et au conducteur de protection (PE), et le piquet relie ce point au sol. L'installation reste en TN-S : ses masses sont reliées au neutre du groupe par le conducteur de protection, et c'est ce qui définit le schéma TN. En cas de défaut, le courant revient au groupe par le conducteur de protection, pas par le sol.
+- **En TT**, les masses des appareils sont reliées à leur propre prise de terre. Le courant de défaut traverse le sol pour revenir à la source : trop faible pour faire déclencher un disjoncteur, il est détecté par le [différentiel](https://www.darkside-energy.com/lexique/#differentiel-30-ma). La résistance de la prise de terre doit alors rester assez basse pour que le différentiel coupe avant qu'une tension dangereuse n'apparaisse sur les masses.
+
+## Quelle règle en France ?
+
+En TT, la NF C 15-100 pose la règle RA × IΔn ≤ UL : la résistance de la prise de terre (RA) multipliée par la sensibilité du différentiel (IΔn) ne doit pas dépasser la tension limite conventionnelle de contact (UL). Plus le différentiel est sensible, plus la résistance admise est élevée : la prise de terre et le différentiel se choisissent ensemble.
+
+La tension limite à retenir dépend des conditions de l'installation : c'est l'étude qui la fixe, et la valeur maximale de la prise de terre en découle.
+
+En TN-S, ce n'est pas le piquet qui fait couper la protection : le courant de défaut revient par le conducteur de protection.
+
+## Un piquet se mesure
+
+La résistance d'une prise de terre dépend surtout du sol : sa nature, son humidité, sa température. Elle se mesure sur place, une fois le piquet planté, avec un appareil de mesure de résistance de terre.
+
+Et quand des appareils alimentés par des groupes différents sont utilisés côte à côte, la NF C 15-100 pose le principe : des masses accessibles en même temps doivent être reliées à une même prise de terre. Les terres des groupes se relient donc entre elles.
+
+> Un piquet de terre ne se plante pas pour la forme : son rôle dépend du schéma, et sa valeur se mesure.
+
+Le schéma de liaison à la terre d'une installation sur groupe se décide en amont : c'est le travail de notre [bureau d'étude](https://www.darkside-energy.com/bureaudetude/).
+
+Un projet sur groupe électrogène ? Le bilan de puissance calcule la puissance à prévoir à partir de la liste de vos appareils.
+
+[Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance/)
+
+[Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
+
+## Un projet ? Parlons puissance.
+
+Lieu, dates, besoins connus : décrivez-nous votre événement, nous revenons vers vous rapidement.
+
+[Demander un devis](https://www.darkside-energy.com/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
 # Câble sur touret : pourquoi le dérouler entièrement ?
 
 > Enroulé, un câble n'évacue plus sa chaleur : coefficients de réduction selon le nombre de couches, exemple chiffré et bons réflexes sur un événement.
@@ -1101,6 +1161,7 @@ Quelle prise et quel câble pour votre appareil ? La calculette les indique, ave
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#conversion)
 
+[Le piquet de terre près du groupe électrogène : à quoi sert-il ?](https://www.darkside-energy.com/news/piquet-de-terre-groupe/)
 [Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
 
 ## Un projet ? Parlons puissance.
@@ -2147,6 +2208,12 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
+Did you know? · 9 November 2026 · 3 min
+
+### [The earth rod next to the generator: what is it for?](https://www.darkside-energy.com/en/did-you-know/generator-earth-rod/)
+
+On a generator, the earth rod does not play the same role in every earthing system: a reference in TN-S, the fault current path in TT. Either way, it is measured.
+
 Did you know? · 3 November 2026 · 3 min
 
 ### [Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
@@ -2158,12 +2225,6 @@ Did you know? · 2 November 2026 · 3 min
 ### [Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
 
 Lightly loaded, a diesel generator stays cold, burns its fuel poorly and fouls up: the cure is decided at the power assessment stage.
-
-Did you know? · 27 October 2026 · 2 min
-
-### [Blue, red, yellow: how do you read a P17 socket?](https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/)
-
-Colour, pins and keying: the voltage and supply type of a P17 socket can be read at a glance.
 
 ## A project? Let's talk power.
 
@@ -2944,6 +3005,12 @@ Plenty of calculations explain electricity, but the aim of these articles is to 
 
 ## Understand before you plug in.
 
+Did you know? · 9 November 2026 · 3 min
+
+### [The earth rod next to the generator: what is it for?](https://www.darkside-energy.com/en/did-you-know/generator-earth-rod/)
+
+On a generator, the earth rod does not play the same role in every earthing system: a reference in TN-S, the fault current path in TT. Either way, it is measured.
+
 Did you know? · 3 November 2026 · 3 min
 
 ### [Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
@@ -3025,6 +3092,60 @@ Venue, dates, known requirements: tell us about your event and we will get back 
 
 ---
 
+# The earth rod next to the generator: what is it for?
+
+> Neutral reference in TN-S, fault current path in TT: the role of a generator's earth rod, the French NF C 15-100 rule and how to measure it.
+
+Source: https://www.darkside-energy.com/en/did-you-know/generator-earth-rod/ · Dark Side Energy · Updated: 2026-11-09
+
+9 November 2026 · 3 min read
+
+- The rod connects the installation supplied by the generator to the ground: its role depends on the earthing system chosen.
+- In TN-S, it is a reference and the fault current returns through the protective conductor. In TT, it is on the fault current path: the French NF C 15-100 standard requires RA × IΔn ≤ UL so that the RCD trips.
+- An earth rod is measured, with an earth resistance tester.
+
+A [generator](https://www.darkside-energy.com/en/glossary/#groupe-electrogene) is a stand-alone source: nothing connects its neutral to the ground unless this is planned. Around it, at an event, metal structures, barriers or the installation of a nearby building are in contact with the ground. The [earth electrode](https://www.darkside-energy.com/en/glossary/#prise-de-terre), made of one or more rods driven into the ground, gives the installation the same reference: the potential of the ground where the public and the crews stand.
+
+## Two roles, depending on the system
+
+The earthing system is chosen at the design stage, and the rod does not play the same role in each.
+
+- **In TN-S**, the generator neutral is connected to its frame and to the protective conductor (PE), and the rod connects this point to the ground. The installation remains TN-S: its exposed metal parts are connected to the generator neutral through the protective conductor, which is what defines a TN system. In the event of a fault, the current returns to the generator through the protective conductor, not through the ground.
+- **In TT**, the exposed metal parts of the equipment are connected to their own earth electrode. The fault current flows through the ground back to the source: too weak to trip a circuit breaker, it is detected by the [RCD](https://www.darkside-energy.com/en/glossary/#differentiel-30-ma). The earth electrode resistance must then stay low enough for the RCD to trip before a dangerous voltage appears on the metal parts.
+
+## What rule in France?
+
+In TT, the French NF C 15-100 standard sets the rule RA × IΔn ≤ UL: the earth electrode resistance (RA) multiplied by the RCD rated residual current (IΔn) must not exceed the conventional touch voltage limit (UL). The more sensitive the RCD, the higher the permitted resistance: the earth electrode and the RCD are chosen together.
+
+The voltage limit to use depends on the conditions of the installation: the study sets it, and the maximum earth electrode value follows from it.
+
+In TN-S, the rod is not what makes the protective device trip: the fault current returns through the protective conductor.
+
+## An earth rod is measured
+
+The resistance of an earth electrode depends mainly on the ground: its nature, moisture and temperature. It is measured on site, once the rod is driven in, with an earth resistance tester.
+
+And when equipment supplied from different generators is used side by side, the NF C 15-100 standard sets the principle: exposed metal parts that can be touched at the same time must be connected to the same earth electrode. The generators' earths are therefore interconnected.
+
+> An earth rod is not driven in for show: its role depends on the earthing system, and its value is measured.
+
+The earthing system of an installation supplied by generators is decided upfront: this is the work of our [engineering office](https://www.darkside-energy.com/en/engineering/).
+
+A project running on generators? The power assessment works out the power to plan for from the list of your equipment.
+
+[Do a power assessment](https://www.darkside-energy.com/en/power-assessment/)
+
+[Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
+
+## A project? Let's talk power.
+
+Venue, dates, known requirements: tell us about your event and we will get back to you quickly.
+
+[Request a quote](https://www.darkside-energy.com/en/contact/)
+[contact@darkside-energy.com](mailto:contact@darkside-energy.com)
+
+---
+
 # Cable on a drum: why unwind it fully?
 
 > Wound on a drum, a cable can no longer shed its heat: conversion factors by number of layers, a worked example and good practice at an event.
@@ -3072,6 +3193,7 @@ Which socket and cable for your equipment? The calculator suggests them, with th
 
 [Open the electrical calculator](https://www.darkside-energy.com/en/electrical-calculator/#conversion)
 
+[The earth rod next to the generator: what is it for?](https://www.darkside-energy.com/en/did-you-know/generator-earth-rod/)
 [Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
 
 ## A project? Let's talk power.

@@ -154,6 +154,12 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
+Le sais-tu ? · 9 novembre 2026 · 3 min
+
+### [Le piquet de terre près du groupe électrogène : à quoi sert-il ?](https://www.darkside-energy.com/news/piquet-de-terre-groupe/)
+
+Sur un groupe électrogène, le piquet de terre n'a pas le même rôle selon le schéma : référence en TN-S, chemin du courant de défaut en TT. Et dans les deux cas, il se mesure.
+
 Le sais-tu ? · 3 novembre 2026 · 3 min
 
 ### [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
@@ -165,12 +171,6 @@ Le sais-tu ? · 2 novembre 2026 · 3 min
 ### [Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
 
 Peu chargé, un groupe diesel reste froid, brûle mal son gasoil et s'encrasse : le remède se décide au bilan de puissance.
-
-Le sais-tu ? · 27 octobre 2026 · 2 min
-
-### [Bleue, rouge, jaune : comment lire une prise P17 ?](https://www.darkside-energy.com/news/lire-une-prise-p17/)
-
-Couleur, broches et détrompeur : la tension et le réseau d'une prise P17 se lisent d'un coup d'œil.
 
 ## Un projet ? Parlons puissance.
 

@@ -8,6 +8,12 @@ Plenty of calculations explain electricity, but the aim of these articles is to 
 
 ## Understand before you plug in.
 
+Did you know? · 9 November 2026 · 3 min
+
+### [The earth rod next to the generator: what is it for?](https://www.darkside-energy.com/en/did-you-know/generator-earth-rod/)
+
+On a generator, the earth rod does not play the same role in every earthing system: a reference in TN-S, the fault current path in TT. Either way, it is measured.
+
 Did you know? · 3 November 2026 · 3 min
 
 ### [Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)

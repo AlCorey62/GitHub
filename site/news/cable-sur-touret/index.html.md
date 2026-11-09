@@ -45,6 +45,7 @@ Quelle prise et quel câble pour votre appareil ? La calculette les indique, ave
 
 [Ouvrir la calculette électro](https://www.darkside-energy.com/calculette-electro/#conversion)
 
+[Le piquet de terre près du groupe électrogène : à quoi sert-il ?](https://www.darkside-energy.com/news/piquet-de-terre-groupe/)
 [Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
 
 ## Un projet ? Parlons puissance.

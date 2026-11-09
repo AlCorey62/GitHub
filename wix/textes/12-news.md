@@ -4,6 +4,12 @@ Beaucoup de calculs expliquent l'électricité, mais le but de ces articles est 
 
 ## Comprendre avant de brancher.
 
+Le sais-tu ? · 9 novembre 2026 · 3 min
+
+### [Le piquet de terre près du groupe électrogène : à quoi sert-il ?](https://www.darkside-energy.com/post/piquet-de-terre-groupe)
+
+Sur un groupe électrogène, le piquet de terre n'a pas le même rôle selon le schéma : référence en TN-S, chemin du courant de défaut en TT. Et dans les deux cas, il se mesure.
+
 Le sais-tu ? · 3 novembre 2026 · 3 min
 
 ### [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/post/cable-sur-touret)

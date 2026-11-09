@@ -154,6 +154,12 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
+Did you know? · 9 November 2026 · 3 min
+
+### [The earth rod next to the generator: what is it for?](https://www.darkside-energy.com/en/did-you-know/generator-earth-rod/)
+
+On a generator, the earth rod does not play the same role in every earthing system: a reference in TN-S, the fault current path in TT. Either way, it is measured.
+
 Did you know? · 3 November 2026 · 3 min
 
 ### [Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
@@ -165,12 +171,6 @@ Did you know? · 2 November 2026 · 3 min
 ### [Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
 
 Lightly loaded, a diesel generator stays cold, burns its fuel poorly and fouls up: the cure is decided at the power assessment stage.
-
-Did you know? · 27 October 2026 · 2 min
-
-### [Blue, red, yellow: how do you read a P17 socket?](https://www.darkside-energy.com/en/did-you-know/reading-a-p17-socket/)
-
-Colour, pins and keying: the voltage and supply type of a P17 socket can be read at a glance.
 
 ## A project? Let's talk power.
 
