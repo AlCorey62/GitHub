@@ -4,6 +4,12 @@ Beaucoup de calculs expliquent l'électricité, mais le but de ces articles est 
 
 ## Comprendre avant de brancher.
 
+Le sais-tu ? · 10 novembre 2026 · 3 min
+
+### [Powerlock : pourquoi brancher la terre en premier ?](https://www.darkside-energy.com/post/powerlock-terre-en-premier)
+
+Sur un raccordement Powerlock, la terre se branche en premier et se débranche en dernier, et le neutre passe avant les phases. On vous explique pourquoi.
+
 Le sais-tu ? · 9 novembre 2026 · 3 min
 
 ### [Le piquet de terre près du groupe électrogène : à quoi sert-il ?](https://www.darkside-energy.com/post/piquet-de-terre-groupe)

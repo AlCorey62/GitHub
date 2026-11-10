@@ -154,6 +154,12 @@ W, VA and A conversions in single-phase or three-phase, voltage drop by cable si
 
 ## The basics of our trade, explained simply.
 
+Did you know? · 10 November 2026 · 3 min
+
+### [Powerlock: why connect the earth first?](https://www.darkside-energy.com/en/did-you-know/powerlock-earth-first/)
+
+On a Powerlock connection, the earth is connected first and disconnected last, and the neutral comes before the phases. Here is why.
+
 Did you know? · 9 November 2026 · 3 min
 
 ### [The earth rod next to the generator: what is it for?](https://www.darkside-energy.com/en/did-you-know/generator-earth-rod/)
@@ -165,12 +171,6 @@ Did you know? · 3 November 2026 · 3 min
 ### [Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
 
 Wound on a drum, a cable can no longer shed its heat: with three layers left, a 3G2.5 can no longer carry the 16 A of its socket.
-
-Did you know? · 2 November 2026 · 3 min
-
-### [Why doesn't a generator like running almost unloaded?](https://www.darkside-energy.com/en/did-you-know/generator-light-load/)
-
-Lightly loaded, a diesel generator stays cold, burns its fuel poorly and fouls up: the cure is decided at the power assessment stage.
 
 ## A project? Let's talk power.
 

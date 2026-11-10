@@ -154,6 +154,12 @@ Conversions W, VA et A en monophasé ou triphasé, chute de tension selon la sec
 
 ## Les bases de notre métier, expliquées simplement.
 
+Le sais-tu ? · 10 novembre 2026 · 3 min
+
+### [Powerlock : pourquoi brancher la terre en premier ?](https://www.darkside-energy.com/news/powerlock-terre-en-premier/)
+
+Sur un raccordement Powerlock, la terre se branche en premier et se débranche en dernier, et le neutre passe avant les phases. On vous explique pourquoi.
+
 Le sais-tu ? · 9 novembre 2026 · 3 min
 
 ### [Le piquet de terre près du groupe électrogène : à quoi sert-il ?](https://www.darkside-energy.com/news/piquet-de-terre-groupe/)
@@ -165,12 +171,6 @@ Le sais-tu ? · 3 novembre 2026 · 3 min
 ### [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/news/cable-sur-touret/)
 
 Enroulé, un câble n'évacue plus sa chaleur : en trois couches sur son touret, un 3G2,5 ne tient plus les 16 A de sa prise.
-
-Le sais-tu ? · 2 novembre 2026 · 3 min
-
-### [Pourquoi un groupe électrogène n'aime pas tourner presque à vide ?](https://www.darkside-energy.com/news/groupe-en-sous-charge/)
-
-Peu chargé, un groupe diesel reste froid, brûle mal son gasoil et s'encrasse : le remède se décide au bilan de puissance.
 
 ## Un projet ? Parlons puissance.
 

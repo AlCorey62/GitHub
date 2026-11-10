@@ -41,6 +41,7 @@ A project running on generators? The power assessment works out the power to pla
 
 [Do a power assessment](https://www.darkside-energy.com/en/power-assessment/)
 
+[Powerlock: why connect the earth first?](https://www.darkside-energy.com/en/did-you-know/powerlock-earth-first/)
 [Cable on a drum: why unwind it fully?](https://www.darkside-energy.com/en/did-you-know/cable-on-a-drum/)
 
 ## A project? Let's talk power.

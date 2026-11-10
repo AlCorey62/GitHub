@@ -37,6 +37,7 @@ Un projet sur groupe électrogène ? Le bilan de puissance calcule la puissance 
 
 [Faire un bilan de puissance](https://www.darkside-energy.com/bilan-de-puissance)
 
+[Powerlock : pourquoi brancher la terre en premier ?](https://www.darkside-energy.com/post/powerlock-terre-en-premier)
 [Câble sur touret : pourquoi le dérouler entièrement ?](https://www.darkside-energy.com/post/cable-sur-touret)
 
 ## Un projet ? Parlons puissance.

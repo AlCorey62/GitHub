@@ -8,6 +8,12 @@ Plenty of calculations explain electricity, but the aim of these articles is to 
 
 ## Understand before you plug in.
 
+Did you know? · 10 November 2026 · 3 min
+
+### [Powerlock: why connect the earth first?](https://www.darkside-energy.com/en/did-you-know/powerlock-earth-first/)
+
+On a Powerlock connection, the earth is connected first and disconnected last, and the neutral comes before the phases. Here is why.
+
 Did you know? · 9 November 2026 · 3 min
 
 ### [The earth rod next to the generator: what is it for?](https://www.darkside-energy.com/en/did-you-know/generator-earth-rod/)
