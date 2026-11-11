@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulateur BESS</title>
+  <style>
+    :root {
+      --fond: #f5f5f5;
+      --carte: #ffffff;
+      --texte: #1d1d1f;
+      --secondaire: #6b6b70;
+      --bordure: #d9d9de;
+      --accent: #0a7f5a;
+      --alerte: #b42318;
+      --alerte-fond: #fdecea;
+      --ok-fond: #e7f6ef;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --fond: #141416;
+        --carte: #1e1e21;
+        --texte: #ececef;
+        --secondaire: #9a9aa2;
+        --bordure: #33333a;
+        --accent: #3dd39b;
+        --alerte: #ff8a80;
+        --alerte-fond: #3a1d1b;
+        --ok-fond: #15302a;
+      }
+    }
+    :root[data-theme="dark"] {
+      --fond: #141416;
+      --carte: #1e1e21;
+      --texte: #ececef;
+      --secondaire: #9a9aa2;
+      --bordure: #33333a;
+      --accent: #3dd39b;
+      --alerte: #ff8a80;
+      --alerte-fond: #3a1d1b;
+      --ok-fond: #15302a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background: var(--fond);
+      color: var(--texte);
+    }
+    .conteneur { max-width: 960px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; margin: 8px 0 4px; }
+    h2 { font-size: 1.1rem; margin: 0 0 12px; }
+    .note { color: var(--secondaire); font-size: 0.9rem; margin: 0 0 16px; }
+    .carte {
+      background: var(--carte);
+      border: 1px solid var(--bordure);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .grille {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    label { display: block; font-size: 0.85rem; color: var(--secondaire); margin-bottom: 4px; }
+    .hyp { font-size: 0.75rem; color: var(--secondaire); }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid var(--bordure);
+      border-radius: 6px;
+      background: var(--carte);
+      color: var(--texte);
+      font-size: 0.95rem;
+    }
+    button {
+      padding: 8px 14px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    button.secondaire {
+      background: transparent;
+      color: var(--accent);
+    }
+    button.petit { padding: 4px 8px; font-size: 0.8rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th, td { padding: 8px; border-bottom: 1px solid var(--bordure); text-align: left; white-space: nowrap; }
+    th { color: var(--secondaire); font-weight: normal; font-size: 0.8rem; }
+    td input { width: 100px; padding: 4px; }
+    td input.nom { width: 180px; }
+    .indicateurs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+    .indicateur { border: 1px solid var(--bordure); border-radius: 6px; padding: 12px; }
+    .indicateur .valeur { font-size: 1.3rem; font-weight: bold; }
+    .indicateur .legende { font-size: 0.8rem; color: var(--secondaire); }
+    .messages { margin-top: 12px; }
+    .message {
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+    .message.alerte { background: var(--alerte-fond); color: var(--alerte); }
+    .message.ok { background: var(--ok-fond); color: var(--accent); }
+    svg { width: 100%; height: auto; display: block; }
+    .axe { stroke: var(--bordure); stroke-width: 1; }
+    .courbe { fill: none; stroke: var(--accent); stroke-width: 2.5; }
+    .etiquette { fill: var(--secondaire); font-size: 11px; }
+    @media (max-width: 600px) {
+      body { padding: 12px; }
+      .carte { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="conteneur">
+    <h1>Simulateur de pack batterie (BESS)</h1>
+    <p class="note">Outil de test. Les valeurs marquées « hypothèse » ne proviennent d'aucune fiche technique et doivent être remplacées avant tout usage.</p>
+
+    <section class="carte">
+      <h2>Pack batterie</h2>
+      <div class="grille">
+        <div>
+          <label for="kva">Puissance apparente (kVA)</label>
+          <input type="number" id="kva" min="0" step="any">
+          <span class="hyp">Source : page Aggreko 300 kVA / 540 kWh</span>
+        </div>
+        <div>
+          <label for="kwhNominal">Énergie nominale (kWh)</label>
+          <input type="number" id="kwhNominal" min="0" step="any">
+          <span class="hyp">Source : page Aggreko 300 kVA / 540 kWh</span>
+        </div>
+        <div>
+          <label for="cosPhi">cos φ du pack</label>
+          <input type="number" id="cosPhi" min="0" max="1" step="0.01">
+          <span class="hyp">Hypothèse</span>
+        </div>
+        <div>
+          <label for="socMin">Réserve SOC minimum (%)</label>
+          <input type="number" id="socMin" min="0" max="100" step="1">
+          <span class="hyp">Hypothèse</span>
+        </div>
+        <div>
+          <label for="rendement">Rendement de décharge (%)</label>
+          <input type="number" id="rendement" min="1" max="100" step="1">
+          <span class="hyp">Hypothèse</span>
+        </div>
+        <div>
+          <label for="auxiliairesKw">Auxiliaires (kW)</label>
+          <input type="number" id="auxiliairesKw" min="0" step="any">
+          <span class="hyp">Hypothèse, non modélisé par défaut</span>
+        </div>
+        <div>
+          <label for="dureeH">Durée de l'événement (h)</label>
+          <input type="number" id="dureeH" min="0" step="0.5">
+        </div>
+      </div>
+    </section>
+
+    <section class="carte">
+      <h2>Kit son, vidéo et lumière</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Équipement</th>
+              <th>Puissance unitaire (W)</th>
+              <th>Quantité</th>
+              <th>Facteur d'utilisation (0 à 1)</th>
+              <th>cos φ</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="corpsKit"></tbody>
+        </table>
+      </div>
+      <div class="actions">
+        <button type="button" id="ajouter" class="secondaire">Ajouter un équipement</button>
+        <button type="button" id="chargerExemple" class="secondaire">Charger le kit exemple (fictif)</button>
+        <button type="button" id="vider" class="secondaire">Vider</button>
+      </div>
+    </section>
+
+    <section class="carte">
+      <h2>Résultats</h2>
+      <div class="indicateurs">
+        <div class="indicateur"><div class="valeur" id="rMoyenneKw">-</div><div class="legende">Puissance moyenne (kW)</div></div>
+        <div class="indicateur"><div class="valeur" id="rCreteKw">-</div><div class="legende">Puissance crête installée (kW)</div></div>
+        <div class="indicateur"><div class="valeur" id="rCreteKva">-</div><div class="legende">Pic apparent (kVA)</div></div>
+        <div class="indicateur"><div class="valeur" id="rPackKw">-</div><div class="legende">Puissance active du pack (kW)</div></div>
+        <div class="indicateur"><div class="valeur" id="rAutonomie">-</div><div class="legende">Autonomie (h)</div></div>
+      </div>
+      <div class="messages" id="messages"></div>
+      <h2 style="margin-top:16px">État de charge au cours de l'événement</h2>
+      <svg id="graphe" viewBox="0 0 600 260" role="img" aria-label="Courbe de l'état de charge"></svg>
+    </section>
+  </div>
+
+  <script src="bess-calcul.js"></script>
+  <script>
+    (function () {
+      var B = window.BessCalcul;
+      var H = B.HYPOTHESES_BESS;
+
+      function $(id) { return document.getElementById(id); }
+
+      function remplirPack() {
+        $('kva').value = H.kva;
+        $('kwhNominal').value = H.kwhNominal;
+        $('cosPhi').value = H.cosPhi;
+        $('socMin').value = H.socMin * 100;
+        $('rendement').value = H.rendement * 100;
+        $('auxiliairesKw').value = H.auxiliairesKw;
+        $('dureeH').value = 6;
+      }
+
+      function lirePack() {
+        return {
+          kva: parseFloat($('kva').value) || 0,
+          kwhNominal: parseFloat($('kwhNominal').value) || 0,
+          cosPhi: parseFloat($('cosPhi').value) || 0,
+          socMin: (parseFloat($('socMin').value) || 0) / 100,
+          rendement: (parseFloat($('rendement').value) || 0) / 100,
+          auxiliairesKw: parseFloat($('auxiliairesKw').value) || 0
+        };
+      }
+
+      function ajouterLigne(eq) {
+        eq = eq || { nom: '', puissanceW: 0, quantite: 1, facteur: 1, cosPhi: 0.9 };
+        var tr = document.createElement('tr');
+        var champs = [
+          { cle: 'nom', type: 'text', classe: 'nom' },
+          { cle: 'puissanceW', type: 'number', min: 0, step: 'any' },
+          { cle: 'quantite', type: 'number', min: 0, step: 1 },
+          { cle: 'facteur', type: 'number', min: 0, max: 1, step: 0.05 },
+          { cle: 'cosPhi', type: 'number', min: 0, max: 1, step: 0.01 }
+        ];
+        champs.forEach(function (c) {
+          var td = document.createElement('td');
+          var input = document.createElement('input');
+          input.type = c.type;
+          if (c.classe) input.className = c.classe;
+          if (c.min !== undefined) input.min = c.min;
+          if (c.max !== undefined) input.max = c.max;
+          if (c.step !== undefined) input.step = c.step;
+          input.value = eq[c.cle];
+          input.dataset.cle = c.cle;
+          input.addEventListener('input', recalculer);
+          td.appendChild(input);
+          tr.appendChild(td);
+        });
+        var tdSup = document.createElement('td');
+        var bouton = document.createElement('button');
+        bouton.type = 'button';
+        bouton.className = 'petit secondaire';
+        bouton.textContent = 'Supprimer';
+        bouton.addEventListener('click', function () {
+          tr.remove();
+          recalculer();
+        });
+        tdSup.appendChild(bouton);
+        tr.appendChild(tdSup);
+        $('corpsKit').appendChild(tr);
+      }
+
+      function lireKit() {
+        var lignes = $('corpsKit').querySelectorAll('tr');
+        var kit = [];
+        lignes.forEach(function (tr) {
+          var v = {};
+          tr.querySelectorAll('input').forEach(function (input) {
+            v[input.dataset.cle] = input.value;
+          });
+          kit.push({
+            nom: v.nom || '',
+            puissanceW: parseFloat(v.puissanceW) || 0,
+            quantite: parseFloat(v.quantite) || 0,
+            facteur: Math.min(1, Math.max(0, parseFloat(v.facteur) || 0)),
+            cosPhi: Math.min(1, Math.max(0.01, parseFloat(v.cosPhi) || 1))
+          });
+        });
+        return kit;
+      }
+
+      function formater(x, decimales) {
+        if (!isFinite(x)) return '∞';
+        return x.toFixed(decimales);
+      }
+
+      function dessinerCourbe(points, dureeH) {
+        var svg = $('graphe');
+        var ns = 'http://www.w3.org/2000/svg';
+        svg.textContent = '';
+        var L = 48, R = 580, T = 16, Bas = 220;
+        var xMax = Math.max(dureeH || 0, points.length ? points[points.length - 1].t : 0, 1);
+        function x(t) { return L + (t / xMax) * (R - L); }
+        function y(s) { return T + (1 - s / 100) * (Bas - T); }
+
+        [0, 25, 50, 75, 100].forEach(function (s) {
+          var ligne = document.createElementNS(ns, 'line');
+          ligne.setAttribute('x1', L); ligne.setAttribute('x2', R);
+          ligne.setAttribute('y1', y(s)); ligne.setAttribute('y2', y(s));
+          ligne.setAttribute('class', 'axe');
+          svg.appendChild(ligne);
+          var txt = document.createElementNS(ns, 'text');
+          txt.setAttribute('x', L - 6); txt.setAttribute('y', y(s) + 4);
+          txt.setAttribute('text-anchor', 'end');
+          txt.setAttribute('class', 'etiquette');
+          txt.textContent = s + ' %';
+          svg.appendChild(txt);
+        });
+
+        if (points.length) {
+          var d = points.map(function (p, i) {
+            return (i === 0 ? 'M' : 'L') + x(p.t).toFixed(1) + ' ' + y(p.soc).toFixed(1);
+          }).join(' ');
+          var chemin = document.createElementNS(ns, 'path');
+          chemin.setAttribute('d', d);
+          chemin.setAttribute('class', 'courbe');
+          svg.appendChild(chemin);
+        }
+
+        for (var h = 0; h <= xMax; h += Math.ceil(xMax / 6)) {
+          var lab = document.createElementNS(ns, 'text');
+          lab.setAttribute('x', x(h)); lab.setAttribute('y', Bas + 16);
+          lab.setAttribute('text-anchor', 'middle');
+          lab.setAttribute('class', 'etiquette');
+          lab.textContent = h + ' h';
+          svg.appendChild(lab);
+        }
+      }
+
+      function afficherMessages(messages, dureeH, auto) {
+        var conteneur = $('messages');
+        conteneur.textContent = '';
+        if (!messages.length) {
+          var ok = document.createElement('div');
+          ok.className = 'message ok';
+          ok.textContent = 'Aucune alerte. Autonomie de ' + formater(auto, 1) + ' h pour ' + dureeH + ' h demandées.';
+          conteneur.appendChild(ok);
+          return;
+        }
+        messages.forEach(function (m) {
+          var div = document.createElement('div');
+          div.className = 'message ' + m.niveau;
+          div.textContent = m.texte;
+          conteneur.appendChild(div);
+        });
+      }
+
+      function recalculer() {
+        var pack = lirePack();
+        var kit = lireKit();
+        var dureeH = parseFloat($('dureeH').value) || 0;
+        var charge = B.calculerCharge(kit);
+        var kwPack = B.puissancePackKw(pack);
+        var auto = B.autonomie(charge.pMoyenneKw, pack);
+
+        $('rMoyenneKw').textContent = formater(charge.pMoyenneKw, 2);
+        $('rCreteKw').textContent = formater(charge.pCreteKw, 2);
+        $('rCreteKva').textContent = formater(charge.sCreteKva, 1);
+        $('rPackKw').textContent = formater(kwPack, 1);
+        $('rAutonomie').textContent = formater(auto, 2);
+
+        afficherMessages(B.verifier(charge, pack, dureeH), dureeH, auto);
+        dessinerCourbe(B.courbeSoc(charge.pMoyenneKw, pack, dureeH || 24, 0.25), dureeH);
+      }
+
+      $('ajouter').addEventListener('click', function () { ajouterLigne(); recalculer(); });
+      $('chargerExemple').addEventListener('click', function () {
+        $('corpsKit').textContent = '';
+        B.KIT_EXEMPLE.forEach(ajouterLigne);
+        recalculer();
+      });
+      $('vider').addEventListener('click', function () {
+        $('corpsKit').textContent = '';
+        recalculer();
+      });
+
+      ['kva', 'kwhNominal', 'cosPhi', 'socMin', 'rendement', 'auxiliairesKw', 'dureeH']
+        .forEach(function (id) { $(id).addEventListener('input', recalculer); });
+
+      remplirPack();
+      B.KIT_EXEMPLE.forEach(ajouterLigne);
+      recalculer();
+    })();
+  </script>
+</body>
+</html>
