@@ -1,0 +1,241 @@
+{
+  "relecteur": "Pipo",
+  "date": "2026-11-04",
+  "fiches": {
+    "30656": {
+      "revision": 3,
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "autres",
+          "extrait": "Les autres tomes n'ont pas d'indication d'âge dans le catalogue de la BnF.",
+          "probleme": "Cette affirmation exhaustive dépasse les vérifications documentées. La consultation de trois notices ne permet pas de conclure pour tous les autres tomes.",
+          "correction": "Supprimer cette phrase et limiter le constat aux notices effectivement vérifiées.",
+          "source": "https://catalogue.bnf.fr/ark:/12148/cb42222149m"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/Vagabond_(manga)",
+        "https://en.wikipedia.org/wiki/Vagabond_(manga)",
+        "https://otakuorbit.com/first-volume-up-vagabond-volume-1-takezo-arc/",
+        "https://honeysanime.com/top-10-badass-vagabond-manga-characters/",
+        "https://mangalibrarian.com/2025/05/18/vagabond-definitive-edition-manga-review/",
+        "https://otakuusamagazine.com/vagabond-is-a-provocative-fictional-biography-of-swordsman-miyamoto-musashi-from-slam-dunk-creator/",
+        "https://catalogue.bnf.fr/ark:/12148/cb42222149m",
+        "https://www.viz.com/manga-books/manga/vagabond-definitive-edition-volume-6-0/product/8965"
+      ],
+      "commentaire": "Les corrections concernant Inshun et les trois premiers tomes sont confirmées ; le maintien des poignets tranchés est justifié par Wikipédia français. Les notices des tomes 26 et 32 n'ont pas pu être relues ; 16 ans reste cohérent."
+    },
+    "31133": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 18,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/dorohedoro",
+        "https://www.graphiclibrary.org/reviews/dorohedoro-vol-1-by-q-hayashida",
+        "https://fr.wikipedia.org/wiki/Dorohedoro",
+        "https://en.wikipedia.org/wiki/Dorohedoro",
+        "https://www.julsa.fr/avis-manga-dorohedoro-tome-1/",
+        "https://www.viz.com/manga-books/manga/dorohedoro-volume-1-0/product/2321",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "Les décisions de la précédente révision sont justifiées : les deux évaluations du manga visent les adultes et la portée des descriptions de violence est désormais précisée. Les 23 tomes et la réédition annoncée en 12 tomes sont confirmés."
+    },
+    "31706": {
+      "revision": 3,
+      "verdict": "valide",
+      "age_propose": 16,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://en.wikipedia.org/wiki/Steel_Ball_Run",
+        "https://www.commonsensemedia.org/tv-reviews/steel-ball-run-jojos-bizarre-adventure",
+        "https://www.bbfc.co.uk/release/steel-ball-run-jojos-bizarre-adventure-q29sbgvjdglvbjpwwc0xmtezntm4",
+        "https://yattatachi.com/jojos-bizarre-adventure-part-7-run-vol-1-review",
+        "https://buttondown.com/magencubed/archive/jojos-bizarre-adventure-and-the-generosity-of/",
+        "https://jojowiki.com/SBR_Chapter_61",
+        "https://jojowiki.com/Lucy_Steel",
+        "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t01",
+        "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t24",
+        "https://www.viz.com/manga-books/manga/jojo-s-bizarre-adventure-part-7-steel-ball-run-volume-1/product/8330/hardcover",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "La scène du chapitre 61 est confirmée et correctement signalée comme spoiler. Les corrections précédentes sont intégrées ; 16 ans est cohérent avec le contenu documenté et le classement Teen Plus du manga."
+    },
+    "34632": {
+      "revision": 3,
+      "verdict": "a_corriger",
+      "age_propose": 18,
+      "erreurs": [
+        {
+          "rubrique": "sources",
+          "extrait": "Bibliothèques de la Ville de Paris (manga) : Classent le tome 1 en public adulte.",
+          "probleme": "La notice citée est inaccessible pendant cette relecture et son classement n'a pas pu être confirmé indépendamment. Il s'agit d'un point de vérification en attente, pas d'une erreur démontrée.",
+          "correction": "Faire vérifier la notice consultable ou retirer provisoirement cette attribution, également présente dans l'avis. Le classement Mature de VIZ suffit à documenter la recommandation adulte.",
+          "source": "https://bibliotheques.paris.fr/doc/SYRACUSE/850068"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/bonne-nuit-punpun/",
+        "https://www.kana.fr/produit/bonne-nuit-punpun-t1/",
+        "https://www.kana.fr/produit/bonne-nuit-punpun-t5/",
+        "https://www.kana.fr/produit/bonne-nuit-punpun-t13/",
+        "https://en.wikipedia.org/wiki/Goodnight_Punpun",
+        "https://fr.wikipedia.org/wiki/Bonne_nuit_Punpun",
+        "https://www.viz.com/manga-books/manga/goodnight-punpun-volume-1-0/product/3798",
+        "https://www.viz.com/goodnight-punpun",
+        "https://www.viz.com/ratings",
+        "https://leclaireur.fnac.com/article/137874-portrait-inio-asano-le-maitre-de-la-tranche-de-vie/"
+      ],
+      "commentaire": "L'entrée au lycée au tome 5 et les violences du couple aux tomes 11 et 12 sont confirmées : les décisions précédentes sont justifiées. La réserve porte sur la notice parisienne ; 18 ans est maintenu."
+    },
+    "53390": {
+      "revision": 3,
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "sources",
+          "extrait": "La notice de l'édition anniversaire du tome 1 (2023) précise « A partir de 15 ans ».",
+          "probleme": "Les trois notices parisiennes citées sont inaccessibles pendant cette relecture. Leurs mentions de public et d'âge, dont l'interdiction indiquée pour le DVD, restent donc à confirmer indépendamment.",
+          "correction": "Faire vérifier ces notices consultables ou retirer provisoirement leurs attributions dans l'avis et dans « Ce que disent les autres ». Conserver les recommandations vérifiées de Common Sense Media et filmspourenfants.net.",
+          "source": "https://bibliotheques.paris.fr/doc/SYRACUSE/1458882"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.pika.fr/livre/lattaque-des-titans-t01-9782811611699/",
+        "https://fr.wikipedia.org/wiki/L%27Attaque_des_Titans",
+        "https://www.commonsensemedia.org/tv-reviews/attack-on-titan",
+        "https://www.filmspourenfants.net/lattaque-des-titans/"
+      ],
+      "commentaire": "Les seuils de filmspourenfants.net sont désormais correctement distingués, et l'attribution de la description des Titans répond à la remarque précédente. La réserve concerne les notices parisiennes non consultables ; 16 ans reste justifié."
+    },
+    "63327": {
+      "revision": 2,
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Dans le manga, le tome 7 montre le héros aux mains d'une goule sadique qui lui fait subir de longues séances de torture (résumé de Glénat)",
+          "probleme": "Le résumé Glénat est allusif : il annonce ce que Yamori fera subir à Ken, sans décrire de longues séances de torture. L'attribution précise à ce résumé est excessive.",
+          "correction": "Attribuer les longues séances de torture à la critique du tome 7 qui les décrit ; préciser seulement que le résumé Glénat annonce les sévices infligés par Yamori.",
+          "source": "https://www.glenat.com/glenat-manga/tokyo-ghoul-tome-07-9782344001844/"
+        },
+        {
+          "rubrique": "sources",
+          "extrait": "Bibliothèques de la Ville de Paris (manga) : Classent le tome 1 en public adulte.",
+          "probleme": "Le classement n'a pas pu être reconfirmé : la notice est inaccessible pendant cette relecture.",
+          "correction": "Faire vérifier la notice consultable ou retirer provisoirement cette attribution dans les deux rubriques concernées.",
+          "source": "https://bibliotheques.paris.fr/doc/SYRACUSE/930376"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/tokyo-ghoul-tome-01-9782723495615/",
+        "https://www.glenat.com/glenat-manga/tokyo-ghoul-tome-07-9782344001844/",
+        "https://fr.wikipedia.org/wiki/Tokyo_Ghoul",
+        "https://www.commonsensemedia.org/tv-reviews/tokyo-ghoul",
+        "https://leclaireur.fnac.com/article/cp46260-tokyo-ghoul-de-sui-ishida-ca-raconte-quoi/",
+        "https://www.viz.com/manga-books/manga/tokyo-ghoul-volume-1-0/product/3689",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "Les corrections sur VIZ, l'auteur et l'attribution de « pour public averti » sont satisfaisantes. La critique The Outer Haven n'a pas pu être rouverte ; les détails supplémentaires de torture précédemment écartés ne sont donc pas réclamés ici."
+    },
+    "65243": {
+      "revision": 2,
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 10 ans pour découvrir cette série.",
+          "probleme": "La demande précédente de présenter 10 ans comme une proposition provisoire n'est pas appliquée dans le texte publié. La seule classification identifiée portant sur le manga est Teen chez VIZ, destinée au début de l'adolescence ; les 9 ans concernent un film particulier.",
+          "correction": "Retenir 12 ans comme proposition éditoriale pour le début de l'adolescence et mentionner le classement Teen du manga dans l'avis. Préciser que VIZ ne donne pas de seuil numérique exact.",
+          "source": "https://www.viz.com/ratings"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/haikyu",
+        "https://www.filmspourenfants.net/haikyu-la-guerre-des-poubelles/",
+        "https://fr.wikipedia.org/wiki/Haiky%C5%AB!!",
+        "https://www.viz.com/manga-books/manga/haikyu-volume-1-0/product/4823",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "La distinction entre manga, animé et film est correctement rétablie. Je révise ma proposition précédente de 10 ans à la lumière du classement du manga trouvé depuis ; les notices BnF n'ont pas pu être rouvertes."
+    },
+    "72451": {
+      "revision": 2,
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Violence burlesque : Tapes et coups de tête pour rire.",
+          "probleme": "La critique de l'épisode 9 citée décrit aussi une dynamique intime où Hori demande de l'agressivité à Miyamura, qui paraît mal à l'aise. Ce contenu est distinct des coups burlesques et des simples sous-entendus déjà signalés.",
+          "correction": "Ajouter une alerte sobre : « Dans l'épisode 9 de l'animé, une dynamique intime mêlant agressivité et malaise est également signalée par la critique. » Ne pas généraliser au manga sans confirmation.",
+          "source": "https://butwhytho.net/2021/03/review-horimiya-episode-9-its-hard-but-not-impossible/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.nobi-nobi.fr/livres-series-horimiya/",
+        "https://www.nobi-nobi.fr/livre/horimiya-pack-offre-decouverte-t01-et-t02-9782384962099/",
+        "https://www.nobi-nobi.fr/livre/horimiya-tome-17-piece-memories-9782384962846/",
+        "https://www.commonsensemedia.org/tv-reviews/horimiya",
+        "https://yenpress.com/titles/9780316342032-horimiya-vol-1",
+        "https://thenerdybasement.com/anime/horimiya-episode-3-review/",
+        "https://butwhytho.net/2021/03/review-horimiya-episode-9-its-hard-but-not-impossible/",
+        "https://en.wikipedia.org/wiki/Horimiya",
+        "https://fr.wikipedia.org/wiki/Horimiya",
+        "https://thenerdybasement.com/anime/horimiya-episode-7-review/",
+        "https://mangalibrarian.com/2022/10/09/manga-review-horimiya/",
+        "https://cnlj.bnf.fr/sites/default/files/ar-08-2022.pdf"
+      ],
+      "commentaire": "La relation intime suggérée et la recommandation du CNLJ dès 11 ans sont confirmées ; les corrections précédentes sont satisfaisantes. La notice parisienne et la capture visuelle du symbole CNLJ sont restées inaccessibles, mais le texte extrait associe explicitement le code « Coup de cœur » au tome 5."
+    },
+    "74347": {
+      "revision": 2,
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Rien de sexuel n'est signalé par les sources consultées.",
+          "probleme": "Cette formulation générale minimise le contenu relevé par Common Sense Media, qui mentionne aussi des tenues féminines décolletées dans son avertissement parental.",
+          "correction": "Remplacer par : « Common Sense Media signale également des personnages féminins portant des tenues décolletées dans l'animé. »",
+          "source": "https://www.commonsensemedia.org/tv-reviews/one-punch-man"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://catalogue.bnf.fr/ark:/12148/cb44498514k",
+        "https://www.commonsensemedia.org/tv-reviews/one-punch-man",
+        "https://www.commonsensemedia.org/tv-reviews/one-punch-man/user-reviews/child",
+        "https://fr.wikipedia.org/wiki/One-Punch_Man",
+        "https://en.wikipedia.org/wiki/One-Punch_Man",
+        "https://cnlj.bnf.fr/sites/default/files/revues_document_joint/selection_bd_297.pdf"
+      ],
+      "commentaire": "Les morts annulées par le retour dans le temps et le nombre de tomes japonais sont confirmés. Les corrections précédentes sont justifiées ; les notices BnF des tomes 18 et 32 n'ont pas pu être rouvertes."
+    },
+    "74489": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/series-lere-des-cristaux/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-01-9782344011713/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-03-9782344011737/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-04-9782344014875/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-06-9782344020005/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-07-9782344023983/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-10-9782344039991/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-12-9782344058640/",
+        "https://www.glenatmangamax.com/manga/lere-des-cristaux-tome-01/",
+        "https://en.wikipedia.org/wiki/Land_of_the_Lustrous",
+        "https://animeuknews.net/2017/06/land-of-the-lustrous-volume-1-review/",
+        "https://animeuknews.net/2019/05/land-of-the-lustrous-review/"
+      ],
+      "commentaire": "Les corrections sur les bras et le remplacement de la tête sont satisfaisantes ; la scène du tome 12 est confirmée par Glénat. Le seuil de 14 ans est cohérent avec les 13 ans de l'éditeur et les paliers du site."
+    }
+  }
+}

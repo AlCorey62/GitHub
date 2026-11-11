@@ -1,0 +1,413 @@
+{
+  "30003": {
+    "titre": "20th Century Boys",
+    "age": 14,
+    "resume": "En 1969, Kenji et ses amis d'enfance se retrouvent dans une base secrète. Ils y inventent une histoire de science-fiction où une organisation maléfique veut détruire l'humanité, et la consignent dans un « cahier des prédictions ». En 1997, Kenji, devenu gérant d'une supérette, élève sa nièce Kanna, encore bébé. Après la mort d'un ami d'enfance, il découvre qu'une secte menée par un mystérieux « Ami » réalise une à une les prédictions de leur enfance. Kenji et ses anciens camarades tentent d'empêcher la fin du monde annoncée pour le 31 décembre 2000.",
+    "themes": [
+      {
+        "titre": "Amitié d'enfance et nostalgie",
+        "texte": "Le critique Jason Thompson y voit une épopée de la nostalgie, de l'âge mûr et du rock, qu'il compare à Ça de Stephen King : des amis d'enfance se retrouvent adultes pour affronter ce qu'ils ont laissé derrière eux."
+      },
+      {
+        "titre": "Sectes et manipulation",
+        "texte": "La série aborde la propagande, la manipulation des foules, le pouvoir des sectes et les peurs de fin du monde (Wikipédia, français). Des critiques citent la secte Aum Shinrikyo comme source d'inspiration."
+      },
+      {
+        "titre": "Héroïsme ordinaire",
+        "texte": "Des gens ordinaires se retrouvent pris dans des événements qui les dépassent. Le Centre national de la littérature pour la jeunesse souligne l'héroïsme, l'émotion et une réflexion sur le monde contemporain et l'anonymat de l'individu."
+      },
+      {
+        "titre": "Terrorisme et armes biologiques",
+        "texte": "Les attentats et les attaques au virus sont au cœur de l'intrigue (Wikipédia). Le récit montre une organisation qui tire profit des catastrophes pour gagner en popularité et en pouvoir."
+      }
+    ],
+    "scenes": [
+      {
+        "categorie": "themes",
+        "titre": "Mort d'un ami d'enfance",
+        "texte": "Le point de départ est la mort d'un ami d'enfance, présentée comme un suicide (Wikipédia, anglais et français).",
+        "spoiler": false
+      },
+      {
+        "categorie": "violence",
+        "titre": "Attentats et attaques au virus",
+        "texte": "La secte réalise les prédictions : attentats à la bombe et attaques virales à San Francisco, à Londres et dans un grand aéroport japonais (Wikipédia, anglais).",
+        "spoiler": false
+      },
+      {
+        "categorie": "violence",
+        "titre": "Catastrophe de masse",
+        "texte": "Le virus est répandu à grande échelle le soir du Nouvel An 2000, puis une épidémie mondiale menace de tuer tous ceux qui ne sont pas vaccinés. Un plan prévoit d'éliminer presque toute l'humanité (Wikipédia, anglais).",
+        "spoiler": true
+      },
+      {
+        "categorie": "themes",
+        "titre": "Régime autoritaire",
+        "texte": "Dans la dernière partie, le Japon vit sous un régime qui exile les non-vaccinés et interdit les déplacements sous peine de mort ; une lycéenne subit un programme de lavage de cerveau (Wikipédia, anglais).",
+        "spoiler": true
+      },
+      {
+        "categorie": "violence",
+        "titre": "Meurtres et assassinats",
+        "texte": "Le récit comporte des meurtres, dont celui d'un mafieux par un policier corrompu, des tentatives d'assassinat et des mafias rivales (Wikipédia, anglais).",
+        "spoiler": true
+      },
+      {
+        "categorie": "sexe",
+        "titre": "Revues pornographiques",
+        "texte": "Enfants, les héros partagent dans leur base des mangas et des revues pornographiques volées (Wikipédia, anglais). Ils déchirent aussi l'affiche d'un film érotique (Wikipédia, français).",
+        "spoiler": false
+      },
+      {
+        "categorie": "peur",
+        "titre": "Suspense et horreur",
+        "texte": "Le critique Matthew Meylikhov (Paste) décrit une expérience mêlant horreur, science-fiction et futur post-apocalyptique. Le Centre national de la littérature pour la jeunesse parle d'un suspense permanent.",
+        "spoiler": false
+      }
+    ],
+    "vocabulaire": "Non renseigné par les sources consultées.",
+    "avis": "20th Century Boys est un thriller ambitieux et souvent émouvant, qui suit sur plusieurs décennies un groupe d'amis ordinaires face à une secte qui veut détruire le monde. Les sources consultées décrivent peu de scènes graphiques, mais les thèmes sont lourds : attentats, épidémies meurtrières, manipulation des foules, régime autoritaire. La narration, faite d'allers-retours entre les époques et d'un très grand nombre de personnages, demande de la maturité. L'édition française est classée seinen et l'éditeur américain la juge adaptée aux adolescents plus âgés et aux adultes. Mieux vaut avoir 14 ans pour découvrir cette série.",
+    "autres": [
+      {
+        "source": "Viz Media (éditeur américain du manga)",
+        "texte": "Classe la Perfect Edition « Teen Plus », catégorie que l'éditeur définit comme pouvant convenir aux adolescents plus âgés et aux adultes.",
+        "lien": "https://www.viz.com/read/manga/20th-century-boys-the-perfect-edition-volume-1/product/5630"
+      },
+      {
+        "source": "Centre national de la littérature pour la jeunesse (BnF), La Revue des livres pour enfants n° 325",
+        "texte": "Range la série en seinen et la retient dans son dossier manga (juin 2022) : « Héroïsme, émotion sont au rendez-vous », avec une réflexion sur le monde contemporain dans un suspense permanent. Pas d'âge indiqué.",
+        "lien": "https://cnlj.bnf.fr/sites/default/files/revues_document_joint/dossier_principales_series_325.pdf"
+      },
+      {
+        "source": "Jason Thompson, critique (cité par Wikipédia, anglais)",
+        "texte": "Bien que destinée à un public masculin, la série a conquis des lecteurs de tous âges grâce à son point de départ, sa narration et le mystère autour d'« Ami ».",
+        "lien": "https://en.wikipedia.org/wiki/20th_Century_Boys"
+      },
+      {
+        "source": "Panini (éditeur français, via ActuaLitté)",
+        "texte": "Présente la série comme un « thriller passionnant », récompensé notamment à Angoulême en 2004 ; genre indiqué : seinen. Aucun âge indiqué.",
+        "lien": "https://actualitte.com/livres/402511/extraits/20th-century-boys-perfect-edition-tome-11-naoki-urasawa-takashi-nagasaki-vincent-zouzoulkovsky-9782809499063"
+      }
+    ],
+    "sources": [
+      {
+        "titre": "VIZ | 20th Century Boys: The Perfect Edition, Vol. 1",
+        "lien": "https://www.viz.com/read/manga/20th-century-boys-the-perfect-edition-volume-1/product/5630"
+      },
+      {
+        "titre": "VIZ | Our Ratings",
+        "lien": "https://www.viz.com/ratings"
+      },
+      {
+        "titre": "20th Century Boys Perfect Edition Tome 11, ActuaLitté (fiche Panini France)",
+        "lien": "https://actualitte.com/livres/402511/extraits/20th-century-boys-perfect-edition-tome-11-naoki-urasawa-takashi-nagasaki-vincent-zouzoulkovsky-9782809499063"
+      },
+      {
+        "titre": "La Revue des livres pour enfants n° 325, juin 2022 : Mangas, la déferlante. Dossier : Les principales séries citées dans notre dossier (CNLJ, BnF)",
+        "lien": "https://cnlj.bnf.fr/sites/default/files/revues_document_joint/dossier_principales_series_325.pdf"
+      },
+      {
+        "titre": "20th Century Boys, Wikipédia (français)",
+        "lien": "https://fr.wikipedia.org/wiki/20th_Century_Boys"
+      },
+      {
+        "titre": "20th Century Boys, Wikipedia (anglais)",
+        "lien": "https://en.wikipedia.org/wiki/20th_Century_Boys"
+      }
+    ],
+    "date": "2026-11-04",
+    "redacteur": "Claude (assistant IA)",
+    "relecture": {
+      "par": [
+        "Pipo (ChatGPT)",
+        "Mario (Gemini)"
+      ],
+      "date": "2026-11-04"
+    }
+  },
+  "31133": {
+    "titre": "Dorohedoro",
+    "age": 18,
+    "resume": "Dans un monde post-apocalyptique, Hole est une immense ville humaine, polluée et sans loi, où des mages venus de leur propre monde viennent s'exercer à la magie sur les habitants. Caïman, un homme amnésique dont un mage a transformé la tête en tête de lézard, traque ces mages avec son amie Nikaido, qui tient un petit restaurant. Il espère retrouver celui qui l'a ensorcelé, le tuer pour rompre le sort et retrouver son identité. La rumeur d'un homme-lézard qui tue des mages attire l'attention d'En, le puissant chef des mages, qui envoie ses « nettoyeurs » à ses trousses. Écrite et dessinée par Q Hayashida, la série compte 23 tomes en France, chez Vegetal Manga Shoten puis Soleil Manga, et Soleil la réédite depuis janvier 2025 en 12 tomes dans une « Chaos Edition ».",
+    "themes": [
+      {
+        "titre": "Identité et mémoire",
+        "texte": "Caïman a perdu ses souvenirs et son visage. Au fil de la série, il découvre peu à peu son passé et les événements qui ont conduit à sa transformation."
+      },
+      {
+        "titre": "Amitié et loyauté",
+        "texte": "Common Sense Media retient l'amitié et la loyauté parmi les thèmes, et juge crédible la relation entre Caïman et Nikaido. Nikaido est décrite comme une jeune femme forte, indépendante et fidèle en amitié."
+      },
+      {
+        "titre": "Inégalités entre deux mondes",
+        "texte": "Les humains sont relégués dans les bidonvilles pollués de Hole et subissent la violence gratuite des mages, qui circulent librement entre les mondes. Chez les mages, le rang social dépend de la puissance de leur magie."
+      },
+      {
+        "titre": "Vengeance et violence",
+        "texte": "La colère et les représailles sont au cœur du récit. Caïman n'hésite pas à éliminer les mages et à les faire souffrir pour obtenir des informations, ce que le lecteur est amené à accepter."
+      },
+      {
+        "titre": "Humour noir",
+        "texte": "Les critiques soulignent le mélange de gore, d'absurde et d'humour. Les moments quotidiens et chaleureux entre personnages, comme le goût de Caïman pour les gyozas, contrastent avec la violence ambiante."
+      }
+    ],
+    "scenes": [
+      {
+        "categorie": "violence",
+        "titre": "Gore abondant",
+        "texte": "Documenté dans le tome 1 du manga et dans l'adaptation animée. Common Sense Media décrit pour l'animé des personnes tranchées, écrasées et mutilées, des crânes écrasés contre des murs et des membres arrachés projetés partout. The Graphic Library juge la violence et le gore « excessifs » dans le tome 1 du manga. Les sources consultées ne précisent pas leur fréquence dans les tomes suivants.",
+        "spoiler": false
+      },
+      {
+        "categorie": "violence",
+        "titre": "Interrogatoires brutaux",
+        "texte": "Pour savoir si un mage est son agresseur, Caïman lui enfourne la tête dans sa gueule de lézard, où vit un homme mystérieux. Il fait souffrir les mages pour leur arracher des informations. Dès le tome 1.",
+        "spoiler": false
+      },
+      {
+        "categorie": "peur",
+        "titre": "Corps transformés",
+        "texte": "La magie transforme et déforme les corps : tête de reptile, personnes montrées mutilées ou à moitié changées en autres créatures, visage arraché. Le dessin sombre et anguleux renforce le malaise. Common Sense Media évoque aussi la présence de zombies.",
+        "spoiler": false
+      },
+      {
+        "categorie": "themes",
+        "titre": "Humains cobayes",
+        "texte": "Les mages considèrent les habitants de Hole comme des cobayes et justifient ainsi leurs expériences magiques sur eux.",
+        "spoiler": false
+      },
+      {
+        "categorie": "sexe",
+        "titre": "Nudité partielle",
+        "texte": "Selon The Graphic Library, l'éditeur américain signale de la nudité féminine de face jusqu'à la taille dans le manga. Dans l'animé, Common Sense Media relève des tenues décolletées, des seins presque nus et le flanc d'un homme nu.",
+        "spoiler": false
+      },
+      {
+        "categorie": "autre",
+        "titre": "Alcool et tabac",
+        "texte": "L'éditeur américain signale tabac et alcool dans le manga. Dans l'animé, Caïman boit beaucoup de bière et des alcools forts sont consommés dans des bars.",
+        "spoiler": false
+      }
+    ],
+    "vocabulaire": "Le vocabulaire de la traduction française n'est pas renseigné par les sources consultées. Pour l'animé en version anglaise, Common Sense Media relève un langage fort ponctuel, comme « bitch ».",
+    "avis": "Dorohedoro est un seinen underground, à l'univers grotesque et crasseux, qui mêle violence extrême, absurde et humour noir. Les personnages, y compris certains adversaires, sont attachants et leur quotidien presque chaleureux tranche avec un gore abondant. Combats sanglants, corps mutilés, interrogatoires cruels, nudité, alcool : le contenu s'adresse à des lecteurs aguerris qui supportent les images dures. L'éditeur américain réserve le manga aux adultes et Common Sense Media conseille l'animé dès 17 ans. Réservé aux adultes.",
+    "autres": [
+      {
+        "source": "Common Sense Media (animé)",
+        "texte": "Conseille dès 17 ans : série étrange et prenante mais extrêmement violente. Les parents notent dès 15 ans, les enfants dès 13 ans.",
+        "lien": "https://www.commonsensemedia.org/tv-reviews/dorohedoro"
+      },
+      {
+        "source": "VIZ Media (éditeur américain, manga)",
+        "texte": "Classe le tome 1 « Mature », catégorie que l'éditeur décrit comme réservée aux adultes (« Suitable for adults only ») et pouvant contenir une violence extrême.",
+        "lien": "https://www.viz.com/manga-books/manga/dorohedoro-volume-1-0/product/2321"
+      },
+      {
+        "source": "The Graphic Library (manga, tome 1, édition américaine)",
+        "texte": "Critique de bibliothécaire : réservé aux adultes (« Adult »). Rappelle que l'éditeur américain VIZ classe la série « Mature » pour violence, gore, tabac, alcool et nudité.",
+        "lien": "https://www.graphiclibrary.org/reviews/dorohedoro-vol-1-by-q-hayashida"
+      },
+      {
+        "source": "Julsa (critique du tome 1 de la Chaos Edition)",
+        "texte": "Parle de « gore comique » porté par une écriture fine et recommande la série à ceux que « l'action, le gore et les univers assez sombres » n'effraient pas.",
+        "lien": "https://www.julsa.fr/avis-manga-dorohedoro-tome-1/"
+      }
+    ],
+    "sources": [
+      {
+        "titre": "Common Sense Media : Parents' Guide to Dorohedoro (TV)",
+        "lien": "https://www.commonsensemedia.org/tv-reviews/dorohedoro"
+      },
+      {
+        "titre": "The Graphic Library : Dorohedoro vol 1 by Q. Hayashida",
+        "lien": "https://www.graphiclibrary.org/reviews/dorohedoro-vol-1-by-q-hayashida"
+      },
+      {
+        "titre": "Wikipédia (français) : Dorohedoro",
+        "lien": "https://fr.wikipedia.org/wiki/Dorohedoro"
+      },
+      {
+        "titre": "Wikipedia (anglais) : Dorohedoro",
+        "lien": "https://en.wikipedia.org/wiki/Dorohedoro"
+      },
+      {
+        "titre": "Julsa : Avis Manga : Dorohedoro - Tome 1",
+        "lien": "https://www.julsa.fr/avis-manga-dorohedoro-tome-1/"
+      },
+      {
+        "titre": "BnF, catalogue général : notice Dorohedoro. 7 (Soleil manga, 2009)",
+        "lien": "https://catalogue.bnf.fr/ark:/12148/cb414650102"
+      },
+      {
+        "titre": "VIZ Media : « Dorohedoro, Vol. 1 » (fiche produit, classement « Mature »)",
+        "lien": "https://www.viz.com/manga-books/manga/dorohedoro-volume-1-0/product/2321"
+      },
+      {
+        "titre": "VIZ Media : « Ratings » (définition des catégories d'âge)",
+        "lien": "https://www.viz.com/ratings"
+      },
+      {
+        "titre": "ActuaLitté : fiche livre « Dorohedoro Tome 7 Chaos Edition » (Soleil Productions)",
+        "lien": "https://actualitte.com/livres/907139/extraits/dorohedoro-tome-7-chaos-edition-q-hayashida-hayashida-q-9782302105409"
+      }
+    ],
+    "date": "2026-11-04",
+    "date_revision": "2026-11-04",
+    "redacteur": "Claude (assistant IA)",
+    "relecture": {
+      "par": [
+        "Pipo (ChatGPT)",
+        "Mario (Gemini)"
+      ],
+      "date": "2026-11-04"
+    }
+  },
+  "31706": {
+    "titre": "Jojo's - Steel Ball Run",
+    "age": 16,
+    "resume": "En 1890, aux États-Unis, une course de chevaux géante, la Steel Ball Run, doit relier San Diego à New York, soit plus de 6 000 kilomètres, avec 50 millions de dollars à la clé. Johnny Joestar, ancien jockey célèbre devenu paraplégique, assiste au départ. Il retrouve un instant l'usage de ses jambes au contact de Gyro Zeppeli, un mystérieux concurrent. Pour percer le secret de sa technique, il s'inscrit à son tour dans la course. Septième partie de Jojo's Bizarre Adventure, la série est écrite et dessinée par Hirohiko Araki et compte 24 tomes, publiés en France par Delcourt de 2013 à 2016.",
+    "themes": [
+      {
+        "titre": "Persévérance",
+        "texte": "Johnny se donne entièrement pour atteindre son but. Common Sense Media retient le message « You are in charge of your own future » (tu es maître de ton avenir), et l'auteur dit vouloir affirmer que l'humain grandit par sa propre force."
+      },
+      {
+        "titre": "Amitié et rivalité",
+        "texte": "Johnny et Gyro commencent en rivaux puis deviennent amis, une relation saluée notamment par le site Geek.com, cité par Wikipédia."
+      },
+      {
+        "titre": "Handicap",
+        "texte": "Le héros est un cavalier en fauteuil roulant. Les avis divergent : Anime News Network, cité par Wikipédia, salue un portrait positif, alors que Common Sense Media range parmi les points discutables le fait qu'il cherche une magie pour effacer son handicap."
+      },
+      {
+        "titre": "Rêve américain et ambition",
+        "texte": "La série idéalise une Amérique de destin et de conquête. Elle parle de mort, de perte, d'arrogance, d'ambition et de gloire, selon Common Sense Media."
+      }
+    ],
+    "scenes": [
+      {
+        "categorie": "violence",
+        "titre": "Armes à feu et pouvoirs",
+        "texte": "Les concurrents se menacent et s'attaquent avec des armes à feu et des pouvoirs surnaturels. Dans l'animé, Common Sense Media relève des blessures par balle sanglantes, des dents cassées et des cris de douleur. Le BBFC classe l'animé 15 pour violence, menace et blessures détaillées.",
+        "spoiler": false
+      },
+      {
+        "categorie": "themes",
+        "titre": "Maltraitance et automutilation",
+        "texte": "De brèves scènes montrent une tentative de meurtre, des mauvais traitements et de l'automutilation, et un personnage plaisante sur le suicide (Common Sense Media, animé).",
+        "spoiler": false
+      },
+      {
+        "categorie": "sexe",
+        "titre": "Nudité comique",
+        "texte": "Dans le tome 1, le chemisier d'une femme se déchire et dévoile sa poitrine, pour un effet comique (critique du blog Yattatachi). Common Sense Media ne relève aucun contenu sexuel dans l'animé, dont seuls les premiers épisodes sont sortis.",
+        "spoiler": false
+      },
+      {
+        "categorie": "sexe",
+        "titre": "Agression sexuelle d'une adolescente",
+        "texte": "Dans le tome 16, Lucy Steel, une adolescente de 14 ans, subit une tentative d'agression sexuelle de la part de l'antagoniste principal et se défend (JoJo Wiki, chapitre 61 ; critique Nature's Corrupted). Lucy découvre ensuite qu'elle porte en elle, de façon surnaturelle, la tête du cadavre sacré (Wikipedia anglais).",
+        "spoiler": true
+      },
+      {
+        "categorie": "autre",
+        "titre": "Stéréotypes",
+        "texte": "Common Sense Media relève des stéréotypes raciaux, par exemple un jeune homme noir présenté comme paresseux. Le blog Yattatachi juge problématique la représentation d'une tribu amérindienne violente aux visages déformés.",
+        "spoiler": false
+      },
+      {
+        "categorie": "autre",
+        "titre": "Mort d'animaux",
+        "texte": "Le blog Yattatachi signale la mort sous-entendue d'un animal dans le tome 1.",
+        "spoiler": false
+      },
+      {
+        "categorie": "violence",
+        "titre": "Morts de personnages principaux",
+        "texte": "La course sert de couverture à une conspiration autour des fragments d'un cadavre sacré, et plusieurs personnages importants meurent au fil de l'histoire.",
+        "spoiler": true
+      }
+    ],
+    "vocabulaire": "Common Sense Media (animé, version anglaise) relève beaucoup de jurons : « bastard », « hell », « shit », « damn », « a--hole », « goddamn », et des insultes comme « mouthy brat » ou « little s--t ». Aucune source consultée ne décrit le langage de l'édition française du manga.",
+    "avis": "Steel Ball Run transpose l'univers de Jojo's dans une folle course de chevaux à travers l'Amérique de 1890, une aventure inventive saluée pour son dessin, ses personnages et l'amitié entre ses deux héros. La violence par armes à feu et pouvoirs surnaturels est fréquente et sanglante, et la seconde moitié du manga contient une tentative d'agression sexuelle sur une adolescente. Les critiques relèvent aussi des stéréotypes raciaux et une représentation discutée du handicap ; l'animé emploie en anglais un langage souvent grossier, et celui de la traduction française du manga n'est pas documenté. Common Sense Media conseille l'animé dès 14 ans, mais seuls ses premiers épisodes sont sortis, et l'édition américaine du manga vise les grands adolescents. Mieux vaut avoir 16 ans pour découvrir cette série.",
+    "autres": [
+      {
+        "source": "Common Sense Media (animé)",
+        "texte": "Conseille dès 14 ans : animé d'action avec « lots of swears and stereotypes » (beaucoup de jurons et de stéréotypes), violence sanglante, message positif sur la persévérance.",
+        "lien": "https://www.commonsensemedia.org/tv-reviews/steel-ball-run-jojos-bizarre-adventure"
+      },
+      {
+        "source": "BBFC (animé, Netflix)",
+        "texte": "Classe la série 15 pour « injury detail, threat, violence ».",
+        "lien": "https://www.bbfc.co.uk/release/steel-ball-run-jojos-bizarre-adventure-q29sbgvjdglvbjpwwc0xmtezntm4"
+      },
+      {
+        "source": "Viz Media (édition américaine du manga)",
+        "texte": "Classe la série « Teen Plus », catégorie que l'éditeur décrit comme pouvant convenir aux grands adolescents et aux adultes.",
+        "lien": "https://www.viz.com/manga-books/manga/jojo-s-bizarre-adventure-part-7-steel-ball-run-volume-1/product/8330/hardcover"
+      },
+      {
+        "source": "Yattatachi (critique du tome 1 américain)",
+        "texte": "Avertissements : mort d'animal sous-entendue, violence par armes à feu, maltraitance médicale, validisme ordinaire.",
+        "lien": "https://yattatachi.com/jojos-bizarre-adventure-part-7-run-vol-1-review"
+      }
+    ],
+    "sources": [
+      {
+        "titre": "Delcourt : Jojo's - Steel Ball Run T01",
+        "lien": "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t01"
+      },
+      {
+        "titre": "Delcourt : Jojo's - Steel Ball Run T24",
+        "lien": "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t24"
+      },
+      {
+        "titre": "Common Sense Media : Steel Ball Run: JoJo's Bizarre Adventure, Parents' Guide & TV Review",
+        "lien": "https://www.commonsensemedia.org/tv-reviews/steel-ball-run-jojos-bizarre-adventure"
+      },
+      {
+        "titre": "BBFC : STEEL BALL RUN JoJo's Bizarre Adventure",
+        "lien": "https://www.bbfc.co.uk/release/steel-ball-run-jojos-bizarre-adventure-q29sbgvjdglvbjpwwc0xmtezntm4"
+      },
+      {
+        "titre": "Viz Media : JoJo's Bizarre Adventure: Part 7, Steel Ball Run, Vol. 1",
+        "lien": "https://www.viz.com/manga-books/manga/jojo-s-bizarre-adventure-part-7-steel-ball-run-volume-1/product/8330/hardcover"
+      },
+      {
+        "titre": "Viz Media : Ratings (définition des classements)",
+        "lien": "https://www.viz.com/ratings"
+      },
+      {
+        "titre": "Yattatachi : JoJo's Bizarre Adventure: Part 7 Run Volume One Review (Spoiler-Free)",
+        "lien": "https://yattatachi.com/jojos-bizarre-adventure-part-7-run-vol-1-review"
+      },
+      {
+        "titre": "Wikipedia (anglais) : Steel Ball Run",
+        "lien": "https://en.wikipedia.org/wiki/Steel_Ball_Run"
+      },
+      {
+        "titre": "Nature's Corrupted (lettre d'information Buttondown) : JoJo's Bizarre Adventure and the Generosity of Storytelling, 25 décembre 2022",
+        "lien": "https://buttondown.com/magencubed/archive/jojos-bizarre-adventure-and-the-generosity-of/"
+      },
+      {
+        "titre": "JoJo Wiki : Steel Ball Run, chapitre 61 (tome 16)",
+        "lien": "https://jojowiki.com/SBR_Chapter_61"
+      },
+      {
+        "titre": "JoJo Wiki : Lucy Steel",
+        "lien": "https://jojowiki.com/Lucy_Steel"
+      }
+    ],
+    "date": "2026-11-04",
+    "date_revision": "2026-11-04",
+    "redacteur": "Claude (assistant IA)",
+    "relecture": {
+      "par": [
+        "Pipo (ChatGPT)",
+        "Mario (Gemini)"
+      ],
+      "date": "2026-11-04"
+    }
+  },
+  "_format": "Fiches rédigées à la main et vérifiées, prioritaires sur la fiche automatique. Voir manga/README.md, section « Rédiger une fiche vérifiée ». Clé : identifiant AniList du titre (nombre de l'adresse anilist.co/manga/<id>). Champs : age (6, 8, 10, 12, 14, 16 ou 18, obligatoire), sources (liste obligatoire de {titre, lien}), resume, themes [{titre, texte}], scenes [{categorie: violence | peur | sexe | themes | autre, titre, texte}], vocabulaire, avis, autres [{source, texte, lien}], redacteur, date (AAAA-MM-JJ). Les clés commençant par _ sont ignorées."
+}

@@ -1,0 +1,137 @@
+{
+  "relecteur": "Mario",
+  "date": "2026-11-04",
+  "fiches": {
+    "30001": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 16,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/monster-integrale-deluxe/",
+        "https://www.commonsensemedia.org/tv-reviews/monster",
+        "https://fr.wikipedia.org/wiki/Monster_(manga)"
+      ],
+      "commentaire": "Les corrections demandées en révision 1 ont bien été appliquées (rétrogradation de Tenma, attribution à l'animé du constat sur l'absence de gore détaillé, retrait de la mention non sourcée de l'infobox Wikipédia). La fiche est rigoureuse et fidèle aux sources."
+    },
+    "30002": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 18,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/berserk-tome-01-nouvelle-edition-9782344020685/",
+        "https://www.commonsensemedia.org/tv-reviews/berserk",
+        "https://fr.wikipedia.org/wiki/Berserk_(manga)",
+        "https://en.wikipedia.org/wiki/Berserk_(manga)",
+        "https://fr.wikipedia.org/wiki/Guts_(Berserk)"
+      ],
+      "commentaire": "Les ajustements sur les scènes de violences sexuelles (avec balise spoiler et distinction claire entre le manga et l'animé de 1997) ainsi que le retrait de la mention d'âge invérifiable sont impeccables. Le classement adultes (18 ans) s'impose."
+    },
+    "30011": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 12,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.filmspourenfants.net/naruto/",
+        "https://www.commonsensemedia.org/tv-reviews/naruto",
+        "https://www.commonsensemedia.org/tv-reviews/naruto-shippuden",
+        "https://fr.wikipedia.org/wiki/Naruto",
+        "https://en.wikipedia.org/wiki/Naruto"
+      ],
+      "commentaire": "La formulation prudente sur les épisodes propres à l'animé, la nuance sur la survie de Sasuke et l'ajout du repère à 15 ans pour Shippûden dans l'avis répondent parfaitement aux remarques précédentes."
+    },
+    "30012": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.filmspourenfants.net/bleach-the-soul-reaper-agent-arc-2/",
+        "https://www.commonsensemedia.org/tv-reviews/bleach-thousand-year-blood-war",
+        "https://en.wikipedia.org/wiki/List_of_Bleach_characters"
+      ],
+      "commentaire": "Les détails visuels propres au film de 2018 ont bien été isolés dans « Ce que disent les autres », et la scène de zombification du dernier arc est correctement documentée et marquée en spoiler."
+    },
+    "30013": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 12,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/one-piece-edition-originale-tome-113-9782344071120/",
+        "https://www.filmspourenfants.net/one-piece/",
+        "https://www.filmspourenfants.net/one-piece-2003/",
+        "https://fr.wikipedia.org/wiki/One_Piece"
+      ],
+      "commentaire": "La distinction entre le manga et la série Netflix sur l'esclavage ainsi que la formulation exacte sur les scènes adoucies dans l'animé japonais corrigent bien les points relevés en première lecture."
+    },
+    "30021": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/death-note/",
+        "https://fr.wikipedia.org/wiki/Death_Note",
+        "https://en.wikipedia.org/wiki/Death_Note",
+        "https://www.graphiclibrary.org/reviews/death-note-vol-1-by-tsugumi-ohba"
+      ],
+      "commentaire": "Le résumé précise désormais exactement les règles du cahier ainsi que le nombre de tomes chez Kana (12 tomes d'histoire et un 13e tome complémentaire), et l'affirmation trompeuse sur Ryuk a été retirée."
+    },
+    "30025": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/Fullmetal_Alchemist",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist",
+        "https://en.wikipedia.org/wiki/List_of_Fullmetal_Alchemist_characters",
+        "https://www.commonsensemedia.org/tv-reviews/fullmetal-alchemist-brotherhood"
+      ],
+      "commentaire": "Les dates de parution françaises sont clarifiées, la scène de la fillette transformée en chimère a été ajoutée en s'en tenant strictement à la source, et le massacre d'Ishbal porte bien la mention spoiler."
+    },
+    "30026": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/hunter-x-hunter/",
+        "https://fr.wikipedia.org/wiki/Hunter_%C3%97_Hunter",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_characters",
+        "https://www.commonsensemedia.org/tv-reviews/hunter-x-hunter"
+      ],
+      "commentaire": "L'ajout du comportement troublant de Hisoka dans la rubrique « Nudité et sexualité » est bien sourcé et mesuré, et le maintien de la formule de Wikipédia en français dans le résumé est justifié."
+    },
+    "30436": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 16,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.editions-delcourt.fr/mangas/series/serie-spirale/album-spirale-integrale",
+        "https://www.commonsensemedia.org/tv-reviews/uzumaki",
+        "https://fr.wikipedia.org/wiki/Spirale_(manga)",
+        "https://en.wikipedia.org/wiki/Uzumaki"
+      ],
+      "commentaire": "La scène de l'hôpital et celle du harcèlement ont été corrigées conformément aux sources vérifiées, et la note de brouillon a disparu du texte destiné aux parents. La fiche est prête à être publiée."
+    },
+    "30642": {
+      "revision": 2,
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://catalogue.bnf.fr/ark:/12148/cb43719577f",
+        "https://www.commonsensemedia.org/tv-reviews/vinland-saga",
+        "https://fr.wikipedia.org/wiki/Vinland_Saga",
+        "https://en.wikipedia.org/wiki/Vinland_Saga_(manga)",
+        "https://www.animefeminist.com/yukimura-makoto-interview/"
+      ],
+      "commentaire": "L'ajout de la mort de l'esclave battue par son maître et la reformulation de l'avis rendent bien compte de la dureté du deuxième arc. L'âge de 14 ans reste cohérent avec les avis du CNLJ sur le manga et ceux des parents sur Common Sense Media."
+    }
+  }
+}

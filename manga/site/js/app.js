@@ -1,0 +1,848 @@
+// Mangâge : recherche dans la base AniList en direct, âge conseillé calculé dans le navigateur, fiche et guide.
+
+import {
+  AGES, CATEGORIES, ETIQUETTES_DOUCES, FANSERVICE, GENRES_DOUX, LIBELLES_AGE, LIBELLES_FIABILITE, PERTINENCE_MIN,
+  PUBLICS, REGLES_ETIQUETTES, REGLES_GENRES, REGLE_ADULTE_PAR_DEFAUT, SEXE_EXPLICITE, ageMinimalRegle,
+  couvertureSensible, evaluerAge, intensite,
+} from './age.js';
+import {
+  ErreurAniList, REQUETE_ETIQUETTES, REQUETE_FICHE, REQUETE_LISTE, REQUETE_RESUME, reduireMedia, requeteAniList,
+} from './anilist.js';
+import { TEXTE_VOCABULAIRE, scenesDifficiles, synthese, themes } from './textes.js';
+import { preparerTraducteur, traducteurDisponible, traduireEnFrancais } from './traduction.js';
+
+const GENRES_FR = {
+  Action: 'Action', Adventure: 'Aventure', Comedy: 'Comédie', Drama: 'Drame', Ecchi: 'Ecchi', Fantasy: 'Fantasy',
+  Horror: 'Horreur', 'Mahou Shoujo': 'Magical girl', Mecha: 'Mecha', Music: 'Musique', Mystery: 'Mystère',
+  Psychological: 'Psychologique', Romance: 'Romance', 'Sci-Fi': 'Science-fiction', 'Slice of Life': 'Tranche de vie',
+  Sports: 'Sport', Supernatural: 'Surnaturel', Thriller: 'Thriller',
+};
+const STATUTS_FR = {
+  FINISHED: 'Terminée', RELEASING: 'En cours', NOT_YET_RELEASED: 'À paraître', CANCELLED: 'Arrêtée', HIATUS: 'En pause',
+};
+const PAYS_FR = { JP: 'Japon (manga)', KR: 'Corée du Sud (manhwa)', CN: 'Chine (manhua)', TW: 'Taïwan (manhua)' };
+const DESCRIPTIONS_AGES = {
+  6: 'Jeunesse (kodomo) sans contenu sensible, ou récit doux pour tous.',
+  8: 'Jeunesse avec de l\'action, ou récit apaisant sans aucun élément sensible.',
+  10: 'Shōnen et shōjo sans contenu marqué. Bagarres, crimes ou guerre peuvent être évoqués.',
+  12: 'Violence modérée, peur, récit psychologique, nudité légère. Point de départ des seinen et josei.',
+  14: 'Violence marquée (sang), horreur corporelle, fanservice, suicide ou drogues abordés.',
+  16: 'Violence très graphique, torture, contenu sexuel suggéré, thèmes psychosexuels.',
+  18: 'Scènes sexuelles représentées ou violences sexuelles explicites.',
+};
+const TEXTE_FIABILITE = {
+  elevee: 'Titre très suivi : son contenu est bien décrit par les lecteurs.',
+  moyenne: 'Contenu décrit par un nombre limité de lecteurs.',
+  faible: 'Peu d\'informations sur ce titre : feuilletez-le avant de le confier.',
+};
+// Tri AniList ; pour les tris par note ou par date, seuls les titres suivis par au moins 200 membres sont gardés.
+const TRIS = {
+  popularite: { sort: ['POPULARITY_DESC'], libelle: 'les plus lus' },
+  note: { sort: ['SCORE_DESC'], pop: 200, libelle: 'les mieux notés' },
+  recent: { sort: ['START_DATE_DESC'], pop: 200, libelle: 'les plus récents' },
+  ancien: { sort: ['START_DATE'], pop: 200, libelle: 'les plus anciens' },
+};
+const PERIODES = {
+  '2020-': { debut_apres: 20191231 },
+  '2010-2019': { debut_apres: 20091231, debut_avant: 20200101 },
+  '2000-2009': { debut_apres: 19991231, debut_avant: 20100101 },
+  '1990-1999': { debut_apres: 19891231, debut_avant: 20000101 },
+  '1980-1989': { debut_apres: 19791231, debut_avant: 19900101 },
+  '-1979': { debut_avant: 19800101 },
+};
+const LONGUEURS = {
+  court: { format_in: ['ONE_SHOT'] },
+  '1-10': { vol_plus: 0, vol_moins: 11 },
+  '11-30': { vol_plus: 10, vol_moins: 31 },
+  '31-': { vol_plus: 30 },
+};
+// Pour 6 et 8 ans : titres jeunesse, plus les récits doux des autres publics (une recherche par étiquette).
+const FLUX_JEUNES = ['Kids', 'Iyashikei', 'Family Life', 'Primarily Animal Cast'];
+const VISEE_PAR_LOT = 24;      // titres visibles ajoutés à chaque « Afficher plus »
+const REQUETES_PAR_LOT = 4;    // plafond de requêtes par lot (limite AniList : 30 par minute)
+const STOCKAGE = 'mangage-preferences';
+
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const nombre = (n) => n.toLocaleString('fr-FR');
+const pluriel = (n, mot) => `${nombre(n)} ${mot}${n > 1 ? 's' : ''}`;
+const attendre = (ms) => new Promise((r) => setTimeout(r, ms));
+const comparateur = new Intl.Collator('fr', { sensitivity: 'base' });
+const dateFr = (iso) => esc(new Date(`${iso}T12:00:00`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }));
+
+const etat = {
+  filtres: { q: '', age: 0, public: '', genres: new Set(), pays: '', statut: '', longueur: '', periode: '', fiabilite: '' },
+  tri: 'popularite',
+  triChoisi: false,
+  flou: true,
+  ajustements: {},       // âges vérifiés (id → {age, source})
+  fiches: {},            // fiches vérifiées complètes (id → fiche)
+  etiquettesAdultes: null,
+  vus: new Map(),         // fiches déjà reçues pendant la visite (id → manga)
+  reponses: new Map(),    // pages déjà reçues pendant la visite (variables → page)
+  resumes: new Map(),
+  liste: [],              // titres affichés
+  ids: new Set(),
+  flux: [],
+  total: null,
+  generation: 0,
+  occupe: false,
+  erreur: null,
+  ficheId: null,
+};
+
+// ---------- Préférences (âge du lecteur, flou) ----------
+function lirePreferences() {
+  try {
+    const p = JSON.parse(localStorage.getItem(STOCKAGE) || '{}');
+    if (AGES.includes(p.age)) etat.filtres.age = p.age;
+    if (typeof p.flou === 'boolean') etat.flou = p.flou;
+  } catch { /* stockage indisponible : valeurs par défaut */ }
+}
+function sauverPreferences() {
+  try {
+    localStorage.setItem(STOCKAGE, JSON.stringify({ age: etat.filtres.age, flou: etat.flou }));
+  } catch { /* sans effet */ }
+}
+
+// ---------- Données ----------
+function completer(m) {
+  m.titre = m.anglais || m.romaji;
+  m.eval = evaluerAge(m, etat.ajustements[m.id]);
+  etat.vus.set(m.id, m);
+  return m;
+}
+
+// Fiches vérifiées : retenues seulement si l'âge est sur l'échelle et si au moins une source est citée.
+async function chargerFichesVerifiees() {
+  try {
+    const r = await fetch('donnees/fiches-verifiees.json');
+    if (!r.ok) return;
+    for (const [cle, f] of Object.entries(await r.json())) {
+      if (cle.startsWith('_') || !AGES.includes(f?.age) || !Array.isArray(f.sources) || !f.sources.length) continue;
+      etat.fiches[cle] = f;
+      etat.ajustements[cle] = { age: f.age, source: f.sources.map((x) => x.titre).join(', ') };
+    }
+  } catch { /* pas de fiche vérifiée */ }
+}
+
+// Liste des étiquettes réservées aux adultes : sert à écarter ces titres dès la requête.
+async function chargerEtiquettesAdultes() {
+  if (etat.etiquettesAdultes) return;
+  try {
+    const memo = sessionStorage.getItem('mangage-etiquettes-adultes');
+    if (memo) {
+      etat.etiquettesAdultes = JSON.parse(memo);
+      return;
+    }
+  } catch { /* pas de mémoire de session */ }
+  try {
+    const data = await requeteAniList(REQUETE_ETIQUETTES);
+    etat.etiquettesAdultes = data.MediaTagCollection.filter((t) => t.isAdult).map((t) => t.name);
+    try {
+      sessionStorage.setItem('mangage-etiquettes-adultes', JSON.stringify(etat.etiquettesAdultes));
+    } catch { /* sans effet */ }
+  } catch {
+    etat.etiquettesAdultes = [];
+  }
+}
+
+// ---------- Construction des requêtes ----------
+// Exclusions envoyées à AniList pour un âge donné : tout genre ou étiquette qui dépasse cet âge dès 30 % de
+// pertinence. Les cas intermédiaires (étiquette tolérée à faible pertinence) sont triés ensuite dans le navigateur.
+function exclusionsPourAge(age) {
+  const genres = Object.entries(REGLES_GENRES).filter(([, r]) => r.age > age).map(([g]) => g);
+  const tags = Object.entries(REGLES_ETIQUETTES).filter(([, r]) => ageMinimalRegle(r) > age).map(([n]) => n);
+  if (ageMinimalRegle(REGLE_ADULTE_PAR_DEFAUT) > age) {
+    for (const n of etat.etiquettesAdultes || []) if (!REGLES_ETIQUETTES[n]) tags.push(n);
+  }
+  return { genres, tags };
+}
+
+function construireFlux() {
+  const f = etat.filtres;
+  const recherche = f.q.trim();
+  const tri = TRIS[etat.tri];
+  const v = { format_in: ['MANGA', 'ONE_SHOT'], rang: PERTINENCE_MIN };
+  const tagIn = [];
+  const tagNotIn = [];
+  const genreNotIn = [];
+  if (recherche) v.search = recherche;
+  if (recherche && !etat.triChoisi) v.sort = ['SEARCH_MATCH', 'POPULARITY_DESC'];
+  else {
+    v.sort = tri.sort;
+    if (tri.pop) v.pop_plus = tri.pop - 1;
+  }
+  if (f.genres.size) v.genre_in = [...f.genres];
+  if (f.public === 'aucun') tagNotIn.push(...Object.keys(PUBLICS));
+  else if (f.public) tagIn.push(f.public);
+  if (f.pays) v.country = f.pays;
+  if (f.statut) v.status = f.statut;
+  if (f.longueur) Object.assign(v, LONGUEURS[f.longueur]);
+  if (f.periode) Object.assign(v, PERIODES[f.periode]);
+  if (f.fiabilite) v.pop_plus = Math.max(v.pop_plus || 0, f.fiabilite === 'elevee' ? 2999 : 299);
+  if (f.age && f.age < 18) {
+    const ex = exclusionsPourAge(f.age);
+    genreNotIn.push(...ex.genres);
+    tagNotIn.push(...ex.tags);
+  }
+  const flux = (extra = {}) => {
+    const x = { ...v };
+    const ti = [...tagIn, ...(extra.tag_in || [])];
+    const tn = [...new Set([...tagNotIn, ...(extra.tag_not_in || [])])];
+    const gn = [...new Set([...genreNotIn, ...(extra.genre_not_in || [])])];
+    if (ti.length) x.tag_in = ti;
+    if (tn.length) x.tag_not_in = tn;
+    if (gn.length) x.genre_not_in = gn;
+    return { variables: x, page: 0, fini: false };
+  };
+  if (f.age && f.age <= 8) {
+    const nonDoux = Object.keys(GENRES_FR).filter((g) => !GENRES_DOUX.has(g));
+    return FLUX_JEUNES.map((t) => flux({
+      tag_in: [t],
+      genre_not_in: t === 'Kids' ? (f.age === 6 ? ['Action'] : []) : nonDoux,
+    }));
+  }
+  return [flux()];
+}
+
+function passeFiltresLocaux(m) {
+  const f = etat.filtres;
+  if (f.age && m.eval.age > f.age) return false;
+  if (f.fiabilite === 'elevee' && m.eval.fiabilite !== 'elevee') return false;
+  if (f.fiabilite === 'moyenne' && m.eval.fiabilite === 'faible') return false;
+  if (f.public === 'aucun' && m.eval.public.cle) return false;
+  if (f.public && f.public !== 'aucun' && m.eval.public.cle && m.eval.public.cle !== f.public) return false;
+  return true;
+}
+
+async function pageSuivante(flux, generation) {
+  const variables = { ...flux.variables, page: flux.page + 1 };
+  const cle = JSON.stringify(variables);
+  let page = etat.reponses.get(cle);
+  if (!page) {
+    const data = await requeteAniList(REQUETE_LISTE, variables);
+    if (generation !== etat.generation) return null;
+    page = data.Page;
+    etat.reponses.set(cle, page);
+  }
+  flux.page += 1;
+  flux.fini = !page.pageInfo.hasNextPage || !page.media.length;
+  if (etat.flux.length === 1) etat.total = page.pageInfo.total;
+  return page.media.map((m) => etat.vus.get(m.id) || completer(reduireMedia(m)));
+}
+
+// ---------- Chargement des résultats ----------
+async function nouvelleRecherche() {
+  const generation = ++etat.generation;
+  if (etat.filtres.age && etat.filtres.age < 16 && !etat.etiquettesAdultes) {
+    $('#grille').innerHTML = '';
+    $('#grille').setAttribute('aria-busy', 'true');
+    $('#etat').textContent = 'Préparation du filtre par âge…';
+    await chargerEtiquettesAdultes();
+  }
+  if (generation !== etat.generation) return;
+  etat.flux = construireFlux();
+  etat.liste = [];
+  etat.ids = new Set();
+  etat.total = null;
+  etat.erreur = null;
+  etat.occupe = false;
+  $('#grille').innerHTML = '';
+  await chargerPlus(generation);
+}
+
+async function chargerPlus(generation = etat.generation) {
+  if (etat.occupe) return;
+  etat.occupe = true;
+  $('#grille').setAttribute('aria-busy', 'true');
+  majEntete();
+  majEtat();
+  const avant = etat.liste.length;
+  let requetes = 0;
+  try {
+    while (etat.liste.length - avant < VISEE_PAR_LOT && requetes < REQUETES_PAR_LOT) {
+      const actifs = etat.flux.filter((x) => !x.fini);
+      if (!actifs.length) break;
+      const nouveaux = [];
+      for (const flux of actifs) {
+        if (requetes) await attendre(250); // pas de rafale (limiteur d'AniList)
+        const lot = await pageSuivante(flux, generation);
+        requetes += 1;
+        if (!lot || generation !== etat.generation) return;
+        nouveaux.push(...lot);
+      }
+      if (etat.flux.length > 1) nouveaux.sort((a, b) => b.popularite - a.popularite);
+      const visibles = nouveaux.filter((m) => !etat.ids.has(m.id) && passeFiltresLocaux(m));
+      for (const m of visibles) etat.ids.add(m.id);
+      etat.liste.push(...visibles);
+      $('#grille').insertAdjacentHTML('beforeend', visibles.map(carte).join(''));
+    }
+  } catch (e) {
+    if (generation === etat.generation) etat.erreur = e;
+  } finally {
+    if (generation === etat.generation) {
+      etat.occupe = false;
+      $('#grille').removeAttribute('aria-busy');
+      majEntete();
+      majEtat();
+    }
+  }
+}
+
+function plusDisponible() {
+  return etat.flux.some((x) => !x.fini);
+}
+
+// ---------- Rendu ----------
+function gommette(age) {
+  return `<span class="gommette a${age}" title="${esc(LIBELLES_AGE[age])}" aria-hidden="true">${age}<small>+</small></span>`;
+}
+
+function couverture(m) {
+  const flou = etat.flou && couvertureSensible(m.eval);
+  const img = m.couverture
+    ? `<img src="${esc(m.couverture)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
+    : '';
+  return `<div class="couv${flou ? ' floue' : ''}"><span class="couv-texte" aria-hidden="true">${esc(m.titre)}</span>${img}${
+    flou ? '<span class="couv-mention">Couverture masquée</span>' : ''}</div>`;
+}
+
+function carte(m) {
+  const ligne1 = [m.auteurs.slice(0, 2).join(', '), m.annee || ''].filter(Boolean).join(' · ');
+  const ligne2 = [
+    m.eval.public.cle ? PUBLICS[m.eval.public.cle].nom : '',
+    m.volumes ? pluriel(m.volumes, 'tome') : m.format === 'ONE_SHOT' ? 'Histoire courte' : '',
+    m.pays && m.pays !== 'JP' ? (m.pays === 'KR' ? 'Manhwa' : 'Manhua') : '',
+  ].filter(Boolean).join(' · ');
+  return `<article class="carte">
+  ${couverture(m)}
+  ${gommette(m.eval.age)}
+  <h3 class="carte-titre">${esc(m.titre)}</h3>
+  ${ligne1 ? `<p class="carte-meta">${esc(ligne1)}</p>` : ''}
+  ${ligne2 ? `<p class="carte-meta">${esc(ligne2)}</p>` : ''}
+  <a class="carte-lien" href="#manga-${m.id}" aria-label="${esc(`${m.titre}, ${LIBELLES_AGE[m.eval.age].toLowerCase()}${m.eval.verifie ? ', âge vérifié' : ''}`)}"></a>
+</article>`;
+}
+
+function descriptionFiltres() {
+  const f = etat.filtres;
+  const morceaux = [];
+  if (f.public) morceaux.push(f.public === 'aucun' ? 'public non précisé' : PUBLICS[f.public].nom);
+  for (const g of f.genres) morceaux.push(GENRES_FR[g] || g);
+  for (const [cle, sel] of [['pays', '#f-pays'], ['statut', '#f-statut'], ['longueur', '#f-longueur'], ['periode', '#f-periode']]) {
+    if (f[cle]) morceaux.push($(sel).selectedOptions[0].textContent.toLowerCase());
+  }
+  if (f.fiabilite) morceaux.push(`fiabilité ${$('#f-fiabilite').selectedOptions[0].textContent.toLowerCase()}`);
+  return morceaux;
+}
+
+function majEntete() {
+  const f = etat.filtres;
+  const n = etat.liste.length;
+  const recherche = f.q.trim();
+  let titre;
+  if (etat.occupe && !n) titre = recherche ? `Recherche de « ${esc(recherche)} »…` : 'Chargement…';
+  else if (recherche) titre = `<span class="nb">${nombre(n)}</span> ${n > 1 ? 'résultats' : 'résultat'} pour « ${esc(recherche)} »`;
+  else titre = `Titres ${TRIS[etat.tri].libelle}`;
+  if (f.age && f.age < 18 && (n || !etat.occupe)) titre += ` <small>conseillés jusqu'à ${f.age} ans</small>`;
+  $('#titre-resultats').innerHTML = titre;
+  const actifs = descriptionFiltres();
+  $('#actifs').hidden = !actifs.length;
+  $('#actifs').textContent = actifs.length ? `Filtres : ${actifs.join(', ')}.` : '';
+  $('#nb-filtres').textContent = actifs.length ? `(${actifs.length})` : '';
+  majEchelle();
+}
+
+function majEtat() {
+  const zone = $('#etat');
+  const plus = $('#plus');
+  const n = etat.liste.length;
+  const f = etat.filtres;
+  plus.hidden = etat.occupe || !!etat.erreur || !plusDisponible();
+  if (etat.occupe) {
+    zone.textContent = 'Recherche en cours dans la base AniList…';
+  } else if (etat.erreur) {
+    const e = etat.erreur;
+    zone.innerHTML = `${esc(e instanceof ErreurAniList ? e.message : 'Connexion à AniList impossible')}.<br><button type="button" class="bouton bouton-second" id="reessayer">Réessayer</button>`;
+  } else if (!n && !plusDisponible()) {
+    zone.innerHTML = `<strong>Aucun titre ne correspond.</strong> ${f.q ? 'Vérifiez l\'orthographe ou essayez le titre japonais ou anglais. ' : ''}Vous pouvez élargir les filtres${f.age ? ' ou l\'âge du lecteur' : ''}.`;
+  } else if (!plusDisponible()) {
+    zone.textContent = `${pluriel(n, 'titre')} : fin de la liste.`;
+  } else {
+    const total = etat.total && !f.age && !f.fiabilite && !f.public
+      ? ` sur ${etat.total >= 5000 ? 'plus de 5 000' : nombre(etat.total)}` : '';
+    zone.textContent = `${pluriel(n, 'titre')} affiché${n > 1 ? 's' : ''}${total}.${
+      TRIS[etat.tri].pop && (!f.q.trim() || etat.triChoisi) ? ' Tri limité aux titres suivis par au moins 200 membres AniList.' : ''}`;
+  }
+}
+
+let minuterie;
+function relancer(delai = 0) {
+  clearTimeout(minuterie);
+  if (delai) minuterie = setTimeout(nouvelleRecherche, delai);
+  else nouvelleRecherche();
+}
+
+// ---------- Échelle des âges ----------
+function construireEchelle() {
+  const zone = $('#echelle-boutons');
+  zone.innerHTML = `<button type="button" class="echelon echelon-tous" data-age="0">Tous les âges</button>${AGES.map((a) =>
+    `<button type="button" class="echelon" data-age="${a}">${gommette(a)}${a === 18 ? 'Adulte' : `${a} ans`}</button>`).join('')}`;
+  zone.addEventListener('click', (e) => {
+    const b = e.target.closest('.echelon');
+    if (!b) return;
+    etat.filtres.age = Number(b.dataset.age);
+    sauverPreferences();
+    relancer();
+  });
+}
+
+function majEchelle() {
+  const age = etat.filtres.age;
+  for (const b of document.querySelectorAll('.echelon')) b.setAttribute('aria-pressed', String(Number(b.dataset.age) === age));
+  const aide = $('#echelle-aide');
+  if (!age) {
+    aide.textContent = 'Tous les âges sont affichés. Choisissez l\'âge du lecteur pour ne garder que les titres conseillés jusqu\'à cet âge.';
+  } else if (age === 18) {
+    aide.textContent = 'Tous les titres sont affichés, y compris ceux réservés aux adultes.';
+  } else {
+    const suivant = AGES[AGES.indexOf(age) + 1];
+    aide.textContent = `Pour un lecteur de ${age} ans : les titres conseillés « ${LIBELLES_AGE[suivant].toLowerCase()} » et au-delà sont masqués.${
+      age <= 8 ? ' À cet âge, la liste réunit les mangas jeunesse et les récits doux (apaisants, familiaux, animaliers).' : ''}`;
+  }
+}
+
+// ---------- Fiche détaillée (modèle : fiches de filmspourenfants.net) ----------
+function jauge(age) {
+  const niveaux = { aucune: 0, légère: 1, modérée: 2, marquée: 3, forte: 4 };
+  const n = niveaux[intensite(age)];
+  return `<span class="jauge" role="img" aria-label="Intensité ${intensite(age)}">${[1, 2, 3, 4].map((i) => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span>`;
+}
+
+function bloc(titre, texte, pied = '', classe = '') {
+  return `<div class="bloc${classe ? ` ${classe}` : ''}"${classe.includes('spoiler') ? ' hidden' : ''}><h4>${esc(titre)}</h4>${
+    texte ? `<p>${esc(texte)}</p>` : ''}${pied ? `<p class="bloc-pied">${esc(pied)}</p>` : ''}</div>`;
+}
+
+function sectionThemes(m, fv) {
+  const liste = fv?.themes?.length
+    ? fv.themes.map((t) => bloc(t.titre, t.texte))
+    : themes(m, 60).slice(0, 6).map((t) => bloc(t.titre, t.texte, `Thème retenu par ${t.rang} % des contributeurs AniList.`));
+  return `<section class="fiche-section" aria-labelledby="t-themes">
+    <h3 id="t-themes">Thèmes abordés</h3>
+    ${liste.length ? `<div class="blocs">${liste.join('')}</div>` : '<p class="resume-etat">Aucun thème principal renseigné sur AniList.</p>'}
+  </section>`;
+}
+
+function sectionScenes(e, fv) {
+  if (fv) {
+    const ordre = [...Object.keys(CATEGORIES), 'autre'];
+    const scenes = fv.scenes || [];
+    const nbMasquees = scenes.filter((x) => x.spoiler).length;
+    const groupes = ordre.map((cat) => {
+      const liste = scenes.filter((x) => (ordre.includes(x.categorie) ? x.categorie : 'autre') === cat);
+      if (!liste.length) return '';
+      const visibles = liste.filter((x) => !x.spoiler).map((x) => bloc(x.titre, x.texte));
+      const caches = liste.filter((x) => x.spoiler);
+      if (caches.length) {
+        visibles.push(`<p class="spoiler-resume">${caches.length === 1 ? 'Une scène masquée' : `${caches.length} scènes masquées`} : elle${caches.length > 1 ? 's dévoilent' : ' dévoile'} l'intrigue.</p>`);
+        visibles.push(...caches.map((x) => bloc(x.titre, x.texte, '', 'spoiler')));
+      }
+      return `<div class="scenes-cat"><div class="scenes-tete"><h4>${esc(CATEGORIES[cat] || 'Autres points')}</h4></div>${visibles.join('')}</div>`;
+    }).join('');
+    return `<section class="fiche-section" aria-labelledby="t-scenes">
+      <h3 id="t-scenes">Scènes difficiles</h3>
+      ${groupes || '<p class="resume-etat">Aucune scène difficile relevée par les sources consultées.</p>'}
+      ${nbMasquees ? '<p class="base-calcul"><button type="button" class="spoiler-bouton" id="devoiler">Afficher les scènes masquées</button> (elles peuvent dévoiler l\'histoire)</p>' : ''}
+    </section>`;
+  }
+  const parCat = scenesDifficiles(e);
+  const nbSpoilers = Object.values(parCat).reduce((n, c) => n + c.scenes.filter((x) => x.spoiler).length, 0);
+  const cats = Object.values(parCat).map((c) => {
+    const visibles = c.scenes.filter((x) => !x.spoiler);
+    const caches = c.scenes.filter((x) => x.spoiler);
+    const pied = (x) => (x.rang === null ? `Genre du titre : dès ${x.age} ans.` : `Signalé par ${x.rang} % des contributeurs : dès ${x.age} ans.`);
+    const blocs = visibles.map((x) => bloc(x.titre, x.texte, pied(x)));
+    if (caches.length) {
+      const max = Math.max(...caches.map((x) => x.age));
+      blocs.push(`<p class="spoiler-resume">${caches.length === 1 ? 'Un élément d\'intrigue masqué' : `${caches.length} éléments d'intrigue masqués`} (jusqu'à ${max} ans).</p>`);
+      blocs.push(...caches.map((x) => bloc(x.titre, x.texte, pied(x), 'spoiler')));
+    }
+    return `<div class="scenes-cat">
+      <div class="scenes-tete"><h4>${esc(c.titre)}</h4>${jauge(c.age)}<span class="vers">${c.age ? intensite(c.age) : 'rien de signalé'}</span></div>
+      ${blocs.join('')}
+    </div>`;
+  });
+  const devoiler = nbSpoilers
+    ? '<p class="base-calcul"><button type="button" class="spoiler-bouton" id="devoiler">Afficher les éléments d\'intrigue masqués</button> (ils peuvent dévoiler l\'histoire)</p>'
+    : '';
+  return `<section class="fiche-section" aria-labelledby="t-scenes">
+    <h3 id="t-scenes">Scènes difficiles</h3>
+    ${cats.join('')}
+    ${devoiler}
+    <p class="base-calcul">Descriptions tirées des définitions des étiquettes AniList. Le pourcentage indique la part des contributeurs qui jugent l'étiquette justifiée pour ce titre. Les informations portent sur l'ensemble de la série.</p>
+  </section>`;
+}
+
+function sectionAvis(m, e, fv) {
+  const contenu = fv?.avis
+    ? `<p class="avis">${esc(fv.avis)}</p><p class="bloc-pied">Avis rédigé${fv.redacteur ? ` par ${esc(fv.redacteur)}` : ''}${fv.date ? ` le ${dateFr(fv.date)}` : ''}${
+      fv.relecture?.par?.length ? `, relu par ${esc(fv.relecture.par.join(' et '))}` : ''}, à partir des sources citées.</p>`
+    : `<p class="avis">${synthese(m, e, GENRES_FR).map(esc).join(' ')}</p><p class="bloc-pied">Synthèse rédigée automatiquement à partir des données AniList, sans relecture humaine.</p>`;
+  return `<section class="fiche-section avis-section" aria-labelledby="t-avis"><h3 id="t-avis">En résumé</h3>${contenu}</section>`;
+}
+
+function sectionAutres(m, fv) {
+  const items = [];
+  for (const a of fv?.autres || []) {
+    items.push(`<li><strong>${esc(a.source)}</strong>${a.texte ? ` : ${esc(a.texte)}` : ''}${a.lien ? ` <a href="${esc(a.lien)}" target="_blank" rel="noopener">Lire</a>` : ''}</li>`);
+  }
+  if (m.note) items.push(`<li><strong>Lecteurs AniList</strong> : note moyenne de ${m.note}/100, ${pluriel(m.popularite, 'membre')} suivent ce titre.</li>`);
+  const recherche = encodeURIComponent(m.anglais || m.romaji);
+  const liens = [
+    `<a href="https://anilist.co/manga/${m.id}" target="_blank" rel="noopener">Fiche AniList</a>`,
+    m.idMal ? `<a href="https://myanimelist.net/manga/${m.idMal}" target="_blank" rel="noopener">Fiche MyAnimeList</a>` : '',
+    `<a href="https://www.filmspourenfants.net/?s=${recherche}" target="_blank" rel="noopener">Chercher une critique d'adaptation sur filmspourenfants.net</a>`,
+    `<a href="https://www.commonsensemedia.org/search/${recherche}" target="_blank" rel="noopener">Chercher sur Common Sense Media (en anglais)</a>`,
+  ].filter(Boolean);
+  return `<section class="fiche-section" aria-labelledby="t-autres">
+    <h3 id="t-autres">Ce que disent les autres</h3>
+    ${items.length ? `<ul class="autres-avis">${items.join('')}</ul>` : ''}
+    <div class="liens">${liens.join('')}</div>
+    <p class="base-calcul">Les recherches s'ouvrent sur les sites concernés : leurs résultats n'engagent qu'eux.</p>
+  </section>`;
+}
+
+function sectionCalcul(e) {
+  const notes = [`Point de départ : ${esc(e.public.fr)}, ${e.public.age} ans.`];
+  if (e.douceur) notes.push(`Contenu doux : ${esc(e.douceur.fr.toLowerCase())} (${e.douceur.rang} %), aucun élément sensible : âge ramené à ${e.public.age} ans.`);
+  const max = e.raisons.length ? Math.max(...e.raisons.map((r) => r.age)) : 0;
+  if (max > e.public.age) notes.push(`Élément le plus sensible : dès ${max} ans (voir « Scènes difficiles »).`);
+  if (e.prudence) notes.push(`${esc(e.prudence)} : ${e.estimation} ans.`);
+  notes.push(`Âge estimé : ${e.estimation} ans. ${esc(LIBELLES_FIABILITE[e.fiabilite])} (nombre d'étiquettes et de lecteurs).`);
+  if (e.verifie) notes.push(`Âge retenu après vérification : ${e.age} ans.`);
+  return `<details class="calcul"><summary>Comment cet âge est calculé</summary>
+    ${notes.map((n) => `<p class="base-calcul">${n}</p>`).join('')}
+    <p class="base-calcul"><a href="#guide">Voir le barème complet</a></p>
+  </details>`;
+}
+
+function htmlFiche(m) {
+  const e = m.eval;
+  const fv = etat.fiches[m.id];
+  const infos = [];
+  if (fv?.titre && fv.titre.toLowerCase() !== m.titre.toLowerCase()) infos.push(['Titre en France', fv.titre]);
+  if (m.auteurs.length) infos.push(['Auteurs', m.auteurs.join(', ')]);
+  if (m.annee) infos.push(['Début', String(m.annee)]);
+  const parution = [STATUTS_FR[m.statut], m.volumes ? pluriel(m.volumes, 'tome') : '', m.chapitres ? pluriel(m.chapitres, 'chapitre') : '']
+    .filter(Boolean).join(', ');
+  if (parution) infos.push(['Parution', parution]);
+  if (m.format === 'ONE_SHOT') infos.push(['Format', 'Histoire courte (one-shot)']);
+  if (m.pays) infos.push(['Origine', PAYS_FR[m.pays] || m.pays]);
+  infos.push(['Public visé', e.public.cle ? PUBLICS[e.public.cle].fr : 'Non précisé']);
+  if (m.genres.length) infos.push(['Genres', m.genres.map((g) => GENRES_FR[g] || g).join(', ')]);
+  const th = themes(m, 50).slice(0, 8).map((t) => t.titre);
+  if (th.length) infos.push(['Thèmes', th.join(', ')]);
+
+  const autres = m.synonymes.slice(0, 6);
+  const etatAge = e.verifie
+    ? '<span class="etiquette-etat fiab-elevee">Fiche vérifiée</span>'
+    : '<span class="etiquette-etat">Estimation</span>';
+  const relecture = fv?.relecture?.par?.length
+    ? `, relue par ${fv.relecture.par.join(' et ')}${fv.relecture.date ? ` le ${dateFr(fv.relecture.date)}` : ''}` : '';
+  const explication = e.verifie
+    ? `Fiche rédigée à partir des sources citées en bas de page${relecture}. L'estimation automatique était de ${e.estimation} ans.`
+    : `Estimation calculée d'après le public visé et les étiquettes de contenu AniList. ${TEXTE_FIABILITE[e.fiabilite]}`;
+  const sources = fv?.sources?.length
+    ? `<section class="fiche-section"><h3>Sources de cette fiche</h3><ul class="autres-avis">${fv.sources.map((x) => `<li>${x.lien ? `<a href="${esc(x.lien)}" target="_blank" rel="noopener">${esc(x.titre)}</a>` : esc(x.titre)}</li>`).join('')}</ul></section>`
+    : '';
+
+  return `<div class="fiche-entete">
+    ${couverture(m)}
+    <div class="fiche-titres">
+      <h2 id="fiche-titre">${esc(m.titre)}</h2>
+      ${m.anglais ? `<p class="romaji">${esc(m.romaji)}</p>` : ''}
+      ${autres.length ? `<p class="autres">Autres titres : ${esc(autres.join(' · '))}</p>` : ''}
+      <dl class="infos">${infos.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+    </div>
+  </div>
+  <section class="verdict" aria-label="Âge conseillé">
+    ${gommette(e.age)}
+    <div>
+      <h3>${e.age >= 18 ? 'Réservé aux adultes' : `À partir de ${e.age} ans`}</h3>
+      <p>${etatAge}<span class="etiquette-etat fiab-${e.fiabilite}">${esc(LIBELLES_FIABILITE[e.fiabilite])}</span></p>
+      <p>${explication}</p>
+    </div>
+  </section>
+  <section class="fiche-section" aria-labelledby="t-resume">
+    <h3 id="t-resume">${fv?.resume ? 'Résumé' : 'Résumé (source AniList)'}</h3>
+    <div id="resume">${fv?.resume ? `<p class="resume">${esc(fv.resume)}</p>` : '<p class="resume-etat">Chargement du résumé…</p>'}</div>
+  </section>
+  ${sectionThemes(m, fv)}
+  ${sectionScenes(e, fv)}
+  <section class="fiche-section" aria-labelledby="t-vocabulaire">
+    <h3 id="t-vocabulaire">Vocabulaire</h3>
+    <p class="${fv?.vocabulaire ? 'resume' : 'resume-etat'}">${esc(fv?.vocabulaire || TEXTE_VOCABULAIRE)}</p>
+  </section>
+  ${sectionAvis(m, e, fv)}
+  ${sectionAutres(m, fv)}
+  ${sources}
+  ${sectionCalcul(e)}`;
+}
+
+function texteDepuisHtml(html) {
+  const doc = new DOMParser().parseFromString(String(html || '').replace(/<br\s*\/?>/gi, '\n'), 'text/html');
+  return (doc.body.textContent || '').replace(/\n{3,}/g, '\n\n').trim();
+}
+
+async function chargerResume(m) {
+  const zone = $('#resume');
+  if (!zone || etat.fiches[m.id]?.resume) return;
+  const afficher = ({ texte, fr }) => {
+    if (etat.ficheId !== m.id) return;
+    const titre = $('#t-resume');
+    if (!texte) {
+      zone.innerHTML = '<p class="resume-etat">Pas de résumé sur AniList pour ce titre.</p>';
+      return;
+    }
+    if (fr) {
+      // Traduction automatique, avec le texte d'origine consultable.
+      titre.textContent = 'Résumé (traduit automatiquement de l\'anglais, source AniList)';
+      zone.innerHTML = '<p class="resume"></p><details class="resume-original"><summary>Texte original en anglais</summary><p class="resume" lang="en"></p></details>';
+      zone.querySelector('.resume').textContent = fr;
+      zone.querySelector('.resume-original .resume').textContent = texte;
+    } else {
+      titre.textContent = 'Résumé (en anglais, source AniList)';
+      zone.innerHTML = '<p class="resume" lang="en"></p>';
+      zone.firstChild.textContent = texte;
+    }
+  };
+  if (etat.resumes.has(m.id)) return afficher(etat.resumes.get(m.id));
+  try {
+    const data = await requeteAniList(REQUETE_RESUME, { id: m.id });
+    const texte = texteDepuisHtml(data.Media?.description);
+    if (texte && traducteurDisponible() && etat.ficheId === m.id) {
+      zone.innerHTML = '<p class="resume-etat">Traduction du résumé en français…</p>';
+    }
+    const resume = { texte, fr: traducteurDisponible() ? await traduireEnFrancais(texte) : null };
+    etat.resumes.set(m.id, resume);
+    afficher(resume);
+  } catch (e) {
+    if (etat.ficheId === m.id) {
+      zone.innerHTML = `<p class="resume-etat">Résumé indisponible (${esc(e.message || 'AniList ne répond pas')}). Le lien vers la fiche AniList reste utilisable.</p>`;
+    }
+  }
+}
+
+async function trouverManga(id) {
+  if (etat.vus.has(id)) return etat.vus.get(id);
+  const data = await requeteAniList(REQUETE_FICHE, { id });
+  return data.Media ? completer(reduireMedia(data.Media)) : null;
+}
+
+async function ouvrirFiche(id) {
+  const dialogue = $('#fiche');
+  const contenu = $('#fiche-contenu');
+  etat.ficheId = id;
+  preparerTraducteur(); // tout de suite, tant que le clic du visiteur autorise le téléchargement du modèle
+  let m = null;
+  let erreur = null;
+  if (!etat.vus.has(id)) {
+    contenu.innerHTML = '<div class="fiche-titres"><h2 id="fiche-titre">Chargement de la fiche…</h2></div>';
+    $('#correction').hidden = true;
+    if (!dialogue.open) dialogue.showModal();
+  }
+  try {
+    m = await trouverManga(id);
+  } catch (e) {
+    erreur = e;
+  }
+  if (etat.ficheId !== id) return;
+  contenu.innerHTML = m
+    ? htmlFiche(m)
+    : `<div class="fiche-titres"><h2 id="fiche-titre">Titre introuvable</h2><p>${esc(erreur ? `${erreur.message}.` : 'Ce titre n\'existe pas sur AniList ou il est classé pornographique.')}</p></div>`;
+  $('#correction').hidden = !m;
+  $('#correction').open = false;
+  $('#form-correction').reset();
+  $('#c-retour').textContent = '';
+  if (m) $('#c-manga').value = `${m.id} | ${m.titre} | estimation ${m.eval.estimation} ans`;
+  if (!dialogue.open) dialogue.showModal();
+  dialogue.scrollTop = 0;
+  $('#fiche-fermer').focus();
+  if (m) chargerResume(m);
+}
+
+function fermerFiche() {
+  const dialogue = $('#fiche');
+  if (dialogue.open) dialogue.close();
+}
+
+// ---------- Guide ----------
+function seuilsTexte(seuils) {
+  return seuils.map(([p, a]) => `${p} % → ${a}`).join(' · ');
+}
+
+function construireGuide() {
+  $('#guide-echelle').innerHTML = AGES.map((a) => `<li>${gommette(a)}<div><strong>${esc(LIBELLES_AGE[a])}</strong><span>${esc(DESCRIPTIONS_AGES[a])}</span></div></li>`).join('');
+  $('#g-seuil').textContent = PERTINENCE_MIN;
+  const groupes = new Set([...SEXE_EXPLICITE, ...FANSERVICE]);
+  const lignes = [];
+  for (const [cat, nomCat] of Object.entries(CATEGORIES)) {
+    const regles = [];
+    for (const r of Object.values(REGLES_GENRES)) if (r.cat === cat) regles.push([`${r.fr} (genre)`, `genre présent → ${r.age}`]);
+    for (const [nom, r] of Object.entries(REGLES_ETIQUETTES)) {
+      if (r.cat === cat && !groupes.has(nom)) regles.push([r.fr, seuilsTexte(r.seuils)]);
+    }
+    if (cat === 'sexe') {
+      regles.push([`Fanservice (${FANSERVICE.length} étiquettes : formes du corps mises en avant…)`, seuilsTexte(REGLES_ETIQUETTES[FANSERVICE[0]].seuils)]);
+      regles.push([`Scènes sexuelles représentées (${SEXE_EXPLICITE.length} étiquettes réservées aux adultes)`, seuilsTexte(REGLES_ETIQUETTES[SEXE_EXPLICITE[0]].seuils)]);
+      regles.push(['Autre contenu sexuel suggéré (étiquettes réservées aux adultes)', seuilsTexte(REGLE_ADULTE_PAR_DEFAUT.seuils)]);
+    }
+    lignes.push(`<tr class="groupe"><th colspan="3" scope="colgroup">${esc(nomCat)}</th></tr>`);
+    for (const [libelle, seuils] of regles) lignes.push(`<tr><td>${esc(libelle)}</td><td>${esc(nomCat)}</td><td>${esc(seuils)}</td></tr>`);
+  }
+  const douces = Object.values(ETIQUETTES_DOUCES).map((x) => x.toLowerCase()).join(', ');
+  lignes.push(`<tr class="groupe"><th colspan="3" scope="colgroup">Contenu doux</th></tr><tr><td>${esc(`Étiquettes : ${douces}`)}</td><td>Baisse</td><td>60 % → 8 (6 en jeunesse)</td></tr>`);
+  $('#bareme tbody').innerHTML = lignes.join('');
+}
+
+function majSourcesVerifiees() {
+  const n = Object.keys(etat.ajustements).length;
+  if (n) $('#g-source-verifies').textContent = `${pluriel(n, 'fiche')} vérifiée${n > 1 ? 's' : ''} à la main, avec leurs sources ; les autres fiches sont rédigées automatiquement.`;
+}
+
+// ---------- Navigation ----------
+function router() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  const guide = h === 'guide';
+  $('#vue-guide').hidden = !guide;
+  $('#vue-catalogue').hidden = guide;
+  for (const a of document.querySelectorAll('.nav a')) {
+    if ((a.dataset.vue === 'guide') === guide) a.setAttribute('aria-current', 'page');
+    else a.removeAttribute('aria-current');
+  }
+  const fiche = /^manga-(\d+)$/.exec(h);
+  if (fiche) ouvrirFiche(Number(fiche[1]));
+  else fermerFiche();
+  if (guide) window.scrollTo(0, 0);
+}
+
+// ---------- Initialisation ----------
+function lierControles() {
+  const f = etat.filtres;
+  $('#q').addEventListener('input', (e) => {
+    f.q = e.target.value;
+    relancer(450);
+  });
+  $('#q').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') relancer();
+  });
+  const selects = { '#f-public': 'public', '#f-pays': 'pays', '#f-statut': 'statut', '#f-longueur': 'longueur', '#f-periode': 'periode', '#f-fiabilite': 'fiabilite' };
+  for (const [sel, cle] of Object.entries(selects)) {
+    $(sel).addEventListener('change', (e) => {
+      f[cle] = e.target.value;
+      relancer();
+    });
+  }
+  $('#tri').addEventListener('change', (e) => {
+    etat.tri = e.target.value;
+    etat.triChoisi = true;
+    relancer();
+  });
+  $('#f-flou').checked = etat.flou;
+  $('#f-flou').addEventListener('change', (e) => {
+    etat.flou = e.target.checked;
+    sauverPreferences();
+    $('#grille').innerHTML = etat.liste.map(carte).join('');
+  });
+  const genres = Object.keys(GENRES_FR).sort((a, b) => comparateur.compare(GENRES_FR[a], GENRES_FR[b]));
+  $('#f-genres').innerHTML = genres.map((g) => `<button type="button" class="puce" data-genre="${esc(g)}" aria-pressed="false">${esc(GENRES_FR[g])}</button>`).join('');
+  $('#f-genres').addEventListener('click', (e) => {
+    const b = e.target.closest('.puce');
+    if (!b) return;
+    const g = b.dataset.genre;
+    if (f.genres.has(g)) f.genres.delete(g);
+    else f.genres.add(g);
+    b.setAttribute('aria-pressed', String(f.genres.has(g)));
+    relancer(300);
+  });
+  $('#reinit').addEventListener('click', () => {
+    Object.assign(f, { public: '', pays: '', statut: '', longueur: '', periode: '', fiabilite: '' });
+    f.genres.clear();
+    for (const sel of Object.keys(selects)) $(sel).value = '';
+    for (const b of document.querySelectorAll('.puce')) b.setAttribute('aria-pressed', 'false');
+    relancer();
+  });
+  $('#ouvrir-filtres').addEventListener('click', (e) => {
+    const ouvert = $('#filtres').classList.toggle('ouvert');
+    e.currentTarget.setAttribute('aria-expanded', String(ouvert));
+  });
+  $('#plus').addEventListener('click', () => chargerPlus());
+  $('#etat').addEventListener('click', (e) => {
+    if (e.target.id === 'reessayer') {
+      etat.erreur = null;
+      chargerPlus();
+    }
+  });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entrees) => {
+      if (entrees.some((x) => x.isIntersecting) && !$('#plus').hidden && !etat.occupe) chargerPlus();
+    }, { rootMargin: '400px' }).observe($('#plus'));
+  }
+
+  // Couverture introuvable : on garde le titre en texte.
+  document.addEventListener('error', (e) => {
+    if (e.target instanceof HTMLImageElement && e.target.closest('.couv')) e.target.remove();
+  }, true);
+
+  const dialogue = $('#fiche');
+  $('#fiche-fermer').addEventListener('click', fermerFiche);
+  dialogue.addEventListener('click', (e) => {
+    if (e.target === dialogue) fermerFiche();
+    if (e.target.closest('#devoiler')) {
+      for (const el of dialogue.querySelectorAll('.spoiler')) el.hidden = false;
+      for (const el of dialogue.querySelectorAll('.spoiler-resume')) el.remove();
+      e.target.closest('p').remove();
+    }
+  });
+  dialogue.addEventListener('close', () => {
+    etat.ficheId = null;
+    if (/^#manga-/.test(location.hash)) history.replaceState(null, '', location.pathname + location.search);
+  });
+
+  $('#form-correction').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const retour = $('#c-retour');
+    retour.textContent = 'Envoi en cours…';
+    try {
+      const r = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+      if (!r.ok) throw new Error(String(r.status));
+      retour.textContent = 'Merci : votre proposition a été transmise. Elle sera vérifiée avant toute modification.';
+      form.reset();
+    } catch {
+      retour.textContent = 'L\'envoi n\'a pas abouti. Le formulaire ne fonctionne que sur le site publié (Netlify).';
+    }
+  });
+
+  window.addEventListener('hashchange', router);
+}
+
+async function demarrer() {
+  lirePreferences();
+  construireEchelle();
+  construireGuide();
+  lierControles();
+  majEchelle();
+  await chargerFichesVerifiees();
+  majSourcesVerifiees();
+  router();
+  nouvelleRecherche();
+}
+
+demarrer();

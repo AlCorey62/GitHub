@@ -1,0 +1,179 @@
+{
+  "relecteur": "Mario",
+  "date": "2026-11-04",
+  "fiches": {
+    "30001": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "autres",
+          "extrait": "Wikipédia (français), animé : L'infobox indique « Interdit aux moins de 12 ans » pour la diffusion française de l'animé (Canal+ en 2006, France 4 en 2014), sans source précise.",
+          "probleme": "La mention dans l'infobox de Wikipédia n'est appuyée par aucune source primaire ni officielle (CSA/Arcom) et la référence de l'article parle plutôt de séries pour adultes sur France 4 ; il ne faut pas conserver une affirmation non sourcée.",
+          "correction": "Retirer ce point ou indiquer simplement que l'animé a été diffusé sur France 4 dans une case dédiée aux séries d'animation pour adultes.",
+          "source": "https://fr.wikipedia.org/wiki/Monster_(manga)"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/monster-integrale-deluxe/",
+        "https://www.commonsensemedia.org/tv-reviews/monster",
+        "https://fr.wikipedia.org/wiki/Monster_(manga)",
+        "https://en.wikipedia.org/wiki/Monster_(manga)"
+      ],
+      "commentaire": "Fiche solide et bien construite ; l'âge de 16 ans est très cohérent avec la classification seinen, Viz Teen Plus et les thèmes abordés. Seule la mention de classification TV non sourcée sur Wikipédia est à retirer ou reformuler."
+    },
+    "30002": {
+      "verdict": "a_corriger",
+      "age_propose": 18,
+      "erreurs": [
+        {
+          "rubrique": "autres",
+          "extrait": "Wikipédia (fr), à propos de l'animé de 1997 : Indique que la série animée de 1997 était interdite aux moins de 16 ans à la télévision et en DVD.",
+          "probleme": "Cette mention sur Wikipédia français ne dispose d'aucune source vérifiée permettant de la confirmer.",
+          "correction": "Supprimer cette ligne de la rubrique « Ce que disent les autres ».",
+          "source": "https://fr.wikipedia.org/wiki/Berserk_(manga)"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/berserk-tome-01-nouvelle-edition-9782344020685/",
+        "https://www.commonsensemedia.org/tv-reviews/berserk",
+        "https://fr.wikipedia.org/wiki/Berserk_(manga)"
+      ],
+      "commentaire": "Le classement pour adultes (18 ans) s'impose sans réserve au vu de l'indication officielle de Glénat et des violences extrêmes (dont violences sexuelles). Retirer uniquement la mention TV/DVD non sourcée de Wikipédia."
+    },
+    "30003": {
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.viz.com/read/manga/20th-century-boys-the-perfect-edition-volume-1/product/5630",
+        "https://fr.wikipedia.org/wiki/20th_Century_Boys",
+        "https://en.wikipedia.org/wiki/20th_Century_Boys"
+      ],
+      "commentaire": "Toutes les informations et scènes résumées sont exactes et fidèlement sourcées sur Wikipédia et Viz Media. Le conseil dès 14 ans est pertinent au vu de la densité du récit et des thèmes lourds (secte, bioterrorisme)."
+    },
+    "30011": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Common Sense Media (animé) relève que l'ivresse sert de ressort comique, qu'un professeur fume en permanence et que des personnages secondaires tentent de se suicider avant d'être arrêtés par les héros. Les sources consultées ne disent pas si toutes ces scènes figurent dans le manga.",
+          "probleme": "Règle d'exactitude : la fiche émet un doute sur la présence de ces tentatives de suicide dans le manga alors qu'elles proviennent d'épisodes de remplissage (fillers) de l'animé non documentés pour le manga.",
+          "correction": "Retirer la mention des tentatives de suicide de personnages secondaires ou préciser explicitement qu'il s'agit d'ajouts propres à la série animée.",
+          "source": "https://fr.wikipedia.org/wiki/Naruto"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/naruto",
+        "https://www.commonsensemedia.org/tv-reviews/naruto-shippuden",
+        "https://www.filmspourenfants.net/naruto/",
+        "https://fr.wikipedia.org/wiki/Naruto",
+        "https://en.wikipedia.org/wiki/Naruto"
+      ],
+      "commentaire": "Très bonne synthèse et âge de 12 ans bien équilibré entre le début bon enfant et la seconde partie plus sombre (qui débute bien au tome 28, après le Kakashi Gaiden concluant le tome 27). Préciser ou écarter le point sur les suicides issu des fillers de l'animé."
+    },
+    "30012": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Le film de 2018 montre aussi des fantômes ensanglantés et une poursuite par une araignée géante.",
+          "probleme": "Ces éléments visuels spécifiques (araignée géante, fantômes ensanglantés en prises de vue réelles) décrivent le film live-action de 2018 et non le manga original, ce qui peut induire les parents en erreur sur le contenu réel du livre.",
+          "correction": "Retirer la phrase sur les détails visuels propres au film en prises de vue réelles de 2018 dans les scènes du manga.",
+          "source": "https://www.filmspourenfants.net/bleach-the-soul-reaper-agent-arc-2/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/bleach-deluxe-tome-01-9782344074282/",
+        "https://www.commonsensemedia.org/tv-reviews/bleach",
+        "https://www.commonsensemedia.org/tv-reviews/bleach-thousand-year-blood-war",
+        "https://www.filmspourenfants.net/bleach-the-soul-reaper-agent-arc-2/"
+      ],
+      "commentaire": "La fiche est bien documentée (y compris la réédition Deluxe de Glénat fin septembre 2026) et l'âge de 14 ans est juste au vu de la violence sanglante du dernier arc. Éviter simplement de mélanger la mise en scène du film live-action avec les scènes du manga."
+    },
+    "30013": {
+      "verdict": "valide",
+      "age_propose": 12,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/one-piece-edition-originale-tome-113-9782344071120/",
+        "https://www.filmspourenfants.net/one-piece/",
+        "https://www.commonsensemedia.org/tv-reviews/one-piece",
+        "https://fr.wikipedia.org/wiki/One_Piece"
+      ],
+      "commentaire": "Fiche exacte, claire et très bien sourcée. Le choix de 12 ans (plutôt que le 10 ans de l'éditeur) est solidement justifié par les guides parentaux et par la présence de thèmes durs (esclavage, combats sanglants non édulcorés dans le manga)."
+    },
+    "30021": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Light Yagami, lycéen brillant de 17 ans et fils de policier, ramasse un cahier abandonné par Ryuk, un dieu de la mort.",
+          "probleme": "Le résumé omet de préciser le nombre de tomes de la série et l'éditeur français, contrairement aux attentes d'exactitude (titre, auteurs, nombre de tomes).",
+          "correction": "Ajouter à la fin du résumé : « Série complète en 12 tomes chez Kana (accompagnés d'un 13e tome encyclopédique). »",
+          "source": "https://fr.wikipedia.org/wiki/Death_Note"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/death-note/",
+        "https://www.commonsensemedia.org/tv-reviews/death-note",
+        "https://fr.wikipedia.org/wiki/Death_Note",
+        "https://www.graphiclibrary.org/reviews/death-note-vol-1-by-tsugumi-ohba"
+      ],
+      "commentaire": "Excellente analyse des enjeux moraux et psychologiques de la série, avec des sources vérifiées (y compris l'interdiction à Shenyang). Il manque seulement le nombre de tomes dans le corps de la fiche."
+    },
+    "30025": {
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/fullmetal-alchemist-brotherhood",
+        "https://fr.wikipedia.org/wiki/Fullmetal_Alchemist",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist"
+      ],
+      "commentaire": "Fiche rigoureuse et sans erreur : les éditions françaises chez Kurokawa (27 tomes, Perfect en 18 tomes) ainsi que les scènes marquantes (transmutation, Nina et son père, Ishbal) sont exactes et bien sourcées via Brotherhood. L'âge de 14 ans est très pertinent."
+    },
+    "30026": {
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/hunter-x-hunter",
+        "https://fr.wikipedia.org/wiki/Hunter_%C3%97_Hunter",
+        "https://en.wikipedia.org/wiki/Hunter_%C3%97_Hunter"
+      ],
+      "commentaire": "Très bonne fiche qui prévient bien les parents du basculement progressif d'un récit d'aventure enfantin vers des arcs beaucoup plus sombres et sanglants (Fourmis-chimères, succession). Toutes les citations critiques sont vérifiées et les balises spoiler sont bien placées."
+    },
+    "30436": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Dans l'adaptation animée, des lycéens harcèlent un camarade, l'insultent et le déshabillent avant de le pousser nu dans un couloir bondé (selon Common Sense Media). Non vérifié dans le manga par les sources consultées.",
+          "probleme": "L'affirmation comporte une mention d'incertitude (« Non vérifié dans le manga ») qui ne doit pas figurer telle quelle dans une fiche destinée aux parents.",
+          "correction": "Préciser simplement que ce harcèlement concerne le garçon qui finit par se transformer en escargot (chapitre des « limaçhommes »), ou s'en tenir à la mention de l'adaptation animée sans laisser une note de brouillon.",
+          "source": "https://fr.wikipedia.org/wiki/Spirale_(manga)"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Au milieu de la série, des femmes enceintes deviennent des sortes de moustiques qui vident les autres patients de leur sang.",
+          "probleme": "Légère imprécision factuelle par rapport au récit et au résumé Wikipédia : les femmes enceintes ne se transforment pas en moustiques, elles sont piquées par des moustiques puis attaquent elles-mêmes les autres patients avec des perceuses/outils chirurgicaux pour boire leur sang.",
+          "correction": "« Au milieu de la série, à l'hôpital, des femmes enceintes piquées par des moustiques géants attaquent les autres patients pour se nourrir de leur sang. »",
+          "source": "https://fr.wikipedia.org/wiki/Spirale_(manga)"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.editions-delcourt.fr/mangas/series/serie-spirale/album-spirale-integrale",
+        "https://www.commonsensemedia.org/tv-reviews/uzumaki",
+        "https://www.graphiclibrary.org/reviews/uzumaki-by-junji-ito",
+        "https://fr.wikipedia.org/wiki/Spirale_(manga)",
+        "https://en.wikipedia.org/wiki/Uzumaki"
+      ],
+      "commentaire": "L'âge de 16 ans est tout à fait justifié pour ce classique de l'horreur corporelle (et le lien entre la transformation d'habitants en escargots et leur consommation par les survivants est bien exact dans l'œuvre). Deux petites retouches de précision sur les scènes suffiront à valider la fiche."
+    }
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "relecteur": "Pipo",
+  "date": "2026-11-04",
+  "fiches": {
+    "30001": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Ce choix lui coûte sa carrière et ses fiançailles.",
+          "probleme": "Tenma est rétrogradé, mais ne perd pas sa carrière : il devient ensuite chef du service de chirurgie. La formulation actuelle est excessive.",
+          "correction": "Ce choix lui vaut une rétrogradation et la rupture de ses fiançailles.",
+          "source": "https://fr.wikipedia.org/wiki/Monster_(manga)"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "La violence est fréquente et sanglante, sans gore détaillé",
+          "probleme": "L'absence de gore détaillé est documentée par Common Sense Media pour l'animé. Elle est ici étendue au manga sans vérification propre à cette édition.",
+          "correction": "Les sources décrivent une œuvre violente et sombre. Common Sense Media précise que l'animé comporte beaucoup de sang, sans gore détaillé.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/monster"
+        },
+        {
+          "rubrique": "autres",
+          "extrait": "L'infobox indique « Interdit aux moins de 12 ans » pour la diffusion française de l'animé",
+          "probleme": "Une mention d'infobox sans référence précise ne permet pas de présenter une interdiction de diffusion comme établie. La fiche reconnaît elle-même cette absence de confirmation.",
+          "correction": "Supprimer cette entrée tant qu'une source de diffusion ou de classification identifiable ne confirme pas la mention et son périmètre.",
+          "source": "https://fr.wikipedia.org/wiki/Monster_(manga)"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/monster-integrale-deluxe/",
+        "https://www.commonsensemedia.org/tv-reviews/monster",
+        "https://www.viz.com/manga-books/manga/monster-volume-1-0/product/3451",
+        "https://www.viz.com/ratings",
+        "https://fr.wikipedia.org/wiki/Monster_(manga)",
+        "https://en.wikipedia.org/wiki/Monster_(manga)"
+      ],
+      "commentaire": "16 ans est cohérent avec les sources consultées. Les observations portant seulement sur l'animé doivent conserver cette attribution jusque dans l'avis."
+    },
+    "30002": {
+      "verdict": "a_corriger",
+      "age_propose": 18,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Viol montré à l'écran",
+          "probleme": "La fiche concerne un manga : « à l'écran » désigne uniquement son adaptation.",
+          "correction": "Remplacer le titre par « Viol représenté explicitement » et conserver spoiler: true. Ajouter la source anglophone qui confirme cet événement dans le manga.",
+          "source": "https://en.wikipedia.org/wiki/Berserk_(manga)"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Common Sense Media signale une scène d'agression sexuelle sur un enfant dans l'animé de 1997, liée au passé d'un personnage.",
+          "probleme": "Common Sense Media mentionne des abus sexuels sur enfant, mais ne précise pas dans ce passage qu'ils concernent le passé d'un personnage. Le viol subi par Guts enfant doit être documenté directement pour le manga, sans laisser entendre que sa représentation est identique dans l'animé.",
+          "correction": "Dans le manga, Guts subit un viol pendant son enfance, après avoir été livré à un mercenaire par son père adoptif. Ajouter spoiler: true à cette scène et citer la source consacrée au personnage.",
+          "source": "https://fr.wikipedia.org/wiki/Guts_(Berserk)"
+        },
+        {
+          "rubrique": "sources",
+          "extrait": "Wikipédia confirme la scène dans le manga.",
+          "probleme": "L'article français cité ne fournit pas la confirmation détaillée annoncée du viol. L'article anglais sur Berserk décrit explicitement cet événement.",
+          "correction": "Ajouter l'article Wikipédia anglais sur Berserk aux sources et le rattacher à la scène de viol.",
+          "source": "https://en.wikipedia.org/wiki/Berserk_(manga)"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/berserk-tome-01-nouvelle-edition-9782344020685/",
+        "https://www.glenat.com/glenat-manga/series-berserk/",
+        "https://www.commonsensemedia.org/tv-reviews/berserk",
+        "https://fr.wikipedia.org/wiki/Berserk_(manga)",
+        "https://en.wikipedia.org/wiki/Berserk_(manga)",
+        "https://fr.wikipedia.org/wiki/Guts_(Berserk)",
+        "https://actualitte.com/article/123683/michroniques/berserk-tome-1-kentaro-miura-david-deleule-9782344020685",
+        "https://mangalibrarian.com/2022/04/24/manga-for-middle-grades-a-delicate-balance/"
+      ],
+      "commentaire": "18 ans est confirmé explicitement par Glénat. Les corrections concernent surtout la documentation des violences sexuelles et la distinction entre manga et animé."
+    },
+    "30003": {
+      "verdict": "valide",
+      "age_propose": 14,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.viz.com/read/manga/20th-century-boys-the-perfect-edition-volume-1/product/5630",
+        "https://www.viz.com/ratings",
+        "https://fr.wikipedia.org/wiki/20th_Century_Boys",
+        "https://en.wikipedia.org/wiki/20th_Century_Boys"
+      ],
+      "commentaire": "Les événements sensibles décrits sont corroborés et les principaux développements sont signalés comme spoilers. Le PDF du CNLJ a été retrouvé par son texte indexé, mais son ouverture directe et celle de la fiche ActuaLitté ont échoué ; 14 ans reste une recommandation éditoriale, aucun âge chiffré tiers n'étant établi."
+    },
+    "30011": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Sasuke est le seul rescapé du massacre de son clan",
+          "probleme": "Cette affirmation absolue est inexacte : d'autres membres du clan sont encore vivants. Elle simplifie excessivement un élément central de l'intrigue.",
+          "correction": "Sasuke a survécu au massacre de son clan et a vu ses parents assassinés.",
+          "source": "https://en.wikipedia.org/wiki/Naruto"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "Les âges proposés vont de 11 ans (Common Sense Media) à 12 ou 13 ans (filmspourenfants.net).",
+          "probleme": "La fourchette omet les 15 ans conseillés par filmspourenfants.net pour Shippûden, alors que la fiche évalue toute la série, seconde partie comprise.",
+          "correction": "Common Sense Media conseille les deux séries animées dès 11 ans. Filmspourenfants.net indique 13 ans pour Naruto, le déconseille avant 12 ans et situe Shippûden plutôt à 15 ans.",
+          "source": "https://www.filmspourenfants.net/naruto/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/naruto/",
+        "https://www.commonsensemedia.org/tv-reviews/naruto",
+        "https://www.commonsensemedia.org/tv-reviews/naruto-shippuden",
+        "https://www.filmspourenfants.net/naruto/",
+        "https://fr.wikipedia.org/wiki/Naruto",
+        "https://en.wikipedia.org/wiki/Naruto",
+        "https://www.viz.com/manga-books/manga/naruto-volume-15-0/product/1071",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "12 ans reste défendable pour commencer, avec une réserve explicite sur la seconde partie. Les tentatives de suicide sont bien mentionnées par Common Sense Media pour l'animé, mais leur présence dans le manga reste à vérifier."
+    },
+    "30012": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Monstres et fantômes",
+          "probleme": "La fiche omet la transformation de personnages en zombies et leur asservissement dans le dernier arc. Cet élément est documenté, contrairement à ce qu'indiquent les points à vérifier.",
+          "correction": "Ajouter une scène avec spoiler: true : « Dans le dernier arc, un personnage transforme des combattants en zombies soumis à ses ordres. Des personnages connus subissent cette transformation. »",
+          "source": "https://en.wikipedia.org/wiki/List_of_Bleach_characters#Giselle_Gewelle"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Le film de 2018 montre aussi des fantômes ensanglantés et une poursuite par une araignée géante.",
+          "probleme": "Ces détails concernent une adaptation en prises de vues réelles. Leur correspondance avec les images du manga n'est pas établie et aucune réserve n'accompagne leur insertion dans les scènes difficiles du livre.",
+          "correction": "Retirer ces détails de la rubrique consacrée au manga, ou préciser explicitement : « Observations propres au film de 2018, non vérifiées dans le manga. » Appliquer aussi cette réserve aux blessures de la mère décrites d'après le film.",
+          "source": "https://www.filmspourenfants.net/bleach-the-soul-reaper-agent-arc-2/"
+        },
+        {
+          "rubrique": "autres",
+          "extrait": "Les avis de parents indiquent 11 ans (5 avis).",
+          "probleme": "La page consultée affiche 4 avis de parents, et non 5. Ces compteurs évoluent et n'apportent pas d'information stable.",
+          "correction": "Supprimer le nombre d'avis, ou indiquer le nombre observé avec une date de consultation.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/bleach-thousand-year-blood-war"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/series-bleach/",
+        "https://www.glenat.com/glenat-manga/bleach-deluxe-tome-01-9782344074282/",
+        "https://www.commonsensemedia.org/tv-reviews/bleach",
+        "https://www.commonsensemedia.org/tv-reviews/bleach-thousand-year-blood-war",
+        "https://www.viz.com/manga-books/manga/bleach-volume-1-0/product/167",
+        "https://fr.wikipedia.org/wiki/Bleach_(manga)",
+        "https://en.wikipedia.org/wiki/Bleach_(manga)",
+        "https://en.wikipedia.org/wiki/List_of_Bleach_characters"
+      ],
+      "commentaire": "14 ans demeure cohérent avec les classements disponibles. La sortie de la Deluxe le 30 septembre 2026 est confirmée par Glénat ; l'ouverture de la page filmspourenfants.net consacrée au film a échoué."
+    },
+    "30013": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "avis",
+          "extrait": "le manga montre certaines scènes plus crûment que l'animé",
+          "probleme": "La section invoquée de Wikipédia concerne des modifications et censures d'adaptations déterminées. Elle ne permet pas une comparaison générale avec toutes les versions de l'animé, notamment celle examinée par Common Sense Media.",
+          "correction": "Supprimer cette comparaison générale, ou préciser l'adaptation concernée et les scènes effectivement documentées.",
+          "source": "https://fr.wikipedia.org/wiki/One_Piece"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Des enfants et des captifs sont maltraités, des personnages sont réduits en esclavage ou tatoués de force (adaptation Netflix, filmspourenfants.net).",
+          "probleme": "Les observations sont attribuées à Netflix, mais leur transposition au manga n'est pas vérifiée. Le résumé du tome 113 confirme une prise d'otages, pas l'ensemble de ces situations.",
+          "correction": "Distinguer les faits établis pour le manga des observations sur Netflix : « Le résumé du tome 113 mentionne des enfants pris en otage. L'analyse de l'adaptation Netflix signale également maltraitance, esclavage et tatouage forcé ; ces détails n'ont pas été vérifiés ici dans le manga. »",
+          "source": "https://www.glenat.com/glenat-manga/one-piece-edition-originale-tome-113-9782344071120/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/series-one-piece/",
+        "https://www.glenat.com/glenat-manga/one-piece-edition-originale-tome-113-9782344071120/",
+        "https://www.filmspourenfants.net/one-piece/",
+        "https://www.filmspourenfants.net/one-piece-2003/",
+        "https://www.commonsensemedia.org/tv-reviews/one-piece",
+        "https://www.commonsensemedia.org/tv-reviews/one-piece-0",
+        "https://fr.wikipedia.org/wiki/One_Piece",
+        "https://en.wikipedia.org/wiki/List_of_One_Piece_characters"
+      ],
+      "commentaire": "12 ans est défendable comme conseil prudent malgré les 10 ans indiqués par Glénat. Les violences sexuelles rapportées figurent bien dans la critique de l'animé par Common Sense Media ; leur attribution doit rester explicite."
+    },
+    "30021": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Toute personne dont le nom est écrit dans ce Death Note meurt dans les 40 secondes.",
+          "probleme": "La règle est présentée comme inconditionnelle. L'utilisateur doit connaître le visage de la personne ; la mort par crise cardiaque après 40 secondes correspond au fonctionnement par défaut, les circonstances pouvant être précisées.",
+          "correction": "Le cahier permet de tuer une personne en écrivant son nom tout en pensant à son visage. Sans autre précision, elle meurt d'une crise cardiaque après 40 secondes.",
+          "source": "https://fr.wikipedia.org/wiki/Death_Note"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Il n'est pas violent",
+          "probleme": "L'affirmation absolue sur Ryuk est trompeuse : il utilise lui aussi un Death Note pour tuer. Son rôle ne se limite donc pas à une présence visuellement inquiétante.",
+          "correction": "Remplacer par : « Son apparence volontairement inquiétante peut effrayer certains lecteurs. » Ne pas affirmer qu'il est dépourvu de violence.",
+          "source": "https://en.wikipedia.org/wiki/Death_Note"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/death-note/",
+        "https://www.kana.fr/produit/death-note-t1/",
+        "https://www.commonsensemedia.org/tv-reviews/death-note",
+        "https://fr.wikipedia.org/wiki/Death_Note",
+        "https://en.wikipedia.org/wiki/Death_Note",
+        "https://www.graphiclibrary.org/reviews/death-note-vol-1-by-tsugumi-ohba",
+        "https://www.viz.com/manga-books/manga/death-note-volume-10-0/product/1091",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "14 ans est une appréciation défendable, légèrement inférieure aux recommandations professionnelles citées. La distinction entre contenu du manga et observations sur l'animé est généralement bien indiquée."
+    },
+    "30025": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Série complète en 27 tomes chez Kurokawa depuis 2005",
+          "probleme": "Cette formulation laisse entendre que les 27 tomes étaient disponibles dès 2005. Cette année correspond au début de la publication française.",
+          "correction": "Publiée en France chez Kurokawa à partir de 2005, la série est complète en 27 tomes et existe aussi en édition Perfect de 18 tomes.",
+          "source": "https://fr.wikipedia.org/wiki/Fullmetal_Alchemist"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Un père et sa fille assassinés",
+          "probleme": "La formulation reprise de Common Sense Media omet l'élément le plus éprouvant : le père a préalablement fusionné sa fille avec leur chien pour créer une chimère. Cette mutilation et expérimentation sur enfant constitue un avertissement majeur manquant.",
+          "correction": "Ajouter ou compléter avec spoiler: true : « Un alchimiste transforme sa petite fille et son chien en une seule chimère consciente. Le père puis la chimère sont tués. »",
+          "source": "https://en.wikipedia.org/wiki/List_of_Fullmetal_Alchemist_characters#Nina_Tucker_and_Alexander"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Massacre d'Ishbal",
+          "probleme": "La scène révèle l'origine du conflit et le rôle de personnages importants sans avertissement de spoiler.",
+          "correction": "Ajouter spoiler: true à cette scène, ou limiter sa description publique à la présence d'un génocide et de ses conséquences.",
+          "source": "https://fr.wikipedia.org/wiki/Fullmetal_Alchemist"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/fullmetal-alchemist-brotherhood",
+        "https://www.commonsensemedia.org/tv-reviews/fullmetal-alchemist",
+        "https://www.commonsensemedia.org/movie-reviews/fullmetal-alchemist",
+        "https://fr.wikipedia.org/wiki/Fullmetal_Alchemist",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist",
+        "https://en.wikipedia.org/wiki/List_of_Fullmetal_Alchemist_characters"
+      ],
+      "commentaire": "14 ans est cohérent avec les thèmes et la violence documentés. La transformation de Nina doit absolument apparaître parmi les avertissements, avec protection contre les spoilers."
+    },
+    "30026": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Sous-entendus",
+          "probleme": "La rubrique sexuelle se limite à des observations générales sur l'animé et omet la dimension explicitement sexuelle de l'excitation d'Hisoka face au combat, notamment contre Gon. La source consacrée aux personnages renvoie aux chapitres 5 et 61.",
+          "correction": "Ajouter : « Hisoka éprouve une excitation sexuelle face à des adversaires qu'il souhaite combattre, notamment le jeune Gon. La mise en scène associe ainsi violence et sous-entendus sexuels impliquant un mineur. »",
+          "source": "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_characters#Hisoka_Morrow"
+        },
+        {
+          "rubrique": "resume",
+          "extrait": "Les Hunters forment une élite autorisée à presque tout sur simple présentation de leur licence.",
+          "probleme": "La licence donne des privilèges et des accès exceptionnels, mais cette formulation suggère une autorisation générale d'agir sans règles. Les Hunters restent soumis au règlement de leur association.",
+          "correction": "Les Hunters forment une élite dont la licence donne accès à des lieux interdits et à de nombreux privilèges.",
+          "source": "https://en.wikipedia.org/wiki/Hunter_%C3%97_Hunter"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/hunter-x-hunter",
+        "https://www.kana.fr/series/hunter-x-hunter/",
+        "https://www.kana.fr/produit/hunter-x-hunter-t1/",
+        "https://www.viz.com/read/manga/hunter-x-hunter-volume-1/product/339",
+        "https://www.viz.com/ratings",
+        "https://fr.wikipedia.org/wiki/Hunter_%C3%97_Hunter",
+        "https://en.wikipedia.org/wiki/Hunter_%C3%97_Hunter",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_characters"
+      ],
+      "commentaire": "14 ans est cohérent avec Common Sense Media et reste défendable pour le manga. Les avertissements sur les arcs violents sont pertinents, mais la présentation des sous-entendus sexuels doit être complétée."
+    },
+    "30436": {
+      "verdict": "valide",
+      "age_propose": 16,
+      "erreurs": [],
+      "sources_ouvertes": [
+        "https://www.editions-delcourt.fr/mangas/series/serie-spirale/album-spirale-integrale",
+        "https://www.commonsensemedia.org/tv-reviews/uzumaki",
+        "https://www.graphiclibrary.org/reviews/uzumaki-by-junji-ito",
+        "https://fr.wikipedia.org/wiki/Spirale_(manga)",
+        "https://en.wikipedia.org/wiki/Uzumaki"
+      ],
+      "commentaire": "Les principales scènes difficiles sont corroborées, les développements majeurs sont marqués comme spoilers et le harcèlement est explicitement limité à l'observation de l'animé. 16 ans est cohérent avec l'horreur corporelle documentée et les recommandations citées."
+    }
+  }
+}

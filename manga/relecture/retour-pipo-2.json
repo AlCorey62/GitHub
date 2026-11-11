@@ -1,0 +1,325 @@
+{
+  "relecteur": "Pipo",
+  "date": "2026-11-04",
+  "fiches": {
+    "30642": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Des personnes sont vendues comme esclaves et brutalisées.",
+          "probleme": "Cette formulation minimise une violence majeure de l'arc de l'esclavage : Arnheid est battue mortellement par Ketil. L'entretien avec Yukimura confirme cette scène dans le manga.",
+          "correction": "Ajouter une scène de violence grave, avec spoiler : une esclave est battue par son propriétaire et meurt des suites des coups.",
+          "source": "https://www.animefeminist.com/yukimura-makoto-interview/"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "La suite est plus calme mais aborde des thèmes lourds comme la condition d'esclave.",
+          "probleme": "Le ralentissement du récit ne signifie pas que les violences graves disparaissent. La mort d'Arnheid rend cette présentation trop rassurante.",
+          "correction": "La suite accorde davantage de place à la reconstruction du héros, mais comporte encore des violences graves contre des esclaves.",
+          "source": "https://www.animefeminist.com/yukimura-makoto-interview/"
+        },
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 14 ans pour découvrir cette série.",
+          "probleme": "Je propose 16 ans compte tenu des violences documentées dans le manga, notamment contre Arnheid, et de la recommandation de Common Sense Media pour l'adaptation. Les recommandations du CNLJ par tome ne constituent pas une évaluation uniforme de toute la série.",
+          "correction": "Mieux vaut avoir 16 ans pour découvrir cette série.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/vinland-saga"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/vinland-saga",
+        "https://fr.wikipedia.org/wiki/Vinland_Saga",
+        "https://en.wikipedia.org/wiki/Vinland_Saga_(manga)",
+        "https://www.animefeminist.com/yukimura-makoto-interview/"
+      ],
+      "commentaire": "Les 29 tomes et le découpage des arcs sont confirmés. Les notices BnF citées n'ont pas été accessibles pendant cette relecture : leurs citations et recommandations détaillées restent à contrôler."
+    },
+    "30656": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Nudité et scènes de lit",
+          "probleme": "La fiche omet une violence sexuelle majeure : dans son enfance, Inshun assiste au viol de sa mère, puis au meurtre de ses parents. Il ne s'agit donc pas seulement de sexualité suggestive.",
+          "correction": "Ajouter une scène distincte avec spoiler : un retour sur l'enfance d'Inshun montre le viol de sa mère et le meurtre de ses parents, dont il est témoin.",
+          "source": "https://honeysanime.com/top-10-badass-vagabond-manga-characters/"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Les sources consultées ne précisent ni leur fréquence ni les tomes concernés.",
+          "probleme": "La critique d'Otaku USA porte explicitement sur une édition regroupant les trois premiers tomes. Elle permet donc de situer les scènes suggestives dans ce premier ensemble.",
+          "correction": "Otaku USA signale quelques scènes de lit suggestives dans l'édition regroupant les tomes 1 à 3, sans préciser leur répartition exacte.",
+          "source": "https://otakuusamagazine.com/vagabond-is-a-provocative-fictional-biography-of-swordsman-miyamoto-musashi-from-slam-dunk-creator/"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Au temple Hōzōin, un combattant tranche les poignets d'un moine.",
+          "probleme": "Cette mutilation précise n'a pas pu être confirmée dans les sources citées consultables.",
+          "correction": "Retirer cette précision tant qu'une référence au tome ou au chapitre, ou une critique décrivant la scène, n'est pas fournie.",
+          "source": "https://en.wikipedia.org/wiki/Vagabond_(manga)"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://en.wikipedia.org/wiki/Vagabond_(manga)",
+        "https://fr.wikipedia.org/wiki/Vagabond_(manga)",
+        "https://catalogue.bnf.fr/ark:/12148/cb42222149m",
+        "https://www.viz.com/manga-books/manga/vagabond-definitive-edition-volume-6-0/product/8965",
+        "https://mangalibrarian.com/2025/05/18/vagabond-definitive-edition-manga-review/",
+        "https://otakuusamagazine.com/vagabond-is-a-provocative-fictional-biography-of-swordsman-miyamoto-musashi-from-slam-dunk-creator/",
+        "https://honeysanime.com/top-10-badass-vagabond-manga-characters/",
+        "https://www.manga-news.com/index.php/manga/critique/Vagabond/vol-8"
+      ],
+      "commentaire": "16 ans reste défendable, avec un avertissement explicite sur les violences sexuelles. La notice BnF du tome 31 confirme 13 ans pour ce volume ; les autres notices citées n'ont pas pu être relues."
+    },
+    "31133": {
+      "verdict": "a_corriger",
+      "age_propose": 18,
+      "erreurs": [
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 16 ans pour découvrir cette série.",
+          "probleme": "Je retiens le palier adultes : la critique portant directement sur le manga le destine aux adultes et rapporte une classification Mature, tandis que Common Sense Media recommande 17 ans pour l'animé. Ce choix est une appréciation prudente, pas une interdiction française.",
+          "correction": "Réservé aux adultes.",
+          "source": "https://www.graphiclibrary.org/reviews/dorohedoro-vol-1-by-q-hayashida"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Toute la série.",
+          "probleme": "Les sources mobilisées ici couvrent le tome 1 du manga et l'adaptation animée. Elles ne vérifient pas, à elles seules, la fréquence du gore dans chacun des 23 tomes.",
+          "correction": "Violence et gore importants, documentés dès le tome 1 du manga ; l'adaptation animée comporte également de nombreuses mutilations.",
+          "source": "https://www.graphiclibrary.org/reviews/dorohedoro-vol-1-by-q-hayashida"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/dorohedoro",
+        "https://www.graphiclibrary.org/reviews/dorohedoro-vol-1-by-q-hayashida",
+        "https://fr.wikipedia.org/wiki/Dorohedoro",
+        "https://en.wikipedia.org/wiki/Dorohedoro",
+        "https://www.julsa.fr/avis-manga-dorohedoro-tome-1/",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "Le gore, la nudité féminine, le tabac et l'alcool sont bien documentés pour le manga par la critique du tome 1. La notice BnF citée n'a pas été accessible."
+    },
+    "31706": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Nudité comique",
+          "probleme": "L'inventaire sexuel se limite au premier tome et omet les violences sexuelles visant Lucy Steel, adolescente de 14 ans, notamment une tentative de viol par le président Valentine.",
+          "correction": "Ajouter une scène avec spoiler : une adolescente subit des agressions sexuelles et une tentative de viol. Ne pas présenter la nudité comique du premier tome comme l'essentiel du contenu sexuel de la série.",
+          "source": "https://buttondown.com/magencubed/archive/jojos-bizarre-adventure-and-the-generosity-of/"
+        },
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 14 ans pour découvrir cette série.",
+          "probleme": "La recommandation de Common Sense Media concerne l'adaptation et ne suffit pas à évaluer les violences sexuelles des tomes ultérieurs. Je propose 16 ans en tenant compte de ces scènes et du classement Teen Plus du manga.",
+          "correction": "Mieux vaut avoir 16 ans pour découvrir cette série.",
+          "source": "https://www.viz.com/manga-books/manga/jojo-s-bizarre-adventure-part-7-steel-ball-run-volume-1/product/8330/hardcover"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "le langage souvent grossier",
+          "probleme": "Cette conclusion décrit le manga alors que les exemples et la fréquence proviennent exclusivement de la version anglaise de l'animé.",
+          "correction": "L'adaptation animée comporte un langage souvent grossier en anglais ; le registre de la traduction française du manga reste à vérifier.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/steel-ball-run-jojos-bizarre-adventure"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t01",
+        "https://www.editions-delcourt.fr/mangas/series/serie-jojo-s-steel-ball-run/album-jojo-s-steel-ball-run-t24",
+        "https://www.commonsensemedia.org/tv-reviews/steel-ball-run-jojos-bizarre-adventure",
+        "https://www.bbfc.co.uk/release/steel-ball-run-jojos-bizarre-adventure-q29sbgvjdglvbjpwwc0xmtezntm4",
+        "https://www.viz.com/manga-books/manga/jojo-s-bizarre-adventure-part-7-steel-ball-run-volume-1/product/8330/hardcover",
+        "https://www.viz.com/ratings",
+        "https://yattatachi.com/jojos-bizarre-adventure-part-7-run-vol-1-review",
+        "https://en.wikipedia.org/wiki/Steel_Ball_Run",
+        "https://buttondown.com/magencubed/archive/jojos-bizarre-adventure-and-the-generosity-of/"
+      ],
+      "commentaire": "L'omission des violences sexuelles empêche la validation. La page BBFC consultée couvre des épisodes supplémentaires classifiés en septembre 2026, mais ne représente toujours pas une évaluation de l'intégralité du manga."
+    },
+    "34632": {
+      "verdict": "a_corriger",
+      "age_propose": 18,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "puis fuient la police à travers le Japon, entre rancœur, blessures et idées suicidaires",
+          "probleme": "La formulation ne rend pas compte de la violence exercée au sein du couple : Aiko tente de blesser Punpun à l'œil et Punpun envisage de tuer Aiko par strangulation avant de se suicider.",
+          "correction": "Compléter cette scène, en conservant spoiler : pendant leur fuite, leur relation devient violente ; Aiko attaque Punpun à l'œil et Punpun prépare une strangulation d'Aiko suivie de son propre suicide, projet auquel elle le fait renoncer.",
+          "source": "https://en.wikipedia.org/wiki/Goodnight_Punpun"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.kana.fr/series/bonne-nuit-punpun/",
+        "https://www.kana.fr/produit/bonne-nuit-punpun-t1/",
+        "https://www.kana.fr/produit/bonne-nuit-punpun-t13/",
+        "https://en.wikipedia.org/wiki/Goodnight_Punpun",
+        "https://fr.wikipedia.org/wiki/Bonne_nuit_Punpun",
+        "https://www.viz.com/manga-books/manga/goodnight-punpun-volume-1-0/product/3798",
+        "https://www.viz.com/goodnight-punpun",
+        "https://www.viz.com/ratings",
+        "https://leclaireur.fnac.com/article/137874-portrait-inio-asano-le-maitre-de-la-tranche-de-vie/"
+      ],
+      "commentaire": "Le classement adultes est cohérent avec les contenus documentés et le classement Mature de VIZ. Les repères principaux par tome sont confirmés ; la notice des bibliothèques de Paris n'a pas été accessible."
+    },
+    "53390": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "avis",
+          "extrait": "15 ans pour Common Sense Media et filmspourenfants.net (animé)",
+          "probleme": "filmspourenfants.net affiche deux seuils distincts : une recommandation à partir de 16 ans et une déconseillation aux moins de 15 ans. Le résumé des avis confond ces indications.",
+          "correction": "Common Sense Media recommande 15 ans ; filmspourenfants.net recommande 16 ans et déconseille la série aux moins de 15 ans. Ajouter également cette distinction dans « Ce que disent les autres ».",
+          "source": "https://www.filmspourenfants.net/lattaque-des-titans/"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "au sourire figé et aux dents pointues",
+          "probleme": "Cette description est présentée comme une caractéristique de tous les Titans, alors que leurs expressions et leurs dentitions varient. Les sources consultées ne justifient pas cette généralisation.",
+          "correction": "Les Titans sont des géants d'apparence humaine, nus et sans organes sexuels, dont les visages et les proportions peuvent être inquiétants ; certains n'ont pas de peau.",
+          "source": "https://fr.wikipedia.org/wiki/L%27Attaque_des_Titans"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.pika.fr/livre/lattaque-des-titans-t01-9782811611699/",
+        "https://fr.wikipedia.org/wiki/L%27Attaque_des_Titans",
+        "https://www.commonsensemedia.org/tv-reviews/attack-on-titan",
+        "https://www.filmspourenfants.net/lattaque-des-titans/"
+      ],
+      "commentaire": "16 ans est cohérent avec les sources consultables. Les trois notices des bibliothèques de Paris n'ont pas été accessibles : leurs indications ne sont donc pas validées par cette relecture."
+    },
+    "63327": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "autres",
+          "extrait": "Classé « Teen Plus » : peut convenir aux adolescents plus âgés et aux adultes (violence intense ou gore, contenu sexuel, langage fort fréquent).",
+          "probleme": "La parenthèse reprend les exemples généraux de contenus possibles dans la catégorie Teen Plus. VIZ ne les présente pas comme un inventaire spécifique de Tokyo Ghoul.",
+          "correction": "VIZ classe le manga Teen Plus, catégorie destinée aux adolescents plus âgés et aux adultes. Les exemples généraux de cette catégorie ne constituent pas une description détaillée de ce titre.",
+          "source": "https://www.viz.com/ratings"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "Glénat l'a publié comme shonen « pour public averti »",
+          "probleme": "La mention est rapportée par L'Éclaireur Fnac, mais n'a pas été confirmée sur la page Glénat consultée. L'attribution directe efface cette limite.",
+          "correction": "Selon L'Éclaireur Fnac, Glénat l'a catalogué comme shonen pour public averti.",
+          "source": "https://leclaireur.fnac.com/article/cp46260-tokyo-ghoul-de-sui-ishida-ca-raconte-quoi/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/tokyo-ghoul-tome-01-9782723495615/",
+        "https://fr.wikipedia.org/wiki/Tokyo_Ghoul",
+        "https://www.commonsensemedia.org/tv-reviews/tokyo-ghoul",
+        "https://leclaireur.fnac.com/article/cp46260-tokyo-ghoul-de-sui-ishida-ca-raconte-quoi/",
+        "https://www.viz.com/manga-books/manga/tokyo-ghoul-volume-1-0/product/3689",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "16 ans reste cohérent. Les descriptions précises de nudité, de langage et de torture sont correctement attribuées à l'animé, mais ne vérifient pas leur représentation dans l'édition française du manga ; la notice parisienne est restée inaccessible."
+    },
+    "65243": {
+      "verdict": "a_corriger",
+      "age_propose": 10,
+      "erreurs": [
+        {
+          "rubrique": "avis",
+          "extrait": "Les sources ne relèvent aucune scène vraiment difficile",
+          "probleme": "Cette conclusion générale sur le manga dépasse les sources disponibles : les descriptions de contenu portent sur l'animé et sur un film précis. L'absence de signalement dans ces adaptations ne vérifie pas les 45 tomes.",
+          "correction": "Les sources consacrées aux adaptations décrivent surtout des blessures légères, des disputes, des allusions et du langage grossier. Le contenu détaillé du manga français reste à vérifier.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/haikyu"
+        },
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 10 ans pour découvrir cette série.",
+          "probleme": "10 ans est plausible, mais les appuis fournis portent sur un film recommandé à 9 ans et un animé recommandé à 13 ans. Le rattachement bibliographique à la jeunesse ne constitue pas une recommandation à 10 ans.",
+          "correction": "Conserver 10 ans comme proposition éditoriale provisoire, à confirmer par une source évaluant le manga ou par sa lecture ; ne pas présenter les classifications des adaptations comme une validation de ce seuil.",
+          "source": "https://www.filmspourenfants.net/haikyu-la-guerre-des-poubelles/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/Haiky%C5%AB!!",
+        "https://www.commonsensemedia.org/tv-reviews/haikyu",
+        "https://www.filmspourenfants.net/haikyu-la-guerre-des-poubelles/"
+      ],
+      "commentaire": "Les descriptions attribuées à l'animé et au film sont confirmées. Les deux notices BnF n'ont pas été accessibles ; la validation du contenu et de l'âge du manga reste insuffisamment étayée."
+    },
+    "72451": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Baisers, câlins et mains tenues ; les personnages parlent d'amour et de relations, avec quelques sous-entendus sexuels.",
+          "probleme": "Cette présentation omet une relation sexuelle suggérée entre les deux héros. Une critique de bibliothécaire signale l'intimité adolescente dans le manga ; la critique de l'épisode 7 confirme expressément le rapport suggéré dans l'adaptation.",
+          "correction": "Ajouter, avec spoiler, une mention de l'intimité sexuelle suggérée entre adolescents. Préciser que le rapport des deux héros est documenté dans l'épisode 7 de l'animé et que sa représentation exacte dans le manga doit être vérifiée.",
+          "source": "https://thenerdybasement.com/anime/horimiya-episode-7-review/"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "sans scène explicite",
+          "probleme": "L'affirmation d'absence n'est pas établie pour l'intégralité du manga par les sources citées. Elle peut en outre faire oublier les rapports sexuels suggérés.",
+          "correction": "La série comporte des suggestions d'intimité sexuelle adolescente ; les sources consultées ne permettent pas de garantir l'absence de toute scène explicite dans l'ensemble des tomes.",
+          "source": "https://mangalibrarian.com/2022/10/09/manga-review-horimiya/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.nobi-nobi.fr/livres-series-horimiya/",
+        "https://www.nobi-nobi.fr/livre/horimiya-pack-offre-decouverte-t01-et-t02-9782384962099/",
+        "https://www.nobi-nobi.fr/livre/horimiya-tome-17-piece-memories-9782384962846/",
+        "https://www.commonsensemedia.org/tv-reviews/horimiya",
+        "https://yenpress.com/titles/9780316342032-horimiya-vol-1",
+        "https://thenerdybasement.com/anime/horimiya-episode-3-review/",
+        "https://butwhytho.net/2021/03/review-horimiya-episode-9-its-hard-but-not-impossible/",
+        "https://thenerdybasement.com/anime/horimiya-episode-7-review/",
+        "https://mangalibrarian.com/2022/10/09/manga-review-horimiya/",
+        "https://en.wikipedia.org/wiki/Horimiya",
+        "https://fr.wikipedia.org/wiki/Horimiya",
+        "https://cnlj.bnf.fr/sites/default/files/ar-08-2022.pdf",
+        "https://www.manga-news.com/index.php/manga/critique/Horimiya/vol-6"
+      ],
+      "commentaire": "12 ans reste défendable : le CNLJ recommande notamment le tome 5 dès 11 ans, et Manga Librarian le conseille dès le collège. La notice parisienne n'a pas été accessible ; il faut compléter l'information sexuelle avant publication."
+    },
+    "74347": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "en met hors de combat un grand nombre, dont un personnage principal",
+          "probleme": "La source décrit des morts, dont celle de Genos avec destruction de son noyau, et non une simple mise hors de combat. Ces événements appartiennent à une chronologie ensuite annulée.",
+          "correction": "Avec spoiler : dans un arc tardif, des héros meurent, dont Genos, dont le noyau est détruit. Un retour dans le temps permet ensuite d'empêcher ces événements.",
+          "source": "https://en.wikipedia.org/wiki/One-Punch_Man"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "explosions, immeubles qui s'effondrent, tirs d'armes",
+          "probleme": "Les exemples omettent l'élément le plus graphique décrit par Common Sense Media : des personnes écrasées en amas sanglants. L'expression générale « violence fantastique sanglante » ne restitue pas cette intensité.",
+          "correction": "Compléter les exemples attribués à l'animé par des combats avec projections de sang et des personnes écrasées en amas sanglants.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/one-punch-man"
+        },
+        {
+          "rubrique": "autres",
+          "extrait": "sur tous les tomes évalués (1 à 4, 14, 15, 18 à 32)",
+          "probleme": "L'énumération des tomes évalués est incomplète : le CNLJ a également recommandé les tomes 5 à 8 dès 11 ans.",
+          "correction": "Ajouter les tomes 5 à 8 et présenter la liste comme non exhaustive, sauf vérification complète des évaluations.",
+          "source": "https://cnlj.bnf.fr/sites/default/files/revues_document_joint/selection_bd_297.pdf"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/one-punch-man",
+        "https://www.commonsensemedia.org/tv-reviews/one-punch-man/user-reviews/child",
+        "https://fr.wikipedia.org/wiki/One-Punch_Man",
+        "https://en.wikipedia.org/wiki/One-Punch_Man",
+        "https://cnlj.bnf.fr/sites/default/files/revues_document_joint/selection_bd_297.pdf",
+        "https://cnlj.bnf.fr/sites/default/files/ar-01-2026.pdf"
+      ],
+      "commentaire": "12 ans reste défendable au regard des évaluations du manga par le CNLJ, dont celle du tome 32 à 11 ans. Les notices du catalogue BnF n'ont pas été accessibles directement ; les publications du CNLJ permettent une vérification partielle."
+    }
+  }
+}

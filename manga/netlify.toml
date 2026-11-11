@@ -1,0 +1,26 @@
+# Site Mangâge (catalogue de mangas avec âge conseillé), indépendant du site Dark Side Energy.
+# Mise en ligne : sur Netlify, créer un nouveau site depuis ce dépôt avec « Base directory » = manga.
+# Le site est statique : rien à construire, le dossier publié est manga/site/.
+# Les données viennent de l'API publique d'AniList, appelée par le navigateur du visiteur (voir la politique CSP).
+
+[build]
+  publish = "site"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https://s4.anilist.co; connect-src 'self' https://graphql.anilist.co; script-src 'self'; style-src 'self'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Fiches vérifiées à la main (donnees/fiches-verifiees.json) : mises en cache une heure.
+[[headers]]
+  for = "/donnees/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/polices/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

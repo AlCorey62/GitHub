@@ -1,0 +1,306 @@
+{
+  "relecteur": "Pipo",
+  "date": "2026-11-04",
+  "fiches": {
+    "74489": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Phos perd ses bras, remplacés par un alliage métallique (tome 4)",
+          "probleme": "La perte des bras et leur remplacement surviennent dans le tome 3. Le résumé Glénat du tome 4 les présente comme des événements déjà survenus.",
+          "correction": "Phos perd ses bras, remplacés par un alliage métallique (tome 3).",
+          "source": "https://books.google.com/books/about/Land_of_the_Lustrous.html?id=1D04DwAAQBAJ"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "puis perd sa tête au combat et reçoit celle d'une autre gemme disparue (tome 7)",
+          "probleme": "Le résumé du tome 7 confirme le remplacement, mais présente la perte de la tête comme antérieure. La parenthèse attribue indistinctement les deux événements au même tome sans justification suffisante.",
+          "correction": "Dans le tome 7, la tête perdue de Phos est remplacée par celle d'une autre gemme.",
+          "source": "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-07-9782344023983/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.glenat.com/glenat-manga/series-lere-des-cristaux/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-01-9782344011713/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-04-9782344014875/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-06-9782344020005/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-07-9782344023983/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-10-9782344039991/",
+        "https://www.glenat.com/glenat-manga/lere-des-cristaux-tome-12-9782344058640/",
+        "https://animeuknews.net/2017/06/land-of-the-lustrous-volume-1-review/",
+        "https://animeuknews.net/2019/05/land-of-the-lustrous-review/",
+        "https://en.wikipedia.org/wiki/Land_of_the_Lustrous",
+        "https://books.google.com/books/about/Land_of_the_Lustrous.html?id=1D04DwAAQBAJ"
+      ],
+      "commentaire": "14 ans est cohérent avec les indications de 13 ans et le contenu décrit. Attention à ne pas confondre un événement raconté dans un tome avec un événement antérieur rappelé dans son résumé commercial."
+    },
+    "85135": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "resume",
+          "extrait": "Quand la famille de Shoko porte plainte",
+          "probleme": "Cette formulation suggère une plainte judiciaire. Les sources consultées établissent le signalement du harcèlement à l'école et l'intervention du directeur, pas une procédure judiciaire.",
+          "correction": "Quand le directeur intervient au sujet du harcèlement subi par Shoko, la classe désigne Shoya comme seul responsable.",
+          "source": "https://en.wikipedia.org/wiki/A_Silent_Voice_(manga)"
+        },
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 12 ans pour découvrir cette série.",
+          "probleme": "Le choix de 12 ans repose principalement sur des appréciations du film. Une bibliographie municipale consultable recommande directement le manga dès 14 ans, repère plus pertinent pour cette fiche compte tenu du harcèlement et du suicide.",
+          "correction": "Conseiller 14 ans pour l'ensemble du manga et ajouter le repère de la bibliothèque d'Osny.",
+          "source": "https://osny.fr/sites/osny/files/document/bibliograhie-harcelement-scolaire.pdf"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "le manga, plus long, détaille davantage les sévices",
+          "probleme": "La Fnac décrit des sévices dans le manga, mais ne fournit pas cette comparaison avec le film. La longueur du manga ne démontre pas à elle seule une représentation plus détaillée des violences.",
+          "correction": "La Fnac décrit les scènes de sévices du manga comme crues et réalistes.",
+          "source": "https://leclaireur.fnac.com/article/cp25949-a-silent-voice-un-manga-qui-laisse-sans-voix/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://ki-oon.com/series/a-silent-voice",
+        "https://www.commonsensemedia.org/movie-reviews/a-silent-voice-the-movie",
+        "https://www.filmspourenfants.net/silent-voice/",
+        "https://e-enfance.org/a-silent-voice-manga-harcelement-scolaire/",
+        "https://leclaireur.fnac.com/article/cp25949-a-silent-voice-un-manga-qui-laisse-sans-voix/",
+        "https://fr.wikipedia.org/wiki/A_Silent_Voice",
+        "https://en.wikipedia.org/wiki/A_Silent_Voice_(manga)",
+        "https://osny.fr/sites/osny/files/document/bibliograhie-harcelement-scolaire.pdf"
+      ],
+      "commentaire": "Le résumé du manga confirme les idées suicidaires de Shoya, la tentative de Shoko, le coma et le décès de la grand-mère. Les détails visuels provenant du film doivent conserver leur attribution explicite."
+    },
+    "85143": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "sources",
+          "extrait": "Ces informations ne couvrent que le début de l'histoire : le webtoon, très long et toujours en cours, n'est pas décrit au-delà par les sources consultées.",
+          "probleme": "La limite est correctement annoncée, mais la fiche entière du webtoon reste dépourvue de vérification de contenu propre au support publié. La critique d'une saison animée ne permet pas de contrôler les omissions majeures dans les saisons suivantes du webtoon.",
+          "correction": "Compléter la documentation du webtoon avant validation. Ajouter dès maintenant la classification de la plateforme officielle WEBTOON : Teen, 13 ans et plus, qui fournit un repère concernant directement la bande dessinée.",
+          "source": "https://m.webtoons.com/en/fantasy/tower-of-god/list?title_no=95"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "Les épreuves de la Tour donnent lieu à des combats armés, parfois sanglants, où des personnages meurent, ainsi qu'à quelques scènes d'automutilation.",
+          "probleme": "L'avis reprend ces éléments comme une description du webtoon alors que leur source porte uniquement sur l'animé. En particulier, la présence et la nature des scènes d'automutilation dans le webtoon ne sont pas établies par cette critique.",
+          "correction": "Common Sense Media signale dans la première saison animée des combats sanglants, des morts et de l'automutilation ; leur correspondance précise avec le webtoon reste à documenter.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/tower-of-god"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/tower-of-god",
+        "https://en.wikipedia.org/wiki/Tower_of_God",
+        "https://animotaku.fr/encyclotaku/webtoon/tower-of-god-webtoon/",
+        "https://animotaku.fr/actualite/manhwa-tower-of-god-annonce-france-ototo-manga/",
+        "https://m.webtoons.com/en/fantasy/tower-of-god/list?title_no=95"
+      ],
+      "commentaire": "14 ans est cohérent avec le classement officiel du webtoon à 13 ans et plus. Les pages Ototo n'ont pas pu être exploitées pendant cette relecture ; la couverture des scènes reste insuffisante pour valider toute la série."
+    },
+    "85486": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "age",
+          "extrait": "Mieux vaut avoir 12 ans pour découvrir cette série.",
+          "probleme": "Le prix jeunesse concerne le premier tome et le film cité est une histoire originale. Ces repères ne suffisent pas à justifier 12 ans pour les 42 tomes, alors que la fiche documente des expériences sur une enfant et des guerres meurtrières et que Common Sense Media conseille 14 ans pour l'adaptation.",
+          "correction": "Conseiller 14 ans pour l'ensemble de la série, en précisant qu'il s'agit d'une appréciation éditoriale et que le prix 8-12 ans concernait le tome 1.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/my-hero-academia"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Les blessures sont sérieuses mais peu détaillées (Common Sense Media, animé).",
+          "probleme": "La critique consultée décrit des blessures graves, mais ne garantit pas qu'elles sont peu détaillées. Cette atténuation n'est pas justifiée pour l'ensemble du manga.",
+          "correction": "Supprimer « mais peu détaillées » et conserver les blessures effectivement documentées.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/my-hero-academia"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Une guerre meurtrière",
+          "probleme": "La fiche omet un comportement suicidaire explicite dans le dernier arc : un personnage tente une attaque suicidaire. Une simple mention générale des morts au combat ne couvre pas cet avertissement.",
+          "correction": "Ajouter une scène sensible avec spoiler : dans le dernier arc, un personnage tente une attaque suicidaire qui menace également des réfugiés.",
+          "source": "https://en.wikipedia.org/wiki/My_Hero_Academia"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://ki-oon.com/series/my-hero-academia",
+        "https://ki-oon.com/actualites/my-hero-academia-l-int-egrale",
+        "https://fr.wikipedia.org/wiki/My_Hero_Academia",
+        "https://en.wikipedia.org/wiki/My_Hero_Academia",
+        "https://www.commonsensemedia.org/tv-reviews/my-hero-academia",
+        "https://www.filmspourenfants.net/my-hero-academia-world-heroes-mission/",
+        "https://www.viz.com/manga-books/manga/my-hero-academia-volume-1-0/product/3767",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "Les 42 tomes sont confirmés par Ki-oon. La notice des bibliothèques de Paris n'a pas pu être ouverte ; son attribution et le prix doivent rester en attente de vérification directe."
+    },
+    "85611": {
+      "verdict": "a_corriger",
+      "age_propose": 16,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Plusieurs personnages importants meurent.",
+          "probleme": "L'avertissement général sur les morts omet un suicide explicite, pourtant confirmé dans le récit de Tokyo Ghoul:re : Arima se donne la mort après son combat contre Kaneki.",
+          "correction": "Ajouter une scène « Suicide », avec spoiler : après un combat, un personnage important se donne volontairement la mort.",
+          "source": "https://en.wikipedia.org/wiki/List_of_Tokyo_Ghoul_characters"
+        },
+        {
+          "rubrique": "sources",
+          "extrait": "La critique de Jo Writes Fantasy signale dans la série une agression sexuelle, de la maltraitance d'enfant et une castration, sans préciser les tomes.",
+          "probleme": "La page citée n'a pas pu être ouverte pendant cette relecture. Ces avertissements particulièrement importants restent donc non vérifiés ici et ne peuvent pas recevoir une validation sur la seule attribution fournie.",
+          "correction": "Conserver la fiche en attente et fournir une source consultable ou une référence précise aux tomes et chapitres pour l'agression sexuelle et la castration. Ne pas supprimer ces avertissements au seul motif que le lien est inaccessible.",
+          "source": "https://jowritesfantasy.me/2023/05/10/manga-review-tokyo-ghoul-re-by-sui-ishida-2017-2019"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/tokyo-ghoul",
+        "https://www.comicbookbin.com/tokyoghoulre014.html",
+        "https://en.wikipedia.org/wiki/Tokyo_Ghoul",
+        "https://fr.wikipedia.org/wiki/Tokyo_Ghoul",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Ghoul_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Ghoul_characters",
+        "https://fr.wikipedia.org/wiki/Personnages_de_Tokyo_Ghoul"
+      ],
+      "commentaire": "16 ans reste cohérent avec le classement Older Teen et les violences documentées. Les liens Glénat Manga Max, The Outer Haven tome 1 et Jo Writes Fantasy n'ont pas pu être exploités ; cela limite la validation."
+    },
+    "86123": {
+      "verdict": "a_corriger",
+      "age_propose": 12,
+      "erreurs": [
+        {
+          "rubrique": "avis",
+          "extrait": "Les combats sont nombreux et parfois sanglants, avec des morts, mais sans gore détaillé.",
+          "probleme": "L'absence de gore détaillé est attestée par une critique de l'animé, pas par une vérification de l'ensemble du manga. L'avis transforme une observation limitée à l'adaptation en garantie sur toute la série.",
+          "correction": "Common Sense Media décrit l'adaptation animée comme sanglante, avec des morts, sans gore détaillé ; cette appréciation ne constitue pas une vérification des derniers arcs du manga.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/black-clover"
+        },
+        {
+          "rubrique": "sources",
+          "extrait": "Du sang est visible mais jamais de gore détaillé (Common Sense Media, animé).",
+          "probleme": "Toutes les scènes reposent sur l'animé et la fiche ne signale pas dans son texte publié que les arcs ultérieurs du manga ne sont pas couverts. Cette réserve figure seulement dans les points de travail.",
+          "correction": "Ajouter explicitement la limite de couverture et documenter les derniers arcs du manga avant validation de l'ensemble.",
+          "source": "https://fr.wikipedia.org/wiki/Black_Clover"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/black-clover",
+        "https://www.viz.com/manga-books/manga/black-clover-volume-1-0/product/4795",
+        "https://www.viz.com/ratings",
+        "https://fr.wikipedia.org/wiki/Black_Clover",
+        "https://en.wikipedia.org/wiki/Black_Clover"
+      ],
+      "commentaire": "12 ans reste un choix éditorial défendable avec le classement Teen du manga, malgré les 13 ans conseillés pour l'animé. Les pages Kazé n'ont pas pu être ouvertes et la fin du manga reste insuffisamment documentée."
+    },
+    "86635": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Sexualité des lycéens évoquée plus directement",
+          "probleme": "La fiche réduit la sexualité à des conversations et à une proposition refusée. Elle omet la première relation sexuelle de Kaguya et Miyuki, au chapitre 220, dans le tome 22.",
+          "correction": "Compléter cette scène avec spoiler : dans le tome 22, Kaguya et Miyuki passent une nuit ensemble et ont leur première relation sexuelle.",
+          "source": "https://en.wikipedia.org/wiki/Kaguya_Shinomiya"
+        },
+        {
+          "rubrique": "avis",
+          "extrait": "L'humour repose sur les stratagèmes, les malentendus et les sous-entendus, sans scène explicite.",
+          "probleme": "La formule peut laisser croire que la série entière se limite aux sous-entendus. Elle ne rend pas compte de la relation sexuelle effectivement racontée ; l'absence de représentation graphique doit être distinguée de l'absence d'acte sexuel dans le récit.",
+          "correction": "L'humour repose largement sur les stratagèmes et les sous-entendus, mais les tomes avancés abordent aussi une relation sexuelle entre les protagonistes.",
+          "source": "https://en.wikipedia.org/wiki/Kaguya_Shinomiya"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "une scène de bain sans nudité",
+          "probleme": "Common Sense Media se contredit : la rubrique détaillée exclut la nudité, tandis que son avertissement général mentionne de la nudité partielle. La fiche reprend une seule version comme certaine.",
+          "correction": "Signaler que Common Sense Media mentionne une scène de bain et fournit des indications contradictoires sur la nudité ; ne pas garantir son absence sans autre vérification.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/kaguya-sama-love-is-war"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.pika.fr/livres-series-kaguya-sama-love-war/",
+        "https://www.pika.fr/livre/kaguya-sama-love-war-t01-9782811662912/",
+        "https://www.pika.fr/livre/kaguya-sama-love-war-t22-9782811691820/",
+        "https://www.pika.fr/livre/kaguya-sama-love-war-t28-9782811697907/",
+        "https://www.commonsensemedia.org/tv-reviews/kaguya-sama-love-is-war",
+        "https://www.viz.com/manga-books/manga/kaguya-sama-love-is-war-volume-1-0/product/5449",
+        "https://www.viz.com/manga-books/manga/kaguya-sama-love-is-war-volume-28-0/product/7805",
+        "https://en.wikipedia.org/wiki/Kaguya-sama:_Love_Is_War",
+        "https://en.wikipedia.org/wiki/List_of_Kaguya-sama:_Love_Is_War_characters",
+        "https://en.wikipedia.org/wiki/List_of_Kaguya-sama:_Love_Is_War_chapters",
+        "https://en.wikipedia.org/wiki/Kaguya_Shinomiya"
+      ],
+      "commentaire": "14 ans est cohérent avec le contenu des tomes avancés. Les 28 tomes français sont confirmés par Pika ; la collection Seinen ne constitue pas à elle seule une recommandation d'âge."
+    },
+    "87216": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Dans l'arc du train, le héros doit se trancher la gorge en rêve pour se réveiller",
+          "probleme": "Ce passage révèle le mécanisme permettant au héros de déjouer le pouvoir d'un adversaire. Il ne porte pas de marqueur spoiler.",
+          "correction": "Séparer ce passage dans une scène portant « spoiler » à true, ou remplacer le détail par « actes suicidaires répétés dans des rêves, avec risque de confusion entre rêve et réalité ».",
+          "source": "https://www.filmspourenfants.net/demon-slayer-kimetsu-no-yaiba-le-train-de-linfini/"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://fr.wikipedia.org/wiki/Demon_Slayer",
+        "https://www.commonsensemedia.org/tv-reviews/demon-slayer",
+        "https://www.commonsensemedia.org/movie-reviews/demon-slayer-kimetsu-no-yaiba-infinity-castle",
+        "https://www.filmspourenfants.net/demon-slayer-kimetsu-no-yaiba-le-train-de-linfini/",
+        "https://www.viz.com/manga-books/manga/demon-slayer-kimetsu-no-yaiba-volume-1-0/product/5547",
+        "https://www.viz.com/ratings"
+      ],
+      "commentaire": "14 ans est solidement étayé par les trois critiques audiovisuelles citées. Les notices BnF et des bibliothèques de Paris n'ont pas pu être ouvertes pendant cette relecture."
+    },
+    "87423": {
+      "verdict": "a_corriger",
+      "age_propose": 14,
+      "erreurs": [
+        {
+          "rubrique": "scenes",
+          "extrait": "Dans l'avant-dernier tome, un antagoniste se donne la mort.",
+          "probleme": "Le suicide de Peter Ratri se situe dans le tome 20, au chapitre 173, et non dans le tome 19.",
+          "correction": "Dans le dernier tome, un antagoniste se donne la mort. Conserver le marqueur spoiler.",
+          "source": "https://en.wikipedia.org/wiki/List_of_The_Promised_Neverland_chapters"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Dans le dernier tome, un personnage adulte sacrifie sa vie pour en sauver un autre.",
+          "probleme": "La construction laisse entendre qu'un adulte sauve un autre adulte. Isabella se sacrifie pour sauver Emma, une enfant.",
+          "correction": "Dans le dernier tome, un personnage adulte sacrifie sa vie pour sauver une enfant. Conserver le marqueur spoiler.",
+          "source": "https://en.wikipedia.org/wiki/List_of_The_Promised_Neverland_chapters"
+        },
+        {
+          "rubrique": "sources",
+          "extrait": "Centre national de la littérature pour la jeunesse (BnF), manga : « À partir de 11 ans » pour les tomes 6, 12, 18 et 19 ; « À partir de 13 ans » pour les tomes 11, 13, 14, 15 et 20. Avis « Bravo ! ».",
+          "probleme": "Les notices BnF citées n'ont pas pu être ouvertes pendant cette relecture. En outre, aucune notice individuelle n'est fournie pour plusieurs des tomes auxquels des âges précis sont attribués. Cette liste détaillée n'est donc pas validée.",
+          "correction": "Fournir des notices consultables permettant de vérifier chaque âge et chaque appréciation, ou limiter l'attribution aux tomes effectivement vérifiés.",
+          "source": "https://catalogue.bnf.fr/ark:/12148/cb46809444k"
+        },
+        {
+          "rubrique": "scenes",
+          "extrait": "Selon Common Sense Media (animé), des enfants racontent avoir subi des expériences avec des drogues.",
+          "probleme": "L'attribution à l'animé est exacte, mais la correspondance avec le manga n'est pas établie dans les sources de la fiche. Cet élément ne peut pas servir seul à valider la rubrique du manga.",
+          "correction": "Documenter les expériences et traitements de Lambda dans une source portant directement sur le manga ; jusque-là, conserver explicitement cette information comme propre à l'adaptation animée.",
+          "source": "https://www.commonsensemedia.org/tv-reviews/the-promised-neverland"
+        }
+      ],
+      "sources_ouvertes": [
+        "https://www.commonsensemedia.org/tv-reviews/the-promised-neverland",
+        "https://fr.wikipedia.org/wiki/The_Promised_Neverland",
+        "https://en.wikipedia.org/wiki/The_Promised_Neverland",
+        "https://en.wikipedia.org/wiki/List_of_The_Promised_Neverland_chapters"
+      ],
+      "commentaire": "14 ans reste défendable pour le manga, mais les âges attribués au CNLJ restent à vérifier. Contrairement au point de travail fourni, Common Sense Media mentionne explicitement la découverte du cadavre d'un enfant au début de l'adaptation."
+    }
+  }
+}
