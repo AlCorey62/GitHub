@@ -1,0 +1,63 @@
+<!doctype html>
+<!-- Vidéo « Habilitation électrique : comment lire B2V ? » (24 s). Source : INRS, ED 6127 (3e édition, décembre 2020),
+     « Système de classification des habilitations électriques » d'après la norme NF C 18-510 ; détail dans publications.md. -->
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="_base.css">
+<style>
+.tiles { position: absolute; left: 72px; top: 268px; display: flex; gap: 28px; opacity: 0; }
+.tile { width: 210px; height: 230px; border: 4px solid #3a3a40; border-radius: 18px; background: #151518; display: flex; align-items: center; justify-content: center;
+  font-size: 170px; font-weight: 800; font-stretch: 110%; color: #f3f3f4; }
+.mean { position: absolute; left: 72px; right: 72px; top: 548px; opacity: 0; }
+.mean .big { margin: 0; font-size: 76px; line-height: 1.05; font-weight: 800; font-stretch: 110%; letter-spacing: -.02em; color: #ff4a3d; }
+.mean .alt { margin: 22px 0 0; font-size: 34px; font-weight: 600; color: #b4b4bb; }
+.list { position: absolute; left: 72px; right: 72px; top: 280px; opacity: 0; }
+.list .row { display: flex; align-items: center; gap: 30px; margin-bottom: 30px; }
+.list .code { width: 170px; height: 110px; border: 4px solid #ff4a3d; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 68px; font-weight: 800; color: #ff4a3d; flex: none; }
+.list .what { font-size: 46px; font-weight: 700; line-height: 1.15; }
+</style>
+</head>
+<body>
+<h1 class="title" id="title">Habilitation électrique :<br>comment lire<br><em>B2V</em> ?</h1>
+<div class="tiles" id="tiles"><div class="tile" id="t0">B</div><div class="tile" id="t1">2</div><div class="tile" id="t2">V</div></div>
+<div class="mean" id="m0"><p class="big">Basse tension</p><p class="alt">H : haute tension</p></div>
+<div class="mean" id="m1"><p class="big">Chargé de travaux</p><p class="alt">1 : exécutant · 0 : travaux non électriques</p></div>
+<div class="mean" id="m2"><p class="big">Au voisinage renforcé</p><p class="alt">T : sous tension</p></div>
+<div class="list" id="list">
+  <div class="row"><div class="code">BR</div><div class="what">Intervention générale</div></div>
+  <div class="row"><div class="code">BS</div><div class="what">Intervention élémentaire</div></div>
+  <div class="row"><div class="code">BC</div><div class="what">Consignation</div></div>
+</div>
+<div class="outro" id="outro"><p class="kicker">Le sais-tu ?</p><h2>Trois caractères<br>pour savoir<br><em>qui peut faire quoi</em>.</h2><p>Norme NF C 18-510. L'explication sur darkside-energy.com</p></div>
+<script>
+window.VIDEO = {
+  duration: 24,
+  caps: [
+    [3.6, 8.0, "1er caractère : le <em>domaine de tension</em>."],
+    [8.0, 12.4, "2e caractère : le <em>type d'opération</em>."],
+    [12.4, 16.6, "3e caractère : une <em>précision</em>."],
+    [16.6, 20.6, "L'employeur délivre l'habilitation, <em>après une formation</em>."],
+  ],
+  scene(t, { ease, win }) {
+    const $ = (id) => document.getElementById(id);
+    $("title").style.opacity = win(t, 0.2, 3.4, 0.5);
+    $("title").style.transform = `translateY(${(1 - ease((t - 0.2) / 0.6)) * 30}px)`;
+    $("tiles").style.opacity = win(t, 3.5, 16.5, 0.5);
+    const steps = [[3.6, 8.0], [8.0, 12.4], [12.4, 16.6]];
+    steps.forEach(([a, b], i) => {
+      const on = win(t, a, b, 0.35);
+      const tile = $(`t${i}`);
+      tile.style.borderColor = on > 0.5 ? "#ff4a3d" : "#3a3a40";
+      tile.style.color = on > 0.5 ? "#ff4a3d" : "#f3f3f4";
+      tile.style.opacity = 0.45 + 0.55 * on;
+      tile.style.transform = `scale(${1 + 0.06 * on})`;
+      $(`m${i}`).style.opacity = on;
+    });
+    $("list").style.opacity = win(t, 16.7, 20.7, 0.5);
+    const o = ease((t - 20.8) / 0.7);
+    $("outro").style.opacity = o;
+    $("kicker").style.opacity = 1 - o;
+  },
+};
+</script>
+<script src="_base.js"></script>
+</body></html>

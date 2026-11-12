@@ -54,15 +54,23 @@ Articles déjà en ligne (à ne pas refaire) : distribution électrique événem
 | Jeu 19/11 | Calculette | 25 kW en monophasé : 120,77 A, une P17 32 A ne suffit pas ; en triphasé, 40,09 A et une P17 63 A | validé |
 | Ven 20/11 | Coulisses | Câbles au pied des conteneurs (photo floutée) droits sur la photo validés | validé |
 
+## Semaine du 23 novembre 2026
+
+| Jour | Format | Sujet | Statut |
+|---|---|---|---|
+| Lun 23/11 | Le sais-tu ? (site) et vidéo | Habilitations électriques : lire B0, BS, BR, B2V, BC (Code du travail R. 4544-9, norme NF C 18-510, brochure INRS ED 6127) | rédigé |
+| Mar 24/11 | Le sais-tu ? (site, aucune anecdote disponible) | Groupe électrogène ou réseau : le réseau d'abord, branchement provisoire Enedis (36 kVA, 250 kVA, 28 jours), puis groupe, batterie ou hybridation | rédigé |
+| Mer 25/11 | En vidéo | Inverseur de sources, normal et secours : bascule, verrouillage, brève coupure (définition du lexique) | rédigé |
+| Jeu 26/11 | Calculette | 63 A en triphasé sur 150 m : 5,34 % de chute en 5G16, il faut au moins 25 mm² | rédigé |
+| Ven 27/11 | Coulisses | Un salon vu d'en haut : un coffret par stand, avec son différentiel 30 mA (photo floutée) **à valider** : droits sur la photo pour les réseaux sociaux | rédigé |
+
 ## Réserve de sujets
 
 - Vrai ou faux : « À intensité égale, plus le câble est long, plus sa section doit être grosse. » Vrai (rédigé pour le 18/11, remplacé par la vidéo du groupe Twin)
-- En vidéo : l'inverseur normal/secours (règles françaises à vérifier)
 - En vidéo : l'ASI (onduleur, UPS) en événementiel (règles françaises à vérifier)
+- Coulisses : plus de photo de terrain en réserve après celle du 27/11 (toutes les photos du site ont servi) : nouvelles photos à demander à Damien
 
 - Le différentiel : pourquoi on le teste avec le bouton « T »
-- Habilitations électriques : que veulent dire B2V, BR, BC, H0 (norme NF C 18-510)
-- Groupe ou réseau : comment on choisit la source
 - Packs batteries : quand remplacer un groupe
 - Passages de câbles : protéger le public et les PMR
 - Pourquoi chaque corps de métier a sa propre source (son, lumière, vidéo)
